@@ -10,18 +10,18 @@
 
 ## Download
 
-[Latest Release](https://github.com/ArkEcosystem/ark-desktop/releases/latest)
+[Latest Release](https://github.com/PayvoHQ/wallet/releases/latest)
 
 ## Installing via Package Managers
 
 ### Arch Linux
 
-Install via [AUR](https://aur.archlinux.org/packages/ark-desktop):
+Install via [AUR](https://aur.archlinux.org/packages/payvo-wallet):
 
 > Manjaro
 
 ```shell
-pamac build ark-desktop
+pamac build payvo-wallet
 ```
 
 ### Mac OS X

@@ -9,7 +9,7 @@ import trash from "trash";
 import { injectHandler } from "../plugins/loader/fs/loader-fs-handler";
 
 export const setupPlugins = () => {
-	const installPath = path.resolve(os.homedir(), ".ark-desktop-v3", "plugins");
+	const installPath = path.resolve(os.homedir(), ".payvo-wallet", "plugins");
 	const downloadPath = path.join(installPath, ".cache");
 
 	ensureDirSync(downloadPath);
