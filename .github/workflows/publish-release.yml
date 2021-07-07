@@ -69,23 +69,23 @@ jobs:
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: Calculate Checksums for AppImage
-              run: shasum -a 256 dist/target/payvo-wallet-linux-x86_64-3.0.0.AppImage
+              run: shasum -a 256 dist/target/payvo-wallet-linux-x86_64-1.0.0.AppImage
             - name: Calculate Checksums for TAR
-              run: shasum -a 256 dist/target/payvo-wallet-linux-x64-3.0.0.tar.gz
+              run: shasum -a 256 dist/target/payvo-wallet-linux-x64-1.0.0.tar.gz
             - name: Calculate Checksums for DEB
-              run: shasum -a 256 dist/target/payvo-wallet-linux-amd64-3.0.0.deb
+              run: shasum -a 256 dist/target/payvo-wallet-linux-amd64-1.0.0.deb
             - name: VirusTotal Scan for AppImage
               run: |
                   UPLOAD_URL=$(curl -s --location --url 'https://www.virustotal.com/vtapi/v2/file/scan/upload_url?apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' | jq -r .upload_url)
-                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-linux-x86_64-3.0.0.AppImage' | jq -r .permalink
+                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-linux-x86_64-1.0.0.AppImage' | jq -r .permalink
             - name: VirusTotal Scan for TAR
               run: |
                   UPLOAD_URL=$(curl -s --location --url 'https://www.virustotal.com/vtapi/v2/file/scan/upload_url?apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' | jq -r .upload_url)
-                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-linux-x64-3.0.0.tar.gz' | jq -r .permalink
+                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-linux-x64-1.0.0.tar.gz' | jq -r .permalink
             - name: VirusTotal Scan for DEB
               run: |
                   UPLOAD_URL=$(curl -s --location --url 'https://www.virustotal.com/vtapi/v2/file/scan/upload_url?apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' | jq -r .upload_url)
-                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-linux-amd64-3.0.0.deb' | jq -r .permalink
+                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-linux-amd64-1.0.0.deb' | jq -r .permalink
     publish-macos:
         needs: ["create-release"]
         runs-on: macos-latest
@@ -124,17 +124,17 @@ jobs:
                   CSC_LINK: ${{ secrets.CSC_LINK }}
                   CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
             - name: Calculate Checksums for DMG
-              run: shasum -a 256 dist/target/payvo-wallet-mac-3.0.0.dmg
+              run: shasum -a 256 dist/target/payvo-wallet-mac-1.0.0.dmg
             - name: Calculate Checksums for ZIP
-              run: shasum -a 256 dist/target/payvo-wallet-mac-3.0.0.zip
+              run: shasum -a 256 dist/target/payvo-wallet-mac-1.0.0.zip
             - name: VirusTotal Scan for DMG
               run: |
                   UPLOAD_URL=$(curl -s --location --url 'https://www.virustotal.com/vtapi/v2/file/scan/upload_url?apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' | jq -r .upload_url)
-                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-mac-3.0.0.dmg' | jq -r .permalink
+                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-mac-1.0.0.dmg' | jq -r .permalink
             - name: VirusTotal Scan for ZIP
               run: |
                   UPLOAD_URL=$(curl -s --location --url 'https://www.virustotal.com/vtapi/v2/file/scan/upload_url?apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' | jq -r .upload_url)
-                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-mac-3.0.0.zip' | jq -r .permalink
+                  curl -s --url "$UPLOAD_URL" --form 'apikey=${{ secrets.VIRUSTOTAL_TOKEN }}' --form 'file=@dist/target/payvo-wallet-mac-1.0.0.zip' | jq -r .permalink
     publish-windows:
         needs: ["create-release"]
         runs-on: windows-latest
@@ -167,5 +167,5 @@ jobs:
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             - name: Calculate Checksums for EXE
-              run: Get-FileHash dist/target/payvo-wallet-win-3.0.0.exe -Algorithm SHA256 | Format-List
+              run: Get-FileHash dist/target/payvo-wallet-win-1.0.0.exe -Algorithm SHA256 | Format-List
               shell: powershell
