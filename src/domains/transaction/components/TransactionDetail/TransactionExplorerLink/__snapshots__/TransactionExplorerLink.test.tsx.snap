@@ -3,7 +3,7 @@
 exports[`TransactionExplorerLink should render a transaction link 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -24,14 +24,14 @@ exports[`TransactionExplorerLink should render a transaction link 1`] = `
             class="overflow-hidden"
           >
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="Link"
               href="#"
               rel="noopener noreferrer"
               to="transaction-link"
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 <span
                   class="inline-flex overflow-hidden"

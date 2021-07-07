@@ -9,13 +9,13 @@ exports[`Registration should register second signature 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-1pe22tv-0 hLgyWD flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
             class="sc-bdfBwQ dlKckO mx-auto"
@@ -34,7 +34,7 @@ exports[`Registration should register second signature 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -114,10 +114,10 @@ exports[`Registration should register second signature 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -153,10 +153,10 @@ exports[`Registration should register second signature 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -183,10 +183,10 @@ exports[`Registration should register second signature 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -243,7 +243,7 @@ exports[`Registration should register second signature 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -271,7 +271,7 @@ exports[`Registration should register second signature 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex-1"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex-1"
       >
         <div
           class="container px-10 mx-auto"
@@ -282,25 +282,25 @@ exports[`Registration should register second signature 1`] = `
           >
             <div>
               <ul
-                class="StepIndicator__StepWrapper-sc-15t41is-1 iToWWb"
+                class="StepIndicator__StepWrapper-sc-1kbqtlh-1 eAMWbJ"
               >
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 khoCaB"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
                 />
               </ul>
               <div
@@ -335,7 +335,7 @@ exports[`Registration should register second signature 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -350,13 +350,13 @@ exports[`Registration should register second signature 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="AuthenticationStep__mnemonic"
                             name="mnemonic"
                             type="password"
@@ -394,10 +394,10 @@ exports[`Registration should register second signature 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StepNavigation__StepNavigationWrapper-e8732n-0 fGWUDu"
+                  class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 ZwjvM"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -408,7 +408,7 @@ exports[`Registration should register second signature 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                     data-testid="StepNavigation__send-button"
                     type="submit"
                   >
@@ -447,13 +447,13 @@ exports[`Registration should show error step and go back 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-1pe22tv-0 hLgyWD flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
             class="sc-bdfBwQ dlKckO mx-auto"
@@ -472,7 +472,7 @@ exports[`Registration should show error step and go back 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -552,10 +552,10 @@ exports[`Registration should show error step and go back 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -591,10 +591,10 @@ exports[`Registration should show error step and go back 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -621,10 +621,10 @@ exports[`Registration should show error step and go back 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -681,7 +681,7 @@ exports[`Registration should show error step and go back 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -709,7 +709,7 @@ exports[`Registration should show error step and go back 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex-1"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex-1"
       >
         <div
           class="container px-10 mx-auto"
@@ -720,19 +720,19 @@ exports[`Registration should show error step and go back 1`] = `
           >
             <div>
               <ul
-                class="StepIndicator__StepWrapper-sc-15t41is-1 iToWWb"
+                class="StepIndicator__StepWrapper-sc-1kbqtlh-1 eAMWbJ"
               >
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
               </ul>
               <div
@@ -778,14 +778,14 @@ exports[`Registration should show error step and go back 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 glWYnv py-4"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 fLoYHC py-4"
                         disabled=""
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <textarea
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full resize-none text-theme-secondary-text"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full resize-none text-theme-secondary-text"
                             data-testid="ErrorStep__errorMessage"
                             disabled=""
                             style="height: 4px;"
@@ -802,7 +802,7 @@ exports[`Registration should show error step and go back 1`] = `
                         class="relative"
                       >
                         <button
-                          class="ClipboardButton__StyledButton-sc-1ft1991-0 jNaOXY"
+                          class="ClipboardButton__StyledButton-cammp1-0 kUVLdV"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -825,7 +825,7 @@ exports[`Registration should show error step and go back 1`] = `
                         </button>
                       </div>
                       <button
-                        class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST ml-auto mr-3"
+                        class="OriginalButton__StyledButton-o0fs2j-0 guPjPB ml-auto mr-3"
                         data-testid="ErrorStep__wallet-button"
                         type="button"
                       >
@@ -836,7 +836,7 @@ exports[`Registration should show error step and go back 1`] = `
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                        class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                         data-testid="ErrorStep__repeat-button"
                         type="button"
                       >
@@ -867,13 +867,13 @@ exports[`Registration should show mnemonic error 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-1pe22tv-0 hLgyWD flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
             class="sc-bdfBwQ dlKckO mx-auto"
@@ -892,7 +892,7 @@ exports[`Registration should show mnemonic error 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -972,10 +972,10 @@ exports[`Registration should show mnemonic error 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1011,10 +1011,10 @@ exports[`Registration should show mnemonic error 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1041,10 +1041,10 @@ exports[`Registration should show mnemonic error 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1101,7 +1101,7 @@ exports[`Registration should show mnemonic error 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1129,7 +1129,7 @@ exports[`Registration should show mnemonic error 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex-1"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex-1"
       >
         <div
           class="container px-10 mx-auto"
@@ -1140,19 +1140,19 @@ exports[`Registration should show mnemonic error 1`] = `
           >
             <div>
               <ul
-                class="StepIndicator__StepWrapper-sc-15t41is-1 iToWWb"
+                class="StepIndicator__StepWrapper-sc-1kbqtlh-1 eAMWbJ"
               >
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 khoCaB"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
                 />
               </ul>
               <div
@@ -1187,7 +1187,7 @@ exports[`Registration should show mnemonic error 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1202,13 +1202,13 @@ exports[`Registration should show mnemonic error 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="AuthenticationStep__mnemonic"
                             name="mnemonic"
                             type="password"
@@ -1244,7 +1244,7 @@ exports[`Registration should show mnemonic error 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="FormField__FormFieldStyled-yeauwd-0 qzrKg flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1259,14 +1259,14 @@ exports[`Registration should show mnemonic error 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jXtMoQ"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
                             aria-invalid="true"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="AuthenticationStep__second-mnemonic"
                             name="secondMnemonic"
                             type="password"
@@ -1318,10 +1318,10 @@ exports[`Registration should show mnemonic error 1`] = `
                   </div>
                 </div>
                 <div
-                  class="StepNavigation__StepNavigationWrapper-e8732n-0 fGWUDu"
+                  class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 ZwjvM"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
@@ -1332,7 +1332,7 @@ exports[`Registration should show mnemonic error 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fqRthJ"
+                    class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
                     data-testid="StepNavigation__send-button"
                     disabled=""
                     type="submit"

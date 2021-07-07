@@ -8,13 +8,13 @@ exports[`InputCounter should render 1`] = `
     …
   </div>
   <div
-    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
   >
     <div
       class="relative flex flex-1 h-full"
     >
       <input
-        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
         data-testid="InputCounter__input"
         maxlength="10"
         value=""
@@ -46,14 +46,14 @@ exports[`InputCounter should render with invalid state 1`] = `
     …
   </div>
   <div
-    class="Input__InputWrapperStyled-wu99qs-0 jXtMoQ"
+    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
   >
     <div
       class="relative flex flex-1 h-full"
     >
       <input
         aria-invalid="true"
-        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
         data-testid="InputCounter__input"
         maxlength="10"
         name="vendorField"

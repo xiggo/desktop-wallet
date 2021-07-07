@@ -9,7 +9,7 @@ exports[`NewsCard should render 1`] = `
       class="bg-theme-background"
     >
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -25,7 +25,7 @@ exports[`NewsCard should render 1`] = `
             >
               <div
                 aria-label="ARK"
-                class="Circle__CircleWrapper-uw7h4j-0 kOlXCb text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bAcKAQ text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.mainnet"
               >
                 <div
@@ -56,7 +56,7 @@ exports[`NewsCard should render 1`] = `
                     Travis Walker, Co-Founder
                   </p>
                   <div
-                    class="Divider-sc-19q4mlo-0 gSJoMw border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="Divider-sc-17ehhxk-0 jjOWAv border-theme-secondary-300 dark:border-theme-secondary-800"
                     type="vertical"
                   />
                   <p
@@ -76,7 +76,7 @@ exports[`NewsCard should render 1`] = `
               class="flex flex-col justify-end"
             >
               <div
-                class="Label-sc-1tj9hzr-0 ftOOah"
+                class="Label-sc-4akkzw-0 fLTRFT"
                 color="warning"
               >
                 <span
@@ -89,7 +89,7 @@ exports[`NewsCard should render 1`] = `
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
@@ -98,14 +98,14 @@ exports[`NewsCard should render 1`] = `
           >
             Recently we released our all-in-one toolkit the ARK Platform SDK, along with an overview and what blockchain projects it will initially support. Today we are going into more details on a technical level. 
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="Link"
               href="#"
               rel="noopener noreferrer"
               to="https://blog.ark.io/ark-platform-sdk-modernization-of-blockchain-network-interactions-b5a7d70c2461"
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 https://blog.ark.io/ark-platform-sdk-modernization-of-blockchain-network-interactions-b5a7d70c2461
               </span>
@@ -144,7 +144,7 @@ exports[`NewsCard should render with cover image 1`] = `
       class="bg-theme-background"
     >
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -160,7 +160,7 @@ exports[`NewsCard should render with cover image 1`] = `
             >
               <div
                 aria-label="ARK"
-                class="Circle__CircleWrapper-uw7h4j-0 kOlXCb text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bAcKAQ text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.mainnet"
               >
                 <div
@@ -191,7 +191,7 @@ exports[`NewsCard should render with cover image 1`] = `
                     Travis Walker, Co-Founder
                   </p>
                   <div
-                    class="Divider-sc-19q4mlo-0 gSJoMw border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="Divider-sc-17ehhxk-0 jjOWAv border-theme-secondary-300 dark:border-theme-secondary-800"
                     type="vertical"
                   />
                   <p
@@ -211,7 +211,7 @@ exports[`NewsCard should render with cover image 1`] = `
               class="flex flex-col justify-end"
             >
               <div
-                class="Label-sc-1tj9hzr-0 ftOOah"
+                class="Label-sc-4akkzw-0 fLTRFT"
                 color="warning"
               >
                 <span
@@ -224,7 +224,7 @@ exports[`NewsCard should render with cover image 1`] = `
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
@@ -233,14 +233,14 @@ exports[`NewsCard should render with cover image 1`] = `
           >
             June is over and it's time for the Monthly Update. This blog post will cover last month’s highlights, activities, development, partner activities, news and updates of our upcoming releases. 
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="Link"
               href="#"
               rel="noopener noreferrer"
               to="https://blog.ark.io/ark-monthly-update-june-2020-edition-279a3dd47a36"
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 https://blog.ark.io/ark-monthly-update-june-2020-edition-279a3dd47a36
               </span>

@@ -3,10 +3,10 @@
 exports[`Loader should render 1`] = `
 <DocumentFragment>
   <div
-    class="Loaderstyles__LoaderWrapper-sc-5aw57o-1 iOGWME"
+    class="Loaderstyles__LoaderWrapper-sc-19pkh8g-1 fqVZNG"
   >
     <div
-      class="Loaderstyles__LogoSpinner-sc-5aw57o-0 jcyvnc"
+      class="Loaderstyles__LogoSpinner-sc-19pkh8g-0 ehnJfi"
     >
       <div
         class="centered"

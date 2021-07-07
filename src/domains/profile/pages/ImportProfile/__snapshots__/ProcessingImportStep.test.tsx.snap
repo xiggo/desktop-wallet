@@ -56,7 +56,7 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
               class="font-semibold"
             >
               <span
-                class="TruncateMiddle__Wrapper-sc-3j3e79-0"
+                class="TruncateMiddle__Wrapper-ue8va6-0"
                 data-testid="TruncateMiddle"
               >
                 export
@@ -64,7 +64,7 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
             </div>
           </div>
           <div
-            class="Spinner-sc-1tybciv-0 gzGczR"
+            class="Spinner-sc-1rpx65r-0 fqZPZB"
             color="info"
           />
         </div>
@@ -133,7 +133,7 @@ exports[`Import Profile - Processing import should handle import error 1`] = `
               class="font-semibold"
             >
               <span
-                class="TruncateMiddle__Wrapper-sc-3j3e79-0"
+                class="TruncateMiddle__Wrapper-ue8va6-0"
                 data-testid="TruncateMiddle"
               >
                 test.dwe
@@ -141,7 +141,7 @@ exports[`Import Profile - Processing import should handle import error 1`] = `
             </div>
           </div>
           <div
-            class="Spinner-sc-1tybciv-0 gzGczR"
+            class="Spinner-sc-1rpx65r-0 fqZPZB"
             color="info"
           />
         </div>
@@ -210,7 +210,7 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
               class="font-semibold"
             >
               <span
-                class="TruncateMiddle__Wrapper-sc-3j3e79-0"
+                class="TruncateMiddle__Wrapper-ue8va6-0"
                 data-testid="TruncateMiddle"
               >
                 export
@@ -218,7 +218,7 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
             </div>
           </div>
           <div
-            class="Spinner-sc-1tybciv-0 gzGczR"
+            class="Spinner-sc-1rpx65r-0 fqZPZB"
             color="info"
           />
         </div>
@@ -328,7 +328,7 @@ exports[`Import Profile - Processing import should require password for password
               class="font-semibold"
             >
               <span
-                class="TruncateMiddle__Wrapper-sc-3j3e79-0"
+                class="TruncateMiddle__Wrapper-ue8va6-0"
                 data-testid="TruncateMiddle"
               >
                 export
@@ -336,7 +336,7 @@ exports[`Import Profile - Processing import should require password for password
             </div>
           </div>
           <div
-            class="Spinner-sc-1tybciv-0 gzGczR"
+            class="Spinner-sc-1rpx65r-0 fqZPZB"
             color="info"
           />
         </div>
@@ -405,7 +405,7 @@ exports[`Import Profile - Processing import should show error if json import has
               class="font-semibold"
             >
               <span
-                class="TruncateMiddle__Wrapper-sc-3j3e79-0"
+                class="TruncateMiddle__Wrapper-ue8va6-0"
                 data-testid="TruncateMiddle"
               >
                 export
@@ -413,7 +413,7 @@ exports[`Import Profile - Processing import should show error if json import has
             </div>
           </div>
           <div
-            class="Spinner-sc-1tybciv-0 gzGczR"
+            class="Spinner-sc-1rpx65r-0 fqZPZB"
             color="info"
           />
         </div>
@@ -482,7 +482,7 @@ exports[`Import Profile - Processing import should succesfully import dwe profil
               class="font-semibold"
             >
               <span
-                class="TruncateMiddle__Wrapper-sc-3j3e79-0"
+                class="TruncateMiddle__Wrapper-ue8va6-0"
                 data-testid="TruncateMiddle"
               >
                 profile.dwe
@@ -490,7 +490,7 @@ exports[`Import Profile - Processing import should succesfully import dwe profil
             </div>
           </div>
           <div
-            class="Spinner-sc-1tybciv-0 gzGczR"
+            class="Spinner-sc-1rpx65r-0 fqZPZB"
             color="info"
           />
         </div>
@@ -559,7 +559,7 @@ exports[`Import Profile - Processing import should succesfully import json profi
               class="font-semibold"
             >
               <span
-                class="TruncateMiddle__Wrapper-sc-3j3e79-0"
+                class="TruncateMiddle__Wrapper-ue8va6-0"
                 data-testid="TruncateMiddle"
               >
                 export
@@ -567,7 +567,7 @@ exports[`Import Profile - Processing import should succesfully import json profi
             </div>
           </div>
           <div
-            class="Spinner-sc-1tybciv-0 gzGczR"
+            class="Spinner-sc-1rpx65r-0 fqZPZB"
             color="info"
           />
         </div>

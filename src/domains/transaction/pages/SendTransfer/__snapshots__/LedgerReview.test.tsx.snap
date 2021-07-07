@@ -3,7 +3,7 @@
 exports[`TransferLedgerReview should render 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -57,7 +57,7 @@ exports[`TransferLedgerReview should render 1`] = `
             class="flex flex-col justify-center py-2 px-4 w-1/2"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Amount
             </span>
@@ -72,7 +72,7 @@ exports[`TransferLedgerReview should render 1`] = `
             class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Fee
             </span>
@@ -106,7 +106,7 @@ exports[`TransferLedgerReview should render 1`] = `
         class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
       >
         <span
-          class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+          class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
         >
           Total Amount
         </span>
@@ -125,7 +125,7 @@ exports[`TransferLedgerReview should render 1`] = `
 exports[`TransferLedgerReview should render skeleton while loading expiration 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -196,7 +196,7 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
             class="flex flex-col justify-center py-2 px-4 w-1/2"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Amount
             </span>
@@ -211,7 +211,7 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
             class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Fee
             </span>
@@ -245,7 +245,7 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
         class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
       >
         <span
-          class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+          class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
         >
           Total Amount
         </span>

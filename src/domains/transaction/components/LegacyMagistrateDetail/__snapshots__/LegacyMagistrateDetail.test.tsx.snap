@@ -9,7 +9,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -51,7 +51,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -73,7 +73,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -92,7 +92,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -105,7 +105,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -121,7 +121,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -144,7 +144,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -163,7 +163,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -197,7 +197,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -218,14 +218,14 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"

@@ -113,7 +113,7 @@ exports[`FilterWallets should render with networks selection 1`] = `
             data-testid="NetworkOption__ARK"
           >
             <div
-              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-d5u41q-0 bWntUS relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
             >
               <div
                 class="sc-bdfBwQ hjDozt"
@@ -125,7 +125,7 @@ exports[`FilterWallets should render with networks selection 1`] = `
                 </svg>
               </div>
               <span
-                class="Badge__Wrapper-sc-1d7juq8-0 fMCGPT flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
               >
                 <span />
               </span>

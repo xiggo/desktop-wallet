@@ -411,7 +411,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
       </li>
     </ul>
     <div
-      class="Divider-sc-19q4mlo-0 bKsVMa border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
       type="horizontal"
     />
     <div
@@ -448,7 +448,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         class="relative"
       >
         <button
-          class="ClipboardButton__StyledButton-sc-1ft1991-0 jNaOXY"
+          class="ClipboardButton__StyledButton-cammp1-0 kUVLdV"
           data-testid="CreateWallet__copy"
           type="button"
         >
@@ -471,7 +471,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST flex items-center space-x-2"
+        class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex items-center space-x-2"
         data-testid="CreateWallet__download"
         type="button"
       >
@@ -494,7 +494,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
       </button>
     </div>
     <div
-      class="Divider-sc-19q4mlo-0 bKsVMa border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
       type="horizontal"
     />
   </section>

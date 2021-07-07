@@ -30,7 +30,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
     >
       <div />
       <div
-        class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div>
@@ -51,7 +51,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -66,13 +66,13 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
                           value=""
@@ -91,7 +91,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                       class="relative w-20 h-20"
                     >
                       <div
-                        class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+                        class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
                       >
                         <img
                           alt="Avatar"
@@ -129,7 +129,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                 </div>
               </div>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 qzrKg flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -150,14 +150,14 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jXtMoQ"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="true"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="password"
                       type="password"
@@ -207,7 +207,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 qzrKg flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -222,14 +222,14 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jXtMoQ"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="true"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="confirmPassword"
                       type="password"
@@ -279,7 +279,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -297,13 +297,13 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                     BTC…
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="select-list__input"
                         name="currency"
                         readonly=""
@@ -331,7 +331,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                         BTC (Ƀ)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -342,7 +342,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                             aria-controls="downshift-47-menu"
                             aria-labelledby="downshift-47-label"
                             autocomplete="off"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="SelectDropdown__input"
                             id="downshift-47-input"
                             name="currency"
@@ -385,7 +385,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                       </div>
                       <ul
                         aria-labelledby="downshift-47-label"
-                        class="styles__SelectOptionsList-b2falt-0 dyOwRR is-open"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
                         id="downshift-47-menu"
                         role="listbox"
                       >
@@ -661,15 +661,15 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                             class="flex"
                           >
                             <input
-                              class="Toggle__Input-qyyifx-0 WGuGL"
+                              class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-qyyifx-1 bAIvyW"
+                              class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                             >
                               <span
-                                class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                               />
                             </div>
                           </label>
@@ -688,14 +688,14 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="CreateProfile__back-button"
               type="button"
             >
@@ -706,7 +706,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 fqRthJ"
+              class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
               data-testid="CreateProfile__submit-button"
               disabled=""
               type="submit"
@@ -755,7 +755,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
     >
       <div />
       <div
-        class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div>
@@ -776,7 +776,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -791,13 +791,13 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
                           value=""
@@ -816,7 +816,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                       class="relative w-20 h-20"
                     >
                       <div
-                        class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+                        class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
                       >
                         <img
                           alt="Avatar"
@@ -854,7 +854,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                 </div>
               </div>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -875,13 +875,13 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="password"
                       type="password"
@@ -917,7 +917,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -938,13 +938,13 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="confirmPassword"
                       type="password"
@@ -980,7 +980,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -999,13 +999,13 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="select-list__input"
                         name="currency"
                         readonly=""
@@ -1034,7 +1034,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1044,7 +1044,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                             aria-controls="downshift-0-menu"
                             aria-labelledby="downshift-0-label"
                             autocomplete="off"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="SelectDropdown__input"
                             id="downshift-0-input"
                             name="currency"
@@ -1087,7 +1087,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                       </div>
                       <ul
                         aria-labelledby="downshift-0-label"
-                        class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                         id="downshift-0-menu"
                         role="listbox"
                       />
@@ -1128,15 +1128,15 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                             class="flex"
                           >
                             <input
-                              class="Toggle__Input-qyyifx-0 WGuGL"
+                              class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-qyyifx-1 bAIvyW"
+                              class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                             >
                               <span
-                                class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                               />
                             </div>
                           </label>
@@ -1155,14 +1155,14 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="CreateProfile__back-button"
               type="button"
             >
@@ -1173,7 +1173,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 fqRthJ"
+              class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
               data-testid="CreateProfile__submit-button"
               disabled=""
               type="submit"
@@ -1222,7 +1222,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
     >
       <div />
       <div
-        class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div>
@@ -1243,7 +1243,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1258,13 +1258,13 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
                           value=""
@@ -1283,7 +1283,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                       class="relative w-20 h-20"
                     >
                       <div
-                        class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+                        class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
                       >
                         <img
                           alt="Avatar"
@@ -1321,7 +1321,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                 </div>
               </div>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1342,13 +1342,13 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="password"
                       type="password"
@@ -1384,7 +1384,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1405,13 +1405,13 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="confirmPassword"
                       type="password"
@@ -1447,7 +1447,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1466,13 +1466,13 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="select-list__input"
                         name="currency"
                         readonly=""
@@ -1501,7 +1501,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1511,7 +1511,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                             aria-controls="downshift-12-menu"
                             aria-labelledby="downshift-12-label"
                             autocomplete="off"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="SelectDropdown__input"
                             id="downshift-12-input"
                             name="currency"
@@ -1554,7 +1554,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                       </div>
                       <ul
                         aria-labelledby="downshift-12-label"
-                        class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                         id="downshift-12-menu"
                         role="listbox"
                       />
@@ -1595,15 +1595,15 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                             class="flex"
                           >
                             <input
-                              class="Toggle__Input-qyyifx-0 WGuGL"
+                              class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-qyyifx-1 bAIvyW"
+                              class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                             >
                               <span
-                                class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                               />
                             </div>
                           </label>
@@ -1622,14 +1622,14 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="CreateProfile__back-button"
               type="button"
             >
@@ -1640,7 +1640,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 fqRthJ"
+              class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
               data-testid="CreateProfile__submit-button"
               disabled=""
               type="submit"
@@ -1689,7 +1689,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
     >
       <div />
       <div
-        class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div>
@@ -1710,7 +1710,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1725,13 +1725,13 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
                           value=""
@@ -1750,7 +1750,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                       class="relative w-20 h-20"
                     >
                       <div
-                        class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+                        class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
                       >
                         <img
                           alt="Avatar"
@@ -1788,7 +1788,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                 </div>
               </div>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1809,13 +1809,13 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="password"
                       type="password"
@@ -1851,7 +1851,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1872,13 +1872,13 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="confirmPassword"
                       type="password"
@@ -1914,7 +1914,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1933,13 +1933,13 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="select-list__input"
                         name="currency"
                         readonly=""
@@ -1968,7 +1968,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -1978,7 +1978,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                             aria-controls="downshift-6-menu"
                             aria-labelledby="downshift-6-label"
                             autocomplete="off"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="SelectDropdown__input"
                             id="downshift-6-input"
                             name="currency"
@@ -2021,7 +2021,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                       </div>
                       <ul
                         aria-labelledby="downshift-6-label"
-                        class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                         id="downshift-6-menu"
                         role="listbox"
                       />
@@ -2062,15 +2062,15 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                             class="flex"
                           >
                             <input
-                              class="Toggle__Input-qyyifx-0 WGuGL"
+                              class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-qyyifx-1 bAIvyW"
+                              class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                             >
                               <span
-                                class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                               />
                             </div>
                           </label>
@@ -2089,14 +2089,14 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="CreateProfile__back-button"
               type="button"
             >
@@ -2107,7 +2107,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 fqRthJ"
+              class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
               data-testid="CreateProfile__submit-button"
               disabled=""
               type="submit"
@@ -2156,7 +2156,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
     >
       <div />
       <div
-        class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div>
@@ -2177,7 +2177,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2192,13 +2192,13 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
                           value=""
@@ -2220,10 +2220,10 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                         class="overflow-hidden h-full rounded-full"
                       >
                         <div
-                          class="SelectProfileImage__UploadButtonWrapper-t6smk3-0 euBdNq"
+                          class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SelectProfileImage__upload-button"
                             type="button"
                           >
@@ -2248,7 +2248,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                 </div>
               </div>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2269,13 +2269,13 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="password"
                       type="password"
@@ -2311,7 +2311,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2326,13 +2326,13 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="confirmPassword"
                       type="password"
@@ -2368,7 +2368,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2386,13 +2386,13 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                     BTC…
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="select-list__input"
                         name="currency"
                         readonly=""
@@ -2420,7 +2420,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                         BTC (Ƀ)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -2431,7 +2431,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                             aria-controls="downshift-33-menu"
                             aria-labelledby="downshift-33-label"
                             autocomplete="off"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="SelectDropdown__input"
                             id="downshift-33-input"
                             name="currency"
@@ -2474,7 +2474,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                       </div>
                       <ul
                         aria-labelledby="downshift-33-label"
-                        class="styles__SelectOptionsList-b2falt-0 dyOwRR is-open"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
                         id="downshift-33-menu"
                         role="listbox"
                       >
@@ -2750,15 +2750,15 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                             class="flex"
                           >
                             <input
-                              class="Toggle__Input-qyyifx-0 WGuGL"
+                              class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-qyyifx-1 bAIvyW"
+                              class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                             >
                               <span
-                                class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                               />
                             </div>
                           </label>
@@ -2777,14 +2777,14 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="CreateProfile__back-button"
               type="button"
             >
@@ -2795,7 +2795,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >
@@ -2843,7 +2843,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
     >
       <div />
       <div
-        class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div>
@@ -2864,7 +2864,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2879,13 +2879,13 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
                           value=""
@@ -2904,7 +2904,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                       class="relative w-20 h-20"
                     >
                       <div
-                        class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+                        class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
                       >
                         <img
                           alt="Avatar"
@@ -2942,7 +2942,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                 </div>
               </div>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2963,13 +2963,13 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="password"
                       type="password"
@@ -3005,7 +3005,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3026,13 +3026,13 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="confirmPassword"
                       type="password"
@@ -3068,7 +3068,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3086,13 +3086,13 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                     BTC…
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="select-list__input"
                         name="currency"
                         readonly=""
@@ -3120,7 +3120,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                         BTC (Ƀ)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -3131,7 +3131,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                             aria-controls="downshift-18-menu"
                             aria-labelledby="downshift-18-label"
                             autocomplete="off"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="SelectDropdown__input"
                             id="downshift-18-input"
                             name="currency"
@@ -3174,7 +3174,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                       </div>
                       <ul
                         aria-labelledby="downshift-18-label"
-                        class="styles__SelectOptionsList-b2falt-0 dyOwRR is-open"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
                         id="downshift-18-menu"
                         role="listbox"
                       >
@@ -3450,15 +3450,15 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                             class="flex"
                           >
                             <input
-                              class="Toggle__Input-qyyifx-0 WGuGL"
+                              class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-qyyifx-1 bAIvyW"
+                              class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                             >
                               <span
-                                class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                               />
                             </div>
                           </label>
@@ -3477,14 +3477,14 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="CreateProfile__back-button"
               type="button"
             >
@@ -3495,7 +3495,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >
@@ -3543,7 +3543,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
     >
       <div />
       <div
-        class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div>
@@ -3564,7 +3564,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3579,13 +3579,13 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
                           value=""
@@ -3604,7 +3604,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       class="relative w-20 h-20"
                     >
                       <div
-                        class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+                        class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
                       >
                         <img
                           alt="Avatar"
@@ -3642,7 +3642,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                 </div>
               </div>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3663,13 +3663,13 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="password"
                       type="password"
@@ -3705,7 +3705,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3726,13 +3726,13 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="confirmPassword"
                       type="password"
@@ -3768,7 +3768,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3786,13 +3786,13 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                     BTC…
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="select-list__input"
                         name="currency"
                         readonly=""
@@ -3820,7 +3820,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         BTC (Ƀ)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -3830,7 +3830,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                             aria-controls="downshift-61-menu"
                             aria-labelledby="downshift-61-label"
                             autocomplete="off"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="SelectDropdown__input"
                             id="downshift-61-input"
                             name="currency"
@@ -3873,7 +3873,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       </div>
                       <ul
                         aria-labelledby="downshift-61-label"
-                        class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                         id="downshift-61-menu"
                         role="listbox"
                       />
@@ -3914,15 +3914,15 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                             class="flex"
                           >
                             <input
-                              class="Toggle__Input-qyyifx-0 WGuGL"
+                              class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-qyyifx-1 bAIvyW"
+                              class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                             >
                               <span
-                                class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                               />
                             </div>
                           </label>
@@ -3941,14 +3941,14 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="CreateProfile__back-button"
               type="button"
             >
@@ -3959,7 +3959,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >
@@ -4007,7 +4007,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
     >
       <div />
       <div
-        class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
         type="horizontal"
       />
       <div>
@@ -4028,7 +4028,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   class="mr-6 w-full"
                 >
                   <fieldset
-                    class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                    class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
                   >
                     <label
                       class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4043,13 +4043,13 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
                           value=""
@@ -4068,7 +4068,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       class="relative w-20 h-20"
                     >
                       <div
-                        class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+                        class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
                       >
                         <img
                           alt="Avatar"
@@ -4106,7 +4106,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                 </div>
               </div>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4127,13 +4127,13 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="password"
                       type="password"
@@ -4169,7 +4169,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4190,13 +4190,13 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="InputPassword"
                       name="confirmPassword"
                       type="password"
@@ -4232,7 +4232,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                 </div>
               </fieldset>
               <fieldset
-                class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+                class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
               >
                 <label
                   class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4250,13 +4250,13 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                     BTC…
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="select-list__input"
                         name="currency"
                         readonly=""
@@ -4284,7 +4284,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         BTC (Ƀ)…
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -4294,7 +4294,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                             aria-controls="downshift-61-menu"
                             aria-labelledby="downshift-61-label"
                             autocomplete="off"
-                            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="SelectDropdown__input"
                             id="downshift-61-input"
                             name="currency"
@@ -4337,7 +4337,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       </div>
                       <ul
                         aria-labelledby="downshift-61-label"
-                        class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                         id="downshift-61-menu"
                         role="listbox"
                       />
@@ -4378,15 +4378,15 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                             class="flex"
                           >
                             <input
-                              class="Toggle__Input-qyyifx-0 WGuGL"
+                              class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-qyyifx-1 bAIvyW"
+                              class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                             >
                               <span
-                                class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                               />
                             </div>
                           </label>
@@ -4405,14 +4405,14 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
             </div>
           </div>
           <div
-            class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
             type="horizontal"
           />
           <div
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="CreateProfile__back-button"
               type="button"
             >
@@ -4423,7 +4423,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >

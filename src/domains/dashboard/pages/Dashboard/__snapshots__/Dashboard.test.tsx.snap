@@ -13,13 +13,13 @@ exports[`Dashboard should render 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn flex w-12"
           disabled=""
         >
           <div
@@ -39,7 +39,7 @@ exports[`Dashboard should render 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -120,10 +120,10 @@ exports[`Dashboard should render 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -159,10 +159,10 @@ exports[`Dashboard should render 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -189,10 +189,10 @@ exports[`Dashboard should render 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -249,7 +249,7 @@ exports[`Dashboard should render 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -277,7 +277,7 @@ exports[`Dashboard should render 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe"
       >
         <div
           class="container px-10 mx-auto"
@@ -310,7 +310,7 @@ exports[`Dashboard should render 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                           data-testid="LayoutControls__list--icon"
                         >
                           <div
@@ -335,7 +335,7 @@ exports[`Dashboard should render 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                           data-testid="LayoutControls__grid--icon"
                         >
                           <div
@@ -369,7 +369,7 @@ exports[`Dashboard should render 1`] = `
                           class="group"
                         >
                           <button
-                            class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                           >
                             <div
                               class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -397,7 +397,7 @@ exports[`Dashboard should render 1`] = `
                   class="flex space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="WalletControls__import-ledger"
                     type="button"
                   >
@@ -423,7 +423,7 @@ exports[`Dashboard should render 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="WalletControls__import-wallet"
                     type="button"
                   >
@@ -449,7 +449,7 @@ exports[`Dashboard should render 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                     data-testid="WalletControls__create-wallet"
                     type="button"
                   >
@@ -505,7 +505,7 @@ exports[`Dashboard should render 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -520,7 +520,7 @@ exports[`Dashboard should render 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -535,7 +535,7 @@ exports[`Dashboard should render 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -586,7 +586,7 @@ exports[`Dashboard should render 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -601,7 +601,7 @@ exports[`Dashboard should render 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -616,7 +616,7 @@ exports[`Dashboard should render 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -682,7 +682,7 @@ exports[`Dashboard should render 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -697,7 +697,7 @@ exports[`Dashboard should render 1`] = `
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
@@ -712,7 +712,7 @@ exports[`Dashboard should render 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -773,7 +773,7 @@ exports[`Dashboard should render 1`] = `
         </div>
       </div>
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe"
       >
         <div
           class="container px-10 mx-auto"
@@ -791,11 +791,11 @@ exports[`Dashboard should render 1`] = `
             class="mb-8"
           >
             <div
-              class="Tabs__TabList-sc-1lxyvu-1 jTHOGm w-full h-15"
+              class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
             >
               <button
                 aria-selected="true"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-all"
                 role="tab"
                 tabindex="0"
@@ -810,7 +810,7 @@ exports[`Dashboard should render 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-received"
                 role="tab"
                 tabindex="-1"
@@ -825,7 +825,7 @@ exports[`Dashboard should render 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-sent"
                 role="tab"
                 tabindex="-1"
@@ -868,7 +868,7 @@ exports[`Dashboard should render 1`] = `
                         </span>
                       </span>
                       <span
-                        class="CollapseToggleButton__ToggleIcon-sc-1f6f05f-0 jmsVky"
+                        class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
                       >
                         <div
                           class="sc-bdfBwQ ijcmGk"
@@ -891,7 +891,7 @@ exports[`Dashboard should render 1`] = `
             data-testid="TransactionTable"
           >
             <div
-              class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+              class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
               role="table"
             >
               <table
@@ -1039,22 +1039,22 @@ exports[`Dashboard should render 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                    class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                          class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
                           to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                         >
                           <span
-                            class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                            class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
                               class="sc-bdfBwQ dnaihB"
@@ -1071,7 +1071,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1083,14 +1083,14 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT flex space-x-4"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
                       >
                         <div
                           class="flex items-center -space-x-1"
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -1103,7 +1103,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1135,7 +1135,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex space-x-1 align-middle"
@@ -1147,7 +1147,7 @@ exports[`Dashboard should render 1`] = `
                       class="w-16"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex p-1 align-middle"
@@ -1168,10 +1168,10 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-1tj9hzr-0 fMWESr whitespace-nowrap"
+                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
                           color="success"
                         >
                           <span
@@ -1184,7 +1184,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1196,22 +1196,22 @@ exports[`Dashboard should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                    class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                          class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
                           to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                         >
                           <span
-                            class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                            class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
                               class="sc-bdfBwQ dnaihB"
@@ -1228,7 +1228,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1240,14 +1240,14 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT flex space-x-4"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
                       >
                         <div
                           class="flex items-center -space-x-1"
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -1260,7 +1260,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1292,7 +1292,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex space-x-1 align-middle"
@@ -1304,7 +1304,7 @@ exports[`Dashboard should render 1`] = `
                       class="w-16"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex p-1 align-middle"
@@ -1325,10 +1325,10 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-1tj9hzr-0 fMWESr whitespace-nowrap"
+                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
                           color="success"
                         >
                           <span
@@ -1341,7 +1341,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1353,22 +1353,22 @@ exports[`Dashboard should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                    class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                          class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
                           to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                         >
                           <span
-                            class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                            class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
                               class="sc-bdfBwQ dnaihB"
@@ -1385,7 +1385,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1397,14 +1397,14 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT flex space-x-4"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
                       >
                         <div
                           class="flex items-center -space-x-1"
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -1417,7 +1417,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1449,7 +1449,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex space-x-1 align-middle"
@@ -1461,7 +1461,7 @@ exports[`Dashboard should render 1`] = `
                       class="w-16"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex p-1 align-middle"
@@ -1482,10 +1482,10 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-1tj9hzr-0 fMWESr whitespace-nowrap"
+                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
                           color="success"
                         >
                           <span
@@ -1498,7 +1498,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1510,22 +1510,22 @@ exports[`Dashboard should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                    class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                          class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
                           to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                         >
                           <span
-                            class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                            class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
                               class="sc-bdfBwQ dnaihB"
@@ -1542,7 +1542,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1554,14 +1554,14 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT flex space-x-4"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
                       >
                         <div
                           class="flex items-center -space-x-1"
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -1574,7 +1574,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1606,7 +1606,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex space-x-1 align-middle"
@@ -1618,7 +1618,7 @@ exports[`Dashboard should render 1`] = `
                       class="w-16"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex p-1 align-middle"
@@ -1639,10 +1639,10 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-1tj9hzr-0 fMWESr whitespace-nowrap"
+                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
                           color="success"
                         >
                           <span
@@ -1655,7 +1655,7 @@ exports[`Dashboard should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1671,7 +1671,7 @@ exports[`Dashboard should render 1`] = `
             </div>
           </div>
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST mt-10 mb-5 w-full"
+            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB mt-10 mb-5 w-full"
             data-testid="transactions__fetch-more-button"
             type="button"
           >
@@ -1695,13 +1695,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn flex w-12"
           disabled=""
         >
           <div
@@ -1721,7 +1721,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -1802,10 +1802,10 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1841,10 +1841,10 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1871,10 +1871,10 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1931,7 +1931,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1959,7 +1959,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe"
       >
         <div
           class="container px-10 mx-auto"
@@ -1992,7 +1992,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                           data-testid="LayoutControls__list--icon"
                         >
                           <div
@@ -2017,7 +2017,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                           data-testid="LayoutControls__grid--icon"
                         >
                           <div
@@ -2051,7 +2051,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                           class="group"
                         >
                           <button
-                            class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                           >
                             <div
                               class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -2079,7 +2079,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                   class="flex space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="WalletControls__import-ledger"
                     type="button"
                   >
@@ -2105,7 +2105,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="WalletControls__import-wallet"
                     type="button"
                   >
@@ -2131,7 +2131,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                     data-testid="WalletControls__create-wallet"
                     type="button"
                   >
@@ -2187,7 +2187,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -2202,7 +2202,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -2217,7 +2217,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -2268,7 +2268,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -2283,7 +2283,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -2298,7 +2298,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -2364,7 +2364,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -2379,7 +2379,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
@@ -2394,7 +2394,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -2455,7 +2455,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
         </div>
       </div>
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe"
       >
         <div
           class="container px-10 mx-auto"
@@ -2473,11 +2473,11 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
             class="mb-8"
           >
             <div
-              class="Tabs__TabList-sc-1lxyvu-1 jTHOGm w-full h-15"
+              class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
             >
               <button
                 aria-selected="false"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-all"
                 role="tab"
                 tabindex="-1"
@@ -2492,7 +2492,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-received"
                 role="tab"
                 tabindex="-1"
@@ -2507,7 +2507,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-sent"
                 role="tab"
                 tabindex="-1"
@@ -2550,7 +2550,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </span>
                       <span
-                        class="CollapseToggleButton__ToggleIcon-sc-1f6f05f-0 jmsVky"
+                        class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
                       >
                         <div
                           class="sc-bdfBwQ ijcmGk"
@@ -2573,7 +2573,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
             data-testid="TransactionTable"
           >
             <div
-              class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+              class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
               role="table"
             >
               <table
@@ -2721,12 +2721,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                    class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <span>
                           <span
@@ -2745,7 +2745,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <span>
                           <span
@@ -2764,13 +2764,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <div
                           class="flex items-center mr-4 -space-x-1"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -2787,7 +2787,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </span>
                           </div>
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -2821,7 +2821,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span
                           class="flex items-center space-x-2"
@@ -2844,7 +2844,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span>
                           <span
@@ -2863,7 +2863,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <span
                           class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -2899,7 +2899,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="flex items-center space-x-1"
@@ -2935,12 +2935,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                    class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <span>
                           <span
@@ -2959,7 +2959,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <span>
                           <span
@@ -2978,13 +2978,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <div
                           class="flex items-center mr-4 -space-x-1"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3001,7 +3001,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </span>
                           </div>
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3035,7 +3035,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span
                           class="flex items-center space-x-2"
@@ -3058,7 +3058,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span>
                           <span
@@ -3077,7 +3077,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <span
                           class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -3113,7 +3113,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="flex items-center space-x-1"
@@ -3149,12 +3149,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                    class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <span>
                           <span
@@ -3173,7 +3173,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <span>
                           <span
@@ -3192,13 +3192,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <div
                           class="flex items-center mr-4 -space-x-1"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3215,7 +3215,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </span>
                           </div>
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3249,7 +3249,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span
                           class="flex items-center space-x-2"
@@ -3272,7 +3272,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span>
                           <span
@@ -3291,7 +3291,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <span
                           class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -3327,7 +3327,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="flex items-center space-x-1"
@@ -3363,12 +3363,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                    class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <span>
                           <span
@@ -3387,7 +3387,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <span>
                           <span
@@ -3406,13 +3406,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <div
                           class="flex items-center mr-4 -space-x-1"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3429,7 +3429,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </span>
                           </div>
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3463,7 +3463,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span
                           class="flex items-center space-x-2"
@@ -3486,7 +3486,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span>
                           <span
@@ -3505,7 +3505,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <span
                           class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -3541,7 +3541,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="flex items-center space-x-1"
@@ -3577,12 +3577,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                    class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <span>
                           <span
@@ -3601,7 +3601,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <span>
                           <span
@@ -3620,13 +3620,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <div
                           class="flex items-center mr-4 -space-x-1"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3643,7 +3643,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </span>
                           </div>
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3677,7 +3677,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span
                           class="flex items-center space-x-2"
@@ -3700,7 +3700,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span>
                           <span
@@ -3719,7 +3719,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <span
                           class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -3755,7 +3755,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="flex items-center space-x-1"
@@ -3791,12 +3791,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                    class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <span>
                           <span
@@ -3815,7 +3815,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <span>
                           <span
@@ -3834,13 +3834,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <div
                           class="flex items-center mr-4 -space-x-1"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3857,7 +3857,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </span>
                           </div>
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -3891,7 +3891,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span
                           class="flex items-center space-x-2"
@@ -3914,7 +3914,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span>
                           <span
@@ -3933,7 +3933,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <span
                           class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -3969,7 +3969,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="flex items-center space-x-1"
@@ -4005,12 +4005,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                    class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <span>
                           <span
@@ -4029,7 +4029,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <span>
                           <span
@@ -4048,13 +4048,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <div
                           class="flex items-center mr-4 -space-x-1"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -4071,7 +4071,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </span>
                           </div>
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -4105,7 +4105,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span
                           class="flex items-center space-x-2"
@@ -4128,7 +4128,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span>
                           <span
@@ -4147,7 +4147,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <span
                           class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -4183,7 +4183,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="flex items-center space-x-1"
@@ -4219,12 +4219,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                    class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <span>
                           <span
@@ -4243,7 +4243,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <span>
                           <span
@@ -4262,13 +4262,13 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
                       >
                         <div
                           class="flex items-center mr-4 -space-x-1"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -4285,7 +4285,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             </span>
                           </div>
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                           >
                             <span>
                               <span
@@ -4319,7 +4319,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span
                           class="flex items-center space-x-2"
@@ -4342,7 +4342,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <span>
                           <span
@@ -4361,7 +4361,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <span
                           class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -4397,7 +4397,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="flex items-center space-x-1"
@@ -4450,13 +4450,13 @@ exports[`Dashboard should show warning for errored networks 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn flex w-12"
           disabled=""
         >
           <div
@@ -4476,7 +4476,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -4557,10 +4557,10 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -4596,10 +4596,10 @@ exports[`Dashboard should show warning for errored networks 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -4626,10 +4626,10 @@ exports[`Dashboard should show warning for errored networks 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -4686,7 +4686,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4714,7 +4714,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe"
       >
         <div
           class="container px-10 mx-auto"
@@ -4747,7 +4747,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                           data-testid="LayoutControls__list--icon"
                         >
                           <div
@@ -4772,7 +4772,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                           data-testid="LayoutControls__grid--icon"
                         >
                           <div
@@ -4806,7 +4806,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                           class="group"
                         >
                           <button
-                            class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                           >
                             <div
                               class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -4834,7 +4834,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                   class="flex space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="WalletControls__import-ledger"
                     type="button"
                   >
@@ -4860,7 +4860,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="WalletControls__import-wallet"
                     type="button"
                   >
@@ -4886,7 +4886,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                     data-testid="WalletControls__create-wallet"
                     type="button"
                   >
@@ -4942,7 +4942,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -4957,7 +4957,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -4972,7 +4972,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -5023,7 +5023,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -5038,7 +5038,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -5053,7 +5053,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -5119,7 +5119,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                          class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                           data-testid="Card"
                           type="button"
                         >
@@ -5134,7 +5134,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                                  class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
@@ -5149,7 +5149,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                                   data-testid="Avatar"
                                 >
                                   <div
@@ -5210,7 +5210,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
         </div>
       </div>
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe"
       >
         <div
           class="container px-10 mx-auto"
@@ -5228,11 +5228,11 @@ exports[`Dashboard should show warning for errored networks 1`] = `
             class="mb-8"
           >
             <div
-              class="Tabs__TabList-sc-1lxyvu-1 jTHOGm w-full h-15"
+              class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
             >
               <button
                 aria-selected="true"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-all"
                 role="tab"
                 tabindex="0"
@@ -5247,7 +5247,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-received"
                 role="tab"
                 tabindex="-1"
@@ -5262,7 +5262,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="Tabs__TabButton-sc-1lxyvu-0 group"
+                class="Tabs__TabButton-sc-1t8sbwb-0 group"
                 data-testid="tabs__tab-button-sent"
                 role="tab"
                 tabindex="-1"
@@ -5305,7 +5305,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         </span>
                       </span>
                       <span
-                        class="CollapseToggleButton__ToggleIcon-sc-1f6f05f-0 jmsVky"
+                        class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
                       >
                         <div
                           class="sc-bdfBwQ ijcmGk"
@@ -5328,7 +5328,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
             data-testid="TransactionTable"
           >
             <div
-              class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+              class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
               role="table"
             >
               <table
@@ -5476,22 +5476,22 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                    class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                          class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
                           to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                         >
                           <span
-                            class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                            class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
                               class="sc-bdfBwQ dnaihB"
@@ -5508,7 +5508,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -5520,14 +5520,14 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT flex space-x-4"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
                       >
                         <div
                           class="flex items-center -space-x-1"
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -5540,7 +5540,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5572,7 +5572,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex space-x-1 align-middle"
@@ -5584,7 +5584,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                       class="w-16"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex p-1 align-middle"
@@ -5605,10 +5605,10 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-1tj9hzr-0 fMWESr whitespace-nowrap"
+                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
                           color="success"
                         >
                           <span
@@ -5621,7 +5621,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -5633,22 +5633,22 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                    class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                          class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
                           to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                         >
                           <span
-                            class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                            class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
                               class="sc-bdfBwQ dnaihB"
@@ -5665,7 +5665,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -5677,14 +5677,14 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT flex space-x-4"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
                       >
                         <div
                           class="flex items-center -space-x-1"
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -5697,7 +5697,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5729,7 +5729,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex space-x-1 align-middle"
@@ -5741,7 +5741,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                       class="w-16"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex p-1 align-middle"
@@ -5762,10 +5762,10 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-1tj9hzr-0 fMWESr whitespace-nowrap"
+                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
                           color="success"
                         >
                           <span
@@ -5778,7 +5778,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -5790,22 +5790,22 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                    class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                          class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
                           to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                         >
                           <span
-                            class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                            class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
                               class="sc-bdfBwQ dnaihB"
@@ -5822,7 +5822,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -5834,14 +5834,14 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT flex space-x-4"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
                       >
                         <div
                           class="flex items-center -space-x-1"
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -5854,7 +5854,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5886,7 +5886,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex space-x-1 align-middle"
@@ -5898,7 +5898,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                       class="w-16"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex p-1 align-middle"
@@ -5919,10 +5919,10 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-1tj9hzr-0 fMWESr whitespace-nowrap"
+                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
                           color="success"
                         >
                           <span
@@ -5935,7 +5935,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -5947,22 +5947,22 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                    class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                          class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                           data-testid="TransactionRow__ID"
                           href="#"
                           rel="noopener noreferrer"
                           to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                         >
                           <span
-                            class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                            class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
                               class="sc-bdfBwQ dnaihB"
@@ -5979,7 +5979,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -5991,14 +5991,14 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT flex space-x-4"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
                       >
                         <div
                           class="flex items-center -space-x-1"
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -6011,7 +6011,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -6043,7 +6043,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex space-x-1 align-middle"
@@ -6055,7 +6055,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                       class="w-16"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
                       >
                         <div
                           class="inline-flex p-1 align-middle"
@@ -6076,10 +6076,10 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-1tj9hzr-0 fMWESr whitespace-nowrap"
+                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
                           color="success"
                         >
                           <span
@@ -6092,7 +6092,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                        class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -6108,7 +6108,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
             </div>
           </div>
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST mt-10 mb-5 w-full"
+            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB mt-10 mb-5 w-full"
             data-testid="transactions__fetch-more-button"
             type="button"
           >

@@ -17,7 +17,7 @@ exports[`SelectProfileImage should handle upload file 1`] = `
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+          class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
         >
           <img
             alt="Avatar"
@@ -46,7 +46,7 @@ exports[`SelectProfileImage should handle upload file 1`] = `
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-1y2wptt-0 gkZwMr flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+          class="OriginalButton__StyledButton-o0fs2j-0 hsRXUZ flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
@@ -87,7 +87,7 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+          class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
         >
           <img
             alt="Avatar"
@@ -116,7 +116,7 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-1y2wptt-0 gkZwMr flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+          class="OriginalButton__StyledButton-o0fs2j-0 hsRXUZ flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
@@ -157,7 +157,7 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+          class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
         >
           <img
             alt="Avatar"
@@ -186,7 +186,7 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-1y2wptt-0 gkZwMr flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+          class="OriginalButton__StyledButton-o0fs2j-0 hsRXUZ flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
@@ -230,10 +230,10 @@ exports[`SelectProfileImage should render 1`] = `
           class="overflow-hidden h-full rounded-full"
         >
           <div
-            class="SelectProfileImage__UploadButtonWrapper-t6smk3-0 euBdNq"
+            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="SelectProfileImage__upload-button"
               type="button"
             >
@@ -276,7 +276,7 @@ exports[`SelectProfileImage should render with value svg 1`] = `
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+          class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
         >
           <img
             alt="Avatar"
@@ -330,7 +330,7 @@ exports[`SelectProfileImage should render without value svg 1`] = `
         class="relative w-20 h-20"
       >
         <div
-          class="SelectProfileImage__ProfileImageStyled-t6smk3-1 bVbLLU"
+          class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
         >
           <img
             alt="Avatar"
@@ -359,7 +359,7 @@ exports[`SelectProfileImage should render without value svg 1`] = `
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-1y2wptt-0 gkZwMr flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+          class="OriginalButton__StyledButton-o0fs2j-0 hsRXUZ flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >

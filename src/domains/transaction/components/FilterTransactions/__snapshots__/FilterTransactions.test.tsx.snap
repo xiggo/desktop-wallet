@@ -30,7 +30,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
             </span>
           </span>
           <span
-            class="CollapseToggleButton__ToggleIcon-sc-1f6f05f-0 jAhosv"
+            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iJBAlr"
           >
             <div
               class="sc-bdfBwQ ijcmGk"
@@ -45,7 +45,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
         </button>
       </span>
       <div
-        class="Dropdown__Wrapper-ocz1je-0 krLubM opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-80 max-h-128 overflow-y-auto"
+        class="Dropdown__Wrapper-sc-4ty2ol-0 jYYWcF opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl w-80 max-h-128 overflow-y-auto"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -78,7 +78,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
               class="mx-8 -my-2"
             >
               <div
-                class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-600"
+                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-600"
                 type="horizontal"
               />
             </div>
@@ -200,7 +200,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
               class="mx-8 -my-2"
             >
               <div
-                class="Divider-sc-19q4mlo-0 daSmjL border-theme-secondary-300 dark:border-theme-secondary-600"
+                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-600"
                 type="horizontal"
               />
             </div>
@@ -257,7 +257,7 @@ exports[`FilterTransactions should render 1`] = `
             </span>
           </span>
           <span
-            class="CollapseToggleButton__ToggleIcon-sc-1f6f05f-0 jmsVky"
+            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
           >
             <div
               class="sc-bdfBwQ ijcmGk"
@@ -306,7 +306,7 @@ exports[`FilterTransactions should render with default selected option 1`] = `
             </span>
           </span>
           <span
-            class="CollapseToggleButton__ToggleIcon-sc-1f6f05f-0 jmsVky"
+            class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
           >
             <div
               class="sc-bdfBwQ ijcmGk"

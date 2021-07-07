@@ -16,7 +16,7 @@ exports[`PluginManagerControls should render 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
             data-testid="LayoutControls__list--icon"
           >
             <div
@@ -41,7 +41,7 @@ exports[`PluginManagerControls should render 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
             data-testid="LayoutControls__grid--icon"
           >
             <div
@@ -80,7 +80,7 @@ exports[`PluginManagerControls should toggle between list and grid 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
             data-testid="LayoutControls__list--icon"
           >
             <div
@@ -105,7 +105,7 @@ exports[`PluginManagerControls should toggle between list and grid 1`] = `
           class="group"
         >
           <button
-            class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
             data-testid="LayoutControls__grid--icon"
           >
             <div

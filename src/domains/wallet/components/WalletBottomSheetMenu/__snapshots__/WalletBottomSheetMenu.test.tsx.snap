@@ -37,7 +37,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
               Show
             </span>
             <span
-              class="CollapseToggleButton__ToggleIcon-sc-1f6f05f-0 jmsVky"
+              class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
             >
               <div
                 class="sc-bdfBwQ ijcmGk"
@@ -67,7 +67,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
             role="table"
           >
             <table
@@ -189,19 +189,19 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 kzWqBF group"
+                  class="TableRow__TableRowStyled-y9j4av-0 fKSwtJ group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-success-900"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-success-900"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -216,7 +216,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-success-900 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-success-900 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -238,7 +238,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -255,7 +255,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -264,7 +264,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -275,26 +275,26 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>
                   </td>
                 </tr>
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -309,7 +309,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -331,7 +331,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -348,7 +348,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -372,7 +372,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -383,7 +383,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>

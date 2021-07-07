@@ -3,7 +3,7 @@
 exports[`TransactionRowRecipientIcon should render avatar 1`] = `
 <DocumentFragment>
   <div
-    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
     data-testid="Avatar"
   >
     <div
@@ -22,7 +22,7 @@ exports[`TransactionRowRecipientIcon should render avatar 1`] = `
 exports[`TransactionRowRecipientIcon should render icon 1`] = `
 <DocumentFragment>
   <div
-    class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
     data-testid="TransactionRowRecipientIcon"
   >
     <div

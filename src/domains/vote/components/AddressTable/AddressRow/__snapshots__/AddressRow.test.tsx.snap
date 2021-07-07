@@ -5,15 +5,15 @@ exports[`AddressRow should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -34,7 +34,7 @@ exports[`AddressRow should emit action on select button 1`] = `
                 data-testid="Address__alias"
               >
                 <span
-                  class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -51,7 +51,7 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -87,7 +87,7 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -98,10 +98,10 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -121,7 +121,7 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center font-bold text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center font-bold text-theme-secondary-text"
           >
             <span>
               #
@@ -130,7 +130,7 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
           >
             <div
               class="sc-bdfBwQ fdJUih text-theme-success-600"
@@ -146,10 +146,10 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -172,15 +172,15 @@ exports[`AddressRow should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -201,7 +201,7 @@ exports[`AddressRow should render 1`] = `
                 data-testid="Address__alias"
               >
                 <span
-                  class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -218,7 +218,7 @@ exports[`AddressRow should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -254,7 +254,7 @@ exports[`AddressRow should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -265,10 +265,10 @@ exports[`AddressRow should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -288,7 +288,7 @@ exports[`AddressRow should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center font-bold text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center font-bold text-theme-secondary-text"
           >
             <span>
               #
@@ -297,7 +297,7 @@ exports[`AddressRow should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
           >
             <div
               class="sc-bdfBwQ fdJUih text-theme-success-600"
@@ -313,10 +313,10 @@ exports[`AddressRow should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -339,15 +339,15 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -368,7 +368,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
                 data-testid="Address__alias"
               >
                 <span
-                  class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -385,7 +385,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -434,7 +434,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -445,10 +445,10 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -468,7 +468,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center font-bold text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center font-bold text-theme-secondary-text"
           >
             <span>
               #
@@ -477,7 +477,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
           >
             <div
               class="sc-bdfBwQ fdJUih text-theme-success-600"
@@ -493,10 +493,10 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -519,15 +519,15 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -548,7 +548,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
                 data-testid="Address__alias"
               >
                 <span
-                  class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -565,7 +565,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -601,7 +601,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -612,7 +612,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
               class="flex items-center h-11"
@@ -624,7 +624,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
                   class="inline-block"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -642,7 +642,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
                   class="inline-block"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -660,7 +660,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
                   class="inline-block"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -678,7 +678,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
                   class="inline-block"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -698,7 +698,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -716,10 +716,10 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -742,15 +742,15 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -771,7 +771,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
                 data-testid="Address__alias"
               >
                 <span
-                  class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -788,7 +788,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -824,7 +824,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -835,7 +835,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
               class="flex items-center h-11"
@@ -847,7 +847,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
                   class="inline-block"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -865,7 +865,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
                   class="inline-block"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -883,7 +883,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
                   class="inline-block"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -898,7 +898,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
                   </div>
                 </span>
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV relative border-theme-text text-theme-text ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS relative border-theme-text text-theme-text ring-theme-background"
                 >
                   <span
                     class="font-semibold"
@@ -912,7 +912,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -930,10 +930,10 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -956,15 +956,15 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -985,7 +985,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
                 data-testid="Address__alias"
               >
                 <span
-                  class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -1002,7 +1002,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -1038,7 +1038,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -1049,10 +1049,10 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1072,7 +1072,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center font-bold text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center font-bold text-theme-secondary-text"
           >
             <span>
               #
@@ -1081,7 +1081,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
           >
             <div
               class="sc-bdfBwQ fdJUih text-theme-success-600"
@@ -1097,10 +1097,10 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -1114,15 +1114,15 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1149,7 +1149,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -1158,7 +1158,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -1169,10 +1169,10 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
-              class="Circle__CircleWrapper-uw7h4j-0 kOlXCb border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-d5u41q-0 bAcKAQ border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
             />
             <span
               class="text-theme-secondary-400"
@@ -1183,20 +1183,20 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center font-bold text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center font-bold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="AddressRow__select-1"
               type="button"
             >
@@ -1219,15 +1219,15 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1248,7 +1248,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
                 data-testid="Address__alias"
               >
                 <span
-                  class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -1265,7 +1265,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -1301,7 +1301,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -1312,10 +1312,10 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1335,7 +1335,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center font-bold text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center font-bold text-theme-secondary-text"
           >
             <span>
               #
@@ -1344,7 +1344,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
           >
             <div
               class="sc-bdfBwQ fdJUih text-theme-success-600"
@@ -1360,10 +1360,10 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="AddressRow__select-0"
               type="button"
             >
@@ -1377,15 +1377,15 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1412,7 +1412,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-2"
@@ -1421,7 +1421,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end font-bold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               data-testid="AmountCrypto"
@@ -1432,10 +1432,10 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT space-x-4 font-bold"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg space-x-4 font-bold"
           >
             <div
-              class="Circle__CircleWrapper-uw7h4j-0 kOlXCb border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-d5u41q-0 bAcKAQ border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
             />
             <span
               class="text-theme-secondary-400"
@@ -1446,20 +1446,20 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center font-bold text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center font-bold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
           />
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 fqRthJ"
+              class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
               data-testid="AddressRow__select-1"
               disabled=""
               type="button"

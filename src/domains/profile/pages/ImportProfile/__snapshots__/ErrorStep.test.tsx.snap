@@ -51,7 +51,7 @@ exports[`Import Profile - Error Step should render 1`] = `
               class="font-semibold"
             >
               <span
-                class="TruncateMiddle__Wrapper-sc-3j3e79-0"
+                class="TruncateMiddle__Wrapper-ue8va6-0"
                 data-testid="TruncateMiddle"
               >
                 filename
@@ -78,7 +78,7 @@ exports[`Import Profile - Error Step should render 1`] = `
       class="flex justify-end mt-8 space-x-3"
     >
       <button
-        class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+        class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
         data-testid="ImportError__back"
         type="button"
       >
@@ -89,7 +89,7 @@ exports[`Import Profile - Error Step should render 1`] = `
         </div>
       </button>
       <button
-        class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+        class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
         data-testid="ImportError__retry"
         type="button"
       >

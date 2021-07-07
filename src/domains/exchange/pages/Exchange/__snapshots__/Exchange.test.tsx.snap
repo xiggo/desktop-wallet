@@ -8,13 +8,13 @@ exports[`Exchange should not render filler exchange cards 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+        class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
       >
         <div
           class="flex relative h-21"
         >
           <button
-            class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun flex w-12"
+            class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn flex w-12"
             disabled=""
           >
             <div
@@ -34,7 +34,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
               >
                 <svg
                   width="44"
@@ -115,10 +115,10 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <div
-                      class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                      class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                        class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                         data-testid="navbar__buttons--notifications"
                         type="button"
                       >
@@ -154,10 +154,10 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--send"
                     type="button"
                   >
@@ -184,10 +184,10 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--receive"
                     type="button"
                   >
@@ -244,7 +244,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                     data-testid="navbar__useractions"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -272,7 +272,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
         class="flex flex-col flex-1"
       >
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 ksGIYG border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+          class="Section__SectionWrapper-plnv9l-0 dEdPuu border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
         >
           <div
             class="container px-10 mx-auto"
@@ -301,7 +301,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                   class="flex justify-end items-top"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW whitespace-nowrap"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA whitespace-nowrap"
                     data-testid="Exchange__add-exchange-button"
                     type="button"
                   >
@@ -317,7 +317,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
           </div>
         </div>
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+          class="Section__SectionWrapper-plnv9l-0 hMcwPe"
         >
           <div
             class="container px-10 mx-auto"
@@ -331,7 +331,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -342,7 +342,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                         class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                       >
                         <div
-                          class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                           data-testid="PluginImage__placeholder"
                         >
                           <svg>
@@ -406,7 +406,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -417,7 +417,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                         class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                       >
                         <div
-                          class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                           data-testid="PluginImage__placeholder"
                         >
                           <svg>
@@ -481,7 +481,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -492,7 +492,7 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                         class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                       >
                         <div
-                          class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                           data-testid="PluginImage__placeholder"
                         >
                           <svg>
@@ -568,13 +568,13 @@ exports[`Exchange should open & close add exchange modal 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+        class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
       >
         <div
           class="flex relative h-21"
         >
           <button
-            class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun flex w-12"
+            class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn flex w-12"
             disabled=""
           >
             <div
@@ -594,7 +594,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
               >
                 <svg
                   width="44"
@@ -675,10 +675,10 @@ exports[`Exchange should open & close add exchange modal 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <div
-                      class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                      class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                        class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                         data-testid="navbar__buttons--notifications"
                         type="button"
                       >
@@ -714,10 +714,10 @@ exports[`Exchange should open & close add exchange modal 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--send"
                     type="button"
                   >
@@ -744,10 +744,10 @@ exports[`Exchange should open & close add exchange modal 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--receive"
                     type="button"
                   >
@@ -804,7 +804,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
                     data-testid="navbar__useractions"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -832,7 +832,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
         class="flex flex-col flex-1"
       >
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 ksGIYG border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+          class="Section__SectionWrapper-plnv9l-0 dEdPuu border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
         >
           <div
             class="container px-10 mx-auto"
@@ -861,7 +861,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
                   class="flex justify-end items-top"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW whitespace-nowrap"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA whitespace-nowrap"
                     data-testid="Exchange__add-exchange-button"
                     type="button"
                   >
@@ -877,7 +877,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
           </div>
         </div>
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+          class="Section__SectionWrapper-plnv9l-0 hMcwPe"
         >
           <div
             class="container px-10 mx-auto"
@@ -888,7 +888,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
             >
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -921,7 +921,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
               </div>
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -954,7 +954,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
               </div>
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -1002,13 +1002,13 @@ exports[`Exchange should render 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+        class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
       >
         <div
           class="flex relative h-21"
         >
           <button
-            class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun flex w-12"
+            class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn flex w-12"
             disabled=""
           >
             <div
@@ -1028,7 +1028,7 @@ exports[`Exchange should render 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
               >
                 <svg
                   width="44"
@@ -1109,10 +1109,10 @@ exports[`Exchange should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <div
-                      class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                      class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                        class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                         data-testid="navbar__buttons--notifications"
                         type="button"
                       >
@@ -1148,10 +1148,10 @@ exports[`Exchange should render 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--send"
                     type="button"
                   >
@@ -1178,10 +1178,10 @@ exports[`Exchange should render 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--receive"
                     type="button"
                   >
@@ -1238,7 +1238,7 @@ exports[`Exchange should render 1`] = `
                     data-testid="navbar__useractions"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1266,7 +1266,7 @@ exports[`Exchange should render 1`] = `
         class="flex flex-col flex-1"
       >
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 ksGIYG border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+          class="Section__SectionWrapper-plnv9l-0 dEdPuu border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
         >
           <div
             class="container px-10 mx-auto"
@@ -1295,7 +1295,7 @@ exports[`Exchange should render 1`] = `
                   class="flex justify-end items-top"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW whitespace-nowrap"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA whitespace-nowrap"
                     data-testid="Exchange__add-exchange-button"
                     type="button"
                   >
@@ -1311,7 +1311,7 @@ exports[`Exchange should render 1`] = `
           </div>
         </div>
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+          class="Section__SectionWrapper-plnv9l-0 hMcwPe"
         >
           <div
             class="container px-10 mx-auto"
@@ -1322,7 +1322,7 @@ exports[`Exchange should render 1`] = `
             >
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -1355,7 +1355,7 @@ exports[`Exchange should render 1`] = `
               </div>
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -1388,7 +1388,7 @@ exports[`Exchange should render 1`] = `
               </div>
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -1436,13 +1436,13 @@ exports[`Exchange should render filler exchange cards 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+        class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
       >
         <div
           class="flex relative h-21"
         >
           <button
-            class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun flex w-12"
+            class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn flex w-12"
             disabled=""
           >
             <div
@@ -1462,7 +1462,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
               >
                 <svg
                   width="44"
@@ -1543,10 +1543,10 @@ exports[`Exchange should render filler exchange cards 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <div
-                      class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                      class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                        class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                         data-testid="navbar__buttons--notifications"
                         type="button"
                       >
@@ -1582,10 +1582,10 @@ exports[`Exchange should render filler exchange cards 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--send"
                     type="button"
                   >
@@ -1612,10 +1612,10 @@ exports[`Exchange should render filler exchange cards 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--receive"
                     type="button"
                   >
@@ -1672,7 +1672,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
                     data-testid="navbar__useractions"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1700,7 +1700,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
         class="flex flex-col flex-1"
       >
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 ksGIYG border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+          class="Section__SectionWrapper-plnv9l-0 dEdPuu border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
         >
           <div
             class="container px-10 mx-auto"
@@ -1729,7 +1729,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
                   class="flex justify-end items-top"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW whitespace-nowrap"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA whitespace-nowrap"
                     data-testid="Exchange__add-exchange-button"
                     type="button"
                   >
@@ -1745,7 +1745,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
           </div>
         </div>
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+          class="Section__SectionWrapper-plnv9l-0 hMcwPe"
         >
           <div
             class="container px-10 mx-auto"
@@ -1756,7 +1756,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
             >
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -1789,7 +1789,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
               </div>
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -1822,7 +1822,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
               </div>
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -1870,13 +1870,13 @@ exports[`Exchange should render with exchanges 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+        class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
       >
         <div
           class="flex relative h-21"
         >
           <button
-            class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun flex w-12"
+            class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn flex w-12"
             disabled=""
           >
             <div
@@ -1896,7 +1896,7 @@ exports[`Exchange should render with exchanges 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
               >
                 <svg
                   width="44"
@@ -1977,10 +1977,10 @@ exports[`Exchange should render with exchanges 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <div
-                      class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                      class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                        class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                         data-testid="navbar__buttons--notifications"
                         type="button"
                       >
@@ -2016,10 +2016,10 @@ exports[`Exchange should render with exchanges 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--send"
                     type="button"
                   >
@@ -2046,10 +2046,10 @@ exports[`Exchange should render with exchanges 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                  class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                    class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                     data-testid="navbar__buttons--receive"
                     type="button"
                   >
@@ -2106,7 +2106,7 @@ exports[`Exchange should render with exchanges 1`] = `
                     data-testid="navbar__useractions"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2134,7 +2134,7 @@ exports[`Exchange should render with exchanges 1`] = `
         class="flex flex-col flex-1"
       >
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 ksGIYG border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+          class="Section__SectionWrapper-plnv9l-0 dEdPuu border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
         >
           <div
             class="container px-10 mx-auto"
@@ -2163,7 +2163,7 @@ exports[`Exchange should render with exchanges 1`] = `
                   class="flex justify-end items-top"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW whitespace-nowrap"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA whitespace-nowrap"
                     data-testid="Exchange__add-exchange-button"
                     type="button"
                   >
@@ -2179,7 +2179,7 @@ exports[`Exchange should render with exchanges 1`] = `
           </div>
         </div>
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+          class="Section__SectionWrapper-plnv9l-0 hMcwPe"
         >
           <div
             class="container px-10 mx-auto"
@@ -2193,7 +2193,7 @@ exports[`Exchange should render with exchanges 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -2204,7 +2204,7 @@ exports[`Exchange should render with exchanges 1`] = `
                         class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                       >
                         <div
-                          class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                           data-testid="PluginImage__placeholder"
                         >
                           <svg>
@@ -2265,7 +2265,7 @@ exports[`Exchange should render with exchanges 1`] = `
               </div>
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"
@@ -2298,7 +2298,7 @@ exports[`Exchange should render with exchanges 1`] = `
               </div>
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                  class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                   data-testid="Card"
                   tabindex="-1"
                   type="button"

@@ -7,7 +7,7 @@ exports[`ImportProfile should render first step 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
     >
       <div
         class="flex relative h-21"
@@ -19,7 +19,7 @@ exports[`ImportProfile should render first step 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -40,7 +40,7 @@ exports[`ImportProfile should render first step 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col"
       >
         <div
           class="container px-10 mx-auto"
@@ -49,16 +49,16 @@ exports[`ImportProfile should render first step 1`] = `
             class="mx-auto max-w-xl"
           >
             <ul
-              class="StepIndicator__StepWrapper-sc-15t41is-1 iToWWb"
+              class="StepIndicator__StepWrapper-sc-1kbqtlh-1 eAMWbJ"
             >
               <li
-                class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
               />
               <li
-                class="StepIndicator__StepStyled-sc-15t41is-0 khoCaB"
+                class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
               />
               <li
-                class="StepIndicator__StepStyled-sc-15t41is-0 khoCaB"
+                class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
               />
             </ul>
             <div
@@ -158,7 +158,7 @@ exports[`ImportProfile should render first step 1`] = `
                     class="flex justify-end mt-8 space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                      class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                       data-testid="SelectFileStep__back"
                       type="button"
                     >

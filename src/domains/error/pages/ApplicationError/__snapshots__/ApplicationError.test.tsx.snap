@@ -11,7 +11,7 @@ exports[`ApplicationError should render 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+        class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
       >
         <div
           class="flex relative h-21"
@@ -23,7 +23,7 @@ exports[`ApplicationError should render 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
               >
                 <svg
                   width="44"
@@ -39,7 +39,7 @@ exports[`ApplicationError should render 1`] = `
         class="flex flex-col flex-1"
       >
         <div
-          class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col flex-1 justify-center text-center"
+          class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
         >
           <div
             class="container px-10 mx-auto"
@@ -67,7 +67,7 @@ exports[`ApplicationError should render 1`] = `
               </p>
             </div>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW mt-8"
+              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA mt-8"
               data-testid="ApplicationError__button--reload"
               type="button"
             >

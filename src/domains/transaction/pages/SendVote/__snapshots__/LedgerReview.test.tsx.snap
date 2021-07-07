@@ -3,7 +3,7 @@
 exports[`LedgerReview should render for unvote and vote transaction 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -27,7 +27,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
               class="flex items-center py-4 space-x-4"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ibTSCJ flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -48,7 +48,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                     data-testid="TruncateEnd"
                   >
                     Test Username
@@ -68,7 +68,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
     </div>
   </div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -92,7 +92,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
               class="flex items-center py-4 space-x-4"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ibTSCJ flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -113,7 +113,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                     data-testid="TruncateEnd"
                   >
                     Test Username
@@ -148,7 +148,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
             class="flex flex-col justify-center py-2 px-4 w-1/2"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Amount
             </span>
@@ -163,7 +163,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
             class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Fee
             </span>
@@ -197,7 +197,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
         class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
       >
         <span
-          class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+          class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
         >
           Total Amount
         </span>
@@ -216,7 +216,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
 exports[`LedgerReview should render for unvote transaction 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -240,7 +240,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
               class="flex items-center py-4 space-x-4"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ibTSCJ flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -261,7 +261,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                     data-testid="TruncateEnd"
                   >
                     Test Username
@@ -296,7 +296,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
             class="flex flex-col justify-center py-2 px-4 w-1/2"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Amount
             </span>
@@ -311,7 +311,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
             class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Fee
             </span>
@@ -345,7 +345,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
         class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
       >
         <span
-          class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+          class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
         >
           Total Amount
         </span>
@@ -364,7 +364,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
 exports[`LedgerReview should render for vote transaction 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
     data-testid="TransactionDetail"
   >
     <div
@@ -388,7 +388,7 @@ exports[`LedgerReview should render for vote transaction 1`] = `
               class="flex items-center py-4 space-x-4"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ibTSCJ flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -409,7 +409,7 @@ exports[`LedgerReview should render for vote transaction 1`] = `
                   data-testid="Address__alias"
                 >
                   <span
-                    class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                     data-testid="TruncateEnd"
                   >
                     Test Username
@@ -444,7 +444,7 @@ exports[`LedgerReview should render for vote transaction 1`] = `
             class="flex flex-col justify-center py-2 px-4 w-1/2"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Amount
             </span>
@@ -459,7 +459,7 @@ exports[`LedgerReview should render for vote transaction 1`] = `
             class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
           >
             <span
-              class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+              class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
             >
               Transaction Fee
             </span>
@@ -493,7 +493,7 @@ exports[`LedgerReview should render for vote transaction 1`] = `
         class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
       >
         <span
-          class="TotalAmountBox__AmountLabel-sc-178fnso-0 gGuMGd"
+          class="TotalAmountBox__AmountLabel-aeus64-0 eVozMm"
         >
           Total Amount
         </span>

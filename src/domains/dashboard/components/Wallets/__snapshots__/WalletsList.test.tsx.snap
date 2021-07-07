@@ -11,7 +11,7 @@ exports[`WalletsList should render 1`] = `
       data-testid="WalletTable"
     >
       <div
-        class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+        class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
         role="table"
       >
         <table
@@ -133,19 +133,19 @@ exports[`WalletsList should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+              class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                 >
                   <div
                     class="flex-shrink-0 -space-x-2"
                   >
                     <div
                       aria-label="ARK Devnet"
-                      class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                      class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                       data-testid="NetworkIcon-ARK-ark.devnet"
                     >
                       <div
@@ -160,7 +160,7 @@ exports[`WalletsList should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -182,7 +182,7 @@ exports[`WalletsList should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -199,7 +199,7 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -208,7 +208,7 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                 >
                   <span
                     data-testid="AmountCrypto"
@@ -219,26 +219,26 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                 >
                   N/A
                 </div>
               </td>
             </tr>
             <tr
-              class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+              class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                 >
                   <div
                     class="flex-shrink-0 -space-x-2"
                   >
                     <div
                       aria-label="ARK Devnet"
-                      class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                      class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                       data-testid="NetworkIcon-ARK-ark.devnet"
                     >
                       <div
@@ -253,7 +253,7 @@ exports[`WalletsList should render 1`] = `
                       </div>
                     </div>
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -275,7 +275,7 @@ exports[`WalletsList should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
@@ -292,7 +292,7 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -316,7 +316,7 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                 >
                   <span
                     data-testid="AmountCrypto"
@@ -327,7 +327,7 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                 >
                   N/A
                 </div>
@@ -409,7 +409,7 @@ exports[`WalletsList should render loading state 1`] = `
       data-testid="WalletTable"
     >
       <div
-        class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+        class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
         role="table"
       >
         <table
@@ -531,12 +531,12 @@ exports[`WalletsList should render loading state 1`] = `
             role="rowgroup"
           >
             <tr
-              class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+              class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                 >
                   <div
                     class="-space-x-2"
@@ -545,7 +545,7 @@ exports[`WalletsList should render loading state 1`] = `
                       class="flex items-center mr-2 -space-x-1"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                       >
                         <span>
                           <span
@@ -557,7 +557,7 @@ exports[`WalletsList should render loading state 1`] = `
                         </span>
                       </div>
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                       >
                         <span>
                           <span
@@ -582,7 +582,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                 >
                   <span>
                     <span
@@ -596,7 +596,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                 >
                   <span>
                     <span
@@ -610,7 +610,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                 >
                   <span>
                     <span
@@ -624,12 +624,12 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
             </tr>
             <tr
-              class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+              class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                 >
                   <div
                     class="-space-x-2"
@@ -638,7 +638,7 @@ exports[`WalletsList should render loading state 1`] = `
                       class="flex items-center mr-2 -space-x-1"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                       >
                         <span>
                           <span
@@ -650,7 +650,7 @@ exports[`WalletsList should render loading state 1`] = `
                         </span>
                       </div>
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                       >
                         <span>
                           <span
@@ -675,7 +675,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                 >
                   <span>
                     <span
@@ -689,7 +689,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                 >
                   <span>
                     <span
@@ -703,7 +703,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                 >
                   <span>
                     <span
@@ -717,12 +717,12 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
             </tr>
             <tr
-              class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+              class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                 >
                   <div
                     class="-space-x-2"
@@ -731,7 +731,7 @@ exports[`WalletsList should render loading state 1`] = `
                       class="flex items-center mr-2 -space-x-1"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                       >
                         <span>
                           <span
@@ -743,7 +743,7 @@ exports[`WalletsList should render loading state 1`] = `
                         </span>
                       </div>
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-transparent ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
                       >
                         <span>
                           <span
@@ -768,7 +768,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                 >
                   <span>
                     <span
@@ -782,7 +782,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                 >
                   <span>
                     <span
@@ -796,7 +796,7 @@ exports[`WalletsList should render loading state 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                 >
                   <span>
                     <span
@@ -826,7 +826,7 @@ exports[`WalletsList should render with view more button 1`] = `
       data-testid="WalletTable"
     >
       <div
-        class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+        class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
         role="table"
       >
         <table
@@ -948,19 +948,19 @@ exports[`WalletsList should render with view more button 1`] = `
             role="rowgroup"
           >
             <tr
-              class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+              class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                 >
                   <div
                     class="flex-shrink-0 -space-x-2"
                   >
                     <div
                       aria-label="ARK Devnet"
-                      class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                      class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                       data-testid="NetworkIcon-ARK-ark.devnet"
                     >
                       <div
@@ -975,7 +975,7 @@ exports[`WalletsList should render with view more button 1`] = `
                       </div>
                     </div>
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -997,7 +997,7 @@ exports[`WalletsList should render with view more button 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1014,7 +1014,7 @@ exports[`WalletsList should render with view more button 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -1023,7 +1023,7 @@ exports[`WalletsList should render with view more button 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                 >
                   <span
                     data-testid="AmountCrypto"
@@ -1034,26 +1034,26 @@ exports[`WalletsList should render with view more button 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                 >
                   N/A
                 </div>
               </td>
             </tr>
             <tr
-              class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+              class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                 >
                   <div
                     class="flex-shrink-0 -space-x-2"
                   >
                     <div
                       aria-label="ARK Devnet"
-                      class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                      class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                       data-testid="NetworkIcon-ARK-ark.devnet"
                     >
                       <div
@@ -1068,7 +1068,7 @@ exports[`WalletsList should render with view more button 1`] = `
                       </div>
                     </div>
                     <div
-                      class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1090,7 +1090,7 @@ exports[`WalletsList should render with view more button 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 2
@@ -1107,7 +1107,7 @@ exports[`WalletsList should render with view more button 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -1131,7 +1131,7 @@ exports[`WalletsList should render with view more button 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                 >
                   <span
                     data-testid="AmountCrypto"
@@ -1142,7 +1142,7 @@ exports[`WalletsList should render with view more button 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                 >
                   N/A
                 </div>
@@ -1152,7 +1152,7 @@ exports[`WalletsList should render with view more button 1`] = `
         </table>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST mt-10 mb-5 w-full"
+        class="OriginalButton__StyledButton-o0fs2j-0 guPjPB mt-10 mb-5 w-full"
         data-testid="WalletsList__ViewMore"
         type="button"
       >

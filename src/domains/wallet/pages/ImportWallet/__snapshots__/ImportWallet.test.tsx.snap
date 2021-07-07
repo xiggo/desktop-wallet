@@ -29,7 +29,7 @@ exports[`ImportWallet should render 2nd step 1`] = `
       class="pt-6 space-y-6"
     >
       <fieldset
-        class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -48,13 +48,13 @@ exports[`ImportWallet should render 2nd step 1`] = `
             …
           </div>
           <div
-            class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
           >
             <div
               class="relative flex flex-1 h-full"
             >
               <input
-                class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -83,7 +83,7 @@ exports[`ImportWallet should render 2nd step 1`] = `
                 …
               </div>
               <div
-                class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
               >
                 <div
                   class="relative flex flex-1 h-full"
@@ -93,7 +93,7 @@ exports[`ImportWallet should render 2nd step 1`] = `
                     aria-controls="ImportWallet__select-menu"
                     aria-labelledby="ImportWallet__select-label"
                     autocomplete="off"
-                    class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                    class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                     data-testid="SelectDropdown__input"
                     id="ImportWallet__select-input"
                     name=""
@@ -136,7 +136,7 @@ exports[`ImportWallet should render 2nd step 1`] = `
               </div>
               <ul
                 aria-labelledby="ImportWallet__select-label"
-                class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                 id="ImportWallet__select-menu"
                 role="listbox"
               />
@@ -145,7 +145,7 @@ exports[`ImportWallet should render 2nd step 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -160,13 +160,13 @@ exports[`ImportWallet should render 2nd step 1`] = `
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
         >
           <div
             class="relative flex flex-1 h-full"
           >
             <input
-              class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="ImportWallet__mnemonic-input"
               name="value"
               type="password"
@@ -233,7 +233,7 @@ exports[`ImportWallet should render 3rd step 1`] = `
     </div>
     <div>
       <div
-        class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+        class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
         data-testid="TransactionNetwork"
       >
         <div
@@ -252,7 +252,7 @@ exports[`ImportWallet should render 3rd step 1`] = `
         </div>
         <div
           aria-label="ARK Devnet"
-          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -268,7 +268,7 @@ exports[`ImportWallet should render 3rd step 1`] = `
         </div>
       </div>
       <div
-        class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 eMJHaj no-ligatures"
+        class="TransactionDetail__TransactionDetailStyled-r7sfme-0 fyYYPW no-ligatures"
         data-testid="TransactionDetail"
       >
         <div
@@ -295,7 +295,7 @@ exports[`ImportWallet should render 3rd step 1`] = `
           </div>
         </div>
         <div
-          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+          class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
           data-testid="Avatar"
         >
           <div
@@ -311,7 +311,7 @@ exports[`ImportWallet should render 3rd step 1`] = `
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionDetail"
     >
       <div
@@ -334,7 +334,7 @@ exports[`ImportWallet should render 3rd step 1`] = `
       </div>
     </div>
     <fieldset
-      class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
     >
       <label
         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -349,13 +349,13 @@ exports[`ImportWallet should render 3rd step 1`] = `
         …
       </div>
       <div
-        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
       >
         <div
           class="relative flex flex-1 h-full"
         >
           <input
-            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
             data-testid="ImportWallet__name-input"
             name="name"
             value="ARK Wallet 1"
@@ -374,13 +374,13 @@ exports[`ImportWallet should render as ledger import 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-1pe22tv-0 hLgyWD flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
             class="sc-bdfBwQ dlKckO mx-auto"
@@ -399,7 +399,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -479,10 +479,10 @@ exports[`ImportWallet should render as ledger import 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -518,10 +518,10 @@ exports[`ImportWallet should render as ledger import 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -548,10 +548,10 @@ exports[`ImportWallet should render as ledger import 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -608,7 +608,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -636,7 +636,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex-1"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex-1"
       >
         <div
           class="container px-10 mx-auto"
@@ -647,19 +647,19 @@ exports[`ImportWallet should render as ledger import 1`] = `
           >
             <div>
               <ul
-                class="StepIndicator__StepWrapper-sc-15t41is-1 iToWWb"
+                class="StepIndicator__StepWrapper-sc-1kbqtlh-1 eAMWbJ"
               >
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 dATCfl"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 khoCaB"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 khoCaB"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
                 />
                 <li
-                  class="StepIndicator__StepStyled-sc-15t41is-0 khoCaB"
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
                 />
               </ul>
               <div
@@ -693,7 +693,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col mt-8 space-y-2"
+                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col mt-8 space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -721,10 +721,10 @@ exports[`ImportWallet should render as ledger import 1`] = `
                             …
                           </div>
                           <div
-                            class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                            class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                           >
                             <div
-                              class="Circle__CircleWrapper-uw7h4j-0 grnDUY border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 cmuOiP border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
                               data-testid="SelectNetworkInput__network"
                             />
                             <div
@@ -735,7 +735,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                                 aria-controls="NetworkStep__network-menu"
                                 aria-labelledby="NetworkStep__network-label"
                                 autocomplete="off"
-                                class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                                class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                                 data-testid="SelectNetworkInput__input"
                                 id="NetworkStep__network-input"
                                 placeholder="Enter a cryptoasset name"
@@ -879,7 +879,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                   class="flex space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                     data-testid="Paginator__back-button"
                     type="button"
                   >
@@ -890,7 +890,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                     data-testid="Paginator__continue-button"
                     type="button"
                   >
@@ -937,7 +937,7 @@ exports[`ImportWallet should render network step 1`] = `
       </div>
     </div>
     <fieldset
-      class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col mt-8 space-y-2"
+      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col mt-8 space-y-2"
     >
       <label
         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -964,10 +964,10 @@ exports[`ImportWallet should render network step 1`] = `
             …
           </div>
           <div
-            class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
           >
             <div
-              class="Circle__CircleWrapper-uw7h4j-0 grnDUY border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
+              class="Circle__CircleWrapper-d5u41q-0 cmuOiP border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
               data-testid="SelectNetworkInput__network"
             />
             <div
@@ -978,7 +978,7 @@ exports[`ImportWallet should render network step 1`] = `
                 aria-controls="NetworkStep__network-menu"
                 aria-labelledby="NetworkStep__network-label"
                 autocomplete="off"
-                class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                 data-testid="SelectNetworkInput__input"
                 id="NetworkStep__network-input"
                 placeholder="Enter a cryptoasset name"
@@ -1140,7 +1140,7 @@ exports[`ImportWallet should render network step without test networks 1`] = `
       </div>
     </div>
     <fieldset
-      class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col mt-8 space-y-2"
+      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col mt-8 space-y-2"
     >
       <label
         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1167,10 +1167,10 @@ exports[`ImportWallet should render network step without test networks 1`] = `
             …
           </div>
           <div
-            class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
           >
             <div
-              class="Circle__CircleWrapper-uw7h4j-0 grnDUY border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
+              class="Circle__CircleWrapper-d5u41q-0 cmuOiP border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500 ring-theme-background"
               data-testid="SelectNetworkInput__network"
             />
             <div
@@ -1181,7 +1181,7 @@ exports[`ImportWallet should render network step without test networks 1`] = `
                 aria-controls="NetworkStep__network-menu"
                 aria-labelledby="NetworkStep__network-label"
                 autocomplete="off"
-                class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                 data-testid="SelectNetworkInput__input"
                 id="NetworkStep__network-input"
                 placeholder="Enter a cryptoasset name"

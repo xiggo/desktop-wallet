@@ -10,7 +10,7 @@ exports[`PluginHeader should render properly 1`] = `
       class="flex w-full"
     >
       <div
-        class="PluginImage__PluginImageWrapper-iwox49-0 cSvQPa"
+        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 jvUDyT"
         data-testid="PluginImage__placeholder"
       >
         <svg>
@@ -39,7 +39,7 @@ exports[`PluginHeader should render properly 1`] = `
             class="flex"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
               data-testid="PluginHeader__button--install"
               type="button"
             >
@@ -50,7 +50,7 @@ exports[`PluginHeader should render properly 1`] = `
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST ml-3"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB ml-3"
               data-testid="PluginHeader__button--report"
               type="button"
             >
@@ -71,7 +71,7 @@ exports[`PluginHeader should render properly 1`] = `
           </div>
         </div>
         <div
-          class="Divider-sc-19q4mlo-0 bKsVMa border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
           type="horizontal"
         />
         <div
@@ -139,14 +139,14 @@ exports[`PluginHeader should render properly 1`] = `
                   class="font-semibold text-theme-secondary-text"
                 >
                   <a
-                    class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                     data-testid="PluginSpecs__url"
                     href="#"
                     rel="noopener noreferrer"
                     to="https://github.com/arkecosystem"
                   >
                     <span
-                      class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                      class="Link__Content-ec014t-1 emZiaA"
                     >
                       github.com
                     </span>
@@ -230,7 +230,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
       class="flex w-full"
     >
       <div
-        class="PluginImage__PluginImageWrapper-iwox49-0 kKmcXm"
+        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 gCsaHv"
         data-testid="PluginImage__updating"
       >
         <svg
@@ -310,7 +310,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
             class="flex"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
               data-testid="PluginHeader__button--install"
               type="button"
             >
@@ -321,7 +321,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST ml-3"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB ml-3"
               data-testid="PluginHeader__button--report"
               type="button"
             >
@@ -342,7 +342,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
           </div>
         </div>
         <div
-          class="Divider-sc-19q4mlo-0 bKsVMa border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
           type="horizontal"
         />
         <div
@@ -410,14 +410,14 @@ exports[`PluginHeader should render updating plugin 1`] = `
                   class="font-semibold text-theme-secondary-text"
                 >
                   <a
-                    class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                     data-testid="PluginSpecs__url"
                     href="#"
                     rel="noopener noreferrer"
                     to="https://github.com/arkecosystem"
                   >
                     <span
-                      class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                      class="Link__Content-ec014t-1 emZiaA"
                     >
                       github.com
                     </span>

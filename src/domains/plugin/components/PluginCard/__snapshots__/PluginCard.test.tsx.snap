@@ -4,7 +4,7 @@ exports[`BlankPluginCard should render 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -42,7 +42,7 @@ exports[`BlankPluginCard should render with category 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -98,7 +98,7 @@ exports[`BlankPluginCard should render with name 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -139,7 +139,7 @@ exports[`PluginCard should render 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -151,7 +151,7 @@ exports[`PluginCard should render 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -217,7 +217,7 @@ exports[`PluginCard should render alert icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -229,7 +229,7 @@ exports[`PluginCard should render alert icon 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -310,7 +310,7 @@ exports[`PluginCard should render grant icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -322,7 +322,7 @@ exports[`PluginCard should render grant icon 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -398,7 +398,7 @@ exports[`PluginCard should render official icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -410,7 +410,7 @@ exports[`PluginCard should render official icon 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -486,7 +486,7 @@ exports[`PluginCard should render update icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -498,7 +498,7 @@ exports[`PluginCard should render update icon 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -581,7 +581,7 @@ exports[`PluginCard should render without category 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -593,7 +593,7 @@ exports[`PluginCard should render without category 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -641,7 +641,7 @@ exports[`PluginCard should trigger view 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
         data-testid="Card"
         type="button"
       >
@@ -652,7 +652,7 @@ exports[`PluginCard should trigger view 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
               data-testid="PluginImage__placeholder"
             >
               <svg>

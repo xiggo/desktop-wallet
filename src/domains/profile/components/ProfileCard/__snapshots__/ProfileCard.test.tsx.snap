@@ -6,7 +6,7 @@ exports[`ProfileCard should hide the settings icon 1`] = `
     class="w-40 h-40 leading-tight"
   >
     <button
-      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -18,7 +18,7 @@ exports[`ProfileCard should hide the settings icon 1`] = `
           class="relative"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -54,7 +54,7 @@ exports[`ProfileCard should render 1`] = `
     class="w-40 h-40 leading-tight"
   >
     <button
-      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -66,7 +66,7 @@ exports[`ProfileCard should render 1`] = `
           class="relative"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -106,7 +106,7 @@ exports[`ProfileCard should render the profile with avatar image 1`] = `
     class="w-40 h-40 leading-tight"
   >
     <button
-      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -118,7 +118,7 @@ exports[`ProfileCard should render the profile with avatar image 1`] = `
           class="relative"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
             data-testid="Avatar"
           >
             <div
@@ -154,7 +154,7 @@ exports[`ProfileCard should render the settings icon 1`] = `
     class="w-40 h-40 leading-tight"
   >
     <button
-      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -166,7 +166,7 @@ exports[`ProfileCard should render the settings icon 1`] = `
           class="relative"
         >
           <div
-            class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+            class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
             data-testid="Avatar"
           >
             <div

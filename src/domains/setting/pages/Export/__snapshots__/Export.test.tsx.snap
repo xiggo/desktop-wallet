@@ -7,13 +7,13 @@ exports[`Export Settings should render export settings 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 bewuLZ"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-1pe22tv-0 hLgyWD flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
             class="sc-bdfBwQ dlKckO mx-auto"
@@ -32,7 +32,7 @@ exports[`Export Settings should render export settings 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -112,10 +112,10 @@ exports[`Export Settings should render export settings 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -151,10 +151,10 @@ exports[`Export Settings should render export settings 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -181,10 +181,10 @@ exports[`Export Settings should render export settings 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1qsoskw-2 gEXBfE"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi"
+                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -241,7 +241,7 @@ exports[`Export Settings should render export settings 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -278,7 +278,7 @@ exports[`Export Settings should render export settings 1`] = `
             class="px-12 my-8 border-r border-theme-primary-100 dark:border-theme-secondary-800"
           >
             <div
-              class="SideBar__SideBarContainer-sc-1yju7o6-0 gBtcTt"
+              class="SideBar__SideBarContainer-sc-1wg5vvh-0 gYNuec"
             >
               <ul>
                 <div
@@ -372,7 +372,7 @@ exports[`Export Settings should render export settings 1`] = `
             class="w-full"
           >
             <div
-              class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+              class="Section__SectionWrapper-plnv9l-0 hMcwPe"
             >
               <div
                 class="container px-10 mx-auto px-12"
@@ -436,16 +436,16 @@ exports[`Export Settings should render export settings 1`] = `
                                 class="flex"
                               >
                                 <input
-                                  class="Toggle__Input-qyyifx-0 WGuGL"
+                                  class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                                   data-testid="Plugin-settings__toggle--exclude-empty-wallets"
                                   name="excludeEmptyWallets"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="Toggle__Handle-qyyifx-1 bAIvyW"
+                                  class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                                   />
                                 </div>
                               </label>
@@ -485,16 +485,16 @@ exports[`Export Settings should render export settings 1`] = `
                                 class="flex"
                               >
                                 <input
-                                  class="Toggle__Input-qyyifx-0 WGuGL"
+                                  class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                                   data-testid="Plugin-settings__toggle--exclude-ledger-wallets"
                                   name="excludeLedgerWallets"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="Toggle__Handle-qyyifx-1 bAIvyW"
+                                  class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-qyyifx-2 fdhANN"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
                                   />
                                 </div>
                               </label>
@@ -514,7 +514,7 @@ exports[`Export Settings should render export settings 1`] = `
                     class="flex justify-end mt-8 space-x-3 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                      class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                       data-testid="Export-settings__submit-button"
                       type="submit"
                     >

@@ -5,15 +5,15 @@ exports[`PluginListItem should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-5"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 fITdNR"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -34,7 +34,7 @@ exports[`PluginListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               ARK.io
@@ -43,7 +43,7 @@ exports[`PluginListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               v1.3.8
@@ -52,7 +52,7 @@ exports[`PluginListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               4.2 MB
@@ -61,7 +61,7 @@ exports[`PluginListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <div
               class="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
@@ -83,10 +83,10 @@ exports[`PluginListItem should render 1`] = `
           class="w-16"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST flex-1"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >
@@ -109,15 +109,15 @@ exports[`PluginListItem should render grant icon 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-5"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 fITdNR"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -147,7 +147,7 @@ exports[`PluginListItem should render grant icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               ARK.io
@@ -156,7 +156,7 @@ exports[`PluginListItem should render grant icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               v1.3.8
@@ -165,7 +165,7 @@ exports[`PluginListItem should render grant icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               4.2 MB
@@ -174,7 +174,7 @@ exports[`PluginListItem should render grant icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <div
               class="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
@@ -196,10 +196,10 @@ exports[`PluginListItem should render grant icon 1`] = `
           class="w-16"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST flex-1"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >
@@ -222,15 +222,15 @@ exports[`PluginListItem should render official icon 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-5"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 fITdNR"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -260,7 +260,7 @@ exports[`PluginListItem should render official icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               ARK.io
@@ -269,7 +269,7 @@ exports[`PluginListItem should render official icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               v1.3.8
@@ -278,7 +278,7 @@ exports[`PluginListItem should render official icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               4.2 MB
@@ -287,7 +287,7 @@ exports[`PluginListItem should render official icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <div
               class="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
@@ -309,10 +309,10 @@ exports[`PluginListItem should render official icon 1`] = `
           class="w-16"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST flex-1"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >
@@ -335,15 +335,15 @@ exports[`PluginListItem should trigger install 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-5"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-iwox49-0 fITdNR"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
               data-testid="PluginImage__placeholder"
             >
               <svg>
@@ -364,7 +364,7 @@ exports[`PluginListItem should trigger install 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               ARK.io
@@ -373,7 +373,7 @@ exports[`PluginListItem should trigger install 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               v1.3.8
@@ -382,7 +382,7 @@ exports[`PluginListItem should trigger install 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <span>
               4.2 MB
@@ -391,7 +391,7 @@ exports[`PluginListItem should trigger install 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
           >
             <div
               class="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
@@ -413,10 +413,10 @@ exports[`PluginListItem should trigger install 1`] = `
           class="w-16"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST flex-1"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >

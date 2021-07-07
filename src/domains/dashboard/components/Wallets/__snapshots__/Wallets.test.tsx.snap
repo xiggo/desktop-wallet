@@ -3,7 +3,7 @@
 exports[`Wallets should load more wallets 1`] = `
 <DocumentFragment>
   <div
-    class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+    class="Section__SectionWrapper-plnv9l-0 hMcwPe"
   >
     <div
       class="container px-10 mx-auto"
@@ -34,7 +34,7 @@ exports[`Wallets should load more wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -59,7 +59,7 @@ exports[`Wallets should load more wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -93,7 +93,7 @@ exports[`Wallets should load more wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       >
                         <div
                           class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -121,7 +121,7 @@ exports[`Wallets should load more wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -147,7 +147,7 @@ exports[`Wallets should load more wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -173,7 +173,7 @@ exports[`Wallets should load more wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -209,7 +209,7 @@ exports[`Wallets should load more wallets 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
             role="table"
           >
             <table
@@ -331,19 +331,19 @@ exports[`Wallets should load more wallets 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -358,7 +358,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -380,7 +380,7 @@ exports[`Wallets should load more wallets 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -397,7 +397,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -406,7 +406,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -417,26 +417,26 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>
                   </td>
                 </tr>
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -451,7 +451,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -473,7 +473,7 @@ exports[`Wallets should load more wallets 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -490,7 +490,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -514,7 +514,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -525,26 +525,26 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>
                   </td>
                 </tr>
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -559,7 +559,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -581,7 +581,7 @@ exports[`Wallets should load more wallets 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             arkx
@@ -598,7 +598,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -622,7 +622,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -633,7 +633,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -656,7 +656,7 @@ exports[`Wallets should load more wallets 1`] = `
 exports[`Wallets should open and close ledger import modal 1`] = `
 <DocumentFragment>
   <div
-    class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+    class="Section__SectionWrapper-plnv9l-0 hMcwPe"
   >
     <div
       class="container px-10 mx-auto"
@@ -687,7 +687,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -712,7 +712,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -746,7 +746,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       >
                         <div
                           class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -774,7 +774,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -800,7 +800,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -826,7 +826,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -862,7 +862,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
             role="table"
           >
             <table
@@ -984,19 +984,19 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -1011,7 +1011,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1033,7 +1033,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -1050,7 +1050,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -1059,7 +1059,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -1070,26 +1070,26 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>
                   </td>
                 </tr>
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -1104,7 +1104,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1126,7 +1126,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -1143,7 +1143,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -1167,7 +1167,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -1178,26 +1178,26 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>
                   </td>
                 </tr>
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -1212,7 +1212,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1234,7 +1234,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             arkx
@@ -1251,7 +1251,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -1275,7 +1275,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -1286,7 +1286,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -1306,7 +1306,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
         data-testid="modal__overlay"
       >
         <div
-          class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+          class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
           tabindex="-1"
         >
           <div
@@ -1317,7 +1317,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
               class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+                class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
                 data-testid="modal__close-btn"
                 type="button"
               >
@@ -1374,7 +1374,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                     class="inline-flex justify-center items-center space-x-3 w-full"
                   >
                     <div
-                      class="Spinner-sc-1tybciv-0 gzGczR"
+                      class="Spinner-sc-1rpx65r-0 fqZPZB"
                       color="info"
                     />
                     <span
@@ -1398,7 +1398,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
 exports[`Wallets should render empty profile wallets 1`] = `
 <DocumentFragment>
   <div
-    class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+    class="Section__SectionWrapper-plnv9l-0 hMcwPe"
   >
     <div
       class="container px-10 mx-auto"
@@ -1429,7 +1429,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -1454,7 +1454,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -1488,7 +1488,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gZgPQe group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 gbfZTS group"
                         disabled=""
                       >
                         <div
@@ -1517,7 +1517,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -1543,7 +1543,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -1569,7 +1569,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -1618,7 +1618,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
 exports[`Wallets should render grid 1`] = `
 <DocumentFragment>
   <div
-    class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+    class="Section__SectionWrapper-plnv9l-0 hMcwPe"
   >
     <div
       class="container px-10 mx-auto"
@@ -1649,7 +1649,7 @@ exports[`Wallets should render grid 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -1674,7 +1674,7 @@ exports[`Wallets should render grid 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -1708,7 +1708,7 @@ exports[`Wallets should render grid 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       >
                         <div
                           class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -1736,7 +1736,7 @@ exports[`Wallets should render grid 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -1762,7 +1762,7 @@ exports[`Wallets should render grid 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -1788,7 +1788,7 @@ exports[`Wallets should render grid 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -1844,7 +1844,7 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -1859,7 +1859,7 @@ exports[`Wallets should render grid 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -1874,7 +1874,7 @@ exports[`Wallets should render grid 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1925,7 +1925,7 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -1940,7 +1940,7 @@ exports[`Wallets should render grid 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -1955,7 +1955,7 @@ exports[`Wallets should render grid 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2021,7 +2021,7 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -2036,7 +2036,7 @@ exports[`Wallets should render grid 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.mainnet"
                             >
                               <div
@@ -2051,7 +2051,7 @@ exports[`Wallets should render grid 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2117,7 +2117,7 @@ exports[`Wallets should render grid 1`] = `
 exports[`Wallets should render grid in loading state 1`] = `
 <DocumentFragment>
   <div
-    class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+    class="Section__SectionWrapper-plnv9l-0 hMcwPe"
   >
     <div
       class="container px-10 mx-auto"
@@ -2148,7 +2148,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -2173,7 +2173,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -2207,7 +2207,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       >
                         <div
                           class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -2235,7 +2235,7 @@ exports[`Wallets should render grid in loading state 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -2261,7 +2261,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -2287,7 +2287,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -2343,7 +2343,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -2358,7 +2358,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -2373,7 +2373,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2424,7 +2424,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -2439,7 +2439,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -2454,7 +2454,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2520,7 +2520,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -2535,7 +2535,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.mainnet"
                             >
                               <div
@@ -2550,7 +2550,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -2616,7 +2616,7 @@ exports[`Wallets should render grid in loading state 1`] = `
 exports[`Wallets should render list 1`] = `
 <DocumentFragment>
   <div
-    class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+    class="Section__SectionWrapper-plnv9l-0 hMcwPe"
   >
     <div
       class="container px-10 mx-auto"
@@ -2647,7 +2647,7 @@ exports[`Wallets should render list 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -2672,7 +2672,7 @@ exports[`Wallets should render list 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -2706,7 +2706,7 @@ exports[`Wallets should render list 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       >
                         <div
                           class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -2734,7 +2734,7 @@ exports[`Wallets should render list 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -2760,7 +2760,7 @@ exports[`Wallets should render list 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -2786,7 +2786,7 @@ exports[`Wallets should render list 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -2822,7 +2822,7 @@ exports[`Wallets should render list 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
             role="table"
           >
             <table
@@ -2944,19 +2944,19 @@ exports[`Wallets should render list 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -2971,7 +2971,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2993,7 +2993,7 @@ exports[`Wallets should render list 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -3010,7 +3010,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -3019,7 +3019,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -3030,26 +3030,26 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>
                   </td>
                 </tr>
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -3064,7 +3064,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3086,7 +3086,7 @@ exports[`Wallets should render list 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 2
@@ -3103,7 +3103,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -3127,7 +3127,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -3138,26 +3138,26 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>
                   </td>
                 </tr>
                 <tr
-                  class="TableRow__TableRowStyled-sc-1br46dw-0 bFBpUs group"
+                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -3172,7 +3172,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ksomUO group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3194,7 +3194,7 @@ exports[`Wallets should render list 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                             data-testid="TruncateEnd"
                           >
                             arkx
@@ -3211,7 +3211,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -3235,7 +3235,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -3246,7 +3246,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -3269,7 +3269,7 @@ exports[`Wallets should render list 1`] = `
 exports[`Wallets should render without testnet wallets 1`] = `
 <DocumentFragment>
   <div
-    class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+    class="Section__SectionWrapper-plnv9l-0 hMcwPe"
   >
     <div
       class="container px-10 mx-auto"
@@ -3300,7 +3300,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -3325,7 +3325,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -3359,7 +3359,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       >
                         <div
                           class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -3387,7 +3387,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -3413,7 +3413,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -3439,7 +3439,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -3495,7 +3495,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -3510,7 +3510,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.mainnet"
                             >
                               <div
@@ -3525,7 +3525,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -3591,7 +3591,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                       data-testid="Card"
                       tabindex="-1"
                       type="button"
@@ -3603,10 +3603,10 @@ exports[`Wallets should render without testnet wallets 1`] = `
                           class="flex -space-x-2"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
                           />
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
                           />
                         </div>
                         <div
@@ -3639,7 +3639,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+                      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
                       data-testid="Card"
                       tabindex="-1"
                       type="button"
@@ -3651,10 +3651,10 @@ exports[`Wallets should render without testnet wallets 1`] = `
                           class="flex -space-x-2"
                         >
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
                           />
                           <div
-                            class="Circle__CircleWrapper-uw7h4j-0 bNDQMV bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
                           />
                         </div>
                         <div
@@ -3687,7 +3687,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
 exports[`Wallets should toggle between grid and list view 1`] = `
 <DocumentFragment>
   <div
-    class="Section__SectionWrapper-sc-8cjvre-0 Qqquu"
+    class="Section__SectionWrapper-plnv9l-0 hMcwPe"
   >
     <div
       class="container px-10 mx-auto"
@@ -3718,7 +3718,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       data-testid="LayoutControls__list--icon"
                     >
                       <div
@@ -3743,7 +3743,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                       data-testid="LayoutControls__grid--icon"
                     >
                       <div
@@ -3777,7 +3777,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                       >
                         <div
                           class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -3805,7 +3805,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -3831,7 +3831,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -3857,7 +3857,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -3913,7 +3913,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -3928,7 +3928,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -3943,7 +3943,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -3994,7 +3994,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -4009,7 +4009,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -4024,7 +4024,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -4090,7 +4090,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                      class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                       data-testid="Card"
                       type="button"
                     >
@@ -4105,7 +4105,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.mainnet"
                             >
                               <div
@@ -4120,7 +4120,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div

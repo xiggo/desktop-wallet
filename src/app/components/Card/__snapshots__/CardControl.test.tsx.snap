@@ -3,19 +3,19 @@
 exports[`Card Control should render 1`] = `
 <DocumentFragment>
   <label
-    class="CardControl___StyledLabel-sc-28luv0-3 iOtNpv"
+    class="CardControl___StyledLabel-l56akm-3 kWZzWb"
   >
     <input
-      class="CardControl__Input-sc-28luv0-0 eeHClU"
+      class="CardControl__Input-l56akm-0 kIMKII"
       data-testid="card-control__undefined"
       type="checkbox"
       value=""
     />
     <div
-      class="CardControl__CustomCard-sc-28luv0-1 fJUymd"
+      class="CardControl__CustomCard-l56akm-1 vtDHp"
     >
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -32,19 +32,19 @@ exports[`Card Control should render 1`] = `
 exports[`Card Control should render with a control state 1`] = `
 <DocumentFragment>
   <label
-    class="CardControl___StyledLabel-sc-28luv0-3 iOtNpv grid"
+    class="CardControl___StyledLabel-l56akm-3 kWZzWb grid"
   >
     <input
-      class="CardControl__Input-sc-28luv0-0 eeHClU"
+      class="CardControl__Input-l56akm-0 kIMKII"
       data-testid="card-control__undefined"
       type="checkbox"
       value=""
     />
     <div
-      class="CardControl__CustomCard-sc-28luv0-1 fJUymd"
+      class="CardControl__CustomCard-l56akm-1 vtDHp"
     >
       <button
-        class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -56,7 +56,7 @@ exports[`Card Control should render with a control state 1`] = `
             Bitcoin
           </span>
           <div
-            class="CardControl__StateStyle-sc-28luv0-2 eTogjj"
+            class="CardControl__StateStyle-l56akm-2 eBxqrj"
             data-testid="card__control-state"
           >
             <div

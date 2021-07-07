@@ -3,7 +3,7 @@
 exports[`AddRecipient should render 1`] = `
 <div>
   <div
-    class="AddRecipientstyles__AddRecipientWrapper-cy4ht8-0 cmbDGH"
+    class="AddRecipientstyles__AddRecipientWrapper-sc-15n3zff-0 iTAgdj"
   >
     <div
       class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
@@ -21,7 +21,7 @@ exports[`AddRecipient should render 1`] = `
             class="flex items-center"
           >
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 jrkMzU"
+              class="Switch__SwitchText-sc-161iiro-0 ddtFSz"
               role="button"
             >
               Single
@@ -30,19 +30,19 @@ exports[`AddRecipient should render 1`] = `
               class="flex"
             >
               <input
-                class="Toggle__Input-qyyifx-0 WGuGL"
+                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-qyyifx-1 jKIwmR"
+                class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
               >
                 <span
-                  class="Toggle__HandleInner-qyyifx-2 bmbgzL"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 jLcWyW"
                 />
               </div>
             </label>
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 khGGFd"
+              class="Switch__SwitchText-sc-161iiro-0 bxLfsC"
               role="button"
             >
               Multiple
@@ -65,13 +65,13 @@ exports[`AddRecipient should render 1`] = `
       </div>
     </div>
     <div
-      class="SubForm__SubFormWrapper-c4tqfs-0 jJZhtj"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 bXuZWe"
     >
       <div
         class="space-y-5"
       >
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <div>
             <div
@@ -88,14 +88,14 @@ exports[`AddRecipient should render 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -124,10 +124,10 @@ exports[`AddRecipient should render 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 grnDUY bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
                       />
                       <div
                         class="relative flex flex-1 h-full"
@@ -138,7 +138,7 @@ exports[`AddRecipient should render 1`] = `
                           aria-invalid="false"
                           aria-labelledby="downshift-0-label"
                           autocomplete="off"
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                           data-testid="SelectDropdown__input"
                           id="downshift-0-input"
                           name="recipientAddress"
@@ -171,7 +171,7 @@ exports[`AddRecipient should render 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-0-label"
-                      class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                       id="downshift-0-menu"
                       role="listbox"
                     />
@@ -182,7 +182,7 @@ exports[`AddRecipient should render 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <label
             class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -222,13 +222,13 @@ exports[`AddRecipient should render 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -243,7 +243,7 @@ exports[`AddRecipient should render 1`] = `
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-14iwd9r-0 jmJalx"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 ceQfYE"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -261,7 +261,7 @@ exports[`AddRecipient should render 1`] = `
 exports[`AddRecipient should render with multiple recipients switch 1`] = `
 <div>
   <div
-    class="AddRecipientstyles__AddRecipientWrapper-cy4ht8-0 cmbDGH"
+    class="AddRecipientstyles__AddRecipientWrapper-sc-15n3zff-0 iTAgdj"
   >
     <div
       class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
@@ -279,7 +279,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
             class="flex items-center"
           >
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 jrkMzU"
+              class="Switch__SwitchText-sc-161iiro-0 ddtFSz"
               role="button"
             >
               Single
@@ -288,19 +288,19 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
               class="flex"
             >
               <input
-                class="Toggle__Input-qyyifx-0 WGuGL"
+                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-qyyifx-1 jKIwmR"
+                class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
               >
                 <span
-                  class="Toggle__HandleInner-qyyifx-2 bmbgzL"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 jLcWyW"
                 />
               </div>
             </label>
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 khGGFd"
+              class="Switch__SwitchText-sc-161iiro-0 bxLfsC"
               role="button"
             >
               Multiple
@@ -323,13 +323,13 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
       </div>
     </div>
     <div
-      class="SubForm__SubFormWrapper-c4tqfs-0 jJZhtj"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 bXuZWe"
     >
       <div
         class="space-y-5"
       >
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <div>
             <div
@@ -346,14 +346,14 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -382,10 +382,10 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 grnDUY bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
                       />
                       <div
                         class="relative flex flex-1 h-full"
@@ -396,7 +396,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                           aria-invalid="false"
                           aria-labelledby="downshift-7-label"
                           autocomplete="off"
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                           data-testid="SelectDropdown__input"
                           id="downshift-7-input"
                           name="recipientAddress"
@@ -429,7 +429,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-7-label"
-                      class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                       id="downshift-7-menu"
                       role="listbox"
                     />
@@ -440,7 +440,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <label
             class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -480,13 +480,13 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -501,7 +501,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-14iwd9r-0 jmJalx"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 ceQfYE"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -519,7 +519,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
 exports[`AddRecipient should render with single recipient data 1`] = `
 <div>
   <div
-    class="AddRecipientstyles__AddRecipientWrapper-cy4ht8-0 cmbDGH"
+    class="AddRecipientstyles__AddRecipientWrapper-sc-15n3zff-0 iTAgdj"
   >
     <div
       class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
@@ -537,7 +537,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
             class="flex items-center"
           >
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 jrkMzU"
+              class="Switch__SwitchText-sc-161iiro-0 ddtFSz"
               role="button"
             >
               Single
@@ -546,19 +546,19 @@ exports[`AddRecipient should render with single recipient data 1`] = `
               class="flex"
             >
               <input
-                class="Toggle__Input-qyyifx-0 WGuGL"
+                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-qyyifx-1 jKIwmR"
+                class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
               >
                 <span
-                  class="Toggle__HandleInner-qyyifx-2 bmbgzL"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 jLcWyW"
                 />
               </div>
             </label>
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 khGGFd"
+              class="Switch__SwitchText-sc-161iiro-0 bxLfsC"
               role="button"
             >
               Multiple
@@ -581,13 +581,13 @@ exports[`AddRecipient should render with single recipient data 1`] = `
       </div>
     </div>
     <div
-      class="SubForm__SubFormWrapper-c4tqfs-0 jJZhtj"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 bXuZWe"
     >
       <div
         class="space-y-5"
       >
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <div>
             <div
@@ -604,14 +604,14 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -640,10 +640,10 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-1vsy2s2-0 khDjUE flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -665,7 +665,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                           aria-invalid="false"
                           aria-labelledby="downshift-4-label"
                           autocomplete="off"
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="SelectDropdown__input"
                           id="downshift-4-input"
                           name="recipientAddress"
@@ -698,7 +698,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-4-label"
-                      class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                       id="downshift-4-menu"
                       role="listbox"
                     />
@@ -709,7 +709,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <label
             class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -749,13 +749,13 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -770,7 +770,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-14iwd9r-0 jmJalx"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 ceQfYE"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -788,7 +788,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
 exports[`AddRecipient should render without recipients 1`] = `
 <div>
   <div
-    class="AddRecipientstyles__AddRecipientWrapper-cy4ht8-0 cmbDGH"
+    class="AddRecipientstyles__AddRecipientWrapper-sc-15n3zff-0 iTAgdj"
   >
     <div
       class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
@@ -806,7 +806,7 @@ exports[`AddRecipient should render without recipients 1`] = `
             class="flex items-center"
           >
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 jrkMzU"
+              class="Switch__SwitchText-sc-161iiro-0 ddtFSz"
               role="button"
             >
               Single
@@ -815,19 +815,19 @@ exports[`AddRecipient should render without recipients 1`] = `
               class="flex"
             >
               <input
-                class="Toggle__Input-qyyifx-0 WGuGL"
+                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-qyyifx-1 jKIwmR"
+                class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
               >
                 <span
-                  class="Toggle__HandleInner-qyyifx-2 bmbgzL"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 jLcWyW"
                 />
               </div>
             </label>
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 khGGFd"
+              class="Switch__SwitchText-sc-161iiro-0 bxLfsC"
               role="button"
             >
               Multiple
@@ -850,13 +850,13 @@ exports[`AddRecipient should render without recipients 1`] = `
       </div>
     </div>
     <div
-      class="SubForm__SubFormWrapper-c4tqfs-0 jJZhtj"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 bXuZWe"
     >
       <div
         class="space-y-5"
       >
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <div>
             <div
@@ -873,14 +873,14 @@ exports[`AddRecipient should render without recipients 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -909,10 +909,10 @@ exports[`AddRecipient should render without recipients 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 grnDUY bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
                       />
                       <div
                         class="relative flex flex-1 h-full"
@@ -923,7 +923,7 @@ exports[`AddRecipient should render without recipients 1`] = `
                           aria-invalid="false"
                           aria-labelledby="downshift-2-label"
                           autocomplete="off"
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                           data-testid="SelectDropdown__input"
                           id="downshift-2-input"
                           name="recipientAddress"
@@ -956,7 +956,7 @@ exports[`AddRecipient should render without recipients 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-2-label"
-                      class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                       id="downshift-2-menu"
                       role="listbox"
                     />
@@ -967,7 +967,7 @@ exports[`AddRecipient should render without recipients 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <label
             class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1007,13 +1007,13 @@ exports[`AddRecipient should render without recipients 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -1028,7 +1028,7 @@ exports[`AddRecipient should render without recipients 1`] = `
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-14iwd9r-0 jmJalx"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 ceQfYE"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1046,7 +1046,7 @@ exports[`AddRecipient should render without recipients 1`] = `
 exports[`AddRecipient should render without the single & multiple switch 1`] = `
 <div>
   <div
-    class="AddRecipientstyles__AddRecipientWrapper-cy4ht8-0 cmbDGH"
+    class="AddRecipientstyles__AddRecipientWrapper-sc-15n3zff-0 iTAgdj"
   >
     <div
       class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
@@ -1058,13 +1058,13 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
       </div>
     </div>
     <div
-      class="SubForm__SubFormWrapper-c4tqfs-0 jJZhtj"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 bXuZWe"
     >
       <div
         class="space-y-5"
       >
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <div>
             <div
@@ -1081,14 +1081,14 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -1117,10 +1117,10 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 grnDUY bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
                       />
                       <div
                         class="relative flex flex-1 h-full"
@@ -1131,7 +1131,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                           aria-invalid="false"
                           aria-labelledby="downshift-9-label"
                           autocomplete="off"
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                           data-testid="SelectDropdown__input"
                           id="downshift-9-input"
                           name="recipientAddress"
@@ -1164,7 +1164,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-9-label"
-                      class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                       id="downshift-9-menu"
                       role="listbox"
                     />
@@ -1175,7 +1175,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <label
             class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1215,13 +1215,13 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -1236,7 +1236,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-14iwd9r-0 jmJalx"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 ceQfYE"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1254,7 +1254,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
 exports[`AddRecipient should set available amount 1`] = `
 <div>
   <div
-    class="AddRecipientstyles__AddRecipientWrapper-cy4ht8-0 cmbDGH"
+    class="AddRecipientstyles__AddRecipientWrapper-sc-15n3zff-0 iTAgdj"
   >
     <div
       class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
@@ -1272,7 +1272,7 @@ exports[`AddRecipient should set available amount 1`] = `
             class="flex items-center"
           >
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 jrkMzU"
+              class="Switch__SwitchText-sc-161iiro-0 ddtFSz"
               role="button"
             >
               Single
@@ -1281,19 +1281,19 @@ exports[`AddRecipient should set available amount 1`] = `
               class="flex"
             >
               <input
-                class="Toggle__Input-qyyifx-0 WGuGL"
+                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-qyyifx-1 jKIwmR"
+                class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
               >
                 <span
-                  class="Toggle__HandleInner-qyyifx-2 bmbgzL"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 jLcWyW"
                 />
               </div>
             </label>
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 khGGFd"
+              class="Switch__SwitchText-sc-161iiro-0 bxLfsC"
               role="button"
             >
               Multiple
@@ -1316,13 +1316,13 @@ exports[`AddRecipient should set available amount 1`] = `
       </div>
     </div>
     <div
-      class="SubForm__SubFormWrapper-c4tqfs-0 jJZhtj"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 bXuZWe"
     >
       <div
         class="space-y-5"
       >
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <div>
             <div
@@ -1339,14 +1339,14 @@ exports[`AddRecipient should set available amount 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -1375,10 +1375,10 @@ exports[`AddRecipient should set available amount 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 grnDUY bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
                       />
                       <div
                         class="relative flex flex-1 h-full"
@@ -1389,7 +1389,7 @@ exports[`AddRecipient should set available amount 1`] = `
                           aria-invalid="false"
                           aria-labelledby="downshift-23-label"
                           autocomplete="off"
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                           data-testid="SelectDropdown__input"
                           id="downshift-23-input"
                           name="recipientAddress"
@@ -1422,7 +1422,7 @@ exports[`AddRecipient should set available amount 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-23-label"
-                      class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                       id="downshift-23-menu"
                       role="listbox"
                     />
@@ -1433,7 +1433,7 @@ exports[`AddRecipient should set available amount 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <label
             class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1473,13 +1473,13 @@ exports[`AddRecipient should set available amount 1`] = `
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -1494,7 +1494,7 @@ exports[`AddRecipient should set available amount 1`] = `
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-14iwd9r-0 jmJalx"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 ceQfYE"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1512,7 +1512,7 @@ exports[`AddRecipient should set available amount 1`] = `
 exports[`AddRecipient should show zero amount if wallet has zero or insufficient balance 1`] = `
 <div>
   <div
-    class="AddRecipientstyles__AddRecipientWrapper-cy4ht8-0 cmbDGH"
+    class="AddRecipientstyles__AddRecipientWrapper-sc-15n3zff-0 iTAgdj"
   >
     <div
       class="flex justify-between items-center mb-2 text-theme-secondary-text hover:text-theme-primary-600"
@@ -1530,7 +1530,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
             class="flex items-center"
           >
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 jrkMzU"
+              class="Switch__SwitchText-sc-161iiro-0 ddtFSz"
               role="button"
             >
               Single
@@ -1539,19 +1539,19 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
               class="flex"
             >
               <input
-                class="Toggle__Input-qyyifx-0 WGuGL"
+                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-qyyifx-1 jKIwmR"
+                class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
               >
                 <span
-                  class="Toggle__HandleInner-qyyifx-2 bmbgzL"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 jLcWyW"
                 />
               </div>
             </label>
             <span
-              class="Switch__SwitchText-sc-1fue7gg-0 khGGFd"
+              class="Switch__SwitchText-sc-161iiro-0 bxLfsC"
               role="button"
             >
               Multiple
@@ -1574,13 +1574,13 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
       </div>
     </div>
     <div
-      class="SubForm__SubFormWrapper-c4tqfs-0 jJZhtj"
+      class="SubForm__SubFormWrapper-sc-1x20s74-0 bXuZWe"
     >
       <div
         class="space-y-5"
       >
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <div>
             <div
@@ -1597,14 +1597,14 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr sr-only"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
                       aria-invalid="false"
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="select-list__input"
                       name="recipientAddress"
                       readonly=""
@@ -1633,10 +1633,10 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                     >
                       <div
-                        class="Circle__CircleWrapper-uw7h4j-0 grnDUY bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
                       />
                       <div
                         class="relative flex flex-1 h-full"
@@ -1647,7 +1647,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                           aria-invalid="false"
                           aria-labelledby="downshift-25-label"
                           autocomplete="off"
-                          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                           data-testid="SelectDropdown__input"
                           id="downshift-25-input"
                           name="recipientAddress"
@@ -1680,7 +1680,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                     </div>
                     <ul
                       aria-labelledby="downshift-25-label"
-                      class="styles__SelectOptionsList-b2falt-0 dyOwRR"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
                       id="downshift-25-menu"
                       role="listbox"
                     />
@@ -1691,7 +1691,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
           </div>
         </fieldset>
         <fieldset
-          class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+          class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
         >
           <label
             class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1718,13 +1718,13 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                   …
                 </div>
                 <div
-                  class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                 >
                   <div
                     class="relative flex flex-1 h-full"
                   >
                     <input
-                      class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                      class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                       data-testid="AddRecipient__amount"
                       name="amount"
                       placeholder="Enter an amount"
@@ -1753,7 +1753,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-14iwd9r-0 jmJalx"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 ceQfYE"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >

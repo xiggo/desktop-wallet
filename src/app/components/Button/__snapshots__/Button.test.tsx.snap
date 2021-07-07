@@ -3,7 +3,7 @@
 exports[`Button should render 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
     type="button"
   >
     <div
@@ -16,7 +16,7 @@ exports[`Button should render 1`] = `
 exports[`Button should render a large one 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 kGxGJy"
+    class="OriginalButton__StyledButton-o0fs2j-0 jcOTtA"
     type="button"
   >
     <div
@@ -29,7 +29,7 @@ exports[`Button should render a large one 1`] = `
 exports[`Button should render a small one 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 ciFgcN"
+    class="OriginalButton__StyledButton-o0fs2j-0 ftaggf"
     type="button"
   >
     <div
@@ -42,7 +42,7 @@ exports[`Button should render a small one 1`] = `
 exports[`Button should render an icon 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 jNYQkl"
+    class="OriginalButton__StyledButton-o0fs2j-0 fZxKrn"
     type="button"
   >
     <div
@@ -55,7 +55,7 @@ exports[`Button should render an icon 1`] = `
 exports[`Button should render as danger button 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 fJhVAA"
+    class="OriginalButton__StyledButton-o0fs2j-0 kfLoEO"
     type="button"
   >
     <div
@@ -68,7 +68,7 @@ exports[`Button should render as danger button 1`] = `
 exports[`Button should render as primary button 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
     type="button"
   >
     <div
@@ -81,7 +81,7 @@ exports[`Button should render as primary button 1`] = `
 exports[`Button should render as secondary button 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
     type="button"
   >
     <div
@@ -94,7 +94,7 @@ exports[`Button should render as secondary button 1`] = `
 exports[`Button should render as transparent button 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 iblwdZ"
+    class="OriginalButton__StyledButton-o0fs2j-0 kWATSD"
     type="button"
   >
     <div
@@ -107,7 +107,7 @@ exports[`Button should render as transparent button 1`] = `
 exports[`Button should render if disabled 1`] = `
 <DocumentFragment>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 fqRthJ"
+    class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
     data-testid="Button"
     disabled=""
     type="button"
@@ -124,7 +124,7 @@ exports[`Button should render if disabled 1`] = `
 exports[`Button should render loading with icon 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 jNYQkl"
+    class="OriginalButton__StyledButton-o0fs2j-0 fZxKrn"
     type="button"
   >
     <div
@@ -146,7 +146,7 @@ exports[`Button should render loading with icon 1`] = `
           class="absolute top-0 right-0 bottom-0 left-0"
         >
           <div
-            class="Spinner-sc-1tybciv-0 jaZOXR m-auto"
+            class="Spinner-sc-1rpx65r-0 eTNeYF m-auto"
             color="info"
           />
         </div>
@@ -159,7 +159,7 @@ exports[`Button should render loading with icon 1`] = `
 exports[`Button should render with icon and custom icon width and height 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
     type="button"
   >
     <div
@@ -183,7 +183,7 @@ exports[`Button should render with icon and custom icon width and height 1`] = `
 exports[`Button should render with icon on the left side 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
     type="button"
   >
     <div
@@ -207,7 +207,7 @@ exports[`Button should render with icon on the left side 1`] = `
 exports[`Button should render with icon on the right side 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
     type="button"
   >
     <div
@@ -231,7 +231,7 @@ exports[`Button should render with icon on the right side 1`] = `
 exports[`Button should render with loading state enabled 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+    class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
     type="button"
   >
     <div
@@ -249,7 +249,7 @@ exports[`Button should render with loading state enabled 1`] = `
           class="absolute top-0 right-0 bottom-0 left-0"
         >
           <div
-            class="Spinner-sc-1tybciv-0 jaZOXR m-auto"
+            class="Spinner-sc-1rpx65r-0 eTNeYF m-auto"
             color="info"
           />
         </div>

@@ -3,7 +3,7 @@
 exports[`InputRange should render invalid 1`] = `
 <DocumentFragment>
   <fieldset
-    class="FormField__FormFieldStyled-yeauwd-0 qzrKg flex flex-col space-y-2"
+    class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
   >
     <div
       class="relative"
@@ -14,14 +14,14 @@ exports[`InputRange should render invalid 1`] = `
         2…
       </div>
       <div
-        class="Input__InputWrapperStyled-wu99qs-0 jXtMoQ"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
       >
         <div
           class="relative flex flex-1 h-full"
         >
           <input
             aria-invalid="true"
-            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
             data-testid="InputCurrency"
             name="test"
             type="text"
@@ -55,19 +55,19 @@ exports[`InputRange should render invalid 1`] = `
           data-testid="Range"
         >
           <div
-            class="Range__Track-sc-10itqc2-0 sgjTD"
+            class="Range__Track-sc-1xikdd-0 eUXcsE"
             data-testid="Range__track"
             style="transform: scale(1); cursor: pointer;"
           >
             <div
-              class="Range__TrackFilled-sc-10itqc2-1 egFfKP"
+              class="Range__TrackFilled-sc-1xikdd-1 dqZquU"
               data-testid="Range__track__filled"
             >
               <div
                 aria-valuemax="10"
                 aria-valuemin="2"
                 aria-valuenow="2"
-                class="Range__Thumb-sc-10itqc2-2 hXgqqU"
+                class="Range__Thumb-sc-1xikdd-2 hBqhUX"
                 data-testid="Range__thumb"
                 draggable="false"
                 role="slider"
@@ -94,14 +94,14 @@ exports[`InputRange should render when disabled 1`] = `
       5…
     </div>
     <div
-      class="Input__InputWrapperStyled-wu99qs-0 iRRxpY"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 hwtqjt"
       disabled=""
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-theme-secondary-text"
+          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-theme-secondary-text"
           data-testid="InputCurrency"
           disabled=""
           type="text"
@@ -124,13 +124,13 @@ exports[`InputRange should render with default value 1`] = `
       5…
     </div>
     <div
-      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="InputCurrency"
           type="text"
           value="5"
@@ -145,19 +145,19 @@ exports[`InputRange should render with default value 1`] = `
         data-testid="Range"
       >
         <div
-          class="Range__Track-sc-10itqc2-0 sgjTD"
+          class="Range__Track-sc-1xikdd-0 eUXcsE"
           data-testid="Range__track"
           style="transform: scale(1); cursor: pointer;"
         >
           <div
-            class="Range__TrackFilled-sc-10itqc2-1 egFfKP"
+            class="Range__TrackFilled-sc-1xikdd-1 dqZquU"
             data-testid="Range__track__filled"
           >
             <div
               aria-valuemax="10"
               aria-valuemin="0"
               aria-valuenow="5"
-              class="Range__Thumb-sc-10itqc2-2 hXgqqU"
+              class="Range__Thumb-sc-1xikdd-2 hBqhUX"
               data-testid="Range__thumb"
               draggable="false"
               role="slider"
@@ -183,13 +183,13 @@ exports[`InputRange should track background min value 1`] = `
       2…
     </div>
     <div
-      class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
     >
       <div
         class="relative flex flex-1 h-full"
       >
         <input
-          class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
           data-testid="InputCurrency"
           type="text"
           value="2"
@@ -204,19 +204,19 @@ exports[`InputRange should track background min value 1`] = `
         data-testid="Range"
       >
         <div
-          class="Range__Track-sc-10itqc2-0 sgjTD"
+          class="Range__Track-sc-1xikdd-0 eUXcsE"
           data-testid="Range__track"
           style="transform: scale(1); cursor: pointer;"
         >
           <div
-            class="Range__TrackFilled-sc-10itqc2-1 egFfKP"
+            class="Range__TrackFilled-sc-1xikdd-1 dqZquU"
             data-testid="Range__track__filled"
           >
             <div
               aria-valuemax="10"
               aria-valuemin="2"
               aria-valuenow="2"
-              class="Range__Thumb-sc-10itqc2-2 hXgqqU"
+              class="Range__Thumb-sc-1xikdd-2 hBqhUX"
               data-testid="Range__thumb"
               draggable="false"
               role="slider"

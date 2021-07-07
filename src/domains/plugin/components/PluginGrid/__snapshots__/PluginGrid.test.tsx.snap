@@ -13,7 +13,7 @@ exports[`PluginGrid should not render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -24,7 +24,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -116,7 +116,7 @@ exports[`PluginGrid should not render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -127,7 +127,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -219,7 +219,7 @@ exports[`PluginGrid should not render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -230,7 +230,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -338,7 +338,7 @@ exports[`PluginGrid should render custom number of skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -443,7 +443,7 @@ exports[`PluginGrid should render custom number of skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -548,7 +548,7 @@ exports[`PluginGrid should render custom number of skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -666,7 +666,7 @@ exports[`PluginGrid should render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -677,7 +677,7 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -769,7 +769,7 @@ exports[`PluginGrid should render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -780,7 +780,7 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -872,7 +872,7 @@ exports[`PluginGrid should render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -883,7 +883,7 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -975,7 +975,7 @@ exports[`PluginGrid should render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -986,7 +986,7 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -1078,7 +1078,7 @@ exports[`PluginGrid should render pagination 1`] = `
       class="flex justify-center mt-10 w-full"
     >
       <nav
-        class="Pagination__Wrapper-x7juhx-0 hbWMHF"
+        class="Pagination__Wrapper-sc-1rc32i9-0 jQUFVd"
         data-testid="Pagination"
       >
         <div
@@ -1087,21 +1087,21 @@ exports[`PluginGrid should render pagination 1`] = `
           <button
             aria-current="true"
             aria-label="Page 1"
-            class="Pagination__PaginationButtonStyled-x7juhx-1 cSnAwK current-page"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe current-page"
             type="button"
           >
             1
           </button>
           <button
             aria-label="Page 2"
-            class="Pagination__PaginationButtonStyled-x7juhx-1 cSnAwK"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe"
             type="button"
           >
             2
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+          class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
           data-testid="Pagination__next"
           type="button"
         >
@@ -1139,7 +1139,7 @@ exports[`PluginGrid should render skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -1244,7 +1244,7 @@ exports[`PluginGrid should render skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -1349,7 +1349,7 @@ exports[`PluginGrid should render skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 ixtuUQ"
+            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -1467,7 +1467,7 @@ exports[`PluginGrid should render without pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -1478,7 +1478,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -1570,7 +1570,7 @@ exports[`PluginGrid should render without pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -1581,7 +1581,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -1673,7 +1673,7 @@ exports[`PluginGrid should render without pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -1684,7 +1684,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -1802,7 +1802,7 @@ exports[`PluginGrid should split by page 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -1813,7 +1813,7 @@ exports[`PluginGrid should split by page 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>
@@ -1905,11 +1905,11 @@ exports[`PluginGrid should split by page 1`] = `
       class="flex justify-center mt-10 w-full"
     >
       <nav
-        class="Pagination__Wrapper-x7juhx-0 hbWMHF"
+        class="Pagination__Wrapper-sc-1rc32i9-0 jQUFVd"
         data-testid="Pagination"
       >
         <button
-          class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+          class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
           data-testid="Pagination__previous"
           type="button"
         >
@@ -1933,7 +1933,7 @@ exports[`PluginGrid should split by page 1`] = `
         >
           <button
             aria-label="Page 1"
-            class="Pagination__PaginationButtonStyled-x7juhx-1 cSnAwK"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe"
             type="button"
           >
             1
@@ -1941,21 +1941,21 @@ exports[`PluginGrid should split by page 1`] = `
           <button
             aria-current="true"
             aria-label="Page 2"
-            class="Pagination__PaginationButtonStyled-x7juhx-1 cSnAwK current-page"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe current-page"
             type="button"
           >
             2
           </button>
           <button
             aria-label="Page 3"
-            class="Pagination__PaginationButtonStyled-x7juhx-1 cSnAwK"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe"
             type="button"
           >
             3
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+          class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
           data-testid="Pagination__next"
           type="button"
         >
@@ -1993,7 +1993,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
             data-testid="Card"
             type="button"
           >
@@ -2004,7 +2004,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-iwox49-0 cNxevm"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
                   data-testid="PluginImage__placeholder"
                 >
                   <svg>

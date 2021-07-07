@@ -8,13 +8,13 @@ exports[`InputAddress should not use default validation 1`] = `
     …
   </div>
   <div
-    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
   >
     <div
       class="relative flex flex-1 h-full"
     >
       <input
-        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
         data-testid="InputAddress__input"
         name="address"
         type="text"
@@ -33,13 +33,13 @@ exports[`InputAddress should render 1`] = `
     …
   </div>
   <div
-    class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
   >
     <div
       class="relative flex flex-1 h-full"
     >
       <input
-        class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
         data-testid="InputAddress__input"
         name="address"
         type="text"

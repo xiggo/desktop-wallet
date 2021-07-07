@@ -3,16 +3,16 @@
 exports[`SelectCategory should render 1`] = `
 <DocumentFragment>
   <label
-    class="SelectCategory___StyledLabel-k7qbth-2 bkqSTC"
+    class="SelectCategory___StyledLabel-sc-1dgc7bb-2 PJwka"
   >
     <input
-      class="SelectCategory__Input-k7qbth-0 jXZdTM"
+      class="SelectCategory__Input-sc-1dgc7bb-0 kkBYYk"
       data-testid="SelectCategory__undefined"
       type="checkbox"
       value=""
     />
     <div
-      class="SelectCategory__CustomButton-k7qbth-1 fYwsfS"
+      class="SelectCategory__CustomButton-sc-1dgc7bb-1 ikxvMi"
     >
       #All
     </div>

@@ -67,14 +67,14 @@ exports[`PluginSpecs should render properly 1`] = `
             class="font-semibold text-theme-secondary-text"
           >
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="PluginSpecs__url"
               href="#"
               rel="noopener noreferrer"
               to="https://github.com/arkecosystem/explorer"
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 github.com
               </span>

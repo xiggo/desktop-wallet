@@ -5,15 +5,15 @@ exports[`DelegateRow should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4 font-bold border border-r-0 border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4 font-bold border border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -35,17 +35,17 @@ exports[`DelegateRow should emit action on select button 1`] = `
           class="w-24"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center border-t border-b border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center border-t border-b border-transparent"
           >
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
               to=""
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
                   class="sc-bdfBwQ dnaihB"
@@ -64,10 +64,10 @@ exports[`DelegateRow should emit action on select button 1`] = `
           class="w-40"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end border border-l-0 border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end border border-l-0 border-transparent"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="DelegateRow__toggle-0"
               type="button"
             >
@@ -90,15 +90,15 @@ exports[`DelegateRow should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4 font-bold border border-r-0 border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4 font-bold border border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -120,17 +120,17 @@ exports[`DelegateRow should render 1`] = `
           class="w-24"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center border-t border-b border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center border-t border-b border-transparent"
           >
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
               to=""
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
                   class="sc-bdfBwQ dnaihB"
@@ -149,10 +149,10 @@ exports[`DelegateRow should render 1`] = `
           class="w-40"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end border border-l-0 border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end border border-l-0 border-transparent"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="DelegateRow__toggle-0"
               type="button"
             >
@@ -175,15 +175,15 @@ exports[`DelegateRow should render the selected delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4 font-bold border border-r-0 border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4 font-bold border border-r-0 border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -205,17 +205,17 @@ exports[`DelegateRow should render the selected delegate 1`] = `
           class="w-24"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
           >
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
               to=""
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
                   class="sc-bdfBwQ dnaihB"
@@ -234,10 +234,10 @@ exports[`DelegateRow should render the selected delegate 1`] = `
           class="w-40"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end border border-l-0 border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end border border-l-0 border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 elgwZC"
+              class="OriginalButton__StyledButton-o0fs2j-0 hRWEQc"
               data-testid="DelegateRow__toggle-0"
               type="button"
             >
@@ -260,15 +260,15 @@ exports[`DelegateRow should render the selected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4 font-bold border border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4 font-bold border border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -290,17 +290,17 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-24"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
               to=""
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
                   class="sc-bdfBwQ dnaihB"
@@ -319,10 +319,10 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end border border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end border border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
               data-testid="DelegateRow__toggle-0"
               type="button"
             >
@@ -336,15 +336,15 @@ exports[`DelegateRow should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4 font-bold border border-r-0 border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4 font-bold border border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -366,17 +366,17 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-24"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center border-t border-b border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center border-t border-b border-transparent"
           >
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
               to=""
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
                   class="sc-bdfBwQ dnaihB"
@@ -395,10 +395,10 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end border border-l-0 border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end border border-l-0 border-transparent"
           >
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="DelegateRow__toggle-1"
               type="button"
             >
@@ -412,15 +412,15 @@ exports[`DelegateRow should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4 font-bold border border-r-0 border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4 font-bold border border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ktCSBk flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eAwGWD flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -442,17 +442,17 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-24"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT justify-center border-t border-b border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center border-t border-b border-transparent"
           >
             <a
-              class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
               to=""
             >
               <span
-                class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
                   class="sc-bdfBwQ dnaihB"
@@ -471,11 +471,11 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end border border-l-0 border-transparent"
+            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end border border-l-0 border-transparent"
           >
             <span>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 fqRthJ"
+                class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
                 data-testid="DelegateRow__toggle-2"
                 disabled=""
                 type="button"

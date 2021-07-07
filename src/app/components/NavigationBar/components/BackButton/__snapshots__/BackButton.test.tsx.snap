@@ -3,7 +3,7 @@
 exports[`BackButton should not redirect to given url when disabled 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn"
     disabled=""
   >
     <div
@@ -22,7 +22,7 @@ exports[`BackButton should not redirect to given url when disabled 1`] = `
 exports[`BackButton should not redirect to previous page when disabled 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn"
     disabled=""
   >
     <div
@@ -41,7 +41,7 @@ exports[`BackButton should not redirect to previous page when disabled 1`] = `
 exports[`BackButton should redirect to given url 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-1pe22tv-0 hLgyWD"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD"
   >
     <div
       class="sc-bdfBwQ dlKckO mx-auto"
@@ -59,7 +59,7 @@ exports[`BackButton should redirect to given url 1`] = `
 exports[`BackButton should redirect to previous page 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-1pe22tv-0 hLgyWD"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD"
   >
     <div
       class="sc-bdfBwQ dlKckO mx-auto"
@@ -77,7 +77,7 @@ exports[`BackButton should redirect to previous page 1`] = `
 exports[`BackButton should render 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-1pe22tv-0 hLgyWD"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD"
   >
     <div
       class="sc-bdfBwQ dlKckO mx-auto"
@@ -95,7 +95,7 @@ exports[`BackButton should render 1`] = `
 exports[`BackButton should render when disabled 1`] = `
 <div>
   <button
-    class="BackButton__StyledBackButton-sc-1pe22tv-0 eUphun"
+    class="BackButton__StyledBackButton-sc-18ta3r7-0 drfFnn"
     disabled=""
   >
     <div

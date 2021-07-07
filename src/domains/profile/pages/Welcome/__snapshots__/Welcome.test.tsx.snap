@@ -7,7 +7,7 @@ exports[`Welcome should change route to create profile 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
     >
       <div
         class="flex relative h-21"
@@ -19,7 +19,7 @@ exports[`Welcome should change route to create profile 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -40,7 +40,7 @@ exports[`Welcome should change route to create profile 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col flex-1 justify-center text-center"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -75,7 +75,7 @@ exports[`Welcome should change route to create profile 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -86,7 +86,7 @@ exports[`Welcome should change route to create profile 1`] = `
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -106,7 +106,7 @@ exports[`Welcome should change route to create profile 1`] = `
                           </div>
                         </div>
                         <span
-                          class="Badge__Wrapper-sc-1d7juq8-0 gOwpmH flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                          class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                         >
                           <div
                             class="sc-bdfBwQ CvzFW"
@@ -157,7 +157,7 @@ exports[`Welcome should change route to create profile 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -166,7 +166,7 @@ exports[`Welcome should change route to create profile 1`] = `
                     >
                       <div>
                         <div
-                          class="Circle__CircleWrapper-uw7h4j-0 lmmopM dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                         >
                           <div
                             class="sc-bdfBwQ ejYZeh"
@@ -199,13 +199,13 @@ exports[`Welcome should change route to create profile 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                 data-testid="Link"
                 href="/profiles/import"
                 title="Import Profile"
               >
                 <span
-                  class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                  class="Link__Content-ec014t-1 emZiaA"
                 >
                   Import it here.
                 </span>
@@ -226,7 +226,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
     >
       <div
         class="flex relative h-21"
@@ -238,7 +238,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -259,7 +259,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col flex-1 justify-center text-center"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -294,7 +294,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -305,7 +305,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -362,7 +362,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -373,7 +373,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -393,7 +393,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                           </div>
                         </div>
                         <span
-                          class="Badge__Wrapper-sc-1d7juq8-0 gOwpmH flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                          class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                         >
                           <div
                             class="sc-bdfBwQ CvzFW"
@@ -444,7 +444,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -453,7 +453,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                     >
                       <div>
                         <div
-                          class="Circle__CircleWrapper-uw7h4j-0 lmmopM dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                         >
                           <div
                             class="sc-bdfBwQ ejYZeh"
@@ -486,13 +486,13 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                 data-testid="Link"
                 href="/profiles/import"
                 title="Import Profile"
               >
                 <span
-                  class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                  class="Link__Content-ec014t-1 emZiaA"
                 >
                   Import it here.
                 </span>
@@ -513,7 +513,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
     >
       <div
         class="flex relative h-21"
@@ -525,7 +525,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -546,7 +546,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col flex-1 justify-center text-center"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -581,7 +581,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -592,7 +592,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -649,7 +649,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -660,7 +660,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -680,7 +680,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                           </div>
                         </div>
                         <span
-                          class="Badge__Wrapper-sc-1d7juq8-0 gOwpmH flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                          class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                         >
                           <div
                             class="sc-bdfBwQ CvzFW"
@@ -731,7 +731,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -740,7 +740,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                     >
                       <div>
                         <div
-                          class="Circle__CircleWrapper-uw7h4j-0 lmmopM dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                         >
                           <div
                             class="sc-bdfBwQ ejYZeh"
@@ -773,13 +773,13 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                 Exported a Profile before? 
               </span>
               <a
-                class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                 data-testid="Link"
                 href="/profiles/import"
                 title="Import Profile"
               >
                 <span
-                  class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                  class="Link__Content-ec014t-1 emZiaA"
                 >
                   Import it here.
                 </span>
@@ -800,7 +800,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
     >
       <div
         class="flex relative h-21"
@@ -812,7 +812,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -833,7 +833,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col flex-1 justify-center text-center"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -868,7 +868,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -879,7 +879,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -936,7 +936,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -947,7 +947,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -967,7 +967,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                           </div>
                         </div>
                         <span
-                          class="Badge__Wrapper-sc-1d7juq8-0 gOwpmH flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                          class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                         >
                           <div
                             class="sc-bdfBwQ CvzFW"
@@ -1018,7 +1018,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -1027,7 +1027,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                     >
                       <div>
                         <div
-                          class="Circle__CircleWrapper-uw7h4j-0 lmmopM dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                         >
                           <div
                             class="sc-bdfBwQ ejYZeh"
@@ -1060,13 +1060,13 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                 Exported a Profile before? 
               </span>
               <a
-                class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                 data-testid="Link"
                 href="/profiles/import"
                 title="Import Profile"
               >
                 <span
-                  class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                  class="Link__Content-ec014t-1 emZiaA"
                 >
                   Import it here.
                 </span>
@@ -1087,7 +1087,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
     >
       <div
         class="flex relative h-21"
@@ -1099,7 +1099,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -1120,7 +1120,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col flex-1 justify-center text-center"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -1155,7 +1155,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -1166,7 +1166,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1223,7 +1223,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -1234,7 +1234,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1254,7 +1254,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                           </div>
                         </div>
                         <span
-                          class="Badge__Wrapper-sc-1d7juq8-0 gOwpmH flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                          class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                         >
                           <div
                             class="sc-bdfBwQ CvzFW"
@@ -1305,7 +1305,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -1314,7 +1314,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                     >
                       <div>
                         <div
-                          class="Circle__CircleWrapper-uw7h4j-0 lmmopM dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                         >
                           <div
                             class="sc-bdfBwQ ejYZeh"
@@ -1347,13 +1347,13 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                 Exported a Profile before? 
               </span>
               <a
-                class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                 data-testid="Link"
                 href="/profiles/import"
                 title="Import Profile"
               >
                 <span
-                  class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                  class="Link__Content-ec014t-1 emZiaA"
                 >
                   Import it here.
                 </span>
@@ -1374,7 +1374,7 @@ exports[`Welcome should render with profiles 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
     >
       <div
         class="flex relative h-21"
@@ -1386,7 +1386,7 @@ exports[`Welcome should render with profiles 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -1407,7 +1407,7 @@ exports[`Welcome should render with profiles 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col flex-1 justify-center text-center"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -1442,7 +1442,7 @@ exports[`Welcome should render with profiles 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -1453,7 +1453,7 @@ exports[`Welcome should render with profiles 1`] = `
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1510,7 +1510,7 @@ exports[`Welcome should render with profiles 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -1521,7 +1521,7 @@ exports[`Welcome should render with profiles 1`] = `
                         class="relative"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 iowXEI flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1541,7 +1541,7 @@ exports[`Welcome should render with profiles 1`] = `
                           </div>
                         </div>
                         <span
-                          class="Badge__Wrapper-sc-1d7juq8-0 gOwpmH flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                          class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                         >
                           <div
                             class="sc-bdfBwQ CvzFW"
@@ -1592,7 +1592,7 @@ exports[`Welcome should render with profiles 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -1601,7 +1601,7 @@ exports[`Welcome should render with profiles 1`] = `
                     >
                       <div>
                         <div
-                          class="Circle__CircleWrapper-uw7h4j-0 lmmopM dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                         >
                           <div
                             class="sc-bdfBwQ ejYZeh"
@@ -1634,13 +1634,13 @@ exports[`Welcome should render with profiles 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                 data-testid="Link"
                 href="/profiles/import"
                 title="Import Profile"
               >
                 <span
-                  class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                  class="Link__Content-ec014t-1 emZiaA"
                 >
                   Import it here.
                 </span>
@@ -1661,7 +1661,7 @@ exports[`Welcome should render without profiles 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1qsoskw-0 jBDhtO"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
     >
       <div
         class="flex relative h-21"
@@ -1673,7 +1673,7 @@ exports[`Welcome should render without profiles 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1qsoskw-1 GOEfv"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
             >
               <svg
                 width="44"
@@ -1694,7 +1694,7 @@ exports[`Welcome should render without profiles 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-8cjvre-0 Qqquu flex flex-col flex-1 justify-center text-center"
+        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -1729,7 +1729,7 @@ exports[`Welcome should render without profiles 1`] = `
                   class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                 >
                   <button
-                    class="Cardstyles__CardButton-sc-1uddqgb-0 jaxCkf"
+                    class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
                     data-testid="Card"
                     type="button"
                   >
@@ -1738,7 +1738,7 @@ exports[`Welcome should render without profiles 1`] = `
                     >
                       <div>
                         <div
-                          class="Circle__CircleWrapper-uw7h4j-0 lmmopM dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                         >
                           <div
                             class="sc-bdfBwQ ejYZeh"
@@ -1771,13 +1771,13 @@ exports[`Welcome should render without profiles 1`] = `
                 Exported a Profile before? 
               </span>
               <a
-                class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                 data-testid="Link"
                 href="/profiles/import"
                 title="Import Profile"
               >
                 <span
-                  class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                  class="Link__Content-ec014t-1 emZiaA"
                 >
                   Import it here.
                 </span>

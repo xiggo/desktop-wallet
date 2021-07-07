@@ -9,7 +9,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -51,7 +51,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -73,7 +73,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -92,7 +92,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -108,7 +108,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -126,7 +126,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ gmQeZR"
@@ -140,7 +140,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -163,7 +163,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -182,7 +182,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -216,7 +216,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -237,14 +237,14 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -310,7 +310,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -321,7 +321,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -352,7 +352,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -374,7 +374,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -393,7 +393,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -409,7 +409,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -427,7 +427,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ hxkEbz"
@@ -441,7 +441,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -464,7 +464,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -483,7 +483,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -517,7 +517,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -538,14 +538,14 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -611,7 +611,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -622,7 +622,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -653,7 +653,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -675,7 +675,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -694,7 +694,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -707,7 +707,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -723,7 +723,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -746,7 +746,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -764,7 +764,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-900 border-theme-secondary-900 dark:text-theme-secondary-600 dark:border-theme-secondary-600 ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-900 border-theme-secondary-900 dark:text-theme-secondary-600 dark:border-theme-secondary-600 ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ jiBHIn text-theme-secondary-900 dark:text-theme-secondary-600"
@@ -778,7 +778,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -797,7 +797,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -831,7 +831,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -852,14 +852,14 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -925,7 +925,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -936,7 +936,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -967,7 +967,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -989,7 +989,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -1008,7 +1008,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -1021,7 +1021,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1037,7 +1037,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -1060,7 +1060,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -1079,7 +1079,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1113,7 +1113,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1134,14 +1134,14 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1207,7 +1207,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -1218,7 +1218,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1249,7 +1249,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -1271,7 +1271,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -1290,7 +1290,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -1303,7 +1303,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1319,7 +1319,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -1334,7 +1334,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="Label-sc-1tj9hzr-0 ganlOQ"
+                    class="Label-sc-4akkzw-0 inMXqe"
                     color="danger"
                   >
                     <span
@@ -1346,7 +1346,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ dnaihB"
@@ -1360,7 +1360,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -1383,7 +1383,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -1419,7 +1419,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -1438,7 +1438,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1472,7 +1472,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1493,14 +1493,14 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1566,7 +1566,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -1577,7 +1577,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1608,7 +1608,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -1630,7 +1630,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1649,7 +1649,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1665,7 +1665,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -1688,7 +1688,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -1707,7 +1707,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1741,7 +1741,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1783,7 +1783,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1802,7 +1802,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1821,7 +1821,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1842,14 +1842,14 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1915,7 +1915,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -1926,7 +1926,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1957,7 +1957,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -1979,7 +1979,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -1998,7 +1998,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -2011,7 +2011,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -2027,7 +2027,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -2050,7 +2050,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -2069,7 +2069,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -2103,7 +2103,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -2124,14 +2124,14 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -2197,7 +2197,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -2208,7 +2208,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -2239,7 +2239,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -2261,7 +2261,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -2280,7 +2280,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -2293,7 +2293,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -2309,7 +2309,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionRecipients"
             >
               <div
@@ -2336,7 +2336,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -2351,7 +2351,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -2366,7 +2366,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="Label-sc-1tj9hzr-0 ganlOQ"
+                    class="Label-sc-4akkzw-0 inMXqe"
                     color="danger"
                   >
                     <span
@@ -2378,7 +2378,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ dnaihB"
@@ -2392,7 +2392,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -2415,7 +2415,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -2451,7 +2451,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -2470,7 +2470,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -2504,7 +2504,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -2525,14 +2525,14 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -2598,7 +2598,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -2609,7 +2609,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -2640,7 +2640,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -2662,7 +2662,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -2681,7 +2681,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -2694,7 +2694,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -2710,7 +2710,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionVotes"
             >
               <div
@@ -2734,7 +2734,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                         class="flex items-center py-4 space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ibTSCJ flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2755,7 +2755,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                              class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                               data-testid="TruncateEnd"
                             >
                               delegate-0
@@ -2775,7 +2775,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionUnvotes"
             >
               <div
@@ -2799,7 +2799,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                         class="flex items-center py-4 space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ibTSCJ flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2820,7 +2820,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                              class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                               data-testid="TruncateEnd"
                             >
                               delegate-0
@@ -2840,7 +2840,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -2863,7 +2863,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -2882,7 +2882,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -2916,7 +2916,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -2937,14 +2937,14 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -3010,7 +3010,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -3021,7 +3021,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -3052,7 +3052,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 kakuTR no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -3074,7 +3074,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
                         Test Wallet
@@ -3093,7 +3093,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -3106,7 +3106,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -3122,7 +3122,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionVotes"
             >
               <div
@@ -3146,7 +3146,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                         class="flex items-center py-4 space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ibTSCJ flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3167,7 +3167,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                              class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                               data-testid="TruncateEnd"
                             >
                               delegate-0
@@ -3187,7 +3187,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionUnvotes"
             >
               <div
@@ -3211,7 +3211,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                         class="flex items-center py-4 space-x-4"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-1vsy2s2-0 ibTSCJ flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3232,7 +3232,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                              class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                               data-testid="TruncateEnd"
                             >
                               delegate-0
@@ -3252,7 +3252,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -3275,7 +3275,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -3294,7 +3294,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -3328,7 +3328,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -3349,14 +3349,14 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-1q7sbxr-0 jXgXXh group"
+                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-sc-1q7sbxr-1 iOOQRq"
+                          class="Link__Content-ec014t-1 emZiaA"
                         >
                           <span
                             class="inline-flex overflow-hidden"

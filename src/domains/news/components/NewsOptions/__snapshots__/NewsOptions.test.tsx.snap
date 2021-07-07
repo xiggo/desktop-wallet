@@ -21,13 +21,13 @@ exports[`NewsOptions should render 1`] = `
             …
           </div>
           <div
-            class="Input__InputWrapperStyled-wu99qs-0 cRhsWS"
+            class="Input__InputWrapperStyled-sc-1i8sd1r-0 bCxMNz"
           >
             <div
               class="relative flex flex-1 h-full"
             >
               <input
-                class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                 data-testid="NewsOptions__search"
                 maxlength="32"
                 placeholder="Search"
@@ -46,7 +46,7 @@ exports[`NewsOptions should render 1`] = `
           </div>
         </div>
         <div
-          class="Divider-sc-19q4mlo-0 bKsVMa border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
           type="horizontal"
         />
         <div
@@ -75,66 +75,66 @@ exports[`NewsOptions should render 1`] = `
             class="flex flex-wrap -mx-1"
           >
             <label
-              class="SelectCategory___StyledLabel-k7qbth-2 bkqSTC p-1"
+              class="SelectCategory___StyledLabel-sc-1dgc7bb-2 PJwka p-1"
               data-testid="NewsOptions__category-Technical"
             >
               <input
                 checked=""
-                class="SelectCategory__Input-k7qbth-0 jXZdTM"
+                class="SelectCategory__Input-sc-1dgc7bb-0 kkBYYk"
                 data-testid="SelectCategory__undefined"
                 type="checkbox"
                 value=""
               />
               <div
-                class="SelectCategory__CustomButton-k7qbth-1 fYwsfS"
+                class="SelectCategory__CustomButton-sc-1dgc7bb-1 ikxvMi"
               >
                 #Technical
               </div>
             </label>
             <label
-              class="SelectCategory___StyledLabel-k7qbth-2 bkqSTC p-1"
+              class="SelectCategory___StyledLabel-sc-1dgc7bb-2 PJwka p-1"
               data-testid="NewsOptions__category-Marketing"
             >
               <input
-                class="SelectCategory__Input-k7qbth-0 jXZdTM"
+                class="SelectCategory__Input-sc-1dgc7bb-0 kkBYYk"
                 data-testid="SelectCategory__undefined"
                 type="checkbox"
                 value=""
               />
               <div
-                class="SelectCategory__CustomButton-k7qbth-1 fYwsfS"
+                class="SelectCategory__CustomButton-sc-1dgc7bb-1 ikxvMi"
               >
                 #Marketing
               </div>
             </label>
             <label
-              class="SelectCategory___StyledLabel-k7qbth-2 bkqSTC p-1"
+              class="SelectCategory___StyledLabel-sc-1dgc7bb-2 PJwka p-1"
               data-testid="NewsOptions__category-Community"
             >
               <input
-                class="SelectCategory__Input-k7qbth-0 jXZdTM"
+                class="SelectCategory__Input-sc-1dgc7bb-0 kkBYYk"
                 data-testid="SelectCategory__undefined"
                 type="checkbox"
                 value=""
               />
               <div
-                class="SelectCategory__CustomButton-k7qbth-1 fYwsfS"
+                class="SelectCategory__CustomButton-sc-1dgc7bb-1 ikxvMi"
               >
                 #Community
               </div>
             </label>
             <label
-              class="SelectCategory___StyledLabel-k7qbth-2 bkqSTC p-1"
+              class="SelectCategory___StyledLabel-sc-1dgc7bb-2 PJwka p-1"
               data-testid="NewsOptions__category-Emergency"
             >
               <input
-                class="SelectCategory__Input-k7qbth-0 jXZdTM"
+                class="SelectCategory__Input-sc-1dgc7bb-0 kkBYYk"
                 data-testid="SelectCategory__undefined"
                 type="checkbox"
                 value=""
               />
               <div
-                class="SelectCategory__CustomButton-k7qbth-1 fYwsfS"
+                class="SelectCategory__CustomButton-sc-1dgc7bb-1 ikxvMi"
               >
                 #Emergency
               </div>
@@ -142,7 +142,7 @@ exports[`NewsOptions should render 1`] = `
           </div>
         </div>
         <div
-          class="Divider-sc-19q4mlo-0 bKsVMa border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
           type="horizontal"
         />
         <div
@@ -171,7 +171,7 @@ exports[`NewsOptions should render 1`] = `
                 data-testid="NetworkOption__ARK"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -183,7 +183,7 @@ exports[`NewsOptions should render 1`] = `
                     </svg>
                   </div>
                   <span
-                    class="Badge__Wrapper-sc-1d7juq8-0 fMCGPT flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
                   >
                     <span />
                   </span>
@@ -194,7 +194,7 @@ exports[`NewsOptions should render 1`] = `
                 data-testid="NetworkOption__LSK"
               >
                 <div
-                  class="Circle__CircleWrapper-uw7h4j-0 bNDQMV relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+                  class="Circle__CircleWrapper-d5u41q-0 bWntUS relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
                 >
                   <div
                     class="sc-bdfBwQ hjDozt"
@@ -206,7 +206,7 @@ exports[`NewsOptions should render 1`] = `
                     </svg>
                   </div>
                   <span
-                    class="Badge__Wrapper-sc-1d7juq8-0 fMCGPT flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
                   >
                     <span />
                   </span>

@@ -7,7 +7,7 @@ exports[`Modal should closed by the Esc key 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -18,7 +18,7 @@ exports[`Modal should closed by the Esc key 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -64,7 +64,7 @@ exports[`Modal should render a 3x large one 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 hhxDiB"
+      class="Modal__ModalContainer-sc-5lu2mc-0 ccyrFw"
       tabindex="-1"
     >
       <div
@@ -75,7 +75,7 @@ exports[`Modal should render a 3x large one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -119,7 +119,7 @@ exports[`Modal should render a 4x large one 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 gJFEnG"
+      class="Modal__ModalContainer-sc-5lu2mc-0 kgvmbP"
       tabindex="-1"
     >
       <div
@@ -130,7 +130,7 @@ exports[`Modal should render a 4x large one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -174,7 +174,7 @@ exports[`Modal should render a 5x large one 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eEWkbX"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
       tabindex="-1"
     >
       <div
@@ -185,7 +185,7 @@ exports[`Modal should render a 5x large one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -229,7 +229,7 @@ exports[`Modal should render a 5x large one 2`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eEWkbX"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
       tabindex="-1"
     >
       <div
@@ -240,7 +240,7 @@ exports[`Modal should render a 5x large one 2`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -284,7 +284,7 @@ exports[`Modal should render a large one 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 cpRbqw"
+      class="Modal__ModalContainer-sc-5lu2mc-0 fMGJeF"
       tabindex="-1"
     >
       <div
@@ -295,7 +295,7 @@ exports[`Modal should render a large one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -339,7 +339,7 @@ exports[`Modal should render a medium one 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 dqHLBb"
+      class="Modal__ModalContainer-sc-5lu2mc-0 jBejwS"
       tabindex="-1"
     >
       <div
@@ -350,7 +350,7 @@ exports[`Modal should render a medium one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -394,7 +394,7 @@ exports[`Modal should render a modal with banner 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -405,7 +405,7 @@ exports[`Modal should render a modal with banner 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -459,7 +459,7 @@ exports[`Modal should render a modal with content 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -470,7 +470,7 @@ exports[`Modal should render a modal with content 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -516,7 +516,7 @@ exports[`Modal should render a modal with description 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -527,7 +527,7 @@ exports[`Modal should render a modal with description 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -577,7 +577,7 @@ exports[`Modal should render a modal with overlay 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eKUKXn"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
       tabindex="-1"
     >
       <div
@@ -588,7 +588,7 @@ exports[`Modal should render a modal with overlay 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -634,7 +634,7 @@ exports[`Modal should render a small one 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 ciNIrT"
+      class="Modal__ModalContainer-sc-5lu2mc-0 fnHCMa"
       tabindex="-1"
     >
       <div
@@ -645,7 +645,7 @@ exports[`Modal should render a small one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -689,7 +689,7 @@ exports[`Modal should render a xlarge one 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 fmTBfU"
+      class="Modal__ModalContainer-sc-5lu2mc-0 iJJiUd"
       tabindex="-1"
     >
       <div
@@ -700,7 +700,7 @@ exports[`Modal should render a xlarge one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >

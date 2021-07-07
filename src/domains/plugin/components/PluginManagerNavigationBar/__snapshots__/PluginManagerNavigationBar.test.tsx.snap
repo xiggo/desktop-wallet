@@ -4,7 +4,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
 <DocumentFragment>
   <div>
     <nav
-      class="PluginManagerNavigationBar__NavWrapper-sc-1x1q7te-0 iYjfAY sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
+      class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 gldbYz sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
       data-testid="PluginManagerNavigationBar"
     >
       <div
@@ -14,11 +14,11 @@ exports[`PluginManagerNavigationBar should render 1`] = `
           class="-mx-6 w-full"
         >
           <div
-            class="Tabs__TabList-sc-1lxyvu-1 eWhkiE w-full h-18"
+            class="Tabs__TabList-sc-1t8sbwb-1 joVAoa w-full h-18"
           >
             <button
               aria-selected="true"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-latest"
               role="tab"
               tabindex="0"
@@ -33,7 +33,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-gaming"
               role="tab"
               tabindex="-1"
@@ -48,7 +48,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-utility"
               role="tab"
               tabindex="-1"
@@ -63,7 +63,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-exchange"
               role="tab"
               tabindex="-1"
@@ -78,7 +78,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-other"
               role="tab"
               tabindex="-1"
@@ -96,7 +96,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
             />
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-my-plugins"
               role="tab"
               tabindex="-1"
@@ -129,7 +129,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
                 class="group"
               >
                 <button
-                  class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                   data-testid="LayoutControls__list--icon"
                 >
                   <div
@@ -154,7 +154,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
                 class="group"
               >
                 <button
-                  class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                   data-testid="LayoutControls__grid--icon"
                 >
                   <div
@@ -184,7 +184,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
 <DocumentFragment>
   <div>
     <nav
-      class="PluginManagerNavigationBar__NavWrapper-sc-1x1q7te-0 iYjfAY sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
+      class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 gldbYz sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
       data-testid="PluginManagerNavigationBar"
     >
       <div
@@ -194,11 +194,11 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
           class="-mx-6 w-full"
         >
           <div
-            class="Tabs__TabList-sc-1lxyvu-1 eWhkiE w-full h-18"
+            class="Tabs__TabList-sc-1t8sbwb-1 joVAoa w-full h-18"
           >
             <button
               aria-selected="true"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-latest"
               role="tab"
               tabindex="0"
@@ -213,7 +213,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-gaming"
               role="tab"
               tabindex="-1"
@@ -228,7 +228,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-utility"
               role="tab"
               tabindex="-1"
@@ -243,7 +243,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-exchange"
               role="tab"
               tabindex="-1"
@@ -258,7 +258,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-other"
               role="tab"
               tabindex="-1"
@@ -276,7 +276,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
             />
             <button
               aria-selected="false"
-              class="Tabs__TabButton-sc-1lxyvu-0 group"
+              class="Tabs__TabButton-sc-1t8sbwb-0 group"
               data-testid="tabs__tab-button-my-plugins"
               role="tab"
               tabindex="-1"
@@ -309,7 +309,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
                 class="group"
               >
                 <button
-                  class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group"
+                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
                   data-testid="LayoutControls__list--icon"
                 >
                   <div
@@ -334,7 +334,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
                 class="group"
               >
                 <button
-                  class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 gPBHgx group active"
+                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
                   data-testid="LayoutControls__grid--icon"
                 >
                   <div

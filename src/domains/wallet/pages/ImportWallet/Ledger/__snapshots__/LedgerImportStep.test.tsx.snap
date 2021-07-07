@@ -27,7 +27,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionNetwork"
     >
       <div
@@ -46,7 +46,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
       </div>
       <div
         aria-label="ARK Devnet"
-        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+        class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
         data-testid="NetworkIcon-ARK-ark.devnet"
       >
         <div
@@ -65,7 +65,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
       <ul>
         <li>
           <div
-            class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 ftQhtr no-ligatures py-4"
+            class="TransactionDetail__TransactionDetailStyled-r7sfme-0 fDEdhK no-ligatures py-4"
             data-testid="TransactionDetail"
           >
             <div
@@ -78,7 +78,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                   class="flex items-center space-x-3"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -100,7 +100,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                           data-testid="TruncateEnd"
                         >
                           Custom N…
@@ -127,7 +127,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
               </div>
             </div>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -149,7 +149,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
         </li>
         <li>
           <div
-            class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 ftQhtr no-ligatures py-4"
+            class="TransactionDetail__TransactionDetailStyled-r7sfme-0 fDEdhK no-ligatures py-4"
             data-testid="TransactionDetail"
           >
             <div
@@ -162,7 +162,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                   class="flex items-center space-x-3"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -184,7 +184,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                         data-testid="Address__alias"
                       >
                         <span
-                          class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                           data-testid="TruncateEnd"
                         >
                           DARK #4
@@ -211,7 +211,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
               </div>
             </div>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -264,7 +264,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionNetwork"
     >
       <div
@@ -283,7 +283,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
       </div>
       <div
         aria-label="ARK Devnet"
-        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+        class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
         data-testid="NetworkIcon-ARK-ark.devnet"
       >
         <div
@@ -299,7 +299,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionDetail"
     >
       <div
@@ -326,7 +326,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
         </div>
       </div>
       <div
-        class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -341,7 +341,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionDetail"
     >
       <div
@@ -364,7 +364,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
       </div>
     </div>
     <fieldset
-      class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
     >
       <label
         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -379,13 +379,13 @@ exports[`LedgerImportStep should render with single import 1`] = `
         …
       </div>
       <div
-        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
       >
         <div
           class="relative flex flex-1 h-full"
         >
           <input
-            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
             data-testid="ImportWallet__name-input"
             name="names.DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
             value="DARK #4"
@@ -424,7 +424,7 @@ exports[`LedgerImportStep should show an error message for duplicate name 1`] = 
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionNetwork"
     >
       <div
@@ -443,7 +443,7 @@ exports[`LedgerImportStep should show an error message for duplicate name 1`] = 
       </div>
       <div
         aria-label="ARK Devnet"
-        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+        class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
         data-testid="NetworkIcon-ARK-ark.devnet"
       >
         <div
@@ -459,7 +459,7 @@ exports[`LedgerImportStep should show an error message for duplicate name 1`] = 
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionDetail"
     >
       <div
@@ -486,7 +486,7 @@ exports[`LedgerImportStep should show an error message for duplicate name 1`] = 
         </div>
       </div>
       <div
-        class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
         data-testid="Avatar"
       >
         <div
@@ -501,7 +501,7 @@ exports[`LedgerImportStep should show an error message for duplicate name 1`] = 
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionDetail"
     >
       <div
@@ -524,7 +524,7 @@ exports[`LedgerImportStep should show an error message for duplicate name 1`] = 
       </div>
     </div>
     <fieldset
-      class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
     >
       <label
         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -539,13 +539,13 @@ exports[`LedgerImportStep should show an error message for duplicate name 1`] = 
         …
       </div>
       <div
-        class="Input__InputWrapperStyled-wu99qs-0 jYUFQr"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
       >
         <div
           class="relative flex flex-1 h-full"
         >
           <input
-            class="Input__InputStyled-wu99qs-1 ioFtLo p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
             data-testid="ImportWallet__name-input"
             name="names.DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
             value="DARK #4"
@@ -584,7 +584,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 bRHEGF no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 SpJec no-ligatures"
       data-testid="TransactionNetwork"
     >
       <div
@@ -603,7 +603,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
       </div>
       <div
         aria-label="ARK Devnet"
-        class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+        class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
         data-testid="NetworkIcon-ARK-ark.devnet"
       >
         <div
@@ -622,7 +622,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
       <ul>
         <li>
           <div
-            class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 ftQhtr no-ligatures py-4"
+            class="TransactionDetail__TransactionDetailStyled-r7sfme-0 fDEdhK no-ligatures py-4"
             data-testid="TransactionDetail"
           >
             <div
@@ -635,7 +635,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
                   class="flex items-center space-x-3"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -657,7 +657,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
                         data-testid="Address__alias"
                       >
                         <span
-                          class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                           data-testid="TruncateEnd"
                         >
                           Custom N…
@@ -684,7 +684,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
               </div>
             </div>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >
@@ -706,7 +706,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
         </li>
         <li>
           <div
-            class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 ftQhtr no-ligatures py-4"
+            class="TransactionDetail__TransactionDetailStyled-r7sfme-0 fDEdhK no-ligatures py-4"
             data-testid="TransactionDetail"
           >
             <div
@@ -719,7 +719,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
                   class="flex items-center space-x-3"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -741,7 +741,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
                         data-testid="Address__alias"
                       >
                         <span
-                          class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                           data-testid="TruncateEnd"
                         >
                           DARK #4
@@ -768,7 +768,7 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
               </div>
             </div>
             <button
-              class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
               data-testid="LedgerImportStep__edit-alias"
               type="button"
             >

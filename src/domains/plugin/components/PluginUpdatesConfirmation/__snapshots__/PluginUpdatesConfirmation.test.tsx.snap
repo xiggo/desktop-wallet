@@ -7,7 +7,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 fmTBfU"
+      class="Modal__ModalContainer-sc-5lu2mc-0 iJJiUd"
       tabindex="-1"
     >
       <div
@@ -18,7 +18,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -63,7 +63,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
               data-testid="PluginUpdatesConfirmation"
             >
               <div
-                class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
                 role="table"
               >
                 <table
@@ -141,17 +141,17 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td
                         style="width: 70%;"
                       >
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
-                            class="PluginImage__PluginImageWrapper-iwox49-0 fITdNR"
+                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
                             data-testid="PluginImage__logo"
                           >
                             <img
@@ -183,7 +183,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <span
                             data-testid="PluginUpdates__minimum-version"
@@ -194,17 +194,17 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td
                         style="width: 70%;"
                       >
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
-                            class="PluginImage__PluginImageWrapper-iwox49-0 fITdNR"
+                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
                             data-testid="PluginImage__placeholder"
                           >
                             <svg>
@@ -234,7 +234,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <span
                             data-testid="PluginUpdates__minimum-version"
@@ -251,7 +251,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                   data-testid="PluginUpdates__cancel-button"
                   type="button"
                 >
@@ -262,7 +262,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-1y2wptt-0 eXxJsW"
+                  class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
                   data-testid="PluginUpdates__continue-button"
                   type="button"
                 >

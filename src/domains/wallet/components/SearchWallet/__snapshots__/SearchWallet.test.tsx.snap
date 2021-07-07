@@ -7,7 +7,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eEWkbX"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
       tabindex="-1"
     >
       <div
@@ -18,7 +18,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -57,7 +57,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
                 role="table"
               >
                 <table
@@ -147,7 +147,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 jDlLhf group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 hVnaun group"
                                 >
                                   <div
                                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -180,19 +180,19 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
                             class="flex-shrink-0 -space-x-2"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -207,7 +207,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -229,7 +229,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -246,7 +246,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -257,10 +257,10 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SearchWalletListItem__select-0"
                             type="button"
                           >
@@ -274,19 +274,19 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
                             class="flex-shrink-0 -space-x-2"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -301,7 +301,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -323,7 +323,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -340,7 +340,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -351,10 +351,10 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >
@@ -386,7 +386,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eEWkbX"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
       tabindex="-1"
     >
       <div
@@ -397,7 +397,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -436,7 +436,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
                 role="table"
               >
                 <table
@@ -526,7 +526,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 jDlLhf group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 hVnaun group"
                                 >
                                   <div
                                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -559,19 +559,19 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
                             class="flex-shrink-0 -space-x-2"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -586,7 +586,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -608,7 +608,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               data-testid="Address__alias"
                             >
                               <span
-                                class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -625,7 +625,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -636,10 +636,10 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SearchWalletListItem__select-0"
                             type="button"
                           >
@@ -653,19 +653,19 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
                             class="flex-shrink-0 -space-x-2"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -680,7 +680,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -702,7 +702,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               data-testid="Address__alias"
                             >
                               <span
-                                class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -719,7 +719,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -730,10 +730,10 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >
@@ -765,7 +765,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eEWkbX"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
       tabindex="-1"
     >
       <div
@@ -776,7 +776,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -815,7 +815,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
                 role="table"
               >
                 <table
@@ -935,7 +935,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 jDlLhf group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 hVnaun group"
                                 >
                                   <div
                                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -968,19 +968,19 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
                             class="flex-shrink-0 -space-x-2"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -995,7 +995,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1017,7 +1017,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -1034,7 +1034,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -1045,7 +1045,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-400 justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-400 justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -1056,10 +1056,10 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SearchWalletListItem__select-0"
                             type="button"
                           >
@@ -1073,19 +1073,19 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
                             class="flex-shrink-0 -space-x-2"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -1100,7 +1100,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1122,7 +1122,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -1139,7 +1139,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -1150,7 +1150,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-400 justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-400 justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -1161,10 +1161,10 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >
@@ -1196,7 +1196,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-1pv7yg7-0 eEWkbX"
+      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
       tabindex="-1"
     >
       <div
@@ -1207,7 +1207,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-1y2wptt-0 fNHPRi w-11 h-11"
+            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1246,7 +1246,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-84pst5-0 ccYCKK -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
                 role="table"
               >
                 <table
@@ -1366,7 +1366,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1xp1l1a-0 jDlLhf group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 hVnaun group"
                                 >
                                   <div
                                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -1399,19 +1399,19 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
                             class="flex-shrink-0 -space-x-2"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -1426,7 +1426,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1448,7 +1448,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               data-testid="Address__alias"
                             >
                               <span
-                                class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                                 data-testid="TruncateEnd"
                               >
                                 Sample Wallet
@@ -1465,7 +1465,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -1476,7 +1476,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-400 justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-400 justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -1487,10 +1487,10 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SearchWalletListItem__select-0"
                             type="button"
                           >
@@ -1504,19 +1504,19 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-sc-1br46dw-0 iSFAiI"
+                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 gAghjF space-x-4"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
                             class="flex-shrink-0 -space-x-2"
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -1531,7 +1531,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               </div>
                             </div>
                             <div
-                              class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1553,7 +1553,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               data-testid="Address__alias"
                             >
                               <span
-                                class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                                class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 2
@@ -1570,7 +1570,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT font-semibold justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -1581,7 +1581,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 clvEgT text-theme-secondary-400 justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-400 justify-end"
                         >
                           <span
                             data-testid="AmountCrypto"
@@ -1592,10 +1592,10 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-sc-1mn4l8o-0 kKpqmt justify-end"
+                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >

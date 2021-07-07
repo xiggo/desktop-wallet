@@ -3,7 +3,7 @@
 exports[`TransactionNetwork should render 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 cHOkoL no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
     data-testid="TransactionNetwork"
   >
     <div
@@ -22,7 +22,7 @@ exports[`TransactionNetwork should render 1`] = `
     </div>
     <div
       aria-label="ARK Devnet"
-      class="Circle__CircleWrapper-uw7h4j-0 bNDQMV text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+      class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
       data-testid="NetworkIcon-ARK-ark.devnet"
     >
       <div

@@ -33,7 +33,7 @@ exports[`Formatted Address should render with normal font 1`] = `
       data-testid="Address__alias"
     >
       <span
-        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
         data-testid="TruncateEnd"
       >
         Sample Wallet
@@ -59,7 +59,7 @@ exports[`Formatted Address should render with wallet name 1`] = `
       data-testid="Address__alias"
     >
       <span
-        class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
         data-testid="TruncateEnd"
       >
         Sample Wallet

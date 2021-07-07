@@ -91,7 +91,7 @@ exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
               </li>
             </ul>
             <div
-              class="Divider-sc-19q4mlo-0 bKsVMa border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
               type="horizontal"
             />
             <div
@@ -128,7 +128,7 @@ exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
                 class="relative"
               >
                 <button
-                  class="ClipboardButton__StyledButton-sc-1ft1991-0 jNaOXY"
+                  class="ClipboardButton__StyledButton-cammp1-0 kUVLdV"
                   data-testid="SecondSignature__copy"
                   type="button"
                 >
@@ -166,7 +166,7 @@ exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
                 </div>
               </div>
               <button
-                class="OriginalButton__StyledButton-sc-1y2wptt-0 icFlST"
+                class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
                 data-testid="SecondSignature__download"
                 type="button"
               >
@@ -193,7 +193,7 @@ exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
             class="pt-2"
           >
             <div
-              class="Divider-sc-19q4mlo-0 bKsVMa border-theme-secondary-300 dark:border-theme-secondary-800"
+              class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
               type="horizontal"
             />
           </div>
@@ -264,7 +264,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
             </div>
           </div>
           <div
-            class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 eMJHaj no-ligatures"
+            class="TransactionDetail__TransactionDetailStyled-r7sfme-0 fyYYPW no-ligatures"
             data-testid="TransactionSender"
           >
             <div
@@ -286,7 +286,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                     data-testid="Address__alias"
                   >
                     <span
-                      class="TruncateEnd__Wrapper-sc-1w1nvb9-0"
+                      class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                       data-testid="TruncateEnd"
                     >
                       ARK Wallet 1
@@ -305,7 +305,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
               class="flex items-center -space-x-2"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-1vsy2s2-0 jrNmMB flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -324,7 +324,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
             class="pt-6"
           >
             <fieldset
-              class="FormField__FormFieldStyled-yeauwd-0 cnlnjc flex flex-col space-y-2"
+              class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
             >
               <label
                 class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -344,7 +344,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                     class="flex items-center"
                   >
                     <span
-                      class="Switch__SwitchText-sc-1fue7gg-0 jrkMzU"
+                      class="Switch__SwitchText-sc-161iiro-0 ddtFSz"
                       role="button"
                     >
                       Simple
@@ -353,19 +353,19 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                       class="flex"
                     >
                       <input
-                        class="Toggle__Input-qyyifx-0 WGuGL"
+                        class="Toggle__Input-sc-6s3wfu-0 lksfSS"
                         type="checkbox"
                       />
                       <div
-                        class="Toggle__Handle-qyyifx-1 jKIwmR"
+                        class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
                       >
                         <span
-                          class="Toggle__HandleInner-qyyifx-2 bmbgzL"
+                          class="Toggle__HandleInner-sc-6s3wfu-2 jLcWyW"
                         />
                       </div>
                     </label>
                     <span
-                      class="Switch__SwitchText-sc-1fue7gg-0 khGGFd"
+                      class="Switch__SwitchText-sc-161iiro-0 bxLfsC"
                       role="button"
                     >
                       Advanced
@@ -379,7 +379,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                 >
                   <button
                     aria-checked="false"
-                    class="ButtonGroup__ButtonGroupOptionStyled-sc-1u00raz-0 kVquVL"
+                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -400,7 +400,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                   </button>
                   <button
                     aria-checked="true"
-                    class="ButtonGroup__ButtonGroupOptionStyled-sc-1u00raz-0 kVquVL"
+                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -421,7 +421,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                   </button>
                   <button
                     aria-checked="false"
-                    class="ButtonGroup__ButtonGroupOptionStyled-sc-1u00raz-0 kVquVL"
+                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -454,7 +454,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
 exports[`SecondSignatureRegistrationForm should render transaction details 1`] = `
 <DocumentFragment>
   <div
-    class="TransactionDetail__TransactionDetailStyled-sc-15h16fu-0 jxdofB no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 fGJHFM no-ligatures"
     data-testid="TransactionFee"
   >
     <div
