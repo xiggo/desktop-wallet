@@ -1,4 +1,4 @@
-import { BigNumber } from "@arkecosystem/platform-sdk-support";
+import { BigNumber } from "@payvo/sdk-support";
 import React from "react";
 import { render } from "testing-library";
 

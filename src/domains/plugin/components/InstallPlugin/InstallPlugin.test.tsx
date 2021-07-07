@@ -43,7 +43,7 @@ describe("InstallPlugin", () => {
 	it("should render 2st step with full download progress", async () => {
 		const { getByTestId, asFragment } = render(
 			<SecondStep
-				plugin={{ logo: "https://ark.io/logo.png", size: "100 B", title: "My Plugin" }}
+				plugin={{ logo: "https://payvo.com/logo.png", size: "100 B", title: "My Plugin" }}
 				downloadProgress={{ percent: 1, totalBytes: 100, transferredBytes: 100 }}
 			/>,
 		);
@@ -61,7 +61,7 @@ describe("InstallPlugin", () => {
 
 	it("should render 3st step with plugin logo", async () => {
 		const { getByTestId, asFragment } = render(
-			<ThirdStep plugin={{ logo: "https://ark.io/logo.png", title: "My Plugin" }} />,
+			<ThirdStep plugin={{ logo: "https://payvo.com/logo.png", title: "My Plugin" }} />,
 		);
 
 		expect(getByTestId("InstallPlugin__step--third__logo")).toBeInTheDocument();

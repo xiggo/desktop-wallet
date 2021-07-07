@@ -1,5 +1,5 @@
-import { CURRENCIES, Money, Numeral } from "@arkecosystem/platform-sdk-intl";
-import { BigNumber } from "@arkecosystem/platform-sdk-support";
+import { CURRENCIES, Money, Numeral } from "@payvo/sdk-intl";
+import { BigNumber } from "@payvo/sdk-support";
 
 import { DEFAULT_DECIMALS, DEFAULT_TICKER, FormatParameters } from "./Amount.contracts";
 

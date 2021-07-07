@@ -13,7 +13,7 @@ describe("PluginImage", () => {
 	});
 
 	it("should render image logo", () => {
-		const { container } = render(<PluginImage logoURL="https://ark.io/logo.png" />);
+		const { container } = render(<PluginImage logoURL="https://payvo.com/logo.png" />);
 
 		expect(screen.getByTestId("PluginImage__logo")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
@@ -45,7 +45,7 @@ describe("PluginImage", () => {
 	});
 
 	it("should show placeholder as fallback", () => {
-		const { container } = render(<PluginImage logoURL="https://ark.io/logo.png" />);
+		const { container } = render(<PluginImage logoURL="https://payvo.com/logo.png" />);
 
 		fireEvent.error(screen.getByRole("img"));
 

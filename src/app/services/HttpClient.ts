@@ -1,4 +1,4 @@
-import { AbstractRequest, HttpResponse, Response } from "@arkecosystem/platform-sdk-http";
+import { AbstractRequest, HttpResponse, Response } from "@payvo/sdk-http";
 import crossFetch from "cross-fetch";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";

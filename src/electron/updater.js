@@ -8,7 +8,7 @@ const setupDevelopment = (testVersion) => {
 	}
 
 	if (process.platform === "linux") {
-		process.env.APPIMAGE = `dist/target/ark-desktop-wallet-linux-x86_64-${testVersion || version}.AppImage`;
+		process.env.APPIMAGE = `dist/target/payvo-wallet-linux-x86_64-${testVersion || version}.AppImage`;
 	}
 };
 

@@ -1,4 +1,4 @@
-import { BigNumber } from "@arkecosystem/platform-sdk-support";
+import { BigNumber } from "@payvo/sdk-support";
 import { Button } from "app/components/Button";
 import { Form } from "app/components/Form";
 import { Icon } from "app/components/Icon";

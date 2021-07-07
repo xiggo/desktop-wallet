@@ -1,4 +1,4 @@
-import { Environment } from "@arkecosystem/platform-sdk-profiles";
+import { Environment } from "@payvo/sdk-profiles";
 import { History, Location } from "history";
 
 export interface MiddlewareParameters {

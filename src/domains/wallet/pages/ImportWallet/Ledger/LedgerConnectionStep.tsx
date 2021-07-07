@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { Alert } from "app/components/Alert";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";

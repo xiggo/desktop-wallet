@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { FormField, FormHelperText, FormLabel } from "app/components/Form";
 import { InputCounter, InputCurrency } from "app/components/Input";
 import { useValidation } from "app/hooks";

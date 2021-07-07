@@ -1,16 +1,16 @@
-import { Coins, Networks } from "@arkecosystem/platform-sdk";
-// import { ADA } from "@arkecosystem/platform-sdk-ada";
-import { ARK } from "@arkecosystem/platform-sdk-ark";
-// import { ATOM } from "@arkecosystem/platform-sdk-atom";
-// import { BTC } from "@arkecosystem/platform-sdk-btc";
-// import { EGLD } from "@arkecosystem/platform-sdk-egld";
-// import { ETH } from "@arkecosystem/platform-sdk-eth";
-import { LSK } from "@arkecosystem/platform-sdk-lsk";
-// import { NEO } from "@arkecosystem/platform-sdk-neo";
-// import { TRX } from "@arkecosystem/platform-sdk-trx";
-// import { XLM } from "@arkecosystem/platform-sdk-xlm";
-// import { XRP } from "@arkecosystem/platform-sdk-xrp";
-// import { ZIL } from "@arkecosystem/platform-sdk-zil";
+import { Coins, Networks } from "@payvo/sdk";
+// import { ADA } from "@payvo/sdk-ada";
+import { ARK } from "@payvo/sdk-ark";
+// import { ATOM } from "@payvo/sdk-atom";
+// import { BTC } from "@payvo/sdk-btc";
+// import { EGLD } from "@payvo/sdk-egld";
+// import { ETH } from "@payvo/sdk-eth";
+import { LSK } from "@payvo/sdk-lsk";
+// import { NEO } from "@payvo/sdk-neo";
+// import { TRX } from "@payvo/sdk-trx";
+// import { XLM } from "@payvo/sdk-xlm";
+// import { XRP } from "@payvo/sdk-xrp";
+// import { ZIL } from "@payvo/sdk-zil";
 
 const createNetwork = (coin: Coins.CoinSpec, network: string) =>
 	new Networks.Network(coin.manifest, coin.manifest.networks[network]);

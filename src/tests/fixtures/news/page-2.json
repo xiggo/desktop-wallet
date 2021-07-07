@@ -26,7 +26,7 @@
 		},
 		{
 			"id": 422,
-			"text": "With the recent ARK Desktop Wallet updates for v2.9.3, we want to go over some changes and features with a new walk through video. https://youtu.be/AslAEyPZnXQ",
+			"text": "With the recent Payvo Wallet updates for v2.9.3, we want to go over some changes and features with a new walk through video. https://youtu.be/AslAEyPZnXQ",
 			"links": ["https://youtu.be/AslAEyPZnXQ"],
 			"category": "Community",
 			"author": { "title": "Co-Founder", "name": "Travis Walker", "team": "Team Ark" },
@@ -46,8 +46,8 @@
 		},
 		{
 			"id": 424,
-			"text": "UPDATE: ARK Desktop Wallet v2.9.3 is now available. This version has changed the send modal to be more intuitive, fixed the URI scheme and the initialization loading screen freeze. https://blog.ark.io/ark-desktop-wallet-v2-9-3-released-6d3c4469dfd",
-			"links": ["https://blog.ark.io/ark-desktop-wallet-v2-9-3-released-6d3c4469dfd"],
+			"text": "UPDATE: Payvo Wallet v2.9.3 is now available. This version has changed the send modal to be more intuitive, fixed the URI scheme and the initialization loading screen freeze. https://blog.ark.io/payvo-wallet-v2-9-3-released-6d3c4469dfd",
+			"links": ["https://blog.ark.io/payvo-wallet-v2-9-3-released-6d3c4469dfd"],
 			"category": "Community",
 			"author": { "title": "Co-Founder", "name": "Travis Walker", "team": "Team Ark" },
 			"is_featured": false,

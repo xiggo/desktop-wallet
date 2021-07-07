@@ -17,7 +17,7 @@
 		"1.0.4": {
 			"name": "@dated/delegate-calculator-plugin",
 			"version": "1.0.4",
-			"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the ARK Desktop Wallet",
+			"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the Payvo Wallet",
 			"main": "src/index.js",
 			"author": {
 				"name": "Edgar Goetzendorff",
@@ -104,6 +104,6 @@
 		"url": "https://github.com/@dated/delegate-calculator-plugin/issues"
 	},
 	"license": "MIT",
-	"readme": "# ARK Delegate Calculator Plugin\n\n> Compare delegate payouts and get an overview of your potential staking rewards directly in the ARK Desktop Wallet.\n\n## Installation\n\nInstall this plugin directly through the Plugins Manager of the Desktop Wallet. Alternatively you can clone or [download it](https://github.com/dated/delegate-calculator-plugin/archive/master.zip) this repository and unzip it into `~/.ark-desktop/plugins/`.\n\n## Credits\n\n- [Edgar Goetzendorff](https://github.com/dated)\n- [All Contributors](../../contributors)\n\n## License\n\n[MIT](LICENSE) © [Edgar Goetzendorff]",
+	"readme": "# ARK Delegate Calculator Plugin\n\n> Compare delegate payouts and get an overview of your potential staking rewards directly in the Payvo Wallet.\n\n## Installation\n\nInstall this plugin directly through the Plugins Manager of the Desktop Wallet. Alternatively you can clone or [download it](https://github.com/dated/delegate-calculator-plugin/archive/master.zip) this repository and unzip it into `~/.ark-desktop/plugins/`.\n\n## Credits\n\n- [Edgar Goetzendorff](https://github.com/dated)\n- [All Contributors](../../contributors)\n\n## License\n\n[MIT](LICENSE) © [Edgar Goetzendorff]",
 	"readmeFilename": "README.md"
 }

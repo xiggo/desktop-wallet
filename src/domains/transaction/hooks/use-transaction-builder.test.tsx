@@ -1,5 +1,5 @@
-import { Contracts } from "@arkecosystem/platform-sdk";
-import { Contracts as ProfileContracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import { LedgerProvider } from "app/contexts";
 import React from "react";

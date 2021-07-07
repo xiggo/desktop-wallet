@@ -1,4 +1,4 @@
-import { BigNumber } from "@arkecosystem/platform-sdk-support";
+import { BigNumber } from "@payvo/sdk-support";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { getDefaultProfileId, render } from "testing-library";

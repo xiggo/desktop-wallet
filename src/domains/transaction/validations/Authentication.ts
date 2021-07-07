@@ -1,5 +1,5 @@
-import { Coins } from "@arkecosystem/platform-sdk";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Coins } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { debounceAsync } from "utils/debounce";
 
 export const authentication = (t: any) => {

@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { chunk } from "@arkecosystem/utils";
 import { useMemo } from "react";
 

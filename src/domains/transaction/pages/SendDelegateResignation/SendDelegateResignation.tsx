@@ -1,4 +1,4 @@
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";

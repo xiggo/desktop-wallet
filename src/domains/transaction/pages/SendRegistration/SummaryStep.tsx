@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { TransactionSuccessful } from "domains/transaction/components/TransactionSuccessful";
 import React from "react";
 import { useTranslation } from "react-i18next";

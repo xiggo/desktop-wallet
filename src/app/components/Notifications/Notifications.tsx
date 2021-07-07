@@ -1,4 +1,4 @@
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Image } from "app/components/Image";
 import { Table } from "app/components/Table";

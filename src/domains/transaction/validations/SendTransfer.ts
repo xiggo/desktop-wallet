@@ -1,5 +1,5 @@
-import { Coins, Networks } from "@arkecosystem/platform-sdk";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Coins, Networks } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 
 import { RecipientListItem } from "../components/RecipientList/RecipientList.models";
 

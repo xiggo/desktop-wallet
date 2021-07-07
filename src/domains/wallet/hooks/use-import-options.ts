@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 

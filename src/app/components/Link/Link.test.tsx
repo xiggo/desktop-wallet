@@ -15,7 +15,7 @@ describe("Link", () => {
 
 	it("should render external", () => {
 		const { getByTestId } = renderWithRouter(
-			<Link to="https://ark.io/" isExternal>
+			<Link to="https://payvo.com/" isExternal>
 				ARK.io
 			</Link>,
 		);
@@ -25,7 +25,7 @@ describe("Link", () => {
 	});
 
 	it("should render external without children", () => {
-		const { asFragment, getByTestId } = renderWithRouter(<Link to="https://ark.io" isExternal />);
+		const { asFragment, getByTestId } = renderWithRouter(<Link to="https://payvo.com" isExternal />);
 
 		expect(getByTestId("Link__external")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
@@ -34,7 +34,7 @@ describe("Link", () => {
 	it("should open an external link", () => {
 		const ipcRendererMock = jest.spyOn(electron.ipcRenderer, "send").mockImplementation();
 
-		const externalLink = "https://ark.io/";
+		const externalLink = "https://payvo.com/";
 
 		const { asFragment, getByTestId } = renderWithRouter(<Link to={externalLink} isExternal />);
 

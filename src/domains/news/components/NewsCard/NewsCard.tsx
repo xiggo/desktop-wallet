@@ -1,4 +1,4 @@
-import { BlockfolioSignal } from "@arkecosystem/platform-sdk-news";
+import { BlockfolioSignal } from "@payvo/sdk-news";
 import { Card } from "app/components/Card";
 import { Divider } from "app/components/Divider";
 import { Label } from "app/components/Label";

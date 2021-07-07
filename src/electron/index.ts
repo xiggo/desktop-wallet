@@ -108,7 +108,7 @@ function createWindow() {
 
 	mainWindow.webContents.on("did-finish-load", () => {
 		const version = app.getVersion();
-		const windowTitle = `ARK Desktop Wallet ${version}`;
+		const windowTitle = `Payvo Wallet ${version}`;
 		mainWindow && mainWindow.setTitle(windowTitle);
 
 		broadcastURL(deeplinkingUrl);

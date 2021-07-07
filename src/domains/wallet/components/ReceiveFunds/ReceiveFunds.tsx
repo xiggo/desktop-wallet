@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { Address } from "app/components/Address";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";

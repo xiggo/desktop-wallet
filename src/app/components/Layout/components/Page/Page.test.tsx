@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
@@ -65,7 +65,7 @@ describe("Page", () => {
 			fireEvent.click(await findByText(label));
 
 			if (label === "Support") {
-				expect(ipcRendererSpy).toHaveBeenCalledWith("open-external", "https://ark.io/contact");
+				expect(ipcRendererSpy).toHaveBeenCalledWith("open-external", "https://payvo.com/contact");
 			} else {
 				expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);
 			}

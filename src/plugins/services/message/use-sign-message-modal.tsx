@@ -1,4 +1,4 @@
-import { Services } from "@arkecosystem/platform-sdk";
+import { Services } from "@payvo/sdk";
 import { useActiveProfile } from "app/hooks";
 import { SignMessage } from "domains/wallet/components/SignMessage";
 import React, { useCallback, useState } from "react";

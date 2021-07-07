@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { ipcRenderer } from "electron";
 import nock from "nock";
@@ -186,7 +186,7 @@ describe("PluginDetails", () => {
 
 		expect(ipcRendererMock).toHaveBeenCalledWith(
 			"open-external",
-			"https://ark.io/contact?subject=desktop_wallet_plugin_report&plugin_id=test-plugin&plugin_version=0.0.0",
+			"https://payvo.com/contact?subject=desktop_wallet_plugin_report&plugin_id=test-plugin&plugin_version=0.0.0",
 		);
 
 		ipcRendererMock.mockRestore();

@@ -791,6 +791,6 @@
 		"url": "https://github.com/ark-ecosystem-desktop-plugins/explorer/issues"
 	},
 	"license": "MIT",
-	"readme": "# Explorer - ARK Desktop Wallet plugin\nUse the ARK Mainnet explorer directly within the wallet\n\n## Installation\n\n 1. Drop this repository into `~/.ark-desktop/plugins/`.\n 2. Start the desktop wallet.\n 3. Enable the plugin on the plugin section.\n\n## Credits\n\n- [Alex Barnsley](https://github.com/alexbarnsley)\n- [Juan A. Martín](https://github.com/j-a-m-l)\n- [All Contributors](../../contributors)\n\n## License\n\n[MIT](LICENSE) © [Ark Ecosystem](https://ark.io/)\n",
+	"readme": "# Explorer - Payvo Wallet plugin\nUse the ARK Mainnet explorer directly within the wallet\n\n## Installation\n\n 1. Drop this repository into `~/.ark-desktop/plugins/`.\n 2. Start the desktop wallet.\n 3. Enable the plugin on the plugin section.\n\n## Credits\n\n- [Alex Barnsley](https://github.com/alexbarnsley)\n- [Juan A. Martín](https://github.com/j-a-m-l)\n- [All Contributors](../../contributors)\n\n## License\n\n[MIT](LICENSE) © [Ark Ecosystem](https://ark.io/)\n",
 	"readmeFilename": "README.md"
 }

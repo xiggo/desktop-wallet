@@ -1,5 +1,5 @@
-import { Services } from "@arkecosystem/platform-sdk";
-import { Contracts as ProfileContracts } from "@arkecosystem/platform-sdk-profiles";
+import { Services } from "@payvo/sdk";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import Transport from "@ledgerhq/hw-transport";
 
 const signWithLedger = async (

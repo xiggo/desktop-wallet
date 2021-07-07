@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 
 export interface SelectedWallet {
 	address: string;

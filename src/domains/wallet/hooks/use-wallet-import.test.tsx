@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@arkecosystem/platform-sdk";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Networks } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { env, MNEMONICS } from "utils/testing-library";
 

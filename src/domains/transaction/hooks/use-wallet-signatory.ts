@@ -1,5 +1,5 @@
-import { Signatories } from "@arkecosystem/platform-sdk";
-import { Contracts as ProfileContracts } from "@arkecosystem/platform-sdk-profiles";
+import { Signatories } from "@payvo/sdk";
+import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { useCallback } from "react";
 
 interface SignInput {

@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";

@@ -1,4 +1,4 @@
-import { ARK } from "@arkecosystem/platform-sdk-ark";
+import { ARK } from "@payvo/sdk-ark";
 import { renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";
 import { httpClient } from "app/services";

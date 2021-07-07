@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";

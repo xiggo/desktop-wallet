@@ -113,7 +113,7 @@ export const translations: { [key: string]: any } = {
 		ABOUT: "About",
 		DESKTOP_WALLET_VERSION: "Desktop Wallet Version",
 		DISCLAIMER:
-			"The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.",
+			"The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.",
 		PERMISSIONS: "Permissions",
 		REPORT: "Report Plugin",
 		REQUIREMENTS: "Requirements",

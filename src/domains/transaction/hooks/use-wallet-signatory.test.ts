@@ -1,7 +1,7 @@
 import "jest-extended";
 
-import { Signatories } from "@arkecosystem/platform-sdk";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Signatories } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { env, getDefaultProfileId, MNEMONICS } from "utils/testing-library";
 

@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { EnvironmentProvider } from "app/contexts";
 import electron, { ipcRenderer } from "electron";
@@ -95,7 +95,7 @@ describe("PluginManagerProvider", () => {
 
 		expect(ipcRendererMock).toHaveBeenCalledWith(
 			"open-external",
-			"https://ark.io/contact?subject=desktop_wallet_plugin_report&plugin_id=test-plugin&plugin_version=0.0.0",
+			"https://payvo.com/contact?subject=desktop_wallet_plugin_report&plugin_id=test-plugin&plugin_version=0.0.0",
 		);
 
 		ipcRendererMock.mockRestore();

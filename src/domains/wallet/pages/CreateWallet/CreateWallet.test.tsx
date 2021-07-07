@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { BIP39 } from "@arkecosystem/platform-sdk-crypto";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { BIP39 } from "@payvo/sdk-crypto";
+import { Contracts } from "@payvo/sdk-profiles";
 import { act } from "@testing-library/react-hooks";
 import { translations as walletTranslations } from "domains/wallet/i18n";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";

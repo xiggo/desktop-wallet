@@ -1,4 +1,4 @@
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Modal } from "app/components/Modal";
 import React from "react";

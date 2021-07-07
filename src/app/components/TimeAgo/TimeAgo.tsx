@@ -1,4 +1,4 @@
-import { DateTime } from "@arkecosystem/platform-sdk-intl";
+import { DateTime } from "@payvo/sdk-intl";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

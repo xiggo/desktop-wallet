@@ -1,4 +1,4 @@
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Address } from "app/components/Address";
 import { Modal } from "app/components/Modal";
 import {

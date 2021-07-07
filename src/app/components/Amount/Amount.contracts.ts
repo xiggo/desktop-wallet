@@ -1,4 +1,4 @@
-import { CURRENCIES } from "@arkecosystem/platform-sdk-intl";
+import { CURRENCIES } from "@payvo/sdk-intl";
 
 const DEFAULT_DECIMALS = 8;
 const DEFAULT_TICKER = "BTC";

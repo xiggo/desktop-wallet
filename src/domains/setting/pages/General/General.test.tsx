@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { buildTranslations } from "app/i18n/helpers";
 import { GeneralSettings } from "domains/setting/pages";
 import electron from "electron";

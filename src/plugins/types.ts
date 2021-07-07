@@ -1,6 +1,6 @@
-import { Services } from "@arkecosystem/platform-sdk";
-import { HttpResponse } from "@arkecosystem/platform-sdk-http";
-import { Repositories } from "@arkecosystem/platform-sdk-profiles";
+import { Services } from "@payvo/sdk";
+import { HttpResponse } from "@payvo/sdk-http";
+import { Repositories } from "@payvo/sdk-profiles";
 import { HttpClient } from "app/services/HttpClient";
 
 import { PluginManager } from "./core";

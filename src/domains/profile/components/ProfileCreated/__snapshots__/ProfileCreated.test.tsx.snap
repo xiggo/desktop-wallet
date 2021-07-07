@@ -62,7 +62,7 @@ exports[`ProfileCreated should render a modal 1`] = `
                 class="text-base leading-7 text-theme-secondary-text"
               >
                 <p>
-                  If you are new to the ARK Desktop Wallet, view our tutorial to get started.
+                  If you are new to the Payvo Wallet, view our tutorial to get started.
                 </p>
                 <p>
                   If not, you can skip the tutorial to go directly to your portfolio.

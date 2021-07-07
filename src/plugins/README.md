@@ -1,6 +1,6 @@
 ## Plugin System
 
-Extends the ARK Desktop Wallet with features that are not built into the core.
+Extends the Payvo Wallet with features that are not built into the core.
 
 ```jsx
 const MyPlugin = ({ onClick }) => <button onClick={onClick}>Fetch</button>;

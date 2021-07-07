@@ -9,7 +9,7 @@ describe("PluginInfo", () => {
 		const permissions = ["PROFILE", "EVENTS"];
 
 		const { asFragment, getByTestId, getAllByTestId } = render(
-			<PluginInfo description={about} permissions={permissions} images={["https://ark.io/screenshot.png"]} />,
+			<PluginInfo description={about} permissions={permissions} images={["https://payvo.com/screenshot.png"]} />,
 		);
 
 		expect(getByTestId("plugin-info__about")).toHaveTextContent(about);

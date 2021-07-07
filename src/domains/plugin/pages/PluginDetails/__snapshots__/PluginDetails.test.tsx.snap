@@ -526,7 +526,7 @@ exports[`PluginDetails should render properly 1`] = `
                 <div
                   class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
                 >
-                  The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
                 </div>
               </div>
             </div>
@@ -1044,7 +1044,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                 <div
                   class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
                 >
-                  The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
                 </div>
               </div>
             </div>
@@ -1582,7 +1582,7 @@ exports[`PluginDetails should report plugin 1`] = `
                 <div
                   class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
                 >
-                  The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
                 </div>
               </div>
             </div>
@@ -2141,7 +2141,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                 <div
                   class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
                 >
-                  The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
                 </div>
               </div>
             </div>
@@ -2679,7 +2679,7 @@ exports[`PluginDetails should update package 1`] = `
                 <div
                   class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
                 >
-                  The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { Services } from "@arkecosystem/platform-sdk";
+import { Services } from "@payvo/sdk";
 
 export const isNoDeviceError = (error: any) => String(error).includes("no device found");
 

@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { isNil } from "@arkecosystem/utils";
 import { Switch } from "app/components/Switch";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";

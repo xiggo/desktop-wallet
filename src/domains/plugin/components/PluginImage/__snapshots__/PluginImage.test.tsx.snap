@@ -9,7 +9,7 @@ exports[`PluginImage should render image logo 1`] = `
     <img
       alt="Logo"
       class="object-cover w-full h-full"
-      src="https://ark.io/logo.png"
+      src="https://payvo.com/logo.png"
     />
   </div>
 </div>

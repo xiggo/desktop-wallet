@@ -102,7 +102,7 @@ export const translations: { [key: string]: any } = {
 			},
 			TITLE: "Your Passphrase",
 			WARNING:
-				"You are responsible for storing and protecting this mnemonic passphrase offline. The ARK Desktop Wallet cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
+				"You are responsible for storing and protecting this mnemonic passphrase offline. The Payvo Wallet cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
 		},
 
 		PROCESS_COMPLETED_STEP: {

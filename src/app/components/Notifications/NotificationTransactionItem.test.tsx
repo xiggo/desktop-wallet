@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { httpClient } from "app/services";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";

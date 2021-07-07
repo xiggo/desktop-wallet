@@ -1,7 +1,7 @@
 {
 	"name": "@dated/delegate-calculator-plugin",
 	"version": "1.0.4",
-	"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the ARK Desktop Wallet",
+	"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the Payvo Wallet",
 	"main": "src/index.js",
 	"author": "Edgar Goetzendorff <hello@dated.fun>",
 	"license": "MIT",

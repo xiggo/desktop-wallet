@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { translations as commonTranslations } from "app/i18n/common/i18n";

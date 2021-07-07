@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 
 export const markAsRead = async (isVisible: boolean, id: string, profile: Contracts.IProfile, environment: any) => {
 	if (!isVisible) {

@@ -1,4 +1,4 @@
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { DelegateRegistrationDetail } from "domains/transaction/components/DelegateRegistrationDetail";
 import { DelegateResignationDetail } from "domains/transaction/components/DelegateResignationDetail";
 import { IpfsDetail } from "domains/transaction/components/IpfsDetail";

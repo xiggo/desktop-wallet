@@ -1,4 +1,4 @@
-import { DateTime } from "@arkecosystem/platform-sdk-intl";
+import { DateTime } from "@payvo/sdk-intl";
 
 interface CacheItem {
 	value: any;

@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { sortByDesc } from "@arkecosystem/utils";
 import { BarItem } from "app/components/PercentageBar";
 import { useEnvironmentContext } from "app/contexts";

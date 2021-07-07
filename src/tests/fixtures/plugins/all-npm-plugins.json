@@ -131,7 +131,7 @@
 	{
 		"name": "@dated/delegate-calculator-plugin",
 		"version": "1.0.4",
-		"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the ARK Desktop Wallet",
+		"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the Payvo Wallet",
 		"main": "src/index.js",
 		"author": { "name": "Edgar Goetzendorff", "email": "hello@dated.fun" },
 		"license": "MIT",
@@ -316,7 +316,7 @@
 	{
 		"name": "@dated/italian-language-plugin",
 		"version": "1.0.1",
-		"description": "Italian Language Pack for the ARK Desktop Wallet",
+		"description": "Italian Language Pack for the Payvo Wallet",
 		"main": "src/index.js",
 		"author": { "name": "Edgar Goetzendorff", "email": "hello@dated.fun" },
 		"license": "MIT",
@@ -471,9 +471,9 @@
 		"_hasShrinkwrap": false
 	},
 	{
-		"name": "@borismar/ark-desktop-wallet-theme-one",
+		"name": "@borismar/payvo-wallet-theme-one",
 		"version": "0.9.6",
-		"description": "ARK Desktop Wallet almost gray theme",
+		"description": "Payvo Wallet almost gray theme",
 		"main": "src/index.js",
 		"author": { "name": "Boris Martirosov" },
 		"license": "MIT",
@@ -490,13 +490,13 @@
 		"homepage": "https://github.com/bobobobob/ark-theme-one#readme",
 		"repository": { "type": "git", "url": "git+https://github.com/bobobobob/ark-theme-one.git" },
 		"gitHead": "0d72d3dbc8cdce022ad1bc374f8e791a69517c5b",
-		"_id": "@borismar/ark-desktop-wallet-theme-one@0.9.6",
+		"_id": "@borismar/payvo-wallet-theme-one@0.9.6",
 		"_nodeVersion": "12.14.1",
 		"_npmVersion": "6.13.4",
 		"dist": {
 			"integrity": "sha512-3/wrSOqV59LsdjswFABU3gjm/BvxYPvlQR1Y+e6KOmc1dfQyHuiG7ION2aQNY49J+OXsK2GxvNVkd533BWnSNw==",
 			"shasum": "894dd37e7aad879f3561c16a64c5a89645141045",
-			"tarball": "https://registry.npmjs.org/@borismar/ark-desktop-wallet-theme-one/-/ark-desktop-wallet-theme-one-0.9.6.tgz",
+			"tarball": "https://registry.npmjs.org/@borismar/payvo-wallet-theme-one/-/payvo-wallet-theme-one-0.9.6.tgz",
 			"fileCount": 6,
 			"unpackedSize": 18580,
 			"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeJeGECRA9TVsSAnZWagAA8hgP/A29pE32Cf1gW/k8Srom\n/e8ukuMDcv+kWaJGIwCnyrjEkBb5nJu2TZ6ImCTShHXLdHjS9AbJKmZ2XjPe\nymxiKy+DEhRa7fwsMmxcANNGulMPVYKqjrRcXbEGd1UF1w4+5Y1BtAJysqC4\nS1cq1y0ioJZQAkRQGN9tizuhV4rdZ2YPpCogbbtTScXfcw1v/BCPMLKwuqrC\nF6lAQmFqfp5+4xPn/z3nW6kamOCg5BYANiAT+nNZH1YWgdQ0oS1g5kxuS1lX\nOyi4bdRRB8YlxUUGuaA+u8s/rzWqq0MgM72jwo6qA2EOdBNrUVryS0vhj2rz\nZk0//2l0qAAJpwHJOOJM45K8juWZQAq0/J9mZLS4hfDNiu4vYVmmaYoJzUcE\nVwii4Lw2/hQblEBhWjsqbJyNJ0xV1vpy96NFDXG9t0XM+C6DRTbWQ0Ss8bf2\noibIETgM+b1C7NNjSYv0hCxDmVxqNzNj7iXwySLEeidMF3PpAonOxJxidV+d\n1eTGpIxRJgD/7y/jwSTX/ciqvfplIWioPkX1Y+F+6k5so/KiTaYjTe+JJx7j\nUhO5iJdXzn/2FQRbF6FMOXUx4VWcqiONWzXWTueFqXiPnEjGptIy+fknoCjZ\ngZnL1Sf09QlXFMA2TZeq6y9oN32B8pj0mnByljyOLK1854ypSkXhwSeF2+in\ngDqd\r\n=BrND\r\n-----END PGP SIGNATURE-----\r\n"
@@ -506,7 +506,7 @@
 		"directories": {},
 		"_npmOperationalInternal": {
 			"host": "s3://npm-registry-packages",
-			"tmp": "tmp/ark-desktop-wallet-theme-one_0.9.6_1579540867949_0.19667390967403175"
+			"tmp": "tmp/payvo-wallet-theme-one_0.9.6_1579540867949_0.19667390967403175"
 		},
 		"_hasShrinkwrap": false
 	},
@@ -769,7 +769,7 @@
 	{
 		"name": "@breno.polanski/dracula-theme-ark-wallet",
 		"version": "0.1.1",
-		"description": "A dark theme for ARK Desktop Wallet.",
+		"description": "A dark theme for Payvo Wallet.",
 		"main": "src/index.js",
 		"repository": { "type": "git", "url": "git+https://github.com/brenopolanski/dracula-theme-ark-wallet.git" },
 		"desktop-wallet": {
@@ -1071,7 +1071,7 @@
 	{
 		"name": "@pieface/avfc-theme",
 		"version": "0.0.3",
-		"description": "Aston Villa theme for the ARK Desktop Wallet",
+		"description": "Aston Villa theme for the Payvo Wallet",
 		"main": "src/index.js",
 		"author": { "name": "PieFacE" },
 		"license": "MIT",

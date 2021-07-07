@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Avatar } from "app/components/Avatar";
 import { Badge } from "app/components/Badge";
 import { Tooltip } from "app/components/Tooltip";

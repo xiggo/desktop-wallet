@@ -1,6 +1,6 @@
-import { DateTime } from "@arkecosystem/platform-sdk-intl";
-import { Contracts, DTO } from "@arkecosystem/platform-sdk-profiles";
-import { BigNumber } from "@arkecosystem/platform-sdk-support";
+import { DateTime } from "@payvo/sdk-intl";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { BigNumber } from "@payvo/sdk-support";
 import React from "react";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
 

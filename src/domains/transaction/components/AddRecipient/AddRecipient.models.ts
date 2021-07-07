@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
 
 export interface AddRecipientProperties {

@@ -1,5 +1,5 @@
-import { ARK } from "@arkecosystem/platform-sdk-ark";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { ARK } from "@payvo/sdk-ark";
+import { Contracts } from "@payvo/sdk-profiles";
 import { httpClient } from "app/services";
 import { createMemoryHistory } from "history";
 import React from "react";

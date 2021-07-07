@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { lowerCaseEquals } from "utils/equals";
 
 export const createProfile = (t: any, environment: Environment) => ({

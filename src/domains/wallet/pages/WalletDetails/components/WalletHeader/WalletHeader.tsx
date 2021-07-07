@@ -1,5 +1,5 @@
-import { Enums } from "@arkecosystem/platform-sdk";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Enums } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";

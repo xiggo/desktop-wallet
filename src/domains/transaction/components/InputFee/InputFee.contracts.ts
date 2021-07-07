@@ -1,5 +1,5 @@
-import { Networks } from "@arkecosystem/platform-sdk";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Networks } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 
 enum InputFeeViewType {
 	Simple,

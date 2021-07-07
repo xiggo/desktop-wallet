@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
-import { BigNumber } from "@arkecosystem/platform-sdk-support";
+import { Contracts } from "@payvo/sdk-profiles";
+import { BigNumber } from "@payvo/sdk-support";
 import { env, getDefaultProfileId } from "utils/testing-library";
 
 import { sendTransfer } from "./SendTransfer";

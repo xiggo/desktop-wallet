@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Bcrypt } from "@arkecosystem/platform-sdk-crypto";
-import { Contracts, Environment } from "@arkecosystem/platform-sdk-profiles";
+import { Bcrypt } from "@payvo/sdk-crypto";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { translations as errorTranslations } from "domains/error/i18n";
 import { translations as profileTranslations } from "domains/profile/i18n";
 import electron from "electron";

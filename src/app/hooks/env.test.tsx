@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, renderWithRouter } from "utils/testing-library";

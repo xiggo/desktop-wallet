@@ -72,7 +72,7 @@ module.exports = function () {
 			submenu: [
 				{
 					click() {
-						shell.openExternal("https://ark.io");
+						shell.openExternal("https://payvo.com");
 					},
 					label: "Learn More",
 				},

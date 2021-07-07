@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { isEmptyObject, uniq, uniqBy } from "@arkecosystem/utils";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
 import { FilterOption } from "domains/vote/components/VotesFilter";

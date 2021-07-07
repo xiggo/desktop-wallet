@@ -1,4 +1,4 @@
-import { URI } from "@arkecosystem/platform-sdk-support";
+import { URI } from "@payvo/sdk-support";
 import { useEnvironmentContext } from "app/contexts";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";

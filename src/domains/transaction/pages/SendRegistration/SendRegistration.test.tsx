@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { BIP39 } from "@arkecosystem/platform-sdk-crypto";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { BIP39 } from "@payvo/sdk-crypto";
+import { Contracts } from "@payvo/sdk-profiles";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";

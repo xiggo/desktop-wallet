@@ -36,7 +36,7 @@
 		},
 		{
 			"id": 938,
-			"text": "With the recent ARK Desktop Wallet updates for v2.9.3, we want to go over some changes and features with a new walk through video. https://youtu.be/AslAEyPZnXQ",
+			"text": "With the recent Payvo Wallet updates for v2.9.3, we want to go over some changes and features with a new walk through video. https://youtu.be/AslAEyPZnXQ",
 			"links": ["https://youtu.be/AslAEyPZnXQ"],
 			"category": "Community",
 			"author": { "title": "Co-Founder", "name": "Travis Walker", "team": "Team Ark", "coin": "ARK" },
@@ -98,8 +98,8 @@
 		},
 		{
 			"id": 507,
-			"text": "The final part of our game developer tutorial is here. This 6 part series will help you convert HTML5 games into ARK Desktop Wallet Plugins. In this part, we finalize our plugin to run in the ARK Wallet and play our game! https://blog.ark.io/launching-html5-games-in-the-ark-desktop-wallet-part-six-ad887fd2e888",
-			"links": ["https://blog.ark.io/launching-html5-games-in-the-ark-desktop-wallet-part-six-ad887fd2e888"],
+			"text": "The final part of our game developer tutorial is here. This 6 part series will help you convert HTML5 games into Payvo Wallet Plugins. In this part, we finalize our plugin to run in the ARK Wallet and play our game! https://blog.ark.io/launching-html5-games-in-the-payvo-wallet-part-six-ad887fd2e888",
+			"links": ["https://blog.ark.io/launching-html5-games-in-the-payvo-wallet-part-six-ad887fd2e888"],
 			"category": "Technical",
 			"author": { "title": "Co-Founder", "name": "Travis Walker", "team": "Team Ark", "coin": "ARK" },
 			"is_featured": false,
@@ -108,8 +108,8 @@
 		},
 		{
 			"id": 508,
-			"text": "Part 5 of our game developer tutorial is here! This series will help you convert HTML5 games into ARK Desktop Wallet Plugins. In this part, we implement prize logic and payouts utilizing multipayments. https://blog.ark.io/launching-html5-games-in-the-ark-desktop-wallet-part-five-a2cf1d32be20",
-			"links": ["https://blog.ark.io/launching-html5-games-in-the-ark-desktop-wallet-part-five-a2cf1d32be20"],
+			"text": "Part 5 of our game developer tutorial is here! This series will help you convert HTML5 games into Payvo Wallet Plugins. In this part, we implement prize logic and payouts utilizing multipayments. https://blog.ark.io/launching-html5-games-in-the-payvo-wallet-part-five-a2cf1d32be20",
+			"links": ["https://blog.ark.io/launching-html5-games-in-the-payvo-wallet-part-five-a2cf1d32be20"],
 			"category": "Technical",
 			"author": { "title": "Co-Founder", "name": "Travis Walker", "team": "Team Ark", "coin": "ARK" },
 			"is_featured": false,

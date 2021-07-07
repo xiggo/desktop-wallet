@@ -43,7 +43,7 @@ export const translations: { [key: string]: any } = {
 		},
 	},
 	MODAL_PROFILE_CREATED: {
-		DESCRIPTION_1: "If you are new to the ARK Desktop Wallet, view our tutorial to get started.",
+		DESCRIPTION_1: "If you are new to the Payvo Wallet, view our tutorial to get started.",
 		DESCRIPTION_2: "If not, you can skip the tutorial to go directly to your portfolio.",
 		SKIP_TUTORIAL: "Skip Tutorial",
 		START_TUTORIAL: "Start Tutorial",

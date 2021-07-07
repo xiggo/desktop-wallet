@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import cn from "classnames";
 import { NetworkOption } from "domains/network/components/NetworkOption";
 import { CoinNetworkExtended } from "domains/network/data";

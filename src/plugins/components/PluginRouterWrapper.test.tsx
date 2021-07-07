@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { createMemoryHistory } from "history";
 import { PluginManagerProvider } from "plugins/context";
 import { PluginManager } from "plugins/core";

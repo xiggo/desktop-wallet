@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Page, Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile, useActiveWallet } from "app/hooks/env";

@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { TFunction } from "i18next";
 import { lowerCaseEquals } from "utils/equals";
 

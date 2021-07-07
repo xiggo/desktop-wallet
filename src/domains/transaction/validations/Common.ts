@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 
 export const common = (t: any) => ({
 	fee: (balance = 0, network?: Networks.Network) => ({

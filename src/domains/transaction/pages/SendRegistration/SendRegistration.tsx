@@ -1,5 +1,5 @@
-import { Networks } from "@arkecosystem/platform-sdk";
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { Networks } from "@payvo/sdk";
+import { DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";

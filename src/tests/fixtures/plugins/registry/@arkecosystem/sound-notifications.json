@@ -615,7 +615,7 @@
 		"email": "lucio@ark.io"
 	},
 	"license": "MIT",
-	"readme": "# Sound notifications - ARK Desktop Wallet plugin\nPlay a sound when you receive new transactions \n\n## Installation\n\n 1. Drop this repository into `~/.ark-desktop/plugins/`.\n 2. Start the desktop wallet.\n 3. Enable the plugin on the plugin section.\n\n## Credits\n\n- [Lúcio Rubens](https://github.com/luciorubeens)\n- [All Contributors](../../contributors)\n\n## License\n\n[MIT](LICENSE) © [Ark Ecosystem](https://ark.io/)\n",
+	"readme": "# Sound notifications - Payvo Wallet plugin\nPlay a sound when you receive new transactions \n\n## Installation\n\n 1. Drop this repository into `~/.ark-desktop/plugins/`.\n 2. Start the desktop wallet.\n 3. Enable the plugin on the plugin section.\n\n## Credits\n\n- [Lúcio Rubens](https://github.com/luciorubeens)\n- [All Contributors](../../contributors)\n\n## License\n\n[MIT](LICENSE) © [Ark Ecosystem](https://ark.io/)\n",
 	"readmeFilename": "README.md",
 	"homepage": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications#readme",
 	"bugs": {

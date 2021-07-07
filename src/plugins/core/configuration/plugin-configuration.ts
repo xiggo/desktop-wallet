@@ -1,4 +1,4 @@
-import { Contracts, Repositories } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts, Repositories } from "@payvo/sdk-profiles";
 import { intersection, prettyBytes, startCase, uniq } from "@arkecosystem/utils";
 import du from "du";
 import parseAuthor from "parse-author";

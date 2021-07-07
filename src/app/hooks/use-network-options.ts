@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { useEnvironmentContext } from "app/contexts";
 import { useCallback, useMemo } from "react";
 

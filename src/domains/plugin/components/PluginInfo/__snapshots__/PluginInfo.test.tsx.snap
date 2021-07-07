@@ -57,7 +57,7 @@ exports[`PluginInfo should not show the view permissions button with text less t
         <div
           class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
         >
-          The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+          The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
         </div>
       </div>
     </div>
@@ -128,7 +128,7 @@ exports[`PluginInfo should open and close the plugin permissions modal 1`] = `
         <div
           class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
         >
-          The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+          The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
         </div>
       </div>
     </div>
@@ -215,7 +215,7 @@ exports[`PluginInfo should render properly 1`] = `
                 alt="Screenshot"
                 class="object-contain overflow-hidden w-full max-h-44 rounded-lg bg-theme-secondary-200"
                 data-testid="plugin-info__screenshot"
-                src="https://ark.io/screenshot.png"
+                src="https://payvo.com/screenshot.png"
               />
             </div>
           </div>
@@ -254,7 +254,7 @@ exports[`PluginInfo should render properly 1`] = `
         <div
           class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
         >
-          The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+          The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
         </div>
       </div>
     </div>
@@ -315,7 +315,7 @@ exports[`PluginInfo should render with minimum version 1`] = `
         <div
           class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
         >
-          The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+          The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
         </div>
       </div>
     </div>
@@ -369,7 +369,7 @@ exports[`PluginInfo should render without permissions 1`] = `
         <div
           class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
         >
-          The availability of this Plugin in the ARK Desktop Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+          The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
         </div>
       </div>
     </div>

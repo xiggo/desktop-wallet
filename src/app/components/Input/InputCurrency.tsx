@@ -1,4 +1,4 @@
-import { Currency } from "@arkecosystem/platform-sdk-intl";
+import { Currency } from "@payvo/sdk-intl";
 import React, { useEffect, useRef, useState } from "react";
 
 import { Input } from "./Input";

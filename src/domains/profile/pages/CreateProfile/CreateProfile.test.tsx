@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { ARK } from "@arkecosystem/platform-sdk-ark";
+import { ARK } from "@payvo/sdk-ark";
 import { EnvironmentProvider } from "app/contexts";
 import { httpClient } from "app/services";
 import electron from "electron";

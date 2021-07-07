@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Enums } from "@arkecosystem/platform-sdk";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Enums } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@arkecosystem/platform-sdk-profiles/distribution/read-only-wallet";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { toasts } from "app/services";
 import { translations as walletTranslations } from "domains/wallet/i18n";

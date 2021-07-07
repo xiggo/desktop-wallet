@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { NavigationBar } from "app/components/NavigationBar";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -55,7 +55,7 @@ export const Page = ({ navbarVariant, title, isBackDisabled, profile, sidebar, c
 			icon: "Redirect",
 			isExternal: true,
 			label: t("COMMON.SUPPORT"),
-			mountPath: () => "https://ark.io/contact",
+			mountPath: () => "https://payvo.com/contact",
 			value: "support",
 		},
 		{

@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 import { env, getDefaultProfileId } from "utils/testing-library";

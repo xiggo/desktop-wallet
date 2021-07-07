@@ -1,5 +1,5 @@
-import { Contracts } from "@arkecosystem/platform-sdk";
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk";
+import { DTO } from "@payvo/sdk-profiles";
 import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";

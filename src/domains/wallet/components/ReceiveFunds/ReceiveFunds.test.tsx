@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import React from "react";
 import { act, env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
 

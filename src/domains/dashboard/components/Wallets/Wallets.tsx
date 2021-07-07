@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Section } from "app/components/Layout";
 import { useActiveProfile } from "app/hooks";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";

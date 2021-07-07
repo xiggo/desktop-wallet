@@ -45,7 +45,7 @@
 				"name": "@dated/delegate-calculator-plugin",
 				"scope": "dated",
 				"version": "1.0.4",
-				"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the ARK Desktop Wallet",
+				"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the Payvo Wallet",
 				"keywords": ["utility", "rewards", "staking", "delegates", "@arkecosystem", "desktop-wallet", "plugin"],
 				"date": "2020-03-26T16:59:19.719Z",
 				"links": {

@@ -1,12 +1,12 @@
-# ARK Desktop Wallet
+# Payvo Wallet
 
 ![Ark Desktop Wallet](./banner.png)
 
-[![Build Status](https://badgen.now.sh/github/status/ArkEcosystem/desktop-wallet)](https://github.com/ArkEcosystem/desktop-wallet/actions?query=branch%3Adevelop)
-[![Latest Version](https://badgen.now.sh/github/release/ArkEcosystem/desktop-wallet)](https://github.com/ArkEcosystem/desktop-wallet/releases)
+[![Build Status](https://badgen.now.sh/github/status/PayvoHQ/wallet)](https://github.com/PayvoHQ/wallet/actions?query=branch%3Adevelop)
+[![Latest Version](https://badgen.now.sh/github/release/PayvoHQ/wallet)](https://github.com/PayvoHQ/wallet/releases)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
-> Lead Maintainer: [Lúcio Rubens](https://github.com/luciorubeens)
+> Lead Maintainer: [Brian Faust](https://github.com/faustbrian)
 
 ## Download
 
@@ -29,7 +29,7 @@ pamac build ark-desktop
 Install via [Homebrew](https://brew.sh/):
 
 ```shell
-brew install --cask ark-desktop-wallet
+brew install --cask payvo-wallet
 ```
 
 ## Translations
@@ -123,4 +123,4 @@ This project exists thanks to all the people who [contribute](../../contributors
 
 ## License
 
-[MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
+[MIT](LICENSE) © [Payvo](https://payvo.com)

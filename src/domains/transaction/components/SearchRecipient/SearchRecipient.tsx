@@ -1,5 +1,5 @@
-import { Networks } from "@arkecosystem/platform-sdk";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Networks } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Address } from "app/components/Address";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";

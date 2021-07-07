@@ -7,7 +7,7 @@ describe("Plugin Updates Confirmation", () => {
 	const plugins = [
 		{
 			isOfficial: true,
-			logo: "https://ark.io/logo.png",
+			logo: "https://payvo.com/logo.png",
 			minimumVersion: "3.0.5",
 			title: "ARK Explorer",
 		},

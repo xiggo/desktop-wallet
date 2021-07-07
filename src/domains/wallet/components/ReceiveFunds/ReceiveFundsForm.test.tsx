@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { Form } from "app/components/Form";
 import React from "react";

@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { useFormField } from "app/components/Form/useFormField";
 import { Input } from "app/components/Input";
 import cn from "classnames";

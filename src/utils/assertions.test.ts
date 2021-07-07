@@ -1,8 +1,8 @@
 /* eslint-disable unicorn/no-null */
 
-import { Coins, Networks } from "@arkecosystem/platform-sdk";
-import { Profile } from "@arkecosystem/platform-sdk-profiles";
-import { Wallet } from "@arkecosystem/platform-sdk-profiles/distribution/wallet";
+import { Coins, Networks } from "@payvo/sdk";
+import { Profile } from "@payvo/sdk-profiles";
+import { Wallet } from "@payvo/sdk-profiles/distribution/wallet";
 
 import { assertCoin, assertNetwork, assertNumber, assertProfile, assertString, assertWallet } from "./assertions";
 

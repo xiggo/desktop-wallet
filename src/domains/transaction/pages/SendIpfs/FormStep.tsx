@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { InputDefault } from "app/components/Input";

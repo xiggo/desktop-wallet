@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { act } from "react-dom/test-utils";
 import { env, fireEvent, getDefaultProfileId, render } from "testing-library";

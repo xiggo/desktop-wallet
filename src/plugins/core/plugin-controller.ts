@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 
 import { PluginAPI } from "../types";
 import { PluginConfigurationData } from "./configuration";

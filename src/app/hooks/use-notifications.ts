@@ -1,5 +1,5 @@
-import { Contracts } from "@arkecosystem/platform-sdk";
-import { Contracts as ProfileContracts, Environment } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk";
+import { Contracts as ProfileContracts, Environment } from "@payvo/sdk-profiles";
 import { sortByDesc } from "@arkecosystem/utils";
 import { useEnvironmentContext } from "app/contexts";
 import { useMemo } from "react";

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@arkecosystem/platform-sdk";
-import { BIP39 } from "@arkecosystem/platform-sdk-crypto";
-import { Contracts as ProfilesContracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk";
+import { BIP39 } from "@payvo/sdk-crypto";
+import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { within } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import { Form } from "app/components/Form";

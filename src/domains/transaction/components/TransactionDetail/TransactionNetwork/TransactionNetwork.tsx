@@ -1,4 +1,4 @@
-import { Networks } from "@arkecosystem/platform-sdk";
+import { Networks } from "@payvo/sdk";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import { getNetworkExtendedData } from "domains/network/helpers";
 import React from "react";

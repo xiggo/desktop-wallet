@@ -1,4 +1,4 @@
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { Table } from "app/components/Table";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";

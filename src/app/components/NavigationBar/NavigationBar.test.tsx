@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import * as useScrollHook from "app/hooks/use-scroll";
 import { createMemoryHistory } from "history";
 import React from "react";

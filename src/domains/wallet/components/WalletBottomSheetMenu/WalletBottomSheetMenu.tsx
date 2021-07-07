@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Collapse, CollapseToggleButton } from "app/components/Collapse";
 import { Icon } from "app/components/Icon";
 import { Table } from "app/components/Table";

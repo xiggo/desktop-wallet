@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Checkbox } from "app/components/Checkbox";
 import { Clipboard } from "app/components/Clipboard";
 import { Input, InputCurrency } from "app/components/Input";

@@ -1,4 +1,4 @@
-import { DTO } from "@arkecosystem/platform-sdk-profiles";
+import { DTO } from "@payvo/sdk-profiles";
 import { TransactionCompactRow } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionCompactRow";
 import { TransactionCompactRowSkeleton } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionCompactRowSkeleton";
 import React, { useEffect, useState } from "react";

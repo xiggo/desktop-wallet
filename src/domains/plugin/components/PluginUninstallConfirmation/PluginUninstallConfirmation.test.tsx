@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { ipcRenderer } from "electron";
 import { PluginController, PluginManager, PluginManagerProvider } from "plugins";
 import React from "react";

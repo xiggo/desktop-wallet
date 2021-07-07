@@ -1,5 +1,5 @@
 export const translations: { [key: string]: any } = {
-	BRAND: "ARK Desktop Wallet",
+	BRAND: "Payvo Wallet",
 	COPYRIGHT: "© ARK.io",
 	LOADING: "Initializing...",
 	PRODUCT: "An ARK.io Product",

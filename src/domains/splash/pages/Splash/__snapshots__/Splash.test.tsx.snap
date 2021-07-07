@@ -54,7 +54,7 @@ exports[`Splash should  render  dark theme 1`] = `
             <h1
               class="text-4xl font-extrabold"
             >
-              ARK Desktop Wallet
+              Payvo Wallet
             </h1>
             <p
               class="animate-pulse text-theme-secondary-text"
@@ -196,7 +196,7 @@ exports[`Splash should  render  light theme 1`] = `
             <h1
               class="text-4xl font-extrabold"
             >
-              ARK Desktop Wallet
+              Payvo Wallet
             </h1>
             <p
               class="animate-pulse text-theme-secondary-text"
@@ -338,7 +338,7 @@ exports[`Splash should render without year 1`] = `
             <h1
               class="text-4xl font-extrabold"
             >
-              ARK Desktop Wallet
+              Payvo Wallet
             </h1>
             <p
               class="animate-pulse text-theme-secondary-text"

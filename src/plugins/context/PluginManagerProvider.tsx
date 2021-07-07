@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { semver, uniqBy } from "@arkecosystem/utils";
 import { useEnvironmentContext } from "app/contexts";
 import { httpClient, toasts } from "app/services";
@@ -64,7 +64,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		const name = pluginConfig.name();
 		const version = pluginConfig.version();
 
-		const url = `https://ark.io/contact?subject=desktop_wallet_plugin_report&plugin_id=${name}&plugin_version=${version}`;
+		const url = `https://payvo.com/contact?subject=desktop_wallet_plugin_report&plugin_id=${name}&plugin_version=${version}`;
 
 		try {
 			openExternal(url);

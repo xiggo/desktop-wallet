@@ -40,12 +40,12 @@ exports[`Notifications should emit transactionClick event 1`] = `
                   <span
                     class="font-bold text-md text-theme-secondary-600"
                   >
-                    ARK Desktop Wallet
+                    Payvo Wallet
                   </span>
                   <span
                     class="text-md text-theme-secondary-600"
                   >
-                     
+
                     - update v2.5.6
                   </span>
                 </div>
@@ -79,7 +79,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                   <span
                     class="text-md text-theme-secondary-600"
                   >
-                     
+
                     - update v4
                   </span>
                 </div>
@@ -340,12 +340,12 @@ exports[`Notifications should render with plugins 1`] = `
                   <span
                     class="font-bold text-md text-theme-secondary-600"
                   >
-                    ARK Desktop Wallet
+                    Payvo Wallet
                   </span>
                   <span
                     class="text-md text-theme-secondary-600"
                   >
-                     
+
                     - update v2.5.6
                   </span>
                 </div>
@@ -379,7 +379,7 @@ exports[`Notifications should render with plugins 1`] = `
                   <span
                     class="text-md text-theme-secondary-600"
                   >
-                     
+
                     - update v4
                   </span>
                 </div>
@@ -614,12 +614,12 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                   <span
                     class="font-bold text-md text-theme-secondary-600"
                   >
-                    ARK Desktop Wallet
+                    Payvo Wallet
                   </span>
                   <span
                     class="text-md text-theme-secondary-600"
                   >
-                     
+
                     - update v2.5.6
                   </span>
                 </div>
@@ -653,7 +653,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                   <span
                     class="text-md text-theme-secondary-600"
                   >
-                     
+
                     - update v4
                   </span>
                 </div>

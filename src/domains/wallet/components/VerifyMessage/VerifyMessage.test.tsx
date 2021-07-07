@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "testing-library";
 import { MNEMONICS } from "utils/testing-library";

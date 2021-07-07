@@ -1,4 +1,4 @@
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { Section } from "app/components/Layout";
 import { LineChart } from "app/components/LineChart";
 import { PercentageBar } from "app/components/PercentageBar";

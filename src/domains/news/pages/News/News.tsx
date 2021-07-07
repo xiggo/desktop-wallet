@@ -1,5 +1,5 @@
-import { Blockfolio, BlockfolioResponse, BlockfolioSignal } from "@arkecosystem/platform-sdk-news";
-import { Contracts } from "@arkecosystem/platform-sdk-profiles";
+import { Blockfolio, BlockfolioResponse, BlockfolioSignal } from "@payvo/sdk-news";
+import { Contracts } from "@payvo/sdk-profiles";
 import { SvgCollection } from "app/assets/svg";
 import { EmptyResults } from "app/components/EmptyResults";
 import { Header } from "app/components/Header";

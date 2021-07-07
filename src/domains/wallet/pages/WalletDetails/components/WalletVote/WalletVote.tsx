@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";

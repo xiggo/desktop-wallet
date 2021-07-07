@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@arkecosystem/platform-sdk-profiles";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { Header } from "app/components/Header";
 import { ReadableFile } from "app/hooks/use-files";
 import { FilePreview } from "domains/profile/components/FilePreview";

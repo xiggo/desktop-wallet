@@ -1,5 +1,5 @@
-import { ARK } from "@arkecosystem/platform-sdk-ark";
-import { Contracts, Environment } from "@arkecosystem/platform-sdk-profiles";
+import { ARK } from "@payvo/sdk-ark";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 // @ts-ignore
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { render } from "@testing-library/react";
