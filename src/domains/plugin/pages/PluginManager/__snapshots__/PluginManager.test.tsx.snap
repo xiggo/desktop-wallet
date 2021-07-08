@@ -34,12 +34,12 @@ exports[`PluginManager should cancel install plugin 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -1223,12 +1223,12 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -2163,12 +2163,12 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -3103,12 +3103,12 @@ exports[`PluginManager should render 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -4581,12 +4581,12 @@ exports[`PluginManager should search for plugin 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -5253,12 +5253,12 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -6265,12 +6265,12 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -7277,12 +7277,12 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -8755,12 +8755,12 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>
@@ -9767,12 +9767,12 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
               >
                 <svg
-                  width="44"
+                  height="28"
                 >
-                  ark-logo.svg
+                  payvo-logo.svg
                 </svg>
               </div>
             </div>

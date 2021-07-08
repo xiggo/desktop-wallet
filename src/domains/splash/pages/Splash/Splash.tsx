@@ -11,12 +11,10 @@ import { shouldUseDarkColors } from "utils/electron-utils";
 
 import { version } from "../../../../../package.json";
 
-const { ARKLogo } = images.common;
+const { PayvoLogo } = images.common;
 
 const LogoContainer = styled.div`
-	${tw`flex items-center justify-center mr-2 rounded-sm text-theme-background bg-theme-secondary-500 dark:bg-theme-secondary-700`};
-	width: 18px;
-	height: 18px;
+	${tw`flex items-center justify-center w-5 h-5 mr-2 pl-px rounded text-theme-background bg-theme-secondary-500 dark:bg-theme-secondary-700`};
 `;
 
 export const Splash = ({ year }: any) => {
@@ -66,7 +64,7 @@ export const Splash = ({ year }: any) => {
 					<Divider type="vertical" />
 
 					<LogoContainer>
-						<ARKLogo width={18} />
+						<PayvoLogo height={12} />
 					</LogoContainer>
 
 					<div>{t("SPLASH.PRODUCT")}</div>

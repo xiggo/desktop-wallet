@@ -1,5 +1,5 @@
 [class*="text-ark-"] {
-	@apply text-logo;
+	@apply text-theme-success-600;
 }
 
 [class*="border-ark-"] {

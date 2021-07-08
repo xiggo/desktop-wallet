@@ -35,12 +35,12 @@ exports[`PluginDetails should render properly 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -573,12 +573,12 @@ exports[`PluginDetails should render properly for remote package 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -1091,12 +1091,12 @@ exports[`PluginDetails should report plugin 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -1629,12 +1629,12 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -2188,12 +2188,12 @@ exports[`PluginDetails should update package 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>

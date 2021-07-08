@@ -5,7 +5,6 @@ import { profile } from "domains/profile/images";
 import { transaction } from "domains/transaction/images";
 import { wallet } from "domains/wallet/images";
 
-import { ReactComponent as ARKLogo } from "./ark-logo.svg";
 import { ReactComponent as DeleteBannerDarkBlue } from "./delete-banner-dark-blue.svg";
 import { ReactComponent as DeleteBannerDarkGreen } from "./delete-banner-dark-green.svg";
 import { ReactComponent as DeleteBannerLightBlue } from "./delete-banner-light-blue.svg";
@@ -27,6 +26,7 @@ import { ReactComponent as NoResultsDarkBlue } from "./no-results-dark-blue.svg"
 import { ReactComponent as NoResultsDarkGreen } from "./no-results-dark-green.svg";
 import { ReactComponent as NoResultsLightBlue } from "./no-results-light-blue.svg";
 import { ReactComponent as NoResultsLightGreen } from "./no-results-light-green.svg";
+import { ReactComponent as PayvoLogo } from "./payvo-logo.svg";
 import { ReactComponent as SuccessBannerDarkBlue } from "./success-banner-dark-blue.svg";
 import { ReactComponent as SuccessBannerDarkGreen } from "./success-banner-dark-green.svg";
 import { ReactComponent as SuccessBannerLightBlue } from "./success-banner-light-blue.svg";
@@ -42,7 +42,6 @@ import { ReactComponent as WelcomeBannerLightGreen } from "./welcome-banner-ligh
 
 export const images = {
 	common: {
-		ARKLogo,
 		DeleteBannerDarkBlue,
 		DeleteBannerDarkGreen,
 		DeleteBannerLightBlue,
@@ -64,6 +63,7 @@ export const images = {
 		NoResultsDarkGreen,
 		NoResultsLightBlue,
 		NoResultsLightGreen,
+		PayvoLogo,
 		SuccessBannerDarkBlue,
 		SuccessBannerDarkGreen,
 		SuccessBannerLightBlue,

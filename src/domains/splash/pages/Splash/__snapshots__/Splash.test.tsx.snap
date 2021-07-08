@@ -19,12 +19,12 @@ exports[`Splash should  render  dark theme 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -116,12 +116,12 @@ exports[`Splash should  render  dark theme 1`] = `
               type="vertical"
             />
             <div
-              class="Splash__LogoContainer-sc-1f3o2v4-0 kLdMGh"
+              class="Splash__LogoContainer-sc-1f3o2v4-0 bWjFJC"
             >
               <svg
-                width="18"
+                height="12"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
             <div>
@@ -161,12 +161,12 @@ exports[`Splash should  render  light theme 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -258,12 +258,12 @@ exports[`Splash should  render  light theme 1`] = `
               type="vertical"
             />
             <div
-              class="Splash__LogoContainer-sc-1f3o2v4-0 kLdMGh"
+              class="Splash__LogoContainer-sc-1f3o2v4-0 bWjFJC"
             >
               <svg
-                width="18"
+                height="12"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
             <div>
@@ -303,12 +303,12 @@ exports[`Splash should render without year 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -400,12 +400,12 @@ exports[`Splash should render without year 1`] = `
               type="vertical"
             />
             <div
-              class="Splash__LogoContainer-sc-1f3o2v4-0 kLdMGh"
+              class="Splash__LogoContainer-sc-1f3o2v4-0 bWjFJC"
             >
               <svg
-                width="18"
+                height="12"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
             <div>

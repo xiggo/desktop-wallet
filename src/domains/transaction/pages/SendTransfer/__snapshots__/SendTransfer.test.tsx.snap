@@ -32,12 +32,12 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -943,12 +943,12 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -1911,12 +1911,12 @@ exports[`SendTransfer should render form and use location state 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -2928,12 +2928,12 @@ exports[`SendTransfer should render form and use location state without memo 1`]
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -5581,12 +5581,12 @@ exports[`SendTransfer should render network selection without selected wallet 1`
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -6811,12 +6811,12 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -7831,12 +7831,12 @@ exports[`SendTransfer should select cryptoasset 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -8309,12 +8309,12 @@ exports[`SendTransfer should send a single transfer 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -8978,12 +8978,12 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -9647,12 +9647,12 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -10625,12 +10625,12 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -11294,12 +11294,12 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -11963,12 +11963,12 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -12632,12 +12632,12 @@ exports[`SendTransfer should show error step and go back 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>

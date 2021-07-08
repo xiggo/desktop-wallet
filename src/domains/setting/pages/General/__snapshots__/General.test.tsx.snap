@@ -32,12 +32,12 @@ exports[`General Settings should disable submit button when profile is not resto
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -1583,12 +1583,12 @@ exports[`General Settings should not update the uploaded avatar when removing fo
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -3147,12 +3147,12 @@ exports[`General Settings should render 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -4697,12 +4697,12 @@ exports[`General Settings should update profile 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -6248,12 +6248,12 @@ exports[`General Settings should update the avatar when removing focus from name
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -7798,12 +7798,12 @@ exports[`General Settings should update the avatar when removing focus from name
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>

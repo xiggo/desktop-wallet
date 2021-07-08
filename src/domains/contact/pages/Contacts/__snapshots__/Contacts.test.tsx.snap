@@ -32,12 +32,12 @@ exports[`Contacts should render with contacts 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>
@@ -1237,12 +1237,12 @@ exports[`Contacts should render without contacts 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 ebdOwe"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
             >
               <svg
-                width="44"
+                height="28"
               >
-                ark-logo.svg
+                payvo-logo.svg
               </svg>
             </div>
           </div>

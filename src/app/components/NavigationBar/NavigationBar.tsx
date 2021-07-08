@@ -23,7 +23,7 @@ import { BackButton } from "./components/BackButton";
 import { Balance } from "./components/Balance";
 import { defaultStyle } from "./NavigationBar.styles";
 
-const { ARKLogo } = images.common;
+const { PayvoLogo } = images.common;
 
 interface MenuItem {
 	title: string;
@@ -100,7 +100,7 @@ const UserInfo = ({ onUserAction, avatarImage, userActions, userInitials }: User
 );
 
 const LogoContainer = styled.div`
-	${tw`flex items-center justify-center my-auto mr-4 text-white rounded w-11 h-11 bg-logo`};
+	${tw`flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600`};
 `;
 
 const NavigationButtonWrapper = styled.div`
@@ -199,7 +199,7 @@ const NavigationBar = ({
 				<div className={`flex flex-1 px-8 ${variant !== "full" ? "ml-12" : ""}`}>
 					<div className="flex items-center my-auto">
 						<LogoContainer>
-							<ARKLogo width={44} />
+							<PayvoLogo height={28} />
 						</LogoContainer>
 
 						{title && <span className="text-2xl font-bold">{title}</span>}

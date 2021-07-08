@@ -14,7 +14,6 @@ module.exports = {
 			black: "#121213",
 			"black-rgba": "rgba(18,18,19, var(--tw-bg-opacity))",
 			white: "#fff",
-			logo: "#c9292c",
 			transparent: "transparent",
 			current: "currentColor",
 
