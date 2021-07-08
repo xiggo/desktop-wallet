@@ -103,38 +103,47 @@ exports[`SuccessStep should render 4th step 1`] = `
       </div>
     </div>
     <div
-      class="pt-6"
+      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 fGJHFM no-ligatures"
+      data-testid="TransactionDetail"
     >
-      <fieldset
-        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+      <div
+        class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
-        <label
-          class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
-          data-testid="FormLabel"
-          for="name"
-        >
-          Wallet Name
-        </label>
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
+          class="font-semibold"
         >
-          …
-        </div>
-        <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
-        >
-          <div
-            class="relative flex flex-1 h-full"
+          <fieldset
+            class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
           >
-            <input
-              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
-              data-testid="CreateWallet__wallet-name"
-              name="name"
-              value="ARK Wallet 1"
-            />
-          </div>
+            <label
+              class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
+              data-testid="FormLabel"
+              for="name"
+            >
+              Wallet Name
+            </label>
+            <div
+              class="fixed invisible w-auto whitespace-nowrap"
+            >
+              …
+            </div>
+            <div
+              class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+            >
+              <div
+                class="relative flex flex-1 h-full"
+              >
+                <input
+                  class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                  data-testid="CreateWallet__wallet-name"
+                  name="name"
+                  value="ARK Wallet 1"
+                />
+              </div>
+            </div>
+          </fieldset>
         </div>
-      </fieldset>
+      </div>
     </div>
   </section>
 </DocumentFragment>

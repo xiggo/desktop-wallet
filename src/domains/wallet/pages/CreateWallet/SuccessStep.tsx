@@ -45,7 +45,7 @@ export const SuccessStep = ({ profile }: { profile: Contracts.IProfile }) => {
 				<Address address={wallet.address()} />
 			</TransactionDetail>
 
-			<div className="pt-6">
+			<TransactionDetail paddingPosition="top">
 				<FormField name="name">
 					<FormLabel label={t("WALLETS.WALLET_NAME")} />
 					<InputDefault
@@ -54,7 +54,7 @@ export const SuccessStep = ({ profile }: { profile: Contracts.IProfile }) => {
 						defaultValue={wallet.alias()}
 					/>
 				</FormField>
-			</div>
+			</TransactionDetail>
 		</section>
 	);
 };

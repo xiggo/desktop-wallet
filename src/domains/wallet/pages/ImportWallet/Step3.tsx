@@ -38,30 +38,29 @@ export const ThirdStep = ({
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.PROCESS_COMPLETED_STEP.SUBTITLE")}
 			/>
 
-			<div>
-				<TransactionNetwork network={network} border={false} />
+			<TransactionNetwork network={network} border={false} />
 
-				<TransactionDetail
-					label={t("COMMON.ADDRESS")}
-					borderPosition="bottom"
-					extra={<Avatar size="lg" address={importedWallet.address()} />}
-				>
-					<Address address={importedWallet.address()} />
-				</TransactionDetail>
-			</div>
+			<TransactionDetail
+				label={t("COMMON.ADDRESS")}
+				extra={<Avatar size="lg" address={importedWallet.address()} />}
+			>
+				<Address address={importedWallet.address()} />
+			</TransactionDetail>
 
-			<TransactionDetail label={t("COMMON.BALANCE")} borderPosition="bottom" paddingPosition="bottom">
+			<TransactionDetail label={t("COMMON.BALANCE")}>
 				<AmountCrypto value={importedWallet.balance()} ticker={network.ticker()} />
 			</TransactionDetail>
 
-			<FormField name="name">
-				<FormLabel label={t("WALLETS.WALLET_NAME")} />
-				<InputDefault
-					data-testid="ImportWallet__name-input"
-					defaultValue={importedWallet.alias()}
-					ref={register(validation)}
-				/>
-			</FormField>
+			<TransactionDetail paddingPosition="top">
+				<FormField name="name">
+					<FormLabel label={t("WALLETS.WALLET_NAME")} />
+					<InputDefault
+						data-testid="ImportWallet__name-input"
+						defaultValue={importedWallet.alias()}
+						ref={register(validation)}
+					/>
+				</FormField>
+			</TransactionDetail>
 		</section>
 	);
 };
