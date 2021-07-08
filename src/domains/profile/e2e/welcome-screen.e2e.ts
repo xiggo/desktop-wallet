@@ -9,7 +9,7 @@ const translations = buildTranslations();
 createFixture("Welcome Screen routing");
 
 test("should load profiles welcome page", async (t) => {
-	await t.expect(Selector("span").withText(translations.COMMON.DESKTOP_WALLET).exists).ok();
+	await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
 });
 
 test("should return to welcome page when application is idle", async (t) => {

@@ -20,5 +20,5 @@ test("should navigate to create profile and back to welcome screen", async (t) =
 	// Navigate back
 	await t.click(Selector("button").withExactText(translations.COMMON.BACK));
 
-	await t.expect(Selector("span").withText(translations.COMMON.DESKTOP_WALLET).exists).ok();
+	await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
 });

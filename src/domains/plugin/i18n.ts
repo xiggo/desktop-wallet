@@ -25,7 +25,7 @@ export const translations: { [key: string]: any } = {
 		TITLE: "Disclaimer",
 	},
 	MINIMUM_VERSION_NOT_SATISFIED:
-		"In order to update this plugin please update Desktop Wallet to v{{minimumVersion}}+",
+		"In order to update this plugin please update the Payvo Wallet to v{{minimumVersion}}+",
 
 	MODAL_INSTALL_PLUGIN: {
 		DESCRIPTION: "This plugin needs the following permissions:",
@@ -48,7 +48,7 @@ export const translations: { [key: string]: any } = {
 
 	MODAL_UPDATES_CONFIRMATION: {
 		DESCRIPTION:
-			"Some of the plugins cannot be updated as they require a newer version of the Desktop Wallet. Pressing Continue will update plugins that can be updated.",
+			"Some of the plugins cannot be updated as they require a newer version of the Payvo Wallet. Pressing Continue will update plugins that can be updated.",
 		TITLE: "Plugin Updates",
 	},
 
@@ -78,17 +78,17 @@ export const translations: { [key: string]: any } = {
 
 	PERMISSIONS: {
 		// Legacy permissions
-		ALERTS: "Allows access to the Desktop Wallet alerts",
-		AUDIO: "Allows access to play audio from within the Desktop Wallet",
+		ALERTS: "Allows access to the Payvo Wallet alerts",
+		AUDIO: "Allows access to play audio from within the Payvo Wallet",
 		AVATARS: "Plugin contains custom avatars",
 		COMPONENTS: "Allows loading custom components",
 		DIALOGS: "Allows using file dialogs",
-		EVENTS: "Allows access to the Desktop Wallet events",
+		EVENTS: "Allows access to the Payvo Wallet events",
 		FILESYSTEM: "Allows using file dialogs",
 		HTTP: "Allows performing external web requests",
-		LANGUAGES: "Allows loading additional languages for the Desktop Wallet",
+		LANGUAGES: "Allows loading additional languages for the Payvo Wallet",
 		LAUNCH: "Allows to register a custom view",
-		MENU_ITEMS: "Allows adding custom menu items to the Desktop Wallet sidebar",
+		MENU_ITEMS: "Allows adding custom menu items to the Payvo Wallet sidebar",
 		MESSAGING: "Allows WebFrames access to a one-way messaging system",
 		PEER_ALL: "Allows access to the peer discovery",
 		PEER_CURRENT: "Allows access to the currently connected peer",
@@ -96,13 +96,13 @@ export const translations: { [key: string]: any } = {
 		PROFILE_ALL: "Allows access to all available profiles",
 		PROFILE_CURRENT: "Allows access to the currently active profile",
 		PUBLIC: "Allows navigation to wallet routes and provides access to the Font Awesome icon set",
-		ROUTES: "Allows loading additional routes into the Desktop Wallet",
-		STORAGE: "Allows storing data within the Desktop Wallet, using key-value pairs",
-		STORE: "Allows storing data within the Desktop Wallet, using key-value pairs",
-		THEME: "Allows loading additional custom themes for the Desktop Wallet",
-		THEMES: "Allows loading additional custom themes for the Desktop Wallet",
+		ROUTES: "Allows loading additional routes into the Payvo Wallet",
+		STORAGE: "Allows storing data within the Payvo Wallet, using key-value pairs",
+		STORE: "Allows storing data within the Payvo Wallet, using key-value pairs",
+		THEME: "Allows loading additional custom themes for the Payvo Wallet",
+		THEMES: "Allows loading additional custom themes for the Payvo Wallet",
 		TIMERS: "Allows using timeouts and intervals",
-		UI_COMPONENTS: "Allows access to the standard Desktop Wallet components used throughout",
+		UI_COMPONENTS: "Allows access to the standard Payvo Wallet components used throughout",
 		UTILS: "Allows using utilities such as the BigNumber type and dayjs",
 		WALLET_TABS: "Allows showing an additional tab/page on the Wallet screen",
 		WEBFRAME: "Allows showing remote URL pages within a frame",
@@ -111,13 +111,13 @@ export const translations: { [key: string]: any } = {
 
 	PLUGIN_INFO: {
 		ABOUT: "About",
-		DESKTOP_WALLET_VERSION: "Desktop Wallet Version",
 		DISCLAIMER:
 			"The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.",
 		PERMISSIONS: "Permissions",
 		REPORT: "Report Plugin",
 		REQUIREMENTS: "Requirements",
 		SCREENSHOTS: "Screenshots",
+		WALLET_VERSION: "Payvo Wallet Version",
 	},
 
 	REQUIRED_VERSION: "Required Version",

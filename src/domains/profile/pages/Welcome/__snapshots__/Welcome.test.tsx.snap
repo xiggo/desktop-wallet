@@ -30,7 +30,7 @@ exports[`Welcome should change route to create profile 1`] = `
             <span
               class="text-2xl font-bold"
             >
-              Desktop Wallet
+              Payvo Wallet
             </span>
           </div>
         </div>
@@ -249,7 +249,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
             <span
               class="text-2xl font-bold"
             >
-              Desktop Wallet
+              Payvo Wallet
             </span>
           </div>
         </div>
@@ -536,7 +536,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
             <span
               class="text-2xl font-bold"
             >
-              Desktop Wallet
+              Payvo Wallet
             </span>
           </div>
         </div>
@@ -823,7 +823,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
             <span
               class="text-2xl font-bold"
             >
-              Desktop Wallet
+              Payvo Wallet
             </span>
           </div>
         </div>
@@ -1110,7 +1110,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
             <span
               class="text-2xl font-bold"
             >
-              Desktop Wallet
+              Payvo Wallet
             </span>
           </div>
         </div>
@@ -1397,7 +1397,7 @@ exports[`Welcome should render with profiles 1`] = `
             <span
               class="text-2xl font-bold"
             >
-              Desktop Wallet
+              Payvo Wallet
             </span>
           </div>
         </div>
@@ -1684,7 +1684,7 @@ exports[`Welcome should render without profiles 1`] = `
             <span
               class="text-2xl font-bold"
             >
-              Desktop Wallet
+              Payvo Wallet
             </span>
           </div>
         </div>

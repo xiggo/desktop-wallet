@@ -60,7 +60,7 @@ export const PluginInfo = ({ description, permissions, images, minimumVersion }:
 					{minimumVersion && (
 						<p className="mt-3 text-theme-secondary-600" data-testid="plugin-info__mininum-version">
 							<span>
-								{t("PLUGINS.PLUGIN_INFO.DESKTOP_WALLET_VERSION")} v{minimumVersion}+
+								{t("PLUGINS.PLUGIN_INFO.WALLET_VERSION")} v{minimumVersion}+
 							</span>
 						</p>
 					)}

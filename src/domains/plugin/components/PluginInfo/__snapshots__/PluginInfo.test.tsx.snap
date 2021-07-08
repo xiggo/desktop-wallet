@@ -21,7 +21,7 @@ exports[`PluginInfo should not show the view permissions button with text less t
           class="TruncateEnd__Wrapper-sc-1hhdnni-0"
           data-testid="TruncateEnd"
         >
-          Allows access to the Desktop Wallet events
+          Allows access to the Payvo Wallet events
         </span>
       </p>
     </div>
@@ -86,7 +86,7 @@ exports[`PluginInfo should open and close the plugin permissions modal 1`] = `
           class="TruncateEnd__Wrapper-sc-1hhdnni-0"
           data-testid="TruncateEnd"
         >
-          Allows access to the Desktop Wallet events, Allows…
+          Allows access to the Payvo Wallet events, Allows a…
         </span>
       </p>
       <button
@@ -277,7 +277,7 @@ exports[`PluginInfo should render with minimum version 1`] = `
       data-testid="plugin-info__mininum-version"
     >
       <span>
-        Desktop Wallet Version
+        Payvo Wallet Version
          v
         3.0.1
         +

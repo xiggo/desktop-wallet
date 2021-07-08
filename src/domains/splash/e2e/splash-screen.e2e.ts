@@ -10,7 +10,7 @@ const translations = buildTranslations();
 createFixture("Splash screen");
 
 test("should render welcome page", async (t) => {
-	await t.expect(Selector("span").withText(translations.COMMON.DESKTOP_WALLET).exists).ok();
+	await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
 });
 
 // test("should show splash screen", async (t) => {
@@ -27,5 +27,5 @@ test("should render welcome page", async (t) => {
 // 	await t.expect(Selector('[data-testid="Splash__text"]').exists).ok();
 // 	await t.expect(Selector('[data-testid="Splash__text"]').exists).notOk({ timeout: 10000 });
 //
-//	await t.expect(Selector("span").withText(translations.COMMON.DESKTOP_WALLET).exists).ok();
+//	await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
 // }).clientScripts({ content: mockWindowNavigator });

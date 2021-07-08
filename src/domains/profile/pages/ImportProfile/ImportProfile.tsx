@@ -38,7 +38,7 @@ export const ImportProfile = () => {
 	};
 
 	return (
-		<Page navbarVariant="logo-only" title={t("COMMON.DESKTOP_WALLET")}>
+		<Page navbarVariant="logo-only" title={t("COMMON.PAYVO_WALLET")}>
 			<Section className="flex flex-col">
 				<div className="mx-auto max-w-xl">
 					<StepIndicator size={3} activeIndex={activeTab} />

@@ -56,7 +56,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
             <div
               class="whitespace-pre-line text-theme-secondary-text"
             >
-              Some of the plugins cannot be updated as they require a newer version of the Desktop Wallet. Pressing Continue will update plugins that can be updated.
+              Some of the plugins cannot be updated as they require a newer version of the Payvo Wallet. Pressing Continue will update plugins that can be updated.
             </div>
             <div
               class="mt-5"

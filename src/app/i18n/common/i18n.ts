@@ -79,7 +79,6 @@ export const translations: { [key: string]: any } = {
 	DELEGATE_NAME: "Delegate Name",
 	DELETE: "Delete",
 	DESCRIPTION: "Description",
-	DESKTOP_WALLET: "Desktop Wallet",
 	DETAILS: "Details",
 	DEVELOPMENT_NETWORKS: "Development Networks",
 	DISABLE: "Disable",
@@ -203,6 +202,7 @@ export const translations: { [key: string]: any } = {
 	PARTICIPANT: "Participant",
 	PASSWORD: "Password",
 	PASSWORDS: "Passwords",
+	PAYVO_WALLET: "Payvo Wallet",
 	PERIOD: "Period",
 	PERIODS: {
 		DAILY: "Daily",

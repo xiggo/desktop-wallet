@@ -88,7 +88,7 @@ export const Welcome = () => {
 
 	return (
 		<>
-			<Page navbarVariant="logo-only" title={t("COMMON.DESKTOP_WALLET")}>
+			<Page navbarVariant="logo-only" title={t("COMMON.PAYVO_WALLET")}>
 				<Section className="flex flex-col flex-1 justify-center text-center">
 					<div className="mx-auto w-96">
 						<Image name="WelcomeBanner" />
