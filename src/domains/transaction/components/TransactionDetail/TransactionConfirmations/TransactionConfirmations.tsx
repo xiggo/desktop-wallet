@@ -1,5 +1,5 @@
+import { BigNumber } from "@payvo/helpers";
 import { DTO } from "@payvo/sdk-profiles";
-import { BigNumber } from "@payvo/sdk-support";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import React from "react";

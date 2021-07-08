@@ -1,6 +1,6 @@
-import { DateTime } from "@payvo/sdk-intl";
+import { BigNumber } from "@payvo/helpers";
+import { DateTime } from "@payvo/intl";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { BigNumber } from "@payvo/sdk-support";
 import React from "react";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
 

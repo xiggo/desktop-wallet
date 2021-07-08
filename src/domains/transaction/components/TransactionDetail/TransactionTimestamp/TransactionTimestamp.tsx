@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/sdk-intl";
+import { DateTime } from "@payvo/intl";
 import { useTimeFormat } from "app/hooks/use-time-format";
 import React from "react";
 import { useTranslation } from "react-i18next";

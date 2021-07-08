@@ -1,4 +1,4 @@
-import { BigNumber } from "@payvo/sdk-support";
+import { BigNumber } from "@payvo/helpers";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { getDefaultProfileId, render } from "testing-library";

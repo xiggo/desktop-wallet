@@ -2,8 +2,31 @@
 	"name": "@arkecosystem/desktop-wallet-sound-notifications",
 	"version": "0.1.6",
 	"description": "Play a notification sound when you receive new transactions",
-	"main": "src/index.js",
+	"keywords": [
+		"utility",
+		"notification",
+		"@arkecosystem",
+		"desktop-wallet",
+		"plugin"
+	],
+	"homepage": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications#readme",
+	"bugs": {
+		"url": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications"
+	},
+	"license": "MIT",
 	"author": "Lucio Rubens <lucio@ark.io>",
+	"contributors": [
+		"Lucio Rubens <lucio@ark.io>"
+	],
+	"main": "src/index.js",
+	"devDependencies": {
+		"audio-loader": "^1.0.3",
+		"glob": "^7.1.3"
+	},
 	"desktop-wallet": {
 		"title": "Sound Notifications",
 		"logo": "https://raw.githubusercontent.com/ark-ecosystem-desktop-plugins/sound-notifications/master/logo.png",
@@ -17,28 +40,5 @@
 			"ALERTS"
 		],
 		"minimumVersion": "2.6"
-	},
-	"keywords": [
-		"utility",
-		"notification",
-		"@arkecosystem",
-		"desktop-wallet",
-		"plugin"
-	],
-	"contributors": [
-		"Lucio Rubens <lucio@ark.io>"
-	],
-	"devDependencies": {
-		"audio-loader": "^1.0.3",
-		"glob": "^7.1.3"
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications"
-	},
-	"bugs": {
-		"url": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications/issues"
-	},
-	"homepage": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications#readme"
+	}
 }

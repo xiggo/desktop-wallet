@@ -1,5 +1,5 @@
-import { DateTime } from "@payvo/sdk-intl";
-import { BigNumber } from "@payvo/sdk-support";
+import { BigNumber } from "@payvo/helpers";
+import { DateTime } from "@payvo/intl";
 
 const baseWallet = {
 	actions: [

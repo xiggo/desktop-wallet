@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { DateTime } from "@payvo/sdk-intl";
+import { BigNumber } from "@payvo/helpers";
+import { DateTime } from "@payvo/intl";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { BigNumber } from "@payvo/sdk-support";
 import { screen } from "@testing-library/react";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import { LedgerProvider } from "app/contexts";

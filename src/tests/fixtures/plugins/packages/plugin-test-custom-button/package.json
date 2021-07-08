@@ -1,6 +1,11 @@
 {
 	"name": "plugin-test-custom-button",
 	"version": "0.0.1",
+	"keywords": [
+		"@arkecosystem",
+		"desktop-wallet",
+		"plugin"
+	],
 	"author": "Lucio",
 	"desktop-wallet": {
 		"title": "Test Custom Button",
@@ -11,10 +16,5 @@
 			"THEME"
 		],
 		"minimumVersion": "3.0.0"
-	},
-	"keywords": [
-		"@arkecosystem",
-		"desktop-wallet",
-		"plugin"
-	]
+	}
 }

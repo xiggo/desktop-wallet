@@ -1,5 +1,5 @@
-import { CURRENCIES, Money, Numeral } from "@payvo/sdk-intl";
-import { BigNumber } from "@payvo/sdk-support";
+import { BigNumber } from "@payvo/helpers";
+import { CURRENCIES, Money, Numeral } from "@payvo/intl";
 
 import { DEFAULT_DECIMALS, DEFAULT_TICKER, FormatParameters } from "./Amount.contracts";
 

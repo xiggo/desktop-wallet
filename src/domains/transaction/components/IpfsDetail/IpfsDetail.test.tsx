@@ -1,4 +1,4 @@
-import { BigNumber } from "@payvo/sdk-support";
+import { BigNumber } from "@payvo/helpers";
 import React from "react";
 import { render } from "testing-library";
 import { TransactionFixture } from "tests/fixtures/transactions";

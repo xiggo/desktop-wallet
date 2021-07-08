@@ -2,9 +2,26 @@
 	"name": "@dated/transaction-export-plugin",
 	"version": "1.0.3",
 	"description": "Export your wallet transaction history",
-	"main": "src/index.js",
-	"author": "Edgar Goetzendorff <hello@dated.fun>",
+	"keywords": [
+		"utility",
+		"export",
+		"transactions",
+		"taxes",
+		"@arkecosystem",
+		"desktop-wallet",
+		"plugin"
+	],
+	"homepage": "https://github.com/dated/transaction-export-plugin",
+	"bugs": {
+		"url": "https://github.com/dated/transaction-export-plugin/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dated/transaction-export-plugin.git"
+	},
 	"license": "MIT",
+	"author": "Edgar Goetzendorff <hello@dated.fun>",
+	"main": "src/index.js",
 	"desktop-wallet": {
 		"title": "Transaction Export",
 		"logo": "https://raw.githubusercontent.com/dated/transaction-export-plugin/master/logo.png",
@@ -33,22 +50,5 @@
 			"^"
 		],
 		"minimumVersion": "2.9.1"
-	},
-	"keywords": [
-		"utility",
-		"export",
-		"transactions",
-		"taxes",
-		"@arkecosystem",
-		"desktop-wallet",
-		"plugin"
-	],
-	"bugs": {
-		"url": "https://github.com/dated/transaction-export-plugin/issues"
-	},
-	"homepage": "https://github.com/dated/transaction-export-plugin",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/dated/transaction-export-plugin.git"
 	}
 }

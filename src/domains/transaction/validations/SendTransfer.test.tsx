@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { BigNumber } from "@payvo/helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { BigNumber } from "@payvo/sdk-support";
 import { env, getDefaultProfileId } from "utils/testing-library";
 
 import { sendTransfer } from "./SendTransfer";

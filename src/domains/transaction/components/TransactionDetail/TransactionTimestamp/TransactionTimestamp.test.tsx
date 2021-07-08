@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/sdk-intl";
+import { DateTime } from "@payvo/intl";
 import React from "react";
 import { render } from "testing-library";
 
