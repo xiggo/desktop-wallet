@@ -292,7 +292,7 @@
 	},
 	"build": {
 		"productName": "Payvo Wallet",
-		"appId": "io.ark.desktop-wallet",
+		"appId": "io.payvo.wallet",
 		"artifactName": "${name}-${os}-${arch}-${version}.${ext}",
 		"afterSign": "scripts/notarize.js",
 		"npmRebuild": true,
