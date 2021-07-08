@@ -173,7 +173,7 @@ describe("ImportProfile", () => {
 		await waitFor(() => expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument());
 	});
 
-	it("should succesfully import profile and return to home screen", async () => {
+	it("should successfully import profile and return to home screen", async () => {
 		history.push(`/profiles/import`);
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		jest.spyOn(fs, "readFileSync").mockReturnValue(passwordProtectedDwe);

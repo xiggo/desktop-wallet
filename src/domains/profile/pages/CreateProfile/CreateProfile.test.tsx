@@ -24,6 +24,7 @@ const showOpenDialogParameters = {
 };
 
 const baseSettings = {
+	ACCENT_COLOR: "green",
 	ADVANCED_MODE: false,
 	AUTOMATIC_SIGN_OUT_PERIOD: 15,
 	BIP39_LOCALE: "english",

@@ -150,6 +150,7 @@
 				"HAS_COMPLETED_INTRODUCTORY_TUTORIAL": true
 			},
 			"settings": {
+				"ACCENT_COLOR": "green",
 				"ADVANCED_MODE": false,
 				"AUTOMATIC_SIGN_OUT_PERIOD": 15,
 				"BIP39_LOCALE": "english",
@@ -179,6 +180,7 @@
 				"HAS_COMPLETED_INTRODUCTORY_TUTORIAL": true
 			},
 			"settings": {
+				"ACCENT_COLOR": "green",
 				"ADVANCED_MODE": false,
 				"AUTOMATIC_SIGN_OUT_PERIOD": 1,
 				"BIP39_LOCALE": "english",
