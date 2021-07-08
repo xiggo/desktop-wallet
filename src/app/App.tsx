@@ -1,5 +1,11 @@
 import "focus-visible";
 
+// import { TRX } from "@payvo/sdk-trx";
+// import { XLM } from "@payvo/sdk-xlm";
+// import { XRP } from "@payvo/sdk-xrp";
+// import { ZIL } from "@payvo/sdk-zil";
+// @ts-ignore
+import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 // import { ADA } from "@payvo/sdk-ada";
 import { ARK } from "@payvo/sdk-ark";
 // import { ATOM } from "@payvo/sdk-atom";
@@ -13,12 +19,6 @@ import { LSK } from "@payvo/sdk-lsk";
 // import { NANO } from "@payvo/sdk-nano";
 // import { NEO } from "@payvo/sdk-neo";
 import { Environment } from "@payvo/sdk-profiles";
-// import { TRX } from "@payvo/sdk-trx";
-// import { XLM } from "@payvo/sdk-xlm";
-// import { XRP } from "@payvo/sdk-xrp";
-// import { ZIL } from "@payvo/sdk-zil";
-// @ts-ignore
-import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import { Offline } from "domains/error/pages";
 import { Splash } from "domains/splash/pages";
 import { usePluginManagerContext } from "plugins";

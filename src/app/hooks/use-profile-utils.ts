@@ -1,5 +1,5 @@
-import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { uniq } from "@arkecosystem/utils";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { useCallback, useMemo } from "react";
 import { matchPath } from "react-router-dom";
 

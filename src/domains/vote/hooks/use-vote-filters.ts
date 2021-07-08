@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { isEmptyObject, uniq, uniqBy } from "@arkecosystem/utils";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
 import { FilterOption } from "domains/vote/components/VotesFilter";
 import { useMemo, useState } from "react";

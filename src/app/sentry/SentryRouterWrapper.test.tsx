@@ -1,6 +1,6 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
+import { Contracts } from "@payvo/sdk-profiles";
 import * as Sentry from "@sentry/react";
 import { LedgerProvider } from "app/contexts";
 import React from "react";

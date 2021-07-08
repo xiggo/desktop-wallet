@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { uniq } from "@arkecosystem/utils";
+import { Contracts } from "@payvo/sdk-profiles";
 import * as Sentry from "@sentry/react";
 import { Integrations } from "@sentry/tracing";
 import React, { useCallback, useContext, useRef } from "react";

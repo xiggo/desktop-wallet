@@ -1,7 +1,7 @@
-import { ARK } from "@payvo/sdk-ark";
-import { Contracts, Environment } from "@payvo/sdk-profiles";
 // @ts-ignore
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
+import { ARK } from "@payvo/sdk-ark";
+import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { render } from "@testing-library/react";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import { useProfileSynchronizer } from "app/hooks/use-profile-synchronizer";

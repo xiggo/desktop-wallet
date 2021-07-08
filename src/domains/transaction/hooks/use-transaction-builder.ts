@@ -1,6 +1,6 @@
+import { upperFirst } from "@arkecosystem/utils";
 import { Services } from "@payvo/sdk";
 import { Contracts as ProfileContracts, DTO } from "@payvo/sdk-profiles";
-import { upperFirst } from "@arkecosystem/utils";
 import { useLedgerContext } from "app/contexts";
 
 type SignFunction = (input: any) => Promise<string>;

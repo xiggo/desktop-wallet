@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { chunk } from "@arkecosystem/utils";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useMemo } from "react";
 
 import { GridWallet, UseWalletDisplayProperties } from ".";
@@ -21,35 +21,25 @@ export const useWalletDisplay = ({
 
 	const { listWallets, gridWallets, listHasMore } = useMemo(() => {
 		const listWallets = wallets
-			.filter((wallet: any) => {
+			.filter((wallet: Contracts.IReadWriteWallet) => {
+				if (!selectedNetworkIds?.includes(wallet.network().id())) {
+					return false;
+				}
+
 				if (displayType === "starred") {
 					return wallet.isStarred();
 				}
+
 				if (displayType === "ledger") {
 					return wallet.isLedger();
 				}
-				return wallet && !wallet.isBlank && selectedNetworkIds?.includes(wallet.network().id());
+
+				return wallet;
 			})
 			.map((wallet) => ({ wallet }));
 
 		const loadGridWallets = () => {
-			const walletObjects = wallets
-				.filter((wallet: Contracts.IReadWriteWallet) => {
-					if (!selectedNetworkIds?.includes(wallet.network().id())) {
-						return false;
-					}
-
-					if (displayType === "starred") {
-						return wallet.isStarred();
-					}
-
-					if (displayType === "ledger") {
-						return wallet.isLedger();
-					}
-
-					return wallet;
-				})
-				.map((wallet: Contracts.IReadWriteWallet) => ({ wallet }));
+			const walletObjects = [...listWallets];
 
 			if (walletObjects.length <= sliderOptions.slidesPerView) {
 				return walletObjects.concat(

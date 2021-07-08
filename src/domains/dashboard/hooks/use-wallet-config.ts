@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { uniq } from "@arkecosystem/utils";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import { useMemo } from "react";

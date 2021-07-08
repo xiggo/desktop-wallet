@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { uniqBy } from "@arkecosystem/utils";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useWalletConfig } from "domains/dashboard/hooks";
 import { useMemo } from "react";
 

@@ -1,6 +1,6 @@
+import { sortByDesc } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/sdk";
 import { Contracts as ProfileContracts, Environment } from "@payvo/sdk-profiles";
-import { sortByDesc } from "@arkecosystem/utils";
 import { useEnvironmentContext } from "app/contexts";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";

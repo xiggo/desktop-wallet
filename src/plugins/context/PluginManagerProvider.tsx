@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { semver, uniqBy } from "@arkecosystem/utils";
+import { Contracts } from "@payvo/sdk-profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { httpClient, toasts } from "app/services";
 import { ipcRenderer } from "electron";

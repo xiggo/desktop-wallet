@@ -1,6 +1,6 @@
+import Transport from "@ledgerhq/hw-transport";
 import { Services } from "@payvo/sdk";
 import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
-import Transport from "@ledgerhq/hw-transport";
 
 const signWithLedger = async (
 	message: string,

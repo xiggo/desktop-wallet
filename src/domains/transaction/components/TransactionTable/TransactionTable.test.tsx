@@ -1,5 +1,5 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { sortByDesc } from "@arkecosystem/utils";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import nock from "nock";
 import React from "react";

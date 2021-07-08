@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
+import { Contracts } from "@payvo/sdk-profiles";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import * as useQRCodeHook from "domains/wallet/components/ReceiveFunds/hooks";
