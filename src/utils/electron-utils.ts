@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import { Theme } from "types";
 
+import { validatePath } from "./validate-path";
+
 interface DialogOptions {
 	filters?: FileFilter | FileFilter[];
 	restrictToPath?: string;
@@ -39,11 +41,6 @@ const isDevelopment = () => {
 	const isEnvironmentSet = "ELECTRON_IS_DEV" in process.env;
 
 	return isEnvironmentSet ? Number.parseInt(process.env.ELECTRON_IS_DEV!, 10) === 1 : !app.isPackaged;
-};
-
-const validatePath = (parentPath: string, filePath: string) => {
-	const relative = path.relative(parentPath, filePath);
-	return relative && !relative.startsWith("..") && !path.isAbsolute(relative);
 };
 
 const parseFilters = (filters: FileFilter | FileFilter[]) => (Array.isArray(filters) ? filters : [filters]);

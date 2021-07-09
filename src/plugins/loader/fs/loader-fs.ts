@@ -3,6 +3,7 @@ import fs from "fs";
 import { glob } from "glob";
 import path from "path";
 
+import { validatePath } from "../../../utils/validate-path";
 import { PluginRawInstance } from "../../types";
 import * as loaderIpc from "./loader-fs-ipc";
 
@@ -19,7 +20,7 @@ export class PluginLoaderFileSystem {
 
 	remove(dir: string) {
 		const fsExtra = require("fs-extra");
-		const isValid = this.#roots.some((root) => new RegExp(root).test(dir));
+		const isValid = this.#roots.some((root) => validatePath(root, dir));
 
 		if (!isValid) {
 			return Promise.reject(`The dir ${dir} cannot be removed.`);
