@@ -342,11 +342,11 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                         class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                       >
                         <div
-                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                          data-testid="PluginImage__placeholder"
+                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                          data-testid="PluginImage"
                         >
                           <svg>
-                            plugin-logo-placeholder.svg
+                            exchange-logo-placeholder.svg
                           </svg>
                         </div>
                       </div>
@@ -417,11 +417,11 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                         class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                       >
                         <div
-                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                          data-testid="PluginImage__placeholder"
+                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                          data-testid="PluginImage"
                         >
                           <svg>
-                            plugin-logo-placeholder.svg
+                            exchange-logo-placeholder.svg
                           </svg>
                         </div>
                       </div>
@@ -492,11 +492,11 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                         class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                       >
                         <div
-                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                          data-testid="PluginImage__placeholder"
+                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                          data-testid="PluginImage"
                         >
                           <svg>
-                            plugin-logo-placeholder.svg
+                            exchange-logo-placeholder.svg
                           </svg>
                         </div>
                       </div>
@@ -897,7 +897,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -930,7 +930,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -963,7 +963,7 @@ exports[`Exchange should open & close add exchange modal 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -1331,7 +1331,7 @@ exports[`Exchange should render 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -1364,7 +1364,7 @@ exports[`Exchange should render 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -1397,7 +1397,7 @@ exports[`Exchange should render 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -1765,7 +1765,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -1798,7 +1798,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -1831,7 +1831,7 @@ exports[`Exchange should render filler exchange cards 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -2204,11 +2204,11 @@ exports[`Exchange should render with exchanges 1`] = `
                         class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                       >
                         <div
-                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                          data-testid="PluginImage__placeholder"
+                          class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                          data-testid="PluginImage"
                         >
                           <svg>
-                            plugin-logo-placeholder.svg
+                            exchange-logo-placeholder.svg
                           </svg>
                         </div>
                       </div>
@@ -2274,7 +2274,7 @@ exports[`Exchange should render with exchanges 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"
@@ -2307,7 +2307,7 @@ exports[`Exchange should render with exchanges 1`] = `
                     class="flex items-center space-x-4"
                   >
                     <div
-                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                      class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                     />
                     <div
                       class="flex flex-col truncate"

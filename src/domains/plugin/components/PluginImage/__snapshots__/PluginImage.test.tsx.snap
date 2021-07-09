@@ -1,10 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PluginImage should render exchange image placeholder 1`] = `
+<div>
+  <div
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
+  >
+    <svg>
+      exchange-logo-placeholder.svg
+    </svg>
+  </div>
+</div>
+`;
+
 exports[`PluginImage should render image logo 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-    data-testid="PluginImage__logo"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <img
       alt="Logo"
@@ -18,8 +31,8 @@ exports[`PluginImage should render image logo 1`] = `
 exports[`PluginImage should render image placeholder 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-    data-testid="PluginImage__placeholder"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg>
       plugin-logo-placeholder.svg
@@ -31,8 +44,8 @@ exports[`PluginImage should render image placeholder 1`] = `
 exports[`PluginImage should render updating element in dark mode 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 ixmCeD"
-    data-testid="PluginImage__updating"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 ixmCeD bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg
       height="40"
@@ -89,8 +102,8 @@ exports[`PluginImage should render updating element in dark mode 1`] = `
 exports[`PluginImage should render updating element in light mode 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 ixmCeD"
-    data-testid="PluginImage__updating"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 ixmCeD bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg
       height="40"
@@ -147,8 +160,8 @@ exports[`PluginImage should render updating element in light mode 1`] = `
 exports[`PluginImage should render updating with label 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 ixmCeD"
-    data-testid="PluginImage__updating"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 ixmCeD bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg
       height="40"
@@ -211,8 +224,8 @@ exports[`PluginImage should render updating with label 1`] = `
 exports[`PluginImage should render with size 'lg' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-    data-testid="PluginImage__placeholder"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg>
       plugin-logo-placeholder.svg
@@ -224,8 +237,8 @@ exports[`PluginImage should render with size 'lg' 1`] = `
 exports[`PluginImage should render with size 'md' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-    data-testid="PluginImage__placeholder"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg>
       plugin-logo-placeholder.svg
@@ -237,8 +250,8 @@ exports[`PluginImage should render with size 'md' 1`] = `
 exports[`PluginImage should render with size 'sm' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-    data-testid="PluginImage__placeholder"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg>
       plugin-logo-placeholder.svg
@@ -250,8 +263,8 @@ exports[`PluginImage should render with size 'sm' 1`] = `
 exports[`PluginImage should render with size 'xs' 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-    data-testid="PluginImage__placeholder"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg>
       plugin-logo-placeholder.svg
@@ -263,8 +276,8 @@ exports[`PluginImage should render with size 'xs' 1`] = `
 exports[`PluginImage should show placeholder as fallback 1`] = `
 <div>
   <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-    data-testid="PluginImage__placeholder"
+    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+    data-testid="PluginImage"
   >
     <svg>
       plugin-logo-placeholder.svg

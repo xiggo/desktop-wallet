@@ -30,7 +30,7 @@ describe("PluginHeader", () => {
 	it("should render updating plugin", () => {
 		const { container } = render(<PluginHeader {...pluginDataFixture} updatingStats={{ percent: 0.2 }} />);
 
-		expect(screen.getByTestId("PluginImage__updating")).toBeInTheDocument();
+		expect(screen.getByTestId("CircularProgressBar__percentage")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 

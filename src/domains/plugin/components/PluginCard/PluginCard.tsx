@@ -25,7 +25,7 @@ export const BlankPluginCard = ({ name, category }: { name?: string; category?: 
 	return (
 		<Card>
 			<div className="flex items-center space-x-4">
-				<div className="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800" />
+				<div className="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0" />
 				<div className="flex flex-col truncate">
 					<span className="text-sm font-semibold text-theme-primary-100 truncate dark:text-theme-secondary-800">
 						{t("COMMON.AUTHOR")}
@@ -133,6 +133,7 @@ export const PluginCard = ({
 					<div className="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25">
 						<PluginImage
 							logoURL={plugin.logo}
+							isExchange={plugin.category === "exchange"}
 							isUpdating={isUpdating}
 							updatingProgress={updatingProgress}
 						/>

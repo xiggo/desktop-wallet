@@ -130,7 +130,7 @@ describe("Plugin Configuration", () => {
 		expect(subject.urls()).toEqual(["http://github.com"]);
 	});
 
-	it("should return default category if not defined", () => {
+	it("should return default category array if not defined", () => {
 		const subject = PluginConfigurationData.make({ name: "plugin-test" });
 
 		expect(subject.categories()).toEqual(["other"]);
@@ -145,13 +145,24 @@ describe("Plugin Configuration", () => {
 		expect(subject.categories()).toEqual(["exchange"]);
 	});
 
-	it("should return other categories if categories is empty", () => {
+	it("should return default category array if empty", () => {
 		const subject = PluginConfigurationData.make({
 			"desktop-wallet": { categories: [] },
 			name: "plugin-test",
 		});
 
 		expect(subject.categories()).toEqual(["other"]);
+	});
+
+	it("should return the first categoriy", () => {
+		const categories = ["exchange", "utility"];
+
+		const subject = PluginConfigurationData.make({
+			"desktop-wallet": { categories },
+			name: "plugin-test",
+		});
+
+		expect(subject.category()).toEqual(categories[0]);
 	});
 
 	it("should return plugin size from fs", async () => {

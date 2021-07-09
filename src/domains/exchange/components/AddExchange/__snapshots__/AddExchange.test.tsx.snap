@@ -168,10 +168,10 @@ exports[`AddExchange should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                         >
                           <div
-                            class="w-11 h-11"
+                            class="bg-theme-primary-100 text-theme-primary-600 w-11 h-11"
                           >
                             <svg>
-                              exchanges.svg
+                              exchange-logo-placeholder.svg
                             </svg>
                           </div>
                           <span
@@ -227,10 +227,10 @@ exports[`AddExchange should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                         >
                           <div
-                            class="w-11 h-11"
+                            class="bg-theme-primary-100 text-theme-primary-600 w-11 h-11"
                           >
                             <svg>
-                              exchanges.svg
+                              exchange-logo-placeholder.svg
                             </svg>
                           </div>
                           <span
@@ -286,10 +286,10 @@ exports[`AddExchange should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                         >
                           <div
-                            class="w-11 h-11"
+                            class="bg-theme-primary-100 text-theme-primary-600 w-11 h-11"
                           >
                             <svg>
-                              exchanges.svg
+                              exchange-logo-placeholder.svg
                             </svg>
                           </div>
                           <span
@@ -345,10 +345,10 @@ exports[`AddExchange should render a modal 1`] = `
                           class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                         >
                           <div
-                            class="w-11 h-11"
+                            class="bg-theme-primary-100 text-theme-primary-600 w-11 h-11"
                           >
                             <svg>
-                              exchanges.svg
+                              exchange-logo-placeholder.svg
                             </svg>
                           </div>
                           <span

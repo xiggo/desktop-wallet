@@ -10,8 +10,8 @@ exports[`PluginHeader should render properly 1`] = `
       class="flex w-full"
     >
       <div
-        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 jvUDyT"
-        data-testid="PluginImage__placeholder"
+        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 jvUDyT bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+        data-testid="PluginImage"
       >
         <svg>
           plugin-logo-placeholder.svg
@@ -230,8 +230,8 @@ exports[`PluginHeader should render updating plugin 1`] = `
       class="flex w-full"
     >
       <div
-        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 gCsaHv"
-        data-testid="PluginImage__updating"
+        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 gCsaHv bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+        data-testid="PluginImage"
       >
         <svg
           height="40"

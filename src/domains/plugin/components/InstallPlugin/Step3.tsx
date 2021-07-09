@@ -1,6 +1,6 @@
 import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
-import { Image } from "app/components/Image";
+import { PluginImage } from "domains/plugin/components/PluginImage";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -14,20 +14,13 @@ export const ThirdStep = ({ plugin }: Properties) => {
 	return (
 		<section data-testid="InstallPlugin__step--third">
 			<div className="flex mt-4">
-				<div className="flex-shrink-0 mr-6">
-					<div className="overflow-hidden w-32 h-32 rounded-lg">
-						{plugin.logo ? (
-							<img
-								data-testid="InstallPlugin__step--third__logo"
-								src={plugin.logo}
-								alt="Logo"
-								className="w-full rounded-lg"
-							/>
-						) : (
-							<Image name="PluginLogoPlaceholder" domain="plugin" />
-						)}
-					</div>
-				</div>
+				<PluginImage
+					className="mr-6"
+					size="lg"
+					logoURL={plugin.logo}
+					isExchange={plugin.category === "exchange"}
+				/>
+
 				<div className="flex-1">
 					<div className="flex flex-col justify-around h-full">
 						<div>

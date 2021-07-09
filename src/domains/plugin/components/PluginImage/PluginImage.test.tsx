@@ -8,14 +8,22 @@ describe("PluginImage", () => {
 	it("should render image placeholder", () => {
 		const { container } = render(<PluginImage />);
 
-		expect(screen.getByTestId("PluginImage__placeholder")).toBeInTheDocument();
+		expect(screen.getByTestId("PluginImage")).toHaveTextContent("plugin-logo-placeholder.svg");
+		expect(container).toMatchSnapshot();
+	});
+
+	it("should render exchange image placeholder", () => {
+		const { container } = render(<PluginImage isExchange />);
+
+		expect(screen.getByTestId("PluginImage")).toHaveTextContent("exchange-logo-placeholder.svg");
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render image logo", () => {
 		const { container } = render(<PluginImage logoURL="https://payvo.com/logo.png" />);
 
-		expect(screen.getByTestId("PluginImage__logo")).toBeInTheDocument();
+		expect(screen.getByTestId("PluginImage")).not.toHaveTextContent("plugin-logo-placeholder.svg");
+		expect(screen.getByTestId("PluginImage")).not.toHaveTextContent("exchange-logo-placeholder.svg");
 		expect(container).toMatchSnapshot();
 	});
 
@@ -24,7 +32,7 @@ describe("PluginImage", () => {
 
 		const { container } = render(<PluginImage updatingProgress={25} isUpdating />);
 
-		expect(screen.getByTestId("PluginImage__updating")).toBeInTheDocument();
+		expect(screen.getByTestId("CircularProgressBar__percentage")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
 		utilsSpy.mockRestore();
@@ -40,7 +48,7 @@ describe("PluginImage", () => {
 	it.each(["xs", "sm", "md", "lg"])("should render with size '%s'", () => {
 		const { container } = render(<PluginImage />);
 
-		expect(screen.getByTestId("PluginImage__placeholder")).toBeInTheDocument();
+		expect(screen.getByTestId("PluginImage")).toHaveTextContent("plugin-logo-placeholder.svg");
 		expect(container).toMatchSnapshot();
 	});
 
@@ -49,7 +57,7 @@ describe("PluginImage", () => {
 
 		fireEvent.error(screen.getByRole("img"));
 
-		expect(screen.getByTestId("PluginImage__placeholder")).toBeInTheDocument();
+		expect(screen.getByTestId("PluginImage")).toHaveTextContent("plugin-logo-placeholder.svg");
 		expect(container).toMatchSnapshot();
 	});
 });

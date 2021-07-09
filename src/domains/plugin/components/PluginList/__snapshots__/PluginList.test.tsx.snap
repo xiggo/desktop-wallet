@@ -180,8 +180,8 @@ exports[`PluginList should not render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -307,8 +307,8 @@ exports[`PluginList should not render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -592,8 +592,8 @@ exports[`PluginList should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -719,8 +719,8 @@ exports[`PluginList should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -823,8 +823,8 @@ exports[`PluginList should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -950,8 +950,8 @@ exports[`PluginList should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -1303,8 +1303,8 @@ exports[`PluginList should render without pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -1430,8 +1430,8 @@ exports[`PluginList should render without pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -1712,8 +1712,8 @@ exports[`PluginList should split by page 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -2065,8 +2065,8 @@ exports[`PluginList should trigger delete 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -2192,8 +2192,8 @@ exports[`PluginList should trigger delete 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -2477,8 +2477,8 @@ exports[`PluginList should trigger install 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -2604,8 +2604,8 @@ exports[`PluginList should trigger install 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg

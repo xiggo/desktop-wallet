@@ -469,7 +469,7 @@ describe("PluginManager", () => {
 		});
 
 		await waitFor(() => expect(screen.getByText(translations.PAGE_PLUGIN_MANAGER.VIEW.SEARCH)).toBeInTheDocument());
-		await waitFor(() => expect(screen.getAllByTestId("PluginImage__logo")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("PluginImage")).toHaveLength(1));
 
 		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {
 			target: { value: "unknown search query" },

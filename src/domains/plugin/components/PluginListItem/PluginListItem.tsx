@@ -70,6 +70,7 @@ export const PluginListItem = ({
 				<PluginImage
 					size="sm"
 					logoURL={plugin.logo}
+					isExchange={plugin.category === "exchange"}
 					isUpdating={isUpdating}
 					updatingProgress={updatingProgress}
 				/>

@@ -13,8 +13,8 @@ exports[`PluginListItem should render 1`] = `
             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-              data-testid="PluginImage__placeholder"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              data-testid="PluginImage"
             >
               <svg>
                 plugin-logo-placeholder.svg
@@ -117,8 +117,8 @@ exports[`PluginListItem should render grant icon 1`] = `
             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-              data-testid="PluginImage__placeholder"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              data-testid="PluginImage"
             >
               <svg>
                 plugin-logo-placeholder.svg
@@ -230,8 +230,8 @@ exports[`PluginListItem should render official icon 1`] = `
             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-              data-testid="PluginImage__placeholder"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              data-testid="PluginImage"
             >
               <svg>
                 plugin-logo-placeholder.svg
@@ -343,8 +343,8 @@ exports[`PluginListItem should trigger install 1`] = `
             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-              data-testid="PluginImage__placeholder"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              data-testid="PluginImage"
             >
               <svg>
                 plugin-logo-placeholder.svg

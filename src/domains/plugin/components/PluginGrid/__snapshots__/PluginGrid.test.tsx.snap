@@ -24,8 +24,8 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -127,8 +127,8 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -230,8 +230,8 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -677,8 +677,8 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -780,8 +780,8 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -883,8 +883,8 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -986,8 +986,8 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -1478,8 +1478,8 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -1581,8 +1581,8 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -1684,8 +1684,8 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -1813,8 +1813,8 @@ exports[`PluginGrid should split by page 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg
@@ -2004,8 +2004,8 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                  data-testid="PluginImage__placeholder"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  data-testid="PluginImage"
                 >
                   <svg>
                     plugin-logo-placeholder.svg

@@ -145,9 +145,10 @@ export const PluginHeader = ({
 		<div data-testid="plugin-details__header" className="w-full bg-theme-background">
 			<div className="flex w-full">
 				<PluginImage
-					size="lg"
+					size="xl"
 					logoURL={properties.logo}
 					isEnabled={properties.isEnabled}
+					isExchange={properties.category === "exchange"}
 					isUpdating={updatingStats?.percent !== undefined}
 					updatingProgress={updatingStats?.percent}
 					showUpdatingLabel

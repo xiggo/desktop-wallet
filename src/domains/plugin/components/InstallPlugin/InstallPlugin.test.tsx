@@ -64,7 +64,7 @@ describe("InstallPlugin", () => {
 			<ThirdStep plugin={{ logo: "https://payvo.com/logo.png", title: "My Plugin" }} />,
 		);
 
-		expect(getByTestId("InstallPlugin__step--third__logo")).toBeInTheDocument();
+		expect(getByTestId("PluginImage")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

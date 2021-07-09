@@ -78,8 +78,8 @@ export const AddExchange = ({ isOpen, onClose }: AddExchangeProperties) => {
 					{(rowData: any) => (
 						<TableRow>
 							<TableCell variant="start" innerClassName="space-x-5">
-								<div className="w-11 h-11">
-									<Image name="Exchanges" />
+								<div className="bg-theme-primary-100 text-theme-primary-600 w-11 h-11">
+									<Image name="ExchangeLogoPlaceholder" domain="plugin" />
 								</div>
 
 								<span className="font-semibold cursor-pointer link">{rowData.title}</span>

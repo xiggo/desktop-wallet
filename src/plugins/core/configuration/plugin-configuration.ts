@@ -1,4 +1,4 @@
-import { intersection, prettyBytes, startCase, uniq } from "@arkecosystem/utils";
+import { prettyBytes, startCase, uniq } from "@arkecosystem/utils";
 import { Contracts, Repositories } from "@payvo/sdk-profiles";
 import du from "du";
 import parseAuthor from "parse-author";
@@ -86,14 +86,23 @@ export class PluginConfigurationData {
 		return uniq(keywords).map((item) => startCase(item) as string);
 	}
 
-	categories() {
-		const validCategories = ["gaming", "language", "utility", "exchange", "other"];
+	categories(): string[] {
+		const validCategories = new Set(["gaming", "language", "utility", "exchange", "other"]);
 		// @ts-ignore
 		const categories: string[] = this.manifest().get("categories", ["other"]);
+		const result: string[] = [];
 
-		const result = intersection(categories, validCategories);
+		for (const category of categories) {
+			if (validCategories.has(category) && !result.includes(category)) {
+				result.push(category);
+			}
+		}
 
 		return result.length > 0 ? result : ["other"];
+	}
+
+	category() {
+		return this.categories()[0];
 	}
 
 	hasCategory(categoryName: string) {
@@ -219,7 +228,7 @@ export class PluginConfigurationData {
 		return {
 			author: this.author(),
 			categories: this.categories(),
-			category: this.categories()?.[0],
+			category: this.categories()[0],
 			date: this.date(),
 			description: this.description(),
 			homepage: this.homepage(),

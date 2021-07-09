@@ -1,6 +1,6 @@
 import { prettyBytes } from "@arkecosystem/utils";
 import { CircularProgressBar } from "app/components/CircularProgressBar";
-import { Image } from "app/components/Image";
+import { PluginImage } from "domains/plugin/components/PluginImage";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -17,20 +17,13 @@ export const SecondStep = ({ plugin, downloadProgress }: Properties) => {
 	return (
 		<section data-testid="InstallPlugin__step--second">
 			<div className="flex mt-4">
-				<div className="flex-shrink-0 mr-6">
-					<div className="overflow-hidden w-32 h-32 rounded-lg">
-						{plugin.logo ? (
-							<img
-								data-testid="PluginCard__logo"
-								src={plugin.logo}
-								alt="Logo"
-								className="w-full rounded-lg"
-							/>
-						) : (
-							<Image name="PluginLogoPlaceholder" domain="plugin" />
-						)}
-					</div>
-				</div>
+				<PluginImage
+					className="mr-6"
+					size="lg"
+					logoURL={plugin.logo}
+					isExchange={plugin.category === "exchange"}
+				/>
+
 				<div className="flex-1">
 					<div className="flex flex-col justify-around h-full">
 						<div>
@@ -54,7 +47,7 @@ export const SecondStep = ({ plugin, downloadProgress }: Properties) => {
 								<CircularProgressBar
 									value={(downloadProgress.percent ?? 0) * 100}
 									size={50}
-									strokeWidth={4}
+									strokeWidth={3}
 									fontSize={0.8}
 								/>
 							</div>

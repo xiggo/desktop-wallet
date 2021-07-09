@@ -151,8 +151,8 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
-                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                            data-testid="PluginImage__logo"
+                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                            data-testid="PluginImage"
                           >
                             <img
                               alt="Logo"
@@ -204,8 +204,8 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
                         >
                           <div
-                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                            data-testid="PluginImage__placeholder"
+                            class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                            data-testid="PluginImage"
                           >
                             <svg>
                               plugin-logo-placeholder.svg

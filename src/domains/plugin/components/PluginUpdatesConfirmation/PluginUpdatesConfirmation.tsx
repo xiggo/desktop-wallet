@@ -44,7 +44,11 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 					{(pluginData: any) => (
 						<TableRow>
 							<TableCell variant="start" innerClassName="space-x-4" style={{ width: "70%" }}>
-								<PluginImage logoURL={pluginData.logo} size="sm" />
+								<PluginImage
+									logoURL={pluginData.logo}
+									isExchange={pluginData.category === "exchange"}
+									size="sm"
+								/>
 
 								<div className="flex items-center space-x-2">
 									<span

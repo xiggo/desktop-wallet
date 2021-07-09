@@ -13,6 +13,7 @@ interface Properties {
 	size?: Size;
 	logoURL?: string;
 	isEnabled?: boolean;
+	isExchange?: boolean;
 	isUpdating?: boolean;
 	updatingProgress?: number;
 	progressSize?: number;
@@ -26,6 +27,7 @@ export const PluginImage = ({
 	size,
 	logoURL,
 	isEnabled,
+	isExchange,
 	isUpdating,
 	updatingProgress,
 	progressSize,
@@ -46,52 +48,56 @@ export const PluginImage = ({
 
 	const [hasError, setHasError] = useState(false);
 
-	if (isUpdating) {
-		return (
-			<PluginImageWrapper
-				size={size}
-				className={className}
-				variant="progress"
-				data-testid="PluginImage__updating"
-			>
-				<CircularProgressBar
-					value={+(updatingProgress! * 100).toFixed(0)}
-					size={progressSize}
-					strokeWidth={3}
-					fontSize={0.8}
-					{...colors}
-				/>
-				{showUpdatingLabel && (
-					<p
-						data-testid="PluginImage__updating__label"
-						className="text-sm font-semibold text-theme-success-600"
-					>
-						{t("COMMON.UPDATING")}
-					</p>
-				)}
-			</PluginImageWrapper>
-		);
-	}
+	const renderContent = () => {
+		if (isUpdating) {
+			return (
+				<>
+					<CircularProgressBar
+						value={+(updatingProgress! * 100).toFixed(0)}
+						size={progressSize}
+						strokeWidth={3}
+						fontSize={0.8}
+						{...colors}
+					/>
+					{showUpdatingLabel && (
+						<p
+							data-testid="PluginImage__updating__label"
+							className="text-sm font-semibold text-theme-success-600"
+						>
+							{t("COMMON.UPDATING")}
+						</p>
+					)}
+				</>
+			);
+		}
 
-	if (hasError || !logoURL) {
+		if (hasError || !logoURL) {
+			let logoPlaceholder = "PluginLogoPlaceholder";
+
+			if (isExchange) {
+				logoPlaceholder = "ExchangeLogoPlaceholder";
+			}
+
+			return <Image name={logoPlaceholder} domain="plugin" />;
+		}
+
 		return (
-			<PluginImageWrapper
-				size={size}
-				className={cn(className, { "filter-grayscale": !isEnabled })}
-				data-testid="PluginImage__placeholder"
-			>
-				<Image name="PluginLogoPlaceholder" domain="plugin" />
-			</PluginImageWrapper>
+			<img src={logoURL} alt="Logo" className="object-cover w-full h-full" onError={() => setHasError(true)} />
 		);
-	}
+	};
 
 	return (
 		<PluginImageWrapper
 			size={size}
-			className={cn({ "filter-grayscale": !isEnabled }, className)}
-			data-testid="PluginImage__logo"
+			variant={isUpdating ? "progress" : undefined}
+			className={cn(
+				"bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700",
+				className,
+				{ "filter-grayscale": !isEnabled },
+			)}
+			data-testid="PluginImage"
 		>
-			<img src={logoURL} alt="Logo" className="object-cover w-full h-full" onError={() => setHasError(true)} />
+			{renderContent()}
 		</PluginImageWrapper>
 	);
 };

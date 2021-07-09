@@ -820,8 +820,8 @@ exports[`PluginManager should cancel install plugin 1`] = `
                             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -917,8 +917,8 @@ exports[`PluginManager should cancel install plugin 1`] = `
                             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -1023,8 +1023,8 @@ exports[`PluginManager should cancel install plugin 1`] = `
                             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -1995,8 +1995,8 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                              data-testid="PluginImage__placeholder"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <svg>
                                 plugin-logo-placeholder.svg
@@ -2935,8 +2935,8 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                              data-testid="PluginImage__placeholder"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <svg>
                                 plugin-logo-placeholder.svg
@@ -3682,7 +3682,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -3733,7 +3733,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -3784,7 +3784,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -3886,8 +3886,8 @@ exports[`PluginManager should render 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -3981,8 +3981,8 @@ exports[`PluginManager should render 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -4076,8 +4076,8 @@ exports[`PluginManager should render 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -4205,7 +4205,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -4256,7 +4256,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -4307,7 +4307,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -4387,7 +4387,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -4438,7 +4438,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -4489,7 +4489,7 @@ exports[`PluginManager should render 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -5833,8 +5833,8 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -5928,8 +5928,8 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -6023,8 +6023,8 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -6128,8 +6128,8 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -6845,8 +6845,8 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -6940,8 +6940,8 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -7035,8 +7035,8 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -7140,8 +7140,8 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -7856,7 +7856,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -7907,7 +7907,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -7958,7 +7958,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -8060,8 +8060,8 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -8155,8 +8155,8 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -8250,8 +8250,8 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -8379,7 +8379,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -8430,7 +8430,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -8481,7 +8481,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -8561,7 +8561,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -8612,7 +8612,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -8663,7 +8663,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                         class="flex items-center space-x-4"
                       >
                         <div
-                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800"
+                          class="rounded-xl border-2 h-25 w-25 border-theme-primary-100 dark:border-theme-secondary-800 flex-shrink-0"
                         />
                         <div
                           class="flex flex-col truncate"
@@ -9335,8 +9335,8 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -9430,8 +9430,8 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -9525,8 +9525,8 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -9630,8 +9630,8 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND"
-                              data-testid="PluginImage__logo"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <img
                                 alt="Logo"
@@ -10570,8 +10570,8 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                             class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
                           >
                             <div
-                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw"
-                              data-testid="PluginImage__placeholder"
+                              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                              data-testid="PluginImage"
                             >
                               <svg>
                                 plugin-logo-placeholder.svg

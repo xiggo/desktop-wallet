@@ -279,8 +279,8 @@ exports[`Plugin View should render plugin content 1`] = `
             class="flex items-center space-x-3"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 hIEJEu"
-              data-testid="PluginImage__placeholder"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 hIEJEu bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              data-testid="PluginImage"
             >
               <svg>
                 plugin-logo-placeholder.svg
