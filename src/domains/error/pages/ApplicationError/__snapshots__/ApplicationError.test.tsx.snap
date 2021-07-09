@@ -45,7 +45,7 @@ exports[`ApplicationError should render 1`] = `
             class="container px-10 mx-auto"
           >
             <div
-              class="mx-auto w-64 lg:w-128"
+              class="flex justify-center mx-auto max-w-lg"
             >
               <svg>
                 generic-error-dark-green.svg

@@ -41,7 +41,7 @@ exports[`Splash should  render  dark theme 1`] = `
           class="container px-10 mx-auto"
         >
           <div
-            class="mx-auto w-64 lg:w-96"
+            class="flex justify-center mx-auto max-w-md"
           >
             <svg>
               welcome-banner-dark-green.svg
@@ -183,7 +183,7 @@ exports[`Splash should  render  light theme 1`] = `
           class="container px-10 mx-auto"
         >
           <div
-            class="mx-auto w-64 lg:w-96"
+            class="flex justify-center mx-auto max-w-md"
           >
             <svg>
               welcome-banner-light-green.svg
@@ -325,7 +325,7 @@ exports[`Splash should render without year 1`] = `
           class="container px-10 mx-auto"
         >
           <div
-            class="mx-auto w-64 lg:w-96"
+            class="flex justify-center mx-auto max-w-md"
           >
             <svg>
               welcome-banner-dark-green.svg

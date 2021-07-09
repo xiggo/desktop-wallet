@@ -15,7 +15,7 @@ export const ApplicationError = ({ resetErrorBoundary }: Partial<FallbackProps>)
 		<main className={`theme-${theme}`} data-testid="Main">
 			<Page navbarVariant="logo-only">
 				<Section className="flex flex-col flex-1 justify-center text-center">
-					<div className="mx-auto w-64 lg:w-128">
+					<div className="flex justify-center mx-auto max-w-lg">
 						<Image name="GenericError" domain="error" />
 					</div>
 
