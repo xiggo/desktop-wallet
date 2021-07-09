@@ -48,8 +48,8 @@ export const useLedgerConnection = (transport: typeof Transport) => {
 
 				wallet.mutator().alias(
 					getDefaultAlias({
+						network: wallet.network(),
 						profile,
-						ticker: wallet.network().ticker(),
 					}),
 				);
 			}

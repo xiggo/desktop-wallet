@@ -17,12 +17,15 @@ export const alias = ({
 
 	return {
 		maxLength: {
-			message: t("WALLETS.VALIDATION.ALIAS_MAXLENGTH", {
+			message: t("COMMON.VALIDATION.MAX_LENGTH", {
+				field: t("WALLETS.WALLET_NAME"),
 				maxLength,
 			}),
 			value: maxLength,
 		},
-		required: t("WALLETS.VALIDATION.ALIAS_REQUIRED"),
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("WALLETS.WALLET_NAME"),
+		}),
 		validate: {
 			duplicateAlias: (value: string) => {
 				const alias = value.trim();

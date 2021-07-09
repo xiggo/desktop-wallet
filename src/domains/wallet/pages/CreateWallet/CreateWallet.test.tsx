@@ -3,7 +3,6 @@ import { BIP39 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/sdk-profiles";
 import { act } from "@testing-library/react-hooks";
 import { translations as walletTranslations } from "domains/wallet/i18n";
-import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -77,66 +76,47 @@ describe("CreateWallet", () => {
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		act(() => {
-			fireEvent.click(backButton);
-		});
+		fireEvent.click(backButton);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
-		act(() => {
-			fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-			fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
-		});
-		await waitFor(() => expect(continueButton).not.toHaveAttribute("disabled"));
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK Dev" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
-		act(() => {
-			fireEvent.change(selectNetworkInput, { target: { value: "" } });
-		});
-		await waitFor(() => expect(continueButton).toHaveAttribute("disabled"));
+		expect(continueButton).not.toHaveAttribute("disabled");
 
-		act(() => {
-			fireEvent.change(selectNetworkInput, { target: { value: "Ark Dev" } });
-			fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
-		});
+		fireEvent.change(selectNetworkInput, { target: { value: "" } });
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(""));
 
-		await waitFor(() => expect(continueButton).not.toHaveAttribute("disabled"));
+		expect(continueButton).toHaveAttribute("disabled");
 
-		act(() => {
-			fireEvent.click(continueButton);
-		});
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK Dev" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+
+		expect(continueButton).not.toHaveAttribute("disabled");
+
+		fireEvent.click(continueButton);
 
 		await waitFor(() => expect(profile.wallets().values().length).toBe(0));
 
 		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
 
-		act(() => {
-			fireEvent.click(backButton);
-		});
-
+		fireEvent.click(backButton);
 		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
 
-		act(() => {
-			fireEvent.click(continueButton);
-		});
-
+		fireEvent.click(continueButton);
 		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
 
-		act(() => {
-			fireEvent.click(continueButton);
-		});
-
+		fireEvent.click(continueButton);
 		await waitFor(() => expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeTruthy());
 
-		act(() => {
-			fireEvent.click(backButton);
-		});
+		fireEvent.click(backButton);
 
 		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
 
-		act(() => {
-			fireEvent.click(continueButton);
-		});
-
+		fireEvent.click(continueButton);
 		await waitFor(() => expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeTruthy());
 
 		const walletMnemonic = passphrase.split(" ");
@@ -152,27 +132,15 @@ describe("CreateWallet", () => {
 		}
 		await waitFor(() => expect(continueButton).not.toHaveAttribute("disabled"));
 
-		act(() => {
-			fireEvent.click(continueButton);
-		});
-
+		fireEvent.click(continueButton);
 		await waitFor(() => expect(getByTestId("EncryptPassword")).toBeTruthy());
 
-		act(() => {
-			fireEvent.click(getByTestId("CreateWallet__skip-button"));
-		});
-
-		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
-
+		fireEvent.click(getByTestId("CreateWallet__skip-button"));
 		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
 
 		expect(profile.wallets().values().length).toBe(0);
 
-		const defaultAlias = getDefaultAlias({ profile, ticker: "DARK" });
-
-		act(() => {
-			fireEvent.click(getByTestId("CreateWallet__save-button"));
-		});
+		fireEvent.click(getByTestId("CreateWallet__save-button"));
 
 		await waitFor(() => expect(profile.wallets().values().length).toBe(1));
 
@@ -181,8 +149,6 @@ describe("CreateWallet", () => {
 		await waitFor(() =>
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`),
 		);
-
-		expect(wallet.alias()).toEqual(defaultAlias);
 
 		expect(asFragment()).toMatchSnapshot();
 

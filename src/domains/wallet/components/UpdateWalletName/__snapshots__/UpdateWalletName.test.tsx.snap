@@ -800,7 +800,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
                       class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
                     >
                       <span
-                        data-errortext="The name is required"
+                        data-errortext="WALLETS.VALIDATION.ALIAS_REQUIRED"
                         data-testid="Input__error"
                       >
                         <div
@@ -945,7 +945,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
                       class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
                     >
                       <span
-                        data-errortext="The name should have less than 42 characters"
+                        data-errortext="Wallet Name should have at most 42 characters"
                         data-testid="Input__error"
                       >
                         <div

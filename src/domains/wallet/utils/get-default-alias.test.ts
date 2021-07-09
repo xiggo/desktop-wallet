@@ -26,17 +26,11 @@ describe("getDefaultAlias", () => {
 		profile.wallets().push(wallet);
 
 		const result = getDefaultAlias({
+			network: wallet.network(),
 			profile,
-			ticker: wallet.network().ticker(),
 		});
 
-		expect(result).toBe("DARK #1");
-	});
-
-	it("should return a default alias when wallet does not exist yet", () => {
-		const result = getDefaultAlias({ profile, ticker: "BTC" });
-
-		expect(result).toBe("BTC #1");
+		expect(result).toBe("ARK Devnet #1");
 	});
 
 	it("should not return alias that already exist", async () => {
@@ -48,13 +42,13 @@ describe("getDefaultAlias", () => {
 
 		profile.wallets().push(wallet);
 
-		wallet.mutator().alias("DARK #1");
+		wallet.mutator().alias("ARK Devnet #1");
 
 		const result = getDefaultAlias({
+			network: wallet.network(),
 			profile,
-			ticker: wallet.network().ticker(),
 		});
 
-		expect(result).toBe("DARK #2");
+		expect(result).toBe("ARK Devnet #2");
 	});
 });

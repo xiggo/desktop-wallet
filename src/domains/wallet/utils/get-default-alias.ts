@@ -1,20 +1,17 @@
+import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 
 interface GetDefaultAliasInput {
 	profile: Contracts.IProfile;
-	ticker: string;
+	network: Networks.Network;
 }
 
-export const getDefaultAlias = ({ profile, ticker }: GetDefaultAliasInput): string => {
-	const makeAlias = (count: number) => `${ticker} #${count}`;
+export const getDefaultAlias = ({ profile, network }: GetDefaultAliasInput): string => {
+	const makeAlias = (count: number) => `${network.displayName()} #${count}`;
 
-	let sameCoinWalletsCount = 1;
+	const sameCoinWallets = profile.wallets().findByCoinWithNetwork(network.coin(), network.id());
 
-	const sameCoinWallets = profile.wallets().allByCoin()[ticker];
-
-	if (sameCoinWallets) {
-		sameCoinWalletsCount = Object.keys(sameCoinWallets).length;
-	}
+	let sameCoinWalletsCount = sameCoinWallets.length || 1;
 
 	while (profile.wallets().findByAlias(makeAlias(sameCoinWalletsCount))) {
 		sameCoinWalletsCount++;

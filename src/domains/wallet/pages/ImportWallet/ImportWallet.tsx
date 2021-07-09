@@ -115,8 +115,8 @@ export const ImportWallet = () => {
 
 		wallet.mutator().alias(
 			getDefaultAlias({
+				network: wallet.network(),
 				profile: activeProfile,
-				ticker: wallet.network().ticker(),
 			}),
 		);
 

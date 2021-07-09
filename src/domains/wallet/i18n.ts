@@ -233,8 +233,6 @@ export const translations: { [key: string]: any } = {
 
 	VALIDATION: {
 		ALIAS_ASSIGNED: "The name '{{alias}}' is already assigned to another wallet",
-		ALIAS_MAXLENGTH: "The name should have less than {{maxLength}} characters",
-		ALIAS_REQUIRED: "The name is required",
 	},
 
 	WALLET_NAME: "Wallet Name",
