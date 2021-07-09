@@ -279,6 +279,8 @@ describe("Transactions", () => {
 	});
 
 	it("should fetch more transactions", async () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -304,7 +306,31 @@ describe("Transactions", () => {
 		expect(getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.LOADING);
 
 		await waitFor(() => {
-			expect(() => getByTestId("transactions__fetch-more-button")).toThrow();
+			expect(getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.VIEW_MORE);
+			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
+		});
+
+		process.env.REACT_APP_IS_UNIT = undefined;
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should hide view more button when there are no next pages", async () => {
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		const { asFragment, getByTestId, queryByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/dashboard">
+				<Transactions profile={profile} isLoading={false} wallets={profile.wallets().values()} />
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		await waitFor(() => {
+			expect(queryByTestId("transactions__fetch-more-button")).not.toBeInTheDocument();
 			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
 		});
 

@@ -1,6 +1,7 @@
 import { Contracts, Contracts as ProfileContracts, DTO } from "@payvo/sdk-profiles";
 import { useSynchronizer } from "app/hooks";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { isUnit } from "utils/test-helpers";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -43,6 +44,7 @@ export const useProfileTransactions = ({
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
 	const cursor = useRef(1);
+	const LIMIT = isUnit() ? 0 : 30;
 
 	const [
 		{ transactions, activeMode, activeTransactionType, isLoadingTransactions, isLoadingMore, hasMore, timestamp },
@@ -57,6 +59,13 @@ export const useProfileTransactions = ({
 		timestamp: undefined,
 		transactions: [],
 	});
+
+	const hasMorePages = (itemsLength: number, hasMorePages: boolean, itemsLimit = LIMIT) => {
+		if (itemsLength < itemsLimit) {
+			return false;
+		}
+		return hasMorePages;
+	};
 
 	useEffect(() => {
 		const loadTransactions = async () => {
@@ -85,7 +94,7 @@ export const useProfileTransactions = ({
 
 			setState((state) => ({
 				...state,
-				hasMore: items.length > 0 && response.hasMorePages(),
+				hasMore: hasMorePages(items.length, response.hasMorePages()),
 				isLoadingTransactions: false,
 				transactions: items,
 			}));
@@ -142,13 +151,13 @@ export const useProfileTransactions = ({
 				profile.transactionAggregate().flush(mode);
 			}
 
-			const defaultQuery = { addresses: wallets.map((wallet) => wallet.address()), limit: 30 };
+			const defaultQuery = { addresses: wallets.map((wallet) => wallet.address()), limit: LIMIT };
 			const queryParameters = transactionType ? { ...defaultQuery, ...transactionType } : defaultQuery;
 
 			// @ts-ignore
 			return profile.transactionAggregate()[mode](queryParameters);
 		},
-		[profile],
+		[LIMIT, profile],
 	);
 
 	const filterTransactions = ({ showUnconfirmed, transactions }: FilterTransactionProperties) => {
@@ -175,7 +184,7 @@ export const useProfileTransactions = ({
 
 		setState((state) => ({
 			...state,
-			hasMore: items.length > 0 && response.hasMorePages(),
+			hasMore: hasMorePages(items.length, response.hasMorePages()),
 			isLoadingMore: false,
 			transactions: [...state.transactions, ...items],
 		}));
@@ -206,7 +215,7 @@ export const useProfileTransactions = ({
 
 		setState((state) => ({
 			...state,
-			hasMore: items.length > 0 && response.hasMorePages(),
+			hasMore: hasMorePages(items.length, response.hasMorePages(), 1),
 			isLoadingMore: false,
 			transactions: items,
 		}));

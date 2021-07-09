@@ -312,6 +312,8 @@ describe("WalletDetails", () => {
 	});
 
 	it("should fetch more transactions", async () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
 		const { getByTestId, getAllByTestId } = await renderPage({
 			waitForTopSection: true,
 			waitForTransactions: true,

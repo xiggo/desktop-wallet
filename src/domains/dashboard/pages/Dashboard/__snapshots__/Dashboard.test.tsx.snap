@@ -1670,17 +1670,6 @@ exports[`Dashboard should render 1`] = `
               </table>
             </div>
           </div>
-          <button
-            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB mt-10 mb-5 w-full"
-            data-testid="transactions__fetch-more-button"
-            type="button"
-          >
-            <div
-              class="flex relative items-center space-x-2"
-            >
-              View More
-            </div>
-          </button>
         </div>
       </div>
     </div>
@@ -6107,17 +6096,6 @@ exports[`Dashboard should show warning for errored networks 1`] = `
               </table>
             </div>
           </div>
-          <button
-            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB mt-10 mb-5 w-full"
-            data-testid="transactions__fetch-more-button"
-            type="button"
-          >
-            <div
-              class="flex relative items-center space-x-2"
-            >
-              View More
-            </div>
-          </button>
         </div>
       </div>
     </div>
