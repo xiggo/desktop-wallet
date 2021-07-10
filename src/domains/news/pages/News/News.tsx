@@ -1,4 +1,4 @@
-import { Blockfolio, BlockfolioResponse, BlockfolioSignal } from "@payvo/sdk-news";
+import { Blockfolio, BlockfolioResponse, BlockfolioSignal } from "@payvo/news";
 import { Contracts } from "@payvo/sdk-profiles";
 import { SvgCollection } from "app/assets/svg";
 import { EmptyResults } from "app/components/EmptyResults";

@@ -5004,6 +5004,14 @@
     dayjs "^1.10.4"
     dinero.js "^1.8.1"
 
+"@payvo/news@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@payvo/news/-/news-1.0.0.tgz#a8e7185cda5c3f71c6da39392eb4473bcc35b0e4"
+  integrity sha512-p934sTOjIMfQPr3Ps+sPLsehue46tEZt97mjJVj9djUkkKmO3Hk52OOtKjOe3PfR+rykO2tk8jQolnuFqvKk2w==
+  dependencies:
+    "@payvo/sdk-http" "^1.1.0"
+    rss-parser "^3.9.0"
+
 "@payvo/sdk-ada@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@payvo/sdk-ada/-/sdk-ada-1.0.7.tgz#64c01638b280165691d1f39cce46fd2cfb4226ba"
@@ -5159,6 +5167,11 @@
   resolved "https://registry.yarnpkg.com/@payvo/sdk-http/-/sdk-http-1.0.7.tgz#bdeb2cbefafda76d56517433dca7d5ff119df9a1"
   integrity sha512-V/YK7kMbNJRuZ4xAISGHx/gMOqD84ZwevzuCWglUX6OaPlKjNzFTVwW58nAzVW2tWMNzfAP/UAYbTC24clNRmA==
 
+"@payvo/sdk-http@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-http/-/sdk-http-1.1.0.tgz#0cb3e86bf4d29fceebe02acb8385d6a84a2d9969"
+  integrity sha512-GVq1Lp+YdGyCgD2uDYJl8GA93T/hMEl/uJRTJBJxdmmwflIQ0S7yEdJDJ0KKmAb2lb7G1H3+IQesHJQnO2ZjIA==
+
 "@payvo/sdk-lsk@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@payvo/sdk-lsk/-/sdk-lsk-1.0.7.tgz#410513a05090047a3135f0566cff948bc7ebb410"
@@ -5223,15 +5236,6 @@
     "@payvo/sdk" "1.0.7"
     "@payvo/sdk-http" "1.0.7"
     uuid "^8.3.2"
-
-"@payvo/sdk-news@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-news/-/sdk-news-1.0.7.tgz#b77c997de7ecfb6d7acf3a87ebdd5bfd4a48c943"
-  integrity sha512-a+tPrJhhLdA23IOMlJn5xurML/uC3UASypQD5S5GBFkn+DD4zNTdKcqtEXe9V1e4uVvRdgglHGeHOw5fpoUhmg==
-  dependencies:
-    "@payvo/sdk" "1.0.7"
-    "@payvo/sdk-http" "1.0.7"
-    rss-parser "^3.9.0"
 
 "@payvo/sdk-profiles@^1.0.7":
   version "1.0.7"
