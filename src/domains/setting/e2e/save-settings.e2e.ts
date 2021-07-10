@@ -29,7 +29,7 @@ createFixture(`Save settings`, [
 	),
 ]);
 
-test("should save settings", async (t) => {
+test("should save general settings", async (t) => {
 	await goToSettings(t);
 
 	const nameInput = Selector('input[data-testid="General-settings__input--name"]');
@@ -43,7 +43,24 @@ test("should save settings", async (t) => {
 	await t.click(Selector("[data-testid=Input__suggestion]").withText("15 minutes"));
 	await t.click('[data-testid="SelectDropdown__option--0"]');
 
-	await t.click(Selector("input[name=isDarkMode]").parent());
+	await saveSettings(t);
+});
+
+test("should save appearance settings", async (t) => {
+	await goToSettings(t);
+
+	// click appearance item in the side navigation
+	await t.click(Selector("[data-testid=side-menu__item--appearance]"));
+
+	await t.expect(Selector("[data-testid=header__title]").textContent).eql(translations.SETTINGS.APPEARANCE.TITLE);
+
+	// change accent color
+	await t.click(Selector(`[aria-label=${translations.SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS.BLUE}]`));
+
+	// change viewing mode
+	await t.click(
+		Selector("button").withText(translations.SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.DARK),
+	);
 
 	await saveSettings(t);
 });

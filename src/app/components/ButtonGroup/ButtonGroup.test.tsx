@@ -42,6 +42,18 @@ describe("ButtonGroupOption", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with modern variant", () => {
+		const { result: state } = renderHook(() => useSelectionState(undefined));
+
+		const { asFragment } = render(
+			<ButtonGroupOption {...state.current} value="test" variant="modern" tooltipContent="tooltip">
+				Test
+			</ButtonGroupOption>,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should work with useSelectionState", () => {
 		const { result: state } = renderHook(() => useSelectionState(undefined));
 		const { getAllByTestId } = render(

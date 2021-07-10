@@ -1107,7 +1107,8 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                           >
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="25"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -1128,7 +1129,8 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                             </button>
                             <button
                               aria-checked="true"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="25"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -1149,7 +1151,8 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                             </button>
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="25"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"

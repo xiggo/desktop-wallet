@@ -660,7 +660,8 @@ exports[`SendIpfs should render form step 1`] = `
           >
             <button
               aria-checked="false"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+              aria-label=""
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -688,7 +689,8 @@ exports[`SendIpfs should render form step 1`] = `
             </button>
             <button
               aria-checked="true"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+              aria-label=""
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -716,7 +718,8 @@ exports[`SendIpfs should render form step 1`] = `
             </button>
             <button
               aria-checked="false"
-              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+              aria-label=""
+              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
               data-testid="ButtonGroupOption"
               role="radio"
               type="button"
@@ -3895,7 +3898,8 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                           >
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="5"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3916,7 +3920,8 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                             </button>
                             <button
                               aria-checked="true"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="5"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3937,7 +3942,8 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                             </button>
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="5"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"

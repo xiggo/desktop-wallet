@@ -365,6 +365,33 @@ exports[`General Settings should disable submit button when profile is not resto
                     </span>
                   </li>
                 </div>
+                <div
+                  class="relative cursor-pointer"
+                  data-testid="side-menu__item--appearance"
+                >
+                  <li
+                    class="rounded py-5 pl-10 pr-8 h-15 flex items-center"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    >
+                      <div
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          appearance.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Appearance
+                    </span>
+                  </li>
+                </div>
               </ul>
             </div>
           </div>
@@ -1082,7 +1109,7 @@ exports[`General Settings should disable submit button when profile is not resto
                       Security
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1286,7 +1313,7 @@ exports[`General Settings should disable submit button when profile is not resto
                       Other
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -1433,55 +1460,6 @@ exports[`General Settings should disable submit button when profile is not resto
                               data-testid="list-divided-item__label--description"
                             >
                               Enables transaction history on Portfolio page
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="flex flex-col w-full py-6"
-                        data-testid="list-divided-item__wrapper"
-                      >
-                        <div
-                          class="flex justify-between items-center"
-                          data-testid="list-divided-item__inner-wrapper"
-                        >
-                          <div
-                            class="flex flex-col space-y-2 w-full"
-                          >
-                            <div
-                              class="flex justify-between items-center space-x-5"
-                            >
-                              <span
-                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                                data-testid="list-divided-item__label"
-                              >
-                                Dark Theme
-                              </span>
-                              <span>
-                                <label
-                                  class="flex"
-                                >
-                                  <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
-                                    data-testid="General-settings__toggle--isDarkMode"
-                                    name="isDarkMode"
-                                    type="checkbox"
-                                  />
-                                  <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
-                                  >
-                                    <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
-                                    />
-                                  </div>
-                                </label>
-                              </span>
-                            </div>
-                            <span
-                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-                              data-testid="list-divided-item__label--description"
-                            >
-                              Enables a dark, high contrast scheme.
                             </span>
                           </div>
                         </div>
@@ -1913,6 +1891,33 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                       class="text-lg font-semibold"
                     >
                       Export
+                    </span>
+                  </li>
+                </div>
+                <div
+                  class="relative cursor-pointer"
+                  data-testid="side-menu__item--appearance"
+                >
+                  <li
+                    class="rounded py-5 pl-10 pr-8 h-15 flex items-center"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    >
+                      <div
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          appearance.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Appearance
                     </span>
                   </li>
                 </div>
@@ -2647,7 +2652,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                       Security
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2851,7 +2856,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                       Other
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -2998,55 +3003,6 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                               data-testid="list-divided-item__label--description"
                             >
                               Enables transaction history on Portfolio page
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="flex flex-col w-full py-6"
-                        data-testid="list-divided-item__wrapper"
-                      >
-                        <div
-                          class="flex justify-between items-center"
-                          data-testid="list-divided-item__inner-wrapper"
-                        >
-                          <div
-                            class="flex flex-col space-y-2 w-full"
-                          >
-                            <div
-                              class="flex justify-between items-center space-x-5"
-                            >
-                              <span
-                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                                data-testid="list-divided-item__label"
-                              >
-                                Dark Theme
-                              </span>
-                              <span>
-                                <label
-                                  class="flex"
-                                >
-                                  <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
-                                    data-testid="General-settings__toggle--isDarkMode"
-                                    name="isDarkMode"
-                                    type="checkbox"
-                                  />
-                                  <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
-                                  >
-                                    <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
-                                    />
-                                  </div>
-                                </label>
-                              </span>
-                            </div>
-                            <span
-                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-                              data-testid="list-divided-item__label--description"
-                            >
-                              Enables a dark, high contrast scheme.
                             </span>
                           </div>
                         </div>
@@ -3477,6 +3433,33 @@ exports[`General Settings should render 1`] = `
                       class="text-lg font-semibold"
                     >
                       Export
+                    </span>
+                  </li>
+                </div>
+                <div
+                  class="relative cursor-pointer"
+                  data-testid="side-menu__item--appearance"
+                >
+                  <li
+                    class="rounded py-5 pl-10 pr-8 h-15 flex items-center"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    >
+                      <div
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          appearance.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Appearance
                     </span>
                   </li>
                 </div>
@@ -4197,7 +4180,7 @@ exports[`General Settings should render 1`] = `
                       Security
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -4401,7 +4384,7 @@ exports[`General Settings should render 1`] = `
                       Other
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -4548,55 +4531,6 @@ exports[`General Settings should render 1`] = `
                               data-testid="list-divided-item__label--description"
                             >
                               Enables transaction history on Portfolio page
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="flex flex-col w-full py-6"
-                        data-testid="list-divided-item__wrapper"
-                      >
-                        <div
-                          class="flex justify-between items-center"
-                          data-testid="list-divided-item__inner-wrapper"
-                        >
-                          <div
-                            class="flex flex-col space-y-2 w-full"
-                          >
-                            <div
-                              class="flex justify-between items-center space-x-5"
-                            >
-                              <span
-                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                                data-testid="list-divided-item__label"
-                              >
-                                Dark Theme
-                              </span>
-                              <span>
-                                <label
-                                  class="flex"
-                                >
-                                  <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
-                                    data-testid="General-settings__toggle--isDarkMode"
-                                    name="isDarkMode"
-                                    type="checkbox"
-                                  />
-                                  <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
-                                  >
-                                    <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
-                                    />
-                                  </div>
-                                </label>
-                              </span>
-                            </div>
-                            <span
-                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-                              data-testid="list-divided-item__label--description"
-                            >
-                              Enables a dark, high contrast scheme.
                             </span>
                           </div>
                         </div>
@@ -5027,6 +4961,33 @@ exports[`General Settings should update profile 1`] = `
                       class="text-lg font-semibold"
                     >
                       Export
+                    </span>
+                  </li>
+                </div>
+                <div
+                  class="relative cursor-pointer"
+                  data-testid="side-menu__item--appearance"
+                >
+                  <li
+                    class="rounded py-5 pl-10 pr-8 h-15 flex items-center"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    >
+                      <div
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          appearance.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Appearance
                     </span>
                   </li>
                 </div>
@@ -5747,7 +5708,7 @@ exports[`General Settings should update profile 1`] = `
                       Security
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -5952,7 +5913,7 @@ exports[`General Settings should update profile 1`] = `
                       Other
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -6098,56 +6059,6 @@ exports[`General Settings should update profile 1`] = `
                               data-testid="list-divided-item__label--description"
                             >
                               Enables transaction history on Portfolio page
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="flex flex-col w-full py-6"
-                        data-testid="list-divided-item__wrapper"
-                      >
-                        <div
-                          class="flex justify-between items-center"
-                          data-testid="list-divided-item__inner-wrapper"
-                        >
-                          <div
-                            class="flex flex-col space-y-2 w-full"
-                          >
-                            <div
-                              class="flex justify-between items-center space-x-5"
-                            >
-                              <span
-                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                                data-testid="list-divided-item__label"
-                              >
-                                Dark Theme
-                              </span>
-                              <span>
-                                <label
-                                  class="flex"
-                                >
-                                  <input
-                                    checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
-                                    data-testid="General-settings__toggle--isDarkMode"
-                                    name="isDarkMode"
-                                    type="checkbox"
-                                  />
-                                  <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
-                                  >
-                                    <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
-                                    />
-                                  </div>
-                                </label>
-                              </span>
-                            </div>
-                            <span
-                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-                              data-testid="list-divided-item__label--description"
-                            >
-                              Enables a dark, high contrast scheme.
                             </span>
                           </div>
                         </div>
@@ -6578,6 +6489,33 @@ exports[`General Settings should update the avatar when removing focus from name
                       class="text-lg font-semibold"
                     >
                       Export
+                    </span>
+                  </li>
+                </div>
+                <div
+                  class="relative cursor-pointer"
+                  data-testid="side-menu__item--appearance"
+                >
+                  <li
+                    class="rounded py-5 pl-10 pr-8 h-15 flex items-center"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    >
+                      <div
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          appearance.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Appearance
                     </span>
                   </li>
                 </div>
@@ -7298,7 +7236,7 @@ exports[`General Settings should update the avatar when removing focus from name
                       Security
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -7502,7 +7440,7 @@ exports[`General Settings should update the avatar when removing focus from name
                       Other
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -7649,55 +7587,6 @@ exports[`General Settings should update the avatar when removing focus from name
                               data-testid="list-divided-item__label--description"
                             >
                               Enables transaction history on Portfolio page
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="flex flex-col w-full py-6"
-                        data-testid="list-divided-item__wrapper"
-                      >
-                        <div
-                          class="flex justify-between items-center"
-                          data-testid="list-divided-item__inner-wrapper"
-                        >
-                          <div
-                            class="flex flex-col space-y-2 w-full"
-                          >
-                            <div
-                              class="flex justify-between items-center space-x-5"
-                            >
-                              <span
-                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                                data-testid="list-divided-item__label"
-                              >
-                                Dark Theme
-                              </span>
-                              <span>
-                                <label
-                                  class="flex"
-                                >
-                                  <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
-                                    data-testid="General-settings__toggle--isDarkMode"
-                                    name="isDarkMode"
-                                    type="checkbox"
-                                  />
-                                  <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
-                                  >
-                                    <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
-                                    />
-                                  </div>
-                                </label>
-                              </span>
-                            </div>
-                            <span
-                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-                              data-testid="list-divided-item__label--description"
-                            >
-                              Enables a dark, high contrast scheme.
                             </span>
                           </div>
                         </div>
@@ -8128,6 +8017,33 @@ exports[`General Settings should update the avatar when removing focus from name
                       class="text-lg font-semibold"
                     >
                       Export
+                    </span>
+                  </li>
+                </div>
+                <div
+                  class="relative cursor-pointer"
+                  data-testid="side-menu__item--appearance"
+                >
+                  <li
+                    class="rounded py-5 pl-10 pr-8 h-15 flex items-center"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    >
+                      <div
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          appearance.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Appearance
                     </span>
                   </li>
                 </div>
@@ -8860,7 +8776,7 @@ exports[`General Settings should update the avatar when removing focus from name
                       Security
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -9064,7 +8980,7 @@ exports[`General Settings should update the avatar when removing focus from name
                       Other
                     </h2>
                     <ul
-                      class="sc-dlfnbm cOiGXi"
+                      class="sc-hKgILt gfmZFQ"
                       data-testid="list-divided__items"
                     >
                       <li
@@ -9211,55 +9127,6 @@ exports[`General Settings should update the avatar when removing focus from name
                               data-testid="list-divided-item__label--description"
                             >
                               Enables transaction history on Portfolio page
-                            </span>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="flex flex-col w-full py-6"
-                        data-testid="list-divided-item__wrapper"
-                      >
-                        <div
-                          class="flex justify-between items-center"
-                          data-testid="list-divided-item__inner-wrapper"
-                        >
-                          <div
-                            class="flex flex-col space-y-2 w-full"
-                          >
-                            <div
-                              class="flex justify-between items-center space-x-5"
-                            >
-                              <span
-                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                                data-testid="list-divided-item__label"
-                              >
-                                Dark Theme
-                              </span>
-                              <span>
-                                <label
-                                  class="flex"
-                                >
-                                  <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
-                                    data-testid="General-settings__toggle--isDarkMode"
-                                    name="isDarkMode"
-                                    type="checkbox"
-                                  />
-                                  <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
-                                  >
-                                    <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
-                                    />
-                                  </div>
-                                </label>
-                              </span>
-                            </div>
-                            <span
-                              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-                              data-testid="list-divided-item__label--description"
-                            >
-                              Enables a dark, high contrast scheme.
                             </span>
                           </div>
                         </div>

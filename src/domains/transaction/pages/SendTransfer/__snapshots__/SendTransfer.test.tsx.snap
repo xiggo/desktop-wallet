@@ -2792,7 +2792,8 @@ exports[`SendTransfer should render form and use location state 1`] = `
                           >
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.00357"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -2813,7 +2814,8 @@ exports[`SendTransfer should render form and use location state 1`] = `
                             </button>
                             <button
                               aria-checked="true"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.07320598"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -2834,7 +2836,8 @@ exports[`SendTransfer should render form and use location state 1`] = `
                             </button>
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.1"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3798,7 +3801,8 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           >
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.00357"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3819,7 +3823,8 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             </button>
                             <button
                               aria-checked="true"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.07320598"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -3840,7 +3845,8 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             </button>
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.1"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -7695,7 +7701,8 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                           >
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.00357"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -7716,7 +7723,8 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                             </button>
                             <button
                               aria-checked="true"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.07320598"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"
@@ -7737,7 +7745,8 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                             </button>
                             <button
                               aria-checked="false"
-                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                              aria-label="0.1"
+                              class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                               data-testid="ButtonGroupOption"
                               role="radio"
                               type="button"

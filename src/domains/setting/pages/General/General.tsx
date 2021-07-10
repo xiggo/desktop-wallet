@@ -9,7 +9,7 @@ import { Select } from "app/components/SelectDropdown";
 import { SelectProfileImage } from "app/components/SelectProfileImage";
 import { Toggle } from "app/components/Toggle";
 import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useProfileJobs, useTheme, useValidation } from "app/hooks";
+import { useActiveProfile, useProfileJobs, useValidation } from "app/hooks";
 import { toasts } from "app/services";
 import { PlatformSdkChoices } from "data";
 import { ResetProfile } from "domains/profile/components/ResetProfile";
@@ -29,7 +29,6 @@ interface GeneralSettingsState {
 	dashboardTransactionHistory: boolean;
 	errorReporting: boolean;
 	exchangeCurrency: string;
-	isDarkMode: boolean;
 	locale: string;
 	marketProvider: string;
 	name: string;
@@ -44,7 +43,6 @@ export const GeneralSettings: React.FC = () => {
 	const isProfileRestored = profile.status().isRestored();
 
 	const { persist } = useEnvironmentContext();
-	const { setProfileTheme } = useTheme();
 	const { syncExchangeRates } = useProfileJobs(profile);
 
 	const history = useHistory();
@@ -63,7 +61,6 @@ export const GeneralSettings: React.FC = () => {
 			dashboardTransactionHistory: settings.get(Contracts.ProfileSetting.DashboardTransactionHistory),
 			errorReporting: settings.get(Contracts.ProfileSetting.ErrorReporting),
 			exchangeCurrency: settings.get(Contracts.ProfileSetting.ExchangeCurrency),
-			isDarkMode: settings.get(Contracts.ProfileSetting.Theme) === "dark",
 			locale: settings.get(Contracts.ProfileSetting.Locale),
 			marketProvider: settings.get(Contracts.ProfileSetting.MarketProvider),
 			name,
@@ -144,7 +141,6 @@ export const GeneralSettings: React.FC = () => {
 		setIsResetProfileOpen(false);
 		reset(getDefaultValues());
 
-		setProfileTheme(profile);
 		window.scrollTo({ behavior: "smooth", top: 0 });
 	};
 
@@ -223,19 +219,6 @@ export const GeneralSettings: React.FC = () => {
 			labelDescription: t("SETTINGS.GENERAL.OTHER.TRANSACTION_HISTORY.DESCRIPTION"),
 			wrapperClass: "py-6",
 		},
-		{
-			label: t("SETTINGS.GENERAL.OTHER.DARK_THEME.TITLE"),
-			labelAddon: (
-				<Toggle
-					ref={register()}
-					name="isDarkMode"
-					defaultChecked={getDefaultValues().isDarkMode}
-					data-testid="General-settings__toggle--isDarkMode"
-				/>
-			),
-			labelDescription: t("SETTINGS.GENERAL.OTHER.DARK_THEME.DESCRIPTION"),
-			wrapperClass: "py-6",
-		},
 	];
 
 	const handleSubmit = async ({
@@ -245,7 +228,6 @@ export const GeneralSettings: React.FC = () => {
 		dashboardTransactionHistory,
 		errorReporting,
 		exchangeCurrency,
-		isDarkMode,
 		locale,
 		marketProvider,
 		name,
@@ -262,7 +244,6 @@ export const GeneralSettings: React.FC = () => {
 		profile.settings().set(Contracts.ProfileSetting.MarketProvider, marketProvider);
 		profile.settings().set(Contracts.ProfileSetting.Name, name);
 		profile.settings().set(Contracts.ProfileSetting.ScreenshotProtection, screenshotProtection);
-		profile.settings().set(Contracts.ProfileSetting.Theme, isDarkMode ? "dark" : "light");
 		profile.settings().set(Contracts.ProfileSetting.TimeFormat, timeFormat);
 		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, useTestNetworks);
 
@@ -273,8 +254,6 @@ export const GeneralSettings: React.FC = () => {
 		}
 
 		setScreenshotProtection(screenshotProtection);
-
-		setProfileTheme(profile);
 
 		await syncExchangeRates();
 

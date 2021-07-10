@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppearanceForm should render 1`] = `
+<DocumentFragment>
+  <form
+    class="mt-8"
+    data-testid="AppearanceForm"
+  >
+    <ul
+      class="sc-gsTCUz gZXjGp"
+      data-testid="list-divided__items"
+    >
+      <li
+        class="flex flex-col w-full pt-4 pb-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex flex-col space-y-2 w-full"
+          >
+            <div
+              class="flex justify-between items-center space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Accent Color
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Choose a color for buttons and other wallet features.
+            </span>
+          </div>
+          <div
+            class=""
+          >
+            <span
+              data-testid="list-divided-item__value"
+            >
+              <div
+                class="inline-flex items-center space-x-3 w-full"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="false"
+                  aria-label="Blue"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 kljpGq"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="w-5 h-5 rounded bg-theme-info-600"
+                  />
+                </button>
+                <button
+                  aria-checked="true"
+                  aria-label="Green"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 kljpGq"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="w-5 h-5 rounded bg-theme-success-600"
+                  />
+                </button>
+              </div>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="flex flex-col w-full pt-4 pb-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex flex-col space-y-2 w-full"
+          >
+            <div
+              class="flex justify-between items-center space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Viewing Mode
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Choose a light or dark viewing mode.
+            </span>
+          </div>
+          <div
+            class=""
+          >
+            <span
+              data-testid="list-divided-item__value"
+            >
+              <div
+                class="inline-flex items-center space-x-3 w-full"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="true"
+                  aria-label="light"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 kljpGq"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2 px-2"
+                  >
+                    <div
+                      class="sc-bdfBwQ hjDozt"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        light.svg
+                      </svg>
+                    </div>
+                    <span>
+                      Light
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="dark"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 kljpGq"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2 px-2"
+                  >
+                    <div
+                      class="sc-bdfBwQ hjDozt"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        dark.svg
+                      </svg>
+                    </div>
+                    <span>
+                      Dark
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div
+      class="flex justify-end mt-8 space-x-3 w-full"
+    >
+      <button
+        class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+        data-testid="AppearanceFooterButtons__cancel"
+        type="button"
+      >
+        <div
+          class="flex relative items-center space-x-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <button
+        class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
+        data-testid="AppearanceFooterButtons__save"
+        type="submit"
+      >
+        <div
+          class="flex relative items-center space-x-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;

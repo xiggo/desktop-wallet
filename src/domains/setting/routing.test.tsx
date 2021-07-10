@@ -11,7 +11,10 @@ describe("Setting routing", () => {
 		expect(SettingRoutes[2].path).toEqual("/profiles/:profileId/settings/export");
 		expect(SettingRoutes[2].exact).toEqual(true);
 
-		expect(SettingRoutes[3].path).toEqual("/profiles/:profileId/settings");
+		expect(SettingRoutes[3].path).toEqual("/profiles/:profileId/settings/appearance");
 		expect(SettingRoutes[3].exact).toEqual(true);
+
+		expect(SettingRoutes[4].path).toEqual("/profiles/:profileId/settings");
+		expect(SettingRoutes[4].exact).toEqual(true);
 	});
 });

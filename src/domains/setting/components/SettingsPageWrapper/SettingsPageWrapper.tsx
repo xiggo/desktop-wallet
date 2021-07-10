@@ -5,7 +5,7 @@ import { useSettingsMenu } from "domains/setting/hooks/use-settings-menu";
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-type ActiveSettings = "general" | "export" | "password";
+type ActiveSettings = "general" | "export" | "password" | "appearance";
 
 export const SettingsWrapper = ({
 	children,

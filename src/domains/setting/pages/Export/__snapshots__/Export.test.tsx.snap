@@ -365,6 +365,33 @@ exports[`Export Settings should render export settings 1`] = `
                     </span>
                   </li>
                 </div>
+                <div
+                  class="relative cursor-pointer"
+                  data-testid="side-menu__item--appearance"
+                >
+                  <li
+                    class="rounded py-5 pl-10 pr-8 h-15 flex items-center"
+                  >
+                    <div
+                      class="mr-3 text-theme-primary-300 dark:text-theme-secondary-600"
+                    >
+                      <div
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          appearance.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="text-lg font-semibold"
+                    >
+                      Appearance
+                    </span>
+                  </li>
+                </div>
               </ul>
             </div>
           </div>
@@ -408,7 +435,7 @@ exports[`Export Settings should render export settings 1`] = `
                     Wallets
                   </h2>
                   <ul
-                    class="sc-dlfnbm cOiGXi"
+                    class="sc-hKgILt gfmZFQ"
                     data-testid="list-divided__items"
                   >
                     <li

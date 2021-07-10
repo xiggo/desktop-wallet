@@ -1,4 +1,28 @@
 export const translations: { [key: string]: any } = {
+	APPEARANCE: {
+		MENU_ITEM: "Appearance",
+		OPTIONS: {
+			ACCENT_COLOR: {
+				COLORS: {
+					BLUE: "Blue",
+					GREEN: "Green",
+				},
+				DESCRIPTION: "Choose a color for buttons and other wallet features.",
+				TITLE: "Accent Color",
+			},
+			VIEWING_MODE: {
+				DESCRIPTION: "Choose a light or dark viewing mode.",
+				TITLE: "Viewing Mode",
+				VIEWING_MODES: {
+					DARK: "Dark",
+					LIGHT: "Light",
+				},
+			},
+		},
+		SUBTITLE: "Customize the look of the application.",
+		TITLE: "Appearance",
+	},
+
 	EXPORT: {
 		ADD_INFORMATION_ABOUT_THE_NETWORK: "Add information about the network",
 		MENU_ITEM: "Export",

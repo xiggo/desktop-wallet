@@ -19,6 +19,11 @@ export const useSettingsMenu = () => {
 			itemKey: "export",
 			label: t("SETTINGS.EXPORT.MENU_ITEM"),
 		},
+		{
+			icon: "Appearance",
+			itemKey: "appearance",
+			label: t("SETTINGS.APPEARANCE.MENU_ITEM"),
+		},
 	];
 
 	return { menuItems };

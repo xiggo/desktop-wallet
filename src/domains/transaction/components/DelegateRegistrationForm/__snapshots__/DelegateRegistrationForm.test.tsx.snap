@@ -255,7 +255,8 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
               >
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="0"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -283,7 +284,8 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
                 </button>
                 <button
                   aria-checked="true"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="1.354"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -311,7 +313,8 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
                 </button>
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="10"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -583,7 +586,8 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
               >
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="0"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -611,7 +615,8 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
                 </button>
                 <button
                   aria-checked="true"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="1.354"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -639,7 +644,8 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
                 </button>
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="10"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1426,7 +1432,8 @@ exports[`DelegateRegistrationForm should set username 1`] = `
               >
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="0"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1454,7 +1461,8 @@ exports[`DelegateRegistrationForm should set username 1`] = `
                 </button>
                 <button
                   aria-checked="true"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="1.354"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1482,7 +1490,8 @@ exports[`DelegateRegistrationForm should set username 1`] = `
                 </button>
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="10"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1773,7 +1782,8 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
               >
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="0"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1801,7 +1811,8 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
                 </button>
                 <button
                   aria-checked="true"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="1.354"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -1829,7 +1840,8 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
                 </button>
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="10"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -2120,7 +2132,8 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
               >
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="0"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -2148,7 +2161,8 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
                 </button>
                 <button
                   aria-checked="true"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="1.354"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"
@@ -2176,7 +2190,8 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
                 </button>
                 <button
                   aria-checked="false"
-                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dmyfLm"
+                  aria-label="10"
+                  class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 dDjZqB"
                   data-testid="ButtonGroupOption"
                   role="radio"
                   type="button"

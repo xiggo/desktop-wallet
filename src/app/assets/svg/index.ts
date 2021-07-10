@@ -6,6 +6,7 @@ import { ReactComponent as AlertHint } from "./alert-hint.svg";
 import { ReactComponent as AlertInfo } from "./alert-info.svg";
 import { ReactComponent as AlertSuccess } from "./alert-success.svg";
 import { ReactComponent as AlertWarning } from "./alert-warning.svg";
+import { ReactComponent as Appearance } from "./appearance.svg";
 import { ReactComponent as ArrowLeft } from "./arrow-left.svg";
 import { ReactComponent as ArrowRight } from "./arrow-right.svg";
 import { ReactComponent as Article } from "./article.svg";
@@ -31,6 +32,7 @@ import { ReactComponent as Copy } from "./copy.svg";
 import { ReactComponent as CopyAddress } from "./copy-address.svg";
 import { ReactComponent as CopyKey } from "./copy-key.svg";
 import { ReactComponent as CrossSlim } from "./cross-slim.svg";
+import { ReactComponent as Dark } from "./dark.svg";
 import { ReactComponent as Dash } from "./dash.svg";
 import { ReactComponent as Delegate } from "./delegate.svg";
 import { ReactComponent as DelegateResigned } from "./delegate-resigned.svg";
@@ -58,6 +60,7 @@ import { ReactComponent as Ipfs } from "./ipfs.svg";
 import { ReactComponent as JsonFile } from "./json-file.svg";
 import { ReactComponent as Key } from "./key.svg";
 import { ReactComponent as Ledger } from "./ledger.svg";
+import { ReactComponent as Light } from "./light.svg";
 import { ReactComponent as Link } from "./link.svg";
 import { ReactComponent as ListView } from "./list-view.svg";
 import { ReactComponent as LoaderLogo } from "./loader-logo.svg";
@@ -122,6 +125,7 @@ export const SvgCollection: any = {
 	AlertInfo,
 	AlertSuccess,
 	AlertWarning,
+	Appearance,
 	ArrowLeft,
 	ArrowRight,
 	Article,
@@ -147,6 +151,7 @@ export const SvgCollection: any = {
 	CopyAddress,
 	CopyKey,
 	CrossSlim,
+	Dark,
 	Dash,
 	Delegate,
 	DelegateResigned,
@@ -174,6 +179,7 @@ export const SvgCollection: any = {
 	JsonFile,
 	Key,
 	Ledger,
+	Light,
 	Link,
 	ListView,
 	LoaderLogo,

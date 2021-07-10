@@ -268,9 +268,6 @@ describe("General Settings", () => {
 		// Toggle Portfolio Transaction History
 		fireEvent.click(getByTestId("General-settings__toggle--dashboardTransactionHistory"));
 
-		// Toggle Dark Theme
-		fireEvent.click(getByTestId("General-settings__toggle--isDarkMode"));
-
 		await act(async () => {
 			fireEvent.click(getByTestId("General-settings__submit-button"));
 		});
@@ -518,10 +515,6 @@ describe("General Settings", () => {
 
 		expect(container).toBeTruthy();
 
-		fireEvent.click(getByTestId("General-settings__toggle--isDarkMode"));
-
-		await waitFor(() => expect(getByTestId("General-settings__toggle--isDarkMode")).toBeChecked());
-
 		await act(async () => {
 			fireEvent.click(getByTestId("General-settings__submit-button"));
 		});
@@ -537,7 +530,5 @@ describe("General Settings", () => {
 		await act(async () => {
 			fireEvent.click(getByTestId("ResetProfile__submit-button"));
 		});
-
-		await waitFor(() => expect(getByTestId("General-settings__toggle--isDarkMode")).not.toBeChecked());
 	});
 });

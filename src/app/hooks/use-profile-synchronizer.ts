@@ -1,6 +1,7 @@
 import { uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
+import { useAccentColor } from "app/hooks/use-accent-color";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import { useEffect, useMemo, useRef } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
@@ -260,6 +261,7 @@ export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchro
 	const { allJobs } = useProfileJobs(profile);
 	const { start, stop, runAll } = useSynchronizer(allJobs);
 	const { setProfileTheme, resetTheme } = useTheme();
+	const { setProfileAccentColor } = useAccentColor();
 	const { setScreenshotProtection } = useScreenshotProtection();
 	const history = useHistory();
 
@@ -293,6 +295,7 @@ export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchro
 				await restoreProfile(profile);
 
 				setProfileTheme(profile);
+				setProfileAccentColor(profile);
 				setScreenshotProtection(profile);
 			}
 
@@ -322,6 +325,7 @@ export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchro
 		env,
 		resetTheme,
 		setProfileTheme,
+		setProfileAccentColor,
 		allJobs,
 		profile,
 		runAll,

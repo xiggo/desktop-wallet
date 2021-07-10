@@ -1,4 +1,4 @@
-import { ExportSettings, GeneralSettings, PasswordSettings } from "domains/setting/pages";
+import { AppearanceSettings, ExportSettings, GeneralSettings, PasswordSettings } from "domains/setting/pages";
 
 export const SettingRoutes = [
 	{
@@ -15,6 +15,11 @@ export const SettingRoutes = [
 		component: ExportSettings,
 		exact: true,
 		path: "/profiles/:profileId/settings/export",
+	},
+	{
+		component: AppearanceSettings,
+		exact: true,
+		path: "/profiles/:profileId/settings/appearance",
 	},
 	{
 		component: GeneralSettings,
