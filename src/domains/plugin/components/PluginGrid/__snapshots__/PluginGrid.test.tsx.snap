@@ -48,17 +48,15 @@ exports[`PluginGrid should not render pagination 1`] = `
                   >
                     ARK Explorer
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ bcEVDZ"
-                      height="16"
-                      width="16"
-                    >
-                      <svg>
-                        official-ark-plugin.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      official-ark-plugin.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -151,17 +149,15 @@ exports[`PluginGrid should not render pagination 1`] = `
                   >
                     ARK Avatars
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ hjDozt"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        grant.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      grant.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -254,17 +250,15 @@ exports[`PluginGrid should not render pagination 1`] = `
                   >
                     ARK Theme
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ hjDozt"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        grant.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      grant.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -701,17 +695,15 @@ exports[`PluginGrid should render pagination 1`] = `
                   >
                     ARK Explorer
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ bcEVDZ"
-                      height="16"
-                      width="16"
-                    >
-                      <svg>
-                        official-ark-plugin.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      official-ark-plugin.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -804,17 +796,15 @@ exports[`PluginGrid should render pagination 1`] = `
                   >
                     ARK Avatars
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ hjDozt"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        grant.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      grant.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -907,17 +897,15 @@ exports[`PluginGrid should render pagination 1`] = `
                   >
                     ARK Theme
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ hjDozt"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        grant.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      grant.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -1010,17 +998,15 @@ exports[`PluginGrid should render pagination 1`] = `
                   >
                     Drakula Theme
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ hjDozt"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        grant.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      grant.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -1502,17 +1488,15 @@ exports[`PluginGrid should render without pagination 1`] = `
                   >
                     ARK Explorer
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ bcEVDZ"
-                      height="16"
-                      width="16"
-                    >
-                      <svg>
-                        official-ark-plugin.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      official-ark-plugin.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -1605,17 +1589,15 @@ exports[`PluginGrid should render without pagination 1`] = `
                   >
                     ARK Avatars
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ hjDozt"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        grant.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      grant.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -1708,17 +1690,15 @@ exports[`PluginGrid should render without pagination 1`] = `
                   >
                     ARK Theme
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ hjDozt"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        grant.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      grant.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -1837,17 +1817,15 @@ exports[`PluginGrid should split by page 1`] = `
                   >
                     ARK Avatars
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ hjDozt"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        grant.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      grant.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -2028,17 +2006,15 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                   >
                     ARK Explorer
                   </div>
-                  <span>
-                    <div
-                      class="sc-bdfBwQ bcEVDZ"
-                      height="16"
-                      width="16"
-                    >
-                      <svg>
-                        official-ark-plugin.svg
-                      </svg>
-                    </div>
-                  </span>
+                  <div
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      official-ark-plugin.svg
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"

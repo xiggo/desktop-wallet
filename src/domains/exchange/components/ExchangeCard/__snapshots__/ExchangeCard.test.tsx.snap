@@ -41,7 +41,6 @@ exports[`ExchangeCard should render 1`] = `
               >
                 Test Exchange
               </div>
-              <span />
             </div>
           </div>
         </div>

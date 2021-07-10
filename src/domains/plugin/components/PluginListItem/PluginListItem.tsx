@@ -4,6 +4,7 @@ import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
+import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -37,6 +38,8 @@ export const PluginListItem = ({
 	showCategory,
 }: PluginListItemProperties) => {
 	const { t } = useTranslation();
+
+	const { renderPluginIcon } = usePluginIcon();
 
 	const handleInstall = () => {
 		onInstall?.(plugin);
@@ -84,8 +87,10 @@ export const PluginListItem = ({
 						{plugin.title}
 					</span>
 
-					{plugin.isOfficial && <Icon name="OfficialArkPlugin" width={18} height={18} />}
-					{plugin.isGrant && <Icon name="Grant" width={14} height={20} />}
+					{renderPluginIcon({
+						isGrant: plugin.isGrant,
+						isOfficial: plugin.isOfficial,
+					})}
 
 					{plugin.hasUpdateAvailable && plugin.isCompatible === false && (
 						<Tooltip

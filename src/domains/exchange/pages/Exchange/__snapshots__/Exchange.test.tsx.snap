@@ -366,7 +366,6 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                           >
                             Test Exchange 1
                           </div>
-                          <span />
                         </div>
                       </div>
                     </div>
@@ -441,7 +440,6 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                           >
                             Test Exchange 2
                           </div>
-                          <span />
                         </div>
                       </div>
                     </div>
@@ -516,7 +514,6 @@ exports[`Exchange should not render filler exchange cards 1`] = `
                           >
                             Test Exchange 3
                           </div>
-                          <span />
                         </div>
                       </div>
                     </div>
@@ -2228,7 +2225,6 @@ exports[`Exchange should render with exchanges 1`] = `
                           >
                             Test Exchange
                           </div>
-                          <span />
                         </div>
                       </div>
                     </div>

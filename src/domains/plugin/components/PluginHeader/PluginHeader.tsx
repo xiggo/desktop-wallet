@@ -3,6 +3,7 @@ import { Divider } from "app/components/Divider";
 import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
+import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -20,6 +21,7 @@ interface Properties {
 	size?: string;
 	isInstalled?: boolean;
 	isOfficial?: boolean;
+	isGrant?: boolean;
 	isEnabled?: boolean;
 	hasUpdateAvailable?: boolean;
 	isCompatible?: boolean;
@@ -47,6 +49,8 @@ export const PluginHeader = ({
 	...properties
 }: Properties) => {
 	const { t } = useTranslation();
+
+	const { renderPluginIcon } = usePluginIcon();
 
 	const actions = useMemo(() => {
 		const result: DropdownOption[] = [];
@@ -157,7 +161,13 @@ export const PluginHeader = ({
 				<div className="flex flex-col justify-between pl-8 w-full min-w-0">
 					<div className="flex justify-between items-end">
 						<div className="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight">
-							<span className="text-2xl font-bold">{properties.title}</span>
+							<div className="flex items-center space-x-2">
+								<span className="text-2xl font-bold">{properties.title}</span>
+								{renderPluginIcon({
+									isGrant: !!properties.isGrant,
+									isOfficial: !!properties.isOfficial,
+								})}
+							</div>
 							<span className="text-medium text-theme-secondary-500 truncate">
 								{properties.description}
 							</span>

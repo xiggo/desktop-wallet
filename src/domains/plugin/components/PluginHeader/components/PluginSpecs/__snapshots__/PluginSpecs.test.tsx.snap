@@ -22,15 +22,11 @@ exports[`PluginSpecs should render properly 1`] = `
           <span
             class="font-semibold text-theme-secondary-text"
           >
-            <div
-              class="flex items-center"
+            <span
+              class="font-semibold text-theme-secondary-text"
             >
-              <span
-                class="font-semibold text-theme-secondary-text"
-              >
-                ARK Ecosystem
-              </span>
-            </div>
+              ARK Ecosystem
+            </span>
           </span>
         </div>
       </div>
@@ -167,29 +163,11 @@ exports[`PluginSpecs should render without url and size 1`] = `
           <span
             class="font-semibold text-theme-secondary-text"
           >
-            <div
-              class="flex items-center"
+            <span
+              class="font-semibold text-theme-secondary-text"
             >
-              <span
-                class="font-semibold text-theme-secondary-text"
-              >
-                ARK Ecosystem
-              </span>
-              <div
-                class="ml-2"
-                data-testid="PluginSpecss__official"
-              >
-                <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
-                >
-                  <svg>
-                    official-ark-plugin.svg
-                  </svg>
-                </div>
-              </div>
-            </div>
+              ARK Ecosystem
+            </span>
           </span>
         </div>
       </div>
@@ -300,15 +278,11 @@ exports[`PluginSpecs should show loading state for size 1`] = `
           <span
             class="font-semibold text-theme-secondary-text"
           >
-            <div
-              class="flex items-center"
+            <span
+              class="font-semibold text-theme-secondary-text"
             >
-              <span
-                class="font-semibold text-theme-secondary-text"
-              >
-                ARK Ecosystem
-              </span>
-            </div>
+              ARK Ecosystem
+            </span>
           </span>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import { Icon } from "app/components/Icon";
 import { Link } from "app/components/Link";
 import { Skeleton } from "app/components/Skeleton";
 // @ts-ignore
@@ -13,7 +12,6 @@ interface Properties {
 	version?: string;
 	size?: string;
 	logo?: string;
-	isOfficial?: boolean;
 	isLoadingSize?: boolean;
 }
 
@@ -49,7 +47,7 @@ const GridCol = ({ children, padding }: GridColProperties) => {
 	return <div className={mountClassName()}>{children}</div>;
 };
 
-export const PluginSpecs = ({ author, category, url, version, isOfficial, size, isLoadingSize }: Properties) => {
+export const PluginSpecs = ({ author, category, url, version, size, isLoadingSize }: Properties) => {
 	const domain = url && extractDomain(url);
 	const { t } = useTranslation();
 
@@ -58,14 +56,7 @@ export const PluginSpecs = ({ author, category, url, version, isOfficial, size, 
 			<div className="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
 				<GridCol>
 					<GridItem label={t("COMMON.AUTHOR")}>
-						<div className="flex items-center">
-							<span className="font-semibold text-theme-secondary-text">{author}</span>
-							{isOfficial && (
-								<div data-testid="PluginSpecss__official" className="ml-2">
-									<Icon name="OfficialArkPlugin" />
-								</div>
-							)}
-						</div>
+						<span className="font-semibold text-theme-secondary-text">{author}</span>
 					</GridItem>
 				</GridCol>
 

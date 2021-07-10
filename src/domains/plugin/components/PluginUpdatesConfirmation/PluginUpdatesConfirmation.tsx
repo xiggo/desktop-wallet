@@ -1,8 +1,8 @@
 import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
 import { Image } from "app/components/Image";
 import { Modal } from "app/components/Modal";
 import { Table, TableCell, TableRow } from "app/components/Table";
+import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -17,6 +17,8 @@ interface Properties {
 
 export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue }: Properties) => {
 	const { t } = useTranslation();
+
+	const { renderPluginIcon } = usePluginIcon();
 
 	const columns = [
 		{
@@ -58,8 +60,10 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 										{pluginData.title}
 									</span>
 
-									{pluginData.isOfficial && <Icon name="OfficialArkPlugin" width={18} height={18} />}
-									{pluginData.isGrant && <Icon name="Grant" width={14} height={20} />}
+									{renderPluginIcon({
+										isGrant: pluginData.isGrant,
+										isOfficial: pluginData.isOfficial,
+									})}
 								</div>
 							</TableCell>
 

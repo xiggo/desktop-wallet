@@ -302,11 +302,15 @@ exports[`PluginDetails should render properly 1`] = `
                   <div
                     class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
                   >
-                    <span
-                      class="text-2xl font-bold"
+                    <div
+                      class="flex items-center space-x-2"
                     >
-                      Test Plugin
-                    </span>
+                      <span
+                        class="text-2xl font-bold"
+                      >
+                        Test Plugin
+                      </span>
+                    </div>
                     <span
                       class="text-medium text-theme-secondary-500 truncate"
                     />
@@ -390,15 +394,11 @@ exports[`PluginDetails should render properly 1`] = `
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          <div
-                            class="flex items-center"
+                          <span
+                            class="font-semibold text-theme-secondary-text"
                           >
-                            <span
-                              class="font-semibold text-theme-secondary-text"
-                            >
-                              Unknown
-                            </span>
-                          </div>
+                            Unknown
+                          </span>
                         </span>
                       </div>
                     </div>
@@ -840,11 +840,15 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                   <div
                     class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
                   >
-                    <span
-                      class="text-2xl font-bold"
+                    <div
+                      class="flex items-center space-x-2"
                     >
-                      Remote Plugin
-                    </span>
+                      <span
+                        class="text-2xl font-bold"
+                      >
+                        Remote Plugin
+                      </span>
+                    </div>
                     <span
                       class="text-medium text-theme-secondary-500 truncate"
                     />
@@ -908,15 +912,11 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          <div
-                            class="flex items-center"
+                          <span
+                            class="font-semibold text-theme-secondary-text"
                           >
-                            <span
-                              class="font-semibold text-theme-secondary-text"
-                            >
-                              Unknown
-                            </span>
-                          </div>
+                            Unknown
+                          </span>
                         </span>
                       </div>
                     </div>
@@ -1358,11 +1358,15 @@ exports[`PluginDetails should report plugin 1`] = `
                   <div
                     class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
                   >
-                    <span
-                      class="text-2xl font-bold"
+                    <div
+                      class="flex items-center space-x-2"
                     >
-                      Test Plugin
-                    </span>
+                      <span
+                        class="text-2xl font-bold"
+                      >
+                        Test Plugin
+                      </span>
+                    </div>
                     <span
                       class="text-medium text-theme-secondary-500 truncate"
                     />
@@ -1446,15 +1450,11 @@ exports[`PluginDetails should report plugin 1`] = `
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          <div
-                            class="flex items-center"
+                          <span
+                            class="font-semibold text-theme-secondary-text"
                           >
-                            <span
-                              class="font-semibold text-theme-secondary-text"
-                            >
-                              Unknown
-                            </span>
-                          </div>
+                            Unknown
+                          </span>
                         </span>
                       </div>
                     </div>
@@ -1896,11 +1896,15 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                   <div
                     class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
                   >
-                    <span
-                      class="text-2xl font-bold"
+                    <div
+                      class="flex items-center space-x-2"
                     >
-                      My Export Transaction
-                    </span>
+                      <span
+                        class="text-2xl font-bold"
+                      >
+                        My Export Transaction
+                      </span>
+                    </div>
                     <span
                       class="text-medium text-theme-secondary-500 truncate"
                     >
@@ -1966,15 +1970,11 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          <div
-                            class="flex items-center"
+                          <span
+                            class="font-semibold text-theme-secondary-text"
                           >
-                            <span
-                              class="font-semibold text-theme-secondary-text"
-                            >
-                              Edgar Goetzendorff
-                            </span>
-                          </div>
+                            Edgar Goetzendorff
+                          </span>
                         </span>
                       </div>
                     </div>
@@ -2455,11 +2455,15 @@ exports[`PluginDetails should update package 1`] = `
                   <div
                     class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
                   >
-                    <span
-                      class="text-2xl font-bold"
+                    <div
+                      class="flex items-center space-x-2"
                     >
-                      Transaction Export Plugin
-                    </span>
+                      <span
+                        class="text-2xl font-bold"
+                      >
+                        Transaction Export Plugin
+                      </span>
+                    </div>
                     <span
                       class="text-medium text-theme-secondary-500 truncate"
                     />
@@ -2543,15 +2547,11 @@ exports[`PluginDetails should update package 1`] = `
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          <div
-                            class="flex items-center"
+                          <span
+                            class="font-semibold text-theme-secondary-text"
                           >
-                            <span
-                              class="font-semibold text-theme-secondary-text"
-                            >
-                              Unknown
-                            </span>
-                          </div>
+                            Unknown
+                          </span>
                         </span>
                       </div>
                     </div>

@@ -26,11 +26,15 @@ exports[`PluginHeader should render properly 1`] = `
           <div
             class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
           >
-            <span
-              class="text-2xl font-bold"
+            <div
+              class="flex items-center space-x-2"
             >
-              Test Plugin
-            </span>
+              <span
+                class="text-2xl font-bold"
+              >
+                Test Plugin
+              </span>
+            </div>
             <span
               class="text-medium text-theme-secondary-500 truncate"
             />
@@ -94,15 +98,11 @@ exports[`PluginHeader should render properly 1`] = `
                 <span
                   class="font-semibold text-theme-secondary-text"
                 >
-                  <div
-                    class="flex items-center"
+                  <span
+                    class="font-semibold text-theme-secondary-text"
                   >
-                    <span
-                      class="font-semibold text-theme-secondary-text"
-                    >
-                      ARK Ecosystem
-                    </span>
-                  </div>
+                    ARK Ecosystem
+                  </span>
                 </span>
               </div>
             </div>
@@ -297,11 +297,15 @@ exports[`PluginHeader should render updating plugin 1`] = `
           <div
             class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
           >
-            <span
-              class="text-2xl font-bold"
+            <div
+              class="flex items-center space-x-2"
             >
-              Test Plugin
-            </span>
+              <span
+                class="text-2xl font-bold"
+              >
+                Test Plugin
+              </span>
+            </div>
             <span
               class="text-medium text-theme-secondary-500 truncate"
             />
@@ -365,15 +369,11 @@ exports[`PluginHeader should render updating plugin 1`] = `
                 <span
                   class="font-semibold text-theme-secondary-text"
                 >
-                  <div
-                    class="flex items-center"
+                  <span
+                    class="font-semibold text-theme-secondary-text"
                   >
-                    <span
-                      class="font-semibold text-theme-secondary-text"
-                    >
-                      ARK Ecosystem
-                    </span>
-                  </div>
+                    ARK Ecosystem
+                  </span>
                 </span>
               </div>
             </div>

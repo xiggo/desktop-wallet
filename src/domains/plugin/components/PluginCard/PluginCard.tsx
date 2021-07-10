@@ -3,6 +3,7 @@ import { DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
+import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -61,6 +62,8 @@ export const PluginCard = ({
 	showCategory,
 }: PluginCardProperties) => {
 	const { t } = useTranslation();
+
+	const { renderPluginIcon } = usePluginIcon();
 
 	if (plugin === undefined) {
 		return <BlankPluginCard category={category} />;
@@ -147,10 +150,10 @@ export const PluginCard = ({
 						<div className="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200">
 							<div className="truncate">{plugin.title}</div>
 
-							<span>
-								{plugin.isOfficial && <Icon name="OfficialArkPlugin" width={16} height={16} />}
-								{plugin.isGrant && <Icon name="Grant" width={20} height={20} />}
-							</span>
+							{renderPluginIcon({
+								isGrant: plugin.isGrant,
+								isOfficial: plugin.isOfficial,
+							})}
 						</div>
 
 						{showCategory && (
