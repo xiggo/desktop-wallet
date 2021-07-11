@@ -232,6 +232,25 @@ exports[`MultiSignatureDetail should fail to broadcast transaction 1`] = `
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -268,10 +287,13 @@ exports[`MultiSignatureDetail should fail to broadcast transaction 1`] = `
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              d41e4a07ddc5d…e111094929e5a
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -667,6 +689,25 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -703,10 +744,13 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              d41e4a07ddc5d…e111094929e5a
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -1087,6 +1131,25 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -1123,10 +1186,13 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              d41e4a07ddc5d…e111094929e5a
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -1454,6 +1520,25 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -1490,10 +1575,13 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              df40dfc6170f3…5388611e0ccb7
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                df40dfc6170f3af89b1ba1cc3bb73d66800c41c0ba18c006acd5388611e0ccb7
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -2005,6 +2093,25 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -2041,10 +2148,13 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              96fef904192bf…0020f89d29088
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                96fef904192bf8bc5e05f1e971db3cbad12b3f06413f000974d0020f89d29088
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -2342,6 +2452,25 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -2378,10 +2507,13 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              e4d2450ea41e5…128f1ab150377
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -2762,6 +2894,25 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -2798,10 +2949,13 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              d41e4a07ddc5d…e111094929e5a
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -3164,6 +3318,25 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -3200,10 +3373,13 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              27078ab8ee895…76b523a619330
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                27078ab8ee89585838cd88872c08c776cccf6c05f03424bd41d76b523a619330
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -3566,6 +3742,25 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -3602,10 +3797,13 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              ef2f81b906eda…efce03c15c787
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                ef2f81b906eda4a158c3abca1da7897ab408c0a952076616484efce03c15c787
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -3986,6 +4184,25 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -4022,10 +4239,13 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              d41e4a07ddc5d…e111094929e5a
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -4165,7 +4385,7 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                   </section>
                 </div>
                 <div
-                  class="flex justify-end mt-8 space-x-2"
+                  class="flex justify-end mt-8 space-x-3"
                 >
                   <button
                     class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
@@ -4432,6 +4652,25 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                     </div>
                     <div
                       class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                      data-testid="TransactionTimestamp"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Timestamp
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -4468,10 +4707,13 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                             class="flex items-center space-x-3"
                           >
                             <span
-                              class="TruncateMiddle__Wrapper-ue8va6-0 text-theme-text"
-                              data-testid="TruncateMiddle"
+                              class="overflow-hidden"
                             >
-                              d41e4a07ddc5d…e111094929e5a
+                              <span
+                                class="inline-flex overflow-hidden"
+                              >
+                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                              </span>
                             </span>
                             <span
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
@@ -4824,7 +5066,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                   </section>
                 </div>
                 <div
-                  class="flex justify-end mt-8 space-x-2"
+                  class="flex justify-end mt-8 space-x-3"
                 />
               </div>
             </form>

@@ -3,7 +3,7 @@ import { Circle } from "app/components/Circle";
 import { Clipboard } from "app/components/Clipboard";
 import { Header } from "app/components/Header";
 import { Icon } from "app/components/Icon";
-import { TruncateMiddle } from "app/components/TruncateMiddle";
+import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import { useEnvironmentContext } from "app/contexts";
 import {
 	TransactionAmount,
@@ -11,9 +11,11 @@ import {
 	TransactionFee,
 	TransactionRecipients,
 	TransactionSender,
+	TransactionTimestamp,
 	TransactionVotes,
 } from "domains/transaction/components/TransactionDetail";
-import React, { useEffect, useState } from "react";
+import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-types";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Signatures } from "./Signatures";
@@ -27,7 +29,12 @@ export const SummaryStep = ({
 }) => {
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
+
+	const { getLabel } = useTransactionTypes();
+
 	const [senderAddress, setSenderAddress] = useState("");
+
+	const reference = useRef(null);
 
 	const type = transaction.type();
 
@@ -51,15 +58,6 @@ export const SummaryStep = ({
 		unvotes: [],
 		votes: [],
 	});
-
-	const titles: Record<string, string> = {
-		ipfs: "TRANSACTION.TRANSACTION_TYPES.IPFS",
-		multiPayment: "TRANSACTION.TRANSACTION_TYPES.MULTI_PAYMENT",
-		multiSignature: "TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE",
-		transfer: "TRANSACTION.TRANSACTION_TYPES.TRANSFER",
-		unvote: "TRANSACTION.TRANSACTION_TYPES.UNVOTE",
-		vote: "TRANSACTION.TRANSACTION_TYPES.VOTE",
-	};
 
 	useEffect(() => {
 		const setAddress = async () => {
@@ -86,7 +84,7 @@ export const SummaryStep = ({
 
 	return (
 		<section>
-			<Header title={t(titles[type])} />
+			<Header title={getLabel(type)} />
 
 			<TransactionSender address={senderAddress} alias={wallet.alias()} border={false} />
 
@@ -118,9 +116,7 @@ export const SummaryStep = ({
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 
-			{/* @TODO
-				<TransactionTimestamp timestamp={DateTime.make("08.10.2020 20:00:48")} />
-			*/}
+			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionDetail label={t("TRANSACTION.CONFIRMATIONS")}>
 				{t("TRANSACTION.MODAL_MULTISIGNATURE_DETAIL.WAITING_FOR_SIGNATURES")}
@@ -128,7 +124,9 @@ export const SummaryStep = ({
 
 			<TransactionDetail label={t("TRANSACTION.ID")}>
 				<div className="flex items-center space-x-3">
-					<TruncateMiddle text={transaction.id()} maxChars={30} className="text-theme-text" />
+					<span ref={reference} className="overflow-hidden">
+						<TruncateMiddleDynamic value={transaction.id()} parentRef={reference} />
+					</span>
 
 					<span className="flex text-theme-primary-300 dark:text-theme-secondary-600">
 						<Clipboard variant="icon" data={transaction.id()}>

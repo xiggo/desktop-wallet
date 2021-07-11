@@ -31,7 +31,7 @@ const Paginator = (properties: {
 }) => {
 	const { t } = useTranslation();
 	return (
-		<div className="flex justify-end mt-8 space-x-2">
+		<div className="flex justify-end mt-8 space-x-3">
 			{properties.activeStep === 1 && (
 				<>
 					<Button data-testid="Paginator__cancel" variant="secondary" onClick={properties.onCancel}>
