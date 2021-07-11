@@ -28,7 +28,7 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 	const shadowClasses = useMemo(
 		() =>
 			cn(
-				"group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black",
+				"group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black",
 				{
 					"ring-theme-background": !isSelected,
 					"ring-theme-success-100": isSelected && !shouldUseDarkColors(),

@@ -1090,7 +1090,7 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -1103,7 +1103,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1247,7 +1247,7 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -1260,7 +1260,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1404,7 +1404,7 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -1417,7 +1417,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1561,7 +1561,7 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -1574,7 +1574,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5516,7 +5516,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -5529,7 +5529,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5673,7 +5673,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -5686,7 +5686,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5830,7 +5830,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -5843,7 +5843,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5987,7 +5987,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                           data-testid="TransactionRowMode"
                         >
                           <div
-                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                            class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                           >
                             <div
                               class="sc-bdfBwQ hjDozt"
@@ -6000,7 +6000,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </div>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div

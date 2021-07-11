@@ -3606,7 +3606,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -3619,7 +3619,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -3759,7 +3759,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -3772,7 +3772,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -3912,7 +3912,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -3925,7 +3925,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -4058,7 +4058,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -4071,7 +4071,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4208,7 +4208,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -4221,7 +4221,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4358,7 +4358,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -4371,7 +4371,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4508,7 +4508,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -4521,7 +4521,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4658,7 +4658,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -4671,7 +4671,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4808,7 +4808,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -4821,7 +4821,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4958,7 +4958,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -4971,7 +4971,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5108,7 +5108,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -5121,7 +5121,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5258,7 +5258,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -5271,7 +5271,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -5404,7 +5404,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -5417,7 +5417,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5554,7 +5554,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -5567,7 +5567,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -5707,7 +5707,7 @@ exports[`TransactionTable should render 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -5720,7 +5720,7 @@ exports[`TransactionTable should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5895,7 +5895,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -5908,7 +5908,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5970,7 +5970,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -5983,7 +5983,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6048,7 +6048,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6061,7 +6061,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6126,7 +6126,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6139,7 +6139,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6197,7 +6197,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6210,7 +6210,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6275,7 +6275,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6288,7 +6288,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6350,7 +6350,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6363,7 +6363,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6421,7 +6421,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6434,7 +6434,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6496,7 +6496,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6509,7 +6509,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6571,7 +6571,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6584,7 +6584,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6646,7 +6646,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6659,7 +6659,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6721,7 +6721,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6734,7 +6734,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6796,7 +6796,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6809,7 +6809,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6871,7 +6871,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6884,7 +6884,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6946,7 +6946,7 @@ exports[`TransactionTable should render compact 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ bcEVDZ"
@@ -6959,7 +6959,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7219,7 +7219,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -7232,7 +7232,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -7372,7 +7372,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -7385,7 +7385,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -7525,7 +7525,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -7538,7 +7538,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -7671,7 +7671,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -7684,7 +7684,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7859,7 +7859,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -7872,7 +7872,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8009,7 +8009,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -8022,7 +8022,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8159,7 +8159,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -8172,7 +8172,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8309,7 +8309,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -8322,7 +8322,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8459,7 +8459,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -8472,7 +8472,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8609,7 +8609,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -8622,7 +8622,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8759,7 +8759,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -8772,7 +8772,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -8909,7 +8909,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -8922,7 +8922,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -9055,7 +9055,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -9068,7 +9068,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -9205,7 +9205,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -9218,7 +9218,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -9358,7 +9358,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -9371,7 +9371,7 @@ exports[`TransactionTable should render with sign 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -9614,7 +9614,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -9627,7 +9627,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -9740,7 +9740,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -9753,7 +9753,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -9866,7 +9866,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -9879,7 +9879,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -9985,7 +9985,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -9998,7 +9998,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10108,7 +10108,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -10121,7 +10121,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10231,7 +10231,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -10244,7 +10244,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10354,7 +10354,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -10367,7 +10367,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10477,7 +10477,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -10490,7 +10490,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10600,7 +10600,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -10613,7 +10613,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10723,7 +10723,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -10736,7 +10736,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10846,7 +10846,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -10859,7 +10859,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -10969,7 +10969,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -10982,7 +10982,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -11088,7 +11088,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -11101,7 +11101,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -11211,7 +11211,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -11224,7 +11224,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -11337,7 +11337,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdfBwQ hjDozt"
@@ -11350,7 +11350,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div

@@ -16,7 +16,7 @@ export const TransactionRowRecipientIcon = ({ type, recipient, size }: Propertie
 	const { getIcon } = useTransactionTypes();
 
 	const shadowClasses =
-		"ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
+		"ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
 
 	if (type === "transfer") {
 		return <Avatar size={size} address={recipient} className={shadowClasses} />;

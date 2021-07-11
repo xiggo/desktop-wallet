@@ -46,7 +46,7 @@ export const BaseTransactionRowMode = ({ type, isSent, isReturn, recipient, icon
 	}, [isSent, isReturn, t, type]);
 
 	const shadowClasses =
-		"ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
+		"ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
 
 	return (
 		<div data-testid="TransactionRowMode" className="flex items-center -space-x-1">

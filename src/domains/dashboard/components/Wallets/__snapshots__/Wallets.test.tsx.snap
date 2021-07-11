@@ -343,7 +343,7 @@ exports[`Wallets should load more wallets 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -358,7 +358,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -436,7 +436,7 @@ exports[`Wallets should load more wallets 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -451,7 +451,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -544,7 +544,7 @@ exports[`Wallets should load more wallets 1`] = `
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -559,7 +559,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -996,7 +996,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -1011,7 +1011,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1089,7 +1089,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -1104,7 +1104,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1197,7 +1197,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -1212,7 +1212,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2956,7 +2956,7 @@ exports[`Wallets should render list 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -2971,7 +2971,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3049,7 +3049,7 @@ exports[`Wallets should render list 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -3064,7 +3064,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3157,7 +3157,7 @@ exports[`Wallets should render list 1`] = `
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -3172,7 +3172,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
