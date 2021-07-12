@@ -136,9 +136,9 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -202,9 +202,9 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -274,9 +274,9 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -380,9 +380,9 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -889,9 +889,9 @@ exports[`CreateProfile should not be able to create new profile if name already 
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -955,9 +955,9 @@ exports[`CreateProfile should not be able to create new profile if name already 
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -1018,9 +1018,9 @@ exports[`CreateProfile should not be able to create new profile if name already 
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -1124,9 +1124,9 @@ exports[`CreateProfile should not be able to create new profile if name already 
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -1633,9 +1633,9 @@ exports[`CreateProfile should not be able to create new profile if name consists
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -1699,9 +1699,9 @@ exports[`CreateProfile should not be able to create new profile if name consists
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -1762,9 +1762,9 @@ exports[`CreateProfile should not be able to create new profile if name consists
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -1868,9 +1868,9 @@ exports[`CreateProfile should not be able to create new profile if name consists
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -2377,9 +2377,9 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -2443,9 +2443,9 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -2506,9 +2506,9 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -2612,9 +2612,9 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -3124,9 +3124,9 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                             >
                               <div
-                                class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                                height="18"
-                                width="24"
+                                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   upload.svg
@@ -3144,9 +3144,9 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                             class="flex relative items-center space-x-2"
                           >
                             <div
-                              class="sc-bdfBwQ ejYZeh"
-                              height="12"
-                              width="12"
+                              class="sc-bdfBwQ eZRpTZ"
+                              height="10"
+                              width="10"
                             >
                               <svg>
                                 close.svg
@@ -3208,9 +3208,9 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -3271,9 +3271,9 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -3366,9 +3366,9 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -3621,9 +3621,9 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -3687,9 +3687,9 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -3750,9 +3750,9 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -3856,9 +3856,9 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -4345,9 +4345,9 @@ exports[`CreateProfile should render 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -4411,9 +4411,9 @@ exports[`CreateProfile should render 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -4474,9 +4474,9 @@ exports[`CreateProfile should render 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -4569,9 +4569,9 @@ exports[`CreateProfile should render 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -4827,9 +4827,9 @@ exports[`CreateProfile should store profile 1`] = `
                               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                             >
                               <div
-                                class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                                height="18"
-                                width="24"
+                                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   upload.svg
@@ -4847,9 +4847,9 @@ exports[`CreateProfile should store profile 1`] = `
                             class="flex relative items-center space-x-2"
                           >
                             <div
-                              class="sc-bdfBwQ ejYZeh"
-                              height="12"
-                              width="12"
+                              class="sc-bdfBwQ eZRpTZ"
+                              height="10"
+                              width="10"
                             >
                               <svg>
                                 close.svg
@@ -4911,9 +4911,9 @@ exports[`CreateProfile should store profile 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -4974,9 +4974,9 @@ exports[`CreateProfile should store profile 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -5080,9 +5080,9 @@ exports[`CreateProfile should store profile 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -5569,9 +5569,9 @@ exports[`CreateProfile should store profile with password 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -5635,9 +5635,9 @@ exports[`CreateProfile should store profile with password 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -5692,9 +5692,9 @@ exports[`CreateProfile should store profile with password 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -5798,9 +5798,9 @@ exports[`CreateProfile should store profile with password 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -6295,9 +6295,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                             >
                               <div
-                                class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                                height="18"
-                                width="24"
+                                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   upload.svg
@@ -6360,9 +6360,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -6423,9 +6423,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -6518,9 +6518,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -6792,9 +6792,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -6858,9 +6858,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -6921,9 +6921,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -7016,9 +7016,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg
@@ -7271,9 +7271,9 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -7337,9 +7337,9 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -7400,9 +7400,9 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               eye.svg
@@ -7506,9 +7506,9 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                                  height="5"
-                                  width="7"
+                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     caret-down.svg

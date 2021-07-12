@@ -41,7 +41,7 @@ export const Loader = ({ show }: LoaderProperties) => {
 				</div>
 
 				<div className="centered">
-					<Icon name="LoaderLogo" width={50} height={60} />
+					<Icon name="LoaderLogo" size="xl" />
 				</div>
 			</LogoSpinner>
 		</LoaderWrapper>

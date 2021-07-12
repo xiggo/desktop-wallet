@@ -22,9 +22,9 @@ exports[`Notifications should render notification item 1`] = `
                 class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
-                  height="16"
-                  width="16"
+                  class="sc-bdfBwQ eZRpTZ"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     sent.svg

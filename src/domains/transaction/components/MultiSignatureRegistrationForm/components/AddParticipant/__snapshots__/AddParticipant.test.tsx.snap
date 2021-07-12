@@ -304,9 +304,9 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -631,9 +631,9 @@ exports[`Add Participant should fail to find 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -1020,9 +1020,9 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -1347,9 +1347,9 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -1631,9 +1631,9 @@ exports[`Add Participant should render custom participants 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -2223,9 +2223,9 @@ exports[`Add Participant should work with a remote wallet 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -2298,9 +2298,9 @@ exports[`Add Participant should work with a remote wallet 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -2890,9 +2890,9 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -2965,9 +2965,9 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           class="py-1"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg

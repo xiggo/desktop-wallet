@@ -21,7 +21,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 	return (
 		<div className="flex justify-between items-center space-x-4">
 			<div className="flex items-center space-x-4">
-				<Icon name={fileTypeIcon[file.extension] || "File"} width={40} height={40} />
+				<Icon name={fileTypeIcon[file.extension] || "File"} size="xl" />
 				<div className="font-semibold">
 					<TruncateMiddle text={file.name} maxChars={40} />
 				</div>
@@ -31,13 +31,13 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 
 			{variant === "danger" && (
 				<div className="flex justify-center items-center w-6 h-6 rounded-full text-theme-danger-500 bg-theme-danger-200">
-					<Icon name="Close" width={10} />
+					<Icon name="Close" size="sm" />
 				</div>
 			)}
 
 			{variant === "success" && (
 				<div className="flex justify-center items-center w-6 h-6 rounded-full text-theme-success-500 bg-theme-success-200">
-					<Icon name="Checkmark" width={16} />
+					<Icon name="Checkmark" />
 				</div>
 			)}
 		</div>

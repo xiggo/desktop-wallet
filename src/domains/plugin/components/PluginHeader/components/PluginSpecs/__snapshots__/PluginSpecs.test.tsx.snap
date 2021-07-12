@@ -78,10 +78,10 @@ exports[`PluginSpecs should render properly 1`] = `
                 class="align-middle"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                  class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                   data-testid="Link__external"
-                  height="1em"
-                  width="1em"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     redirect.svg

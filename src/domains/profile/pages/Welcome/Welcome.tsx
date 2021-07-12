@@ -131,7 +131,7 @@ export const Welcome = () => {
 												noShadow
 												className="dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700"
 											>
-												<Icon name="Plus" width={12} height={12} />
+												<Icon name="Plus" />
 											</Circle>
 										</div>
 										<span className="mt-3 font-semibold dark:text-white text-theme-primary-600 max-w-32 truncate dark:group-hover:text-white group-hover:text-theme-primary-700">

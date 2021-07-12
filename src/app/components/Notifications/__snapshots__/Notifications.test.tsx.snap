@@ -134,9 +134,9 @@ exports[`Notifications should emit transactionClick event 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ bcEVDZ"
-                        height="16"
-                        width="16"
+                        class="sc-bdfBwQ eZRpTZ"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           received.svg
@@ -209,9 +209,9 @@ exports[`Notifications should emit transactionClick event 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ bcEVDZ"
-                        height="16"
-                        width="16"
+                        class="sc-bdfBwQ eZRpTZ"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           received.svg
@@ -434,9 +434,9 @@ exports[`Notifications should render with plugins 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ bcEVDZ"
-                        height="16"
-                        width="16"
+                        class="sc-bdfBwQ eZRpTZ"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           received.svg
@@ -509,9 +509,9 @@ exports[`Notifications should render with plugins 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ bcEVDZ"
-                        height="16"
-                        width="16"
+                        class="sc-bdfBwQ eZRpTZ"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           received.svg
@@ -708,9 +708,9 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ bcEVDZ"
-                        height="16"
-                        width="16"
+                        class="sc-bdfBwQ eZRpTZ"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           received.svg
@@ -783,9 +783,9 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ bcEVDZ"
-                        height="16"
-                        width="16"
+                        class="sc-bdfBwQ eZRpTZ"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           received.svg

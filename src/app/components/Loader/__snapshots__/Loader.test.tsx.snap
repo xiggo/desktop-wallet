@@ -76,9 +76,9 @@ exports[`Loader should render 1`] = `
         class="centered"
       >
         <div
-          class="sc-bdfBwQ edsDRy"
-          height="60"
-          width="50"
+          class="sc-bdfBwQ gfGMlR"
+          height="40"
+          width="40"
         >
           <svg>
             loader-logo.svg

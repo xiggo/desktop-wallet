@@ -70,7 +70,7 @@ export const WalletOverviewStep = () => {
 					</p>
 				</div>
 
-				<Icon name="FilePassword" className="text-black dark:text-theme-secondary-600" width={40} height={40} />
+				<Icon name="FilePassword" className="text-black dark:text-theme-secondary-600" size="xl" />
 			</div>
 
 			<div className="flex justify-end space-x-3 w-full">

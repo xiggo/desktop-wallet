@@ -45,9 +45,9 @@ exports[`Signatures should render 1`] = `
               data-testid="Signatures__waiting-badge"
             >
               <div
-                class="sc-bdfBwQ ejYZeh"
-                height="12"
-                width="12"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   signature-status-pending.svg
@@ -92,9 +92,9 @@ exports[`Signatures should render 1`] = `
               data-testid="Signatures__signed-badge"
             >
               <div
-                class="sc-bdfBwQ ejYZeh"
-                height="12"
-                width="12"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   signature-status-ok.svg
@@ -155,9 +155,9 @@ exports[`Signatures should render with final signature 1`] = `
               data-testid="Signatures__signed-badge"
             >
               <div
-                class="sc-bdfBwQ ejYZeh"
-                height="12"
-                width="12"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   signature-status-ok.svg
@@ -202,9 +202,9 @@ exports[`Signatures should render with final signature 1`] = `
               data-testid="Signatures__signed-badge"
             >
               <div
-                class="sc-bdfBwQ ejYZeh"
-                height="12"
-                width="12"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   signature-status-ok.svg

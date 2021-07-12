@@ -60,9 +60,9 @@ exports[`Card Control should render with a control state 1`] = `
             data-testid="card__control-state"
           >
             <div
-              class="sc-bdfBwQ dnaihB"
-              height="1em"
-              width="1em"
+              class="sc-bdfBwQ bcEVDZ"
+              height="16"
+              width="16"
             >
               <svg>
                 checkmark.svg

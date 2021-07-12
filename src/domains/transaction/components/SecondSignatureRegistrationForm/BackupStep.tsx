@@ -71,7 +71,7 @@ export const BackupStep = () => {
 						</p>
 					</div>
 
-					<Icon name="FilePassword" width={40} height={40} />
+					<Icon name="FilePassword" size="xl" />
 				</div>
 
 				<div className="flex justify-end space-x-3">

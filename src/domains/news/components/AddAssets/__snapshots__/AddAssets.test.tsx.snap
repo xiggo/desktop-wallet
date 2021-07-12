@@ -28,9 +28,9 @@ exports[`AddAssets should render a modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -166,9 +166,9 @@ exports[`AddAssets should render a modal 1`] = `
                               class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                             >
                               <div
-                                class="sc-bdfBwQ ejYZeh"
-                                height="12"
-                                width="12"
+                                class="sc-bdfBwQ eZRpTZ"
+                                height="10"
+                                width="10"
                               >
                                 <svg>
                                   checkmark.svg

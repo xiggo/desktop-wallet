@@ -22,9 +22,9 @@ exports[`HeaderSearchBar should render 1`] = `
             Search
           </span>
           <div
-            class="sc-bdfBwQ hHLBkp"
-            height="18"
-            width="18"
+            class="sc-bdfBwQ hjDozt"
+            height="20"
+            width="20"
           >
             <svg>
               search.svg

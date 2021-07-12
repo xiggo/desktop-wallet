@@ -112,9 +112,9 @@ exports[`ContactListItem should render 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -302,9 +302,9 @@ exports[`ContactListItem should render as delegate 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -324,9 +324,9 @@ exports[`ContactListItem should render as delegate 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 ivxRHU border-black ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ gmQeZR"
-                height="25"
-                width="25"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   delegate.svg
@@ -506,9 +506,9 @@ exports[`ContactListItem should render using variant 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -689,9 +689,9 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -844,9 +844,9 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -999,9 +999,9 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -1021,9 +1021,9 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 ivxRHU border-black ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ gmQeZR"
-                height="25"
-                width="25"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   delegate.svg
@@ -1203,9 +1203,9 @@ exports[`ContactListItem should render with multiple options 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -1358,9 +1358,9 @@ exports[`ContactListItem should render with multiple options 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -1513,9 +1513,9 @@ exports[`ContactListItem should render with multiple options 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -1535,9 +1535,9 @@ exports[`ContactListItem should render with multiple options 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 ivxRHU border-black ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ gmQeZR"
-                height="25"
-                width="25"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   delegate.svg
@@ -1717,9 +1717,9 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -1857,9 +1857,9 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -1997,9 +1997,9 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     copy.svg
@@ -2019,9 +2019,9 @@ exports[`ContactListItem should render with one option 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 ivxRHU border-black ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ gmQeZR"
-                height="25"
-                width="25"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   delegate.svg

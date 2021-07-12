@@ -16,9 +16,9 @@ exports[`General Settings should disable submit button when profile is not resto
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -123,9 +123,9 @@ exports[`General Settings should disable submit button when profile is not resto
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -192,9 +192,9 @@ exports[`General Settings should disable submit button when profile is not resto
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -473,9 +473,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                 class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -615,9 +615,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -729,9 +729,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -847,9 +847,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -961,9 +961,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -1075,9 +1075,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -1278,9 +1278,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                           data-testid="SelectDropdown__caret"
                                         >
                                           <div
-                                            class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                            height="5"
-                                            width="7"
+                                            class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                            height="10"
+                                            width="10"
                                           >
                                             <svg>
                                               caret-down.svg
@@ -1477,9 +1477,9 @@ exports[`General Settings should disable submit button when profile is not resto
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             reset.svg
@@ -1545,9 +1545,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -1652,9 +1652,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -1721,9 +1721,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1997,9 +1997,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                 class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -2017,9 +2017,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                               class="flex relative items-center space-x-2"
                             >
                               <div
-                                class="sc-bdfBwQ ejYZeh"
-                                height="12"
-                                width="12"
+                                class="sc-bdfBwQ eZRpTZ"
+                                height="10"
+                                width="10"
                               >
                                 <svg>
                                   close.svg
@@ -2158,9 +2158,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -2272,9 +2272,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -2390,9 +2390,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -2504,9 +2504,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -2618,9 +2618,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -2821,9 +2821,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                           data-testid="SelectDropdown__caret"
                                         >
                                           <div
-                                            class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                            height="5"
-                                            width="7"
+                                            class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                            height="10"
+                                            width="10"
                                           >
                                             <svg>
                                               caret-down.svg
@@ -3020,9 +3020,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             reset.svg
@@ -3087,9 +3087,9 @@ exports[`General Settings should render 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -3194,9 +3194,9 @@ exports[`General Settings should render 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -3263,9 +3263,9 @@ exports[`General Settings should render 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -3544,9 +3544,9 @@ exports[`General Settings should render 1`] = `
                                 class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -3686,9 +3686,9 @@ exports[`General Settings should render 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -3800,9 +3800,9 @@ exports[`General Settings should render 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -3918,9 +3918,9 @@ exports[`General Settings should render 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -4032,9 +4032,9 @@ exports[`General Settings should render 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -4146,9 +4146,9 @@ exports[`General Settings should render 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -4349,9 +4349,9 @@ exports[`General Settings should render 1`] = `
                                           data-testid="SelectDropdown__caret"
                                         >
                                           <div
-                                            class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                            height="5"
-                                            width="7"
+                                            class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                            height="10"
+                                            width="10"
                                           >
                                             <svg>
                                               caret-down.svg
@@ -4548,9 +4548,9 @@ exports[`General Settings should render 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             reset.svg
@@ -4615,9 +4615,9 @@ exports[`General Settings should update profile 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -4722,9 +4722,9 @@ exports[`General Settings should update profile 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -4791,9 +4791,9 @@ exports[`General Settings should update profile 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -5072,9 +5072,9 @@ exports[`General Settings should update profile 1`] = `
                                 class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -5214,9 +5214,9 @@ exports[`General Settings should update profile 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -5328,9 +5328,9 @@ exports[`General Settings should update profile 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -5446,9 +5446,9 @@ exports[`General Settings should update profile 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -5560,9 +5560,9 @@ exports[`General Settings should update profile 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -5674,9 +5674,9 @@ exports[`General Settings should update profile 1`] = `
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -5878,9 +5878,9 @@ exports[`General Settings should update profile 1`] = `
                                           data-testid="SelectDropdown__caret"
                                         >
                                           <div
-                                            class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                            height="5"
-                                            width="7"
+                                            class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                            height="10"
+                                            width="10"
                                           >
                                             <svg>
                                               caret-down.svg
@@ -6076,9 +6076,9 @@ exports[`General Settings should update profile 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             reset.svg
@@ -6143,9 +6143,9 @@ exports[`General Settings should update the avatar when removing focus from name
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -6250,9 +6250,9 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -6319,9 +6319,9 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -6600,9 +6600,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                 class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                               >
                                 <div
-                                  class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                                  height="18"
-                                  width="24"
+                                  class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     upload.svg
@@ -6742,9 +6742,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -6856,9 +6856,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -6974,9 +6974,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -7088,9 +7088,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -7202,9 +7202,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -7405,9 +7405,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                           data-testid="SelectDropdown__caret"
                                         >
                                           <div
-                                            class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                            height="5"
-                                            width="7"
+                                            class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                            height="10"
+                                            width="10"
                                           >
                                             <svg>
                                               caret-down.svg
@@ -7604,9 +7604,9 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             reset.svg
@@ -7671,9 +7671,9 @@ exports[`General Settings should update the avatar when removing focus from name
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -7778,9 +7778,9 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -7847,9 +7847,9 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -8120,9 +8120,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                   class="flex relative items-center space-x-2"
                                 >
                                   <div
-                                    class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                                    height="18"
-                                    width="24"
+                                    class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       upload.svg
@@ -8282,9 +8282,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -8396,9 +8396,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -8514,9 +8514,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -8628,9 +8628,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -8742,9 +8742,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                          height="5"
-                                          width="7"
+                                          class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             caret-down.svg
@@ -8945,9 +8945,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                           data-testid="SelectDropdown__caret"
                                         >
                                           <div
-                                            class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                            height="5"
-                                            width="7"
+                                            class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                            height="10"
+                                            width="10"
                                           >
                                             <svg>
                                               caret-down.svg
@@ -9144,9 +9144,9 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             reset.svg

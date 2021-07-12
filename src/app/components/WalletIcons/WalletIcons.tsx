@@ -28,7 +28,7 @@ const WalletIcon = ({ type, label, iconColor }: { type: string; label?: string; 
 				data-testid={`WalletIcon__${getIconName(type)}`}
 				className={`inline-block p-1 ${iconColor || getIconColor(type)}`}
 			>
-				<Icon name={getIconName(type)} height={16} />
+				<Icon name={getIconName(type)} />
 			</div>
 		</Tooltip>
 	);

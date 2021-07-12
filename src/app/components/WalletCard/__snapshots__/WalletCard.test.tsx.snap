@@ -80,9 +80,9 @@ exports[`Wallet Card should render 1`] = `
             data-testid="WalletIcon__Ledger"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 ledger.svg
@@ -94,9 +94,9 @@ exports[`Wallet Card should render 1`] = `
             data-testid="WalletIcon__Star"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 star.svg
@@ -108,9 +108,9 @@ exports[`Wallet Card should render 1`] = `
             data-testid="WalletIcon__Multisig"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 multisignature.svg
@@ -215,9 +215,9 @@ exports[`Wallet Card should render blank with ledger display type 1`] = `
           class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
         >
           <div
-            class="sc-bdfBwQ dWCabD text-theme-primary-100 dark:text-theme-secondary-800"
+            class="sc-bdfBwQ bcEVDZ text-theme-primary-100 dark:text-theme-secondary-800"
             height="16"
-            width="1em"
+            width="16"
           >
             <svg>
               ledger.svg
@@ -273,9 +273,9 @@ exports[`Wallet Card should render blank with starred display type 1`] = `
           class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
         >
           <div
-            class="sc-bdfBwQ dWCabD text-theme-primary-100 dark:text-theme-secondary-800"
+            class="sc-bdfBwQ bcEVDZ text-theme-primary-100 dark:text-theme-secondary-800"
             height="16"
-            width="1em"
+            width="16"
           >
             <svg>
               star.svg
@@ -494,9 +494,9 @@ exports[`Wallet Card should render with actions 1`] = `
             data-testid="WalletIcon__Ledger"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 ledger.svg
@@ -508,9 +508,9 @@ exports[`Wallet Card should render with actions 1`] = `
             data-testid="WalletIcon__Star"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 star.svg
@@ -522,9 +522,9 @@ exports[`Wallet Card should render with actions 1`] = `
             data-testid="WalletIcon__Multisig"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 multisignature.svg
@@ -541,9 +541,9 @@ exports[`Wallet Card should render with actions 1`] = `
                 class="flex overflow-hidden justify-center w-4"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     settings.svg
@@ -639,9 +639,9 @@ exports[`Wallet Card should render with wallet data 1`] = `
             data-testid="WalletIcon__Ledger"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 ledger.svg
@@ -653,9 +653,9 @@ exports[`Wallet Card should render with wallet data 1`] = `
             data-testid="WalletIcon__Star"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 star.svg
@@ -667,9 +667,9 @@ exports[`Wallet Card should render with wallet data 1`] = `
             data-testid="WalletIcon__Multisig"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 multisignature.svg
@@ -764,9 +764,9 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             data-testid="WalletIcon__Ledger"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 ledger.svg
@@ -778,9 +778,9 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             data-testid="WalletIcon__Star"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 star.svg
@@ -792,9 +792,9 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             data-testid="WalletIcon__Multisig"
           >
             <div
-              class="sc-bdfBwQ dWCabD"
+              class="sc-bdfBwQ bcEVDZ"
               height="16"
-              width="1em"
+              width="16"
             >
               <svg>
                 multisignature.svg

@@ -93,8 +93,7 @@ export const Table = ({ children, data, columns, hideHeader, className, initialS
 																(column.isSorted && !column.isSortedDesc) ||
 																(!column.isSorted && !column.sortDescFirst),
 														})}
-														width={8}
-														height={5}
+														size="sm"
 													/>
 												</div>
 											)}

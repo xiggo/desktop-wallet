@@ -10,8 +10,7 @@ interface BadgeProperties {
 	children?: React.ReactNode;
 	icon?: string;
 	iconClass?: string;
-	iconWidth?: number;
-	iconHeight?: number;
+	iconSize?: Size;
 	size?: Size;
 	position?: Position;
 	noShadow?: boolean;
@@ -20,9 +19,9 @@ interface BadgeProperties {
 export const Wrapper = styled.span<StylesType>(getStyles);
 
 export const Badge = forwardRef<HTMLSpanElement, BadgeProperties>(
-	({ className, children, icon, iconClass, iconWidth, iconHeight, ...properties }: BadgeProperties, reference) => (
+	({ className, children, icon, iconClass, iconSize, ...properties }: BadgeProperties, reference) => (
 		<Wrapper ref={reference} className={`${defaultClasses} ${className}`} {...properties}>
-			{!!icon && <Icon name={icon} className={iconClass} width={iconWidth} height={iconHeight} />}
+			{!!icon && <Icon name={icon} className={iconClass} size={iconSize} />}
 			<span>{children}</span>
 		</Wrapper>
 	),
@@ -31,7 +30,6 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProperties>(
 Badge.displayName = "Badge";
 
 Badge.defaultProps = {
-	iconHeight: 12,
-	iconWidth: 12,
+	iconSize: "sm",
 	position: "bottom-right",
 };

@@ -4,6 +4,7 @@ import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import { CoinNetworkExtended } from "domains/network/data";
 import React, { memo } from "react";
+import { Size } from "types";
 
 type Network = Networks.Network & { extra?: CoinNetworkExtended };
 
@@ -13,13 +14,13 @@ interface Properties {
 	as?: React.ElementType;
 	className?: string;
 	iconClassName?: string;
-	iconSize?: number;
+	iconSize?: Size;
 	shadowColor?: string;
 	onClick?: () => void;
 }
 
 export const NetworkOption = memo(
-	({ disabled, network, iconSize = 30, iconClassName, onClick, ...properties }: Properties) => {
+	({ disabled, network, iconSize = "lg", iconClassName, onClick, ...properties }: Properties) => {
 		if (!network?.extra) {
 			return <></>;
 		}
@@ -48,12 +49,7 @@ export const NetworkOption = memo(
 						data-testid={`NetworkIcon-${network?.coin()}-${network?.id()}`}
 						{...properties}
 					>
-						<Icon
-							data-testid="NetworkIcon__icon"
-							name={network.extra.iconName}
-							width={iconSize}
-							height={iconSize}
-						/>
+						<Icon data-testid="NetworkIcon__icon" name={network.extra.iconName} size={iconSize} />
 					</div>
 				</Tooltip>
 			</li>

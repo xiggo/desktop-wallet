@@ -87,9 +87,9 @@ exports[`WalletsControls should render 1`] = `
                   class="flex justify-center items-center w-5 h-5"
                 >
                   <div
-                    class="sc-bdfBwQ EshKj"
-                    height="19"
-                    width="17"
+                    class="sc-bdfBwQ hjDozt"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       filters.svg
@@ -117,9 +117,9 @@ exports[`WalletsControls should render 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ dnaihB"
-              height="1em"
-              width="1em"
+              class="sc-bdfBwQ bcEVDZ"
+              height="16"
+              width="16"
             >
               <svg>
                 ledger.svg
@@ -169,9 +169,9 @@ exports[`WalletsControls should render 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ bSxmtR"
-              height="14"
-              width="14"
+              class="sc-bdfBwQ bcEVDZ"
+              height="16"
+              width="16"
             >
               <svg>
                 plus.svg
@@ -275,9 +275,9 @@ exports[`WalletsControls should render with networks selection 1`] = `
                   class="flex justify-center items-center w-5 h-5"
                 >
                   <div
-                    class="sc-bdfBwQ EshKj"
-                    height="19"
-                    width="17"
+                    class="sc-bdfBwQ hjDozt"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       filters.svg
@@ -305,9 +305,9 @@ exports[`WalletsControls should render with networks selection 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ dnaihB"
-              height="1em"
-              width="1em"
+              class="sc-bdfBwQ bcEVDZ"
+              height="16"
+              width="16"
             >
               <svg>
                 ledger.svg
@@ -357,9 +357,9 @@ exports[`WalletsControls should render with networks selection 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ bSxmtR"
-              height="14"
-              width="14"
+              class="sc-bdfBwQ bcEVDZ"
+              height="16"
+              width="16"
             >
               <svg>
                 plus.svg

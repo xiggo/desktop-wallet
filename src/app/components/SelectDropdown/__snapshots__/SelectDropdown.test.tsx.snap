@@ -74,9 +74,9 @@ exports[`SelectDropdown should render 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg
@@ -174,9 +174,9 @@ exports[`SelectDropdown should render disabled 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg
@@ -304,9 +304,9 @@ exports[`SelectDropdown should render invalid 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-danger-500"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-danger-500"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg
@@ -402,9 +402,9 @@ exports[`SelectDropdown should render with custom label 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500 transform rotate-180"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg
@@ -546,9 +546,9 @@ exports[`SelectDropdown should render with default value when free text is allow
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg
@@ -644,9 +644,9 @@ exports[`SelectDropdown should render with empty options 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg
@@ -752,9 +752,9 @@ exports[`SelectDropdown should render with initial default value 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg
@@ -850,9 +850,9 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg
@@ -948,9 +948,9 @@ exports[`SelectDropdown should render with wrong default value 1`] = `
                 data-testid="SelectDropdown__caret"
               >
                 <div
-                  class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                  height="5"
-                  width="7"
+                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     caret-down.svg

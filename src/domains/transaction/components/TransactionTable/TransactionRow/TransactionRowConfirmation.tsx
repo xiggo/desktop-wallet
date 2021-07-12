@@ -46,8 +46,7 @@ export const TransactionRowConfirmation = ({ transaction, isSignaturePending }: 
 					data-testid={`TransactionRowConfirmation__${status}`}
 					name={iconName[status]}
 					className={iconStyle[status]}
-					width={22}
-					height={22}
+					size="lg"
 				/>
 			</div>
 		</Tooltip>

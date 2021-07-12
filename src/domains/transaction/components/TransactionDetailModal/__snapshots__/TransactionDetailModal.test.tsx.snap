@@ -28,9 +28,9 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -129,9 +129,9 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ gmQeZR"
-                  height="25"
-                  width="25"
+                  class="sc-bdfBwQ hjDozt"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     delegate.svg
@@ -203,9 +203,9 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -256,10 +256,10 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -280,9 +280,9 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -329,9 +329,9 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -504,9 +504,9 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -557,10 +557,10 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -581,9 +581,9 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -630,9 +630,9 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -767,9 +767,9 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-900 border-theme-secondary-900 dark:text-theme-secondary-600 dark:border-theme-secondary-600 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ jiBHIn text-theme-secondary-900 dark:text-theme-secondary-600"
-                  height="23"
-                  width="21"
+                  class="sc-bdfBwQ hjDozt text-theme-secondary-900 dark:text-theme-secondary-600"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     ipfs.svg
@@ -818,9 +818,9 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -871,10 +871,10 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -895,9 +895,9 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -944,9 +944,9 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -1100,9 +1100,9 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -1153,10 +1153,10 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -1177,9 +1177,9 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -1226,9 +1226,9 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -1349,9 +1349,9 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     sent.svg
@@ -1408,9 +1408,9 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdfBwQ iLcgWo"
-                  height="22"
-                  width="18"
+                  class="sc-bdfBwQ hjDozt"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     memo.svg
@@ -1459,9 +1459,9 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -1512,10 +1512,10 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -1536,9 +1536,9 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -1585,9 +1585,9 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -1728,9 +1728,9 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -1861,10 +1861,10 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -1885,9 +1885,9 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -1934,9 +1934,9 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -2090,9 +2090,9 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -2143,10 +2143,10 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -2167,9 +2167,9 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -2216,9 +2216,9 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -2381,9 +2381,9 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     sent.svg
@@ -2440,9 +2440,9 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdfBwQ iLcgWo"
-                  height="22"
-                  width="18"
+                  class="sc-bdfBwQ hjDozt"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     memo.svg
@@ -2491,9 +2491,9 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -2544,10 +2544,10 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -2568,9 +2568,9 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -2617,9 +2617,9 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -2903,9 +2903,9 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -2956,10 +2956,10 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -2980,9 +2980,9 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg
@@ -3029,9 +3029,9 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -3315,9 +3315,9 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ fdJUih text-theme-warning-600"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         status-pending.svg
@@ -3368,10 +3368,10 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
-                            height="1em"
-                            width="1em"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               redirect.svg
@@ -3392,9 +3392,9 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             copy.svg

@@ -74,9 +74,9 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     eye.svg
@@ -166,9 +166,9 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     eye.svg
@@ -225,9 +225,9 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     eye.svg
@@ -317,9 +317,9 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     eye.svg
@@ -409,9 +409,9 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     eye.svg
@@ -501,9 +501,9 @@ exports[`AuthenticationStep should request private key if wallet was imported us
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     eye.svg
@@ -593,9 +593,9 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     eye.svg

@@ -21,7 +21,7 @@ const AlertIcon = ({ variant }: { variant: string }) => {
 		warning: "AlertWarning",
 	};
 
-	return <Icon name={iconVariant[variant]} width="1.25em" height="1.25em" />;
+	return <Icon name={iconVariant[variant]} size="lg" />;
 };
 
 const getColorVariant = (variant: string) => {

@@ -28,9 +28,9 @@ exports[`UpdateContact should render 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -177,9 +177,9 @@ exports[`UpdateContact should render 1`] = `
                                   data-testid="SelectDropdown__caret"
                                 >
                                   <div
-                                    class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                                    height="5"
-                                    width="7"
+                                    class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       caret-down.svg
@@ -324,9 +324,9 @@ exports[`UpdateContact should render 1`] = `
                           class="flex relative items-center space-x-2"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               trash.svg
@@ -349,9 +349,9 @@ exports[`UpdateContact should render 1`] = `
                       class="flex relative items-center space-x-2"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg

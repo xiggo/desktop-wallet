@@ -19,12 +19,7 @@ interface WalletVoteProperties {
 const HintIcon = ({ tooltipContent }: { tooltipContent: string }) => (
 	<Tooltip content={tooltipContent} className="mb-1">
 		<span>
-			<Icon
-				name="InformationCircle"
-				width={20}
-				height={20}
-				className="text-theme-primary-300 dark:text-theme-secondary-600"
-			/>
+			<Icon name="InformationCircle" size="lg" className="text-theme-primary-300 dark:text-theme-secondary-600" />
 		</span>
 	</Tooltip>
 );
@@ -118,7 +113,7 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 					className="border-theme-secondary-900 text-theme-secondary-900 dark:border-theme-secondary-700 dark:text-theme-secondary-700"
 					shadowClassName="ring-theme-background dark:ring-theme-secondary-background"
 				>
-					<Icon name="Vote" width={17} height={17} />
+					<Icon name="Vote" size="lg" />
 				</Circle>
 
 				<div className="flex flex-1 ml-4">
@@ -181,7 +176,7 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 						className="border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700"
 						shadowClassName="ring-theme-background dark:ring-theme-secondary-background"
 					>
-						<Icon name="Vote" width={17} height={17} />
+						<Icon name="Vote" size="lg" />
 					</Circle>
 
 					<div className="flex flex-1 ml-4">
@@ -221,7 +216,7 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 				isLoading={isLoading}
 				onClick={() => onButtonClick()}
 			>
-				<Icon name="Vote" width={17} height={17} />
+				<Icon name="Vote" />
 				<span>{t("COMMON.VOTE")}</span>
 			</Button>
 		</div>

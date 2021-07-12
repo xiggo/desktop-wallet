@@ -38,7 +38,7 @@ export const BlankPluginCard = ({ name, category }: { name?: string; category?: 
 
 					{category && (
 						<div className="flex items-center mt-4 space-x-2 text-theme-primary-100 dark:text-theme-secondary-800">
-							<Icon name="Category" width={20} height={20} />
+							<Icon name="Category" size="lg" />
 
 							<span className="text-sm font-semibold">
 								{t(`PLUGINS.CATEGORIES.${category.toUpperCase()}`)}
@@ -121,8 +121,7 @@ export const PluginCard = ({
 											<Icon
 												className={cn({ "animate-spin": isUpdating })}
 												name="Update"
-												width={20}
-												height={20}
+												size="lg"
 											/>
 										</span>
 									</Tooltip>
@@ -158,7 +157,7 @@ export const PluginCard = ({
 
 						{showCategory && (
 							<div className="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600">
-								<Icon name="Category" width={20} height={20} />
+								<Icon name="Category" size="lg" />
 
 								<span className="text-sm font-semibold">
 									{t(`PLUGINS.CATEGORIES.${plugin.category.toUpperCase()}`)}

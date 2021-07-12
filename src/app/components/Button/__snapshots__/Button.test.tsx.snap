@@ -137,9 +137,9 @@ exports[`Button should render loading with icon 1`] = `
           class="flex invisible items-center space-x-2"
         >
           <div
-            class="sc-bdfBwQ fwqQZR"
-            height="2"
-            width="2"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           />
         </span>
         <div
@@ -156,7 +156,7 @@ exports[`Button should render loading with icon 1`] = `
 </div>
 `;
 
-exports[`Button should render with icon and custom icon width and height 1`] = `
+exports[`Button should render with icon and custom icon size 1`] = `
 <div>
   <button
     class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
@@ -190,9 +190,9 @@ exports[`Button should render with icon on the left side 1`] = `
       class="flex relative items-center space-x-2"
     >
       <div
-        class="sc-bdfBwQ bSxmtR"
-        height="14"
-        width="14"
+        class="sc-bdfBwQ bcEVDZ"
+        height="16"
+        width="16"
       >
         <svg>
           plus.svg
@@ -215,9 +215,9 @@ exports[`Button should render with icon on the right side 1`] = `
     >
       Click Me
       <div
-        class="sc-bdfBwQ bSxmtR"
-        height="14"
-        width="14"
+        class="sc-bdfBwQ bcEVDZ"
+        height="16"
+        width="16"
       >
         <svg>
           plus.svg

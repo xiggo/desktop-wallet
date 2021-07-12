@@ -41,10 +41,10 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -130,9 +130,9 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -206,9 +206,9 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -282,9 +282,9 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -374,9 +374,9 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -406,9 +406,9 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -438,9 +438,9 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -526,10 +526,10 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -615,9 +615,9 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -691,9 +691,9 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -767,9 +767,9 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -859,9 +859,9 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -891,9 +891,9 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -923,9 +923,9 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -1011,10 +1011,10 @@ exports[`DelegateTable should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -1100,9 +1100,9 @@ exports[`DelegateTable should render 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -1176,9 +1176,9 @@ exports[`DelegateTable should render 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -1252,9 +1252,9 @@ exports[`DelegateTable should render 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -1344,9 +1344,9 @@ exports[`DelegateTable should render 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -1376,9 +1376,9 @@ exports[`DelegateTable should render 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -1408,9 +1408,9 @@ exports[`DelegateTable should render 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -1497,10 +1497,10 @@ exports[`DelegateTable should render loading state 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -2106,9 +2106,9 @@ exports[`DelegateTable should render loading state 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -2138,9 +2138,9 @@ exports[`DelegateTable should render loading state 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -2170,9 +2170,9 @@ exports[`DelegateTable should render loading state 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -2259,10 +2259,10 @@ exports[`DelegateTable should render pagination 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -2348,9 +2348,9 @@ exports[`DelegateTable should render pagination 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -2426,9 +2426,9 @@ exports[`DelegateTable should render pagination 1`] = `
           >
             Next
             <div
-              class="sc-bdfBwQ ejYZeh ml-2"
-              height="12"
-              width="12"
+              class="sc-bdfBwQ eZRpTZ ml-2"
+              height="10"
+              width="10"
             >
               <svg>
                 forward.svg
@@ -2492,9 +2492,9 @@ exports[`DelegateTable should render pagination 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -2524,9 +2524,9 @@ exports[`DelegateTable should render pagination 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -2556,9 +2556,9 @@ exports[`DelegateTable should render pagination 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -2645,10 +2645,10 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -2734,9 +2734,9 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -2810,9 +2810,9 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -2886,9 +2886,9 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -2978,9 +2978,9 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -3010,9 +3010,9 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -3042,9 +3042,9 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -3130,10 +3130,10 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -3219,9 +3219,9 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -3295,9 +3295,9 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -3371,9 +3371,9 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -3466,9 +3466,9 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -3498,9 +3498,9 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -3530,9 +3530,9 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -3618,10 +3618,10 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -3707,9 +3707,9 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -3783,9 +3783,9 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -3859,9 +3859,9 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -3951,9 +3951,9 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -3983,9 +3983,9 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -4015,9 +4015,9 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -4128,10 +4128,10 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -4217,9 +4217,9 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -4293,9 +4293,9 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -4369,9 +4369,9 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -4461,9 +4461,9 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -4493,9 +4493,9 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -4525,9 +4525,9 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -4614,10 +4614,10 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -4703,9 +4703,9 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -4779,9 +4779,9 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -4855,9 +4855,9 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -4950,9 +4950,9 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -4982,9 +4982,9 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -5014,9 +5014,9 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -5102,10 +5102,10 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -5191,9 +5191,9 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -5267,9 +5267,9 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -5343,9 +5343,9 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -5435,9 +5435,9 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -5467,9 +5467,9 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -5499,9 +5499,9 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -5588,10 +5588,10 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -5677,9 +5677,9 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -5753,9 +5753,9 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -5829,9 +5829,9 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -5921,9 +5921,9 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -5953,9 +5953,9 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -5985,9 +5985,9 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -6073,10 +6073,10 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -6162,9 +6162,9 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -6238,9 +6238,9 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -6314,9 +6314,9 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -6406,9 +6406,9 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -6438,9 +6438,9 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -6470,9 +6470,9 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg
@@ -6559,10 +6559,10 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -6648,9 +6648,9 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -6724,9 +6724,9 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -6800,9 +6800,9 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -6892,9 +6892,9 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote.svg
@@ -6924,9 +6924,9 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   unvote.svg
@@ -6956,9 +6956,9 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
               class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ dnaihB text-xl"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   vote-combination.svg

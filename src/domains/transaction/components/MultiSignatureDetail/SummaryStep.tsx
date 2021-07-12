@@ -106,7 +106,7 @@ export const SummaryStep = ({
 					label={t("TRANSACTION.IPFS_HASH")}
 					extra={
 						<Circle className="border-theme-text" size="lg">
-							<Icon name="Ipfs" width={21} height={23} />
+							<Icon name="Ipfs" size="lg" />
 						</Circle>
 					}
 				>

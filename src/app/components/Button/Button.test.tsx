@@ -92,9 +92,9 @@ describe("Button", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render with icon and custom icon width and height", () => {
+	it("should render with icon and custom icon size", () => {
 		const { container } = render(
-			<Button icon="Plus" iconWidth={20} iconHeight={20}>
+			<Button icon="Plus" iconSize="lg">
 				Click Me
 			</Button>,
 		);
@@ -109,7 +109,7 @@ describe("Button", () => {
 	});
 
 	it("should render loading with icon", () => {
-		const { container } = render(<Button isLoading={true} size="icon" icon="icon" iconHeight={2} iconWidth={2} />);
+		const { container } = render(<Button isLoading={true} size="icon" icon="icon" />);
 
 		expect(container).toMatchSnapshot();
 	});

@@ -330,9 +330,9 @@ exports[`SelectAddress should render with preselected verified address 1`] = `
               class="rounded-full text-theme-success-400 bg-theme-success-100"
             >
               <div
-                class="sc-bdfBwQ hHLBkp"
-                height="18"
-                width="18"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   checkmark.svg

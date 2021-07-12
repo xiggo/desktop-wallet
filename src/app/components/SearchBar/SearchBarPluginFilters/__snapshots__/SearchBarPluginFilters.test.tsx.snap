@@ -99,9 +99,9 @@ exports[`SearchBarPluginFilters should render categories 1`] = `
               data-testid="SearchBarPluginFilters-reset"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   reset.svg
@@ -243,9 +243,9 @@ exports[`SearchBarPluginFilters should render default categories 1`] = `
               data-testid="SearchBarPluginFilters-reset"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   reset.svg
@@ -351,9 +351,9 @@ exports[`SearchBarPluginFilters should render with null initialValues 1`] = `
               data-testid="SearchBarPluginFilters-reset"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   reset.svg
@@ -442,9 +442,9 @@ exports[`SearchBarPluginFilters should render with selected values 1`] = `
               data-testid="SearchBarPluginFilters-reset"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   reset.svg

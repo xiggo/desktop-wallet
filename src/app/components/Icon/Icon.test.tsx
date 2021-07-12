@@ -11,11 +11,17 @@ describe("Icon", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render fallbackk", () => {
+	it("should render fallback", () => {
 		const { asFragment } = render(<Icon name="unknown" fallback={<span>Not found</span>} />);
 
 		expect(screen.getByText("Not found"));
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it.each(["sm", "md", "lg", "xl"])("should render with size '%s'", (size) => {
+		const { asFragment } = render(<Icon name="ARK" size={size} />);
+
+		expect(asFragment).toMatchSnapshot();
 	});
 });

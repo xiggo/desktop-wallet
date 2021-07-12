@@ -31,7 +31,7 @@ export const TransactionRowRecipientIcon = ({ type, recipient, size }: Propertie
 				shadowClasses,
 			)}
 		>
-			<Icon name={getIcon(type)} width={20} height={20} />
+			<Icon name={getIcon(type)} size="lg" />
 		</Circle>
 	);
 };

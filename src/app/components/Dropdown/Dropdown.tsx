@@ -12,8 +12,6 @@ import { DropdownItem } from "./DropdownItem.styles";
 export interface DropdownOption {
 	icon?: string;
 	iconPosition?: "start" | "end";
-	iconWidth?: number | string;
-	iconHeight?: number | string;
 	label: string;
 	secondaryLabel?: string;
 	value: string | number;
@@ -78,13 +76,8 @@ const renderOptions = (options: DropdownOption[] | DropdownOptionGroup[], onSele
 		);
 	}
 
-	const renderIcon = ({ icon, iconWidth, iconHeight }: DropdownOption) => (
-		<Icon
-			name={icon!}
-			className="dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-			width={iconWidth}
-			height={iconHeight}
-		/>
+	const renderIcon = ({ icon }: DropdownOption) => (
+		<Icon name={icon!} className="dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200" />
 	);
 
 	const onSelectItem = (e: any, option: DropdownOption) => {

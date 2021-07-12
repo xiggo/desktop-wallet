@@ -48,7 +48,7 @@ export const AppearanceViewingMode: React.FC = () => {
 					variant="modern"
 				>
 					<div className="flex items-center space-x-2 px-2">
-						<Icon width={20} height={20} name={icon} />
+						<Icon size="lg" name={icon} />
 						<span>{name}</span>
 					</div>
 				</ButtonGroupOption>

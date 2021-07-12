@@ -23,9 +23,9 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                 class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     id.svg
@@ -111,10 +111,10 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                 class="p-1"
               >
                 <div
-                  class="sc-bdfBwQ YOUAE"
+                  class="sc-bdfBwQ hjDozt"
                   data-testid="TransactionRowInfo__vendorField"
-                  height="16"
-                  width="17"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     memo.svg
@@ -135,10 +135,10 @@ exports[`TransactionRow should omit the currency for transactions from test netw
               data-testid="TransactionRowConfirmation"
             >
               <div
-                class="sc-bdfBwQ fdJUih text-theme-warning-600"
+                class="sc-bdfBwQ hjDozt text-theme-warning-600"
                 data-testid="TransactionRowConfirmation__pending"
-                height="22"
-                width="22"
+                height="20"
+                width="20"
               >
                 <svg>
                   status-pending.svg
@@ -204,9 +204,9 @@ exports[`TransactionRow should show transaction with currency 1`] = `
                 class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     id.svg
@@ -292,10 +292,10 @@ exports[`TransactionRow should show transaction with currency 1`] = `
                 class="p-1"
               >
                 <div
-                  class="sc-bdfBwQ YOUAE"
+                  class="sc-bdfBwQ hjDozt"
                   data-testid="TransactionRowInfo__vendorField"
-                  height="16"
-                  width="17"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     memo.svg
@@ -316,10 +316,10 @@ exports[`TransactionRow should show transaction with currency 1`] = `
               data-testid="TransactionRowConfirmation"
             >
               <div
-                class="sc-bdfBwQ fdJUih text-theme-warning-600"
+                class="sc-bdfBwQ hjDozt text-theme-warning-600"
                 data-testid="TransactionRowConfirmation__pending"
-                height="22"
-                width="22"
+                height="20"
+                width="20"
               >
                 <svg>
                   status-pending.svg

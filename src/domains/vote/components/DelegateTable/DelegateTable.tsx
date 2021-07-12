@@ -225,7 +225,7 @@ export const DelegateTable = ({
 								)}
 								size="lg"
 							>
-								<Icon name="Vote" className="text-xl" />
+								<Icon name="Vote" size="lg" />
 							</Circle>
 							<div className="flex flex-col space-y-2">
 								<div className="text-sm leading-tight text-theme-secondary-500">
@@ -253,7 +253,7 @@ export const DelegateTable = ({
 								)}
 								size="lg"
 							>
-								<Icon name="Unvote" className="text-xl" />
+								<Icon name="Unvote" size="lg" />
 							</Circle>
 							<div className="flex flex-col space-y-2">
 								<div className="text-sm leading-tight text-theme-secondary-500">
@@ -273,7 +273,7 @@ export const DelegateTable = ({
 
 						<div className="flex px-8">
 							<Circle className="mr-2 bg-theme-background border-theme-text text-theme-text" size="lg">
-								<Icon name="VoteCombination" className="text-xl" />
+								<Icon name="VoteCombination" size="lg" />
 							</Circle>
 							<div className="flex flex-col space-y-2">
 								<div className="text-sm leading-tight text-theme-secondary-500">

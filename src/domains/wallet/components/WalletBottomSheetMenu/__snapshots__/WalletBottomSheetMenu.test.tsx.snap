@@ -40,9 +40,9 @@ exports[`WalletBottomSheetMenu should render 1`] = `
               class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
             >
               <div
-                class="sc-bdfBwQ ijcmGk"
-                height="5"
-                width="8"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   chevron-down.svg
@@ -97,10 +97,10 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                         class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                       >
                         <div
-                          class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                          height="5"
+                          class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                          height="10"
                           role="img"
-                          width="8"
+                          width="10"
                         >
                           <svg>
                             chevron-down.svg
@@ -141,10 +141,10 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                         class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                       >
                         <div
-                          class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                          height="5"
+                          class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                          height="10"
                           role="img"
-                          width="8"
+                          width="10"
                         >
                           <svg>
                             chevron-down.svg
@@ -171,10 +171,10 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                         class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                       >
                         <div
-                          class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                          height="5"
+                          class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                          height="10"
                           role="img"
-                          width="8"
+                          width="10"
                         >
                           <svg>
                             chevron-down.svg
@@ -358,9 +358,9 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           data-testid="WalletIcon__Key"
                         >
                           <div
-                            class="sc-bdfBwQ dWCabD"
+                            class="sc-bdfBwQ bcEVDZ"
                             height="16"
-                            width="1em"
+                            width="16"
                           >
                             <svg>
                               key.svg

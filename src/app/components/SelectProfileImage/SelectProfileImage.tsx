@@ -99,12 +99,7 @@ export const SelectProfileImage = ({ className, value, name, showLabel, onSelect
 							data-testid="SelectProfileImage__upload-button"
 						>
 							<div className="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85">
-								<Icon
-									name="Upload"
-									className="text-white dark:text-theme-secondary-200"
-									width={24}
-									height={18}
-								/>
+								<Icon name="Upload" className="text-white dark:text-theme-secondary-200" size="lg" />
 							</div>
 						</button>
 					</ProfileImageStyled>
@@ -117,7 +112,7 @@ export const SelectProfileImage = ({ className, value, name, showLabel, onSelect
 							onClick={() => onSelect("")}
 							data-testid="SelectProfileImage__remove-button"
 						>
-							<Icon name="Close" width={12} height={12} />
+							<Icon name="Close" size="sm" />
 						</Button>
 					)}
 				</div>
@@ -136,8 +131,7 @@ export const SelectProfileImage = ({ className, value, name, showLabel, onSelect
 							<Icon
 								name="Upload"
 								className="text-theme-primary-600 dark:text-theme-secondary-200"
-								width={24}
-								height={18}
+								size="lg"
 							/>
 						</Button>
 					</UploadButtonWrapper>

@@ -12,7 +12,7 @@ interface Properties {
 	size?: Size;
 	className?: string;
 	shadowClassName?: string;
-	iconSize?: number;
+	iconSize?: Size;
 	showTooltip?: boolean;
 	noShadow?: boolean;
 }
@@ -54,13 +54,13 @@ export const NetworkIcon = ({ coin, network, iconSize, className, showTooltip, .
 				className={getClassName()}
 				{...properties}
 			>
-				<Icon data-testid="NetworkIcon__icon" name={iconName} width={iconSize} height={iconSize} />
+				<Icon data-testid="NetworkIcon__icon" name={iconName} size={iconSize} />
 			</Circle>
 		</Tooltip>
 	);
 };
 
 NetworkIcon.defaultProps = {
-	iconSize: 20,
+	iconSize: "lg",
 	showTooltip: true,
 };

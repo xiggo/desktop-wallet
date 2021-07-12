@@ -51,9 +51,9 @@ exports[`FilterWallets should render 1`] = `
                 class="inline-block mr-2 font-semibold"
               />
               <div
-                class="sc-bdfBwQ ijcmGk transition-transform "
-                height="5"
-                width="8"
+                class="sc-bdfBwQ eZRpTZ transition-transform "
+                height="10"
+                width="10"
               >
                 <svg>
                   chevron-down.svg
@@ -162,9 +162,9 @@ exports[`FilterWallets should render with networks selection 1`] = `
                 class="inline-block mr-2 font-semibold"
               />
               <div
-                class="sc-bdfBwQ ijcmGk transition-transform "
-                height="5"
-                width="8"
+                class="sc-bdfBwQ eZRpTZ transition-transform "
+                height="10"
+                width="10"
               >
                 <svg>
                   chevron-down.svg

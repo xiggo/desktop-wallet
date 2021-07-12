@@ -86,7 +86,7 @@ export const PluginHeader = ({
 
 					<Tooltip content={t("PLUGINS.PLUGIN_INFO.REPORT")}>
 						<Button data-testid="PluginHeader__button--report" variant="secondary" onClick={onReport}>
-							<Icon name="Report" width={20} height={20} />
+							<Icon name="Report" size="lg" />
 						</Button>
 					</Tooltip>
 
@@ -98,7 +98,7 @@ export const PluginHeader = ({
 								size="icon"
 								className="text-left"
 							>
-								<Icon name="Settings" width={20} height={20} />
+								<Icon name="Settings" size="lg" />
 							</Button>
 						}
 						options={actions}
@@ -138,7 +138,7 @@ export const PluginHeader = ({
 						data-testid="PluginHeader__button--report"
 						variant="secondary"
 					>
-						<Icon name="Report" width={20} height={20} />
+						<Icon name="Report" size="lg" />
 					</Button>
 				</Tooltip>
 			</>

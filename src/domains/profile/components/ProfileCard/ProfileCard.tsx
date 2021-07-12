@@ -36,8 +36,7 @@ export const ProfileCard = ({
 					<Badge
 						className="mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
 						icon="Lock"
-						iconWidth={13}
-						iconHeight={18}
+						iconSize="lg"
 						size="lg"
 						position="bottom-right"
 					/>

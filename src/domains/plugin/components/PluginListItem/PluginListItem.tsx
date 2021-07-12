@@ -196,7 +196,7 @@ export const PluginListItem = ({
 										</Tooltip>
 									)}
 									<Button variant="secondary" size="icon" className="text-left">
-										<Icon name="Settings" width={20} height={20} />
+										<Icon name="Settings" size="lg" />
 									</Button>
 								</div>
 							}

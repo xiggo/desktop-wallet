@@ -28,9 +28,9 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -140,9 +140,9 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg

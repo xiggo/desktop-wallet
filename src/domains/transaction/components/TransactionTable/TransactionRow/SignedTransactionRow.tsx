@@ -33,7 +33,7 @@ const StatusLabel = ({
 		return (
 			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_OUR_SIGNATURE")}>
 				<span className="p-1 text-theme-danger-400">
-					<Icon name="AwaitingOurSignature" width={20} height={20} />
+					<Icon name="AwaitingOurSignature" size="lg" />
 				</span>
 			</Tooltip>
 		);
@@ -47,7 +47,7 @@ const StatusLabel = ({
 				})}
 			>
 				<span className="p-1 text-theme-warning-300">
-					<Icon name="AwaitingOtherSignature" width={30} height={22} />
+					<Icon name="AwaitingOtherSignature" size="lg" />
 				</span>
 			</Tooltip>
 		);
@@ -57,7 +57,7 @@ const StatusLabel = ({
 		return (
 			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>
 				<span className="p-1 text-theme-warning-300">
-					<Icon name="StatusPending" width={30} height={22} />
+					<Icon name="StatusPending" size="lg" />
 				</span>
 			</Tooltip>
 		);
@@ -67,7 +67,7 @@ const StatusLabel = ({
 		return (
 			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.READY")}>
 				<span className="p-1 text-theme-success-500">
-					<Icon name="Send" width={16} height={16} />
+					<Icon name="Send" />
 				</span>
 			</Tooltip>
 		);
@@ -76,7 +76,7 @@ const StatusLabel = ({
 	return (
 		<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_FINAL_SIGNATURE")}>
 			<span className="p-1 text-theme-success-500">
-				<Icon name="AwaitingFinalSignature" width={30} height={22} />
+				<Icon name="AwaitingFinalSignature" size="lg" />
 			</span>
 		</Tooltip>
 	);

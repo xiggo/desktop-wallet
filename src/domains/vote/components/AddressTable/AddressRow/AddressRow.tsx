@@ -67,7 +67,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	const WalletIcon = ({ type }: { type: string }) => (
 		<Tooltip content={t(`COMMON.${type.toUpperCase()}`)}>
 			<div className={`inline-block p-1 ${getIconColor(type)}`}>
-				<Icon name={getIconName(type)} width={20} />
+				<Icon name={getIconName(type)} size="lg" />
 			</div>
 		</Tooltip>
 	);
@@ -144,8 +144,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 							<Icon
 								name="StatusOk"
 								className="text-theme-success-600"
-								width={22}
-								height={22}
+								size="lg"
 								data-testid="AddressRow__status"
 							/>
 						)}

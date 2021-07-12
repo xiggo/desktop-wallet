@@ -18,9 +18,9 @@ exports[`FilterNetwork should render empty 1`] = `
         class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-700"
       >
         <div
-          class="sc-bdfBwQ ijcmGk transition-transform "
-          height="5"
-          width="8"
+          class="sc-bdfBwQ eZRpTZ transition-transform "
+          height="10"
+          width="10"
         >
           <svg>
             chevron-down.svg
@@ -55,9 +55,9 @@ exports[`FilterNetwork should render public networks 1`] = `
         class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-700"
       >
         <div
-          class="sc-bdfBwQ ijcmGk transition-transform "
-          height="5"
-          width="8"
+          class="sc-bdfBwQ eZRpTZ transition-transform "
+          height="10"
+          width="10"
         >
           <svg>
             chevron-down.svg
@@ -113,9 +113,9 @@ exports[`FilterNetwork should render public networks 1`] = `
             class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
           >
             <div
-              class="sc-bdfBwQ ejYZeh"
-              height="12"
-              width="12"
+              class="sc-bdfBwQ eZRpTZ"
+              height="10"
+              width="10"
             >
               <svg>
                 checkmark.svg
@@ -212,9 +212,9 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
               class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
             >
               <div
-                class="sc-bdfBwQ ejYZeh"
-                height="12"
-                width="12"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   checkmark.svg
@@ -350,9 +350,9 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
               class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
             >
               <div
-                class="sc-bdfBwQ ejYZeh"
-                height="12"
-                width="12"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   checkmark.svg
@@ -394,9 +394,9 @@ exports[`FilterNetworks should toggle view all 1`] = `
           class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-primary-700 border-theme-primary-700 text-white"
         >
           <div
-            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-            height="5"
-            width="8"
+            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+            height="10"
+            width="10"
           >
             <svg>
               chevron-down.svg
@@ -468,9 +468,9 @@ exports[`FilterNetworks should toggle view all 1`] = `
           class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-700"
         >
           <div
-            class="sc-bdfBwQ ijcmGk transition-transform "
-            height="5"
-            width="8"
+            class="sc-bdfBwQ eZRpTZ transition-transform "
+            height="10"
+            width="10"
           >
             <svg>
               chevron-down.svg
@@ -503,9 +503,9 @@ exports[`FilterNetworks should toggle view all 1`] = `
               class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
             >
               <div
-                class="sc-bdfBwQ ejYZeh"
-                height="12"
-                width="12"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   checkmark.svg
@@ -547,9 +547,9 @@ exports[`FilterNetworks should toggle view all 2`] = `
           class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-700"
         >
           <div
-            class="sc-bdfBwQ ijcmGk transition-transform "
-            height="5"
-            width="8"
+            class="sc-bdfBwQ eZRpTZ transition-transform "
+            height="10"
+            width="10"
           >
             <svg>
               chevron-down.svg
@@ -608,9 +608,9 @@ exports[`FilterNetworks should toggle view all 2`] = `
           class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-700"
         >
           <div
-            class="sc-bdfBwQ ijcmGk transition-transform "
-            height="5"
-            width="8"
+            class="sc-bdfBwQ eZRpTZ transition-transform "
+            height="10"
+            width="10"
           >
             <svg>
               chevron-down.svg
@@ -643,9 +643,9 @@ exports[`FilterNetworks should toggle view all 2`] = `
               class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
             >
               <div
-                class="sc-bdfBwQ ejYZeh"
-                height="12"
-                width="12"
+                class="sc-bdfBwQ eZRpTZ"
+                height="10"
+                width="10"
               >
                 <svg>
                   checkmark.svg
@@ -710,9 +710,9 @@ exports[`NetworkOptions should not render unknown networks 1`] = `
           class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
         >
           <div
-            class="sc-bdfBwQ ejYZeh"
-            height="12"
-            width="12"
+            class="sc-bdfBwQ eZRpTZ"
+            height="10"
+            width="10"
           >
             <svg>
               checkmark.svg
@@ -775,9 +775,9 @@ exports[`NetworkOptions should render available networks options 1`] = `
           class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
         >
           <div
-            class="sc-bdfBwQ ejYZeh"
-            height="12"
-            width="12"
+            class="sc-bdfBwQ eZRpTZ"
+            height="10"
+            width="10"
           >
             <svg>
               checkmark.svg
@@ -849,9 +849,9 @@ exports[`NetworkOptions should render networks that have coin and id defined 1`]
           class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
         >
           <div
-            class="sc-bdfBwQ ejYZeh"
-            height="12"
-            width="12"
+            class="sc-bdfBwQ eZRpTZ"
+            height="10"
+            width="10"
           >
             <svg>
               checkmark.svg
@@ -880,9 +880,9 @@ exports[`ToggleAllOption should render 1`] = `
       class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-700"
     >
       <div
-        class="sc-bdfBwQ ijcmGk transition-transform "
-        height="5"
-        width="8"
+        class="sc-bdfBwQ eZRpTZ transition-transform "
+        height="10"
+        width="10"
       >
         <svg>
           chevron-down.svg
@@ -911,9 +911,9 @@ exports[`ToggleAllOption should render selected 1`] = `
       class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-primary-700 border-theme-primary-700 text-white"
     >
       <div
-        class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-        height="5"
-        width="8"
+        class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+        height="10"
+        width="10"
       >
         <svg>
           chevron-down.svg

@@ -132,8 +132,7 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 						<Icon
 							className="mr-4 text-theme-primary-300 dark:text-theme-secondary-600"
 							name="Search"
-							width={18}
-							height={18}
+							size="lg"
 						/>
 					</div>
 

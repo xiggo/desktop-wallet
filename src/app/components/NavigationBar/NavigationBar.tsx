@@ -224,7 +224,7 @@ const NavigationBar = ({
 												variant="transparent"
 												onClick={() => history.push(`/profiles/${profile?.id()}/send-transfer`)}
 											>
-												<Icon name="Send" width={20} height={20} className="p-1" />
+												<Icon name="Send" size="lg" className="p-1" />
 											</Button>
 										</NavigationButtonWrapper>
 									</Tooltip>
@@ -242,7 +242,7 @@ const NavigationBar = ({
 												variant="transparent"
 												onClick={() => setSearchWalletIsOpen(true)}
 											>
-												<Icon name="QrCode" width={22} height={22} className="p-1" />
+												<Icon name="QrCode" size="lg" className="p-1" />
 											</Button>
 										</NavigationButtonWrapper>
 									</Tooltip>

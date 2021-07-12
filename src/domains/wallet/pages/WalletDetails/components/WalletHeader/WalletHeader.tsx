@@ -189,17 +189,13 @@ export const WalletHeader = ({
 		options: [
 			{
 				icon: "OpenExplorer",
-				iconHeight: 18,
 				iconPosition: "start",
-				iconWidth: 18,
 				label: t("COMMON.OPEN_IN_EXPLORER"),
 				value: "open-explorer",
 			},
 			{
 				icon: "Trash",
-				iconHeight: 18,
 				iconPosition: "start",
-				iconWidth: 18,
 				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DELETE"),
 				value: "delete-wallet",
 			},
@@ -297,12 +293,7 @@ export const WalletHeader = ({
 									data={wallet.address()}
 									tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_ADDRESS")}
 								>
-									<Icon
-										name="CopyAddress"
-										className="hover:text-theme-secondary-500"
-										width={13}
-										height={21}
-									/>
+									<Icon name="CopyAddress" className="hover:text-theme-secondary-500" size="lg" />
 								</Clipboard>
 
 								<Clipboard
@@ -310,12 +301,7 @@ export const WalletHeader = ({
 									data={wallet.publicKey() || ""}
 									tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
 								>
-									<Icon
-										name="CopyKey"
-										className="hover:text-theme-secondary-500"
-										width={17}
-										height={21}
-									/>
+									<Icon name="CopyKey" className="hover:text-theme-secondary-500" size="lg" />
 								</Clipboard>
 							</div>
 						</div>
@@ -345,7 +331,7 @@ export const WalletHeader = ({
 									<Icon
 										name="ChevronUp"
 										className={currencyDelta < 0 ? "rotate-180" : ""}
-										width={10}
+										size="sm"
 									/>
 									<span className="ml-1">{currencyDelta}%</span>
 								</span>
@@ -421,7 +407,7 @@ export const WalletHeader = ({
 									size="icon"
 									className="text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
 								>
-									<Icon name="Settings" width={20} height={20} />
+									<Icon name="Settings" size="lg" />
 								</Button>
 							}
 							onSelect={handleSelect}

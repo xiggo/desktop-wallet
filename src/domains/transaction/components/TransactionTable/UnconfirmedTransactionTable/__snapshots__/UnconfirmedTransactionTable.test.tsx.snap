@@ -37,10 +37,10 @@ exports[`Unconfirmed transaction table should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -81,10 +81,10 @@ exports[`Unconfirmed transaction table should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg

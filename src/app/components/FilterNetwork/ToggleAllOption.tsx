@@ -29,8 +29,6 @@ export const ToggleAllOption = ({ onClick, isHidden = false, isSelected = false 
 				}`}
 				icon="ChevronDown"
 				iconClass={`transition-transform ${isSelected ? "transform rotate-180" : ""}`}
-				iconWidth={8}
-				iconHeight={5}
 			/>
 		</Circle>
 	);

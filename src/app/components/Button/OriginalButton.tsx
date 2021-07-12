@@ -11,24 +11,20 @@ type ButtonProperties = {
 	size?: Size;
 	isLoading?: boolean;
 	icon?: string;
-	iconWidth?: number | string;
-	iconHeight?: number | string;
+	iconSize?: Size;
 	iconPosition?: "left" | "right";
 } & React.ButtonHTMLAttributes<any>;
 
 const StyledButton = styled.button<ButtonProperties>(getStyles);
 
 export const OriginalButton = React.forwardRef<HTMLButtonElement, ButtonProperties>(
-	(
-		{ children, icon, isLoading, iconWidth, iconHeight, iconPosition, ...properties }: ButtonProperties,
-		reference,
-	) => {
+	({ children, icon, isLoading, iconSize, iconPosition, ...properties }: ButtonProperties, reference) => {
 		const renderContent = () => {
 			if (isLoading) {
 				return (
 					<div className="flex relative items-center">
 						<span className="flex invisible items-center space-x-2">
-							{icon && <Icon name={icon} width={iconWidth} height={iconHeight} />}
+							{icon && <Icon name={icon} size={iconSize} />}
 							{children}
 						</span>
 
@@ -41,9 +37,9 @@ export const OriginalButton = React.forwardRef<HTMLButtonElement, ButtonProperti
 
 			return (
 				<>
-					{icon && iconPosition === "left" && <Icon name={icon} width={iconWidth} height={iconHeight} />}
+					{icon && iconPosition === "left" && <Icon name={icon} size={iconSize} />}
 					{children}
-					{icon && iconPosition === "right" && <Icon name={icon} width={iconWidth} height={iconHeight} />}
+					{icon && iconPosition === "right" && <Icon name={icon} size={iconSize} />}
 				</>
 			);
 		};
@@ -57,9 +53,7 @@ export const OriginalButton = React.forwardRef<HTMLButtonElement, ButtonProperti
 );
 
 OriginalButton.defaultProps = {
-	iconHeight: 14,
 	iconPosition: "left",
-	iconWidth: 14,
 	type: "button",
 	variant: "primary",
 };

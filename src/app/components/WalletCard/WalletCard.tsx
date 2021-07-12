@@ -58,7 +58,6 @@ export const WalletCard = ({
 				<Icon
 					name={displayType === "starred" ? "Star" : "Ledger"}
 					className="text-theme-primary-100 dark:text-theme-secondary-800"
-					height={16}
 				/>
 			);
 		};

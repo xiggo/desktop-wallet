@@ -15,9 +15,9 @@ exports[`Pagination should handle first page click properly 1`] = `
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -65,9 +65,9 @@ exports[`Pagination should handle first page click properly 1`] = `
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -128,9 +128,9 @@ exports[`Pagination should handle first page click properly 1`] = `
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -149,9 +149,9 @@ exports[`Pagination should handle first page click properly 1`] = `
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -168,9 +168,9 @@ exports[`Pagination should handle first page click properly 1`] = `
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg
@@ -258,9 +258,9 @@ exports[`Pagination should handle last page click properly 1`] = `
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -279,9 +279,9 @@ exports[`Pagination should handle last page click properly 1`] = `
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -298,9 +298,9 @@ exports[`Pagination should handle last page click properly 1`] = `
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg
@@ -327,9 +327,9 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -378,9 +378,9 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -414,9 +414,9 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   search.svg
@@ -433,9 +433,9 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   close.svg
@@ -520,9 +520,9 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -541,9 +541,9 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -560,9 +560,9 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg
@@ -636,9 +636,9 @@ exports[`Pagination should handle next page click properly 1`] = `
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -692,9 +692,9 @@ exports[`Pagination should handle page selection properly 1`] = `
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -721,9 +721,9 @@ exports[`Pagination should handle previous page click properly 1`] = `
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -771,9 +771,9 @@ exports[`Pagination should handle previous page click properly 1`] = `
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -842,9 +842,9 @@ exports[`Pagination should handle previous page click properly 1`] = `
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -871,9 +871,9 @@ exports[`Pagination should handle right pagination search icon click properly 1`
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -922,9 +922,9 @@ exports[`Pagination should handle right pagination search icon click properly 1`
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -1007,9 +1007,9 @@ exports[`Pagination should handle right pagination search icon click properly 1`
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -1043,9 +1043,9 @@ exports[`Pagination should handle right pagination search icon click properly 1`
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   search.svg
@@ -1062,9 +1062,9 @@ exports[`Pagination should handle right pagination search icon click properly 1`
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   close.svg
@@ -1085,9 +1085,9 @@ exports[`Pagination should handle right pagination search icon click properly 1`
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -1104,9 +1104,9 @@ exports[`Pagination should handle right pagination search icon click properly 1`
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg
@@ -1196,9 +1196,9 @@ exports[`Pagination should not render first button if pagination buttons include
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -1217,9 +1217,9 @@ exports[`Pagination should not render first button if pagination buttons include
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -1236,9 +1236,9 @@ exports[`Pagination should not render first button if pagination buttons include
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg
@@ -1346,9 +1346,9 @@ exports[`Pagination should not render first button if pagination buttons include
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -1367,9 +1367,9 @@ exports[`Pagination should not render first button if pagination buttons include
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -1386,9 +1386,9 @@ exports[`Pagination should not render first button if pagination buttons include
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg
@@ -1496,9 +1496,9 @@ exports[`Pagination should not render first button if pagination buttons include
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -1517,9 +1517,9 @@ exports[`Pagination should not render first button if pagination buttons include
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -1536,9 +1536,9 @@ exports[`Pagination should not render first button if pagination buttons include
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg
@@ -1565,9 +1565,9 @@ exports[`Pagination should not render first button if pagination buttons include
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -1615,9 +1615,9 @@ exports[`Pagination should not render first button if pagination buttons include
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -1695,9 +1695,9 @@ exports[`Pagination should not render first button if pagination buttons include
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -1745,9 +1745,9 @@ exports[`Pagination should not render first button if pagination buttons include
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -1816,9 +1816,9 @@ exports[`Pagination should not render first button if pagination buttons include
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -1845,9 +1845,9 @@ exports[`Pagination should not render first button if pagination buttons include
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -1895,9 +1895,9 @@ exports[`Pagination should not render first button if pagination buttons include
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -1966,9 +1966,9 @@ exports[`Pagination should not render first button if pagination buttons include
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -1995,9 +1995,9 @@ exports[`Pagination should not render next button on last page 1`] = `
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -2045,9 +2045,9 @@ exports[`Pagination should not render next button on last page 1`] = `
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -2186,9 +2186,9 @@ exports[`Pagination should not render previous buttons on first page 1`] = `
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -2207,9 +2207,9 @@ exports[`Pagination should not render previous buttons on first page 1`] = `
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -2226,9 +2226,9 @@ exports[`Pagination should not render previous buttons on first page 1`] = `
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg
@@ -2282,9 +2282,9 @@ exports[`Pagination should render 1`] = `
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -2311,9 +2311,9 @@ exports[`Pagination should render pagination search buttons 1`] = `
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-first.svg
@@ -2361,9 +2361,9 @@ exports[`Pagination should render pagination search buttons 1`] = `
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -2438,9 +2438,9 @@ exports[`Pagination should render pagination search buttons 1`] = `
           data-testid="PaginationSearchButton__search"
         >
           <div
-            class="sc-bdfBwQ qoThl"
-            height="13"
-            width="13"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               search.svg
@@ -2459,9 +2459,9 @@ exports[`Pagination should render pagination search buttons 1`] = `
       >
         Next
         <div
-          class="sc-bdfBwQ ejYZeh ml-2"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ ml-2"
+          height="10"
+          width="10"
         >
           <svg>
             forward.svg
@@ -2478,9 +2478,9 @@ exports[`Pagination should render pagination search buttons 1`] = `
         class="flex relative items-center space-x-2"
       >
         <div
-          class="sc-bdfBwQ ejYZeh"
-          height="12"
-          width="12"
+          class="sc-bdfBwQ eZRpTZ"
+          height="10"
+          width="10"
         >
           <svg>
             pagination-last.svg

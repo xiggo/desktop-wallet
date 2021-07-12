@@ -67,7 +67,7 @@ const ModalContent = (properties: ModalContentProperties) => (
 				onClick={properties.onClose}
 				className="w-11 h-11"
 			>
-				<Icon name="CrossSlim" width={14} height={14} />
+				<Icon name="CrossSlim" />
 			</OriginalButton>
 		</div>
 

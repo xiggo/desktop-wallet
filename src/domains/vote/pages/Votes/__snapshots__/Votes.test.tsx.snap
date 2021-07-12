@@ -20,9 +20,9 @@ exports[`Votes should filter current delegates 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -127,9 +127,9 @@ exports[`Votes should filter current delegates 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -196,9 +196,9 @@ exports[`Votes should filter current delegates 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -321,9 +321,9 @@ exports[`Votes should filter current delegates 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -365,9 +365,9 @@ exports[`Votes should filter current delegates 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -474,10 +474,10 @@ exports[`Votes should filter current delegates 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -563,9 +563,9 @@ exports[`Votes should filter current delegates 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -655,9 +655,9 @@ exports[`Votes should filter current delegates 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote.svg
@@ -687,9 +687,9 @@ exports[`Votes should filter current delegates 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           unvote.svg
@@ -719,9 +719,9 @@ exports[`Votes should filter current delegates 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote-combination.svg
@@ -787,9 +787,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -894,9 +894,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -963,9 +963,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1088,9 +1088,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -1125,9 +1125,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -1189,10 +1189,10 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -1278,9 +1278,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -1354,9 +1354,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -1430,9 +1430,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -1522,9 +1522,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote.svg
@@ -1554,9 +1554,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           unvote.svg
@@ -1586,9 +1586,9 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote-combination.svg
@@ -1658,9 +1658,9 @@ exports[`Votes should render 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -1765,9 +1765,9 @@ exports[`Votes should render 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -1834,9 +1834,9 @@ exports[`Votes should render 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1959,9 +1959,9 @@ exports[`Votes should render 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -1996,9 +1996,9 @@ exports[`Votes should render 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -2060,10 +2060,10 @@ exports[`Votes should render 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -2149,9 +2149,9 @@ exports[`Votes should render 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -2225,9 +2225,9 @@ exports[`Votes should render 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -2301,9 +2301,9 @@ exports[`Votes should render 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -2393,9 +2393,9 @@ exports[`Votes should render 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote.svg
@@ -2425,9 +2425,9 @@ exports[`Votes should render 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           unvote.svg
@@ -2457,9 +2457,9 @@ exports[`Votes should render 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote-combination.svg
@@ -2525,9 +2525,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -2632,9 +2632,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -2701,9 +2701,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -2826,9 +2826,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -2863,9 +2863,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -2927,10 +2927,10 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -3016,9 +3016,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -3092,9 +3092,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -3168,9 +3168,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -3260,9 +3260,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote.svg
@@ -3292,9 +3292,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           unvote.svg
@@ -3324,9 +3324,9 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote-combination.svg
@@ -3392,9 +3392,9 @@ exports[`Votes should render with no wallets 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -3499,9 +3499,9 @@ exports[`Votes should render with no wallets 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -3563,9 +3563,9 @@ exports[`Votes should render with no wallets 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -3706,9 +3706,9 @@ exports[`Votes should render with no wallets 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ ejYZeh"
-                          height="12"
-                          width="12"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             plus.svg
@@ -3731,9 +3731,9 @@ exports[`Votes should render with no wallets 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ coTHIp"
-                          height="15"
-                          width="15"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             import.svg
@@ -3772,9 +3772,9 @@ exports[`Votes should select a delegate 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -3879,9 +3879,9 @@ exports[`Votes should select a delegate 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -3948,9 +3948,9 @@ exports[`Votes should select a delegate 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -4073,9 +4073,9 @@ exports[`Votes should select a delegate 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -4110,9 +4110,9 @@ exports[`Votes should select a delegate 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -4174,10 +4174,10 @@ exports[`Votes should select a delegate 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -4263,9 +4263,9 @@ exports[`Votes should select a delegate 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -4339,9 +4339,9 @@ exports[`Votes should select a delegate 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -4415,9 +4415,9 @@ exports[`Votes should select a delegate 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -4507,9 +4507,9 @@ exports[`Votes should select a delegate 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote.svg
@@ -4539,9 +4539,9 @@ exports[`Votes should select a delegate 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           unvote.svg
@@ -4571,9 +4571,9 @@ exports[`Votes should select a delegate 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote-combination.svg
@@ -4640,9 +4640,9 @@ exports[`Votes should select an address without vote 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -4747,9 +4747,9 @@ exports[`Votes should select an address without vote 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -4816,9 +4816,9 @@ exports[`Votes should select an address without vote 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -4941,9 +4941,9 @@ exports[`Votes should select an address without vote 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -4978,9 +4978,9 @@ exports[`Votes should select an address without vote 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -5042,10 +5042,10 @@ exports[`Votes should select an address without vote 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -5131,9 +5131,9 @@ exports[`Votes should select an address without vote 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -5207,9 +5207,9 @@ exports[`Votes should select an address without vote 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -5283,9 +5283,9 @@ exports[`Votes should select an address without vote 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -5375,9 +5375,9 @@ exports[`Votes should select an address without vote 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote.svg
@@ -5407,9 +5407,9 @@ exports[`Votes should select an address without vote 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           unvote.svg
@@ -5439,9 +5439,9 @@ exports[`Votes should select an address without vote 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote-combination.svg
@@ -5507,9 +5507,9 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -5614,9 +5614,9 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -5683,9 +5683,9 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -5808,9 +5808,9 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -5852,9 +5852,9 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -5926,9 +5926,9 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                                         class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                                       >
                                         <div
-                                          class="sc-bdfBwQ ejYZeh"
-                                          height="12"
-                                          width="12"
+                                          class="sc-bdfBwQ eZRpTZ"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             checkmark.svg
@@ -5971,9 +5971,9 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                                         Ledger
                                       </span>
                                       <div
-                                        class="sc-bdfBwQ ijcmGk transition-transform "
-                                        height="5"
-                                        width="8"
+                                        class="sc-bdfBwQ eZRpTZ transition-transform "
+                                        height="10"
+                                        width="10"
                                       >
                                         <svg>
                                           chevron-down.svg
@@ -6049,9 +6049,9 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -6156,9 +6156,9 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -6225,9 +6225,9 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -6350,9 +6350,9 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -6394,9 +6394,9 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -6468,9 +6468,9 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                                         class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                                       >
                                         <div
-                                          class="sc-bdfBwQ ejYZeh"
-                                          height="12"
-                                          width="12"
+                                          class="sc-bdfBwQ eZRpTZ"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             checkmark.svg
@@ -6513,9 +6513,9 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                                         Starred
                                       </span>
                                       <div
-                                        class="sc-bdfBwQ ijcmGk transition-transform "
-                                        height="5"
-                                        width="8"
+                                        class="sc-bdfBwQ eZRpTZ transition-transform "
+                                        height="10"
+                                        width="10"
                                       >
                                         <svg>
                                           chevron-down.svg
@@ -6591,9 +6591,9 @@ exports[`Votes should show network warning 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -6698,9 +6698,9 @@ exports[`Votes should show network warning 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -6767,9 +6767,9 @@ exports[`Votes should show network warning 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -6892,9 +6892,9 @@ exports[`Votes should show network warning 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -6929,9 +6929,9 @@ exports[`Votes should show network warning 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -6993,10 +6993,10 @@ exports[`Votes should show network warning 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -7082,9 +7082,9 @@ exports[`Votes should show network warning 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -7158,9 +7158,9 @@ exports[`Votes should show network warning 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -7234,9 +7234,9 @@ exports[`Votes should show network warning 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -7326,9 +7326,9 @@ exports[`Votes should show network warning 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote.svg
@@ -7358,9 +7358,9 @@ exports[`Votes should show network warning 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           unvote.svg
@@ -7390,9 +7390,9 @@ exports[`Votes should show network warning 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote-combination.svg
@@ -7457,9 +7457,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -7564,9 +7564,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -7633,9 +7633,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -7758,9 +7758,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -7795,9 +7795,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -7835,9 +7835,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                 class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
               >
                 <div
-                  class="sc-bdfBwQ gkYIJl"
-                  height="1.25em"
-                  width="1.25em"
+                  class="sc-bdfBwQ hjDozt"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     alert-warning.svg
@@ -7893,10 +7893,10 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -7982,9 +7982,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -8058,9 +8058,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -8134,9 +8134,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                             class="Link__Content-ec014t-1 emZiaA"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 redirect.svg
@@ -8226,9 +8226,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote.svg
@@ -8258,9 +8258,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           unvote.svg
@@ -8290,9 +8290,9 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="Circle__CircleWrapper-d5u41q-0 bWntUS mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB text-xl"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ hjDozt"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           vote-combination.svg
@@ -8360,9 +8360,9 @@ exports[`Votes should toggle network selection from network filters 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -8467,9 +8467,9 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -8536,9 +8536,9 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -8661,9 +8661,9 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                           Search
                         </span>
                         <div
-                          class="sc-bdfBwQ hHLBkp"
-                          height="18"
-                          width="18"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             search.svg
@@ -8698,9 +8698,9 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                             class="flex justify-center items-center w-5 h-5"
                           >
                             <div
-                              class="sc-bdfBwQ EshKj"
-                              height="19"
-                              width="17"
+                              class="sc-bdfBwQ hjDozt"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 filters.svg
@@ -8772,9 +8772,9 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                                         class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                                       >
                                         <div
-                                          class="sc-bdfBwQ ejYZeh"
-                                          height="12"
-                                          width="12"
+                                          class="sc-bdfBwQ eZRpTZ"
+                                          height="10"
+                                          width="10"
                                         >
                                           <svg>
                                             checkmark.svg
@@ -8817,9 +8817,9 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                                         All
                                       </span>
                                       <div
-                                        class="sc-bdfBwQ ijcmGk transition-transform "
-                                        height="5"
-                                        width="8"
+                                        class="sc-bdfBwQ eZRpTZ transition-transform "
+                                        height="10"
+                                        width="10"
                                       >
                                         <svg>
                                           chevron-down.svg
@@ -8920,10 +8920,10 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -8964,10 +8964,10 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg

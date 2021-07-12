@@ -193,12 +193,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 							{isInvalidValue && (
 								<Tooltip content={errorMessageValue} size="sm">
 									<span data-errortext={errorMessageValue} data-testid="Input__error">
-										<Icon
-											name={"AlertWarning"}
-											className="text-theme-danger-500"
-											width={20}
-											height={20}
-										/>
+										<Icon name={"AlertWarning"} className="text-theme-danger-500" size="lg" />
 									</span>
 								</Tooltip>
 							)}

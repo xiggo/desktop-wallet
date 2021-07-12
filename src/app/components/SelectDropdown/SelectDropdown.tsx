@@ -161,8 +161,7 @@ const SelectDropdown = ({
 								"transform rotate-180": isOpen,
 							},
 						)}
-						width={7}
-						height={5}
+						size="sm"
 					/>
 				</div>
 			),

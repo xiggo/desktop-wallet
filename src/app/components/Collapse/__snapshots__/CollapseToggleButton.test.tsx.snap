@@ -14,9 +14,9 @@ exports[`CollapseToggleButton should render disabled 1`] = `
       class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 gPPrJa"
     >
       <div
-        class="sc-bdfBwQ ijcmGk"
-        height="5"
-        width="8"
+        class="sc-bdfBwQ eZRpTZ"
+        height="10"
+        width="10"
       >
         <svg>
           chevron-down.svg

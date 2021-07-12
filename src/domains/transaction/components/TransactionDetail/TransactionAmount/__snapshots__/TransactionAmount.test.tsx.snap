@@ -33,9 +33,9 @@ exports[`TransactionAmount should render 1`] = `
       class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ dnaihB"
-        height="1em"
-        width="1em"
+        class="sc-bdfBwQ bcEVDZ"
+        height="16"
+        width="16"
       >
         <svg>
           received.svg
@@ -79,9 +79,9 @@ exports[`TransactionAmount should render currency amount 1`] = `
       class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ dnaihB"
-        height="1em"
-        width="1em"
+        class="sc-bdfBwQ bcEVDZ"
+        height="16"
+        width="16"
       >
         <svg>
           received.svg
@@ -125,9 +125,9 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
       class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ dnaihB"
-        height="1em"
-        width="1em"
+        class="sc-bdfBwQ bcEVDZ"
+        height="16"
+        width="16"
       >
         <svg>
           received.svg
@@ -171,9 +171,9 @@ exports[`TransactionAmount should render label for multiple recipients 2`] = `
       class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ dnaihB"
-        height="1em"
-        width="1em"
+        class="sc-bdfBwQ bcEVDZ"
+        height="16"
+        width="16"
       >
         <svg>
           received.svg

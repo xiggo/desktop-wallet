@@ -3,9 +3,9 @@
 exports[`Icon should render 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdfBwQ dnaihB"
-    height="1em"
-    width="1em"
+    class="sc-bdfBwQ bcEVDZ"
+    height="16"
+    width="16"
   >
     <svg>
       ark.svg
@@ -14,12 +14,12 @@ exports[`Icon should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Icon should render fallbackk 1`] = `
+exports[`Icon should render fallback 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdfBwQ dnaihB"
-    height="1em"
-    width="1em"
+    class="sc-bdfBwQ bcEVDZ"
+    height="16"
+    width="16"
   >
     <span>
       Not found
@@ -27,3 +27,11 @@ exports[`Icon should render fallbackk 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Icon should render with size 'lg' 1`] = `[Function]`;
+
+exports[`Icon should render with size 'md' 1`] = `[Function]`;
+
+exports[`Icon should render with size 'sm' 1`] = `[Function]`;
+
+exports[`Icon should render with size 'xl' 1`] = `[Function]`;

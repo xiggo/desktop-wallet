@@ -16,9 +16,9 @@ exports[`Contacts should render with contacts 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -123,9 +123,9 @@ exports[`Contacts should render with contacts 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -192,9 +192,9 @@ exports[`Contacts should render with contacts 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -320,9 +320,9 @@ exports[`Contacts should render with contacts 1`] = `
                             Search
                           </span>
                           <div
-                            class="sc-bdfBwQ hHLBkp"
-                            height="18"
-                            width="18"
+                            class="sc-bdfBwQ hjDozt"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               search.svg
@@ -393,10 +393,10 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                         >
                           <div
-                            class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                            height="5"
+                            class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                            height="10"
                             role="img"
-                            width="8"
+                            width="10"
                           >
                             <svg>
                               chevron-down.svg
@@ -588,9 +588,9 @@ exports[`Contacts should render with contacts 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 copy.svg
@@ -769,9 +769,9 @@ exports[`Contacts should render with contacts 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 copy.svg
@@ -791,9 +791,9 @@ exports[`Contacts should render with contacts 1`] = `
                           class="Circle__CircleWrapper-d5u41q-0 ivxRHU border-black ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ gmQeZR"
-                            height="25"
-                            width="25"
+                            class="sc-bdfBwQ hjDozt"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               delegate.svg
@@ -938,9 +938,9 @@ exports[`Contacts should render with contacts 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 copy.svg
@@ -960,9 +960,9 @@ exports[`Contacts should render with contacts 1`] = `
                           class="Circle__CircleWrapper-d5u41q-0 ivxRHU border-black ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ gmQeZR"
-                            height="25"
-                            width="25"
+                            class="sc-bdfBwQ hjDozt"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               delegate.svg
@@ -1107,9 +1107,9 @@ exports[`Contacts should render with contacts 1`] = `
                             class="text-theme-primary-300 dark:text-theme-secondary-700"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 copy.svg
@@ -1129,9 +1129,9 @@ exports[`Contacts should render with contacts 1`] = `
                           class="Circle__CircleWrapper-d5u41q-0 ivxRHU border-black ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ gmQeZR"
-                            height="25"
-                            width="25"
+                            class="sc-bdfBwQ hjDozt"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               delegate.svg
@@ -1221,9 +1221,9 @@ exports[`Contacts should render without contacts 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -1328,9 +1328,9 @@ exports[`Contacts should render without contacts 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -1397,9 +1397,9 @@ exports[`Contacts should render without contacts 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg

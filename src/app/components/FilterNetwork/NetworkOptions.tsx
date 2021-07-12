@@ -20,7 +20,7 @@ export const NetworkOption = ({ coin, id, name, isSelected, onClick }: Network) 
 			<Tooltip content={name}>
 				{isSelected ? (
 					<Circle size="lg" className="relative border-theme-success-500 text-theme-success-500">
-						<Icon name={iconName} width={20} height={20} />
+						<Icon name={iconName} size="lg" />
 						<Badge className="bg-theme-success-500 text-theme-success-100" icon="Checkmark" />
 					</Circle>
 				) : (
@@ -28,7 +28,7 @@ export const NetworkOption = ({ coin, id, name, isSelected, onClick }: Network) 
 						size="lg"
 						className="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800"
 					>
-						<Icon name={iconName} width={20} height={20} />
+						<Icon name={iconName} size="lg" />
 						<Badge className="border-theme-secondary-300 dark:border-theme-secondary-800" />
 					</Circle>
 				)}

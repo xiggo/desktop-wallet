@@ -63,7 +63,7 @@ export const HeaderSearchBar = ({
 			<ControlButton isChanged={!!query} noBorder={noToggleBorder} onClick={() => setSearchbarVisible(true)}>
 				<div className="flex items-center space-x-3 h-5">
 					<span>{label}</span>
-					<Icon name="Search" width={18} height={18} />
+					<Icon name="Search" size="lg" />
 				</div>
 			</ControlButton>
 
@@ -96,8 +96,7 @@ export const HeaderSearchBar = ({
 						<Icon
 							className="p-1 -ml-1 text-theme-secondary dark:text-theme-secondary-600 hover:text-theme-primary-600"
 							name="CrossSlim"
-							width={12}
-							height={12}
+							size="sm"
 						/>
 					</button>
 
@@ -114,12 +113,7 @@ export const HeaderSearchBar = ({
 						/>
 					</div>
 
-					<Icon
-						className="text-color-primary-300 dark:text-theme-secondary-600"
-						name="Search"
-						width={18}
-						height={18}
-					/>
+					<Icon className="text-color-primary-300 dark:text-theme-secondary-600" name="Search" size="lg" />
 				</SearchBarInputWrapper>
 			)}
 		</div>

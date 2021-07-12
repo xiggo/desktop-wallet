@@ -49,8 +49,7 @@ export const ClipboardButton = ({ data, variant, options, children, ...propertie
 						<Icon
 							name="Checkmark"
 							className="text-theme-primary-600 dark:text-theme-secondary-200"
-							width={28}
-							height={28}
+							size="lg"
 						/>
 					</motion.div>
 				)}

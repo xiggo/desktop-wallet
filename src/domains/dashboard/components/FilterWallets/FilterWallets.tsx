@@ -60,8 +60,7 @@ export const FilterWallets = ({ networks, walletsDisplayType, useTestNetworks, o
 								<Icon
 									name="ChevronDown"
 									className={`transition-transform ${isOpen ? "transform rotate-180" : ""}`}
-									width={8}
-									height={5}
+									size="sm"
 								/>
 							</div>
 						)}

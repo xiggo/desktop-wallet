@@ -28,9 +28,9 @@ exports[`UpdateWalletName should render a modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -154,9 +154,9 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -299,9 +299,9 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -444,9 +444,9 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -589,9 +589,9 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -734,9 +734,9 @@ exports[`UpdateWalletName should show error message when name consists only of w
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -879,9 +879,9 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg

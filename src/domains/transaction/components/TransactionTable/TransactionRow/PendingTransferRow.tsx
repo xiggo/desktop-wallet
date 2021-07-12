@@ -55,7 +55,7 @@ export const PendingTransferRow = ({
 			<TableCell className="w-16" innerClassName="justify-center truncate">
 				<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>
 					<span className="p-1 text-theme-warning-300">
-						<Icon name="StatusPending" width={30} height={22} />
+						<Icon name="StatusPending" size="lg" />
 					</span>
 				</Tooltip>
 			</TableCell>

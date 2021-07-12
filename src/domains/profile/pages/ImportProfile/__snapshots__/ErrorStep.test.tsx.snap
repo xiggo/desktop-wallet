@@ -62,8 +62,8 @@ exports[`Import Profile - Error Step should render 1`] = `
             class="flex justify-center items-center w-6 h-6 rounded-full text-theme-danger-500 bg-theme-danger-200"
           >
             <div
-              class="sc-bdfBwQ kwYNlR"
-              height="1em"
+              class="sc-bdfBwQ eZRpTZ"
+              height="10"
               width="10"
             >
               <svg>

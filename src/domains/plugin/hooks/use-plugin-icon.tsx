@@ -9,11 +9,11 @@ interface Properties {
 const usePluginIcon = () => {
 	const renderPluginIcon = ({ isOfficial, isGrant }: Properties) => {
 		if (isOfficial) {
-			return <Icon className="text-theme-warning-600" name="OfficialArkPlugin" width={16} height={16} />;
+			return <Icon className="text-theme-warning-600" name="OfficialArkPlugin" />;
 		}
 
 		if (isGrant) {
-			return <Icon className="text-theme-warning-600" name="Grant" width={20} height={20} />;
+			return <Icon className="text-theme-warning-600" name="Grant" />;
 		}
 	};
 

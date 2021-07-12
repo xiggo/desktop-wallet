@@ -16,10 +16,10 @@ exports[`Link should open an external link 1`] = `
       class="align-middle"
     >
       <div
-        class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200"
+        class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200"
         data-testid="Link__external"
-        height="1em"
-        width="1em"
+        height="16"
+        width="16"
       >
         <svg>
           redirect.svg
@@ -62,10 +62,10 @@ exports[`Link should render external without children 1`] = `
       class="align-middle"
     >
       <div
-        class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200"
+        class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200"
         data-testid="Link__external"
-        height="1em"
-        width="1em"
+        height="16"
+        width="16"
       >
         <svg>
           redirect.svg
@@ -108,10 +108,10 @@ exports[`Link should show a toast when trying to open an invalid external link 1
       class="align-middle"
     >
       <div
-        class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200"
+        class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200"
         data-testid="Link__external"
-        height="1em"
-        width="1em"
+        height="16"
+        width="16"
       >
         <svg>
           redirect.svg

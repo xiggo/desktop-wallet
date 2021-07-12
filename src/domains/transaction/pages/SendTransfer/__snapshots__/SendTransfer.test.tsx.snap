@@ -16,9 +16,9 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -123,9 +123,9 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -192,9 +192,9 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -371,10 +371,10 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                     class="align-middle"
                                   >
                                     <div
-                                      class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                      class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                       data-testid="Link__external"
-                                      height="1em"
-                                      width="1em"
+                                      height="16"
+                                      width="16"
                                     >
                                       <svg>
                                         redirect.svg
@@ -395,9 +395,9 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                     class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                   />
                                   <div
-                                    class="sc-bdfBwQ dnaihB"
-                                    height="1em"
-                                    width="1em"
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
                                   >
                                     <svg>
                                       copy.svg
@@ -606,9 +606,9 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               sent.svg
@@ -683,9 +683,9 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ bSxmtR"
-                          height="14"
-                          width="14"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             cross-slim.svg
@@ -745,10 +745,10 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                                     >
                                       <div
-                                        class="sc-bdfBwQ ijcmGk transition-transform"
-                                        height="5"
+                                        class="sc-bdfBwQ eZRpTZ transition-transform"
+                                        height="10"
                                         role="img"
-                                        width="8"
+                                        width="10"
                                       >
                                         <svg>
                                           chevron-down.svg
@@ -789,10 +789,10 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                                     >
                                       <div
-                                        class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                                        height="5"
+                                        class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                                        height="10"
                                         role="img"
-                                        width="8"
+                                        width="10"
                                       >
                                         <svg>
                                           chevron-down.svg
@@ -927,9 +927,9 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -1034,9 +1034,9 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -1103,9 +1103,9 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1295,9 +1295,9 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                                 class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                               />
                               <div
-                                class="sc-bdfBwQ dnaihB"
-                                height="1em"
-                                width="1em"
+                                class="sc-bdfBwQ bcEVDZ"
+                                height="16"
+                                width="16"
                               >
                                 <svg>
                                   eye.svg
@@ -1895,9 +1895,9 @@ exports[`SendTransfer should render form and use location state 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -2002,9 +2002,9 @@ exports[`SendTransfer should render form and use location state 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -2071,9 +2071,9 @@ exports[`SendTransfer should render form and use location state 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -2304,10 +2304,10 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                     data-testid="NetworkIcon-ARK-ark.devnet"
                                   >
                                     <div
-                                      class="sc-bdfBwQ ffTEMV"
+                                      class="sc-bdfBwQ hjDozt"
                                       data-testid="NetworkIcon__icon"
-                                      height="30"
-                                      width="30"
+                                      height="20"
+                                      width="20"
                                     >
                                       <svg>
                                         ark.svg
@@ -2915,9 +2915,9 @@ exports[`SendTransfer should render form and use location state without memo 1`]
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -3022,9 +3022,9 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -3091,9 +3091,9 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -3324,10 +3324,10 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                     data-testid="NetworkIcon-ARK-ark.devnet"
                                   >
                                     <div
-                                      class="sc-bdfBwQ ffTEMV"
+                                      class="sc-bdfBwQ hjDozt"
                                       data-testid="NetworkIcon__icon"
-                                      height="30"
-                                      width="30"
+                                      height="20"
+                                      width="20"
                                     >
                                       <svg>
                                         ark.svg
@@ -5048,10 +5048,10 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     data-testid="NetworkIcon-ARK-ark.mainnet"
                   >
                     <div
-                      class="sc-bdfBwQ ffTEMV"
+                      class="sc-bdfBwQ hjDozt"
                       data-testid="NetworkIcon__icon"
-                      height="30"
-                      width="30"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         ark.svg
@@ -5069,10 +5069,10 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     data-testid="NetworkIcon-ARK-bind.mainnet"
                   >
                     <div
-                      class="sc-bdfBwQ ffTEMV"
+                      class="sc-bdfBwQ hjDozt"
                       data-testid="NetworkIcon__icon"
-                      height="30"
-                      width="30"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         bind.svg
@@ -5106,10 +5106,10 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     data-testid="NetworkIcon-ARK-ark.devnet"
                   >
                     <div
-                      class="sc-bdfBwQ ffTEMV"
+                      class="sc-bdfBwQ hjDozt"
                       data-testid="NetworkIcon__icon"
-                      height="30"
-                      width="30"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         ark.svg
@@ -5127,10 +5127,10 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     data-testid="NetworkIcon-ARK-bind.testnet"
                   >
                     <div
-                      class="sc-bdfBwQ ffTEMV"
+                      class="sc-bdfBwQ hjDozt"
                       data-testid="NetworkIcon__icon"
-                      height="30"
-                      width="30"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         bind.svg
@@ -5571,9 +5571,9 @@ exports[`SendTransfer should render network selection without selected wallet 1`
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -5678,9 +5678,9 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -5747,9 +5747,9 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -5967,10 +5967,10 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -6134,10 +6134,10 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                   data-testid="NetworkIcon-ARK-ark.mainnet"
                 >
                   <div
-                    class="sc-bdfBwQ ffTEMV"
+                    class="sc-bdfBwQ hjDozt"
                     data-testid="NetworkIcon__icon"
-                    height="30"
-                    width="30"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       ark.svg
@@ -6155,10 +6155,10 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                   data-testid="NetworkIcon-ARK-bind.mainnet"
                 >
                   <div
-                    class="sc-bdfBwQ ffTEMV"
+                    class="sc-bdfBwQ hjDozt"
                     data-testid="NetworkIcon__icon"
-                    height="30"
-                    width="30"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       bind.svg
@@ -6360,9 +6360,9 @@ exports[`SendTransfer should render review step 1`] = `
         class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
       >
         <div
-          class="sc-bdfBwQ iLcgWo"
-          height="22"
-          width="18"
+          class="sc-bdfBwQ hjDozt"
+          height="20"
+          width="20"
         >
           <svg>
             memo.svg
@@ -6420,9 +6420,9 @@ exports[`SendTransfer should render review step 1`] = `
               class="py-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
             >
               <div
-                class="sc-bdfBwQ dnaihB"
-                height="1em"
-                width="1em"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   plus.svg
@@ -6524,10 +6524,10 @@ exports[`SendTransfer should render summary step 1`] = `
                     class="align-middle"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                      class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                       data-testid="Link__external"
-                      height="1em"
-                      width="1em"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         redirect.svg
@@ -6548,9 +6548,9 @@ exports[`SendTransfer should render summary step 1`] = `
                     class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                   />
                   <div
-                    class="sc-bdfBwQ dnaihB"
-                    height="1em"
-                    width="1em"
+                    class="sc-bdfBwQ bcEVDZ"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       copy.svg
@@ -6759,9 +6759,9 @@ exports[`SendTransfer should render summary step 1`] = `
           class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
         >
           <div
-            class="sc-bdfBwQ dnaihB"
-            height="1em"
-            width="1em"
+            class="sc-bdfBwQ bcEVDZ"
+            height="16"
+            width="16"
           >
             <svg>
               sent.svg
@@ -6813,9 +6813,9 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -6920,9 +6920,9 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -6989,9 +6989,9 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -7227,10 +7227,10 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                     data-testid="NetworkIcon-ARK-ark.devnet"
                                   >
                                     <div
-                                      class="sc-bdfBwQ ffTEMV"
+                                      class="sc-bdfBwQ hjDozt"
                                       data-testid="NetworkIcon__icon"
-                                      height="30"
-                                      width="30"
+                                      height="20"
+                                      width="20"
                                     >
                                       <svg>
                                         ark.svg
@@ -7836,9 +7836,9 @@ exports[`SendTransfer should select cryptoasset 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -7943,9 +7943,9 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -8012,9 +8012,9 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -8244,10 +8244,10 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -8314,9 +8314,9 @@ exports[`SendTransfer should send a single transfer 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -8421,9 +8421,9 @@ exports[`SendTransfer should send a single transfer 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -8490,9 +8490,9 @@ exports[`SendTransfer should send a single transfer 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -8669,10 +8669,10 @@ exports[`SendTransfer should send a single transfer 1`] = `
                                     class="align-middle"
                                   >
                                     <div
-                                      class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                      class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                       data-testid="Link__external"
-                                      height="1em"
-                                      width="1em"
+                                      height="16"
+                                      width="16"
                                     >
                                       <svg>
                                         redirect.svg
@@ -8693,9 +8693,9 @@ exports[`SendTransfer should send a single transfer 1`] = `
                                     class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                   />
                                   <div
-                                    class="sc-bdfBwQ dnaihB"
-                                    height="1em"
-                                    width="1em"
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
                                   >
                                     <svg>
                                       copy.svg
@@ -8904,9 +8904,9 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               sent.svg
@@ -8983,9 +8983,9 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -9090,9 +9090,9 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -9159,9 +9159,9 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -9338,10 +9338,10 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                                     class="align-middle"
                                   >
                                     <div
-                                      class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                      class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                       data-testid="Link__external"
-                                      height="1em"
-                                      width="1em"
+                                      height="16"
+                                      width="16"
                                     >
                                       <svg>
                                         redirect.svg
@@ -9362,9 +9362,9 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                                     class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                   />
                                   <div
-                                    class="sc-bdfBwQ dnaihB"
-                                    height="1em"
-                                    width="1em"
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
                                   >
                                     <svg>
                                       copy.svg
@@ -9573,9 +9573,9 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               sent.svg
@@ -9652,9 +9652,9 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -9759,9 +9759,9 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -9828,9 +9828,9 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -10007,10 +10007,10 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="align-middle"
                                   >
                                     <div
-                                      class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                      class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                       data-testid="Link__external"
-                                      height="1em"
-                                      width="1em"
+                                      height="16"
+                                      width="16"
                                     >
                                       <svg>
                                         redirect.svg
@@ -10031,9 +10031,9 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                   />
                                   <div
-                                    class="sc-bdfBwQ dnaihB"
-                                    height="1em"
-                                    width="1em"
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
                                   >
                                     <svg>
                                       copy.svg
@@ -10242,9 +10242,9 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               sent.svg
@@ -10319,9 +10319,9 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ bSxmtR"
-                          height="14"
-                          width="14"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             cross-slim.svg
@@ -10381,10 +10381,10 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                                     >
                                       <div
-                                        class="sc-bdfBwQ ijcmGk transition-transform"
-                                        height="5"
+                                        class="sc-bdfBwQ eZRpTZ transition-transform"
+                                        height="10"
                                         role="img"
-                                        width="8"
+                                        width="10"
                                       >
                                         <svg>
                                           chevron-down.svg
@@ -10425,10 +10425,10 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                                     >
                                       <div
-                                        class="sc-bdfBwQ ijcmGk transition-transform transform rotate-180"
-                                        height="5"
+                                        class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                                        height="10"
                                         role="img"
-                                        width="8"
+                                        width="10"
                                       >
                                         <svg>
                                           chevron-down.svg
@@ -10630,9 +10630,9 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -10737,9 +10737,9 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -10806,9 +10806,9 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -10985,10 +10985,10 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                                     class="align-middle"
                                   >
                                     <div
-                                      class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                      class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                       data-testid="Link__external"
-                                      height="1em"
-                                      width="1em"
+                                      height="16"
+                                      width="16"
                                     >
                                       <svg>
                                         redirect.svg
@@ -11009,9 +11009,9 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                                     class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                   />
                                   <div
-                                    class="sc-bdfBwQ dnaihB"
-                                    height="1em"
-                                    width="1em"
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
                                   >
                                     <svg>
                                       copy.svg
@@ -11220,9 +11220,9 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               sent.svg
@@ -11299,9 +11299,9 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -11406,9 +11406,9 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -11475,9 +11475,9 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -11654,10 +11654,10 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                                     class="align-middle"
                                   >
                                     <div
-                                      class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                      class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                       data-testid="Link__external"
-                                      height="1em"
-                                      width="1em"
+                                      height="16"
+                                      width="16"
                                     >
                                       <svg>
                                         redirect.svg
@@ -11678,9 +11678,9 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                                     class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                   />
                                   <div
-                                    class="sc-bdfBwQ dnaihB"
-                                    height="1em"
-                                    width="1em"
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
                                   >
                                     <svg>
                                       copy.svg
@@ -11889,9 +11889,9 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               sent.svg
@@ -11968,9 +11968,9 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -12075,9 +12075,9 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -12144,9 +12144,9 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -12323,10 +12323,10 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                                     class="align-middle"
                                   >
                                     <div
-                                      class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                      class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                       data-testid="Link__external"
-                                      height="1em"
-                                      width="1em"
+                                      height="16"
+                                      width="16"
                                     >
                                       <svg>
                                         redirect.svg
@@ -12347,9 +12347,9 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                                     class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                   />
                                   <div
-                                    class="sc-bdfBwQ dnaihB"
-                                    height="1em"
-                                    width="1em"
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
                                   >
                                     <svg>
                                       copy.svg
@@ -12558,9 +12558,9 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdfBwQ dnaihB"
-                            height="1em"
-                            width="1em"
+                            class="sc-bdfBwQ bcEVDZ"
+                            height="16"
+                            width="16"
                           >
                             <svg>
                               sent.svg
@@ -12637,9 +12637,9 @@ exports[`SendTransfer should show error step and go back 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -12744,9 +12744,9 @@ exports[`SendTransfer should show error step and go back 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -12813,9 +12813,9 @@ exports[`SendTransfer should show error step and go back 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -12991,9 +12991,9 @@ exports[`SendTransfer should show error step and go back 1`] = `
                             class="flex items-center space-x-2"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 copy.svg

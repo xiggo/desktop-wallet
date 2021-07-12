@@ -74,8 +74,6 @@ export const StepNavigation: React.FC<StepNavigationProperties> = ({
 					disabled={isNextDisabled || isLoading}
 					isLoading={isLoading}
 					icon="Send"
-					iconWidth={16}
-					iconHeight={16}
 					iconPosition="right"
 				>
 					<span>{t("COMMON.SEND")}</span>

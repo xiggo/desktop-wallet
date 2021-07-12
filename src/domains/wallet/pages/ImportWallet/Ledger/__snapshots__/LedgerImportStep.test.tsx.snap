@@ -135,9 +135,9 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                 class="flex relative items-center space-x-2"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     edit.svg
@@ -219,9 +219,9 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                 class="flex relative items-center space-x-2"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     edit.svg
@@ -692,9 +692,9 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
                 class="flex relative items-center space-x-2"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     edit.svg
@@ -776,9 +776,9 @@ exports[`LedgerImportStep should show an error message for duplicate name in the
                 class="flex relative items-center space-x-2"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     edit.svg

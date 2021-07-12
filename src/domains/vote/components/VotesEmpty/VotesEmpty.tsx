@@ -28,14 +28,14 @@ export const VotesEmpty = ({ onCreateWallet, onImportWallet }: VotesEmptyPropert
 				<div className="flex -m-3 space-x-3">
 					<Button onClick={onCreateWallet} variant="secondary">
 						<div className="flex items-center space-x-2">
-							<Icon name="Plus" width={12} height={12} />
+							<Icon name="Plus" />
 							<span>{t("DASHBOARD.WALLET_CONTROLS.CREATE")}</span>
 						</div>
 					</Button>
 
 					<Button onClick={onImportWallet} variant="secondary">
 						<div className="flex items-center space-x-2">
-							<Icon name="Import" width={15} height={15} />
+							<Icon name="Import" />
 							<span>{t("DASHBOARD.WALLET_CONTROLS.IMPORT")}</span>
 						</div>
 					</Button>

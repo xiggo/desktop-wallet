@@ -43,7 +43,7 @@ export const ToastMessage = ({
 						"dark:bg-theme-secondary-900 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400",
 					)}
 				>
-					<Icon name="CrossSlim" width={14} height={14} />
+					<Icon name="CrossSlim" />
 				</OriginalButton>
 			</div>
 		</Alert>

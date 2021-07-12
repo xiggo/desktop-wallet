@@ -48,9 +48,9 @@ exports[`DelegateRow should emit action on select button 1`] = `
                 class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     redirect.svg
@@ -133,9 +133,9 @@ exports[`DelegateRow should render 1`] = `
                 class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     redirect.svg
@@ -218,9 +218,9 @@ exports[`DelegateRow should render the selected delegate 1`] = `
                 class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     redirect.svg
@@ -303,9 +303,9 @@ exports[`DelegateRow should render the selected vote 1`] = `
                 class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     redirect.svg
@@ -379,9 +379,9 @@ exports[`DelegateRow should render the selected vote 1`] = `
                 class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     redirect.svg
@@ -455,9 +455,9 @@ exports[`DelegateRow should render the selected vote 1`] = `
                 class="Link__Content-ec014t-1 emZiaA"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ"
+                  height="16"
+                  width="16"
                 >
                   <svg>
                     redirect.svg

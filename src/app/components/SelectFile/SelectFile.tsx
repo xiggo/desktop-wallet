@@ -90,7 +90,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileStepProperties) =
 					},
 				)}
 			>
-				{fileFormatIcon[fileFormat] && <Icon name={fileFormatIcon[fileFormat]} width={40} height={40} />}
+				{fileFormatIcon[fileFormat] && <Icon name={fileFormatIcon[fileFormat]} size="xl" />}
 
 				<div className="mt-8 space-x-px">
 					<span className="font-semibold">{t("PROFILE.IMPORT.SELECT_FILE_STEP.DRAG_AND_DROP")} </span>

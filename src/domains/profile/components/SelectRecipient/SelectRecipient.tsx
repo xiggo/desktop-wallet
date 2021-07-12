@@ -126,7 +126,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 									className="flex items-center cursor-pointer"
 									onClick={openRecipients}
 								>
-									<Icon name="User" width={20} height={20} />
+									<Icon name="User" size="lg" />
 								</div>
 							),
 							start: <ProfileAvatar address={selectedAddress} />,

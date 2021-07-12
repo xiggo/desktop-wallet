@@ -18,9 +18,9 @@ exports[`Registration should register second signature 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -125,9 +125,9 @@ exports[`Registration should register second signature 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -194,9 +194,9 @@ exports[`Registration should register second signature 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -378,9 +378,9 @@ exports[`Registration should register second signature 1`] = `
                                 class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                               />
                               <div
-                                class="sc-bdfBwQ dnaihB"
-                                height="1em"
-                                width="1em"
+                                class="sc-bdfBwQ bcEVDZ"
+                                height="16"
+                                width="16"
                               >
                                 <svg>
                                   eye.svg
@@ -456,9 +456,9 @@ exports[`Registration should show error step and go back 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -563,9 +563,9 @@ exports[`Registration should show error step and go back 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -632,9 +632,9 @@ exports[`Registration should show error step and go back 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -810,9 +810,9 @@ exports[`Registration should show error step and go back 1`] = `
                             class="flex items-center space-x-2"
                           >
                             <div
-                              class="sc-bdfBwQ dnaihB"
-                              height="1em"
-                              width="1em"
+                              class="sc-bdfBwQ bcEVDZ"
+                              height="16"
+                              width="16"
                             >
                               <svg>
                                 copy.svg
@@ -876,9 +876,9 @@ exports[`Registration should show mnemonic error 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -983,9 +983,9 @@ exports[`Registration should show mnemonic error 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -1052,9 +1052,9 @@ exports[`Registration should show mnemonic error 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1230,9 +1230,9 @@ exports[`Registration should show mnemonic error 1`] = `
                                 class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                               />
                               <div
-                                class="sc-bdfBwQ dnaihB"
-                                height="1em"
-                                width="1em"
+                                class="sc-bdfBwQ bcEVDZ"
+                                height="16"
+                                width="16"
                               >
                                 <svg>
                                   eye.svg
@@ -1302,9 +1302,9 @@ exports[`Registration should show mnemonic error 1`] = `
                                 class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                               />
                               <div
-                                class="sc-bdfBwQ dnaihB"
-                                height="1em"
-                                width="1em"
+                                class="sc-bdfBwQ bcEVDZ"
+                                height="16"
+                                width="16"
                               >
                                 <svg>
                                   eye.svg

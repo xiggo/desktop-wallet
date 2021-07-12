@@ -44,8 +44,7 @@ export const IpfsDetail = ({ isOpen, transaction, onClose }: IpfsDetailPropertie
 						<Icon
 							name="Ipfs"
 							className="text-theme-secondary-900 dark:text-theme-secondary-600"
-							width={21}
-							height={23}
+							size="lg"
 						/>
 					</Circle>
 				}

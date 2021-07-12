@@ -172,9 +172,9 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -278,9 +278,9 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -384,9 +384,9 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -479,9 +479,9 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -966,9 +966,9 @@ exports[`RecipientList should render editable 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -1072,9 +1072,9 @@ exports[`RecipientList should render editable 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -1178,9 +1178,9 @@ exports[`RecipientList should render editable 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -1273,9 +1273,9 @@ exports[`RecipientList should render editable 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -1792,9 +1792,9 @@ exports[`RecipientList should render without amount column 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -1878,9 +1878,9 @@ exports[`RecipientList should render without amount column 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -1964,9 +1964,9 @@ exports[`RecipientList should render without amount column 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg
@@ -2039,9 +2039,9 @@ exports[`RecipientList should render without amount column 1`] = `
                       class="py-1"
                     >
                       <div
-                        class="sc-bdfBwQ dnaihB"
-                        height="1em"
-                        width="1em"
+                        class="sc-bdfBwQ bcEVDZ"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           trash.svg

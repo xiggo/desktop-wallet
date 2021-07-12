@@ -86,7 +86,7 @@ export const ContactListItem = ({ item, variant, onAction, onSend, options }: Co
 											address[`is${type}`]() ? (
 												<Tooltip key={type} content={t(`COMMON.${type.toUpperCase()}`)}>
 													<Circle className="border-black" noShadow>
-														<Icon name={type} width={25} height={25} />
+														<Icon name={type} size="lg" />
 													</Circle>
 												</Tooltip>
 											) : null,
@@ -109,7 +109,7 @@ export const ContactListItem = ({ item, variant, onAction, onSend, options }: Co
 											<Dropdown
 												toggleContent={
 													<Button variant="secondary" size="icon">
-														<Icon name="Settings" width={20} height={20} />
+														<Icon name="Settings" size="lg" />
 													</Button>
 												}
 												options={options}

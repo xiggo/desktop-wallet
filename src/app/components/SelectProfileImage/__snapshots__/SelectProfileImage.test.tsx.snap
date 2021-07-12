@@ -34,9 +34,9 @@ exports[`SelectProfileImage should handle upload file 1`] = `
               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
             >
               <div
-                class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                height="18"
-                width="24"
+                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                height="20"
+                width="20"
               >
                 <svg>
                   upload.svg
@@ -54,9 +54,9 @@ exports[`SelectProfileImage should handle upload file 1`] = `
             class="flex relative items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ ejYZeh"
-              height="12"
-              width="12"
+              class="sc-bdfBwQ eZRpTZ"
+              height="10"
+              width="10"
             >
               <svg>
                 close.svg
@@ -104,9 +104,9 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
             >
               <div
-                class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                height="18"
-                width="24"
+                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                height="20"
+                width="20"
               >
                 <svg>
                   upload.svg
@@ -124,9 +124,9 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
             class="flex relative items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ ejYZeh"
-              height="12"
-              width="12"
+              class="sc-bdfBwQ eZRpTZ"
+              height="10"
+              width="10"
             >
               <svg>
                 close.svg
@@ -174,9 +174,9 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
             >
               <div
-                class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                height="18"
-                width="24"
+                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                height="20"
+                width="20"
               >
                 <svg>
                   upload.svg
@@ -194,9 +194,9 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
             class="flex relative items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ ejYZeh"
-              height="12"
-              width="12"
+              class="sc-bdfBwQ eZRpTZ"
+              height="10"
+              width="10"
             >
               <svg>
                 close.svg
@@ -241,9 +241,9 @@ exports[`SelectProfileImage should render 1`] = `
                 class="flex relative items-center space-x-2"
               >
                 <div
-                  class="sc-bdfBwQ DGwSy text-theme-primary-600 dark:text-theme-secondary-200"
-                  height="18"
-                  width="24"
+                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     upload.svg
@@ -296,9 +296,9 @@ exports[`SelectProfileImage should render with value svg 1`] = `
               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
             >
               <div
-                class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                height="18"
-                width="24"
+                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                height="20"
+                width="20"
               >
                 <svg>
                   upload.svg
@@ -347,9 +347,9 @@ exports[`SelectProfileImage should render without value svg 1`] = `
               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
             >
               <div
-                class="sc-bdfBwQ DGwSy text-white dark:text-theme-secondary-200"
-                height="18"
-                width="24"
+                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                height="20"
+                width="20"
               >
                 <svg>
                   upload.svg
@@ -367,9 +367,9 @@ exports[`SelectProfileImage should render without value svg 1`] = `
             class="flex relative items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ ejYZeh"
-              height="12"
-              width="12"
+              class="sc-bdfBwQ eZRpTZ"
+              height="10"
+              width="10"
             >
               <svg>
                 close.svg

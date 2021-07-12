@@ -95,9 +95,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
               >
                 <div
-                  class="sc-bdfBwQ ijcmGk"
-                  height="5"
-                  width="8"
+                  class="sc-bdfBwQ eZRpTZ"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     chevron-down.svg
@@ -159,10 +159,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -231,10 +231,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -281,9 +281,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -378,10 +378,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -438,9 +438,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -535,10 +535,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -595,9 +595,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -692,10 +692,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -752,9 +752,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -849,10 +849,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -909,9 +909,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -1006,10 +1006,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -1066,9 +1066,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -1163,10 +1163,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -1223,9 +1223,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -1320,10 +1320,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -1380,9 +1380,9 @@ exports[`Transactions should fetch more transactions 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -1477,10 +1477,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -1631,9 +1631,9 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
               >
                 <div
-                  class="sc-bdfBwQ ijcmGk"
-                  height="5"
-                  width="8"
+                  class="sc-bdfBwQ eZRpTZ"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     chevron-down.svg
@@ -1695,10 +1695,10 @@ exports[`Transactions should hide view more button when there are no next pages 
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -1767,10 +1767,10 @@ exports[`Transactions should hide view more button when there are no next pages 
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -1817,9 +1817,9 @@ exports[`Transactions should hide view more button when there are no next pages 
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -1914,10 +1914,10 @@ exports[`Transactions should hide view more button when there are no next pages 
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -1974,9 +1974,9 @@ exports[`Transactions should hide view more button when there are no next pages 
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -2071,10 +2071,10 @@ exports[`Transactions should hide view more button when there are no next pages 
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -2131,9 +2131,9 @@ exports[`Transactions should hide view more button when there are no next pages 
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -2228,10 +2228,10 @@ exports[`Transactions should hide view more button when there are no next pages 
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -2288,9 +2288,9 @@ exports[`Transactions should hide view more button when there are no next pages 
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -2385,10 +2385,10 @@ exports[`Transactions should hide view more button when there are no next pages 
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -2528,9 +2528,9 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
               >
                 <div
-                  class="sc-bdfBwQ ijcmGk"
-                  height="5"
-                  width="8"
+                  class="sc-bdfBwQ eZRpTZ"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     chevron-down.svg
@@ -2592,10 +2592,10 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -2664,10 +2664,10 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -2714,9 +2714,9 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -2811,10 +2811,10 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -2871,9 +2871,9 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -2968,10 +2968,10 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -3028,9 +3028,9 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -3125,10 +3125,10 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -3185,9 +3185,9 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -3282,10 +3282,10 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -3425,9 +3425,9 @@ exports[`Transactions should render 1`] = `
                 class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
               >
                 <div
-                  class="sc-bdfBwQ ijcmGk"
-                  height="5"
-                  width="8"
+                  class="sc-bdfBwQ eZRpTZ"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     chevron-down.svg
@@ -3489,10 +3489,10 @@ exports[`Transactions should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -3561,10 +3561,10 @@ exports[`Transactions should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -3611,9 +3611,9 @@ exports[`Transactions should render 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -3708,10 +3708,10 @@ exports[`Transactions should render 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -3768,9 +3768,9 @@ exports[`Transactions should render 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -3865,10 +3865,10 @@ exports[`Transactions should render 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -3925,9 +3925,9 @@ exports[`Transactions should render 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -4022,10 +4022,10 @@ exports[`Transactions should render 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -4082,9 +4082,9 @@ exports[`Transactions should render 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -4179,10 +4179,10 @@ exports[`Transactions should render 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -4322,9 +4322,9 @@ exports[`Transactions should render with custom title 1`] = `
                 class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
               >
                 <div
-                  class="sc-bdfBwQ ijcmGk"
-                  height="5"
-                  width="8"
+                  class="sc-bdfBwQ eZRpTZ"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     chevron-down.svg
@@ -4386,10 +4386,10 @@ exports[`Transactions should render with custom title 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -4458,10 +4458,10 @@ exports[`Transactions should render with custom title 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ ijcmGk transition-transform"
-                    height="5"
+                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    height="10"
                     role="img"
-                    width="8"
+                    width="10"
                   >
                     <svg>
                       chevron-down.svg
@@ -4508,9 +4508,9 @@ exports[`Transactions should render with custom title 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -4605,10 +4605,10 @@ exports[`Transactions should render with custom title 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -4665,9 +4665,9 @@ exports[`Transactions should render with custom title 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -4762,10 +4762,10 @@ exports[`Transactions should render with custom title 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -4822,9 +4822,9 @@ exports[`Transactions should render with custom title 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -4919,10 +4919,10 @@ exports[`Transactions should render with custom title 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -4979,9 +4979,9 @@ exports[`Transactions should render with custom title 1`] = `
                     class="Link__Content-ec014t-1 emZiaA"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         id.svg
@@ -5076,10 +5076,10 @@ exports[`Transactions should render with custom title 1`] = `
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ fdJUih text-theme-success-600"
+                    class="sc-bdfBwQ hjDozt text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
-                    height="22"
-                    width="22"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       status-ok.svg
@@ -5220,9 +5220,9 @@ exports[`Transactions should update wallet filters 1`] = `
                 class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 fTEJQP"
               >
                 <div
-                  class="sc-bdfBwQ ijcmGk"
-                  height="5"
-                  width="8"
+                  class="sc-bdfBwQ eZRpTZ"
+                  height="10"
+                  width="10"
                 >
                   <svg>
                     chevron-down.svg

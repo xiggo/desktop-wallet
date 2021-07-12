@@ -81,9 +81,9 @@ exports[`WalletListItem should render 1`] = `
                 data-testid="WalletIcon__Ledger"
               >
                 <div
-                  class="sc-bdfBwQ dWCabD"
+                  class="sc-bdfBwQ bcEVDZ"
                   height="16"
-                  width="1em"
+                  width="16"
                 >
                   <svg>
                     ledger.svg
@@ -95,9 +95,9 @@ exports[`WalletListItem should render 1`] = `
                 data-testid="WalletIcon__Star"
               >
                 <div
-                  class="sc-bdfBwQ dWCabD"
+                  class="sc-bdfBwQ bcEVDZ"
                   height="16"
-                  width="1em"
+                  width="16"
                 >
                   <svg>
                     star.svg
@@ -212,9 +212,9 @@ exports[`WalletListItem should render for selected wallet 1`] = `
                 data-testid="WalletIcon__Ledger"
               >
                 <div
-                  class="sc-bdfBwQ dWCabD"
+                  class="sc-bdfBwQ bcEVDZ"
                   height="16"
-                  width="1em"
+                  width="16"
                 >
                   <svg>
                     ledger.svg
@@ -226,9 +226,9 @@ exports[`WalletListItem should render for selected wallet 1`] = `
                 data-testid="WalletIcon__Star"
               >
                 <div
-                  class="sc-bdfBwQ dWCabD"
+                  class="sc-bdfBwQ bcEVDZ"
                   height="16"
-                  width="1em"
+                  width="16"
                 >
                   <svg>
                     star.svg
@@ -347,9 +347,9 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
                 data-testid="WalletIcon__Ledger"
               >
                 <div
-                  class="sc-bdfBwQ dWCabD"
+                  class="sc-bdfBwQ bcEVDZ"
                   height="16"
-                  width="1em"
+                  width="16"
                 >
                   <svg>
                     ledger.svg
@@ -361,9 +361,9 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
                 data-testid="WalletIcon__Star"
               >
                 <div
-                  class="sc-bdfBwQ dWCabD"
+                  class="sc-bdfBwQ bcEVDZ"
                   height="16"
-                  width="1em"
+                  width="16"
                 >
                   <svg>
                     star.svg
@@ -478,9 +478,9 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
                 data-testid="WalletIcon__Ledger"
               >
                 <div
-                  class="sc-bdfBwQ dWCabD"
+                  class="sc-bdfBwQ bcEVDZ"
                   height="16"
-                  width="1em"
+                  width="16"
                 >
                   <svg>
                     ledger.svg
@@ -492,9 +492,9 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
                 data-testid="WalletIcon__Star"
               >
                 <div
-                  class="sc-bdfBwQ dWCabD"
+                  class="sc-bdfBwQ bcEVDZ"
                   height="16"
-                  width="1em"
+                  width="16"
                 >
                   <svg>
                     star.svg

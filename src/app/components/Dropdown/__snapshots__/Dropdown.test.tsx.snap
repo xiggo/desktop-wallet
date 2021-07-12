@@ -494,9 +494,9 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
                   Secondary Options 1.1
                 </span>
                 <div
-                  class="sc-bdfBwQ dnaihB dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                  height="16"
+                  width="16"
                 />
               </li>
               <li
@@ -505,9 +505,9 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
                 tabindex="0"
               >
                 <div
-                  class="sc-bdfBwQ dnaihB dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
-                  height="1em"
-                  width="1em"
+                  class="sc-bdfBwQ bcEVDZ dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                  height="16"
+                  width="16"
                 />
                 <span>
                   Secondary Options 1.2

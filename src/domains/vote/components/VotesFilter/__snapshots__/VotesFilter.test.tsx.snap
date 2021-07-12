@@ -24,9 +24,9 @@ exports[`VotesFilter should render 1`] = `
               class="flex justify-center items-center w-5 h-5"
             >
               <div
-                class="sc-bdfBwQ EshKj"
-                height="19"
-                width="17"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   filters.svg
@@ -65,9 +65,9 @@ exports[`VotesFilter should render default 1`] = `
               class="flex justify-center items-center w-5 h-5"
             >
               <div
-                class="sc-bdfBwQ EshKj"
-                height="19"
-                width="17"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   filters.svg
@@ -158,9 +158,9 @@ exports[`VotesFilter should render with current option selected 1`] = `
               class="flex justify-center items-center w-5 h-5"
             >
               <div
-                class="sc-bdfBwQ EshKj"
-                height="19"
-                width="17"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   filters.svg
@@ -244,9 +244,9 @@ exports[`VotesFilter should render with disabled current option 1`] = `
               class="flex justify-center items-center w-5 h-5"
             >
               <div
-                class="sc-bdfBwQ EshKj"
-                height="19"
-                width="17"
+                class="sc-bdfBwQ hjDozt"
+                height="20"
+                width="20"
               >
                 <svg>
                   filters.svg

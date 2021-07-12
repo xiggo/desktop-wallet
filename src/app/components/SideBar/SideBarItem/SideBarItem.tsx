@@ -30,7 +30,7 @@ export const SideBarItem = withRouter(
 								"text-theme-primary-300 dark:text-theme-secondary-600": !isActive,
 							})}
 						>
-							<Icon name={icon} width={20} height={20} />
+							<Icon name={icon} size="lg" />
 						</div>
 					)}
 

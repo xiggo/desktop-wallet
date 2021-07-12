@@ -121,9 +121,9 @@ exports[`ContactForm should render 1`] = `
                       data-testid="SelectDropdown__caret"
                     >
                       <div
-                        class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                        height="5"
-                        width="7"
+                        class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           caret-down.svg
@@ -367,9 +367,9 @@ exports[`ContactForm should render with errors 1`] = `
                       data-testid="SelectDropdown__caret"
                     >
                       <div
-                        class="sc-bdfBwQ kBuozr transition-transform text-theme-secondary-500"
-                        height="5"
-                        width="7"
+                        class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           caret-down.svg

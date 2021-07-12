@@ -24,7 +24,7 @@ export const TransactionType = ({ type, ...properties }: TransactionSenderProper
 					className="text-theme-text border-theme-text dark:text-theme-secondary-600 dark:border-theme-secondary-600"
 					size="lg"
 				>
-					<Icon name={getIcon(type)} width={20} height={20} />
+					<Icon name={getIcon(type)} size="lg" />
 				</Circle>
 			}
 			{...properties}

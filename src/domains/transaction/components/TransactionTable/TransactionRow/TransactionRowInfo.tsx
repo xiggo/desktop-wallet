@@ -18,7 +18,7 @@ export const BaseTransactionRowInfo = ({ memo, isMultiSignatureRegistration, isL
 			{isLedger && (
 				<Tooltip content={t("COMMON.LEDGER")}>
 					<span className="p-1">
-						<Icon data-testid="TransactionRowInfo__ledger" name="Ledger" />
+						<Icon data-testid="TransactionRowInfo__ledger" name="Ledger" size="lg" />
 					</span>
 				</Tooltip>
 			)}
@@ -26,7 +26,7 @@ export const BaseTransactionRowInfo = ({ memo, isMultiSignatureRegistration, isL
 			{isMultiSignatureRegistration && (
 				<Tooltip content={t("COMMON.MULTISIGNATURE")}>
 					<span className="p-1">
-						<Icon data-testid="TransactionRowInfo__multiSignature" name="Multisig" width={22} height={14} />
+						<Icon data-testid="TransactionRowInfo__multiSignature" name="Multisig" size="lg" />
 					</span>
 				</Tooltip>
 			)}
@@ -34,7 +34,7 @@ export const BaseTransactionRowInfo = ({ memo, isMultiSignatureRegistration, isL
 			{memo && (
 				<Tooltip className="break-all" content={memo}>
 					<span className="p-1">
-						<Icon data-testid="TransactionRowInfo__vendorField" name="Memo" width={17} height={16} />
+						<Icon data-testid="TransactionRowInfo__vendorField" name="Memo" size="lg" />
 					</span>
 				</Tooltip>
 			)}

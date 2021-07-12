@@ -26,7 +26,7 @@ export const BackButton = ({ backToUrl, className, disabled }: BackButtonPropert
 
 	return (
 		<StyledBackButton onClick={handleOnClick} disabled={disabled} className={className}>
-			<Icon name="ArrowLeft" className="mx-auto" width={6} height={10} />
+			<Icon name="ArrowLeft" className="mx-auto" size="sm" />
 		</StyledBackButton>
 	);
 };

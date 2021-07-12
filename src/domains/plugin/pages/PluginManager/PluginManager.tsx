@@ -111,7 +111,7 @@ const LatestPlugins = ({
 										onClick={() => onCurrentViewChange(category)}
 									>
 										<span>{t("COMMON.VIEW_ALL")}</span>
-										<Icon name="ChevronRight" width={8} height={8} />
+										<Icon name="ChevronRight" size="sm" />
 									</span>
 								)}
 							</div>
@@ -372,7 +372,7 @@ export const PluginManager = () => {
 									onClick={openManualInstallPluginModal}
 								>
 									<div className="flex items-center space-x-2 whitespace-nowrap">
-										<Icon name="File" width={15} height={15} />
+										<Icon name="File" />
 										<span>{t("PLUGINS.MODAL_MANUAL_INSTALL_PLUGIN.TITLE")}</span>
 									</div>
 								</Button>

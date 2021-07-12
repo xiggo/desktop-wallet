@@ -17,9 +17,9 @@ exports[`News should filter results based on category query and asset 1`] = `
           disabled=""
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -125,9 +125,9 @@ exports[`News should filter results based on category query and asset 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -194,9 +194,9 @@ exports[`News should filter results based on category query and asset 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -425,10 +425,10 @@ exports[`News should filter results based on category query and asset 1`] = `
                               class="align-middle"
                             >
                               <div
-                                class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                 data-testid="Link__external"
-                                height="1em"
-                                width="1em"
+                                height="16"
+                                width="16"
                               >
                                 <svg>
                                   redirect.svg
@@ -574,9 +574,9 @@ exports[`News should filter results based on category query and asset 1`] = `
                         </div>
                       </div>
                       <div
-                        class="sc-bdfBwQ hHLBkp mr-4 text-theme-primary-300 dark:text-theme-secondary-600"
-                        height="18"
-                        width="18"
+                        class="sc-bdfBwQ hjDozt mr-4 text-theme-primary-300 dark:text-theme-secondary-600"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           search.svg
@@ -727,9 +727,9 @@ exports[`News should filter results based on category query and asset 1`] = `
                                 class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                               >
                                 <div
-                                  class="sc-bdfBwQ ejYZeh"
-                                  height="12"
-                                  width="12"
+                                  class="sc-bdfBwQ eZRpTZ"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     checkmark.svg
@@ -794,9 +794,9 @@ exports[`News should filter results based on category query and asset 2`] = `
           disabled=""
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -902,9 +902,9 @@ exports[`News should filter results based on category query and asset 2`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -971,9 +971,9 @@ exports[`News should filter results based on category query and asset 2`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1215,10 +1215,10 @@ exports[`News should filter results based on category query and asset 2`] = `
                               class="align-middle"
                             >
                               <div
-                                class="sc-bdfBwQ dnaihB flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                                class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
                                 data-testid="Link__external"
-                                height="1em"
-                                width="1em"
+                                height="16"
+                                width="16"
                               >
                                 <svg>
                                   redirect.svg
@@ -1400,9 +1400,9 @@ exports[`News should filter results based on category query and asset 2`] = `
                         data-testid="PaginationSearchButton__search"
                       >
                         <div
-                          class="sc-bdfBwQ qoThl"
-                          height="13"
-                          width="13"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             search.svg
@@ -1421,9 +1421,9 @@ exports[`News should filter results based on category query and asset 2`] = `
                     >
                       Next
                       <div
-                        class="sc-bdfBwQ ejYZeh ml-2"
-                        height="12"
-                        width="12"
+                        class="sc-bdfBwQ eZRpTZ ml-2"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           forward.svg
@@ -1440,9 +1440,9 @@ exports[`News should filter results based on category query and asset 2`] = `
                       class="flex relative items-center space-x-2"
                     >
                       <div
-                        class="sc-bdfBwQ ejYZeh"
-                        height="12"
-                        width="12"
+                        class="sc-bdfBwQ eZRpTZ"
+                        height="10"
+                        width="10"
                       >
                         <svg>
                           pagination-last.svg
@@ -1490,9 +1490,9 @@ exports[`News should filter results based on category query and asset 2`] = `
                         </div>
                       </div>
                       <div
-                        class="sc-bdfBwQ hHLBkp mr-4 text-theme-primary-300 dark:text-theme-secondary-600"
-                        height="18"
-                        width="18"
+                        class="sc-bdfBwQ hjDozt mr-4 text-theme-primary-300 dark:text-theme-secondary-600"
+                        height="20"
+                        width="20"
                       >
                         <svg>
                           search.svg
@@ -1638,9 +1638,9 @@ exports[`News should filter results based on category query and asset 2`] = `
                                 class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-500 text-theme-success-100"
                               >
                                 <div
-                                  class="sc-bdfBwQ ejYZeh"
-                                  height="12"
-                                  width="12"
+                                  class="sc-bdfBwQ eZRpTZ"
+                                  height="10"
+                                  width="10"
                                 >
                                   <svg>
                                     checkmark.svg

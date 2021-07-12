@@ -7,9 +7,9 @@ exports[`BackButton should not redirect to given url when disabled 1`] = `
     disabled=""
   >
     <div
-      class="sc-bdfBwQ dlKckO mx-auto"
+      class="sc-bdfBwQ eZRpTZ mx-auto"
       height="10"
-      width="6"
+      width="10"
     >
       <svg>
         arrow-left.svg
@@ -26,9 +26,9 @@ exports[`BackButton should not redirect to previous page when disabled 1`] = `
     disabled=""
   >
     <div
-      class="sc-bdfBwQ dlKckO mx-auto"
+      class="sc-bdfBwQ eZRpTZ mx-auto"
       height="10"
-      width="6"
+      width="10"
     >
       <svg>
         arrow-left.svg
@@ -44,9 +44,9 @@ exports[`BackButton should redirect to given url 1`] = `
     class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD"
   >
     <div
-      class="sc-bdfBwQ dlKckO mx-auto"
+      class="sc-bdfBwQ eZRpTZ mx-auto"
       height="10"
-      width="6"
+      width="10"
     >
       <svg>
         arrow-left.svg
@@ -62,9 +62,9 @@ exports[`BackButton should redirect to previous page 1`] = `
     class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD"
   >
     <div
-      class="sc-bdfBwQ dlKckO mx-auto"
+      class="sc-bdfBwQ eZRpTZ mx-auto"
       height="10"
-      width="6"
+      width="10"
     >
       <svg>
         arrow-left.svg
@@ -80,9 +80,9 @@ exports[`BackButton should render 1`] = `
     class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD"
   >
     <div
-      class="sc-bdfBwQ dlKckO mx-auto"
+      class="sc-bdfBwQ eZRpTZ mx-auto"
       height="10"
-      width="6"
+      width="10"
     >
       <svg>
         arrow-left.svg
@@ -99,9 +99,9 @@ exports[`BackButton should render when disabled 1`] = `
     disabled=""
   >
     <div
-      class="sc-bdfBwQ dlKckO mx-auto"
+      class="sc-bdfBwQ eZRpTZ mx-auto"
       height="10"
-      width="6"
+      width="10"
     >
       <svg>
         arrow-left.svg

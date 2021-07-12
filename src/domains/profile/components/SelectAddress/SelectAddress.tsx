@@ -82,10 +82,10 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 								<div className="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600">
 									{isVerified && (
 										<div className="rounded-full text-theme-success-400 bg-theme-success-100">
-											<Icon name="Checkmark" width={18} height={18} />
+											<Icon name="Checkmark" size="lg" />
 										</div>
 									)}
-									<Icon name="User" width={20} height={20} />
+									<Icon name="User" size="lg" />
 								</div>
 							),
 							start: <WalletAvatar address={selectedAddress} />,

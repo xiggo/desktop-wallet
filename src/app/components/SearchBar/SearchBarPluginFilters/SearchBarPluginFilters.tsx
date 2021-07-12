@@ -99,7 +99,7 @@ export const SearchBarPluginFilters = ({ categories, initialValues, onReset, onC
 				position="right"
 				toggleContent={
 					<div className="mr-8 cursor-pointer">
-						<Icon name="Filters" width={20} height={20} />
+						<Icon name="Filters" size="lg" />
 					</div>
 				}
 			>

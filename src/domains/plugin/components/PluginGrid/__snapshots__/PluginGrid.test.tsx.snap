@@ -94,9 +94,9 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -150,9 +150,9 @@ exports[`PluginGrid should not render pagination 1`] = `
                     ARK Avatars
                   </div>
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
-                    height="20"
-                    width="20"
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       grant.svg
@@ -195,9 +195,9 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -251,9 +251,9 @@ exports[`PluginGrid should not render pagination 1`] = `
                     ARK Theme
                   </div>
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
-                    height="20"
-                    width="20"
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       grant.svg
@@ -296,9 +296,9 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -741,9 +741,9 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -797,9 +797,9 @@ exports[`PluginGrid should render pagination 1`] = `
                     ARK Avatars
                   </div>
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
-                    height="20"
-                    width="20"
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       grant.svg
@@ -842,9 +842,9 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -898,9 +898,9 @@ exports[`PluginGrid should render pagination 1`] = `
                     ARK Theme
                   </div>
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
-                    height="20"
-                    width="20"
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       grant.svg
@@ -943,9 +943,9 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -999,9 +999,9 @@ exports[`PluginGrid should render pagination 1`] = `
                     Drakula Theme
                   </div>
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
-                    height="20"
-                    width="20"
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       grant.svg
@@ -1044,9 +1044,9 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -1096,9 +1096,9 @@ exports[`PluginGrid should render pagination 1`] = `
           >
             Next
             <div
-              class="sc-bdfBwQ ejYZeh ml-2"
-              height="12"
-              width="12"
+              class="sc-bdfBwQ eZRpTZ ml-2"
+              height="10"
+              width="10"
             >
               <svg>
                 forward.svg
@@ -1534,9 +1534,9 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -1590,9 +1590,9 @@ exports[`PluginGrid should render without pagination 1`] = `
                     ARK Avatars
                   </div>
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
-                    height="20"
-                    width="20"
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       grant.svg
@@ -1635,9 +1635,9 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -1691,9 +1691,9 @@ exports[`PluginGrid should render without pagination 1`] = `
                     ARK Theme
                   </div>
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
-                    height="20"
-                    width="20"
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       grant.svg
@@ -1736,9 +1736,9 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -1818,9 +1818,9 @@ exports[`PluginGrid should split by page 1`] = `
                     ARK Avatars
                   </div>
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-warning-600"
-                    height="20"
-                    width="20"
+                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    height="16"
+                    width="16"
                   >
                     <svg>
                       grant.svg
@@ -1863,9 +1863,9 @@ exports[`PluginGrid should split by page 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg
@@ -1942,9 +1942,9 @@ exports[`PluginGrid should split by page 1`] = `
           >
             Next
             <div
-              class="sc-bdfBwQ ejYZeh ml-2"
-              height="12"
-              width="12"
+              class="sc-bdfBwQ eZRpTZ ml-2"
+              height="10"
+              width="10"
             >
               <svg>
                 forward.svg
@@ -2069,9 +2069,9 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         settings.svg

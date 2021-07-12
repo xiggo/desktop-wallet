@@ -26,9 +26,9 @@ exports[`MultiSignatureDetail should fail to broadcast transaction 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -197,9 +197,9 @@ exports[`MultiSignatureDetail should fail to broadcast transaction 1`] = `
                         class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             sent.svg
@@ -307,9 +307,9 @@ exports[`MultiSignatureDetail should fail to broadcast transaction 1`] = `
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -367,9 +367,9 @@ exports[`MultiSignatureDetail should fail to broadcast transaction 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -414,9 +414,9 @@ exports[`MultiSignatureDetail should fail to broadcast transaction 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -483,9 +483,9 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -654,9 +654,9 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             sent.svg
@@ -764,9 +764,9 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -824,9 +824,9 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -871,9 +871,9 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -925,9 +925,9 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -1096,9 +1096,9 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             sent.svg
@@ -1206,9 +1206,9 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -1266,9 +1266,9 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -1313,9 +1313,9 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -1367,9 +1367,9 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -1485,9 +1485,9 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text ring-theme-background"
                       >
                         <div
-                          class="sc-bdfBwQ jiBHIn"
-                          height="23"
-                          width="21"
+                          class="sc-bdfBwQ hjDozt"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             ipfs.svg
@@ -1595,9 +1595,9 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -1655,9 +1655,9 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -1702,9 +1702,9 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -1756,9 +1756,9 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -2058,9 +2058,9 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             sent.svg
@@ -2168,9 +2168,9 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -2228,9 +2228,9 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -2275,9 +2275,9 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -2329,9 +2329,9 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -2527,9 +2527,9 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -2587,9 +2587,9 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -2634,9 +2634,9 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -2688,9 +2688,9 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -2859,9 +2859,9 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             sent.svg
@@ -2969,9 +2969,9 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -3029,9 +3029,9 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -3076,9 +3076,9 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -3130,9 +3130,9 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -3393,9 +3393,9 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -3453,9 +3453,9 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -3500,9 +3500,9 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -3554,9 +3554,9 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -3817,9 +3817,9 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -3877,9 +3877,9 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -3924,9 +3924,9 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -3978,9 +3978,9 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -4149,9 +4149,9 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                         class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             sent.svg
@@ -4259,9 +4259,9 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -4319,9 +4319,9 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -4366,9 +4366,9 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -4446,9 +4446,9 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -4617,9 +4617,9 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                         class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                       >
                         <div
-                          class="sc-bdfBwQ dnaihB"
-                          height="1em"
-                          width="1em"
+                          class="sc-bdfBwQ bcEVDZ"
+                          height="16"
+                          width="16"
                         >
                           <svg>
                             sent.svg
@@ -4727,9 +4727,9 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                                 />
                                 <div
-                                  class="sc-bdfBwQ dnaihB"
-                                  height="1em"
-                                  width="1em"
+                                  class="sc-bdfBwQ bcEVDZ"
+                                  height="16"
+                                  width="16"
                                 >
                                   <svg>
                                     copy.svg
@@ -4787,9 +4787,9 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -4834,9 +4834,9 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -4903,9 +4903,9 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -5000,9 +5000,9 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg
@@ -5047,9 +5047,9 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                                   data-testid="Signatures__signed-badge"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ejYZeh"
-                                    height="12"
-                                    width="12"
+                                    class="sc-bdfBwQ eZRpTZ"
+                                    height="10"
+                                    width="10"
                                   >
                                     <svg>
                                       signature-status-ok.svg

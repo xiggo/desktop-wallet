@@ -23,7 +23,7 @@ export const TransactionConfirmations = ({ transaction }: TransactionConfirmatio
 					<span>{t("TRANSACTION.WELL_CONFIRMED")}</span>
 					<Tooltip content={t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations.toNumber() })}>
 						<span>
-							<Icon name="StatusOk" className={confirmationStatusStyle} width={22} height={22} />
+							<Icon name="StatusOk" className={confirmationStatusStyle} size="lg" />
 						</span>
 					</Tooltip>
 				</div>
@@ -33,7 +33,7 @@ export const TransactionConfirmations = ({ transaction }: TransactionConfirmatio
 		return (
 			<div className="flex space-x-3">
 				<span>{t("TRANSACTION.NOT_CONFIRMED")}</span>
-				<Icon name="StatusPending" className={confirmationStatusStyle} width={22} height={22} />
+				<Icon name="StatusPending" className={confirmationStatusStyle} size="lg" />
 			</div>
 		);
 	};

@@ -31,7 +31,7 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Del
 				label={t("TRANSACTION.DELEGATE_NAME")}
 				extra={
 					<Circle className="border-theme-text" size="lg">
-						<Icon name="Delegate" width={25} height={25} />
+						<Icon name="Delegate" size="lg" />
 					</Circle>
 				}
 			>

@@ -26,9 +26,9 @@ exports[`Plugin Uninstall Confirmation should remove the plugin 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bSxmtR"
-                height="14"
-                width="14"
+                class="sc-bdfBwQ bcEVDZ"
+                height="16"
+                width="16"
               >
                 <svg>
                   cross-slim.svg
@@ -84,9 +84,9 @@ exports[`Plugin Uninstall Confirmation should remove the plugin 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ dnaihB"
-                      height="1em"
-                      width="1em"
+                      class="sc-bdfBwQ bcEVDZ"
+                      height="16"
+                      width="16"
                     >
                       <svg>
                         trash.svg

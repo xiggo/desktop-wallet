@@ -16,9 +16,9 @@ exports[`CreateWallet should create a wallet 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -123,9 +123,9 @@ exports[`CreateWallet should create a wallet 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -194,9 +194,9 @@ exports[`CreateWallet should create a wallet 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -408,10 +408,10 @@ exports[`CreateWallet should create a wallet 1`] = `
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -429,10 +429,10 @@ exports[`CreateWallet should create a wallet 1`] = `
                                   data-testid="NetworkIcon-ARK-bind.mainnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       bind.svg
@@ -466,10 +466,10 @@ exports[`CreateWallet should create a wallet 1`] = `
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -487,10 +487,10 @@ exports[`CreateWallet should create a wallet 1`] = `
                                   data-testid="NetworkIcon-ARK-bind.testnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       bind.svg
@@ -563,9 +563,9 @@ exports[`CreateWallet should create a wallet 2`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -670,9 +670,9 @@ exports[`CreateWallet should create a wallet 2`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -739,9 +739,9 @@ exports[`CreateWallet should create a wallet 2`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1044,9 +1044,9 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -1151,9 +1151,9 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -1222,9 +1222,9 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1436,10 +1436,10 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -1457,10 +1457,10 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                                   data-testid="NetworkIcon-ARK-bind.mainnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       bind.svg
@@ -1494,10 +1494,10 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -1515,10 +1515,10 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                                   data-testid="NetworkIcon-ARK-bind.testnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       bind.svg
@@ -1593,9 +1593,9 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -1700,9 +1700,9 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -1769,9 +1769,9 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -1983,10 +1983,10 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -2004,10 +2004,10 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                                   data-testid="NetworkIcon-ARK-bind.mainnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       bind.svg
@@ -2041,10 +2041,10 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -2062,10 +2062,10 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                                   data-testid="NetworkIcon-ARK-bind.testnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       bind.svg
@@ -2138,9 +2138,9 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
           class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
         >
           <div
-            class="sc-bdfBwQ dlKckO mx-auto"
+            class="sc-bdfBwQ eZRpTZ mx-auto"
             height="10"
-            width="6"
+            width="10"
           >
             <svg>
               arrow-left.svg
@@ -2245,9 +2245,9 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ fzSuZU p-1"
-                          height="18"
-                          width="15"
+                          class="sc-bdfBwQ hjDozt p-1"
+                          height="20"
+                          width="20"
                         >
                           <svg>
                             notification.svg
@@ -2316,9 +2316,9 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ fdJUih p-1"
-                      height="22"
-                      width="22"
+                      class="sc-bdfBwQ hjDozt p-1"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         qr-code.svg
@@ -2461,9 +2461,9 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                           class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-danger-400"
                         >
                           <div
-                            class="sc-bdfBwQ gkYIJl"
-                            height="1.25em"
-                            width="1.25em"
+                            class="sc-bdfBwQ hjDozt"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               alert-danger.svg
@@ -2572,10 +2572,10 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -2593,10 +2593,10 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                                   data-testid="NetworkIcon-ARK-bind.mainnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       bind.svg
@@ -2630,10 +2630,10 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -2651,10 +2651,10 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                                   data-testid="NetworkIcon-ARK-bind.testnet"
                                 >
                                   <div
-                                    class="sc-bdfBwQ ffTEMV"
+                                    class="sc-bdfBwQ hjDozt"
                                     data-testid="NetworkIcon__icon"
-                                    height="30"
-                                    width="30"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       bind.svg

@@ -134,7 +134,7 @@ const ReceiveFunds = ({ address, icon, name, network, isOpen, onClose }: Receive
 									<span className="truncate">{uri}</span>
 									<span className="flex text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-primary-700">
 										<Clipboard variant="icon" data={uri}>
-											<Icon name="Copy" width={12} height={15} className="p-1" />
+											<Icon name="Copy" className="p-1" />
 										</Clipboard>
 									</span>
 								</>
