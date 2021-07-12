@@ -27,7 +27,7 @@ describe("useDeeplink hook", () => {
 		ipcRenderer.on.mockImplementationOnce((event, callback) =>
 			callback(
 				event,
-				"ark:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+				"payvo:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 			),
 		);
 
@@ -45,7 +45,7 @@ describe("useDeeplink hook", () => {
 		ipcRenderer.on.mockImplementationOnce((event, callback) =>
 			callback(
 				event,
-				"ark:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+				"payvo:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 			),
 		);
 
@@ -67,7 +67,7 @@ describe("useDeeplink hook", () => {
 		ipcRenderer.on.mockImplementationOnce((event, callback) =>
 			callback(
 				event,
-				"ark:transfer?coin=doge&network=mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+				"payvo:transfer?coin=doge&network=mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 			),
 		);
 
@@ -91,7 +91,7 @@ describe("useDeeplink hook", () => {
 		ipcRenderer.on.mockImplementationOnce((event, callback) =>
 			callback(
 				event,
-				"ark:transfer?coin=ark&network=custom&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+				"payvo:transfer?coin=ark&network=custom&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 			),
 		);
 
@@ -115,7 +115,7 @@ describe("useDeeplink hook", () => {
 		ipcRenderer.on.mockImplementationOnce((event, callback) =>
 			callback(
 				event,
-				"ark:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+				"payvo:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 			),
 		);
 
@@ -141,7 +141,7 @@ describe("useDeeplink hook", () => {
 		ipcRenderer.on.mockImplementationOnce((event, callback) =>
 			callback(
 				event,
-				"ark:transfer?coin=ark&network=ark.devnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+				"payvo:transfer?coin=ark&network=ark.devnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 			),
 		);
 
@@ -167,7 +167,7 @@ describe("useDeeplink hook", () => {
 
 	it("should subscribe to deeplink listener and navigate when no method found", () => {
 		ipcRenderer.on.mockImplementationOnce((event, callback) =>
-			callback(event, "ark:vote?coin=ark&network=ark.devnet&delegate=alessio"),
+			callback(event, "payvo:vote?coin=ark&network=ark.devnet&delegate=alessio"),
 		);
 
 		window.history.pushState(
@@ -192,7 +192,7 @@ describe("useDeeplink hook", () => {
 
 	it("should not use create", () => {
 		ipcRenderer.on.mockImplementationOnce((event, callback) =>
-			callback(event, "ark:vote?coin=ark&network=ark.devnet&delegate=alessio"),
+			callback(event, "payvo:vote?coin=ark&network=ark.devnet&delegate=alessio"),
 		);
 
 		const { getByText } = renderWithRouter(

@@ -4982,10 +4982,10 @@
     string-crypto "^2.0.1"
     uuid "^8.3.2"
 
-"@payvo/helpers@^1.0.0", "@payvo/helpers@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@payvo/helpers/-/helpers-1.0.1.tgz#fd2203ef0074cdc3c6aff2c8d7899cf7e6c35ffa"
-  integrity sha512-fTIJJ3DySzhHfvzAbISH7RDbx0QnNFQDus24dq3N9a+y0ektsEYL5WsxOxxitDiXflPleUQuruzyHO/gbElqfQ==
+"@payvo/helpers@^1.0.0", "@payvo/helpers@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@payvo/helpers/-/helpers-1.1.0.tgz#b50cca67bf6ca03c8656af5aa799f09de87af998"
+  integrity sha512-gPtAoe2QrnFGuV5ksqcRSLIuGmPEqU7+jALJxqY8KotT/aFbvtk/Am24ReOlDpdY6kSlBkvgID4JxtXN6DfRkw==
   dependencies:
     bad-words "^3.0.4"
     bignumber.js "^9.0.1"
