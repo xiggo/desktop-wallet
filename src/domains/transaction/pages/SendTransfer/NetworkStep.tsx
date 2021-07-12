@@ -8,14 +8,14 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile; networks: Networks.Network[] }) => {
-	const { getValues, setValue, setError, clearErrors } = useFormContext();
+	const { setValue, setError, clearErrors, watch } = useFormContext();
 
 	const availableNetworks = useMemo(() => {
 		const usesTestNetworks = profile.settings().get(Contracts.ProfileSetting.UseTestNetworks);
 		return usesTestNetworks ? networks : networks.filter((network) => network.isLive());
 	}, [profile, networks]);
 
-	const selectedNetwork: Networks.Network = getValues("network");
+	const selectedNetwork: Networks.Network = watch("network");
 
 	const { t } = useTranslation();
 

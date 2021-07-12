@@ -485,6 +485,71 @@ describe("SendTransfer", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should reset fields when network changed", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/send-transfer">
+				<LedgerProvider transport={getDefaultLedgerTransport()}>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__network-step")).toBeTruthy());
+
+		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
+
+		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+
+		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
+
+		// Memo
+		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
+
+		// Fee
+		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
+
+		// Previous step
+		fireEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__network-step")).toBeTruthy());
+
+		// Change network
+		// Unselect
+		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toBeEmpty());
+		// Select
+		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
+
+		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+
+		// Next step
+		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+
+		// Memo
+		expect(screen.getByTestId("Input__memo")).toBeEmpty();
+
+		// Fee
+		expect(screen.getAllByRole("radio")[0]).not.toBeChecked();
+	});
+
 	it("should select a cryptoasset and select sender without wallet id param", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 

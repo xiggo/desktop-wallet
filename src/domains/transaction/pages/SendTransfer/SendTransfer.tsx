@@ -71,16 +71,18 @@ export const SendTransfer = () => {
 		return Object.values(results);
 	}, [profile]);
 
+	const defaultValues = {
+		amount: 0,
+		recipients: [],
+		remainingBalance: wallet?.balance?.(),
+	};
+
 	const form = useForm<any>({
-		defaultValues: {
-			amount: 0,
-			recipients: [],
-			remainingBalance: wallet?.balance?.(),
-		},
+		defaultValues,
 		mode: "onChange",
 	});
 
-	const { clearErrors, formState, getValues, register, setValue, handleSubmit, watch } = form;
+	const { clearErrors, formState, getValues, register, setValue, handleSubmit, watch, reset } = form;
 	const { isValid, isSubmitting } = formState;
 
 	const { senderAddress, fees, fee, remainingBalance, amount, isSendAllSelected, network } = watch();
@@ -109,6 +111,14 @@ export const SendTransfer = () => {
 
 		register("suppressWarning");
 	}, [register, sendTransfer, common, fees, wallet, remainingBalance, amount, senderAddress]);
+
+	useEffect(() => {
+		if (!showNetworkStep) {
+			return;
+		}
+
+		reset({ ...defaultValues, network });
+	}, [network, reset]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const {
 		dismissFeeWarning,
