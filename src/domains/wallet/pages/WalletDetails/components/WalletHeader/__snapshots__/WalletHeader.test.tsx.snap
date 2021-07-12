@@ -63,7 +63,7 @@ exports[`WalletHeader should render 1`] = `
           class="flex items-center space-x-5 w-full"
         >
           <span
-            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap"
+            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap no-ligatures"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>
@@ -276,7 +276,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
           class="flex items-center space-x-5 w-full"
         >
           <span
-            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap"
+            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap no-ligatures"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>
@@ -495,7 +495,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
           class="flex items-center space-x-5 w-full"
         >
           <span
-            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap"
+            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap no-ligatures"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>
@@ -726,7 +726,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
           class="flex items-center space-x-5 w-full"
         >
           <span
-            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap"
+            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap no-ligatures"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>
@@ -986,7 +986,7 @@ exports[`WalletHeader should show modifiers 1`] = `
           class="flex items-center space-x-5 w-full"
         >
           <span
-            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap"
+            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap no-ligatures"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>
@@ -1199,7 +1199,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
           class="flex items-center space-x-5 w-full"
         >
           <span
-            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap"
+            class="inline-flex overflow-hidden flex-1 text-lg font-semibold text-white whitespace-nowrap no-ligatures"
           >
             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
           </span>

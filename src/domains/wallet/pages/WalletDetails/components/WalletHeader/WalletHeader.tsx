@@ -288,7 +288,7 @@ export const WalletHeader = ({
 						<div className="flex items-center space-x-5 w-full">
 							<TruncateMiddleDynamic
 								value={wallet.address()}
-								className="flex-1 text-lg font-semibold text-white whitespace-nowrap"
+								className="flex-1 text-lg font-semibold text-white whitespace-nowrap no-ligatures"
 							/>
 
 							<div className="flex items-end mb-1 space-x-3 text-theme-secondary-text">
