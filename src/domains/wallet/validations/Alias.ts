@@ -1,17 +1,14 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { TFunction } from "i18next";
-import { lowerCaseEquals } from "utils/equals";
 
 export const alias = ({
 	t,
 	walletAddress,
 	profile,
-	unsavedAliases,
 }: {
 	t: TFunction;
 	walletAddress: string;
 	profile: Contracts.IProfile;
-	unsavedAliases?: string[];
 }) => {
 	const maxLength = 42;
 
@@ -30,19 +27,13 @@ export const alias = ({
 			duplicateAlias: (value: string) => {
 				const alias = value.trim();
 
-				const error = t("WALLETS.VALIDATION.ALIAS_ASSIGNED", { alias });
+				const walletWithSameAlias = profile.wallets().findByAlias(alias);
 
-				if (unsavedAliases?.some((unsavedAlias) => lowerCaseEquals(unsavedAlias, alias))) {
-					return error;
-				}
-
-				const walletSameAlias = profile.wallets().findByAlias(alias);
-
-				if (!walletSameAlias || walletSameAlias.address() === walletAddress) {
+				if (!walletWithSameAlias || walletWithSameAlias.address() === walletAddress) {
 					return true;
 				}
 
-				return error;
+				return t("WALLETS.VALIDATION.ALIAS_ASSIGNED", { alias });
 			},
 			empty: (alias: string) => {
 				if (alias.trim() === "") {

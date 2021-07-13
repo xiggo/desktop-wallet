@@ -133,16 +133,18 @@ describe("CreateWallet", () => {
 		await waitFor(() => expect(continueButton).not.toHaveAttribute("disabled"));
 
 		fireEvent.click(continueButton);
-		await waitFor(() => expect(getByTestId("EncryptPassword")).toBeTruthy());
 
-		fireEvent.click(getByTestId("CreateWallet__skip-button"));
-		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("EncryptPassword")).toBeTruthy());
 
 		expect(profile.wallets().values().length).toBe(0);
 
-		fireEvent.click(getByTestId("CreateWallet__save-button"));
+		fireEvent.click(getByTestId("CreateWallet__skip-button"));
 
-		await waitFor(() => expect(profile.wallets().values().length).toBe(1));
+		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
+
+		expect(profile.wallets().values().length).toBe(1);
+
+		fireEvent.click(getByTestId("CreateWallet__finish-button"));
 
 		const wallet = profile.wallets().first();
 
@@ -368,20 +370,16 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
 
-		const walletNameInput = getByTestId("CreateWallet__wallet-name");
+		act(() => {
+			fireEvent.click(getByTestId("CreateWallet__edit-alias"));
+		});
 
-		expect(walletNameInput).toBeTruthy();
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
 		act(() => {
-			fireEvent.input(walletNameInput, { target: { value: "Test" } });
+			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "Test" } });
 		});
 
-		const submitButton = getByTestId("CreateWallet__save-button");
-
-		expect(submitButton).toBeTruthy();
-
-		await waitFor(() => {
-			expect(submitButton).toBeDisabled();
-		});
+		await waitFor(() => expect(getByTestId("UpdateWalletName__submit")).toBeDisabled());
 	});
 });

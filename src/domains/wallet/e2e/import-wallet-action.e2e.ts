@@ -44,11 +44,14 @@ test("should import a wallet by mnemonic", async (t) => {
 	await t.expect(Selector("[data-testid=EncryptPassword]").exists).ok();
 	await t.click(Selector("[data-testid=ImportWallet__skip-button]"));
 
-	// Fill a wallet name
+	await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
+
 	const walletNameInput = Selector("input[name=name]");
 
-	await t.typeText(walletNameInput, MNEMONICS[0]);
-	await t.click(Selector("button").withExactText(translations.COMMON.SAVE_FINISH));
+	await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias");
+
+	await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
+	await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 });
 
 test("should import a wallet by address", async (t) => {
@@ -71,10 +74,14 @@ test("should import a wallet by address", async (t) => {
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 
 	// Fill a wallet name
+	await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
+
 	const walletNameInput = Selector("input[name=name]");
 
-	await t.typeText(walletNameInput, "Test Address");
-	await t.click(Selector("button").withExactText(translations.COMMON.SAVE_FINISH));
+	await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias");
+
+	await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
+	await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 });
 
 test("should show an error message for invalid address", async (t) => {

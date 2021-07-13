@@ -176,7 +176,7 @@ describe("ImportWallet", () => {
 
 	it("should render 3rd step", async () => {
 		let form: ReturnType<typeof useForm>;
-
+		const onClickEditAlias = jest.fn();
 		const importedWallet = profile.wallets().first();
 
 		const Component = () => {
@@ -192,7 +192,7 @@ describe("ImportWallet", () => {
 
 			return (
 				<FormProvider {...form}>
-					<ThirdStep importedWallet={importedWallet} profile={profile} />
+					<ThirdStep importedWallet={importedWallet} onClickEditAlias={onClickEditAlias} />
 				</FormProvider>
 			);
 		};
@@ -205,15 +205,11 @@ describe("ImportWallet", () => {
 		expect(getByText("ARK Devnet")).toBeTruthy();
 		expect(getByText(importedWallet.address())).toBeTruthy();
 
-		const walletNameInput = getByTestId("ImportWallet__name-input");
-
-		expect(walletNameInput).toHaveValue(importedWallet.alias());
-
 		await act(async () => {
-			fireEvent.change(walletNameInput, { target: { value: "Test" } });
+			fireEvent.click(getByTestId("ImportWallet__edit-alias"));
 		});
 
-		expect(form.getValues()).toEqual({ name: "Test" });
+		expect(onClickEditAlias).toHaveBeenCalled();
 	});
 
 	it("should go back to dashboard", async () => {
@@ -325,8 +321,7 @@ describe("ImportWallet", () => {
 			expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
 		});
 
-		await waitFor(() => expect(getByTestId("ImportWallet__save-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("ImportWallet__save-button"));
+		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddress(identityAddress)).toBeTruthy();
@@ -436,8 +431,7 @@ describe("ImportWallet", () => {
 			expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
 		});
 
-		await waitFor(() => expect(getByTestId("ImportWallet__save-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("ImportWallet__save-button"));
+		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddress(randomAddress)).toBeTruthy();
@@ -487,8 +481,7 @@ describe("ImportWallet", () => {
 			expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
 		});
 
-		await waitFor(() => expect(getByTestId("ImportWallet__save-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("ImportWallet__save-button"));
+		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddress(randomAddress)).toBeTruthy();
@@ -718,6 +711,8 @@ describe("ImportWallet", () => {
 			},
 		);
 
+		const historySpy = jest.spyOn(history, "push").mockImplementation();
+
 		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
@@ -747,12 +742,7 @@ describe("ImportWallet", () => {
 			expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
 		});
 
-		const alias = "Test";
-
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
-
-		fireEvent.input(getByTestId("ImportWallet__name-input"), { target: { value: alias } });
-		fireEvent.submit(getByTestId("ImportWallet__name-input"), { code: 13, key: "Enter" });
+		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalled();
@@ -823,8 +813,11 @@ describe("ImportWallet", () => {
 
 		const alias = "My Wallet";
 
-		fireEvent.input(getByTestId("ImportWallet__name-input"), { target: { value: alias } });
-		fireEvent.submit(getByTestId("ImportWallet__name-input"), { code: 13, key: "Enter" });
+		fireEvent.click(getByTestId("ImportWallet__edit-alias"));
+
+		await waitFor(() => expect(getByTestId("UpdateWalletName__input")).toBeInTheDocument());
+
+		fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: alias } });
 
 		await waitFor(() => {
 			expect(getByTestId("Input__error")).toHaveAttribute(
@@ -833,6 +826,6 @@ describe("ImportWallet", () => {
 			);
 		});
 
-		expect(getByTestId("ImportWallet__save-button")).toBeDisabled();
+		expect(getByTestId("UpdateWalletName__submit")).toBeDisabled();
 	});
 });

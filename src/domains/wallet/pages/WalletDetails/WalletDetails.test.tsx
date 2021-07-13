@@ -263,8 +263,10 @@ describe("WalletDetails", () => {
 		const name = "Sample label name";
 
 		act(() => {
-			fireEvent.change(getByTestId("UpdateWalletName__input"), { target: { value: name } });
+			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: name } });
 		});
+
+		await waitFor(() => expect(getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
 		act(() => {
 			fireEvent.click(getByTestId("UpdateWalletName__submit"));

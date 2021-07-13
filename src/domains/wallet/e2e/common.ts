@@ -31,12 +31,14 @@ export const importWallet = async (t: any, passphrase = MNEMONICS[0], alias = "T
 	await t.expect(Selector("[data-testid=EncryptPassword]").exists).ok();
 	await t.click(Selector("[data-testid=ImportWallet__skip-button]"));
 
-	await t
-		.selectText(Selector("[data-testid=ImportWallet__name-input]"))
-		.pressKey("delete")
-		.typeText(Selector("[data-testid=ImportWallet__name-input]"), alias);
+	await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
 
-	await t.click(Selector("button").withExactText(translations.COMMON.SAVE_FINISH));
+	const walletNameInput = Selector("input[name=name]");
+
+	await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, alias);
+
+	await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
+	await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 
 	await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 };
@@ -54,9 +56,15 @@ export const importWalletByAddress = async (t: any, address: string, alias = "Te
 
 	await t.typeText(Selector("[data-testid=ImportWallet__address-input]"), address, { paste: true });
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
-	await t.typeText(Selector("[data-testid=ImportWallet__name-input]"), alias);
 
-	await t.click(Selector("button").withExactText(translations.COMMON.SAVE_FINISH));
+	await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
+
+	const walletNameInput = Selector("input[name=name]");
+
+	await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, alias);
+
+	await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
+	await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 
 	await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 };

@@ -1,20 +1,18 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { Address } from "app/components/Address";
 import { Avatar } from "app/components/Avatar";
-import { FormField, FormLabel } from "app/components/Form";
+import { Button } from "app/components/Button";
 import { Header } from "app/components/Header";
-import { InputDefault } from "app/components/Input";
+import { Icon } from "app/components/Icon";
 import { TransactionDetail, TransactionNetwork } from "domains/transaction/components/TransactionDetail";
-import { alias } from "domains/wallet/validations";
 import React, { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { assertNetwork, assertWallet } from "utils/assertions";
 
-export const SuccessStep = ({ profile }: { profile: Contracts.IProfile }) => {
+export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void }) => {
 	const { t } = useTranslation();
 
-	const { getValues, register, watch } = useFormContext();
+	const { getValues, watch } = useFormContext();
 
 	// getValues does not get the value of `defaultValues` on first render
 	const [defaultNetwork] = useState(() => watch("network"));
@@ -25,8 +23,6 @@ export const SuccessStep = ({ profile }: { profile: Contracts.IProfile }) => {
 
 	assertNetwork(network);
 	assertWallet(wallet);
-
-	const aliasValidation = alias({ profile, t, walletAddress: wallet.address() });
 
 	return (
 		<section data-testid="CreateWallet__SuccessStep">
@@ -45,15 +41,21 @@ export const SuccessStep = ({ profile }: { profile: Contracts.IProfile }) => {
 				<Address address={wallet.address()} />
 			</TransactionDetail>
 
-			<TransactionDetail paddingPosition="top">
-				<FormField name="name">
-					<FormLabel label={t("WALLETS.WALLET_NAME")} />
-					<InputDefault
-						data-testid="CreateWallet__wallet-name"
-						ref={register(aliasValidation)}
-						defaultValue={wallet.alias()}
-					/>
-				</FormField>
+			<TransactionDetail
+				label={t("WALLETS.WALLET_NAME")}
+				paddingPosition="top"
+				extra={
+					<Button
+						data-testid="CreateWallet__edit-alias"
+						type="button"
+						variant="secondary"
+						onClick={onClickEditAlias}
+					>
+						<Icon name="Edit" />
+					</Button>
+				}
+			>
+				{wallet.alias()}
 			</TransactionDetail>
 		</section>
 	);

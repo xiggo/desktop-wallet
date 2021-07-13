@@ -13,6 +13,7 @@ import { toasts } from "app/services";
 import { useWalletConfig } from "domains/dashboard/hooks";
 import { EncryptPasswordStep } from "domains/wallet/components/EncryptPasswordStep";
 import { NetworkStep } from "domains/wallet/components/NetworkStep";
+import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "domains/wallet/hooks/use-wallet-import";
 import { useWalletSync } from "domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
@@ -33,6 +34,7 @@ export const ImportWallet = () => {
 
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
+	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	const queryParameters = useQueryParams();
 	const isLedgerImport = !!queryParameters.get("ledger");
@@ -149,15 +151,8 @@ export const ImportWallet = () => {
 		await persist();
 	};
 
-	const handleFinish = async () => {
+	const handleFinish = () => {
 		assertWallet(importedWallet);
-
-		const name = getValues("name").trim();
-
-		if (name !== importedWallet.alias()) {
-			importedWallet.mutator().alias(name);
-			await persist();
-		}
 
 		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
 	};
@@ -172,7 +167,12 @@ export const ImportWallet = () => {
 					data-testid="ImportWallet__form"
 				>
 					{isLedgerImport ? (
-						<LedgerTabs />
+						<LedgerTabs
+							onClickEditWalletName={(wallet: Contracts.IReadWriteWallet) => {
+								setImportedWallet(wallet);
+								setIsEditAliasModalOpen(true);
+							}}
+						/>
 					) : (
 						<Tabs activeId={activeTab}>
 							<StepIndicator size={4} activeIndex={activeTab} />
@@ -194,7 +194,10 @@ export const ImportWallet = () => {
 								</TabPanel>
 
 								<TabPanel tabId={4}>
-									<ThirdStep importedWallet={importedWallet} profile={activeProfile} />
+									<ThirdStep
+										importedWallet={importedWallet}
+										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
+									/>
 								</TabPanel>
 
 								<div className="flex justify-between mt-8">
@@ -252,9 +255,9 @@ export const ImportWallet = () => {
 											<Button
 												disabled={!isValid || isSubmitting}
 												type="submit"
-												data-testid="ImportWallet__save-button"
+												data-testid="ImportWallet__finish-button"
 											>
-												{t("COMMON.SAVE_FINISH")}
+												{t("COMMON.GO_TO_WALLET")}
 											</Button>
 										)}
 									</div>
@@ -263,6 +266,15 @@ export const ImportWallet = () => {
 						</Tabs>
 					)}
 				</Form>
+
+				{!!importedWallet && isEditAliasModalOpen && (
+					<UpdateWalletName
+						wallet={importedWallet}
+						profile={activeProfile}
+						onCancel={() => setIsEditAliasModalOpen(false)}
+						onAfterSave={() => setIsEditAliasModalOpen(false)}
+					/>
+				)}
 			</Section>
 		</Page>
 	);

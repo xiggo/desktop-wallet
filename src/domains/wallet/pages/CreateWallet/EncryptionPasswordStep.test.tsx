@@ -170,7 +170,7 @@ describe("EncryptionPasswordStep", () => {
 		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
 
 		act(() => {
-			fireEvent.click(getByTestId("CreateWallet__save-button"));
+			fireEvent.click(getByTestId("CreateWallet__finish-button"));
 		});
 
 		await waitFor(() => expect(walletSpy).toHaveBeenCalled());
@@ -307,21 +307,26 @@ describe("EncryptionPasswordStep", () => {
 
 		await waitFor(() => expect(confirmPassword).toHaveValue("S3cUrePa$sword"));
 
+		expect(profile.wallets().values().length).toBe(0);
+
 		actAsync(() => {
 			fireEvent.click(getByTestId("CreateWallet__continue-button"));
 		});
+
 		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
 
-		// assert wallet not created yet
-		expect(profile.wallets().values().length).toBe(0);
+		expect(profile.wallets().values().length).toBe(1);
+		expect(walletSpy).toHaveBeenCalled();
 
-		act(() => {
-			fireEvent.click(getByTestId("CreateWallet__save-button"));
+		actAsync(() => {
+			fireEvent.click(getByTestId("CreateWallet__finish-button"));
 		});
 
-		await waitFor(() => expect(walletSpy).toHaveBeenCalled());
+		const walletId = profile.wallets().first().id();
 
-		expect(profile.wallets().values().length).toBe(1);
+		await waitFor(() =>
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/wallets/${walletId}`),
+		);
 
 		historySpy.mockRestore();
 	});

@@ -1,8 +1,9 @@
+import { Contracts } from "@payvo/sdk-profiles";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { StepIndicator } from "app/components/StepIndicator";
 import { TabPanel, Tabs } from "app/components/Tabs";
-import { useEnvironmentContext, useLedgerContext } from "app/contexts";
+import { LedgerData, useLedgerContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { NetworkStep } from "domains/wallet/components/NetworkStep";
 import React, { useCallback, useRef, useState } from "react";
@@ -16,25 +17,27 @@ import { LedgerImportStep } from "./LedgerImportStep";
 import { LedgerScanStep } from "./LedgerScanStep";
 
 const Paginator = ({
-	size,
 	activeIndex,
-	showRetry,
-	onBack,
-	onNext,
-	onRetry,
-	onSubmit,
+	isMultiple,
 	isNextDisabled,
 	isNextLoading,
+	onBack,
+	onFinish,
+	onNext,
+	onRetry,
+	showRetry,
+	size,
 }: {
-	size: number;
 	activeIndex: number;
-	showRetry?: boolean;
-	onRetry?: () => void;
-	onBack: () => void;
-	onNext: () => void;
-	onSubmit: () => void;
+	isMultiple: boolean;
 	isNextDisabled?: boolean;
 	isNextLoading?: boolean;
+	onBack: () => void;
+	onFinish: () => void;
+	onNext: () => void;
+	onRetry?: () => void;
+	showRetry?: boolean;
+	size: number;
 }) => {
 	const { t } = useTranslation();
 
@@ -68,8 +71,8 @@ const Paginator = ({
 				)}
 
 				{activeIndex === size && (
-					<Button disabled={isNextDisabled} data-testid="Paginator__submit-button" onClick={onSubmit}>
-						{t("COMMON.SAVE_FINISH")}
+					<Button disabled={isNextDisabled} data-testid="Paginator__finish-button" onClick={onFinish}>
+						{isMultiple ? t("COMMON.BACK_TO_DASHBOARD") : t("COMMON.GO_TO_WALLET")}
 					</Button>
 				)}
 			</div>
@@ -77,11 +80,15 @@ const Paginator = ({
 	);
 };
 
-export const LedgerTabs = ({ activeIndex }: { activeIndex?: number }) => {
+interface Properties {
+	activeIndex?: number;
+	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
+}
+
+export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Properties) => {
 	const activeProfile = useActiveProfile();
 
 	const history = useHistory();
-	const { persist } = useEnvironmentContext();
 	const { importLedgerWallets, isBusy } = useLedgerContext();
 
 	const { t } = useTranslation();
@@ -89,8 +96,10 @@ export const LedgerTabs = ({ activeIndex }: { activeIndex?: number }) => {
 	const { formState, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
 
-	const [importedWallets, setImportedWallets] = useState([]);
-	const [activeTab, setActiveTab] = useState<number>(activeIndex!);
+	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
+	const [activeTab, setActiveTab] = useState<number>(activeIndex);
+
+	const isMultiple = importedWallets.length > 1;
 
 	const [showRetry, setShowRetry] = useState(false);
 	const retryFunctionReference = useRef<() => void>();
@@ -103,19 +112,6 @@ export const LedgerTabs = ({ activeIndex }: { activeIndex?: number }) => {
 		},
 		[importLedgerWallets, activeProfile],
 	);
-
-	const saveNames = async ({ names }: { names: Record<string, string> }) => {
-		for (const [address, name] of Object.entries(names)) {
-			const wallet = activeProfile.wallets().findByAddress(address);
-			assertWallet(wallet);
-
-			if (name !== wallet.alias()) {
-				wallet.mutator().alias(name);
-			}
-		}
-		await persist();
-		history.push(`/profiles/${activeProfile.id()}/dashboard`);
-	};
 
 	const handleNext = useCallback(async () => {
 		if (activeTab === 3) {
@@ -138,6 +134,18 @@ export const LedgerTabs = ({ activeIndex }: { activeIndex?: number }) => {
 		setShowRetry(!!function_);
 	}, []);
 
+	const handleFinish = () => {
+		if (isMultiple) {
+			history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			return;
+		}
+
+		const importedWallet = activeProfile.wallets().findByAddress(importedWallets[0].address);
+		assertWallet(importedWallet);
+
+		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet?.id()}`);
+	};
+
 	return (
 		<Tabs activeId={activeTab}>
 			<StepIndicator size={4} activeIndex={activeTab} />
@@ -157,25 +165,26 @@ export const LedgerTabs = ({ activeIndex }: { activeIndex?: number }) => {
 					<LedgerScanStep profile={activeProfile} setRetryFn={handleRetry} />
 				</TabPanel>
 				<TabPanel tabId={4}>
-					<LedgerImportStep wallets={importedWallets} profile={activeProfile} />
+					<LedgerImportStep
+						wallets={importedWallets}
+						profile={activeProfile}
+						onClickEditWalletName={onClickEditWalletName}
+					/>
 				</TabPanel>
 			</div>
 
 			<Paginator
-				size={4}
 				activeIndex={activeTab}
+				isMultiple={isMultiple}
 				isNextDisabled={isBusy || !isValid}
 				isNextLoading={isSubmitting}
-				showRetry={showRetry}
-				onRetry={retryFunctionReference.current}
-				onNext={handleNext}
 				onBack={handleBack}
-				onSubmit={handleSubmit((data: any) => saveNames(data))}
+				onFinish={handleFinish}
+				onNext={handleNext}
+				onRetry={retryFunctionReference.current}
+				showRetry={showRetry}
+				size={4}
 			/>
 		</Tabs>
 	);
-};
-
-LedgerTabs.defaultProps = {
-	activeIndex: 1,
 };

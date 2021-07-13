@@ -71,13 +71,6 @@ export const WalletHeader = ({
 		await persist();
 	};
 
-	const handleUpdateName = async (name: string) => {
-		wallet.mutator().alias(name);
-		await persist();
-
-		setModal(undefined);
-	};
-
 	const handleDeleteWallet = async () => {
 		setModal(undefined);
 
@@ -446,13 +439,10 @@ export const WalletHeader = ({
 
 			{modal === "wallet-name" && (
 				<UpdateWalletName
-					defaultValue={wallet.alias() as string}
-					walletAddress={wallet.address()}
-					profile={profile}
-					isOpen={true}
-					onClose={() => setModal(undefined)}
+					onAfterSave={() => setModal(undefined)}
 					onCancel={() => setModal(undefined)}
-					onSave={handleUpdateName}
+					profile={profile}
+					wallet={wallet}
 				/>
 			)}
 

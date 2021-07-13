@@ -17,6 +17,7 @@ describe("LedgerTabs", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let transport: typeof Transport;
 	let publicKeyPaths = new Map();
+	let onClickEditWalletName: jest.Mock;
 
 	beforeAll(() => {
 		nock("https://dwallets.ark.io/api")
@@ -57,6 +58,8 @@ describe("LedgerTabs", () => {
 		wallet = profile.wallets().first();
 		await wallet.synchroniser().identity();
 
+		onClickEditWalletName = jest.fn();
+
 		transport = createTransportReplayer(RecordStore.fromString(""));
 		publicKeyPaths = new Map([
 			["44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -88,14 +91,13 @@ describe("LedgerTabs", () => {
 	const BaseComponent = ({ activeIndex }: { activeIndex: number }) => (
 		<Route path="/profiles/:profileId">
 			<LedgerProvider transport={transport}>
-				<LedgerTabs activeIndex={activeIndex} />
+				<LedgerTabs activeIndex={activeIndex} onClickEditWalletName={onClickEditWalletName} />
 			</LedgerProvider>
 		</Route>
 	);
 
 	const nextSelector = () => screen.getByTestId("Paginator__continue-button");
 	const backSelector = () => screen.getByTestId("Paginator__back-button");
-	const submitSelector = () => screen.getByTestId("Paginator__submit-button");
 
 	it("should render connection step", async () => {
 		const getPublicKeySpy = jest
@@ -257,7 +259,6 @@ describe("LedgerTabs", () => {
 			const { register } = form;
 
 			useEffect(() => {
-				register("names");
 				register("network");
 			}, [register]);
 
@@ -289,25 +290,7 @@ describe("LedgerTabs", () => {
 		// First address
 		fireEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[1]);
 
-		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__input")).toBeInTheDocument());
-
-		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), {
-			target: {
-				value: "Custom Name",
-			},
-		});
-
-		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled());
-
-		fireEvent.click(screen.getByTestId("UpdateWalletName__submit"));
-
-		await waitFor(() => expect(screen.queryByTestId("UpdateWalletName__input")).not.toBeInTheDocument());
-
-		act(() => {
-			fireEvent.click(submitSelector());
-		});
-
-		await waitFor(() => expect(profile.wallets().last().alias()).toBe("Custom Name"));
+		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 
 		getPublicKeySpy.mockReset();
 	});

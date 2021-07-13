@@ -1,35 +1,27 @@
-import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 import { Address } from "app/components/Address";
 import { AmountCrypto } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
-import { FormField, FormLabel } from "app/components/Form";
+import { Button } from "app/components/Button";
 import { Header } from "app/components/Header";
-import { InputDefault } from "app/components/Input";
+import { Icon } from "app/components/Icon";
 import { TransactionDetail, TransactionNetwork } from "domains/transaction/components/TransactionDetail";
-import { alias } from "domains/wallet/validations";
-import React, { useState } from "react";
-import { useFormContext } from "react-hook-form";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { assertWallet } from "utils/assertions";
 
 export const ThirdStep = ({
 	importedWallet,
-	profile,
+	onClickEditAlias,
 }: {
 	importedWallet: Contracts.IReadWriteWallet | undefined;
-	profile: Contracts.IProfile;
+	onClickEditAlias: () => void;
 }) => {
 	assertWallet(importedWallet);
 
-	const { getValues, register, watch } = useFormContext();
 	const { t } = useTranslation();
 
-	// getValues does not get the value of `defaultValues` on first render
-	const [defaultNetwork] = useState(() => watch("network"));
-	const network: Networks.Network = getValues("network") || defaultNetwork;
-
-	const validation = alias({ profile, t, walletAddress: importedWallet.address() });
+	const network = importedWallet.network();
 
 	return (
 		<section data-testid="ImportWallet__third-step">
@@ -51,15 +43,21 @@ export const ThirdStep = ({
 				<AmountCrypto value={importedWallet.balance()} ticker={network.ticker()} />
 			</TransactionDetail>
 
-			<TransactionDetail paddingPosition="top">
-				<FormField name="name">
-					<FormLabel label={t("WALLETS.WALLET_NAME")} />
-					<InputDefault
-						data-testid="ImportWallet__name-input"
-						defaultValue={importedWallet.alias()}
-						ref={register(validation)}
-					/>
-				</FormField>
+			<TransactionDetail
+				label={t("WALLETS.WALLET_NAME")}
+				paddingPosition="top"
+				extra={
+					<Button
+						data-testid="ImportWallet__edit-alias"
+						type="button"
+						variant="secondary"
+						onClick={onClickEditAlias}
+					>
+						<Icon name="Edit" />
+					</Button>
+				}
+			>
+				{importedWallet.alias()}
 			</TransactionDetail>
 		</section>
 	);

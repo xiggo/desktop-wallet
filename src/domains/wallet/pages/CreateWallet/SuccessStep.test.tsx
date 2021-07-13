@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { SuccessStep } from "./SuccessStep";
 
@@ -27,9 +28,11 @@ describe("SuccessStep", () => {
 			}),
 		);
 
+		const onClickEditAlias = jest.fn();
+
 		const { asFragment, getByTestId, getByText } = render(
 			<FormProvider {...form.current}>
-				<SuccessStep profile={profile} />
+				<SuccessStep onClickEditAlias={onClickEditAlias} />
 			</FormProvider>,
 		);
 
@@ -39,14 +42,8 @@ describe("SuccessStep", () => {
 		expect(getByText("ARK Devnet")).toBeTruthy();
 		expect(getByText(wallet.address())).toBeTruthy();
 
-		const walletNameInput = getByTestId("CreateWallet__wallet-name");
+		userEvent.click(getByTestId("CreateWallet__edit-alias"));
 
-		expect(walletNameInput).toHaveValue(wallet.alias());
-
-		await act(async () => {
-			fireEvent.change(walletNameInput, { target: { value: "Test" } });
-		});
-
-		expect(form.current.getValues()).toEqual({ name: "Test" });
+		expect(onClickEditAlias).toHaveBeenCalledTimes(1);
 	});
 });

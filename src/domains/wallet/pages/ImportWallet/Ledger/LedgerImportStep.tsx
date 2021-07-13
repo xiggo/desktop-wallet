@@ -4,68 +4,35 @@ import { Address } from "app/components/Address";
 import { AmountCrypto } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
-import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { Icon } from "app/components/Icon";
-import { InputDefault } from "app/components/Input";
 import { Tooltip } from "app/components/Tooltip";
 import { LedgerData } from "app/contexts/Ledger";
 import { TransactionDetail, TransactionNetwork } from "domains/transaction/components/TransactionDetail";
-import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
-import { alias } from "domains/wallet/validations";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { assertNetwork, assertWallet } from "utils/assertions";
 
 const MultipleImport = ({
-	wallets,
-	profile,
 	network,
+	onClickEditWalletName,
+	profile,
+	wallets,
 }: {
-	wallets: LedgerData[];
-	profile: Contracts.IProfile;
 	network: Networks.Network;
+	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
+	profile: Contracts.IProfile;
+	wallets: LedgerData[];
 }) => {
 	const { t } = useTranslation();
-
-	const { register, setValue, getValues } = useFormContext();
-
-	const [selectedAddress, setSelectedAddress] = useState<string | undefined>(undefined);
-
-	const handleUpdateName = (alias: string) => {
-		setValue(`names.${selectedAddress}`, alias, { shouldDirty: true, shouldValidate: true });
-		setSelectedAddress(undefined);
-	};
-
-	const closeUpdateNameModal = () => {
-		setSelectedAddress(undefined);
-	};
-
-	useEffect(() => {
-		for (const wallet of wallets) {
-			register({ name: `names.${wallet.address}`, type: "custom" });
-		}
-	}, [register, wallets, profile]);
-
-	const getAlias = (address: string): string => {
-		let alias = getValues(`names.${address}`);
-
-		if (!alias) {
-			const wallet = profile.wallets().findByAddress(address);
-			assertWallet(wallet);
-
-			alias = wallet.alias();
-		}
-
-		return alias;
-	};
 
 	return (
 		<div>
 			<ul>
 				{wallets.map((wallet) => {
-					const walletName = getAlias(wallet.address);
+					const importedWallet = profile.wallets().findByAddress(wallet.address);
+					assertWallet(importedWallet);
 
 					return (
 						<li key={wallet.address}>
@@ -79,7 +46,7 @@ const MultipleImport = ({
 											data-testid="LedgerImportStep__edit-alias"
 											type="button"
 											variant="secondary"
-											onClick={() => setSelectedAddress(wallet.address)}
+											onClick={() => onClickEditWalletName(importedWallet)}
 										>
 											<Icon name="Edit" />
 										</Button>
@@ -89,9 +56,13 @@ const MultipleImport = ({
 								<div className="flex items-center space-x-3">
 									<Avatar size="lg" address={wallet.address} />
 									<div>
-										<Address walletName={walletName} address={wallet.address} maxNameChars={8} />
+										<Address
+											walletName={importedWallet.alias()}
+											address={wallet.address}
+											maxNameChars={8}
+										/>
 										<p className="mt-1 text-sm font-medium text-theme-secondary-500">
-											<AmountCrypto value={wallet.balance!} ticker={network.ticker()} />
+											<AmountCrypto value={wallet.balance ?? 0} ticker={network.ticker()} />
 										</p>
 									</div>
 								</div>
@@ -100,41 +71,27 @@ const MultipleImport = ({
 					);
 				})}
 			</ul>
-
-			{!!selectedAddress && (
-				<UpdateWalletName
-					unsavedAliases={wallets.map(({ address }) => getAlias(address))}
-					defaultValue={getAlias(selectedAddress)}
-					walletAddress={selectedAddress}
-					profile={profile}
-					isOpen={!!selectedAddress}
-					onClose={closeUpdateNameModal}
-					onCancel={closeUpdateNameModal}
-					onSave={handleUpdateName}
-				/>
-			)}
 		</div>
 	);
 };
 
 const SingleImport = ({
-	wallets,
-	profile,
 	network,
+	onClickEditWalletName,
+	profile,
+	wallets,
 }: {
-	wallets: LedgerData[];
-	profile: Contracts.IProfile;
 	network: Networks.Network;
+	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
+	profile: Contracts.IProfile;
+	wallets: LedgerData[];
 }) => {
 	const { t } = useTranslation();
-	const { register, watch, trigger } = useFormContext();
 
 	const ledgerWallet = wallets[0];
 
 	const wallet = profile.wallets().findByAddress(ledgerWallet.address);
 	assertWallet(wallet);
-
-	const aliasValidation = alias({ profile, t, walletAddress: ledgerWallet.address });
 
 	return (
 		<>
@@ -148,27 +105,39 @@ const SingleImport = ({
 			</TransactionDetail>
 
 			<TransactionDetail label={t("COMMON.BALANCE")} borderPosition="bottom" paddingPosition="bottom">
-				<AmountCrypto value={ledgerWallet.balance!} ticker={network.ticker()} />
+				<AmountCrypto value={ledgerWallet.balance ?? 0} ticker={network.ticker()} />
 			</TransactionDetail>
 
-			<FormField name={`names.${ledgerWallet.address}`}>
-				<FormLabel label={t("WALLETS.WALLET_NAME")} />
-				<InputDefault
-					onChange={() => {
-						for (const address of Object.keys(watch("names"))) {
-							trigger(`names.${address}`);
-						}
-					}}
-					ref={register(aliasValidation)}
-					data-testid="ImportWallet__name-input"
-					defaultValue={wallet.alias()}
-				/>
-			</FormField>
+			<TransactionDetail
+				label={t("WALLETS.WALLET_NAME")}
+				padding={false}
+				border={false}
+				extra={
+					<Button
+						data-testid="LedgerImportStep__edit-alias"
+						type="button"
+						variant="secondary"
+						onClick={() => onClickEditWalletName(wallet)}
+					>
+						<Icon name="Edit" />
+					</Button>
+				}
+			>
+				{wallet.alias()}
+			</TransactionDetail>
 		</>
 	);
 };
 
-export const LedgerImportStep = ({ wallets, profile }: { wallets: LedgerData[]; profile: Contracts.IProfile }) => {
+export const LedgerImportStep = ({
+	onClickEditWalletName,
+	profile,
+	wallets,
+}: {
+	wallets: LedgerData[];
+	profile: Contracts.IProfile;
+	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
+}) => {
 	const { t } = useTranslation();
 
 	const { watch } = useFormContext();
@@ -186,9 +155,19 @@ export const LedgerImportStep = ({ wallets, profile }: { wallets: LedgerData[]; 
 			<TransactionNetwork network={network} borderPosition="bottom" paddingPosition="bottom" />
 
 			{wallets.length > 1 ? (
-				<MultipleImport wallets={wallets} profile={profile} network={network} />
+				<MultipleImport
+					wallets={wallets}
+					profile={profile}
+					network={network}
+					onClickEditWalletName={onClickEditWalletName}
+				/>
 			) : (
-				<SingleImport wallets={wallets} profile={profile} network={network} />
+				<SingleImport
+					wallets={wallets}
+					profile={profile}
+					network={network}
+					onClickEditWalletName={onClickEditWalletName}
+				/>
 			)}
 		</section>
 	);

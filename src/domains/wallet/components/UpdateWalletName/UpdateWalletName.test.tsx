@@ -1,168 +1,114 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import { act, fireEvent, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { UpdateWalletName } from "./UpdateWalletName";
 
-let profile: Contracts.IProfile;
-let wallet: Contracts.IReadWriteWallet;
-
 describe("UpdateWalletName", () => {
+	let profile: Contracts.IProfile;
+	let wallet: Contracts.IReadWriteWallet;
+
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 	});
 
-	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(
-			<UpdateWalletName
-				defaultValue={wallet.alias() as string}
-				walletAddress={wallet.address()}
-				profile={profile}
-				isOpen={false}
-				onSave={() => void 0}
-			/>,
+	it("should render", () => {
+		const { asFragment } = render(
+			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
 		);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(commonTranslations.NAME);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render a modal", () => {
-		const { asFragment, getByTestId } = render(
-			<UpdateWalletName
-				defaultValue={wallet.alias() as string}
-				walletAddress={wallet.address()}
-				profile={profile}
-				isOpen={true}
-				onSave={() => void 0}
-			/>,
-		);
+	it("should rename wallet", async () => {
+		const aliasSpy = jest.spyOn(wallet.mutator(), "alias");
+		const onAfterSave = jest.fn();
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.DESCRIPTION);
-		expect(getByTestId("modal__inner")).toHaveTextContent(commonTranslations.NAME);
-		expect(asFragment()).toMatchSnapshot();
-	});
+		render(<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={onAfterSave} onCancel={jest.fn()} />);
 
-	it("should rename wallet", () => {
-		const onSave = jest.fn();
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(commonTranslations.NAME);
 
-		const { getByTestId } = render(
-			<UpdateWalletName
-				defaultValue={wallet.alias() as string}
-				walletAddress={wallet.address()}
-				profile={profile}
-				isOpen={true}
-				onSave={onSave}
-			/>,
-		);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.DESCRIPTION);
-		expect(getByTestId("modal__inner")).toHaveTextContent(commonTranslations.NAME);
-
-		const input = getByTestId("UpdateWalletName__input");
+		const input = screen.getByTestId("UpdateWalletName__input");
 		const name = "Sample label";
 
-		act(() => {
-			fireEvent.change(input, { target: { value: name } });
+		await act(async () => {
+			fireEvent.input(input, { target: { value: name } });
 		});
 
 		expect(input).toHaveValue(name);
 
-		const submitButton = getByTestId("UpdateWalletName__submit");
+		expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
 
-		act(() => {
-			fireEvent.click(submitButton);
-		});
+		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
-		waitFor(() => {
-			expect(onSave).toHaveBeenCalledWith({ name }, expect.anything());
+		await waitFor(() => expect(onAfterSave).toHaveBeenCalled());
 
-			wallet.settings().set(Contracts.WalletSetting.Alias, name);
-
-			expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toEqual(name);
-		});
+		expect(aliasSpy).toHaveBeenCalledWith(name);
+		expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toEqual(name);
 	});
 
 	it("should show an error message for duplicate name", async () => {
-		const onSave = jest.fn();
-
-		const { asFragment, getByTestId } = render(
-			<UpdateWalletName
-				defaultValue={wallet.alias() as string}
-				walletAddress={wallet.address()}
-				profile={profile}
-				isOpen={true}
-				onSave={onSave}
-			/>,
+		const { asFragment } = render(
+			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
 		);
 
 		const nameVariations = ["ARK Wallet 2", "ark wallet 2", " ARK Wallet 2", "ARK Wallet 2 "];
 
 		for (const name of nameVariations) {
 			await act(async () => {
-				fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: name } });
+				fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: name } });
 			});
 
-			expect(getByTestId("Input__error")).toBeVisible();
-			expect(getByTestId("UpdateWalletName__submit")).toBeDisabled();
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+			expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 
 			expect(asFragment()).toMatchSnapshot();
 		}
 	});
 
 	it("should show error message when name consists only of whitespace", async () => {
-		const onSave = jest.fn();
-
-		const { asFragment, findByTestId, getByTestId } = render(
-			<UpdateWalletName
-				defaultValue={wallet.alias() as string}
-				walletAddress={wallet.address()}
-				profile={profile}
-				isOpen={true}
-				onSave={onSave}
-			/>,
+		const { asFragment } = render(
+			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
 		);
 
 		await act(async () => {
-			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "      " } });
+			fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: "      " } });
 		});
 
 		// wait for formState.isValid to be updated
-		await findByTestId("UpdateWalletName__submit");
+		await screen.findByTestId("UpdateWalletName__submit");
 
-		expect(getByTestId("UpdateWalletName__submit")).toBeDisabled();
+		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show error message when name exceeds 42 characters", async () => {
-		const onSave = jest.fn();
-
-		const { asFragment, findByTestId, getByTestId } = render(
-			<UpdateWalletName
-				defaultValue={wallet.alias() as string}
-				walletAddress={wallet.address()}
-				profile={profile}
-				isOpen={true}
-				onSave={onSave}
-			/>,
+		const { asFragment } = render(
+			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
 		);
 
 		await act(async () => {
-			fireEvent.input(getByTestId("UpdateWalletName__input"), {
+			fireEvent.input(screen.getByTestId("UpdateWalletName__input"), {
 				target: { value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fugit distinctio" },
 			});
 		});
 
 		// wait for formState.isValid to be updated
-		await findByTestId("UpdateWalletName__submit");
+		await screen.findByTestId("UpdateWalletName__submit");
 
-		expect(getByTestId("UpdateWalletName__submit")).toBeDisabled();
+		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

@@ -10,6 +10,7 @@ import { useActiveProfile } from "app/hooks";
 import { useWalletConfig } from "domains/dashboard/hooks";
 import { EncryptPasswordStep } from "domains/wallet/components/EncryptPasswordStep";
 import { NetworkStep } from "domains/wallet/components/NetworkStep";
+import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -27,7 +28,6 @@ export const CreateWallet = () => {
 	const { t } = useTranslation();
 
 	const [activeTab, setActiveTab] = useState(1);
-	const [encryptionPassword, setEncryptionPassword] = useState<string>();
 	const activeProfile = useActiveProfile();
 
 	const { selectedNetworkIds, setValue: setConfiguration } = useWalletConfig({ profile: activeProfile });
@@ -38,6 +38,7 @@ export const CreateWallet = () => {
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(false);
 	const [generationError, setGenerationError] = useState("");
+	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -45,41 +46,11 @@ export const CreateWallet = () => {
 		register("mnemonic");
 	}, [register]);
 
-	const submitForm = async ({ mnemonic, name, network, wallet }: any) => {
-		let finalWallet = wallet;
+	const handleFinish = () => {
+		const wallet = getValues("wallet");
+		assertWallet(wallet);
 
-		assertNetwork(network);
-		assertString(mnemonic);
-		assertString(name);
-
-		if (encryptionPassword) {
-			try {
-				finalWallet = await activeProfile.walletFactory().fromMnemonicWithBIP39({
-					coin: network.coin(),
-					mnemonic,
-					network: network.id(),
-					password: encryptionPassword,
-				});
-			} catch {
-				setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
-			}
-		}
-
-		assertWallet(finalWallet);
-
-		activeProfile.wallets().push(finalWallet);
-
-		if (name.trim() !== finalWallet.alias()) {
-			finalWallet.mutator().alias(name.trim());
-		}
-
-		setConfiguration("selectedNetworkIds", uniq([...selectedNetworkIds, network.id()]));
-
-		await persist();
-
-		setValue("wallet", undefined);
-
-		history.push(`/profiles/${activeProfile.id()}/wallets/${finalWallet.id()}`);
+		history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 	};
 
 	const generateWallet = async () => {
@@ -110,10 +81,6 @@ export const CreateWallet = () => {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		if (activeTab === 4 || activeTab === 5) {
-			setEncryptionPassword(undefined);
-		}
-
 		const network = getValues("network");
 		assertNetwork(network);
 
@@ -124,7 +91,7 @@ export const CreateWallet = () => {
 		}
 	};
 
-	const handleNext = async () => {
+	const handleNext = async (params: { encryptionPassword?: string } = {}) => {
 		const newIndex = activeTab + 1;
 
 		if (newIndex === 2) {
@@ -139,27 +106,90 @@ export const CreateWallet = () => {
 			} finally {
 				setIsGeneratingWallet(false);
 			}
-		} else {
-			const network = getValues("network");
-			assertNetwork(network);
 
-			if (newIndex === 4 && !network.importMethods()?.bip39?.canBeEncrypted) {
-				setActiveTab(newIndex + 1);
-			} else {
-				setActiveTab(newIndex);
+			return;
+		}
+
+		if (newIndex === 5) {
+			const { mnemonic, network } = getValues(["mnemonic", "network"]);
+
+			assertNetwork(network);
+			assertString(mnemonic);
+
+			let wallet = getValues("wallet");
+
+			if (params.encryptionPassword) {
+				try {
+					wallet = await activeProfile.walletFactory().fromMnemonicWithBIP39({
+						coin: network.coin(),
+						mnemonic,
+						network: network.id(),
+						password: params.encryptionPassword,
+					});
+				} catch {
+					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
+				}
 			}
+
+			assertWallet(wallet);
+
+			setValue("wallet", wallet);
+
+			activeProfile.wallets().push(wallet);
+
+			setConfiguration("selectedNetworkIds", uniq([...selectedNetworkIds, network.id()]));
+
+			await persist();
+
+			setActiveTab(newIndex);
+
+			return;
+		}
+
+		const network = getValues("network");
+		assertNetwork(network);
+
+		if (newIndex === 4 && !network.importMethods()?.bip39?.canBeEncrypted) {
+			setActiveTab(newIndex + 1);
+		} else {
+			setActiveTab(newIndex);
 		}
 	};
 
 	const handlePasswordSubmit = () => {
-		setEncryptionPassword(form.getValues("encryptionPassword"));
-		handleNext();
+		const encryptionPassword = form.getValues("encryptionPassword");
+		assertString(encryptionPassword);
+
+		handleNext({ encryptionPassword });
+	};
+
+	const renderUpdateWalletNameModal = () => {
+		if (!isEditAliasModalOpen) {
+			return undefined;
+		}
+
+		const wallet = getValues("wallet");
+
+		if (!wallet) {
+			return undefined;
+		}
+
+		assertWallet(wallet);
+
+		return (
+			<UpdateWalletName
+				wallet={wallet}
+				profile={activeProfile}
+				onCancel={() => setIsEditAliasModalOpen(false)}
+				onAfterSave={() => setIsEditAliasModalOpen(false)}
+			/>
+		);
 	};
 
 	return (
 		<Page profile={activeProfile}>
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-xl" context={form} onSubmit={submitForm}>
+				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleFinish}>
 					<Tabs activeId={activeTab}>
 						<StepIndicator size={5} activeIndex={activeTab} />
 
@@ -187,13 +217,13 @@ export const CreateWallet = () => {
 							</TabPanel>
 
 							<TabPanel tabId={5}>
-								<SuccessStep profile={activeProfile} />
+								<SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />
 							</TabPanel>
 
 							<div className="flex justify-between mt-8">
 								<div>
 									{activeTab === 4 && (
-										<Button data-testid="CreateWallet__skip-button" onClick={handleNext}>
+										<Button data-testid="CreateWallet__skip-button" onClick={() => handleNext()}>
 											{t("COMMON.SKIP")}
 										</Button>
 									)}
@@ -216,7 +246,7 @@ export const CreateWallet = () => {
 											data-testid="CreateWallet__continue-button"
 											disabled={!isValid}
 											isLoading={isGeneratingWallet}
-											onClick={handleNext}
+											onClick={() => handleNext()}
 										>
 											{t("COMMON.CONTINUE")}
 										</Button>
@@ -239,12 +269,8 @@ export const CreateWallet = () => {
 									)}
 
 									{activeTab === 5 && (
-										<Button
-											disabled={!isValid || isSubmitting}
-											type="submit"
-											data-testid="CreateWallet__save-button"
-										>
-											{t("COMMON.SAVE_FINISH")}
+										<Button type="submit" data-testid="CreateWallet__finish-button">
+											{t("COMMON.GO_TO_WALLET")}
 										</Button>
 									)}
 								</div>
@@ -252,6 +278,8 @@ export const CreateWallet = () => {
 						</div>
 					</Tabs>
 				</Form>
+
+				{renderUpdateWalletNameModal()}
 			</Section>
 		</Page>
 	);
