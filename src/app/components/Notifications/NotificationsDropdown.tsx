@@ -13,14 +13,14 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 	const [isWalletUpdateOpen, setIsWalletUpdateOpen] = useState<boolean>();
 	const [walletUpdateVersion, setWalletUpdateVersion] = useState<string>();
 
-	const hasUnread = profile.notifications().unread().length > 0;
+	const hasUnread = profile.notifications().hasUnread();
 
 	const handleNotificationAction = (id: string) => {
 		const notification = profile.notifications().get(id);
 		const action = `${notification.type}.${notification.action}`;
 
 		switch (action) {
-			case "wallet.update":
+			case "release.update":
 				setWalletUpdateVersion(notification?.meta?.version);
 				setIsWalletUpdateOpen(true);
 				break;

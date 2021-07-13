@@ -283,6 +283,16 @@ export const requestMocks = {
 			"coins/ark/devnet/transactions",
 		),
 		mockRequest(
+			"https://dwallets.ark.io/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"coins/ark/devnet/notification-transactions",
+		),
+
+		mockRequest(
+			"https://dwallets.ark.io/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"coins/ark/devnet/notification-transactions",
+		),
+
+		mockRequest(
 			"https://dwallets.ark.io/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/transactions",
 		),

@@ -1,35 +1,39 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { httpClient } from "app/services";
+import nock from "nock";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
 import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { NotificationTransactionItem } from "./NotificationTransactionItem";
+const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
+const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
 
 let profile: Contracts.IProfile;
-let notification: any;
+let notificationTransaction: DTO.ExtendedConfirmedTransactionData;
 
 describe("Notifications", () => {
-	beforeEach(() => {
+	beforeEach(async () => {
 		httpClient.clearCache();
+
+		nock("https://dwallets.ark.io").get("/api/transactions").query(true).reply(200, {
+			data: NotificationTransactionsFixtures.data,
+			meta: TransactionsFixture.meta,
+		});
 
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		notification = profile
-			.notifications()
-			.values()
-			.find((n) => n.type === "transaction");
+		await env.profiles().restore(profile);
+		await profile.sync();
+		await profile.notifications().transactions().sync();
+		notificationTransaction = profile.notifications().transactions().transaction(TransactionFixture.id());
 	});
 
 	it("should render notification item", async () => {
 		const { container, getAllByTestId } = render(
 			<table>
 				<tbody>
-					<NotificationTransactionItem
-						transactionId={notification.meta.transactionId}
-						allTransactions={[TransactionFixture]}
-						profile={profile}
-					/>
+					<NotificationTransactionItem transaction={notificationTransaction!} profile={profile} />
 				</tbody>
 			</table>,
 		);
@@ -45,8 +49,7 @@ describe("Notifications", () => {
 			<table>
 				<tbody>
 					<NotificationTransactionItem
-						transactionId={notification.meta.transactionId}
-						allTransactions={[TransactionFixture]}
+						transaction={notificationTransaction!}
 						profile={profile}
 						onVisibilityChange={onVisibilityChange}
 					/>
@@ -64,8 +67,7 @@ describe("Notifications", () => {
 			<table>
 				<tbody>
 					<NotificationTransactionItem
-						transactionId={notification.meta.transactionId}
-						allTransactions={[TransactionFixture]}
+						transaction={notificationTransaction!}
 						profile={profile}
 						onTransactionClick={onTransactionClick}
 					/>

@@ -19,7 +19,7 @@ exports[`Notifications should render notification item 1`] = `
               data-testid="TransactionRowMode"
             >
               <div
-                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ bcEVDZ"
@@ -27,7 +27,7 @@ exports[`Notifications should render notification item 1`] = `
                   width="16"
                 >
                   <svg>
-                    sent.svg
+                    received.svg
                   </svg>
                 </div>
               </div>
@@ -67,13 +67,13 @@ exports[`Notifications should render notification item 1`] = `
             class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
           >
             <div
-              class="Label-sc-4akkzw-0 inMXqe whitespace-nowrap"
-              color="danger"
+              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+              color="success"
             >
               <span
                 data-testid="AmountCrypto"
               >
-                - 121 ARK
+                + 20 DARK
               </span>
             </div>
           </div>

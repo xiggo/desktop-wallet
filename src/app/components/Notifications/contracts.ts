@@ -19,8 +19,7 @@ export interface NotificationItemProperties {
 }
 
 export interface NotificationTransactionItemProperties {
-	allTransactions: DTO.ExtendedConfirmedTransactionData[];
-	transactionId: string;
+	transaction: DTO.ExtendedConfirmedTransactionData;
 	profile: Contracts.IProfile;
 	containmentRef?: any;
 	onVisibilityChange?: (isVisible: boolean) => void;

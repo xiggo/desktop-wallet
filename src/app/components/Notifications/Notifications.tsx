@@ -1,51 +1,27 @@
-import { DTO } from "@payvo/sdk-profiles";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Image } from "app/components/Image";
 import { Table } from "app/components/Table";
 import { useEnvironmentContext } from "app/contexts";
-import { useNotifications } from "app/hooks";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { NotificationTransactionsTable } from "domains/transaction/components/TransactionTable/NotificationTransactionsTable";
+import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import {
-	markAsRead,
 	NotificationItem,
 	NotificationItemProperties,
 	NotificationsProperties,
 	NotificationsWrapper,
-	NotificationTransactionItem,
+	useNotifications,
 } from ".";
 
 export const Notifications = ({ profile, onNotificationAction, onTransactionClick }: NotificationsProperties) => {
 	const { t } = useTranslation();
-	const [allTransactions, setAllTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
-	const environment = useEnvironmentContext();
-	const {
-		notifications: { sortTransactionNotificationsDesc, fetchRecentProfileTransactions },
-	} = useNotifications();
+	const { persist } = useEnvironmentContext();
 
-	const byType = useCallback(
-		(types: string[]) =>
-			profile
-				.notifications()
-				.values()
-				.filter((n) => types.includes(n.type)),
-		[profile],
-	);
-
+	const { releases, transactions, count, markAsRead, markAllTransactionsAsRead } = useNotifications({ profile });
 	const wrapperReference = useRef();
-	const notifications = byType(["plugin", "wallet"]);
-	const transactions = sortTransactionNotificationsDesc(byType(["transaction"]));
 
-	useEffect(() => {
-		void (async () => {
-			const allRecentTransactions = await fetchRecentProfileTransactions(profile, 12);
-
-			setAllTransactions(allRecentTransactions);
-		})();
-	}, [fetchRecentProfileTransactions, profile]);
-
-	if (transactions.length === 0 && notifications.length === 0) {
+	if (count === 0) {
 		return (
 			<NotificationsWrapper>
 				<EmptyBlock>
@@ -62,19 +38,20 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 			ref={wrapperReference as React.MutableRefObject<any>}
 			data-testid="NotificationsWrapper"
 		>
-			{notifications.length > 0 && (
+			{releases.length > 0 && (
 				<div className="space-y-2">
 					<div className="text-base font-semibold text-theme-secondary-500">
 						{t("COMMON.NOTIFICATIONS.PLUGINS_TITLE")}
 					</div>
-					<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={notifications}>
+					<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={releases}>
 						{(notification: NotificationItemProperties) => (
 							<NotificationItem
 								{...notification}
 								onAction={onNotificationAction}
-								onVisibilityChange={(isVisible) =>
-									markAsRead(isVisible, notification.id, profile, environment)
-								}
+								onVisibilityChange={(isVisible) => {
+									markAsRead(isVisible, notification.id);
+									persist();
+								}}
 								containmentRef={wrapperReference}
 							/>
 						)}
@@ -82,27 +59,16 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 				</div>
 			)}
 
-			{transactions.length > 0 && (
-				<div className="space-y-2">
-					<div className="text-base font-semibold text-theme-secondary-500">
-						{t("COMMON.NOTIFICATIONS.TRANSACTIONS_TITLE")}
-					</div>
-					<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={transactions}>
-						{(notification: NotificationItemProperties) => (
-							<NotificationTransactionItem
-								transactionId={notification?.meta?.transactionId}
-								allTransactions={allTransactions}
-								profile={profile}
-								containmentRef={wrapperReference}
-								onVisibilityChange={(isVisible) =>
-									markAsRead(isVisible, notification.id, profile, environment)
-								}
-								onTransactionClick={onTransactionClick}
-							/>
-						)}
-					</Table>
-				</div>
-			)}
+			<NotificationTransactionsTable
+				profile={profile}
+				isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
+				transactions={transactions}
+				onClick={onTransactionClick}
+				onVisibilityChange={(isVisible) => {
+					markAllTransactionsAsRead(isVisible);
+					persist();
+				}}
+			/>
 		</NotificationsWrapper>
 	);
 };

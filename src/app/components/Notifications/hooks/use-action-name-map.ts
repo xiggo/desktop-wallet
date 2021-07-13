@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { Action } from "./models";
+import { Action } from "../contracts";
 
 export const useActionNameMap = () => {
 	const { t } = useTranslation();

@@ -121,13 +121,12 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                             <span
                               class="font-bold text-md text-theme-secondary-600"
                             >
-                              ARK Avatars
+                              Wallet update
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
                             >
                                
-                              - update v4
                             </span>
                           </div>
                         </td>
@@ -144,177 +143,254 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                   </table>
                 </div>
               </div>
-              <div
-                class="space-y-2"
-              >
+              <div>
                 <div
-                  class="text-base font-semibold text-theme-secondary-500"
+                  class="space-y-2"
                 >
-                  Transactions
-                </div>
-                <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
-                  role="table"
-                >
-                  <table
-                    cellpadding="0"
-                    class="table-auto"
+                  <div
+                    class="text-base font-semibold text-theme-secondary-500"
                   >
-                    <tbody
-                      role="rowgroup"
+                    Transactions
+                  </div>
+                  <div
+                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    role="table"
+                  >
+                    <table
+                      cellpadding="0"
+                      class="table-auto"
                     >
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
+                      <tbody
+                        role="rowgroup"
                       >
-                        <td
-                          class="w-3/5"
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 1 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
-                          >
-                            <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
-                            >
-                              <span
-                                data-testid="AmountCrypto"
-                              >
-                                + 20 DARK
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
-                      >
-                        <td
-                          class="w-3/5"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 20 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
+                        >
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
-                              <span
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
-                                + 0.0000001 DARK
-                              </span>
+                                <div
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                >
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="w-20 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                >
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td>
+                            <div
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                            >
+                              <div
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
+                              >
+                                <span
+                                  data-testid="AmountCrypto"
+                                >
+                                  + 0.0000001 DARK
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -543,13 +619,12 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                             <span
                               class="font-bold text-md text-theme-secondary-600"
                             >
-                              ARK Avatars
+                              Wallet update
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
                             >
                                
-                              - update v4
                             </span>
                           </div>
                         </td>
@@ -566,177 +641,254 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                   </table>
                 </div>
               </div>
-              <div
-                class="space-y-2"
-              >
+              <div>
                 <div
-                  class="text-base font-semibold text-theme-secondary-500"
+                  class="space-y-2"
                 >
-                  Transactions
-                </div>
-                <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
-                  role="table"
-                >
-                  <table
-                    cellpadding="0"
-                    class="table-auto"
+                  <div
+                    class="text-base font-semibold text-theme-secondary-500"
                   >
-                    <tbody
-                      role="rowgroup"
+                    Transactions
+                  </div>
+                  <div
+                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    role="table"
+                  >
+                    <table
+                      cellpadding="0"
+                      class="table-auto"
                     >
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
+                      <tbody
+                        role="rowgroup"
                       >
-                        <td
-                          class="w-3/5"
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 1 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
-                          >
-                            <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
-                            >
-                              <span
-                                data-testid="AmountCrypto"
-                              >
-                                + 20 DARK
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
-                      >
-                        <td
-                          class="w-3/5"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 20 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
+                        >
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
-                              <span
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
-                                + 0.0000001 DARK
-                              </span>
+                                <div
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                >
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="w-20 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                >
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td>
+                            <div
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                            >
+                              <div
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
+                              >
+                                <span
+                                  data-testid="AmountCrypto"
+                                >
+                                  + 0.0000001 DARK
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -869,13 +1021,12 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                             <span
                               class="font-bold text-md text-theme-secondary-600"
                             >
-                              ARK Avatars
+                              Wallet update
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
                             >
                                
-                              - update v4
                             </span>
                           </div>
                         </td>
@@ -892,177 +1043,254 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   </table>
                 </div>
               </div>
-              <div
-                class="space-y-2"
-              >
+              <div>
                 <div
-                  class="text-base font-semibold text-theme-secondary-500"
+                  class="space-y-2"
                 >
-                  Transactions
-                </div>
-                <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
-                  role="table"
-                >
-                  <table
-                    cellpadding="0"
-                    class="table-auto"
+                  <div
+                    class="text-base font-semibold text-theme-secondary-500"
                   >
-                    <tbody
-                      role="rowgroup"
+                    Transactions
+                  </div>
+                  <div
+                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    role="table"
+                  >
+                    <table
+                      cellpadding="0"
+                      class="table-auto"
                     >
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
+                      <tbody
+                        role="rowgroup"
                       >
-                        <td
-                          class="w-3/5"
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 1 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
-                          >
-                            <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
-                            >
-                              <span
-                                data-testid="AmountCrypto"
-                              >
-                                + 20 DARK
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
-                      >
-                        <td
-                          class="w-3/5"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 20 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
+                        >
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
-                              <span
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
-                                + 0.0000001 DARK
-                              </span>
+                                <div
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                >
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="w-20 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                >
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td>
+                            <div
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                            >
+                              <div
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
+                              >
+                                <span
+                                  data-testid="AmountCrypto"
+                                >
+                                  + 0.0000001 DARK
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1149,7 +1377,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                         class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
                       </span>
                     </div>
                   </div>
@@ -1165,9 +1393,9 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                       class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
-                        alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
-                        title="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
+                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                       />
                     </div>
                   </div>
@@ -1195,7 +1423,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                         class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
                         data-testid="Address__address"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
                       </span>
                     </div>
                   </div>
@@ -1208,9 +1436,9 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                     />
                   </div>
                 </div>
@@ -1237,7 +1465,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                       <span
                         data-testid="AmountCrypto"
                       >
-                        + 20 DARK
+                        + 1 DARK
                       </span>
                     </div>
                   </div>
@@ -1274,8 +1502,44 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     <span
                       data-testid="AmountCrypto"
                     >
-                      0.03499657 DARK
+                      0.28629325 DARK
                     </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+                data-testid="TransactionMemo"
+              >
+                <div
+                  class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                >
+                  <div
+                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  >
+                    Memo
+                  </div>
+                  <div
+                    class="font-semibold"
+                  >
+                    <p
+                      class="break-all whitespace-pre-line"
+                    >
+                      test
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
+                >
+                  <div
+                    class="sc-bdfBwQ iLcgWo"
+                    height="22"
+                    width="18"
+                  >
+                    <svg>
+                      memo.svg
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -1294,7 +1558,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   <div
                     class="font-semibold"
                   >
-                    26.04.2020 3:56 PM
+                    02.10.2020 12:48 PM
                   </div>
                 </div>
               </div>
@@ -1360,7 +1624,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                           data-testid="Link"
                           href="#"
                           rel="noopener noreferrer"
-                          to="https://dexplorer.ark.io/transaction/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b"
+                          to="https://dexplorer.ark.io/transaction/127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd"
                         >
                           <span
                             class="Link__Content-ec014t-1 emZiaA"
@@ -1368,7 +1632,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                             <span
                               class="inline-flex overflow-hidden"
                             >
-                              ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
+                              127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd
                             </span>
                           </span>
                           <span
@@ -1543,13 +1807,12 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                             <span
                               class="font-bold text-md text-theme-secondary-600"
                             >
-                              ARK Avatars
+                              Wallet update
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
                             >
                                
-                              - update v4
                             </span>
                           </div>
                         </td>
@@ -1566,177 +1829,254 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                   </table>
                 </div>
               </div>
-              <div
-                class="space-y-2"
-              >
+              <div>
                 <div
-                  class="text-base font-semibold text-theme-secondary-500"
+                  class="space-y-2"
                 >
-                  Transactions
-                </div>
-                <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
-                  role="table"
-                >
-                  <table
-                    cellpadding="0"
-                    class="table-auto"
+                  <div
+                    class="text-base font-semibold text-theme-secondary-500"
                   >
-                    <tbody
-                      role="rowgroup"
+                    Transactions
+                  </div>
+                  <div
+                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    role="table"
+                  >
+                    <table
+                      cellpadding="0"
+                      class="table-auto"
                     >
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
+                      <tbody
+                        role="rowgroup"
                       >
-                        <td
-                          class="w-3/5"
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 1 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
-                          >
-                            <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
-                            >
-                              <span
-                                data-testid="AmountCrypto"
-                              >
-                                + 20 DARK
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
-                      >
-                        <td
-                          class="w-3/5"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 20 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
+                        >
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
-                              <span
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
-                                + 0.0000001 DARK
-                              </span>
+                                <div
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                >
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="w-20 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                >
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td>
+                            <div
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                            >
+                              <div
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
+                              >
+                                <span
+                                  data-testid="AmountCrypto"
+                                >
+                                  + 0.0000001 DARK
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1869,13 +2209,12 @@ exports[`Notifications should open and close wallet update notification modal 1`
                             <span
                               class="font-bold text-md text-theme-secondary-600"
                             >
-                              ARK Avatars
+                              Wallet update
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
                             >
                                
-                              - update v4
                             </span>
                           </div>
                         </td>
@@ -1892,177 +2231,254 @@ exports[`Notifications should open and close wallet update notification modal 1`
                   </table>
                 </div>
               </div>
-              <div
-                class="space-y-2"
-              >
+              <div>
                 <div
-                  class="text-base font-semibold text-theme-secondary-500"
+                  class="space-y-2"
                 >
-                  Transactions
-                </div>
-                <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
-                  role="table"
-                >
-                  <table
-                    cellpadding="0"
-                    class="table-auto"
+                  <div
+                    class="text-base font-semibold text-theme-secondary-500"
                   >
-                    <tbody
-                      role="rowgroup"
+                    Transactions
+                  </div>
+                  <div
+                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    role="table"
+                  >
+                    <table
+                      cellpadding="0"
+                      class="table-auto"
                     >
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
+                      <tbody
+                        role="rowgroup"
                       >
-                        <td
-                          class="w-3/5"
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 1 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
-                          >
-                            <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
-                            >
-                              <span
-                                data-testid="AmountCrypto"
-                              >
-                                + 20 DARK
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
-                      >
-                        <td
-                          class="w-3/5"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 20 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
+                        >
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
-                              <span
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
-                                + 0.0000001 DARK
-                              </span>
+                                <div
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                >
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="w-20 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                >
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td>
+                            <div
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                            >
+                              <div
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
+                              >
+                                <span
+                                  data-testid="AmountCrypto"
+                                >
+                                  + 0.0000001 DARK
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2291,13 +2707,12 @@ exports[`Notifications should open and close wallet update notification modal 2`
                             <span
                               class="font-bold text-md text-theme-secondary-600"
                             >
-                              ARK Avatars
+                              Wallet update
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
                             >
                                
-                              - update v4
                             </span>
                           </div>
                         </td>
@@ -2314,177 +2729,254 @@ exports[`Notifications should open and close wallet update notification modal 2`
                   </table>
                 </div>
               </div>
-              <div
-                class="space-y-2"
-              >
+              <div>
                 <div
-                  class="text-base font-semibold text-theme-secondary-500"
+                  class="space-y-2"
                 >
-                  Transactions
-                </div>
-                <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
-                  role="table"
-                >
-                  <table
-                    cellpadding="0"
-                    class="table-auto"
+                  <div
+                    class="text-base font-semibold text-theme-secondary-500"
                   >
-                    <tbody
-                      role="rowgroup"
+                    Transactions
+                  </div>
+                  <div
+                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    role="table"
+                  >
+                    <table
+                      cellpadding="0"
+                      class="table-auto"
                     >
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
+                      <tbody
+                        role="rowgroup"
                       >
-                        <td
-                          class="w-3/5"
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 1 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
-                          >
-                            <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
-                            >
-                              <span
-                                data-testid="AmountCrypto"
-                              >
-                                + 20 DARK
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
-                      >
-                        <td
-                          class="w-3/5"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 20 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
+                        >
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
-                              <span
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
-                                + 0.0000001 DARK
-                              </span>
+                                <div
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                >
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="w-20 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                >
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td>
+                            <div
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                            >
+                              <div
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
+                              >
+                                <span
+                                  data-testid="AmountCrypto"
+                                >
+                                  + 0.0000001 DARK
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2617,13 +3109,12 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                             <span
                               class="font-bold text-md text-theme-secondary-600"
                             >
-                              ARK Avatars
+                              Wallet update
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
                             >
                                
-                              - update v4
                             </span>
                           </div>
                         </td>
@@ -2640,177 +3131,254 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                   </table>
                 </div>
               </div>
-              <div
-                class="space-y-2"
-              >
+              <div>
                 <div
-                  class="text-base font-semibold text-theme-secondary-500"
+                  class="space-y-2"
                 >
-                  Transactions
-                </div>
-                <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
-                  role="table"
-                >
-                  <table
-                    cellpadding="0"
-                    class="table-auto"
+                  <div
+                    class="text-base font-semibold text-theme-secondary-500"
                   >
-                    <tbody
-                      role="rowgroup"
+                    Transactions
+                  </div>
+                  <div
+                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    role="table"
+                  >
+                    <table
+                      cellpadding="0"
+                      class="table-auto"
                     >
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
+                      <tbody
+                        role="rowgroup"
                       >
-                        <td
-                          class="w-3/5"
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 1 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
-                          >
-                            <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
-                            >
-                              <span
-                                data-testid="AmountCrypto"
-                              >
-                                + 20 DARK
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr
-                        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
-                        data-testid="TableRow"
-                      >
-                        <td
-                          class="w-3/5"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
                         >
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="flex items-center -space-x-1"
-                              data-testid="TransactionRowMode"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
                               <div
-                                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ"
-                                  height="16"
-                                  width="16"
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                                 >
-                                  <svg>
-                                    received.svg
-                                  </svg>
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
                                 </div>
                               </div>
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                                data-testid="Avatar"
+                                class="w-20 flex-1"
                               >
                                 <div
-                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                 >
-                                  <img
-                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                  />
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
                                 </div>
                               </div>
                             </div>
+                          </td>
+                          <td>
                             <div
-                              class="w-20 flex-1"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
                             >
                               <div
-                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
+                                  data-testid="AmountCrypto"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  + 20 DARK
                                 </span>
                               </div>
                             </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div
-                            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                          </td>
+                        </tr>
+                        <tr
+                          class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                          data-testid="TableRow"
+                        >
+                          <td
+                            class="w-3/5"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                              color="success"
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
                             >
-                              <span
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex items-center -space-x-1"
+                                data-testid="TransactionRowMode"
                               >
-                                + 0.0000001 DARK
-                              </span>
+                                <div
+                                  class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                                >
+                                  <div
+                                    class="sc-bdfBwQ bcEVDZ"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      received.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                                  data-testid="Avatar"
+                                >
+                                  <div
+                                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                  >
+                                    <img
+                                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="w-20 flex-1"
+                              >
+                                <div
+                                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                                >
+                                  <span
+                                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td>
+                            <div
+                              class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+                            >
+                              <div
+                                class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                                color="success"
+                              >
+                                <span
+                                  data-testid="AmountCrypto"
+                                >
+                                  + 0.0000001 DARK
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>

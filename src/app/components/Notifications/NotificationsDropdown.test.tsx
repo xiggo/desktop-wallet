@@ -26,6 +26,16 @@ describe("Notifications", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
+
+		profile
+			.notifications()
+			.releases()
+			.push({
+				meta: { version: "3.0.0" },
+				name: "Wallet update",
+			});
+
+		await profile.notifications().transactions().sync();
 	});
 
 	it("should render with transactions and plugins", async () => {

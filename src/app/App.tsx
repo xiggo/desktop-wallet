@@ -23,7 +23,7 @@ import { Offline } from "domains/error/pages";
 import { Splash } from "domains/splash/pages";
 import { usePluginManagerContext } from "plugins";
 import { PluginRouterWrapper } from "plugins/components/PluginRouterWrapper";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { useErrorHandler } from "react-error-boundary";
 import { I18nextProvider } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -34,12 +34,7 @@ import { bootEnvWithProfileFixtures, isE2E, isUnit } from "utils/test-helpers";
 
 import { middlewares, RouterView, routes } from "../router";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, useEnvironmentContext } from "./contexts";
-import {
-	useDeeplink,
-	useEnvSynchronizer as useEnvironmentSynchronizer,
-	useNetworkStatus,
-	useProfileSynchronizer,
-} from "./hooks";
+import { useDeeplink, useNetworkStatus, useProfileSynchronizer } from "./hooks";
 import { i18n as index18n } from "./i18n";
 import { PluginProviders } from "./PluginProviders";
 import { SentryProvider } from "./sentry/SentryProvider";
@@ -57,7 +52,6 @@ const Main = () => {
 	const { env } = useEnvironmentContext();
 	const { loadPlugins } = usePluginManagerContext();
 	const isOnline = useNetworkStatus();
-	const { start } = useEnvironmentSynchronizer();
 	const history = useHistory();
 
 	useProfileSynchronizer({
@@ -65,12 +59,6 @@ const Main = () => {
 	});
 
 	useDeeplink();
-
-	useEffect(() => {
-		if (!showSplash) {
-			start();
-		}
-	}, [showSplash, start]);
 
 	useLayoutEffect(() => {
 		setThemeSource("system");

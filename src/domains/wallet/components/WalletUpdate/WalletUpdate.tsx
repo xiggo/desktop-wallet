@@ -19,7 +19,7 @@ interface WalletUpdateProperties {
 	onCancel?: any;
 }
 
-export const WalletUpdate = ({ isOpen, onClose, onCancel, version }: WalletUpdateProperties) => {
+export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: WalletUpdateProperties) => {
 	const [activeStep, setActiveStep] = useState(1);
 
 	const { t } = useTranslation();
@@ -31,7 +31,7 @@ export const WalletUpdate = ({ isOpen, onClose, onCancel, version }: WalletUpdat
 	};
 
 	const handleInstall = () => {
-		quitInstall();
+		quitInstall(profile);
 	};
 
 	const handleClose = () => {
