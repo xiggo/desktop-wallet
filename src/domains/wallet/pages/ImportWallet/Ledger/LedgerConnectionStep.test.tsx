@@ -1,6 +1,6 @@
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { EnvironmentProvider } from "app/contexts";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { createMemoryHistory } from "history";

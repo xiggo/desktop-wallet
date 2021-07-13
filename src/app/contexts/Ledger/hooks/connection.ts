@@ -1,6 +1,6 @@
 import Transport from "@ledgerhq/hw-transport";
+import { Contracts } from "@payvo/profiles";
 import { Coins } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
 import retry from "async-retry";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
 import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";

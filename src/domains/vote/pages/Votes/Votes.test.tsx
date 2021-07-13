@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
-import { ProfileSetting } from "@payvo/sdk-profiles/distribution/contracts";
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import { Contracts } from "@payvo/profiles";
+import { ProfileSetting } from "@payvo/profiles/distribution/contracts";
+import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { toasts } from "app/services";
 import { createMemoryHistory } from "history";
 import nock from "nock";

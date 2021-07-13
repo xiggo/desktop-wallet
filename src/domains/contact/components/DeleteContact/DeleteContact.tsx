@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { DeleteResource } from "app/components/DeleteResource";
 import { useEnvironmentContext } from "app/contexts";
 import React from "react";

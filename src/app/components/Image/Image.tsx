@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { images } from "app/assets/images";
 import { useActiveProfile } from "app/hooks";
 import React from "react";

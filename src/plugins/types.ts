@@ -1,6 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { HttpResponse } from "@payvo/sdk-http";
-import { Repositories } from "@payvo/sdk-profiles";
+import { Repositories } from "@payvo/profiles";
+import { Http, Services } from "@payvo/sdk";
 import { HttpClient } from "app/services/HttpClient";
 
 import { PluginManager } from "./core";
@@ -16,8 +15,8 @@ export interface PluginAPI {
 	http(): {
 		create: () => HttpClient;
 		decorate: (key: string, callback: <T = any>(argument: T) => T) => void;
-		get: (url: string, query?: object) => Promise<HttpResponse>;
-		post: (url: string, data?: object) => Promise<HttpResponse>;
+		get: (url: string, query?: object) => Promise<Http.HttpResponse>;
+		post: (url: string, data?: object) => Promise<Http.HttpResponse>;
 	};
 	filesystem(): {
 		askUserToSaveFile(content: string, suggestedFileName?: string): Promise<void>;

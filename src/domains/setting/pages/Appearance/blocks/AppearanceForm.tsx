@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { Form } from "app/components/Form";
 import { ListDivided } from "app/components/ListDivided";
 import { useEnvironmentContext } from "app/contexts";

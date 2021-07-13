@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { PendingTransactions } from "domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import nock from "nock";
 import React from "react";

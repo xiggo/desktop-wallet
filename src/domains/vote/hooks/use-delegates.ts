@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { Contracts, Environment } from "@payvo/profiles";
 import { FilterOption } from "domains/vote/components/VotesFilter";
 import { useCallback, useMemo, useState } from "react";
 

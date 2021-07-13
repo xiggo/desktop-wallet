@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 
 export interface NotificationTransactionsProperties {
 	profile: Contracts.IProfile;

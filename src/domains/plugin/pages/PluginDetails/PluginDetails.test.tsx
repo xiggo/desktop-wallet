@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { ipcRenderer } from "electron";
 import nock from "nock";

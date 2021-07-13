@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
 
 export interface AddRecipientProperties {

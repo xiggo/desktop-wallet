@@ -1,4 +1,4 @@
-import { IProfile } from "@payvo/sdk-profiles/distribution/contracts";
+import { IProfile } from "@payvo/profiles/distribution/contracts";
 import { ipcRenderer } from "electron";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";

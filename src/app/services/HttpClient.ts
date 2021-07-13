@@ -1,4 +1,4 @@
-import { AbstractRequest, HttpResponse, Response } from "@payvo/sdk-http";
+import { Http } from "@payvo/sdk";
 import crossFetch from "cross-fetch";
 import { SocksProxyAgent } from "socks-proxy-agent";
 import hash from "string-hash";
@@ -9,7 +9,7 @@ import { Cache } from "./Cache";
 /* istanbul ignore next */
 const fetch = process.env.REACT_APP_IS_E2E ? window.fetch : crossFetch;
 
-export class HttpClient extends AbstractRequest {
+export class HttpClient extends Http.AbstractRequest {
 	private readonly cache: Cache;
 
 	public constructor(ttl: number) {
@@ -37,7 +37,7 @@ export class HttpClient extends AbstractRequest {
 			query?: object;
 			data?: any;
 		},
-	): Promise<HttpResponse> {
+	): Promise<Http.HttpResponse> {
 		if (data?.query && Object.keys(data?.query).length > 0) {
 			url = `${url}?${new URLSearchParams(data.query as any)}`;
 		}
@@ -64,7 +64,7 @@ export class HttpClient extends AbstractRequest {
 				throw new Error("Received no response. This looks like a bug.");
 			}
 
-			return new Response({
+			return new Http.Response({
 				body: await response.text(),
 				headers: (response.headers as unknown) as Record<string, Primitive>,
 				statusCode: response.status,

@@ -1,6 +1,6 @@
+import { Contracts, Profile } from "@payvo/profiles";
+import { Wallet } from "@payvo/profiles/distribution/wallet";
 import { Coins, Networks } from "@payvo/sdk";
-import { Contracts, Profile } from "@payvo/sdk-profiles";
-import { Wallet } from "@payvo/sdk-profiles/distribution/wallet";
 import { AssertionError } from "assert";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {

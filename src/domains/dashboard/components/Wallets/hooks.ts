@@ -1,5 +1,5 @@
 import { chunk } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { useMemo } from "react";
 
 import { GridWallet, UseWalletDisplayProperties } from ".";

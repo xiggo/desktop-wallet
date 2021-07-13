@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { LedgerData } from "app/contexts";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";

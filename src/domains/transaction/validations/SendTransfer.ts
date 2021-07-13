@@ -1,5 +1,5 @@
+import { Contracts } from "@payvo/profiles";
 import { Coins, Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
 
 import { RecipientListItem } from "../components/RecipientList/RecipientList.models";
 

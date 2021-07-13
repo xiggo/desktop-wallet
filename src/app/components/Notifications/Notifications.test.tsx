@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { waitFor } from "@testing-library/react";
 import nock from "nock";
 import React from "react";
