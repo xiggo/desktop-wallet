@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { Page, Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile, useProfileUtils } from "app/hooks";

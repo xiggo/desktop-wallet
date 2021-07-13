@@ -1,16 +1,22 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { Contracts } from "@payvo/profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";
 import electron from "electron";
 import React from "react";
-import { env, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, waitFor } from "utils/testing-library";
 
 import { useUpdater } from "./use-updater";
 
+let profile: Contracts.IProfile;
+
 describe("useUpdater hook", () => {
-	beforeAll(() => {
+	beforeAll(async () => {
 		let isUpdateCalled = false;
 		let updateDownloadedCalls = 0;
+
+		profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
 
 		jest.spyOn(electron.ipcRenderer, "invoke").mockResolvedValue((event: string) => {
 			if (event === "updater:check-for-updates") {
@@ -70,6 +76,12 @@ describe("useUpdater hook", () => {
 
 		act(() => {
 			result.current.quitInstall();
+		});
+
+		await waitFor(() => expect(result.current.downloadStatus).toBe("idle"));
+
+		act(() => {
+			result.current.quitInstall(profile);
 		});
 
 		await waitFor(() => expect(result.current.downloadStatus).toBe("idle"));

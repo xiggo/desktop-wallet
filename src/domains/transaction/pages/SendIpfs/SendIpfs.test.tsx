@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import { LedgerProvider } from "app/contexts";
 import { translations } from "domains/transaction/i18n";

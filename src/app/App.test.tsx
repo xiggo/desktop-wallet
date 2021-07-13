@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Bcrypt } from "@payvo/cryptography";
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { Contracts, Environment } from "@payvo/profiles";
 import { translations as errorTranslations } from "domains/error/i18n";
 import { translations as profileTranslations } from "domains/profile/i18n";
 import electron from "electron";

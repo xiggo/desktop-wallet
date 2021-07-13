@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { ipcRenderer } from "electron";
 import { PluginController, PluginManager, PluginManagerProvider } from "plugins";
 import React from "react";

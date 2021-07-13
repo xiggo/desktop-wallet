@@ -1,5 +1,5 @@
+import { Contracts, DTO } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -155,16 +155,18 @@ export const SendVote = () => {
 				const walletVotes = activeWallet.voting().current();
 
 				if (type === "vote") {
-					isConfirmed = !!walletVotes.find((vote) => vote.address() === votes[0].address());
+					isConfirmed = !!walletVotes.find(({ wallet }) => wallet?.address() === votes[0].address());
 				}
 
 				if (type === "unvote") {
-					isConfirmed = !walletVotes.find((vote) => vote.address() === unvotes[0].address());
+					isConfirmed = !walletVotes.find(({ wallet }) => wallet?.address() === unvotes[0].address());
 				}
 
 				if (type === "combined") {
-					const voteConfirmed = !!walletVotes.find((vote) => vote.address() === votes[0].address());
-					const unvoteConfirmed = !walletVotes.find((vote) => vote.address() === unvotes[0].address());
+					const voteConfirmed = !!walletVotes.find(({ wallet }) => wallet?.address() === votes[0].address());
+					const unvoteConfirmed = !walletVotes.find(
+						({ wallet }) => wallet?.address() === unvotes[0].address(),
+					);
 
 					isConfirmed = voteConfirmed && unvoteConfirmed;
 				}
@@ -212,7 +214,10 @@ export const SendVote = () => {
 						{
 							...voteTransactionInput,
 							data: {
-								unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => wallet.publicKey()),
+								unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => ({
+									amount: 0,
+									id: wallet.governanceIdentifier(),
+								})),
 							},
 						},
 						senderWallet,
@@ -232,7 +237,10 @@ export const SendVote = () => {
 						{
 							...voteTransactionInput,
 							data: {
-								votes: votes.map((wallet: Contracts.IReadOnlyWallet) => wallet.publicKey()),
+								votes: votes.map((wallet: Contracts.IReadOnlyWallet) => ({
+									amount: 0,
+									id: wallet.governanceIdentifier(),
+								})),
 							},
 						},
 						senderWallet,
@@ -258,8 +266,14 @@ export const SendVote = () => {
 						{
 							...voteTransactionInput,
 							data: {
-								unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => wallet.publicKey()),
-								votes: votes.map((wallet: Contracts.IReadOnlyWallet) => wallet.publicKey()),
+								unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => ({
+									amount: 0,
+									id: wallet.governanceIdentifier(),
+								})),
+								votes: votes.map((wallet: Contracts.IReadOnlyWallet) => ({
+									amount: 0,
+									id: wallet.governanceIdentifier(),
+								})),
 							},
 						},
 						senderWallet!,
@@ -286,10 +300,16 @@ export const SendVote = () => {
 						...voteTransactionInput,
 						data: isUnvote
 							? {
-									unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => wallet.publicKey()),
+									unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => ({
+										amount: 0,
+										id: wallet.governanceIdentifier(),
+									})),
 							  }
 							: {
-									votes: votes.map((wallet: Contracts.IReadOnlyWallet) => wallet.publicKey()),
+									votes: votes.map((wallet: Contracts.IReadOnlyWallet) => ({
+										amount: 0,
+										id: wallet.governanceIdentifier(),
+									})),
 							  },
 					},
 					senderWallet!,

@@ -1,7 +1,7 @@
+import { IProfile } from "@payvo/profiles/distribution/contracts";
 import { ipcRenderer } from "electron";
 import { useCallback, useEffect, useState } from "react";
-
-import { useNotifications } from "./use-notifications";
+import { useTranslation } from "react-i18next";
 
 export interface DownloadProgress {
 	total: number;
@@ -31,8 +31,7 @@ export const useUpdater = () => {
 	const [downloadProgress, setDownloadProgress] = useState<DownloadProgress>(downloadProgressDefaults());
 	const [downloadStatus, setDownloadStatus] = useState<DownloadStatus>("idle");
 	const [updateVersion, setUpdateVersion] = useState<string>();
-
-	const { notifications } = useNotifications();
+	const { t } = useTranslation();
 
 	const downloadUpdate = () => {
 		setDownloadStatus("started");
@@ -45,27 +44,46 @@ export const useUpdater = () => {
 		ipcRenderer.invoke(IpcEvent.CANCEL);
 	};
 
-	const quitInstall = () => {
+	const quitInstall = (profile?: IProfile) => {
 		setDownloadStatus("idle");
 		ipcRenderer.invoke(IpcEvent.QUIT_INSTALL);
-		notifications.deleteNotificationsByVersion({ version: updateVersion });
+
+		if (!profile) {
+			return;
+		}
+
+		profile
+			.notifications()
+			.releases()
+			.forget(updateVersion as string);
 	};
 
-	const notifyForUpdates: any = useCallback(async () => {
-		try {
-			const { cancellationToken, updateInfo } = await ipcRenderer.invoke(IpcEvent.CHECK_UPDATES);
-			const hasNewerVersion = !!cancellationToken;
+	const notifyForUpdates: any = useCallback(
+		async (profile: IProfile) => {
+			try {
+				const { cancellationToken, updateInfo } = await ipcRenderer.invoke(IpcEvent.CHECK_UPDATES);
+				const hasNewerVersion = !!cancellationToken;
 
-			if (!hasNewerVersion) {
-				return;
+				if (!hasNewerVersion) {
+					return;
+				}
+
+				setUpdateVersion(updateInfo.version);
+				profile
+					.notifications()
+					.releases()
+					.push({
+						action: "update",
+						body: `- ${t("COMMON.UPDATE").toLowerCase()} v${updateInfo.version}`,
+						meta: { version: updateInfo.version },
+						name: t("COMMON.APP_NAME"),
+					});
+			} catch (error) {
+				console.error(`Checking for update failed: ${error.message}`);
 			}
-
-			setUpdateVersion(updateInfo.version);
-			notifications.notifyWalletUpdate({ version: updateInfo.version });
-		} catch (error) {
-			console.error(`Checking for update failed: ${error.message}`);
-		}
-	}, [notifications]);
+		},
+		[t],
+	);
 
 	useEffect(() => {
 		const updateDownloaded = () => {

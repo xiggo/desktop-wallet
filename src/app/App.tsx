@@ -6,6 +6,10 @@ import "focus-visible";
 // import { ZIL } from "@payvo/sdk-zil";
 // @ts-ignore
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
+// import { LUNA } from "@payvo/sdk-luna";
+// import { NANO } from "@payvo/sdk-nano";
+// import { NEO } from "@payvo/sdk-neo";
+import { Environment } from "@payvo/profiles";
 // import { ADA } from "@payvo/sdk-ada";
 import { ARK } from "@payvo/sdk-ark";
 // import { ATOM } from "@payvo/sdk-atom";
@@ -15,15 +19,11 @@ import { ARK } from "@payvo/sdk-ark";
 // import { EGLD } from "@payvo/sdk-egld";
 // import { ETH } from "@payvo/sdk-eth";
 import { LSK } from "@payvo/sdk-lsk";
-// import { LUNA } from "@payvo/sdk-luna";
-// import { NANO } from "@payvo/sdk-nano";
-// import { NEO } from "@payvo/sdk-neo";
-import { Environment } from "@payvo/sdk-profiles";
 import { Offline } from "domains/error/pages";
 import { Splash } from "domains/splash/pages";
 import { usePluginManagerContext } from "plugins";
 import { PluginRouterWrapper } from "plugins/components/PluginRouterWrapper";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { useErrorHandler } from "react-error-boundary";
 import { I18nextProvider } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -34,12 +34,7 @@ import { bootEnvWithProfileFixtures, isE2E, isUnit } from "utils/test-helpers";
 
 import { middlewares, RouterView, routes } from "../router";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, useEnvironmentContext } from "./contexts";
-import {
-	useDeeplink,
-	useEnvSynchronizer as useEnvironmentSynchronizer,
-	useNetworkStatus,
-	useProfileSynchronizer,
-} from "./hooks";
+import { useDeeplink, useNetworkStatus, useProfileSynchronizer } from "./hooks";
 import { i18n as index18n } from "./i18n";
 import { PluginProviders } from "./PluginProviders";
 import { SentryProvider } from "./sentry/SentryProvider";
@@ -57,7 +52,6 @@ const Main = () => {
 	const { env } = useEnvironmentContext();
 	const { loadPlugins } = usePluginManagerContext();
 	const isOnline = useNetworkStatus();
-	const { start } = useEnvironmentSynchronizer();
 	const history = useHistory();
 
 	useProfileSynchronizer({
@@ -65,12 +59,6 @@ const Main = () => {
 	});
 
 	useDeeplink();
-
-	useEffect(() => {
-		if (!showSplash) {
-			start();
-		}
-	}, [showSplash, start]);
 
 	useLayoutEffect(() => {
 		setThemeSource("system");

@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { PendingTransactions } from "domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import nock from "nock";
 import React from "react";
@@ -137,7 +137,12 @@ describe("Signed Transaction Table", () => {
 				.vote({
 					data: {
 						unvotes: [],
-						votes: ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
+						votes: [
+							{
+								amount: 0,
+								id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							},
+						],
 					},
 					fee: 0.1,
 					nonce: "1",
@@ -155,7 +160,12 @@ describe("Signed Transaction Table", () => {
 				.transaction()
 				.vote({
 					data: {
-						unvotes: ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
+						unvotes: [
+							{
+								amount: 0,
+								id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							},
+						],
 						votes: [],
 					},
 					fee: 0.1,

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { LaunchPluginService, PluginManagerProvider } from "plugins";
 import { PluginController, PluginManager } from "plugins/core";
 import React from "react";

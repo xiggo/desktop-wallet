@@ -1,5 +1,5 @@
+import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
 import { act, fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";

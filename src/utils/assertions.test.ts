@@ -1,8 +1,8 @@
 /* eslint-disable unicorn/no-null */
 
+import { Profile } from "@payvo/profiles";
+import { Wallet } from "@payvo/profiles/distribution/wallet";
 import { Coins, Networks } from "@payvo/sdk";
-import { Profile } from "@payvo/sdk-profiles";
-import { Wallet } from "@payvo/sdk-profiles/distribution/wallet";
 
 import { assertCoin, assertNetwork, assertNumber, assertProfile, assertString, assertWallet } from "./assertions";
 

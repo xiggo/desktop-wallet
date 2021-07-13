@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { Form } from "app/components/Form";
 import React from "react";

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { BIP39 } from "@payvo/cryptography";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";

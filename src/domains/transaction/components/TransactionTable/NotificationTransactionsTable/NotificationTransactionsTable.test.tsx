@@ -1,0 +1,87 @@
+import { Contracts, DTO } from "@payvo/profiles";
+import nock from "nock";
+import React from "react";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	getDefaultWalletId,
+	renderWithRouter,
+	waitFor,
+} from "utils/testing-library";
+
+import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
+
+describe("NotificationsTransactionTable", () => {
+	let profile: Contracts.IProfile;
+	let wallet: Contracts.IReadWriteWallet;
+	let transactions: DTO.ExtendedConfirmedTransactionData[];
+
+	beforeAll(() => {
+		nock("https://dwallets.ark.io/api")
+			.get("/transactions")
+			.query(true)
+			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"));
+	});
+
+	beforeEach(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+		wallet = profile.wallets().findById(getDefaultWalletId());
+
+		const allTransactions = await wallet.transactionIndex().all();
+		transactions = allTransactions.items();
+	});
+
+	it("should render", () => {
+		const { getAllByTestId } = renderWithRouter(
+			<NotificationTransactionsTable transactions={transactions} profile={profile} isLoading={false} />,
+		);
+
+		expect(getAllByTestId("TableRow")).toHaveLength(transactions.length);
+	});
+
+	it("should render loading state", () => {
+		const { getAllByTestId } = renderWithRouter(
+			<NotificationTransactionsTable transactions={transactions} profile={profile} />,
+		);
+
+		expect(getAllByTestId("TableRow")).toHaveLength(10);
+	});
+
+	it("should emit on visibility change event", async () => {
+		const onVisibilityChange = jest.fn();
+		const { getAllByTestId } = renderWithRouter(
+			<NotificationTransactionsTable
+				transactions={transactions}
+				profile={profile}
+				isLoading={false}
+				onVisibilityChange={onVisibilityChange}
+			/>,
+		);
+
+		expect(getAllByTestId("TableRow")).toHaveLength(transactions.length);
+
+		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalled());
+	});
+
+	it("should emit on click event", async () => {
+		const onClick = jest.fn();
+		const { getAllByTestId } = renderWithRouter(
+			<NotificationTransactionsTable
+				transactions={transactions}
+				profile={profile}
+				isLoading={false}
+				onClick={onClick}
+			/>,
+		);
+
+		expect(getAllByTestId("TableRow")).toHaveLength(transactions.length);
+
+		act(() => {
+			fireEvent.click(getAllByTestId("TableRow")[0]);
+		});
+
+		await waitFor(() => expect(onClick).toHaveBeenCalled());
+	});
+});

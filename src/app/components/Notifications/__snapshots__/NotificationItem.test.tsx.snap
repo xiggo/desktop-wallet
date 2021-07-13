@@ -62,13 +62,13 @@ exports[`Notifications should render with custom action name 1`] = `
             <span
               class="font-bold text-md text-theme-secondary-600"
             >
-              New plugin updates
+              Payvo Wallet
             </span>
             <span
               class="text-md text-theme-secondary-600"
             >
                
-              test
+              - update v2.5.6
             </span>
           </div>
         </td>
@@ -77,7 +77,7 @@ exports[`Notifications should render with custom action name 1`] = `
             class="font-bold text-right cursor-pointer text-md text-theme-primary-500"
             data-testid="NotificationItem__action"
           >
-            custom action name
+            Update
           </div>
         </td>
       </tr>

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { NavigationBar } from "app/components/NavigationBar";
 import React from "react";
 import { useTranslation } from "react-i18next";

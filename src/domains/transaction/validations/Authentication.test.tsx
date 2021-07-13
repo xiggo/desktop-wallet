@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { env, MNEMONICS } from "utils/testing-library";
 
 import { authentication } from "./Authentication";

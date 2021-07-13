@@ -1,5 +1,5 @@
+import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
-import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { useCallback } from "react";
 
 interface SignInput {

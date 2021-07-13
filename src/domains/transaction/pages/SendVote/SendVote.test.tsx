@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { screen, within } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import { LedgerProvider } from "app/contexts";

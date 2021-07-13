@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 
 export interface Action {
 	label: string;
@@ -19,8 +19,7 @@ export interface NotificationItemProperties {
 }
 
 export interface NotificationTransactionItemProperties {
-	allTransactions: DTO.ExtendedConfirmedTransactionData[];
-	transactionId: string;
+	transaction: DTO.ExtendedConfirmedTransactionData;
 	profile: Contracts.IProfile;
 	containmentRef?: any;
 	onVisibilityChange?: (isVisible: boolean) => void;

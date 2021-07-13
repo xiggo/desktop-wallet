@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 

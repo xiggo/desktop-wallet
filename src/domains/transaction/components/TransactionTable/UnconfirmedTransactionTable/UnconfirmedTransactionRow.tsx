@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/sdk-profiles";
+import { DTO } from "@payvo/profiles";
 import { TableCell, TableRow } from "app/components/Table";
 import { TimeAgo } from "app/components/TimeAgo";
 import React from "react";

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Enums } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
+import { Enums } from "@payvo/sdk";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { toasts } from "app/services";
 import { translations as walletTranslations } from "domains/wallet/i18n";
@@ -213,20 +213,26 @@ describe("WalletDetails", () => {
 
 	it('should navigate to votes with "current" filter param when clicking on Multivote', async () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				rank: 1,
-				username: "arkx",
-			}),
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				rank: 2,
-				username: "arky",
-			}),
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					rank: 1,
+					username: "arkx",
+				}),
+			},
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					rank: 2,
+					username: "arky",
+				}),
+			},
 		]);
 		const maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
 		const historySpy = jest.spyOn(history, "push");

@@ -1,6 +1,6 @@
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import nock from "nock";
 import React from "react";

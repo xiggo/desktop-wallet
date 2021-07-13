@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { BIP39 } from "@payvo/cryptography";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { act } from "@testing-library/react-hooks";
 import { createMemoryHistory } from "history";
 import React from "react";

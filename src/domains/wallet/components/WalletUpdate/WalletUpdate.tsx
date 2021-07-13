@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import { Image } from "app/components/Image";
 import { Modal } from "app/components/Modal";
@@ -19,7 +19,7 @@ interface WalletUpdateProperties {
 	onCancel?: any;
 }
 
-export const WalletUpdate = ({ isOpen, onClose, onCancel, version }: WalletUpdateProperties) => {
+export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: WalletUpdateProperties) => {
 	const [activeStep, setActiveStep] = useState(1);
 
 	const { t } = useTranslation();
@@ -31,7 +31,7 @@ export const WalletUpdate = ({ isOpen, onClose, onCancel, version }: WalletUpdat
 	};
 
 	const handleInstall = () => {
-		quitInstall();
+		quitInstall(profile);
 	};
 
 	const handleClose = () => {

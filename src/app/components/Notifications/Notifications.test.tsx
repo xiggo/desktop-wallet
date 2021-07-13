@@ -1,24 +1,37 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { waitFor } from "@testing-library/react";
 import nock from "nock";
 import React from "react";
 import { act } from "react-dom/test-utils";
 import { env, fireEvent, getDefaultProfileId, render } from "testing-library";
 
-import { markAsRead, Notifications } from ".";
+import { Notifications } from ".";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
 const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
 
 let profile: Contracts.IProfile;
 
 describe("Notifications", () => {
-	beforeEach(() => {
-		nock("https://dwallets.ark.io").get("/api/transactions").query(true).reply(200, {
+	beforeEach(async () => {
+		nock("https://dwallets.ark.io/api").get("/transactions").query(true).reply(200, {
 			data: NotificationTransactionsFixtures.data,
 			meta: TransactionsFixture.meta,
 		});
 
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		profile
+			.notifications()
+			.releases()
+			.push({
+				meta: { version: "3.0.0" },
+				name: "Wallet update",
+			});
+
+		await profile.notifications().transactions().sync();
 	});
 
 	it("should render with plugins", async () => {
@@ -70,34 +83,6 @@ describe("Notifications", () => {
 		await waitFor(() => expect(onTransactionClick).toHaveBeenCalled());
 
 		expect(container).toMatchSnapshot();
-	});
-
-	it("should mark notification as read", () => {
-		const notification = profile.notifications().first();
-
-		expect(notification.read_at).toBeUndefined();
-
-		const isVisible = true;
-		markAsRead(isVisible, notification.id, profile, env);
-
-		expect(profile.notifications().get(notification.id).read_at).toBeTruthy();
-	});
-
-	it("should not mark notification if is already read", () => {
-		const notification = profile.notifications().last();
-
-		expect(notification.read_at).toBeUndefined();
-
-		const isVisible = true;
-
-		markAsRead(isVisible, notification.id, profile, env);
-		const firstReadAt = profile.notifications().get(notification.id).read_at;
-
-		expect(firstReadAt).toBeTruthy();
-
-		markAsRead(isVisible, notification.id, profile, env);
-
-		expect(profile.notifications().get(notification.id).read_at).toEqual(firstReadAt);
 	});
 
 	it("should render with empty notifications", async () => {

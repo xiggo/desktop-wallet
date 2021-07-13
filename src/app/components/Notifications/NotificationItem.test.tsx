@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import nock from "nock";
 import React from "react";
 import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "testing-library";
@@ -18,7 +18,7 @@ describe("Notifications", () => {
 		});
 
 		profile = env.profiles().findById(getDefaultProfileId());
-		notification = profile.notifications().first();
+		notification = profile.notifications().get("29fdd62d-1c28-4d2c-b46f-667868c5afe1");
 	});
 
 	it("should render notification item", () => {
@@ -65,24 +65,25 @@ describe("Notifications", () => {
 
 	it("should render with custom action name", () => {
 		const onVisibilityChange = jest.fn();
-		profile.notifications().push({
+
+		profile.notifications().releases().push({
 			action: "custom action name",
 			body: "test",
 			icon: "ArkLogo",
-			name: "New plugin updates",
-			type: "plugin",
+			name: "Update",
 		});
-		profile.notifications().last();
+
+		const releaseNotification = profile.notifications().releases().recent()[0];
 
 		const { container, getByTestId } = render(
 			<table>
 				<tbody>
-					<NotificationItem {...profile.notifications().last()} onVisibilityChange={onVisibilityChange} />
+					<NotificationItem {...releaseNotification} onVisibilityChange={onVisibilityChange} />
 				</tbody>
 			</table>,
 		);
 
-		expect(getByTestId("NotificationItem__action")).toHaveTextContent(profile.notifications().last().action);
+		expect(getByTestId("NotificationItem__action")).toHaveTextContent("Update");
 		expect(container).toMatchSnapshot();
 	});
 });

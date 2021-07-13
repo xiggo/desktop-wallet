@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { EnvironmentProvider } from "app/contexts";
 import electron, { ipcRenderer } from "electron";

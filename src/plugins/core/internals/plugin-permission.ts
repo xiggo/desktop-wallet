@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 
 import { PluginController } from "../plugin-controller";
 import { PluginServiceData } from "../plugin-service";

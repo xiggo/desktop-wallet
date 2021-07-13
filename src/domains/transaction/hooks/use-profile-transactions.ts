@@ -1,4 +1,4 @@
-import { Contracts, Contracts as ProfileContracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, Contracts as ProfileContracts, DTO } from "@payvo/profiles";
 import { useSynchronizer } from "app/hooks";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { isUnit } from "utils/test-helpers";

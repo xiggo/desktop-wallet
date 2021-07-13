@@ -1,5 +1,5 @@
 import { Blockfolio, BlockfolioResponse, BlockfolioSignal } from "@payvo/news";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { SvgCollection } from "app/assets/svg";
 import { EmptyResults } from "app/components/EmptyResults";
 import { Header } from "app/components/Header";

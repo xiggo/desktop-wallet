@@ -1,6 +1,6 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/read-only-wallet";
+import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { translations as walletTranslations } from "domains/wallet/i18n";
 import React from "react";
@@ -116,13 +116,16 @@ describe("WalletVote", () => {
 	describe("single vote networks", () => {
 		it("should render a vote for an active delegate", async () => {
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					rank: 10,
-					username: "arkx",
-				}),
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						rank: 10,
+						username: "arkx",
+					}),
+				},
 			]);
 
 			const { asFragment, getByText, getByTestId } = render(
@@ -133,8 +136,8 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(delegate.username()!)).toBeTruthy();
-			expect(getByText(`#${delegate.rank()}`)).toBeTruthy();
+			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
+			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeTruthy();
 			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.ACTIVE)).toBeTruthy();
 
 			expect(asFragment()).toMatchSnapshot();
@@ -144,13 +147,16 @@ describe("WalletVote", () => {
 
 		it("should render a vote for a standby delegate", async () => {
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					rank: 52,
-					username: "arkx",
-				}),
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						rank: 52,
+						username: "arkx",
+					}),
+				},
 			]);
 
 			const { asFragment, getByText, getByTestId } = render(
@@ -161,8 +167,8 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(delegate.username()!)).toBeTruthy();
-			expect(getByText(`#${delegate.rank()}`)).toBeTruthy();
+			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
+			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeTruthy();
 			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.STANDBY)).toBeTruthy();
 
 			expect(asFragment()).toMatchSnapshot();
@@ -172,12 +178,15 @@ describe("WalletVote", () => {
 
 		it("should render a vote for a delegate without rank", async () => {
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					username: "arkx",
-				}),
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						username: "arkx",
+					}),
+				},
 			]);
 
 			const { asFragment, getByText, getByTestId } = render(
@@ -188,7 +197,7 @@ describe("WalletVote", () => {
 
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
-			expect(getByText(delegate.username()!)).toBeTruthy();
+			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
 			expect(getByText(commonTranslations.NOT_AVAILABLE)).toBeTruthy();
 			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.STANDBY)).toBeTruthy();
 
@@ -208,20 +217,26 @@ describe("WalletVote", () => {
 
 		it("should render a vote for multiple active delegates", async () => {
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					rank: 1,
-					username: "arkx",
-				}),
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					rank: 2,
-					username: "arky",
-				}),
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						rank: 1,
+						username: "arkx",
+					}),
+				},
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						rank: 2,
+						username: "arky",
+					}),
+				},
 			]);
 
 			const { asFragment, getByText, getByTestId } = render(
@@ -240,18 +255,24 @@ describe("WalletVote", () => {
 
 		it("should render a vote for multiple active delegates", async () => {
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					username: "arkx",
-				}),
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					username: "arky",
-				}),
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						username: "arkx",
+					}),
+				},
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						username: "arky",
+					}),
+				},
 			]);
 
 			const { asFragment, getByText, getByTestId } = render(
@@ -270,19 +291,25 @@ describe("WalletVote", () => {
 
 		it("should render a vote for multiple active and standby delegates", async () => {
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					rank: 1,
-					username: "arkx",
-				}),
-				new ReadOnlyWallet({
-					address: wallet.address(),
-					explorerLink: "",
-					publicKey: wallet.publicKey(),
-					username: "arky",
-				}),
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						rank: 1,
+						username: "arkx",
+					}),
+				},
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						publicKey: wallet.publicKey(),
+						username: "arky",
+					}),
+				},
 			]);
 
 			const { asFragment, getByText, getByTestId } = render(
@@ -304,20 +331,26 @@ describe("WalletVote", () => {
 
 	it("should emit action on multivote click", async () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				rank: 1,
-				username: "arkx",
-			}),
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				rank: 2,
-				username: "arky",
-			}),
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					rank: 1,
+					username: "arkx",
+				}),
+			},
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					rank: 2,
+					username: "arky",
+				}),
+			},
 		]);
 
 		const onButtonClick = jest.fn();

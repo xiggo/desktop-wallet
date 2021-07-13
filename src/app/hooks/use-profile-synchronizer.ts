@@ -1,5 +1,5 @@
 import { uniq } from "@arkecosystem/utils";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useAccentColor } from "app/hooks/use-accent-color";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
@@ -7,11 +7,11 @@ import { useEffect, useMemo, useRef } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
 import { isIdle } from "utils/electron-utils";
 
-import { useNotifications } from "./use-notifications";
 import { useProfileUtils } from "./use-profile-utils";
 import { useScreenshotProtection } from "./use-screenshot-protection";
 import { useSynchronizer } from "./use-synchronizer";
 import { useTheme } from "./use-theme";
+import { useUpdater } from "./use-updater";
 
 enum Intervals {
 	VeryShort = 15_000,
@@ -36,8 +36,9 @@ const useProfileWatcher = () => {
 
 export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any> => {
 	const { env } = useEnvironmentContext();
-	const { notifications } = useNotifications();
 	const { setConfiguration } = useConfiguration();
+	const { notifyForUpdates } = useUpdater();
+
 	const history = useHistory();
 
 	const walletsCount = profile?.wallets().count();
@@ -46,6 +47,11 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		if (!profile) {
 			return [];
 		}
+
+		const syncWalletUpdates = {
+			callback: () => notifyForUpdates(profile),
+			interval: Intervals.Long,
+		};
 
 		const syncWallets = {
 			callback: () => env.wallets().syncByProfile(profile),
@@ -76,7 +82,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		};
 
 		const syncNotifications = {
-			callback: () => notifications.notifyReceivedTransactions({ profile }),
+			callback: () => profile.notifications().transactions().sync(),
 			interval: Intervals.Long,
 		};
 
@@ -105,10 +111,11 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 				syncKnownWallets,
 				syncDelegates,
 				checkActivityState,
+				syncWalletUpdates,
 			],
 			syncExchangeRates: syncExchangeRates.callback,
 		};
-	}, [env, profile, walletsCount, notifications, setConfiguration]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [env, profile, walletsCount, setConfiguration]); // eslint-disable-line react-hooks/exhaustive-deps
 };
 
 interface ProfileSyncState {

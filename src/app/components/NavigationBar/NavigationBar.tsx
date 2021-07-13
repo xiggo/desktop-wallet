@@ -1,11 +1,11 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/profiles";
 import { images } from "app/assets/images";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { Dropdown } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { NotificationsDropdown } from "app/components/Notifications";
-import { Action } from "app/components/Notifications/models";
+import { Action } from "app/components/Notifications/contracts";
 import { Tooltip } from "app/components/Tooltip";
 import { useConfiguration } from "app/contexts";
 import { useScroll, useTheme } from "app/hooks";
