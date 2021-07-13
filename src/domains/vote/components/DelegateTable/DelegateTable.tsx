@@ -28,7 +28,7 @@ interface DelegateTableProperties {
 	selectedUnvoteAddresses?: string[];
 	selectedVoteAddresses?: string[];
 	selectedWallet: string;
-	votes?: Contracts.IReadOnlyWallet[];
+	votes?: Contracts.VoteRegistryItem[];
 	onContinue?: (unvotes: string[], votes: string[]) => void;
 	isPaginationDisabled?: boolean;
 	subtitle?: React.ReactNode;
@@ -127,7 +127,7 @@ export const DelegateTable = ({
 			setSelectedVotes([address]);
 
 			if (hasVotes) {
-				setSelectedUnvotes(votes!.map((vote) => vote.address()));
+				setSelectedUnvotes(votes!.map(({ wallet }) => wallet!.address()));
 			}
 		} else {
 			setSelectedVotes([...selectedVotes, address]);
@@ -172,7 +172,7 @@ export const DelegateTable = ({
 					let isVoted = false;
 
 					if (hasVotes) {
-						isVoted = !!votes?.find((vote) => vote.address() === delegate?.address?.());
+						isVoted = !!votes?.find(({ wallet }) => wallet?.address() === delegate?.address?.());
 					}
 
 					return (

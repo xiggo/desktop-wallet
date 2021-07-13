@@ -230,14 +230,17 @@ describe("Votes", () => {
 	it("should filter current delegates", async () => {
 		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
-			new ReadOnlyWallet({
-				address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
-				explorerLink: "",
-				isResignedDelegate: false,
-				publicKey: currentWallet.publicKey(),
-				rank: 52,
-				username: "arkx",
-			}),
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					explorerLink: "",
+					isResignedDelegate: false,
+					publicKey: currentWallet.publicKey(),
+					rank: 52,
+					username: "arkx",
+				}),
+			},
 		]);
 
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
@@ -296,14 +299,17 @@ describe("Votes", () => {
 	it("should select an address and delegate", async () => {
 		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
-			new ReadOnlyWallet({
-				address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
-				explorerLink: "",
-				isResignedDelegate: false,
-				publicKey: currentWallet.publicKey(),
-				rank: 52,
-				username: "arkx",
-			}),
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					explorerLink: "",
+					isResignedDelegate: false,
+					publicKey: currentWallet.publicKey(),
+					rank: 52,
+					username: "arkx",
+				}),
+			},
 		]);
 
 		const route = `/profiles/${profile.id()}/votes`;
@@ -627,14 +633,17 @@ describe("Votes", () => {
 	it("should show resigned delegate notice", async () => {
 		const currentWallet = profile.wallets().first();
 		const walletSpy = jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
-			new ReadOnlyWallet({
-				address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
-				explorerLink: "",
-				isResignedDelegate: true,
-				publicKey: currentWallet.publicKey(),
-				rank: 52,
-				username: "arkx",
-			}),
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+					explorerLink: "",
+					isResignedDelegate: true,
+					publicKey: currentWallet.publicKey(),
+					rank: 52,
+					username: "arkx",
+				}),
+			},
 		]);
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
 		const { container, getByTestId } = renderPage(route);

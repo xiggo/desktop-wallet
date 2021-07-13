@@ -12,7 +12,7 @@ import { DelegateTable } from "./DelegateTable";
 const selectedWallet = "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P";
 
 let delegates: Contracts.IReadOnlyWallet[];
-let votes: Contracts.IReadOnlyWallet[];
+let votes: Contracts.VoteRegistryItem[];
 
 describe("DelegateTable", () => {
 	beforeAll(() => {
@@ -31,14 +31,17 @@ describe("DelegateTable", () => {
 		);
 
 		votes = [
-			new ReadOnlyWallet({
-				address: data[0].address,
-				explorerLink: "",
-				isDelegate: true,
-				isResignedDelegate: false,
-				publicKey: data[0].publicKey,
-				username: data[0].username,
-			}),
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: data[0].address,
+					explorerLink: "",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: data[0].publicKey,
+					username: data[0].username,
+				}),
+			},
 		];
 	});
 
@@ -337,7 +340,7 @@ describe("DelegateTable", () => {
 	});
 
 	it("should emit action on continue button to unvote", () => {
-		const delegateAddress = votes[0].address()!;
+		const delegateAddress = votes[0].wallet!.address()!;
 
 		const onContinue = jest.fn();
 		const { container, asFragment, getByTestId } = render(

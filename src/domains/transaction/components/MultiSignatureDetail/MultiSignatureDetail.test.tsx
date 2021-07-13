@@ -49,10 +49,10 @@ describe("MultiSignatureDetail", () => {
 				.transaction()
 				.transfer({
 					data: {
-						amount: "1",
+						amount: 1,
 						to: wallet.address(),
 					},
-					fee: "1",
+					fee: 1,
 					nonce: "1",
 					signatory: await wallet
 						.coin()
@@ -72,7 +72,7 @@ describe("MultiSignatureDetail", () => {
 						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 						senderPublicKey: wallet.publicKey()!,
 					},
-					fee: "1",
+					fee: 1,
 					nonce: "1",
 					signatory: await wallet
 						.coin()
@@ -90,16 +90,16 @@ describe("MultiSignatureDetail", () => {
 					data: {
 						payments: [
 							{
-								amount: "1",
+								amount: 1,
 								to: wallet.address(),
 							},
 							{
-								amount: "2",
+								amount: 2,
 								to: wallet.address(),
 							},
 						],
 					},
-					fee: "1",
+					fee: 1,
 					nonce: "1",
 					signatory: await wallet
 						.coin()
@@ -116,9 +116,14 @@ describe("MultiSignatureDetail", () => {
 				.vote({
 					data: {
 						unvotes: [],
-						votes: ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
+						votes: [
+							{
+								amount: 0,
+								id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							},
+						],
 					},
-					fee: "1",
+					fee: 1,
 					nonce: "1",
 					signatory: await wallet
 						.coin()
@@ -134,10 +139,15 @@ describe("MultiSignatureDetail", () => {
 				.transaction()
 				.vote({
 					data: {
-						unvotes: ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
+						unvotes: [
+							{
+								amount: 0,
+								id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							},
+						],
 						votes: [],
 					},
-					fee: "1",
+					fee: 1,
 					nonce: "1",
 					signatory: await wallet
 						.coin()
@@ -155,7 +165,7 @@ describe("MultiSignatureDetail", () => {
 					data: {
 						hash: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco",
 					},
-					fee: "1",
+					fee: 1,
 					nonce: "1",
 					signatory: await wallet
 						.coin()

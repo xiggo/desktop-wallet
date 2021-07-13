@@ -168,8 +168,8 @@ export const Votes = () => {
 											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
 											values={{
 												name: currentVotes
-													?.find((vote) => vote.isResignedDelegate())
-													?.username(),
+													?.find(({ wallet }) => wallet!.isResignedDelegate())
+													?.wallet!.username(),
 											}}
 											components={{ bold: <strong /> }}
 										/>

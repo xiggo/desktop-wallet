@@ -57,7 +57,7 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 
 	const votesHelpLink = "https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote";
 
-	let votes: Contracts.IReadOnlyWallet[];
+	let votes: Contracts.VoteRegistryItem[];
 
 	try {
 		votes = wallet.voting().current();
@@ -65,9 +65,7 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 		votes = [];
 	}
 
-	const activeCount = votes.filter(
-		(delegate: Contracts.IReadOnlyWallet) => delegate.rank() && delegate.rank()! <= activeDelegates,
-	).length;
+	const activeCount = votes.filter(({ wallet }) => wallet!.rank() && wallet!.rank()! <= activeDelegates).length;
 
 	const renderStatuses = () => {
 		if (activeCount === votes.length) {
@@ -109,7 +107,7 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 	};
 
 	const renderVotes = () => {
-		const delegate = votes[0];
+		const delegate = votes[0].wallet!;
 
 		return (
 			<>

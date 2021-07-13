@@ -97,16 +97,16 @@ describe("AddressRow", () => {
 
 	it("should render when the maximum votes is greater than 1", () => {
 		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue(
-			[0, 1, 2, 3].map(
-				(index) =>
-					new ReadOnlyWallet({
-						address: data[index].address,
-						explorerLink: "",
-						publicKey: data[index].publicKey,
-						rank: data[index].rank,
-						username: data[index].username,
-					}),
-			),
+			[0, 1, 2, 3].map((index) => ({
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: data[index].address,
+					explorerLink: "",
+					publicKey: data[index].publicKey,
+					rank: data[index].rank,
+					username: data[index].username,
+				}),
+			})),
 		);
 
 		const { asFragment, container } = render(
@@ -125,16 +125,16 @@ describe("AddressRow", () => {
 
 	it("should render when the wallet has many votes", () => {
 		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue(
-			[0, 1, 2, 3, 4].map(
-				(index) =>
-					new ReadOnlyWallet({
-						address: data[index].address,
-						explorerLink: "",
-						publicKey: data[index].publicKey,
-						rank: data[index].rank,
-						username: data[index].username,
-					}),
-			),
+			[0, 1, 2, 3, 4].map((index) => ({
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: data[index].address,
+					explorerLink: "",
+					publicKey: data[index].publicKey,
+					rank: data[index].rank,
+					username: data[index].username,
+				}),
+			})),
 		);
 
 		const { asFragment, container } = render(

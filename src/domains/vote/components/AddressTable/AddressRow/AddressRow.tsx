@@ -22,7 +22,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
-	const [votes, setVotes] = useState<Contracts.IReadOnlyWallet[]>([]);
+	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 
 	const getIconName = (type: string) => {
 		switch (type) {
@@ -39,7 +39,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	useEffect(() => {
 		const loadVotes = () => {
-			let votes: Contracts.IReadOnlyWallet[] = [];
+			let votes: Contracts.VoteRegistryItem[] = [];
 
 			try {
 				votes = wallet.voting().current();
@@ -99,19 +99,21 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				{hasVotes ? (
 					maxVotes === 1 ? (
 						<>
-							<Avatar size="lg" address={votes[0].address()} noShadow />
-							<span>{votes[0].username()}</span>
+							<Avatar size="lg" address={votes[0].wallet?.address()} noShadow />
+							<span>{votes[0].wallet?.username()}</span>
 						</>
 					) : (
 						<div className="flex items-center h-11">
 							<div className="flex -space-x-3">
-								{renderAvatar(first.address(), first.username())}
+								{renderAvatar(first.wallet!.address(), first.wallet!.username())}
 
-								{second && renderAvatar(second.address(), second.username())}
+								{second && renderAvatar(second.wallet!.address(), second.wallet!.username())}
 
-								{third && renderAvatar(third.address(), third.username())}
+								{third && renderAvatar(third.wallet!.address(), third.wallet!.username())}
 
-								{rest && rest.length === 1 && renderAvatar(rest[0].address(), rest[0].username())}
+								{rest &&
+									rest.length === 1 &&
+									renderAvatar(rest[0].wallet!.address(), rest[0].wallet!.username())}
 
 								{rest && rest.length > 1 && (
 									<Circle size="lg" className="relative border-theme-text text-theme-text">
@@ -136,7 +138,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 			{maxVotes === 1 ? (
 				<>
 					<TableCell innerClassName="justify-center font-bold text-theme-secondary-text">
-						{hasVotes && <span>#{votes[0].rank()}</span>}
+						{votes[0]?.wallet && <span>#{votes[0].wallet.rank()}</span>}
 					</TableCell>
 
 					<TableCell innerClassName="justify-center">

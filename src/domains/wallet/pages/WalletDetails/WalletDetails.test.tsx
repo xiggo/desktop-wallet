@@ -213,20 +213,26 @@ describe("WalletDetails", () => {
 
 	it('should navigate to votes with "current" filter param when clicking on Multivote', async () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				rank: 1,
-				username: "arkx",
-			}),
-			new ReadOnlyWallet({
-				address: wallet.address(),
-				explorerLink: "",
-				publicKey: wallet.publicKey(),
-				rank: 2,
-				username: "arky",
-			}),
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					rank: 1,
+					username: "arkx",
+				}),
+			},
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: wallet.address(),
+					explorerLink: "",
+					publicKey: wallet.publicKey(),
+					rank: 2,
+					username: "arky",
+				}),
+			},
 		]);
 		const maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
 		const historySpy = jest.spyOn(history, "push");
