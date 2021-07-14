@@ -5,6 +5,7 @@ import { Modal } from "app/components/Modal";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext } from "app/contexts";
 import { toasts } from "app/services";
+import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import React, { useCallback, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -65,6 +66,8 @@ const Paginator = (properties: {
 };
 
 export const MultiSignatureDetail = ({ isOpen, wallet, transaction, onClose }: MultiSignatureDetailProperties) => {
+	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 	const form = useForm({ mode: "onChange" });
@@ -91,12 +94,14 @@ export const MultiSignatureDetail = ({ isOpen, wallet, transaction, onClose }: M
 			if (wallet.transaction().canBeBroadcasted(transaction.id())) {
 				await wallet.transaction().broadcast(transaction.id());
 			}
+
 			await persist();
 			setActiveStep(3);
-		} catch {
-			toasts.error(t("TRANSACTION.MULTISIGNATURE.ERROR.FAILED_TO_BROADCAST"));
+		} catch (error) {
+			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setActiveStep(10);
 		}
-	}, [wallet, transaction, persist, t]);
+	}, [wallet, transaction, persist]);
 
 	const addSignature = useCallback(
 		async ({ mnemonic }: { mnemonic: string }) => {
@@ -127,6 +132,15 @@ export const MultiSignatureDetail = ({ isOpen, wallet, transaction, onClose }: M
 
 					<TabPanel tabId={3}>
 						<SentStep transaction={transaction} wallet={wallet} />
+					</TabPanel>
+
+					<TabPanel tabId={10}>
+						<ErrorStep
+							onBack={onClose}
+							isRepeatDisabled={isSubmitting}
+							onRepeat={broadcast}
+							errorMessage={errorMessage}
+						/>
 					</TabPanel>
 
 					{canBeBroadascated && !canBeSigned && activeStep === 1 && (
