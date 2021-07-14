@@ -97,7 +97,7 @@
 		"@payvo/cryptography": "^1.0.1",
 		"@payvo/helpers": "^1.1.0",
 		"@payvo/intl": "^1.0.1",
-		"@payvo/news": "^1.0.0",
+		"@payvo/news": "^1.0.2",
 		"@payvo/profiles": "^1.0.1",
 		"@payvo/sdk": "^1.1.21",
 		"@payvo/sdk-ada": "^1.1.21",

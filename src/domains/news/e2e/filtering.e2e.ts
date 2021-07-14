@@ -9,44 +9,35 @@ const itemsPerPage = 15;
 const translations = buildTranslations();
 
 createFixture(`News filtering`, [
-	mockRequest("https://platform.ark.io/api/coins/signals?coins=ARK&page=1", "news/page-1"),
+	mockRequest("https://news.payvo.com/api?coins=ARK&page=1", "news/page-1"),
 	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK%2CETH&page=1&categories=Technical&query=major+league+hacking",
+		"https://news.payvo.com/api?coins=ARK%2CETH&page=1&categories=Technical&query=major+league+hacking",
 		"news/filtered",
 	),
 	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency",
+		"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency",
+		"news/filtered",
+	),
+	mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CEmergency", "news/filtered"),
+	mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical", "news/filtered"),
+	mockRequest(
+		"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical&query=major+league+hacking",
+		"news/filtered",
+	),
+	mockRequest("https://news.payvo.com/api?coins=ARK%2CETH&page=1&categories=Technical", "news/filtered"),
+	mockRequest(
+		"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency&query=major+league+hacking",
 		"news/filtered",
 	),
 	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK&page=1&categories=Technical%2CEmergency",
-		"news/filtered",
-	),
-	mockRequest("https://platform.ark.io/api/coins/signals?coins=ARK&page=1&categories=Technical", "news/filtered"),
-	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK&page=1&categories=Technical&query=major+league+hacking",
+		"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CEmergency&query=major+league+hacking",
 		"news/filtered",
 	),
 	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK%2CETH&page=1&categories=Technical",
+		"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical&query=major+league+hackin",
 		"news/filtered",
 	),
-	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency&query=major+league+hacking",
-		"news/filtered",
-	),
-	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK&page=1&categories=Technical%2CEmergency&query=major+league+hacking",
-		"news/filtered",
-	),
-	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK&page=1&categories=Technical&query=major+league+hackin",
-		"news/filtered",
-	),
-	mockRequest(
-		"https://platform.ark.io/api/coins/signals?coins=ARK&page=1&query=fjdskfjdfsdjfkdsfjdsfsd",
-		"news/empty-response",
-	),
+	mockRequest("https://news.payvo.com/api?coins=ARK&page=1&query=fjdskfjdfsdjfkdsfjdsfsd", "news/empty-response"),
 ]).beforeEach(async (t) => await goToNews(t));
 
 test("should display news feed", async (t) => {

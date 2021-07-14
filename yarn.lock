@@ -5022,10 +5022,10 @@
     "@payvo/intl" "^1.0.0"
     "@payvo/sdk-http" "^1.1.0"
 
-"@payvo/news@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@payvo/news/-/news-1.0.0.tgz#a8e7185cda5c3f71c6da39392eb4473bcc35b0e4"
-  integrity sha512-p934sTOjIMfQPr3Ps+sPLsehue46tEZt97mjJVj9djUkkKmO3Hk52OOtKjOe3PfR+rykO2tk8jQolnuFqvKk2w==
+"@payvo/news@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@payvo/news/-/news-1.0.2.tgz#c64e20d11bd2c588e62873ae9b11b0644d73680e"
+  integrity sha512-Mcf/RW5KE/zC0A/wSzjSCnaOKOX+Qpe//H8SrQ+yG+QgHs5kNvsU5cnONwWR5qElXrA1VE+S5sEUBq/dKVeRPQ==
   dependencies:
     "@payvo/sdk-http" "^1.1.0"
     rss-parser "^3.9.0"

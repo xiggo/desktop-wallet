@@ -7,7 +7,7 @@ import { goToProfile } from "../../profile/e2e/common";
 const translations = buildTranslations();
 
 createFixture("NavBar routing", [
-	mockRequest("https://platform.ark.io/api/coins/signals?coins=ARK&page=1", { data: [], meta: {} }),
+	mockRequest("https://news.payvo.com/api?coins=ARK&page=1", { data: [], meta: {} }),
 ]).beforeEach(async (t) => await goToProfile(t));
 
 test("should navigate to profile dashboard", async (t) => {

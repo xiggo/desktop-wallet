@@ -17,7 +17,6 @@ type Properties = {
 export const NewsCard = ({ text, category, author, created_at: createdAt, coverImage }: Properties) => {
 	const { t } = useTranslation();
 
-	// @ts-ignore
 	const asset: any = coins[author.coin?.toLowerCase()];
 
 	return (

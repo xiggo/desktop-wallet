@@ -21,8 +21,8 @@ describe("News", () => {
 
 		nock.disableNetConnect();
 
-		nock("https://platform.ark.io/api")
-			.get("/coins/signals?coins=ARK")
+		nock("https://news.payvo.com")
+			.get("/api?coins=ARK")
 			.reply(200, () => {
 				const { meta, data } = page1Fixture;
 				return {
@@ -30,7 +30,7 @@ describe("News", () => {
 					meta,
 				};
 			})
-			.get("/coins/signals?coins=ARK&page=1")
+			.get("/api?coins=ARK&page=1")
 			.reply(200, () => {
 				const { meta, data } = page1Fixture;
 				return {
@@ -38,7 +38,7 @@ describe("News", () => {
 					meta,
 				};
 			})
-			.get("/coins/signals?coins=ARK&page=2")
+			.get("/api?coins=ARK&page=2")
 			.reply(200, () => {
 				const { meta, data } = require("tests/fixtures/news/page-2.json");
 				return {
@@ -46,9 +46,9 @@ describe("News", () => {
 					meta,
 				};
 			})
-			.get("/coins/signals?coins=ARK&query=NoResult&page=1")
+			.get("/api?coins=ARK&query=NoResult&page=1")
 			.reply(200, require("tests/fixtures/news/empty-response.json"))
-			.get("/coins/signals")
+			.get("/api")
 			.query((parameters) => !!parameters.categories)
 			.reply(200, require("tests/fixtures/news/filtered.json"))
 			.persist();
