@@ -19,7 +19,7 @@ const useAccentColor = () => {
 		}
 
 		if (value === "green") {
-			document.body.classList.remove(ACCENT_BLUE_CLASS);
+			resetAccentColor();
 		}
 	};
 
@@ -32,8 +32,13 @@ const useAccentColor = () => {
 		}
 	};
 
+	const resetAccentColor = () => {
+		document.body.classList.remove(ACCENT_BLUE_CLASS);
+	};
+
 	return {
 		getCurrentAccentColor,
+		resetAccentColor,
 		setAccentColor,
 		setProfileAccentColor,
 	};

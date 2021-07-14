@@ -268,7 +268,7 @@ export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchro
 	const { allJobs } = useProfileJobs(profile);
 	const { start, stop, runAll } = useSynchronizer(allJobs);
 	const { setProfileTheme, resetTheme } = useTheme();
-	const { setProfileAccentColor } = useAccentColor();
+	const { setProfileAccentColor, resetAccentColor } = useAccentColor();
 	const { setScreenshotProtection } = useScreenshotProtection();
 	const history = useHistory();
 
@@ -279,6 +279,8 @@ export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchro
 			}
 
 			resetTheme();
+			resetAccentColor();
+
 			resetStatuses(env.profiles().values());
 
 			stop({ clearTimers: true });
@@ -330,6 +332,7 @@ export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchro
 		setTimeout(() => syncProfile(profile), 0);
 	}, [
 		env,
+		resetAccentColor,
 		resetTheme,
 		setProfileTheme,
 		setProfileAccentColor,
