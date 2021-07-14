@@ -1444,11 +1444,11 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
             data-testid="SelectNetwork__options"
           >
             <div
-              class=""
+              class="mt-6"
             >
               <ul
                 aria-labelledby="SendTransfer__network-label"
-                class="grid grid-cols-6 gap-3"
+                class="grid grid-cols-7 gap-3 mt-3"
                 id="SendTransfer__network-menu"
                 role="listbox"
               />
@@ -2276,26 +2276,60 @@ exports[`SendTransfer should render form and use location state 1`] = `
                             data-testid="SelectNetwork__options"
                           >
                             <div
-                              class=""
+                              class="mt-6"
                             >
+                              <div
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                PUBLIC NETWORKS
+                              </div>
                               <ul
                                 aria-labelledby="SendTransfer__network-label"
-                                class="grid grid-cols-6 gap-3"
+                                class="grid grid-cols-7 gap-3 mt-3"
                                 id="SendTransfer__network-menu"
                                 role="listbox"
                               />
                             </div>
                             <div
+                              class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+                              type="horizontal"
+                            />
+                            <div
                               class="mt-6"
                             >
+                              <div
+                                class="flex justify-between items-center"
+                              >
+                                <span
+                                  class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                                >
+                                  DEVELOPMENT NETWORKS
+                                </span>
+                                <label
+                                  class="flex"
+                                >
+                                  <input
+                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                    data-testid="SelectNetwork__developmentNetworks"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                  >
+                                    <span
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                    />
+                                  </div>
+                                </label>
+                              </div>
                               <ul
                                 aria-labelledby="SendTransfer__network-label"
-                                class="grid grid-cols-6 gap-3"
+                                class="grid grid-cols-7 gap-3 mt-3"
                                 id="SendTransfer__network-menu"
                                 role="listbox"
                               >
                                 <li
-                                  class="inline-block cursor-pointer h-21 cursor-not-allowed"
+                                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
                                   data-testid="SelectNetwork__NetworkIcon--container"
                                 >
                                   <div
@@ -3296,26 +3330,60 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             data-testid="SelectNetwork__options"
                           >
                             <div
-                              class=""
+                              class="mt-6"
                             >
+                              <div
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                PUBLIC NETWORKS
+                              </div>
                               <ul
                                 aria-labelledby="SendTransfer__network-label"
-                                class="grid grid-cols-6 gap-3"
+                                class="grid grid-cols-7 gap-3 mt-3"
                                 id="SendTransfer__network-menu"
                                 role="listbox"
                               />
                             </div>
                             <div
+                              class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+                              type="horizontal"
+                            />
+                            <div
                               class="mt-6"
                             >
+                              <div
+                                class="flex justify-between items-center"
+                              >
+                                <span
+                                  class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                                >
+                                  DEVELOPMENT NETWORKS
+                                </span>
+                                <label
+                                  class="flex"
+                                >
+                                  <input
+                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                    data-testid="SelectNetwork__developmentNetworks"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                  >
+                                    <span
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                    />
+                                  </div>
+                                </label>
+                              </div>
                               <ul
                                 aria-labelledby="SendTransfer__network-label"
-                                class="grid grid-cols-6 gap-3"
+                                class="grid grid-cols-7 gap-3 mt-3"
                                 id="SendTransfer__network-menu"
                                 role="listbox"
                               >
                                 <li
-                                  class="inline-block cursor-pointer h-21 cursor-not-allowed"
+                                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
                                   data-testid="SelectNetwork__NetworkIcon--container"
                                 >
                                   <div
@@ -3994,11 +4062,11 @@ exports[`SendTransfer should render form step 1`] = `
             data-testid="SelectNetwork__options"
           >
             <div
-              class=""
+              class="mt-6"
             >
               <ul
                 aria-labelledby="SendTransfer__network-label"
-                class="grid grid-cols-6 gap-3"
+                class="grid grid-cols-7 gap-3 mt-3"
                 id="SendTransfer__network-menu"
                 role="listbox"
               />
@@ -4504,11 +4572,11 @@ exports[`SendTransfer should render form step with deeplink values and use them 
             data-testid="SelectNetwork__options"
           >
             <div
-              class=""
+              class="mt-6"
             >
               <ul
                 aria-labelledby="SendTransfer__network-label"
-                class="grid grid-cols-6 gap-3"
+                class="grid grid-cols-7 gap-3 mt-3"
                 id="SendTransfer__network-menu"
                 role="listbox"
               />
@@ -5028,23 +5096,23 @@ exports[`SendTransfer should render form step without test networks 1`] = `
               class="mt-6"
             >
               <div
-                class="mb-3 text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
               >
                 PUBLIC NETWORKS
               </div>
               <ul
                 aria-labelledby="SendTransfer__network-label"
-                class="grid grid-cols-6 gap-3"
+                class="grid grid-cols-7 gap-3 mt-3"
                 id="SendTransfer__network-menu"
                 role="listbox"
               >
                 <li
-                  class="inline-block cursor-pointer h-21 cursor-not-allowed"
+                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
                   data-testid="SelectNetwork__NetworkIcon--container"
                 >
                   <div
                     aria-label="ARK"
-                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                     data-testid="NetworkIcon-ARK-ark.mainnet"
                   >
                     <div
@@ -5060,12 +5128,12 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                   </div>
                 </li>
                 <li
-                  class="inline-block cursor-pointer h-21 cursor-not-allowed"
+                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
                   data-testid="SelectNetwork__NetworkIcon--container"
                 >
                   <div
                     aria-label="Compendia"
-                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                     data-testid="NetworkIcon-ARK-bind.mainnet"
                   >
                     <div
@@ -5083,26 +5151,50 @@ exports[`SendTransfer should render form step without test networks 1`] = `
               </ul>
             </div>
             <div
+              class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+              type="horizontal"
+            />
+            <div
               class="mt-6"
             >
               <div
-                class="mb-3 text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                class="flex justify-between items-center"
               >
-                DEVELOPMENT NETWORKS
+                <span
+                  class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                >
+                  DEVELOPMENT NETWORKS
+                </span>
+                <label
+                  class="flex"
+                >
+                  <input
+                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                    data-testid="SelectNetwork__developmentNetworks"
+                    type="checkbox"
+                  />
+                  <div
+                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                  >
+                    <span
+                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                    />
+                  </div>
+                </label>
               </div>
               <ul
                 aria-labelledby="SendTransfer__network-label"
-                class="grid grid-cols-6 gap-3"
+                class="grid grid-cols-7 gap-3 mt-3"
                 id="SendTransfer__network-menu"
                 role="listbox"
               >
                 <li
-                  class="inline-block cursor-pointer h-21 cursor-not-allowed"
+                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
                   data-testid="SelectNetwork__NetworkIcon--container"
                 >
                   <div
                     aria-label="ARK Devnet"
-                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-300"
+                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
                     data-testid="NetworkIcon-ARK-ark.devnet"
                   >
                     <div
@@ -5118,12 +5210,12 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                   </div>
                 </li>
                 <li
-                  class="inline-block cursor-pointer h-21 cursor-not-allowed"
+                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
                   data-testid="SelectNetwork__NetworkIcon--container"
                 >
                   <div
                     aria-label="Compendia Testnet"
-                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-300"
+                    class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
                     data-testid="NetworkIcon-ARK-bind.testnet"
                   >
                     <div
@@ -5939,31 +6031,65 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                           data-testid="SelectNetwork__options"
                         >
                           <div
-                            class=""
+                            class="mt-6"
                           >
+                            <div
+                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                            >
+                              PUBLIC NETWORKS
+                            </div>
                             <ul
                               aria-labelledby="SendTransfer__network-step__select-label"
-                              class="grid grid-cols-6 gap-3"
+                              class="grid grid-cols-7 gap-3 mt-3"
                               id="SendTransfer__network-step__select-menu"
                               role="listbox"
                             />
                           </div>
                           <div
+                            class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+                            type="horizontal"
+                          />
+                          <div
                             class="mt-6"
                           >
+                            <div
+                              class="flex justify-between items-center"
+                            >
+                              <span
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                DEVELOPMENT NETWORKS
+                              </span>
+                              <label
+                                class="flex"
+                              >
+                                <input
+                                  class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                  data-testid="SelectNetwork__developmentNetworks"
+                                  type="checkbox"
+                                />
+                                <div
+                                  class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                >
+                                  <span
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  />
+                                </div>
+                              </label>
+                            </div>
                             <ul
                               aria-labelledby="SendTransfer__network-step__select-label"
-                              class="grid grid-cols-6 gap-3"
+                              class="grid grid-cols-7 gap-3 mt-3 hidden"
                               id="SendTransfer__network-step__select-menu"
                               role="listbox"
                             >
                               <li
-                                class="inline-block cursor-pointer h-21"
+                                class="inline-block cursor-pointer h-18"
                                 data-testid="SelectNetwork__NetworkIcon--container"
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-300"
+                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -6120,17 +6246,17 @@ exports[`SendTransfer should render network step without test networks 1`] = `
           >
             <ul
               aria-labelledby="SendTransfer__network-step__select-label"
-              class="grid grid-cols-6 gap-3"
+              class="grid grid-cols-7 gap-3 mt-3"
               id="SendTransfer__network-step__select-menu"
               role="listbox"
             >
               <li
-                class="inline-block cursor-pointer h-21"
+                class="inline-block cursor-pointer h-18"
                 data-testid="SelectNetwork__NetworkIcon--container"
               >
                 <div
                   aria-label="ARK"
-                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                   data-testid="NetworkIcon-ARK-ark.mainnet"
                 >
                   <div
@@ -6146,12 +6272,12 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                 </div>
               </li>
               <li
-                class="inline-block cursor-pointer h-21"
+                class="inline-block cursor-pointer h-18"
                 data-testid="SelectNetwork__NetworkIcon--container"
               >
                 <div
                   aria-label="Compendia"
-                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                   data-testid="NetworkIcon-ARK-bind.mainnet"
                 >
                   <div
@@ -7199,26 +7325,60 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                             data-testid="SelectNetwork__options"
                           >
                             <div
-                              class=""
+                              class="mt-6"
                             >
+                              <div
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                PUBLIC NETWORKS
+                              </div>
                               <ul
                                 aria-labelledby="SendTransfer__network-label"
-                                class="grid grid-cols-6 gap-3"
+                                class="grid grid-cols-7 gap-3 mt-3"
                                 id="SendTransfer__network-menu"
                                 role="listbox"
                               />
                             </div>
                             <div
+                              class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+                              type="horizontal"
+                            />
+                            <div
                               class="mt-6"
                             >
+                              <div
+                                class="flex justify-between items-center"
+                              >
+                                <span
+                                  class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                                >
+                                  DEVELOPMENT NETWORKS
+                                </span>
+                                <label
+                                  class="flex"
+                                >
+                                  <input
+                                    class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                    data-testid="SelectNetwork__developmentNetworks"
+                                    type="checkbox"
+                                  />
+                                  <div
+                                    class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                  >
+                                    <span
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                    />
+                                  </div>
+                                </label>
+                              </div>
                               <ul
                                 aria-labelledby="SendTransfer__network-label"
-                                class="grid grid-cols-6 gap-3"
+                                class="grid grid-cols-7 gap-3 mt-3"
                                 id="SendTransfer__network-menu"
                                 role="listbox"
                               >
                                 <li
-                                  class="inline-block cursor-pointer h-21 cursor-not-allowed"
+                                  class="inline-block cursor-pointer h-18 cursor-not-allowed"
                                   data-testid="SelectNetwork__NetworkIcon--container"
                                 >
                                   <div
@@ -8216,26 +8376,60 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                           data-testid="SelectNetwork__options"
                         >
                           <div
-                            class=""
+                            class="mt-6"
                           >
+                            <div
+                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                            >
+                              PUBLIC NETWORKS
+                            </div>
                             <ul
                               aria-labelledby="SendTransfer__network-step__select-label"
-                              class="grid grid-cols-6 gap-3"
+                              class="grid grid-cols-7 gap-3 mt-3"
                               id="SendTransfer__network-step__select-menu"
                               role="listbox"
                             />
                           </div>
                           <div
+                            class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+                            type="horizontal"
+                          />
+                          <div
                             class="mt-6"
                           >
+                            <div
+                              class="flex justify-between items-center"
+                            >
+                              <span
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                DEVELOPMENT NETWORKS
+                              </span>
+                              <label
+                                class="flex"
+                              >
+                                <input
+                                  class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                  data-testid="SelectNetwork__developmentNetworks"
+                                  type="checkbox"
+                                />
+                                <div
+                                  class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                >
+                                  <span
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  />
+                                </div>
+                              </label>
+                            </div>
                             <ul
                               aria-labelledby="SendTransfer__network-step__select-label"
-                              class="grid grid-cols-6 gap-3"
+                              class="grid grid-cols-7 gap-3 mt-3"
                               id="SendTransfer__network-step__select-menu"
                               role="listbox"
                             >
                               <li
-                                class="inline-block cursor-pointer h-21"
+                                class="inline-block cursor-pointer h-18"
                                 data-testid="SelectNetwork__NetworkIcon--container"
                               >
                                 <div

@@ -22,6 +22,7 @@ export const importWallet = async (t: any, passphrase = MNEMONICS[0], alias = "T
 	await t.click(Selector("button").withExactText(translations.COMMON.IMPORT));
 	await t.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists).ok();
 	await t.click('[data-testid="SelectNetworkInput__input"]');
+	await t.click(Selector('[data-testid="SelectNetwork__developmentNetworks"]'));
 	await t.click(Selector('[data-testid="NetworkIcon-ARK-ark.devnet"]'));
 
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
@@ -48,7 +49,14 @@ export const importWalletByAddress = async (t: any, address: string, alias = "Te
 	await t.click(Selector("button").withExactText(translations.COMMON.IMPORT));
 	await t.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists).ok();
 	await t.click('[data-testid="SelectNetworkInput__input"]');
-	await t.click(Selector(`[data-testid="NetworkIcon-ARK-ark.${!isMainnet ? "devnet" : "mainnet"}"]`));
+
+	if (isMainnet) {
+		await t.click(Selector(`[data-testid="NetworkIcon-ARK-ark.mainnet"]`));
+	} else {
+		await t.click(Selector('[data-testid="SelectNetwork__developmentNetworks"]'));
+		await t.click(Selector(`[data-testid="NetworkIcon-ARK-ark.devnet"]`));
+	}
+
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 
 	await t.click('[data-testid="SelectDropdown__input"]');

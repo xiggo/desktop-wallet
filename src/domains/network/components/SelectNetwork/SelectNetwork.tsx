@@ -1,4 +1,6 @@
 import { Networks } from "@payvo/sdk";
+import { Divider } from "app/components/Divider";
+import { Toggle } from "app/components/Toggle";
 import cn from "classnames";
 import { NetworkOption } from "domains/network/components/NetworkOption";
 import { CoinNetworkExtended } from "domains/network/data";
@@ -41,6 +43,8 @@ export const SelectNetwork = ({
 
 	const [items, setItems] = useState<Network[]>([]);
 	const [suggestion, setSuggestion] = useState("");
+
+	const [showDevelopmentNetworks, setShowDevelopmentNetworks] = useState(false);
 
 	const extendedItems = useMemo(
 		() =>
@@ -100,6 +104,11 @@ export const SelectNetwork = ({
 		},
 		onSelectedItemChange: ({ selectedItem }) => {
 			setSuggestion("");
+
+			if (selectedItem && !selectedItem.isLive() && !showDevelopmentNetworks) {
+				setShowDevelopmentNetworks(true);
+			}
+
 			onSelect?.(selectedItem);
 		},
 	});
@@ -140,6 +149,8 @@ export const SelectNetwork = ({
 		return "text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800";
 	};
 
+	const hasDevelopmentNetworks = developmentNetworks.length > 0;
+
 	return (
 		<div>
 			<div data-testid="SelectNetwork" {...getComboboxProps()}>
@@ -170,14 +181,14 @@ export const SelectNetwork = ({
 			</div>
 
 			<div data-testid="SelectNetwork__options" className={cn({ hidden: hideOptions })}>
-				<div className={publicNetworks.length > 0 ? "mt-6" : ""}>
-					{publicNetworks.length > 0 && developmentNetworks.length > 0 && (
-						<div className="mb-3 text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700">
+				<div className="mt-6">
+					{hasDevelopmentNetworks && (
+						<div className="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700">
 							{t("COMMON.PUBLIC_NETWORKS").toUpperCase()}
 						</div>
 					)}
 
-					<ul {...getMenuProps()} className="grid grid-cols-6 gap-3">
+					<ul {...getMenuProps()} className="grid grid-cols-7 gap-3 mt-3">
 						{publicNetworks.map((network: Networks.Network, index: number) => (
 							<NetworkOption
 								key={index}
@@ -190,26 +201,39 @@ export const SelectNetwork = ({
 					</ul>
 				</div>
 
-				{developmentNetworks.length > 0 && (
-					<div className="mt-6">
-						{publicNetworks.length > 0 && (
-							<div className="mb-3 text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700">
-								{t("COMMON.DEVELOPMENT_NETWORKS").toUpperCase()}
-							</div>
-						)}
+				{hasDevelopmentNetworks && (
+					<>
+						<Divider dashed />
 
-						<ul {...getMenuProps()} className="grid grid-cols-6 gap-3">
-							{developmentNetworks.map((network: Networks.Network, index: number) => (
-								<NetworkOption
-									key={index}
-									disabled={disabled}
-									network={network}
-									iconClassName={optionClassName(network)}
-									onClick={() => toggleSelection(network)}
+						<div className="mt-6">
+							<div className="flex justify-between items-center">
+								<span className="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700">
+									{t("COMMON.DEVELOPMENT_NETWORKS").toUpperCase()}
+								</span>
+
+								<Toggle
+									checked={showDevelopmentNetworks}
+									onChange={() => setShowDevelopmentNetworks(!showDevelopmentNetworks)}
+									data-testid="SelectNetwork__developmentNetworks"
 								/>
-							))}
-						</ul>
-					</div>
+							</div>
+
+							<ul
+								{...getMenuProps()}
+								className={cn("grid grid-cols-7 gap-3 mt-3", { hidden: !showDevelopmentNetworks })}
+							>
+								{developmentNetworks.map((network: Networks.Network, index: number) => (
+									<NetworkOption
+										key={index}
+										disabled={disabled}
+										network={network}
+										iconClassName={optionClassName(network)}
+										onClick={() => toggleSelection(network)}
+									/>
+								))}
+							</ul>
+						</div>
+					</>
 				)}
 			</div>
 		</div>

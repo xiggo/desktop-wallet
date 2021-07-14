@@ -1,6 +1,6 @@
 import { availableNetworksMock } from "domains/network/data";
 import React from "react";
-import { act, fireEvent, render, waitFor, within } from "utils/testing-library";
+import { fireEvent, render, screen, within } from "utils/testing-library";
 
 import { itemToString, SelectNetwork } from "./SelectNetwork";
 
@@ -18,223 +18,223 @@ describe("SelectNetwork", () => {
 	});
 
 	it("should render with hidden options", () => {
-		const { container, getByTestId } = render(<SelectNetwork networks={availableNetworksMock} hideOptions />);
+		const { container } = render(<SelectNetwork networks={availableNetworksMock} hideOptions />);
 
-		expect(getByTestId("SelectNetwork__options")).toHaveClass("hidden");
+		expect(screen.getByTestId("SelectNetwork__options")).toHaveClass("hidden");
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should filter the network icons based on the input value", () => {
-		const { getAllByTestId, getByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
-		const input = getByTestId("SelectNetworkInput__input");
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.focus(input);
-		});
+		fireEvent.focus(input);
 
 		const availableNetworksLength = availableNetworksMock.filter((network) => network.extra).length;
 
-		expect(getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(availableNetworksLength);
+		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(availableNetworksLength);
 
 		const value = "Ar";
 
-		act(() => {
-			fireEvent.change(input, { target: { value } });
-		});
+		fireEvent.change(input, { target: { value } });
 
-		expect(getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
-		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
+		expect(input).toHaveValue(value);
 
-		act(() => {
-			fireEvent.change(input, { target: { value: "" } });
-		});
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
-		expect(getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(availableNetworksLength);
+		fireEvent.change(input, { target: { value: "" } });
+
+		expect(input).toHaveValue("");
+
+		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(availableNetworksLength);
 	});
 
 	it("should show suggestion when typing has found at least one match", () => {
-		const { getByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
-		const input = getByTestId("SelectNetworkInput__input");
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.change(input, { target: { value: "ar" } });
-		});
+		fireEvent.change(input, { target: { value: "ar" } });
 
-		expect(getByTestId("Input__suggestion")).toHaveTextContent("arK");
+		expect(input).toHaveValue("ar");
+
+		expect(screen.getByTestId("Input__suggestion")).toHaveTextContent("arK");
 	});
 
 	it("should show call onInputChange callback when input value changed", () => {
 		const onInputChange = jest.fn();
 
-		const { getByTestId } = render(
-			<SelectNetwork networks={availableNetworksMock} onInputChange={onInputChange} />,
-		);
-		const input = getByTestId("SelectNetworkInput__input");
+		render(<SelectNetwork networks={availableNetworksMock} onInputChange={onInputChange} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.change(input, { target: { value: "ark" } });
-		});
+		fireEvent.change(input, { target: { value: "ark" } });
+
+		expect(input).toHaveValue("ark");
 
 		expect(onInputChange).toHaveBeenCalledWith("ark", "ark");
 
-		act(() => {
-			fireEvent.change(input, { target: { value: "no-match" } });
-		});
+		fireEvent.change(input, { target: { value: "no-match" } });
+
+		expect(input).toHaveValue("no-match");
 
 		expect(onInputChange).toHaveBeenCalledWith("no-match", "");
 
-		act(() => {
-			fireEvent.change(input, { target: { value: "" } });
-		});
+		fireEvent.change(input, { target: { value: "" } });
+
+		expect(input).toHaveValue("");
 
 		expect(onInputChange).toHaveBeenCalledWith();
 	});
 
 	it("should select first matching asset with enter", () => {
-		const { getByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
-		const input = getByTestId("SelectNetworkInput__input");
-		act(() => {
-			fireEvent.change(input, { target: { value: "ark" } });
-		});
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.keyDown(input, { code: 13, key: "Enter" });
-		});
+		fireEvent.change(input, { target: { value: "ark" } });
 
-		expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
+		expect(input).toHaveValue("ark");
+
+		fireEvent.keyDown(input, { code: 13, key: "Enter" });
+
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 	});
 
 	it("should select first matching asset with tab", () => {
-		const { getByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
-		const input = getByTestId("SelectNetworkInput__input");
-		act(() => {
-			fireEvent.change(input, { target: { value: "ark" } });
-		});
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.keyDown(input, { code: 9, key: "Tab" });
-		});
+		fireEvent.change(input, { target: { value: "ark" } });
 
-		expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
+		expect(input).toHaveValue("ark");
+
+		fireEvent.keyDown(input, { code: 9, key: "Tab" });
+
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 	});
 
 	it("should not select non-matching asset after key input and tab", () => {
-		const { getByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
-		const input = getByTestId("SelectNetworkInput__input");
-		act(() => {
-			fireEvent.change(input, { target: { value: "Bot" } });
-		});
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.keyDown(input, { code: 9, key: "Tab" });
-		});
+		fireEvent.change(input, { target: { value: "Bot" } });
 
-		expect(within(getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
+		expect(input).toHaveValue("Bot");
+
+		fireEvent.keyDown(input, { code: 9, key: "Tab" });
+
+		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
 	});
 
 	it("should not select first matched asset after random key enter", () => {
-		const { getByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
-		const input = getByTestId("SelectNetworkInput__input");
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.change(input, { target: { value: "Bitco" } });
-		});
+		fireEvent.change(input, { target: { value: "Bitco" } });
 
-		act(() => {
-			fireEvent.keyDown(input, { code: 65, key: "A" });
-		});
+		expect(input).toHaveValue("Bitco");
 
-		expect(within(getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
+		fireEvent.keyDown(input, { code: 65, key: "A" });
+
+		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
 	});
 
 	it("should clear selection when changing input", () => {
-		const { getByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
-		const input = getByTestId("SelectNetworkInput__input");
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.change(input, { target: { value: "ark" } });
-		});
+		fireEvent.change(input, { target: { value: "ark" } });
 
-		act(() => {
-			fireEvent.keyDown(input, { code: 13, key: "Enter" });
-		});
+		expect(input).toHaveValue("ark");
 
-		expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
+		fireEvent.keyDown(input, { code: 13, key: "Enter" });
 
-		act(() => {
-			fireEvent.change(input, { target: { value: "test" } });
-		});
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 
-		act(() => {
-			fireEvent.keyDown(input, { code: 65, key: "A" });
-		});
-		act(() => {
-			fireEvent.keyDown(input, { code: 65, key: "B" });
-		});
+		fireEvent.change(input, { target: { value: "test" } });
 
-		expect(within(getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
+		expect(input).toHaveValue("");
+
+		fireEvent.keyDown(input, { code: 65, key: "A" });
+
+		expect(input).toHaveValue("");
+
+		fireEvent.keyDown(input, { code: 65, key: "B" });
+
+		expect(input).toHaveValue("");
+
+		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
 	});
 
-	it("should select an item by clicking on it", async () => {
-		const { getByTestId, queryByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
+	it("should select an item by clicking on it", () => {
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		act(() => {
-			fireEvent.focus(getByTestId("SelectNetworkInput__input"));
-		});
+		fireEvent.focus(input);
 
-		act(() => {
-			fireEvent.change(getByTestId("SelectNetworkInput__input"), { target: { value: "ARK" } });
-		});
+		fireEvent.change(input, { target: { value: "ARK" } });
 
-		await waitFor(() => expect(getByTestId("Input__suggestion")).toBeTruthy());
+		expect(input).toHaveValue("ARK");
+		expect(screen.getByTestId("Input__suggestion")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy();
 
-		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy();
+		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
-		act(() => {
-			fireEvent.click(getByTestId("NetworkIcon-ARK-ark.mainnet"));
-		});
+		expect(screen.queryByTestId("Input__suggestion")).not.toBeInTheDocument();
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeTruthy();
 
-		await waitFor(() => expect(queryByTestId("Input__suggestion")).not.toBeInTheDocument());
+		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 
-		expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
-
-		expect(getByTestId("NetworkIcon-ARK-ark.devnet")).toBeTruthy();
-
-		act(() => {
-			fireEvent.click(getByTestId("NetworkIcon-ARK-ark.devnet"));
-		});
-
-		await waitFor(() =>
-			expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet"),
-		);
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 	});
 
-	it("should toggle selection by clicking on network icon", async () => {
-		const { getByTestId } = render(<SelectNetwork networks={availableNetworksMock} />);
+	it("should toggle selection by clicking on network icon", () => {
+		render(<SelectNetwork networks={availableNetworksMock} />);
 
-		act(() => {
-			fireEvent.focus(getByTestId("SelectNetworkInput__input"));
-		});
+		fireEvent.focus(screen.getByTestId("SelectNetworkInput__input"));
 
-		await waitFor(() => expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy());
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy();
 
-		act(() => {
-			fireEvent.click(getByTestId("NetworkIcon-ARK-ark.mainnet"));
-		});
+		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
-		await waitFor(() => expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK"));
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 
-		act(() => {
-			fireEvent.focus(getByTestId("SelectNetworkInput__input"));
-		});
+		fireEvent.focus(screen.getByTestId("SelectNetworkInput__input"));
 
-		await waitFor(() => expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy());
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy();
 
-		act(() => {
-			fireEvent.click(getByTestId("NetworkIcon-ARK-ark.mainnet"));
-		});
+		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
-		await waitFor(() => expect(getByTestId("SelectNetworkInput__network")).not.toHaveAttribute("aria-label"));
+		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute("aria-label");
+	});
+
+	it("should show and hide development networks through toggle", () => {
+		render(<SelectNetwork networks={availableNetworksMock} />);
+
+		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
+
+		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks"));
+
+		expect(screen.getAllByRole("listbox")[1]).not.toHaveClass("hidden");
+
+		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks"));
+
+		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
+	});
+
+	it("should show development networks if selected through input", () => {
+		render(<SelectNetwork networks={availableNetworksMock} />);
+		const input = screen.getByTestId("SelectNetworkInput__input");
+
+		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
+
+		fireEvent.change(input, { target: { value: "ARK D" } });
+
+		expect(input).toHaveValue("ARK D");
+
+		fireEvent.keyDown(input, { code: 13, key: "Enter" });
+
+		expect(screen.getAllByRole("listbox")[1]).not.toHaveClass("hidden");
 	});
 
 	it("should return empty if the item has not defined", () => {

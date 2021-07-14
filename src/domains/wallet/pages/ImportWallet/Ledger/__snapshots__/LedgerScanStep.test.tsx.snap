@@ -98,11 +98,11 @@ exports[`LedgerScanStep should render 1`] = `
           data-testid="SelectNetwork__options"
         >
           <div
-            class=""
+            class="mt-6"
           >
             <ul
               aria-labelledby="ImportWallet__network-label"
-              class="grid grid-cols-6 gap-3"
+              class="grid grid-cols-7 gap-3 mt-3"
               id="ImportWallet__network-menu"
               role="listbox"
             />

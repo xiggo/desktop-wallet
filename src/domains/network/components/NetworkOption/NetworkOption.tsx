@@ -25,7 +25,7 @@ export const NetworkOption = memo(
 			return <></>;
 		}
 
-		const iconColorClass = network.isLive() ? "text-theme-secondary-700" : "text-theme-primary-300";
+		const iconColorClass = network.isLive() ? "text-theme-primary-600" : "text-theme-secondary-700";
 
 		const handleClick = () => {
 			if (!disabled) {
@@ -35,7 +35,7 @@ export const NetworkOption = memo(
 
 		return (
 			<li
-				className={cn("inline-block cursor-pointer h-21", { "cursor-not-allowed": disabled })}
+				className={cn("inline-block cursor-pointer h-18", { "cursor-not-allowed": disabled })}
 				data-testid="SelectNetwork__NetworkIcon--container"
 				onClick={handleClick}
 			>

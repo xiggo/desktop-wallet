@@ -28,6 +28,7 @@ createFixture(
 test("should import a wallet by mnemonic", async (t) => {
 	// Select a cryptoasset and advance to second step
 	await t.click('[data-testid="SelectNetworkInput__input"]');
+	await t.click(Selector('[data-testid="SelectNetwork__developmentNetworks"]'));
 	await t.click(Selector('[data-testid="NetworkIcon-ARK-ark.devnet"]'));
 	await t
 		.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
@@ -57,6 +58,7 @@ test("should import a wallet by mnemonic", async (t) => {
 test("should import a wallet by address", async (t) => {
 	// Select a cryptoasset and advance to the step two
 	await t.click('[data-testid="SelectNetworkInput__input"]');
+	await t.click(Selector('[data-testid="SelectNetwork__developmentNetworks"]'));
 	await t.click(Selector('[data-testid="NetworkIcon-ARK-ark.devnet"]'));
 	await t
 		.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
@@ -87,6 +89,7 @@ test("should import a wallet by address", async (t) => {
 test("should show an error message for invalid address", async (t) => {
 	// Select a cryptoasset and advance to step two
 	await t.click('[data-testid="SelectNetworkInput__input"]');
+	await t.click(Selector('[data-testid="SelectNetwork__developmentNetworks"]'));
 	await t.click(Selector('[data-testid="NetworkIcon-ARK-ark.devnet"]'));
 	await t
 		.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
@@ -111,6 +114,7 @@ test("should show an error message for duplicate address", async (t) => {
 
 	// Select a cryptoasset and advance to step two
 	await t.click('[data-testid="SelectNetworkInput__input"]');
+	await t.click(Selector('[data-testid="SelectNetwork__developmentNetworks"]'));
 	await t.click(Selector('[data-testid="NetworkIcon-ARK-ark.devnet"]'));
 	await t
 		.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
@@ -136,6 +140,7 @@ test("should show an error message for duplicate address", async (t) => {
 
 	// Select a cryptoasset and advance to step two
 	await t.click('[data-testid="SelectNetworkInput__input"]');
+	await t.click(Selector('[data-testid="SelectNetwork__developmentNetworks"]'));
 	await t.click(Selector('[data-testid="NetworkIcon-ARK-ark.devnet"]'));
 	await t
 		.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))

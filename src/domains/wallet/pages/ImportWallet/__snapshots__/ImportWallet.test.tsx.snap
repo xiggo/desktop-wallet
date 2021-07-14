@@ -759,23 +759,23 @@ exports[`ImportWallet should render as ledger import 1`] = `
                             class="mt-6"
                           >
                             <div
-                              class="mb-3 text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
                             >
                               PUBLIC NETWORKS
                             </div>
                             <ul
                               aria-labelledby="NetworkStep__network-label"
-                              class="grid grid-cols-6 gap-3"
+                              class="grid grid-cols-7 gap-3 mt-3"
                               id="NetworkStep__network-menu"
                               role="listbox"
                             >
                               <li
-                                class="inline-block cursor-pointer h-21"
+                                class="inline-block cursor-pointer h-18"
                                 data-testid="SelectNetwork__NetworkIcon--container"
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                                   data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
@@ -791,12 +791,12 @@ exports[`ImportWallet should render as ledger import 1`] = `
                                 </div>
                               </li>
                               <li
-                                class="inline-block cursor-pointer h-21"
+                                class="inline-block cursor-pointer h-18"
                                 data-testid="SelectNetwork__NetworkIcon--container"
                               >
                                 <div
                                   aria-label="Compendia"
-                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                                   data-testid="NetworkIcon-ARK-bind.mainnet"
                                 >
                                   <div
@@ -814,26 +814,50 @@ exports[`ImportWallet should render as ledger import 1`] = `
                             </ul>
                           </div>
                           <div
+                            class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+                            type="horizontal"
+                          />
+                          <div
                             class="mt-6"
                           >
                             <div
-                              class="mb-3 text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              class="flex justify-between items-center"
                             >
-                              DEVELOPMENT NETWORKS
+                              <span
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                DEVELOPMENT NETWORKS
+                              </span>
+                              <label
+                                class="flex"
+                              >
+                                <input
+                                  class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                  data-testid="SelectNetwork__developmentNetworks"
+                                  type="checkbox"
+                                />
+                                <div
+                                  class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                >
+                                  <span
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  />
+                                </div>
+                              </label>
                             </div>
                             <ul
                               aria-labelledby="NetworkStep__network-label"
-                              class="grid grid-cols-6 gap-3"
+                              class="grid grid-cols-7 gap-3 mt-3 hidden"
                               id="NetworkStep__network-menu"
                               role="listbox"
                             >
                               <li
-                                class="inline-block cursor-pointer h-21"
+                                class="inline-block cursor-pointer h-18"
                                 data-testid="SelectNetwork__NetworkIcon--container"
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-300"
+                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -849,12 +873,12 @@ exports[`ImportWallet should render as ledger import 1`] = `
                                 </div>
                               </li>
                               <li
-                                class="inline-block cursor-pointer h-21"
+                                class="inline-block cursor-pointer h-18"
                                 data-testid="SelectNetwork__NetworkIcon--container"
                               >
                                 <div
                                   aria-label="Compendia Testnet"
-                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-300"
+                                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
                                   data-testid="NetworkIcon-ARK-bind.testnet"
                                 >
                                   <div
@@ -1001,23 +1025,23 @@ exports[`ImportWallet should render network step 1`] = `
             class="mt-6"
           >
             <div
-              class="mb-3 text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
             >
               PUBLIC NETWORKS
             </div>
             <ul
               aria-labelledby="NetworkStep__network-label"
-              class="grid grid-cols-6 gap-3"
+              class="grid grid-cols-7 gap-3 mt-3"
               id="NetworkStep__network-menu"
               role="listbox"
             >
               <li
-                class="inline-block cursor-pointer h-21"
+                class="inline-block cursor-pointer h-18"
                 data-testid="SelectNetwork__NetworkIcon--container"
               >
                 <div
                   aria-label="ARK"
-                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                   data-testid="NetworkIcon-ARK-ark.mainnet"
                 >
                   <div
@@ -1033,12 +1057,12 @@ exports[`ImportWallet should render network step 1`] = `
                 </div>
               </li>
               <li
-                class="inline-block cursor-pointer h-21"
+                class="inline-block cursor-pointer h-18"
                 data-testid="SelectNetwork__NetworkIcon--container"
               >
                 <div
                   aria-label="Compendia"
-                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                   data-testid="NetworkIcon-ARK-bind.mainnet"
                 >
                   <div
@@ -1056,26 +1080,50 @@ exports[`ImportWallet should render network step 1`] = `
             </ul>
           </div>
           <div
+            class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+            type="horizontal"
+          />
+          <div
             class="mt-6"
           >
             <div
-              class="mb-3 text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+              class="flex justify-between items-center"
             >
-              DEVELOPMENT NETWORKS
+              <span
+                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+              >
+                DEVELOPMENT NETWORKS
+              </span>
+              <label
+                class="flex"
+              >
+                <input
+                  class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                  data-testid="SelectNetwork__developmentNetworks"
+                  type="checkbox"
+                />
+                <div
+                  class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                >
+                  <span
+                    class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                  />
+                </div>
+              </label>
             </div>
             <ul
               aria-labelledby="NetworkStep__network-label"
-              class="grid grid-cols-6 gap-3"
+              class="grid grid-cols-7 gap-3 mt-3 hidden"
               id="NetworkStep__network-menu"
               role="listbox"
             >
               <li
-                class="inline-block cursor-pointer h-21"
+                class="inline-block cursor-pointer h-18"
                 data-testid="SelectNetwork__NetworkIcon--container"
               >
                 <div
                   aria-label="ARK Devnet"
-                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-300"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
                   data-testid="NetworkIcon-ARK-ark.devnet"
                 >
                   <div
@@ -1091,12 +1139,12 @@ exports[`ImportWallet should render network step 1`] = `
                 </div>
               </li>
               <li
-                class="inline-block cursor-pointer h-21"
+                class="inline-block cursor-pointer h-18"
                 data-testid="SelectNetwork__NetworkIcon--container"
               >
                 <div
                   aria-label="Compendia Testnet"
-                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-300"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
                   data-testid="NetworkIcon-ARK-bind.testnet"
                 >
                   <div
@@ -1205,17 +1253,17 @@ exports[`ImportWallet should render network step without test networks 1`] = `
           >
             <ul
               aria-labelledby="NetworkStep__network-label"
-              class="grid grid-cols-6 gap-3"
+              class="grid grid-cols-7 gap-3 mt-3"
               id="NetworkStep__network-menu"
               role="listbox"
             >
               <li
-                class="inline-block cursor-pointer h-21"
+                class="inline-block cursor-pointer h-18"
                 data-testid="SelectNetwork__NetworkIcon--container"
               >
                 <div
                   aria-label="ARK"
-                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                   data-testid="NetworkIcon-ARK-ark.mainnet"
                 >
                   <div
@@ -1231,12 +1279,12 @@ exports[`ImportWallet should render network step without test networks 1`] = `
                 </div>
               </li>
               <li
-                class="inline-block cursor-pointer h-21"
+                class="inline-block cursor-pointer h-18"
                 data-testid="SelectNetwork__NetworkIcon--container"
               >
                 <div
                   aria-label="Compendia"
-                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
                   data-testid="NetworkIcon-ARK-bind.mainnet"
                 >
                   <div
