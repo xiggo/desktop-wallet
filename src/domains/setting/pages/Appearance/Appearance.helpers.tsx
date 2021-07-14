@@ -16,14 +16,14 @@ export const useAppearanceItems = (): Record<string, any>[] => {
 			label: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE")}`,
 			labelDescription: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.DESCRIPTION")}`,
 			value: <AppearanceAccentColor />,
-			wrapperClass: "pt-4 pb-6",
+			wrapperClass: "pb-6",
 		},
 		{
 			isFloatingLabel: false,
 			label: `${t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")}`,
 			labelDescription: `${t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.DESCRIPTION")}`,
 			value: <AppearanceViewingMode />,
-			wrapperClass: "pt-4 pb-6",
+			wrapperClass: "pt-6",
 		},
 	];
 };

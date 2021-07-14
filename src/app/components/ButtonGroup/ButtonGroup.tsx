@@ -12,7 +12,7 @@ type ButtonGroupOptionVariant = "default" | "modern";
 
 const ButtonGroupOptionStyled = styled.button<{ variant: ButtonGroupOptionVariant }>(({ variant }) => {
 	let styles = [
-		tw`flex items-center justify-center w-full h-full`,
+		tw`flex items-center justify-center w-full h-full transition-colors duration-300`,
 		tw`p-3 font-semibold text-theme-secondary-700`,
 		tw`border-2 border-theme-primary-100`,
 		tw`dark:(border-theme-secondary-800 text-theme-secondary-200)`,
@@ -21,27 +21,20 @@ const ButtonGroupOptionStyled = styled.button<{ variant: ButtonGroupOptionVarian
 			border border-theme-secondary-300 text-theme-secondary-500 cursor-not-allowed
 			dark:(text-theme-secondary-700 border-theme-secondary-700)
 		)`,
+		tw`hover:(border-theme-primary-400 text-theme-text)`,
 		css`
 			&[aria-checked="true"] {
-				${tw`text-theme-text border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 cursor-default`}
+				${tw`text-theme-text border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900 cursor-default`}
 			}
 		`,
 	];
 
 	if (variant === "default") {
-		styles = [...styles, tw`rounded transition-colors duration-300`];
+		styles = [...styles, tw`rounded`];
 	}
 
 	if (variant === "modern") {
-		styles = [
-			...styles,
-			tw`h-12 rounded-xl`,
-			css`
-				&:hover:not([aria-checked="true"]) {
-					${tw`border-transparent shadow-xl`}
-				}
-			`,
-		];
+		styles = [...styles, tw`h-14 rounded-xl`];
 	}
 
 	return styles;

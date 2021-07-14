@@ -48,7 +48,7 @@ export const AppearanceAccentColor: React.FC = () => {
 					value={key}
 					variant="modern"
 				>
-					<div className={`w-5 h-5 rounded ${className}`} />
+					<div className={`w-5 h-5 mx-1 rounded ${className}`} />
 				</ButtonGroupOption>
 			))}
 		</ButtonGroup>

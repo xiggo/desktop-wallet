@@ -48,7 +48,7 @@ export const AppearanceViewingMode: React.FC = () => {
 					variant="modern"
 				>
 					<div className="flex items-center space-x-2 px-2">
-						<Icon size="lg" name={icon} />
+						<Icon size="lg" name={icon} className="dark:text-theme-secondary-600" />
 						<span>{name}</span>
 					</div>
 				</ButtonGroupOption>
