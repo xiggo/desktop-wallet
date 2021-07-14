@@ -38,7 +38,7 @@ const ButtonGroupOptionStyled = styled.button<{ variant: ButtonGroupOptionVarian
 			tw`h-12 rounded-xl`,
 			css`
 				&:hover:not([aria-checked="true"]) {
-					${tw`border-transparent shadow-2xl`}
+					${tw`border-transparent shadow-xl`}
 				}
 			`,
 		];

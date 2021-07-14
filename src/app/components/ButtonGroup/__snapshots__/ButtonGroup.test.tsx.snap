@@ -41,7 +41,7 @@ exports[`ButtonGroupOption should render with modern variant 1`] = `
   <button
     aria-checked="false"
     aria-label="tooltip"
-    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 kljpGq"
+    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 iWVGbR"
     data-testid="ButtonGroupOption"
     role="radio"
     type="button"
