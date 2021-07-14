@@ -7,7 +7,7 @@ import { useActiveProfile, useValidation } from "app/hooks";
 import { toasts } from "app/services";
 import { SettingsWrapper } from "domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "domains/setting/hooks/use-settings-prompt";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Prompt } from "react-router-dom";
@@ -41,6 +41,12 @@ export const PasswordSettings = () => {
 
 	const { isDirty, dirtyFields, isValid } = formState;
 	const { getPromptMessage } = useSettingsPrompt({ dirtyFields, isDirty });
+
+	useEffect(() => {
+		if (confirmPassword) {
+			trigger("confirmPassword");
+		}
+	}, [password, trigger]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const handleSubmit = async ({ currentPassword, password }: PasswordSettingsState) => {
 		try {
@@ -96,11 +102,6 @@ export const PasswordSettings = () => {
 						<FormLabel label={t("SETTINGS.PASSWORD.PASSWORD_1")} />
 						<InputPassword
 							ref={register(passwordValidation.password(currentPassword))}
-							onChange={() => {
-								if (confirmPassword) {
-									trigger("confirmPassword");
-								}
-							}}
 							data-testid={`Password-settings__input--password_1`}
 						/>
 					</FormField>

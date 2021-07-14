@@ -3324,12 +3324,12 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-98-menu"
+                        aria-owns="downshift-99-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-98-input"
-                          id="downshift-98-label"
+                          for="downshift-99-input"
+                          id="downshift-99-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -3344,12 +3344,12 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="downshift-98-menu"
-                              aria-labelledby="downshift-98-label"
+                              aria-controls="downshift-99-menu"
+                              aria-labelledby="downshift-99-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
-                              id="downshift-98-input"
+                              id="downshift-99-input"
                               name="currency"
                               placeholder="Select Currency"
                               value=""
@@ -3379,9 +3379,9 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-98-label"
+                          aria-labelledby="downshift-99-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
-                          id="downshift-98-menu"
+                          id="downshift-99-menu"
                           role="listbox"
                         />
                       </div>
@@ -3803,12 +3803,12 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-120-menu"
+                        aria-owns="downshift-121-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-120-input"
-                          id="downshift-120-label"
+                          for="downshift-121-input"
+                          id="downshift-121-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -3822,14 +3822,14 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-120-item-0"
+                              aria-activedescendant="downshift-121-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-120-menu"
-                              aria-labelledby="downshift-120-label"
+                              aria-controls="downshift-121-menu"
+                              aria-labelledby="downshift-121-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-120-input"
+                              id="downshift-121-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -3869,16 +3869,16 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-120-label"
+                          aria-labelledby="downshift-121-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
-                          id="downshift-120-menu"
+                          id="downshift-121-menu"
                           role="listbox"
                         >
                           <li
                             aria-selected="true"
                             class="select-list-option is-highlighted is-selected"
                             data-testid="SelectDropdown__option--0"
-                            id="downshift-120-item-0"
+                            id="downshift-121-item-0"
                             role="option"
                           >
                             <div
@@ -3891,7 +3891,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--1"
-                            id="downshift-120-item-1"
+                            id="downshift-121-item-1"
                             role="option"
                           >
                             <div
@@ -3904,7 +3904,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--2"
-                            id="downshift-120-item-2"
+                            id="downshift-121-item-2"
                             role="option"
                           >
                             <div
@@ -3917,7 +3917,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--3"
-                            id="downshift-120-item-3"
+                            id="downshift-121-item-3"
                             role="option"
                           >
                             <div
@@ -3930,7 +3930,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--4"
-                            id="downshift-120-item-4"
+                            id="downshift-121-item-4"
                             role="option"
                           >
                             <div
@@ -3943,7 +3943,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--5"
-                            id="downshift-120-item-5"
+                            id="downshift-121-item-5"
                             role="option"
                           >
                             <div
@@ -3956,7 +3956,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--6"
-                            id="downshift-120-item-6"
+                            id="downshift-121-item-6"
                             role="option"
                           >
                             <div
@@ -3969,7 +3969,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--7"
-                            id="downshift-120-item-7"
+                            id="downshift-121-item-7"
                             role="option"
                           >
                             <div
@@ -3982,7 +3982,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--8"
-                            id="downshift-120-item-8"
+                            id="downshift-121-item-8"
                             role="option"
                           >
                             <div
@@ -3995,7 +3995,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--9"
-                            id="downshift-120-item-9"
+                            id="downshift-121-item-9"
                             role="option"
                           >
                             <div
@@ -4008,7 +4008,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--10"
-                            id="downshift-120-item-10"
+                            id="downshift-121-item-10"
                             role="option"
                           >
                             <div
@@ -4021,7 +4021,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--11"
-                            id="downshift-120-item-11"
+                            id="downshift-121-item-11"
                             role="option"
                           >
                             <div
@@ -4034,7 +4034,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--12"
-                            id="downshift-120-item-12"
+                            id="downshift-121-item-12"
                             role="option"
                           >
                             <div
@@ -4047,7 +4047,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--13"
-                            id="downshift-120-item-13"
+                            id="downshift-121-item-13"
                             role="option"
                           >
                             <div
@@ -4060,7 +4060,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--14"
-                            id="downshift-120-item-14"
+                            id="downshift-121-item-14"
                             role="option"
                           >
                             <div
@@ -4073,7 +4073,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--15"
-                            id="downshift-120-item-15"
+                            id="downshift-121-item-15"
                             role="option"
                           >
                             <div
@@ -4086,7 +4086,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--16"
-                            id="downshift-120-item-16"
+                            id="downshift-121-item-16"
                             role="option"
                           >
                             <div
@@ -4099,7 +4099,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--17"
-                            id="downshift-120-item-17"
+                            id="downshift-121-item-17"
                             role="option"
                           >
                             <div
@@ -6476,12 +6476,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-88-menu"
+                        aria-owns="downshift-89-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-88-input"
-                          id="downshift-88-label"
+                          for="downshift-89-input"
+                          id="downshift-89-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -6496,12 +6496,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="downshift-88-menu"
-                              aria-labelledby="downshift-88-label"
+                              aria-controls="downshift-89-menu"
+                              aria-labelledby="downshift-89-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
-                              id="downshift-88-input"
+                              id="downshift-89-input"
                               name="currency"
                               placeholder="Select Currency"
                               value=""
@@ -6531,9 +6531,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-88-label"
+                          aria-labelledby="downshift-89-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
-                          id="downshift-88-menu"
+                          id="downshift-89-menu"
                           role="listbox"
                         />
                       </div>
@@ -6974,12 +6974,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-88-menu"
+                        aria-owns="downshift-89-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-88-input"
-                          id="downshift-88-label"
+                          for="downshift-89-input"
+                          id="downshift-89-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -6994,12 +6994,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="downshift-88-menu"
-                              aria-labelledby="downshift-88-label"
+                              aria-controls="downshift-89-menu"
+                              aria-labelledby="downshift-89-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
-                              id="downshift-88-input"
+                              id="downshift-89-input"
                               name="currency"
                               placeholder="Select Currency"
                               value=""
@@ -7029,9 +7029,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-88-label"
+                          aria-labelledby="downshift-89-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
-                          id="downshift-88-menu"
+                          id="downshift-89-menu"
                           role="listbox"
                         />
                       </div>
@@ -7453,12 +7453,12 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-104-menu"
+                        aria-owns="downshift-105-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-104-input"
-                          id="downshift-104-label"
+                          for="downshift-105-input"
+                          id="downshift-105-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -7472,14 +7472,14 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-104-item-0"
+                              aria-activedescendant="downshift-105-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-104-menu"
-                              aria-labelledby="downshift-104-label"
+                              aria-controls="downshift-105-menu"
+                              aria-labelledby="downshift-105-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-104-input"
+                              id="downshift-105-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -7519,16 +7519,16 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-104-label"
+                          aria-labelledby="downshift-105-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
-                          id="downshift-104-menu"
+                          id="downshift-105-menu"
                           role="listbox"
                         >
                           <li
                             aria-selected="true"
                             class="select-list-option is-highlighted is-selected"
                             data-testid="SelectDropdown__option--0"
-                            id="downshift-104-item-0"
+                            id="downshift-105-item-0"
                             role="option"
                           >
                             <div
@@ -7541,7 +7541,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--1"
-                            id="downshift-104-item-1"
+                            id="downshift-105-item-1"
                             role="option"
                           >
                             <div
@@ -7554,7 +7554,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--2"
-                            id="downshift-104-item-2"
+                            id="downshift-105-item-2"
                             role="option"
                           >
                             <div
@@ -7567,7 +7567,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--3"
-                            id="downshift-104-item-3"
+                            id="downshift-105-item-3"
                             role="option"
                           >
                             <div
@@ -7580,7 +7580,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--4"
-                            id="downshift-104-item-4"
+                            id="downshift-105-item-4"
                             role="option"
                           >
                             <div
@@ -7593,7 +7593,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--5"
-                            id="downshift-104-item-5"
+                            id="downshift-105-item-5"
                             role="option"
                           >
                             <div
@@ -7606,7 +7606,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--6"
-                            id="downshift-104-item-6"
+                            id="downshift-105-item-6"
                             role="option"
                           >
                             <div
@@ -7619,7 +7619,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--7"
-                            id="downshift-104-item-7"
+                            id="downshift-105-item-7"
                             role="option"
                           >
                             <div
@@ -7632,7 +7632,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--8"
-                            id="downshift-104-item-8"
+                            id="downshift-105-item-8"
                             role="option"
                           >
                             <div
@@ -7645,7 +7645,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--9"
-                            id="downshift-104-item-9"
+                            id="downshift-105-item-9"
                             role="option"
                           >
                             <div
@@ -7658,7 +7658,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--10"
-                            id="downshift-104-item-10"
+                            id="downshift-105-item-10"
                             role="option"
                           >
                             <div
@@ -7671,7 +7671,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--11"
-                            id="downshift-104-item-11"
+                            id="downshift-105-item-11"
                             role="option"
                           >
                             <div
@@ -7684,7 +7684,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--12"
-                            id="downshift-104-item-12"
+                            id="downshift-105-item-12"
                             role="option"
                           >
                             <div
@@ -7697,7 +7697,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--13"
-                            id="downshift-104-item-13"
+                            id="downshift-105-item-13"
                             role="option"
                           >
                             <div
@@ -7710,7 +7710,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--14"
-                            id="downshift-104-item-14"
+                            id="downshift-105-item-14"
                             role="option"
                           >
                             <div
@@ -7723,7 +7723,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--15"
-                            id="downshift-104-item-15"
+                            id="downshift-105-item-15"
                             role="option"
                           >
                             <div
@@ -7736,7 +7736,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--16"
-                            id="downshift-104-item-16"
+                            id="downshift-105-item-16"
                             role="option"
                           >
                             <div
@@ -7749,7 +7749,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             aria-selected="false"
                             class="select-list-option"
                             data-testid="SelectDropdown__option--17"
-                            id="downshift-104-item-17"
+                            id="downshift-105-item-17"
                             role="option"
                           >
                             <div

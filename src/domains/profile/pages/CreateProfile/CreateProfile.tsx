@@ -26,7 +26,10 @@ export const CreateProfile = () => {
 	const { restoreProfileConfig } = useProfileRestore();
 
 	const { watch, register, formState, setValue, trigger } = form;
-	const { name, confirmPassword, isDarkMode } = watch(["name", "confirmPassword", "isDarkMode"], { name: "" });
+	const { name, confirmPassword, isDarkMode, password } = watch(
+		["name", "confirmPassword", "isDarkMode", "password"],
+		{ name: "" },
+	);
 
 	const [avatarImage, setAvatarImage] = useState("");
 
@@ -42,6 +45,16 @@ export const CreateProfile = () => {
 			setAvatarImage("");
 		}
 	}, [formattedName, isSvg, setAvatarImage]);
+
+	useEffect(() => {
+		if (confirmPassword) {
+			trigger("confirmPassword");
+		}
+
+		if (!password) {
+			trigger("confirmPassword");
+		}
+	}, [password, trigger]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useLayoutEffect(() => {
 		if (theme === "dark") {
@@ -130,24 +143,15 @@ export const CreateProfile = () => {
 
 							<FormField name="password">
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")} optional />
-								<InputPassword
-									ref={register(passwordValidation.password())}
-									onChange={() => {
-										if (confirmPassword) {
-											trigger("confirmPassword");
-										}
-									}}
-								/>
+								<InputPassword ref={register(passwordValidation.password())} />
 							</FormField>
 
 							<FormField name="confirmPassword">
 								<FormLabel
 									label={t("SETTINGS.GENERAL.PERSONAL.CONFIRM_PASSWORD")}
-									optional={!watch("password")}
+									optional={!password}
 								/>
-								<InputPassword
-									ref={register(passwordValidation.confirmOptionalPassword(watch("password")))}
-								/>
+								<InputPassword ref={register(passwordValidation.confirmOptionalPassword(password))} />
 							</FormField>
 
 							<FormField name="currency">
