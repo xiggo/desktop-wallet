@@ -18,6 +18,7 @@ enum Intervals {
 	Short = 30_000,
 	Medium = 60_000,
 	Long = 120_000,
+	VeryLong = 7_200_000,
 }
 
 const useProfileWatcher = () => {
@@ -50,7 +51,7 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 		const syncWalletUpdates = {
 			callback: () => notifyForUpdates(profile),
-			interval: Intervals.Long,
+			interval: Intervals.VeryLong,
 		};
 
 		const syncWallets = {
