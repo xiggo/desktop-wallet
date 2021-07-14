@@ -1,5 +1,6 @@
 import { DTO } from "@payvo/profiles";
 import { Table } from "app/components/Table";
+import { TableColumn } from "app/components/Table/TableColumn.models";
 import React, { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -44,7 +45,7 @@ export const TransactionTable = memo(
 		};
 
 		const columns = useMemo(() => {
-			const commonColumns: any = [
+			const commonColumns: TableColumn[] = [
 				{
 					Header: t("COMMON.DATE"),
 					accessor: (transaction: DTO.ExtendedConfirmedTransactionData) =>
@@ -100,7 +101,12 @@ export const TransactionTable = memo(
 			if (exchangeCurrency) {
 				return [
 					...commonColumns,
-					{ Header: t("COMMON.CURRENCY"), cellWidth: "w-24", className: "justify-end float-right" },
+					{
+						Header: t("COMMON.CURRENCY"),
+						cellWidth: "w-28",
+						className: "justify-end float-right",
+						responsiveClass: "hidden xl:table-cell",
+					},
 				];
 			}
 

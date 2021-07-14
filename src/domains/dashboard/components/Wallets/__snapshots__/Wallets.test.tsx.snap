@@ -209,7 +209,7 @@ exports[`Wallets should load more wallets 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
             role="table"
           >
             <table
@@ -862,7 +862,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
             role="table"
           >
             <table
@@ -2822,7 +2822,7 @@ exports[`Wallets should render list 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
             role="table"
           >
             <table

@@ -891,7 +891,7 @@ exports[`Dashboard should render 1`] = `
             data-testid="TransactionTable"
           >
             <div
-              class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+              class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
               role="table"
             >
               <table
@@ -1020,7 +1020,7 @@ exports[`Dashboard should render 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
                       colspan="1"
                       data-testid="table__th--6"
                       role="columnheader"
@@ -1171,18 +1171,24 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                          color="success"
+                          data-testid="TransactionAmount__tooltip"
                         >
-                          <span
-                            data-testid="AmountCrypto"
+                          <div
+                            class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                            color="success"
                           >
-                            + 400,000 DARK
-                          </span>
+                            <span
+                              data-testid="AmountCrypto"
+                            >
+                              + 400,000 DARK
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -1328,18 +1334,24 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                          color="success"
+                          data-testid="TransactionAmount__tooltip"
                         >
-                          <span
-                            data-testid="AmountCrypto"
+                          <div
+                            class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                            color="success"
                           >
-                            + 400,000 DARK
-                          </span>
+                            <span
+                              data-testid="AmountCrypto"
+                            >
+                              + 400,000 DARK
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -1485,18 +1497,24 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                          color="success"
+                          data-testid="TransactionAmount__tooltip"
                         >
-                          <span
-                            data-testid="AmountCrypto"
+                          <div
+                            class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                            color="success"
                           >
-                            + 50,000 DARK
-                          </span>
+                            <span
+                              data-testid="AmountCrypto"
+                            >
+                              + 50,000 DARK
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -1642,18 +1660,24 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                          color="success"
+                          data-testid="TransactionAmount__tooltip"
                         >
-                          <span
-                            data-testid="AmountCrypto"
+                          <div
+                            class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                            color="success"
                           >
-                            + 50,000 DARK
-                          </span>
+                            <span
+                              data-testid="AmountCrypto"
+                            >
+                              + 50,000 DARK
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -2562,7 +2586,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
             data-testid="TransactionTable"
           >
             <div
-              class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+              class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
               role="table"
             >
               <table
@@ -2691,7 +2715,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
                       colspan="1"
                       data-testid="table__th--6"
                       role="columnheader"
@@ -2886,7 +2910,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -3100,7 +3126,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -3314,7 +3342,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -3528,7 +3558,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -3742,7 +3774,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -3956,7 +3990,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -4170,7 +4206,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -4384,7 +4422,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         </span>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -5317,7 +5357,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
             data-testid="TransactionTable"
           >
             <div
-              class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+              class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
               role="table"
             >
               <table
@@ -5446,7 +5486,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
                       colspan="1"
                       data-testid="table__th--6"
                       role="columnheader"
@@ -5597,18 +5637,24 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                          color="success"
+                          data-testid="TransactionAmount__tooltip"
                         >
-                          <span
-                            data-testid="AmountCrypto"
+                          <div
+                            class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                            color="success"
                           >
-                            + 400,000 DARK
-                          </span>
+                            <span
+                              data-testid="AmountCrypto"
+                            >
+                              + 400,000 DARK
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -5754,18 +5800,24 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                          color="success"
+                          data-testid="TransactionAmount__tooltip"
                         >
-                          <span
-                            data-testid="AmountCrypto"
+                          <div
+                            class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                            color="success"
                           >
-                            + 400,000 DARK
-                          </span>
+                            <span
+                              data-testid="AmountCrypto"
+                            >
+                              + 400,000 DARK
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -5911,18 +5963,24 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                          color="success"
+                          data-testid="TransactionAmount__tooltip"
                         >
-                          <span
-                            data-testid="AmountCrypto"
+                          <div
+                            class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                            color="success"
                           >
-                            + 50,000 DARK
-                          </span>
+                            <span
+                              data-testid="AmountCrypto"
+                            >
+                              + 50,000 DARK
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >
@@ -6068,18 +6126,24 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                          color="success"
+                          data-testid="TransactionAmount__tooltip"
                         >
-                          <span
-                            data-testid="AmountCrypto"
+                          <div
+                            class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                            color="success"
                           >
-                            + 50,000 DARK
-                          </span>
+                            <span
+                              data-testid="AmountCrypto"
+                            >
+                              + 50,000 DARK
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </td>
-                    <td>
+                    <td
+                      class="hidden xl:block"
+                    >
                       <div
                         class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
                       >

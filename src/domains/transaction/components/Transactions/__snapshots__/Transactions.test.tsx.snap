@@ -115,7 +115,7 @@ exports[`Transactions should fetch more transactions 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -244,7 +244,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -395,18 +395,24 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -552,18 +558,24 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -709,18 +721,24 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -866,18 +884,24 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -1023,18 +1047,24 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -1180,18 +1210,24 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -1337,18 +1373,24 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -1494,18 +1536,24 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -1651,7 +1699,7 @@ exports[`Transactions should hide view more button when there are no next pages 
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1780,7 +1828,7 @@ exports[`Transactions should hide view more button when there are no next pages 
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -1931,18 +1979,24 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -2088,18 +2142,24 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -2245,18 +2305,24 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -2402,18 +2468,24 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -2548,7 +2620,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -2677,7 +2749,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -2828,18 +2900,24 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -2985,18 +3063,24 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -3142,18 +3226,24 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -3299,18 +3389,24 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -3445,7 +3541,7 @@ exports[`Transactions should render 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -3574,7 +3670,7 @@ exports[`Transactions should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -3725,18 +3821,24 @@ exports[`Transactions should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -3882,18 +3984,24 @@ exports[`Transactions should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -4039,18 +4147,24 @@ exports[`Transactions should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -4196,18 +4310,24 @@ exports[`Transactions should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -4342,7 +4462,7 @@ exports[`Transactions should render with custom title 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -4471,7 +4591,7 @@ exports[`Transactions should render with custom title 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -4622,18 +4742,24 @@ exports[`Transactions should render with custom title 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -4779,18 +4905,24 @@ exports[`Transactions should render with custom title 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 400,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -4936,18 +5068,24 @@ exports[`Transactions should render with custom title 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -5093,18 +5231,24 @@ exports[`Transactions should render with custom title 1`] = `
                 class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
-                  color="success"
+                  data-testid="TransactionAmount__tooltip"
                 >
-                  <span
-                    data-testid="AmountCrypto"
+                  <div
+                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    color="success"
                   >
-                    + 50,000 DARK
-                  </span>
+                    <span
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -5240,7 +5384,7 @@ exports[`Transactions should update wallet filters 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
       role="table"
     >
       <table

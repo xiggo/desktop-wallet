@@ -12,7 +12,7 @@ exports[`Signed Transaction Table should render pending transfers 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -317,7 +317,7 @@ exports[`Signed Transaction Table should render signed transactions 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -482,7 +482,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -798,7 +798,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1103,7 +1103,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1419,7 +1419,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1758,7 +1758,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -2097,7 +2097,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -2436,7 +2436,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -2737,7 +2737,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -3072,7 +3072,7 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -3411,7 +3411,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
       Pending Transactions
     </h2>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table

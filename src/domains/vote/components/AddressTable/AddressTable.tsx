@@ -1,5 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { Table } from "app/components/Table";
+import { TableColumn } from "app/components/Table/TableColumn.models";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import { getNetworkExtendedData } from "domains/network/helpers";
 import React, { useMemo } from "react";
@@ -43,7 +44,7 @@ export const AddressTable = ({ wallets, onSelect }: AddressTableProperties) => {
 		},
 	];
 
-	const columns = useMemo(() => {
+	const columns: TableColumn[] = useMemo(() => {
 		if (maxVotes === 1) {
 			return [
 				...commonColumns,

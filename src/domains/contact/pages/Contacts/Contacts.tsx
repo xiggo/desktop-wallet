@@ -5,6 +5,7 @@ import { Header } from "app/components/Header";
 import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
 import { Page, Section } from "app/components/Layout";
 import { Table } from "app/components/Table";
+import { TableColumn } from "app/components/Table/TableColumn.models";
 import { useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { CreateContact, DeleteContact, UpdateContact } from "domains/contact/components";
@@ -95,7 +96,7 @@ export const Contacts = () => {
 		{ label: t("COMMON.DELETE"), value: "delete" },
 	];
 
-	const listColumns = [
+	const listColumns: TableColumn[] = [
 		{
 			Header: t("COMMON.NAME"),
 			accessor: "name",

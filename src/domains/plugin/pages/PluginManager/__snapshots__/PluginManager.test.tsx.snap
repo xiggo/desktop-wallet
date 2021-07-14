@@ -646,7 +646,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                 data-testid="PluginList"
               >
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                   role="table"
                 >
                   <table
@@ -1791,7 +1791,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                 data-testid="PluginList"
               >
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                   role="table"
                 >
                   <table
@@ -2731,7 +2731,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                 data-testid="PluginList"
               >
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                   role="table"
                 >
                   <table
@@ -10340,7 +10340,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                 data-testid="PluginList"
               >
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                   role="table"
                 >
                   <table

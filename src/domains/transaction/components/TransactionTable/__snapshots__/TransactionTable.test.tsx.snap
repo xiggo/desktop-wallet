@@ -7,7 +7,7 @@ exports[`TransactionTable loading state should render 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1044,7 +1044,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1173,7 +1173,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
@@ -1368,7 +1368,9 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 </span>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -1582,7 +1584,9 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 </span>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -1796,7 +1800,9 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 </span>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -2010,7 +2016,9 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 </span>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -2224,7 +2232,9 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 </span>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -2275,7 +2285,7 @@ exports[`TransactionTable loading state should render with sign column 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -3421,7 +3431,7 @@ exports[`TransactionTable should render 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -3701,7 +3711,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -3854,7 +3866,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -4000,7 +4014,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -4150,7 +4166,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -4300,7 +4318,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -4450,7 +4470,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -4600,7 +4622,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -4750,7 +4774,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -4900,7 +4926,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -5050,7 +5078,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -5200,7 +5230,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -5346,7 +5378,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -5496,7 +5530,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -5649,7 +5685,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -5799,7 +5837,9 @@ exports[`TransactionTable should render 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -5819,7 +5859,7 @@ exports[`TransactionTable should render compact 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -7020,7 +7060,7 @@ exports[`TransactionTable should render with sign 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -7314,7 +7354,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -7467,7 +7509,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -7613,7 +7657,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -7778,7 +7824,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               >
@@ -7951,7 +7999,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -8101,7 +8151,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -8251,7 +8303,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -8401,7 +8455,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -8551,7 +8607,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -8701,7 +8759,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -8851,7 +8911,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -8997,7 +9059,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -9147,7 +9211,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -9300,7 +9366,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -9450,7 +9518,9 @@ exports[`TransactionTable should render with sign 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -9470,7 +9540,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -9709,7 +9779,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -9835,7 +9907,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -9954,7 +10028,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -10077,7 +10153,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -10200,7 +10278,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -10323,7 +10403,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -10446,7 +10528,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -10569,7 +10653,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -10692,7 +10778,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -10815,7 +10903,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -10938,7 +11028,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -11057,7 +11149,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -11180,7 +11274,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -11306,7 +11402,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />
@@ -11429,7 +11527,9 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="hidden xl:block"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
               />

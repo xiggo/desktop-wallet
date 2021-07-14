@@ -57,7 +57,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                 role="table"
               >
                 <table
@@ -436,7 +436,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                 role="table"
               >
                 <table
@@ -815,7 +815,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                 role="table"
               >
                 <table
@@ -1246,7 +1246,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                 role="table"
               >
                 <table

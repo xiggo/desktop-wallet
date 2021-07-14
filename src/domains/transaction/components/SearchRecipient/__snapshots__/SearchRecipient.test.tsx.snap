@@ -59,7 +59,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                 role="table"
               >
                 <table
@@ -249,7 +249,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                 role="table"
               >
                 <table
@@ -736,7 +736,7 @@ exports[`SearchRecipient should render a modal 1`] = `
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                 role="table"
               >
                 <table
@@ -1297,7 +1297,7 @@ exports[`SearchRecipient should render a modal with custom title and description
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                 role="table"
               >
                 <table

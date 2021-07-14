@@ -6,7 +6,7 @@ exports[`PluginList should not render pagination 1`] = `
     data-testid="PluginList"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -418,7 +418,7 @@ exports[`PluginList should render pagination 1`] = `
     data-testid="PluginList"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1129,7 +1129,7 @@ exports[`PluginList should render without pagination 1`] = `
     data-testid="PluginList"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1538,7 +1538,7 @@ exports[`PluginList should split by page 1`] = `
     data-testid="PluginList"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1891,7 +1891,7 @@ exports[`PluginList should trigger delete 1`] = `
     data-testid="PluginList"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -2303,7 +2303,7 @@ exports[`PluginList should trigger install 1`] = `
     data-testid="PluginList"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table

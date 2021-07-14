@@ -6,6 +6,7 @@ import { Button } from "app/components/Button";
 import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
 import { Modal } from "app/components/Modal";
 import { Table, TableCell, TableRow } from "app/components/Table";
+import { TableColumn } from "app/components/Table/TableColumn.models";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -76,7 +77,7 @@ export const SearchRecipient = ({
 	const contacts = profile.contacts().values();
 	const profileWallets = profile.wallets().values();
 
-	const columns = [
+	const columns: TableColumn[] = [
 		{
 			Header: t("COMMON.WALLET_ADDRESS"),
 			accessor: (recipient: Recipient) => recipient.alias,

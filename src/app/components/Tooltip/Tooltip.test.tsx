@@ -21,4 +21,10 @@ describe("Tooltip", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should render with extend class", () => {
+		const { asFragment } = render(<Tooltip content="small tooltip" className="bg-theme-success-200" />);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
 });

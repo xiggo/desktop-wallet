@@ -62,7 +62,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                   Plugins
                 </div>
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                   role="table"
                 >
                   <table
@@ -153,7 +153,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                     Transactions
                   </div>
                   <div
-                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                     role="table"
                   >
                     <table
@@ -560,7 +560,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                   Plugins
                 </div>
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                   role="table"
                 >
                   <table
@@ -651,7 +651,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                     Transactions
                   </div>
                   <div
-                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                     role="table"
                   >
                     <table
@@ -962,7 +962,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   Plugins
                 </div>
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                   role="table"
                 >
                   <table
@@ -1053,7 +1053,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     Transactions
                   </div>
                   <div
-                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                     role="table"
                   >
                     <table
@@ -1748,7 +1748,7 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                   Plugins
                 </div>
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                   role="table"
                 >
                   <table
@@ -1839,7 +1839,7 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                     Transactions
                   </div>
                   <div
-                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                     role="table"
                   >
                     <table
@@ -2150,7 +2150,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                   Plugins
                 </div>
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                   role="table"
                 >
                   <table
@@ -2241,7 +2241,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                     Transactions
                   </div>
                   <div
-                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                     role="table"
                   >
                     <table
@@ -2648,7 +2648,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                   Plugins
                 </div>
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                   role="table"
                 >
                   <table
@@ -2739,7 +2739,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                     Transactions
                   </div>
                   <div
-                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                     role="table"
                   >
                     <table
@@ -3050,7 +3050,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                   Plugins
                 </div>
                 <div
-                  class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                  class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                   role="table"
                 >
                   <table
@@ -3141,7 +3141,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                     Transactions
                   </div>
                   <div
-                    class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN"
+                    class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
                     role="table"
                   >
                     <table

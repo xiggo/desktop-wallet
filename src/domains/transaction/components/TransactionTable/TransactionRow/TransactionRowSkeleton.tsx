@@ -68,7 +68,7 @@ export const TransactionRowSkeleton = ({ showSignColumn, showCurrencyColumn }: P
 			)}
 
 			{showCurrencyColumn && (
-				<TableCell variant="end" innerClassName="justify-end">
+				<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end">
 					<span className="flex items-center space-x-1">
 						<Skeleton height={16} width={currencyWidth} />
 						<Skeleton height={16} width={35} />

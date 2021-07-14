@@ -1,16 +1,17 @@
 import cn from "classnames";
 import React, { useMemo } from "react";
-import { useSortBy, useTable } from "react-table";
+import { Column, useSortBy, useTable } from "react-table";
 import { styled } from "twin.macro";
 
 import { Icon } from "../Icon";
 import { defaultTableStyle } from "./Table.styles";
+import { TableColumn } from "./TableColumn.models";
 
 interface TableProperties {
 	children?: any;
 	className?: string;
 	data: any[];
-	columns: any[];
+	columns: TableColumn[];
 	hideHeader?: boolean;
 	initialState?: Record<string, any>;
 }
@@ -21,7 +22,7 @@ const TableWrapper = styled.div`
 
 export const Table = ({ children, data, columns, hideHeader, className, initialState }: TableProperties) => {
 	const tableData = useMemo(() => data, [data]);
-	const tableColumns = useMemo(() => columns, [columns]);
+	const tableColumns = useMemo(() => columns, [columns]) as Column[];
 
 	const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable(
 		{
@@ -59,6 +60,7 @@ export const Table = ({ children, data, columns, hideHeader, className, initialS
 											"group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold",
 											{ hasBorder: !column.className?.includes("no-border") },
 											{ "w-1": column.minimumWidth },
+											{ [column.responsiveClass]: column.responsiveClass },
 											{
 												[`${column.cellWidth} min-${column.cellWidth}`]:
 													!column.minimumWidth && column.cellWidth,

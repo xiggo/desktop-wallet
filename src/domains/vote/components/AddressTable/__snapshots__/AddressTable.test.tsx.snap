@@ -40,7 +40,7 @@ exports[`AddressTable should render 1`] = `
       </div>
     </div>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -365,7 +365,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
       </div>
     </div>
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table

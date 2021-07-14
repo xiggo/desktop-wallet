@@ -117,10 +117,14 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell innerClassName="justify-end">
-					<TransactionRowAmount transaction={transaction} />
+					<TransactionRowAmount
+						transaction={transaction}
+						exchangeCurrency={exchangeCurrency}
+						exchangeTooltip
+					/>
 				</TableCell>
 
-				<TableCell variant="end" innerClassName="justify-end">
+				<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end">
 					{lastCellContent}
 				</TableCell>
 			</TableRow>

@@ -1,5 +1,6 @@
 import Tippy, { TippyProps } from "@tippyjs/react";
 import { useTheme } from "app/hooks";
+import cn from "classnames";
 import React from "react";
 import { Size } from "types";
 
@@ -14,5 +15,12 @@ export const Tooltip = ({ size, theme, ...properties }: TooltipProps) => {
 	if (!properties.content) {
 		return <>{properties.children}</>;
 	}
-	return <Tippy maxWidth={600} theme={theme || themeOptions.theme} {...properties} className={getStyles(size)} />;
+	return (
+		<Tippy
+			maxWidth={600}
+			theme={theme || themeOptions.theme}
+			{...properties}
+			className={cn(getStyles(size), properties.className)}
+		/>
+	);
 };

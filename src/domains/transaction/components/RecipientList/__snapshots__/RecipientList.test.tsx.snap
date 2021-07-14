@@ -6,7 +6,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -506,7 +506,7 @@ exports[`RecipientList should render condensed variant 1`] = `
     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -801,7 +801,7 @@ exports[`RecipientList should render editable 1`] = `
     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1300,7 +1300,7 @@ exports[`RecipientList should render non-editable 1`] = `
     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table
@@ -1661,7 +1661,7 @@ exports[`RecipientList should render without amount column 1`] = `
     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
       role="table"
     >
       <table

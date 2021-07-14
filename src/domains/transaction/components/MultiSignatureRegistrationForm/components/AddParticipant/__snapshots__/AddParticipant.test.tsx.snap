@@ -183,7 +183,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
         class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
           role="table"
         >
           <table
@@ -510,7 +510,7 @@ exports[`Add Participant should fail to find 1`] = `
         class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
           role="table"
         >
           <table
@@ -899,7 +899,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
         class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
           role="table"
         >
           <table
@@ -1226,7 +1226,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
         class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
           role="table"
         >
           <table
@@ -1511,7 +1511,7 @@ exports[`Add Participant should render custom participants 1`] = `
         class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
           role="table"
         >
           <table
@@ -2102,7 +2102,7 @@ exports[`Add Participant should work with a remote wallet 1`] = `
         class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
           role="table"
         >
           <table
@@ -2769,7 +2769,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
         class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
       >
         <div
-          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
           role="table"
         >
           <table

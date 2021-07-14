@@ -715,7 +715,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         data-testid="TransactionTable"
                       >
                         <div
-                          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                           role="table"
                         >
                           <table
@@ -10545,7 +10545,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         data-testid="TransactionTable"
                       >
                         <div
-                          class="Table__TableWrapper-sc-1gcp0fb-0 cEriDN -mt-3"
+                          class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
                           role="table"
                         >
                           <table

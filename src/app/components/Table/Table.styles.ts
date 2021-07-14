@@ -6,11 +6,11 @@ export const defaultTableStyle = `
 		border: none;
 
 		thead {
-			th.hasBorder:not(:last-child):after {
+			th.hasBorder:not(:first-child):after {
 				content: "";
 			    height: 50%;
 			    position: absolute;
-			    right: 0;
+			    left: 0;
 			    top: 25%;
 			    border-left-width: 1px;
 			    border-color: inherit;
