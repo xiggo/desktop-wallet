@@ -21,6 +21,7 @@ import { handleBroadcastError } from "domains/transaction/utils";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
+import { assertWallet } from "utils/assertions";
 import { lowerCaseEquals } from "utils/equals";
 
 import { FormStep } from "./FormStep";
@@ -199,8 +200,10 @@ export const SendTransfer = () => {
 	}, [fee]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const submitForm = async (skipUnconfirmedCheck = false) => {
+		assertWallet(wallet);
+
 		if (!skipUnconfirmedCheck) {
-			const unconfirmed = await fetchWalletUnconfirmedTransactions(wallet!);
+			const unconfirmed = await fetchWalletUnconfirmedTransactions(wallet);
 			setUnconfirmedTransactions(unconfirmed);
 
 			if (unconfirmed.length > 0) {
@@ -257,28 +260,23 @@ export const SendTransfer = () => {
 				transactionInput.data.memo = memo;
 			}
 
-			const expiration = await wallet?.coin()?.transaction()?.estimateExpiration();
+			const expiration = await wallet.coin().transaction().estimateExpiration();
 			if (expiration) {
 				transactionInput.data.expiration = Number.parseInt(expiration);
 				setLastEstimatedExpiration(transactionInput.data.expiration);
 			}
 
-			if (activeWallet.isLedger()) {
-				await connect(profile, activeWallet.coinId(), activeWallet.networkId());
-				await activeWallet.ledger().connect(transport);
+			if (wallet.isLedger()) {
+				await connect(profile, wallet.coinId(), wallet.networkId());
+				await wallet.ledger().connect(transport);
 			}
 
 			const abortSignal = abortReference.current?.signal;
-			const { uuid, transaction } = await transactionBuilder.build(
-				transactionType,
-				transactionInput,
-				activeWallet,
-				{
-					abortSignal,
-				},
-			);
+			const { uuid, transaction } = await transactionBuilder.build(transactionType, transactionInput, wallet, {
+				abortSignal,
+			});
 
-			const response = await activeWallet.transaction().broadcast(uuid);
+			const response = await wallet.transaction().broadcast(uuid);
 
 			handleBroadcastError(response);
 
