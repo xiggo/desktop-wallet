@@ -75,6 +75,7 @@ export const WalletHeader = ({
 		setModal(undefined);
 
 		profile.wallets().forget(wallet.id());
+		profile.notifications().transactions().forgetByRecipient(wallet.address());
 		await persist();
 
 		history.push(`/profiles/${profile.id()}/dashboard`);

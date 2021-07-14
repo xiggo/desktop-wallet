@@ -393,7 +393,7 @@ describe("WalletDetails", () => {
 		await waitFor(() => expect(getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
 	});
 
-	it("should delete wallet", async () => {
+	it("should delete wallet and clear associated transaction notifications", async () => {
 		const { getByTestId, getAllByTestId } = await renderPage();
 
 		const dropdown = getAllByTestId("dropdown__toggle")[2];
@@ -413,6 +413,7 @@ describe("WalletDetails", () => {
 		});
 
 		expect(profile.wallets().count()).toEqual(4);
+		expect(profile.notifications().transactions().recent()).toHaveLength(2);
 
 		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
@@ -421,6 +422,8 @@ describe("WalletDetails", () => {
 		});
 
 		await waitFor(() => expect(profile.wallets().count()).toEqual(3));
+
+		expect(profile.notifications().transactions().recent()).toHaveLength(0);
 	});
 
 	it("should not fail if the votes have not yet been synchronized", async () => {
