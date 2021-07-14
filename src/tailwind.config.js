@@ -239,6 +239,7 @@ module.exports = {
 			borderRadius: ["first", "last"],
 			borderWidth: ["hover", "group-hover", "first", "last", "even"],
 			backgroundOpacity: ["dark"],
+			backgroundColor: ["active"],
 			borderStyle: ["focus-within"],
 			margin: ["first"],
 			opacity: ["group-hover"],

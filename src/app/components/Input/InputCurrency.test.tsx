@@ -81,20 +81,4 @@ describe("InputCurrency", () => {
 
 		waitFor(() => expect(input).toHaveValue("1.23"));
 	});
-
-	it("should render with a custom element", async () => {
-		const CustomInput = React.forwardRef((_, reference) => <input placeholder="Custom Input" ref={reference} />);
-		CustomInput.displayName = "CustomInput";
-		const { getByPlaceholderText } = render(<InputCurrency as={CustomInput} />);
-
-		const input = getByPlaceholderText("Custom Input");
-
-		fireEvent.input(input, {
-			target: {
-				value: "1.2",
-			},
-		});
-
-		await waitFor(() => expect(input).toHaveValue("1.2"));
-	});
 });

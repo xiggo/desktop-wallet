@@ -24,12 +24,13 @@ type InputFeeSimpleOptions = {
 };
 
 interface InputFeeAdvancedProperties {
-	onChange: (value: string) => void;
-	value: string;
-	min: number;
-	max: number;
-	step: number;
+	convert: (value?: number) => number;
 	disabled?: boolean;
+	exchangeTicker: string;
+	onChange: (value: string) => void;
+	showConvertedValue: boolean;
+	step: number;
+	value: string;
 }
 
 interface InputFeeSimpleProperties {

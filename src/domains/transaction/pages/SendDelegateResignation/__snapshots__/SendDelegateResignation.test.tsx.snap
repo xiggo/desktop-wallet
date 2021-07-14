@@ -524,34 +524,49 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                                   value="1"
                                 />
                               </div>
-                            </div>
-                            <div
-                              class="absolute bottom-0 px-1 w-full"
-                            >
                               <div
-                                class="flex flex-wrap justify-center"
-                                data-testid="Range"
+                                class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
                               >
                                 <div
-                                  class="Range__Track-sc-1xikdd-0 eUXcsE"
-                                  data-testid="Range__track"
-                                  style="transform: scale(1); cursor: pointer;"
+                                  class=""
                                 >
                                   <div
-                                    class="Range__TrackFilled-sc-1xikdd-1 dqZquU"
-                                    data-testid="Range__track__filled"
+                                    class="flex items-center"
                                   >
                                     <div
-                                      aria-valuemax="25"
-                                      aria-valuemin="1"
-                                      aria-valuenow="1"
-                                      class="Range__Thumb-sc-1xikdd-2 hBqhUX"
-                                      data-testid="Range__thumb"
-                                      draggable="false"
-                                      role="slider"
-                                      style="position: absolute; z-index: 0; cursor: grab; user-select: none; transform: translate(0px, 0px);"
-                                      tabindex="0"
-                                    />
+                                      class="flex flex-col justify-between border-l h-14 -mr-4 w-10 text-theme-secondary-700 dark:border-theme-secondary-700 border-theme-secondary-400"
+                                    >
+                                      <button
+                                        class="InputFeeAdvancedAddon__ArrowButtonStyled-bh9n8o-0 eZsdSD"
+                                        data-testid="InputFeeAdvanced__up"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="sc-bdfBwQ eZRpTZ transform rotate-90"
+                                          height="10"
+                                          width="10"
+                                        >
+                                          <svg>
+                                            arrow-left.svg
+                                          </svg>
+                                        </div>
+                                      </button>
+                                      <button
+                                        class="InputFeeAdvancedAddon__ArrowButtonStyled-bh9n8o-0 flGBgd"
+                                        data-testid="InputFeeAdvanced__down"
+                                        type="button"
+                                      >
+                                        <div
+                                          class="sc-bdfBwQ eZRpTZ transform -rotate-90"
+                                          height="10"
+                                          width="10"
+                                        >
+                                          <svg>
+                                            arrow-left.svg
+                                          </svg>
+                                        </div>
+                                      </button>
+                                    </div>
                                   </div>
                                 </div>
                               </div>

@@ -36,11 +36,23 @@ describe("Input", () => {
 
 	it("should render with addons", () => {
 		const { asFragment, getByText } = render(
-			<Input addons={{ end: <span>end</span>, start: <span>start</span> }} />,
+			<Input
+				addons={{
+					end: {
+						content: <span>end</span>,
+						wrapperClassName: "some-class-name",
+					},
+					start: {
+						content: <span>start</span>,
+					},
+				}}
+			/>,
 		);
 
-		expect(getByText("start")).toBeTruthy();
 		expect(getByText("end")).toBeTruthy();
+		expect(getByText("end")?.parentElement?.parentElement?.classList.contains("some-class-name")).toBeTruthy();
+
+		expect(getByText("start")).toBeTruthy();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

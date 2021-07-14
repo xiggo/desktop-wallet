@@ -81,17 +81,19 @@ export const FormStep = ({
 						value={minParticipants ?? 0}
 						onChange={handleInput}
 						addons={{
-							end: (
-								<span
-									className={cn("pointer-events-none font-semibold text-sm", {
-										"text-theme-secondary-500 dark:text-theme-secondary-700": !errors?.minParticipants,
-									})}
-								>
-									{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", {
-										length: minParticipantsLimit,
-									})}
-								</span>
-							),
+							end: {
+								content: (
+									<span
+										className={cn("pointer-events-none font-semibold text-sm", {
+											"text-theme-secondary-500 dark:text-theme-secondary-700": !errors?.minParticipants,
+										})}
+									>
+										{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", {
+											length: minParticipantsLimit,
+										})}
+									</span>
+								),
+							},
 						}}
 					/>
 				</FormField>

@@ -26,16 +26,18 @@ export const InputCounter = React.forwardRef<HTMLInputElement, Properties>((prop
 			{...properties}
 			onChange={handleChange}
 			addons={{
-				end: (
-					<span
-						data-testid="InputCounter__counter"
-						className={cn("font-semibold text-sm", {
-							"text-theme-secondary-500 dark:text-theme-secondary-700": !fieldContext?.isInvalid,
-						})}
-					>
-						{length}/{properties.maxLengthLabel}
-					</span>
-				),
+				end: {
+					content: (
+						<span
+							data-testid="InputCounter__counter"
+							className={cn("font-semibold text-sm", {
+								"text-theme-secondary-500 dark:text-theme-secondary-700": !fieldContext?.isInvalid,
+							})}
+						>
+							{length}/{properties.maxLengthLabel}
+						</span>
+					),
+				},
 			}}
 		/>
 	);

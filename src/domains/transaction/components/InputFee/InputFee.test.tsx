@@ -168,5 +168,134 @@ describe("InputFee", () => {
 
 			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.1234");
 		});
+
+		it("should increment value by step when up button is clicked", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.step = 0.01;
+			defaultProps.value = "0.5";
+
+			render(<InputFee {...defaultProps} />);
+
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.53");
+		});
+
+		it("should decrement value by step when down button is clicked", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.step = 0.01;
+			defaultProps.value = "0.5";
+
+			render(<InputFee {...defaultProps} />);
+
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.47");
+		});
+
+		it("should disable down button when value is zero", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.step = 0.01;
+			defaultProps.value = "0";
+
+			render(<InputFee {...defaultProps} />);
+
+			expect(screen.getByTestId("InputFeeAdvanced__down")).toBeDisabled();
+		});
+
+		it("should not allow to input negative values", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+
+			render(<InputFee {...defaultProps} />);
+
+			act(() => {
+				fireEvent.input(screen.getByTestId("InputCurrency"), { target: { value: "-1.4" } });
+			});
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("1.4");
+		});
+
+		it("should not allow to set a negative value with down button", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.step = 0.6;
+			defaultProps.value = "1.5";
+
+			render(<InputFee {...defaultProps} />);
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("1.5");
+
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.9");
+
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.3");
+
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("0");
+		});
+
+		it("should render disabled", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+
+			const { asFragment } = render(<InputFee {...defaultProps} disabled />);
+
+			expect(screen.getByTestId("InputFeeAdvanced__up")).toBeDisabled();
+			expect(screen.getByTestId("InputFeeAdvanced__down")).toBeDisabled();
+			expect(screen.getByTestId("InputCurrency")).toBeDisabled();
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should set value = step when empty and up button is clicked", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.step = 0.01;
+			defaultProps.value = "";
+
+			render(<InputFee {...defaultProps} />);
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("");
+			expect(screen.getByTestId("InputFeeAdvanced__up")).not.toBeDisabled();
+			expect(screen.getByTestId("InputFeeAdvanced__down")).not.toBeDisabled();
+
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__up"));
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("0.01");
+		});
+
+		it("should set value = 0 when empty and down button is clicked", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+			defaultProps.step = 0.01;
+			defaultProps.value = "";
+
+			render(<InputFee {...defaultProps} />);
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("");
+			expect(screen.getByTestId("InputFeeAdvanced__up")).not.toBeDisabled();
+			expect(screen.getByTestId("InputFeeAdvanced__down")).not.toBeDisabled();
+
+			userEvent.click(screen.getByTestId("InputFeeAdvanced__down"));
+
+			expect(screen.getByTestId("InputCurrency")).toHaveValue("0");
+		});
+
+		it("should display converted value when on live net", () => {
+			defaultProps.viewType = InputFeeViewType.Advanced;
+
+			jest.spyOn(network, "isLive").mockReturnValueOnce(true);
+
+			jest.spyOn(profile.settings(), "get").mockReturnValue("EUR");
+
+			const { asFragment } = render(<InputFee {...defaultProps} />);
+
+			expect(screen.getByTestId("AmountFiat")).toBeTruthy();
+			expect(asFragment()).toMatchSnapshot();
+		});
 	});
 });

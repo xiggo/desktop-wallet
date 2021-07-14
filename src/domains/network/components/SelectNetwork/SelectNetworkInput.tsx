@@ -22,20 +22,22 @@ export const SelectNetworkInput = React.forwardRef<HTMLInputElement, Properties>
 				ref={reference}
 				suggestion={suggestion}
 				addons={{
-					start: (
-						<NetworkIcon
-							data-testid="SelectNetworkInput__network"
-							className={cn({
-								"border-theme-danger-500 text-theme-danger-500": isInvalidValue,
-								"border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500": !isInvalidValue,
-							})}
-							coin={network?.coin()}
-							network={network?.id()}
-							size="sm"
-							showTooltip={false}
-							noShadow
-						/>
-					),
+					start: {
+						content: (
+							<NetworkIcon
+								data-testid="SelectNetworkInput__network"
+								className={cn({
+									"border-theme-danger-500 text-theme-danger-500": isInvalidValue,
+									"border-theme-secondary-200 dark:border-theme-secondary-700 text-theme-secondary-500": !isInvalidValue,
+								})}
+								coin={network?.coin()}
+								network={network?.id()}
+								size="sm"
+								showTooltip={false}
+								noShadow
+							/>
+						),
+					},
 				}}
 				{...properties}
 			/>

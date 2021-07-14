@@ -146,25 +146,27 @@ const SelectDropdown = ({
 	if (showCaret) {
 		addons = {
 			...addons,
-			end: (
-				<div
-					data-testid="SelectDropdown__caret"
-					className="flex justify-center items-center py-2 px-1"
-					onClick={toggleMenu}
-				>
-					<Icon
-						name="CaretDown"
-						className={cn(
-							"transition-transform",
-							isInvalid ? "text-theme-danger-500" : "text-theme-secondary-500",
-							{
-								"transform rotate-180": isOpen,
-							},
-						)}
-						size="sm"
-					/>
-				</div>
-			),
+			end: {
+				content: (
+					<div
+						data-testid="SelectDropdown__caret"
+						className="flex justify-center items-center py-2 px-1"
+						onClick={toggleMenu}
+					>
+						<Icon
+							name="CaretDown"
+							className={cn(
+								"transition-transform",
+								isInvalid ? "text-theme-danger-500" : "text-theme-secondary-500",
+								{
+									"transform rotate-180": isOpen,
+								},
+							)}
+							size="sm"
+						/>
+					</div>
+				),
+			},
 		};
 	}
 

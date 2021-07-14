@@ -285,14 +285,16 @@ export const AddRecipient = ({
 	const amountAddons =
 		!errors.amount && !errors.fee && isSenderFilled && !wallet?.network().isTest()
 			? {
-					end: (
-						<AmountCrypto
-							value={convert(amount || 0)}
-							ticker={exchangeTicker}
-							data-testid="AddRecipient__currency-balance"
-							className="text-sm font-semibold whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700"
-						/>
-					),
+					end: {
+						content: (
+							<AmountCrypto
+								value={convert(amount || 0)}
+								ticker={exchangeTicker}
+								data-testid="AddRecipient__currency-balance"
+								className="text-sm font-semibold whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700"
+							/>
+						),
+					},
 			  }
 			: undefined;
 

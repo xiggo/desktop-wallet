@@ -120,16 +120,20 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 						allowFreeInput={true}
 						onChange={(option: any) => onInputChange(option.value)}
 						addons={{
-							end: (
-								<div
-									data-testid="SelectRecipient__select-recipient"
-									className="flex items-center cursor-pointer"
-									onClick={openRecipients}
-								>
-									<Icon name="User" size="lg" />
-								</div>
-							),
-							start: <ProfileAvatar address={selectedAddress} />,
+							end: {
+								content: (
+									<div
+										data-testid="SelectRecipient__select-recipient"
+										className="flex items-center cursor-pointer"
+										onClick={openRecipients}
+									>
+										<Icon name="User" size="lg" />
+									</div>
+								),
+							},
+							start: {
+								content: <ProfileAvatar address={selectedAddress} />,
+							},
 						}}
 						renderLabel={(option) => <OptionLabel option={option} profile={profile} />}
 					/>

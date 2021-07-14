@@ -37,7 +37,9 @@ export const FormStep = ({
 					innerClassName="font-semibold"
 					value={wallet.address()}
 					addons={{
-						start: <Avatar address={wallet.address()} size="sm" noShadow />,
+						start: {
+							content: <Avatar address={wallet.address()} size="sm" noShadow />,
+						},
 					}}
 					disabled
 				/>

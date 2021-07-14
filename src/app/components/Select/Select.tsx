@@ -11,11 +11,13 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProperties>(
 			as="select"
 			ref={reference}
 			addons={{
-				end: (
-					<span className="w-12 text-lg pointer-events-none text-theme-secondary-text">
-						<Icon name="ChevronDown" />
-					</span>
-				),
+				end: {
+					content: (
+						<span className="w-12 text-lg pointer-events-none text-theme-secondary-text">
+							<Icon name="ChevronDown" />
+						</span>
+					),
+				},
 			}}
 			{...properties}
 		>

@@ -15,19 +15,21 @@ export const InputPassword = React.forwardRef<HTMLInputElement, InputPasswordPro
 			ref={reference}
 			type={show ? "text" : "password"}
 			addons={{
-				end: (
-					<button
-						data-testid="InputPassword__toggle"
-						type="button"
-						onClick={togglePasswordVisibility}
-						className="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
-					>
-						{/* icon border on focus */}
-						<div className="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400" />
+				end: {
+					content: (
+						<button
+							data-testid="InputPassword__toggle"
+							type="button"
+							onClick={togglePasswordVisibility}
+							className="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+						>
+							{/* icon border on focus */}
+							<div className="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400" />
 
-						<Icon name={show ? "EyeOff" : "Eye"} />
-					</button>
-				),
+							<Icon name={show ? "EyeOff" : "Eye"} />
+						</button>
+					),
+				},
 			}}
 			{...properties}
 		/>

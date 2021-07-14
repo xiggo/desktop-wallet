@@ -4,4 +4,3 @@ export * from "./InputCounter";
 export * from "./InputCurrency";
 export * from "./InputDefault";
 export * from "./InputPassword";
-export * from "./InputRange";

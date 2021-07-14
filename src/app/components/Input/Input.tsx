@@ -6,27 +6,35 @@ import tw, { styled } from "twin.macro";
 
 import { useFormField } from "../Form/useFormField";
 
+interface Addon {
+	wrapperClassName?: string;
+	content: JSX.Element;
+}
+
 type InputProperties = {
+	addons?: {
+		start?: Addon;
+		end?: Addon;
+	};
 	as?: React.ElementType;
-	ignoreContext?: boolean;
-	isInvalid?: boolean;
-	isFocused?: boolean;
-	isTextArea?: boolean;
-	hideInputValue?: boolean;
-	suggestion?: string;
 	errorMessage?: string;
+	hideInputValue?: boolean;
+	ignoreContext?: boolean;
 	innerClassName?: string;
+	isFocused?: boolean;
+	isInvalid?: boolean;
+	isTextArea?: boolean;
 	noBorder?: boolean;
 	noShadow?: boolean;
-	addons?: any;
+	suggestion?: string;
 } & React.HTMLProps<any>;
 
 export const InputWrapperStyled = styled.div<{
 	disabled?: boolean;
 	invalid?: boolean;
+	isTextArea?: boolean;
 	noBorder?: boolean;
 	noShadow?: boolean;
-	isTextArea?: boolean;
 }>`
 	${tw`flex items-center w-full px-4 space-x-2 transition-colors duration-200 rounded appearance-none text-theme-text`}
 
@@ -80,20 +88,20 @@ type InputElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 export const Input = React.forwardRef<InputElement, InputProperties>(
 	(
 		{
-			isInvalid,
+			addons,
 			className,
+			disabled,
+			errorMessage,
+			hideInputValue,
+			ignoreContext,
 			innerClassName,
 			isFocused,
+			isInvalid,
 			isTextArea,
-			ignoreContext,
-			errorMessage,
-			addons,
-			disabled,
 			noBorder,
 			noShadow,
-			suggestion,
-			hideInputValue,
 			style,
+			suggestion,
 			value,
 			...properties
 		}: InputProperties,
@@ -146,7 +154,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 					noShadow={noShadow}
 					isTextArea={isTextArea}
 				>
-					{addons?.start !== undefined && addons.start}
+					{addons?.start !== undefined && addons.start.content}
 					<div className={cn("relative flex flex-1 h-full", { invisible: hideInputValue })}>
 						<InputStyled
 							data-testid="Input"
@@ -188,6 +196,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 									"text-theme-danger-500": isInvalidValue,
 									"text-theme-primary-300 dark:text-theme-secondary-600": !isInvalidValue,
 								},
+								addons?.end?.wrapperClassName,
 							)}
 						>
 							{isInvalidValue && (
@@ -198,7 +207,11 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 								</Tooltip>
 							)}
 
-							{addons?.end && <div className={cn({ "pl-3": isInvalidValue })}>{addons.end}</div>}
+							{addons?.end && (
+								<div className={cn({ "pl-3": isInvalidValue && !addons.end.wrapperClassName })}>
+									{addons.end.content}
+								</div>
+							)}
 						</div>
 					)}
 				</InputWrapperStyled>

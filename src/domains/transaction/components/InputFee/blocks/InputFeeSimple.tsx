@@ -1,21 +1,9 @@
 import { Amount, AmountCrypto } from "app/components/Amount";
 import { ButtonGroup, ButtonGroupOption } from "app/components/ButtonGroup";
-import { InputRange } from "app/components/Input";
 import { Skeleton } from "app/components/Skeleton";
 import React from "react";
 
-import { InputFeeAdvancedProperties, InputFeeSimpleProperties, InputFeeSimpleValue } from "./InputFee.contracts";
-
-export const InputFeeAdvanced: React.FC<InputFeeAdvancedProperties> = ({
-	onChange,
-	value,
-	min,
-	max,
-	step,
-	disabled,
-}: InputFeeAdvancedProperties) => (
-	<InputRange disabled={disabled} value={value} min={+min} max={+max} step={step} onChange={onChange} />
-);
+import { InputFeeSimpleProperties, InputFeeSimpleValue } from "../InputFee.contracts";
 
 export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	options,

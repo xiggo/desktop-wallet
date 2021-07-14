@@ -4,8 +4,10 @@ import { Switch } from "app/components/Switch";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";
 import React, { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { assertString } from "utils/assertions";
 
-import { InputFeeAdvanced, InputFeeSimple } from "./InputFee.blocks";
+import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
+import { InputFeeSimple } from "./blocks/InputFeeSimple";
 import {
 	DEFAULT_SIMPLE_VALUE,
 	DEFAULT_VIEW_TYPE,
@@ -49,6 +51,8 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		const exchangeTicker = profile?.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 		const { convert } = useExchangeRate({ exchangeTicker, ticker });
 
+		const showConvertedValues = !!network?.isLive();
+
 		const options: InputFeeSimpleOptions = {
 			[InputFeeSimpleValue.Slow]: {
 				displayValue: min,
@@ -76,8 +80,8 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			}
 
 			if (newValue === InputFeeViewType.Advanced) {
-				// @TODO: remove non-null assertion
-				onChange(advancedValue!);
+				assertString(advancedValue);
+				onChange(advancedValue);
 			}
 		};
 
@@ -93,17 +97,20 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			onChange(newValue);
 		};
 
+		const renderAdvanced = () => (
+			<InputFeeAdvanced
+				convert={convert}
+				disabled={disabled}
+				exchangeTicker={exchangeTicker!}
+				onChange={onChangeAdvancedValue}
+				showConvertedValue={showConvertedValues}
+				step={step}
+				value={advancedValue ?? ""}
+			/>
+		);
+
 		if (disabled) {
-			return (
-				<InputFeeAdvanced
-					disabled
-					min={min}
-					max={max}
-					step={step}
-					value={advancedValue ?? ""}
-					onChange={onChangeAdvancedValue}
-				/>
-			);
+			return renderAdvanced();
 		}
 
 		return (
@@ -131,21 +138,13 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 						loading={loading || !ticker || !exchangeTicker}
 						ticker={ticker!}
 						exchangeTicker={exchangeTicker!}
-						showConvertedValues={!!network?.isLive()}
+						showConvertedValues={showConvertedValues}
 						value={simpleValue}
 						onChange={onChangeSimpleValue}
 					/>
 				)}
 
-				{viewType === InputFeeViewType.Advanced && (
-					<InputFeeAdvanced
-						min={min}
-						max={max}
-						step={step}
-						value={advancedValue ?? ""}
-						onChange={onChangeAdvancedValue}
-					/>
-				)}
+				{viewType === InputFeeViewType.Advanced && renderAdvanced()}
 			</div>
 		);
 	},
