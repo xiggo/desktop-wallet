@@ -408,18 +408,7 @@ exports[`LedgerTabs should render scan step with failing fetch 1`] = `
               <div
                 class=""
                 data-testid="SelectNetwork__options"
-              >
-                <div
-                  class="mt-6"
-                >
-                  <ul
-                    aria-labelledby="ImportWallet__network-label"
-                    class="grid grid-cols-7 gap-3 mt-3"
-                    id="ImportWallet__network-menu"
-                    role="listbox"
-                  />
-                </div>
-              </div>
+              />
             </div>
           </fieldset>
           <div

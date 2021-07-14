@@ -128,7 +128,7 @@ export const SelectNetwork = ({
 	};
 
 	const publicNetworks = items.filter((network) => network.isLive());
-	const developmentNetworks = items.filter((network) => !network.isLive());
+	const developmentNetworks = items.filter((network) => network.isTest());
 
 	const optionClassName = (network: Network) => {
 		if (selectedItem) {
@@ -149,6 +149,7 @@ export const SelectNetwork = ({
 		return "text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800";
 	};
 
+	const hasPublicNetworks = publicNetworks.length > 0;
 	const hasDevelopmentNetworks = developmentNetworks.length > 0;
 
 	return (
@@ -181,31 +182,33 @@ export const SelectNetwork = ({
 			</div>
 
 			<div data-testid="SelectNetwork__options" className={cn({ hidden: hideOptions })}>
-				<div className="mt-6">
-					{hasDevelopmentNetworks && (
-						<div className="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700">
-							{t("COMMON.PUBLIC_NETWORKS").toUpperCase()}
-						</div>
-					)}
+				{hasPublicNetworks && (
+					<div className="mt-6">
+						{hasDevelopmentNetworks && (
+							<div className="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700">
+								{t("COMMON.PUBLIC_NETWORKS").toUpperCase()}
+							</div>
+						)}
 
-					<ul {...getMenuProps()} className="grid grid-cols-7 gap-3 mt-3">
-						{publicNetworks.map((network: Networks.Network, index: number) => (
-							<NetworkOption
-								key={index}
-								disabled={disabled}
-								network={network}
-								iconClassName={optionClassName(network)}
-								onClick={() => toggleSelection(network)}
-							/>
-						))}
-					</ul>
-				</div>
+						<ul {...getMenuProps()} className="grid grid-cols-7 gap-3 mt-3">
+							{publicNetworks.map((network: Networks.Network, index: number) => (
+								<NetworkOption
+									key={index}
+									disabled={disabled}
+									network={network}
+									iconClassName={optionClassName(network)}
+									onClick={() => toggleSelection(network)}
+								/>
+							))}
+						</ul>
+					</div>
+				)}
+
+				{hasPublicNetworks && hasDevelopmentNetworks && <Divider dashed />}
 
 				{hasDevelopmentNetworks && (
-					<>
-						<Divider dashed />
-
-						<div className="mt-6">
+					<div className="mt-6">
+						{hasPublicNetworks && (
 							<div className="flex justify-between items-center">
 								<span className="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700">
 									{t("COMMON.DEVELOPMENT_NETWORKS").toUpperCase()}
@@ -217,23 +220,25 @@ export const SelectNetwork = ({
 									data-testid="SelectNetwork__developmentNetworks"
 								/>
 							</div>
+						)}
 
-							<ul
-								{...getMenuProps()}
-								className={cn("grid grid-cols-7 gap-3 mt-3", { hidden: !showDevelopmentNetworks })}
-							>
-								{developmentNetworks.map((network: Networks.Network, index: number) => (
-									<NetworkOption
-										key={index}
-										disabled={disabled}
-										network={network}
-										iconClassName={optionClassName(network)}
-										onClick={() => toggleSelection(network)}
-									/>
-								))}
-							</ul>
-						</div>
-					</>
+						<ul
+							{...getMenuProps()}
+							className={cn("grid grid-cols-7 gap-3 mt-3", {
+								hidden: !showDevelopmentNetworks && hasPublicNetworks,
+							})}
+						>
+							{developmentNetworks.map((network: Networks.Network, index: number) => (
+								<NetworkOption
+									key={index}
+									disabled={disabled}
+									network={network}
+									iconClassName={optionClassName(network)}
+									onClick={() => toggleSelection(network)}
+								/>
+							))}
+						</ul>
+					</div>
 				)}
 			</div>
 		</div>
