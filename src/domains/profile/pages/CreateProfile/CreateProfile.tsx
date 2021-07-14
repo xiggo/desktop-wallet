@@ -50,10 +50,6 @@ export const CreateProfile = () => {
 		if (confirmPassword) {
 			trigger("confirmPassword");
 		}
-
-		if (!password) {
-			trigger("confirmPassword");
-		}
 	}, [password, trigger]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useLayoutEffect(() => {
@@ -142,14 +138,17 @@ export const CreateProfile = () => {
 							</div>
 
 							<FormField name="password">
-								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")} optional />
+								<FormLabel
+									label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")}
+									optional={!password && !confirmPassword}
+								/>
 								<InputPassword ref={register(passwordValidation.password())} />
 							</FormField>
 
 							<FormField name="confirmPassword">
 								<FormLabel
 									label={t("SETTINGS.GENERAL.PERSONAL.CONFIRM_PASSWORD")}
-									optional={!password}
+									optional={!password && !confirmPassword}
 								/>
 								<InputPassword ref={register(passwordValidation.confirmOptionalPassword(password))} />
 							</FormField>

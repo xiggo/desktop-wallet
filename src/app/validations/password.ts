@@ -2,8 +2,19 @@ import { pwnd, strong } from "password-pwnd";
 
 export const password = (t: any) => ({
 	confirmOptionalPassword: (password: string) => ({
-		validate: (confirmPassword: string) =>
-			!!password && password !== confirmPassword ? t("COMMON.VALIDATION.PASSWORD_MISMATCH") : true,
+		validate: (confirmPassword: string) => {
+			if (!password && !!confirmPassword) {
+				return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+					field: t("SETTINGS.GENERAL.PERSONAL.PASSWORD"),
+				}).toString();
+			}
+
+			if (!!password && password !== confirmPassword) {
+				return t("COMMON.VALIDATION.PASSWORD_MISMATCH");
+			}
+
+			return true;
+		},
 	}),
 	confirmPassword: (password: string) => ({
 		required: t("COMMON.VALIDATION.CONFIRM_PASSWORD_REQUIRED"),

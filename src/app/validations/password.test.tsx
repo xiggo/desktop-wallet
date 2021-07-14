@@ -147,7 +147,12 @@ describe("Password Validation", () => {
 		const confirmPassword = passwordValidation.confirmOptionalPassword();
 
 		expect(confirmPassword.validate()).toEqual(true);
-		expect(confirmPassword.validate("test")).toEqual(true);
+		expect(confirmPassword.validate()).toEqual(true);
+		expect(confirmPassword.validate("password")).toEqual(
+			t("COMMON.VALIDATION.FIELD_REQUIRED", {
+				field: t("SETTINGS.GENERAL.PERSONAL.PASSWORD"),
+			}).toString(),
+		);
 	});
 
 	it("should fail validation if optional password is set", () => {
