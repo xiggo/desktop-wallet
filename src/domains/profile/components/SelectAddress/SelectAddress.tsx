@@ -101,6 +101,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					isOpen={searchWalletIsOpen}
 					title={t("PROFILE.MODAL_SELECT_SENDER.TITLE")}
 					description={t("PROFILE.MODAL_SELECT_SENDER.DESCRIPTION")}
+					disableAction={(wallet: Contracts.IReadWriteWallet) => !wallet.balance()}
 					searchPlaceholder={t("PROFILE.MODAL_SELECT_SENDER.SEARCH_PLACEHOLDER")}
 					wallets={wallets}
 					size="4xl"

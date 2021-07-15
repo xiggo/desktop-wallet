@@ -3,7 +3,7 @@ import { Contracts } from "@payvo/profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, waitFor, within } from "testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, renderWithRouter, waitFor, within } from "testing-library";
 
 import { translations } from "../../i18n";
 import { SearchWallet } from "./SearchWallet";
@@ -322,5 +322,27 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(getByTestId("EmptyResults")).toBeInTheDocument());
 
 		jest.useRealTimers();
+	});
+
+	it("should disable the `Select` button if the wallet fulfills the condition", async () => {
+		const { getAllByTestId } = render(
+			<SearchWallet
+				profile={profile}
+				isOpen={true}
+				title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+				wallets={wallets}
+				showConvertedValue={showConvertedValue}
+				disableAction={(wallet: Contracts.IReadWriteWallet) => wallet.alias() === "Sample Wallet"}
+			/>,
+		);
+
+		await waitFor(() => expect(getAllByTestId("TableRow")).toHaveLength(2));
+
+		expect(getAllByTestId("TableRow")[0]).toHaveTextContent("Sample Wallet");
+		expect(within(getAllByTestId("TableRow")[0]).getByRole("button")).toBeDisabled();
+
+		expect(getAllByTestId("TableRow")[1]).not.toHaveTextContent("Sample Wallet");
+		expect(within(getAllByTestId("TableRow")[1]).getByRole("button")).not.toBeDisabled();
 	});
 });

@@ -13,30 +13,30 @@ import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Size } from "types";
 
+import { SelectedWallet } from "./SearchWallet.models";
+
 interface SearchWalletListItemProperties {
 	address: string;
 	balance: number;
-	coinId: string;
-	coinName: string;
 	convertedBalance: number;
 	currency: string;
+	disabled?: boolean;
 	exchangeCurrency: string;
 	index: number;
 	name?: string;
 	network: Networks.Network;
 	showConvertedValue?: boolean;
 	showNetwork?: boolean;
-	onAction: any;
+	onAction: (wallet: SelectedWallet) => void;
 }
 
 const SearchWalletListItem = ({
 	address,
 	balance,
 	network,
-	coinId,
-	coinName,
 	convertedBalance,
 	currency,
+	disabled,
 	exchangeCurrency,
 	index,
 	name,
@@ -69,8 +69,9 @@ const SearchWalletListItem = ({
 			<TableCell variant="end" innerClassName="justify-end">
 				<Button
 					data-testid={`SearchWalletListItem__select-${index}`}
+					disabled={disabled}
 					variant="secondary"
-					onClick={() => onAction({ address, coinId, coinName, name })}
+					onClick={() => onAction({ address, name, network })}
 				>
 					{t("COMMON.SELECT")}
 				</Button>
@@ -83,13 +84,14 @@ interface SearchWalletProperties {
 	isOpen: boolean;
 	title: string;
 	description?: string;
+	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 	wallets: Contracts.IReadWriteWallet[];
 	searchPlaceholder?: string;
 	size?: Size;
 	showConvertedValue?: boolean;
 	showNetwork?: boolean;
 	onClose?: any;
-	onSelectWallet?: any;
+	onSelectWallet: (wallet: SelectedWallet) => void;
 	profile?: Contracts.IProfile;
 }
 
@@ -97,6 +99,7 @@ export const SearchWallet = ({
 	isOpen,
 	title,
 	description,
+	disableAction,
 	wallets,
 	searchPlaceholder,
 	size,
@@ -193,9 +196,8 @@ export const SearchWallet = ({
 							address={wallet.address()}
 							balance={wallet.balance()}
 							convertedBalance={wallet.convertedBalance()}
+							disabled={disableAction?.(wallet)}
 							network={wallet.network()}
-							coinId={wallet.networkId()}
-							coinName={wallet.coinId()}
 							currency={wallet.currency()}
 							exchangeCurrency={
 								wallet.exchangeCurrency() ||

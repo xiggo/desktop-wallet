@@ -178,14 +178,6 @@ const NavigationBar = ({
 
 	const scroll = useScroll();
 
-	const selectedNetwork = useMemo(() => {
-		if (!selectedWallet) {
-			return;
-		}
-
-		return profile?.wallets().findByAddress(selectedWallet.address)?.network();
-	}, [selectedWallet, profile]);
-
 	return (
 		<NavWrapper
 			aria-labelledby="main menu"
@@ -291,12 +283,12 @@ const NavigationBar = ({
 						onClose={() => setSearchWalletIsOpen(false)}
 					/>
 
-					{selectedWallet && selectedNetwork && (
+					{selectedWallet && (
 						<ReceiveFunds
 							isOpen={true}
 							address={selectedWallet.address}
 							name={selectedWallet.name}
-							network={selectedNetwork}
+							network={selectedWallet.network}
 							onClose={() => setSelectedWallet(undefined)}
 						/>
 					)}
