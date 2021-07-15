@@ -380,7 +380,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="0"
-                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ekoeER"
+                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ksEKyJ"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -402,7 +402,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                   <button
                     aria-checked="true"
                     aria-label="1.354"
-                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ekoeER"
+                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ksEKyJ"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
@@ -424,7 +424,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                   <button
                     aria-checked="false"
                     aria-label="10"
-                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ekoeER"
+                    class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 ksEKyJ"
                     data-testid="ButtonGroupOption"
                     role="radio"
                     type="button"
