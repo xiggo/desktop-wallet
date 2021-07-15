@@ -107,7 +107,7 @@ export const AddRecipient = ({
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
 	const { convert } = useExchangeRate({ exchangeTicker, ticker });
 
-	const maxRecipients = wallet?.network().multiPaymentRecipients() ?? 0;
+	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
 		const senderBalance = wallet?.balance() || 0;
