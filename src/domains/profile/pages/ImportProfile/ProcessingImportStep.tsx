@@ -38,11 +38,12 @@ export const ProcessingImport = ({
 			let profile: Contracts.IProfile | undefined;
 
 			try {
+				profile = await importProfile({ file, password });
+
 				if (isPasswordModalOpen) {
 					setIsPasswordModalOpen(false);
 				}
 
-				profile = await importProfile({ file, password });
 				onSuccess?.(profile);
 			} catch (error) {
 				if (error.message === "PasswordRequired") {
@@ -85,7 +86,6 @@ export const ProcessingImport = ({
 					description={t("PROFILE.IMPORT.PASSWORD_DESCRIPTION")}
 					onSubmit={(enteredPassword) => {
 						setPasswordError(undefined);
-						setIsPasswordModalOpen(false);
 						onPasswordChange?.(enteredPassword);
 					}}
 					onClose={() => {

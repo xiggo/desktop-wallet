@@ -2,7 +2,7 @@ import { ImportFile } from "domains/profile/pages/ImportProfile/models";
 import { ProcessingImport } from "domains/profile/pages/ImportProfile/ProcessingImportStep";
 import fs from "fs";
 import React from "react";
-import { act, env, fireEvent, render, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 let dwe: ImportFile;
 let passwordProtectedDwe: ImportFile;
@@ -68,7 +68,6 @@ describe("Import Profile - Processing import", () => {
 			fireEvent.click(getByTestId("PasswordModal__submit-button"));
 		});
 
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
 		await waitFor(() => expect(onPasswordChange).toHaveBeenCalledWith("S3cUrePa$sword"));
 
 		expect(container).toMatchSnapshot();
@@ -90,7 +89,7 @@ describe("Import Profile - Processing import", () => {
 
 	it("should handle invalid password", async () => {
 		const onPasswordChange = jest.fn();
-		const { container, getByTestId, findByTestId } = render(
+		const { container } = render(
 			<ProcessingImport
 				env={env}
 				file={passwordProtectedDwe}
@@ -98,19 +97,20 @@ describe("Import Profile - Processing import", () => {
 				password="test"
 			/>,
 		);
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeInTheDocument());
 
 		act(() => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "invalid" } });
+			fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "invalid" } });
 		});
 
-		await findByTestId("PasswordModal__submit-button");
+		await screen.findByTestId("PasswordModal__submit-button");
 
 		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
+			fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId("PasswordModal__input")).toHaveValue("invalid"));
 		await waitFor(() => expect(onPasswordChange).not.toHaveBeenCalledWith("testtest2"));
 
 		expect(container).toMatchSnapshot();
