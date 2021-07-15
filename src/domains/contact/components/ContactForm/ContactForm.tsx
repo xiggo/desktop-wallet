@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { Coins } from "@payvo/sdk";
+import { Coins, Networks } from "@payvo/sdk";
 import { Address } from "app/components/Address";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
@@ -7,6 +7,7 @@ import { Form, FormField, FormLabel, SubForm } from "app/components/Form";
 import { Icon } from "app/components/Icon";
 import { InputAddress, InputDefault } from "app/components/Input";
 import { Select } from "app/components/SelectDropdown";
+import { useEnvironmentContext } from "app/contexts";
 import { useNetworkOptions } from "app/hooks";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { useEffect, useMemo, useState } from "react";
@@ -24,33 +25,47 @@ interface NetworkOption {
 	value: string;
 }
 
-const AddressListItem = ({ address, onRemove }: AddressListItemProperties) => (
-	<div
-		data-testid="contact-form__address-list-item"
-		className="flex items-center py-4 border-b border-dashed last:pb-0 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
-	>
-		<div className="mr-4">
-			<div className="flex items-center -space-x-1">
-				<NetworkIcon coin={address.coin} network={address.network} size="lg" />
-				<Avatar address={address.address} size="lg" />
-			</div>
-		</div>
+const AddressListItem = ({ address, onRemove }: AddressListItemProperties) => {
+	const { env } = useEnvironmentContext();
 
-		<span className="font-semibold">
-			<Address address={address.address} />
-		</span>
+	const network = useMemo(
+		() =>
+			env
+				.availableNetworks()
+				.find(
+					(network: Networks.Network) => network.coin() === address.coin && network.id() === address.network,
+				),
+		[address, env],
+	);
 
-		<Button
-			data-testid="contact-form__remove-address-btn"
-			size="icon"
-			className="flex items-center ml-auto"
-			variant="danger"
-			onClick={() => onRemove(address)}
+	return (
+		<div
+			data-testid="contact-form__address-list-item"
+			className="flex items-center py-4 border-b border-dashed last:pb-0 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
 		>
-			<Icon name="Trash" />
-		</Button>
-	</div>
-);
+			<div className="mr-4">
+				<div className="flex items-center -space-x-1">
+					<NetworkIcon network={network} />
+					<Avatar address={address.address} size="lg" />
+				</div>
+			</div>
+
+			<span className="font-semibold">
+				<Address address={address.address} />
+			</span>
+
+			<Button
+				data-testid="contact-form__remove-address-btn"
+				size="icon"
+				className="flex items-center ml-auto"
+				variant="danger"
+				onClick={() => onRemove(address)}
+			>
+				<Icon name="Trash" />
+			</Button>
+		</div>
+	);
+};
 
 interface AddressListProperties {
 	addresses: any[];

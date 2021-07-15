@@ -2,37 +2,38 @@ import { Checkbox } from "app/components/Checkbox";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { FilterNetworkProperties, Network, NetworkOptions, ToggleAllOption } from ".";
+import { FilterNetworksProperties, FilterOption, NetworkOptions, ToggleAllOption } from ".";
 
 export const FilterNetwork = ({
-	networks = [],
+	options = [],
 	className,
 	onChange,
 	onViewAll,
-	hideViewAll,
+	hideViewAll = true,
 	title,
-}: FilterNetworkProperties) => {
-	const [networkList, setNetworkList] = useState(networks);
+}: FilterNetworksProperties) => {
+	const [networkList, setNetworkList] = useState(options);
 	const [showAll, setShowAll] = useState(false);
 	const { t } = useTranslation();
 
-	useEffect(() => setNetworkList(networks), [networks]);
+	useEffect(() => setNetworkList(options), [options]);
 
-	const handleClick = (network: Network, index: number) => {
+	const handleClick = (option: FilterOption, index: number) => {
 		const list = networkList?.concat();
 
-		network.isSelected = !network.isSelected;
-		list.splice(index, 1, network);
+		option.isSelected = !option.isSelected;
+		list.splice(index, 1, option);
 		setNetworkList(list);
 
-		onChange?.(network, list);
+		onChange?.(option, list);
 	};
 
 	const handleToggleAll = () => {
-		const shouldViewAll = !showAll;
-		setShowAll(shouldViewAll);
-		const allNetworksSelected = networks.map((network) => ({ ...network, isSelected: true }));
-		if (shouldViewAll) {
+		setShowAll(!showAll);
+
+		const allNetworksSelected = options.map((option) => ({ ...option, isSelected: true }));
+
+		if (!showAll) {
 			onViewAll?.();
 			onChange?.(allNetworksSelected[0], allNetworksSelected);
 		}
@@ -56,7 +57,7 @@ export const FilterNetwork = ({
 				<label className="inline-flex items-center mt-4 space-x-3 cursor-pointer text-theme-secondary-text">
 					<Checkbox
 						data-testid="FilterNetwork__select-all-checkbox"
-						checked={networkList.every((n) => n.isSelected)}
+						checked={networkList.every((option) => option.isSelected)}
 						onChange={handleSelectAll}
 					/>
 					<span>{t("COMMON.SELECT_ALL")}</span>
@@ -66,16 +67,25 @@ export const FilterNetwork = ({
 	);
 };
 
-export const FilterNetworks = ({ networks = [], ...properties }: FilterNetworkProperties) => {
+export const FilterNetworks = ({ options = [], ...properties }: FilterNetworksProperties) => {
 	const { t } = useTranslation();
 
-	const { liveNetworks, testNetworks } = useMemo(
-		() => ({
-			liveNetworks: networks.filter((n) => n.isLive),
-			testNetworks: networks.filter((n) => !n.isLive),
-		}),
-		[networks],
-	);
+	const { liveNetworks, testNetworks } = useMemo(() => {
+		const initial: { liveNetworks: FilterOption[]; testNetworks: FilterOption[] } = {
+			liveNetworks: [],
+			testNetworks: [],
+		};
+
+		return options.reduce((options, option) => {
+			if (option.network.isLive()) {
+				options.liveNetworks.push(option);
+			} else {
+				options.testNetworks.push(option);
+			}
+
+			return options;
+		}, initial);
+	}, [options]);
 
 	return (
 		<div className="space-y-4">
@@ -83,7 +93,7 @@ export const FilterNetworks = ({ networks = [], ...properties }: FilterNetworkPr
 				<FilterNetwork
 					{...properties}
 					title={t("COMMON.PUBLIC_NETWORKS")}
-					networks={liveNetworks}
+					options={liveNetworks}
 					onChange={(_, updated) => properties.onChange?.(_, [...updated, ...testNetworks])}
 				/>
 			)}
@@ -91,7 +101,7 @@ export const FilterNetworks = ({ networks = [], ...properties }: FilterNetworkPr
 				<FilterNetwork
 					{...properties}
 					title={t("COMMON.DEVELOPMENT_NETWORKS")}
-					networks={testNetworks}
+					options={testNetworks}
 					onChange={(_, updated) => properties.onChange?.(_, [...updated, ...liveNetworks])}
 				/>
 			)}

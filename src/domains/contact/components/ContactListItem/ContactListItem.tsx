@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import { Networks } from "@payvo/sdk";
 import { Address } from "app/components/Address";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
@@ -8,6 +9,7 @@ import { Dropdown } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
+import { useEnvironmentContext } from "app/contexts";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -15,7 +17,9 @@ import { useTranslation } from "react-i18next";
 import { ContactListItemProperties, Option } from "./ContactListItem.models";
 
 export const ContactListItem = ({ item, variant, onAction, onSend, options }: ContactListItemProperties) => {
+	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
+
 	const contactTypes: string[] = ["Delegate"];
 
 	const isCondensed = () => variant === "condensed";
@@ -30,6 +34,13 @@ export const ContactListItem = ({ item, variant, onAction, onSend, options }: Co
 						index !== item.addresses().count() - 1
 							? "border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
 							: "";
+
+					const network = env
+						.availableNetworks()
+						.find(
+							(network: Networks.Network) =>
+								network.coin() === address.coin() && network.id() === address.network(),
+						);
 
 					return (
 						<TableRow key={`${address.address()}-${index}`} border={index === item.addresses().count() - 1}>
@@ -55,7 +66,7 @@ export const ContactListItem = ({ item, variant, onAction, onSend, options }: Co
 							</TableCell>
 
 							<TableCell innerClassName="justify-center">
-								<NetworkIcon coin={address.coin()} network={address.network()} size="lg" noShadow />
+								<NetworkIcon network={network} noShadow />
 							</TableCell>
 
 							<TableCell

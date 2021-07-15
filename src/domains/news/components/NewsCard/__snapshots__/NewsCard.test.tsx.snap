@@ -25,7 +25,7 @@ exports[`NewsCard should render 1`] = `
             >
               <div
                 aria-label="ARK"
-                class="Circle__CircleWrapper-d5u41q-0 bAcKAQ text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 ivxRHU text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.mainnet"
               >
                 <div
@@ -42,9 +42,9 @@ exports[`NewsCard should render 1`] = `
               <div>
                 <h4
                   class="text-lg font-semibold"
-                  data-testid="NewsCard__asset-ARK Ecosystem"
+                  data-testid="NewsCard__asset-ARK"
                 >
-                  ARK Ecosystem
+                  ARK
                 </h4>
                 <div
                   class="flex items-center space-x-4"
@@ -160,7 +160,7 @@ exports[`NewsCard should render with cover image 1`] = `
             >
               <div
                 aria-label="ARK"
-                class="Circle__CircleWrapper-d5u41q-0 bAcKAQ text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 ivxRHU text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.mainnet"
               >
                 <div
@@ -177,9 +177,9 @@ exports[`NewsCard should render with cover image 1`] = `
               <div>
                 <h4
                   class="text-lg font-semibold"
-                  data-testid="NewsCard__asset-ARK Ecosystem"
+                  data-testid="NewsCard__asset-ARK"
                 >
-                  ARK Ecosystem
+                  ARK
                 </h4>
                 <div
                   class="flex items-center space-x-4"

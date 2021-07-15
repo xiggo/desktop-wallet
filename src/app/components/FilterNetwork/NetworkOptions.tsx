@@ -2,37 +2,39 @@ import { Badge } from "app/components/Badge";
 import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
-import { getNetworkExtendedData } from "domains/network/helpers";
 import React from "react";
 
-import { Network } from ".";
+import { FilterOption } from ".";
 
-export const NetworkOption = ({ coin, id, name, isSelected, onClick }: Network) => {
-	const networkExtendedData = coin && id ? getNetworkExtendedData(id) : undefined;
-	if (!networkExtendedData) {
-		return <></>;
-	}
+export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) => {
+	const renderOption = () => {
+		if (isSelected) {
+			return (
+				<Circle size="lg" className="relative border-theme-success-500 text-theme-success-500">
+					<Icon name={network.ticker()} size="lg" />
+					<Badge className="bg-theme-success-500 text-theme-success-100" icon="Checkmark" />
+				</Circle>
+			);
+		}
 
-	const { iconName } = networkExtendedData;
+		return (
+			<Circle
+				size="lg"
+				className="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800"
+			>
+				<Icon name={network.ticker()} size="lg" />
+				<Badge className="border-theme-secondary-300 dark:border-theme-secondary-800" />
+			</Circle>
+		);
+	};
 
 	return (
-		<li className="inline-block pr-5 pb-5 cursor-pointer" data-testid={`NetworkOption__${coin}`} onClick={onClick}>
-			<Tooltip content={name}>
-				{isSelected ? (
-					<Circle size="lg" className="relative border-theme-success-500 text-theme-success-500">
-						<Icon name={iconName} size="lg" />
-						<Badge className="bg-theme-success-500 text-theme-success-100" icon="Checkmark" />
-					</Circle>
-				) : (
-					<Circle
-						size="lg"
-						className="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800"
-					>
-						<Icon name={iconName} size="lg" />
-						<Badge className="border-theme-secondary-300 dark:border-theme-secondary-800" />
-					</Circle>
-				)}
-			</Tooltip>
+		<li
+			className="inline-block pr-5 pb-5 cursor-pointer"
+			data-testid={`NetworkOption__${network.id()}`}
+			onClick={onClick}
+		>
+			<Tooltip content={network.displayName()}>{renderOption()}</Tooltip>
 		</li>
 	);
 };
@@ -41,11 +43,11 @@ export const NetworkOptions = ({
 	networks = [],
 	onClick,
 }: {
-	networks?: Network[];
-	onClick?: (network: Network, key: number) => void;
+	networks?: FilterOption[];
+	onClick?: (network: FilterOption, key: number) => void;
 }) => (
 	<ul data-testid="NetworkOptions" className="flex flex-wrap">
-		{networks.map((network: Network, key: number) => (
+		{networks.map((network: FilterOption, key: number) => (
 			<NetworkOption {...network} key={key} onClick={() => onClick?.(network, key)} />
 		))}
 	</ul>

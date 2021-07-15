@@ -2,15 +2,12 @@ import { Networks } from "@payvo/sdk";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
-import { CoinNetworkExtended } from "domains/network/data";
 import React, { memo } from "react";
 import { Size } from "types";
 
-type Network = Networks.Network & { extra?: CoinNetworkExtended };
-
 interface Properties {
 	disabled?: boolean;
-	network?: Network;
+	network: Networks.Network;
 	as?: React.ElementType;
 	className?: string;
 	iconClassName?: string;
@@ -21,10 +18,6 @@ interface Properties {
 
 export const NetworkOption = memo(
 	({ disabled, network, iconSize = "lg", iconClassName, onClick, ...properties }: Properties) => {
-		if (!network?.extra) {
-			return <></>;
-		}
-
 		const iconColorClass = network.isLive() ? "text-theme-primary-600" : "text-theme-secondary-700";
 
 		const handleClick = () => {
@@ -39,17 +32,17 @@ export const NetworkOption = memo(
 				data-testid="SelectNetwork__NetworkIcon--container"
 				onClick={handleClick}
 			>
-				<Tooltip content={network.extra.displayName}>
+				<Tooltip content={network.displayName()}>
 					<div
 						className={`w-full h-full flex justify-center items-center border-2 rounded-xl ${
 							iconClassName ||
 							`border-theme-primary-100 dark:border-theme-secondary-800 ${iconColorClass}`
 						}`}
-						aria-label={network.extra.displayName}
-						data-testid={`NetworkIcon-${network?.coin()}-${network?.id()}`}
+						aria-label={network.displayName()}
+						data-testid={`NetworkIcon-${network.coin()}-${network.id()}`}
 						{...properties}
 					>
-						<Icon data-testid="NetworkIcon__icon" name={network.extra.iconName} size={iconSize} />
+						<Icon data-testid="NetworkIcon__icon" name={network.ticker()} size={iconSize} />
 					</div>
 				</Tooltip>
 			</li>

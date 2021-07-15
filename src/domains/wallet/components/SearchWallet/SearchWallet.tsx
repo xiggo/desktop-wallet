@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import { Networks } from "@payvo/sdk";
 import { Address } from "app/components/Address";
 import { Amount, AmountCrypto } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
@@ -22,6 +23,7 @@ interface SearchWalletListItemProperties {
 	exchangeCurrency: string;
 	index: number;
 	name?: string;
+	network: Networks.Network;
 	showConvertedValue?: boolean;
 	showNetwork?: boolean;
 	onAction: any;
@@ -30,6 +32,7 @@ interface SearchWalletListItemProperties {
 const SearchWalletListItem = ({
 	address,
 	balance,
+	network,
 	coinId,
 	coinName,
 	convertedBalance,
@@ -47,7 +50,7 @@ const SearchWalletListItem = ({
 		<TableRow>
 			<TableCell variant="start" innerClassName="space-x-4">
 				<div className="flex-shrink-0 -space-x-2">
-					{showNetwork && <NetworkIcon size="lg" coin={coinName} network={coinId} />}
+					{showNetwork && <NetworkIcon size="lg" network={network} />}
 					<Avatar size="lg" address={address} />
 				</div>
 				<Address walletName={name} address={address} maxNameChars={16} />
@@ -190,6 +193,7 @@ export const SearchWallet = ({
 							address={wallet.address()}
 							balance={wallet.balance()}
 							convertedBalance={wallet.convertedBalance()}
+							network={wallet.network()}
 							coinId={wallet.networkId()}
 							coinName={wallet.coinId()}
 							currency={wallet.currency()}

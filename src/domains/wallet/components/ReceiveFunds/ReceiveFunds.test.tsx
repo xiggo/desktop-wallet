@@ -15,9 +15,7 @@ describe("ReceiveFunds", () => {
 	});
 
 	it("should render without a wallet name", async () => {
-		const { asFragment, queryAllByTestId } = render(
-			<ReceiveFunds isOpen={true} address="abc" icon="ARK" network={network} />,
-		);
+		const { asFragment, queryAllByTestId } = render(<ReceiveFunds isOpen={true} address="abc" network={network} />);
 
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__name")).toHaveLength(0));
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
@@ -28,7 +26,7 @@ describe("ReceiveFunds", () => {
 
 	it("should not render qrcode without an address", async () => {
 		// @ts-ignore
-		const { asFragment, queryAllByTestId } = render(<ReceiveFunds isOpen={true} icon="ARK" network={network} />);
+		const { asFragment, queryAllByTestId } = render(<ReceiveFunds isOpen={true} network={network} />);
 
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__name")).toHaveLength(0));
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
@@ -39,7 +37,7 @@ describe("ReceiveFunds", () => {
 
 	it("should render with a wallet name", async () => {
 		const { asFragment, queryAllByTestId } = render(
-			<ReceiveFunds isOpen={true} address="abc" icon="ARK" name="My Wallet" network={network} />,
+			<ReceiveFunds isOpen={true} address="abc" name="My Wallet" network={network} />,
 		);
 
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
@@ -53,14 +51,7 @@ describe("ReceiveFunds", () => {
 		const onClose = jest.fn();
 
 		const { getByTestId, queryAllByTestId } = render(
-			<ReceiveFunds
-				isOpen={true}
-				address="abc"
-				icon="ARK"
-				name="My Wallet"
-				network={network}
-				onClose={onClose}
-			/>,
+			<ReceiveFunds isOpen={true} address="abc" name="My Wallet" network={network} onClose={onClose} />,
 		);
 
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
@@ -76,7 +67,7 @@ describe("ReceiveFunds", () => {
 
 	it("should open qr code form", async () => {
 		const { getByTestId, queryAllByTestId } = render(
-			<ReceiveFunds isOpen={true} address="abc" icon="ARK" name="My Wallet" network={network} />,
+			<ReceiveFunds isOpen={true} address="abc" name="My Wallet" network={network} />,
 		);
 
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));

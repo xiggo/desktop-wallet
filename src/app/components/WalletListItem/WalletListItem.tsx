@@ -57,12 +57,7 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 		<TableRow isSelected={isSelected} onClick={() => onClick?.(wallet.id())}>
 			<TableCell variant="start" innerClassName="space-x-4">
 				<div className="flex-shrink-0 -space-x-2">
-					<NetworkIcon
-						size="lg"
-						coin={wallet.coinId()}
-						network={wallet.networkId()}
-						shadowClassName={shadowClasses}
-					/>
+					<NetworkIcon size="lg" network={wallet.network()} shadowClassName={shadowClasses} />
 					<Avatar size="lg" address={wallet.address()} shadowClassName={shadowClasses} />
 				</div>
 				<Address walletName={alias} address={wallet.address()} />

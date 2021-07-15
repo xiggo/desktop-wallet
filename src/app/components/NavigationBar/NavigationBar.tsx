@@ -295,7 +295,6 @@ const NavigationBar = ({
 						<ReceiveFunds
 							isOpen={true}
 							address={selectedWallet.address}
-							icon={selectedWallet.coinName}
 							name={selectedWallet.name}
 							network={selectedNetwork}
 							onClose={() => setSelectedWallet(undefined)}

@@ -182,11 +182,7 @@ describe("ImportWallet", () => {
 		const Component = () => {
 			form = useForm({
 				defaultValues: {
-					network: {
-						coin: () => "ARK",
-						id: () => "ark.devnet",
-						ticker: () => "DARK",
-					},
+					network: importedWallet.network(),
 				},
 			});
 

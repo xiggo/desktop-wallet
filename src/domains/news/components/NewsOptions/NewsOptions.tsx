@@ -1,22 +1,20 @@
+import { Networks } from "@payvo/sdk";
 import { Divider } from "app/components/Divider";
-import { FilterNetwork } from "app/components/FilterNetwork";
+import { FilterNetwork, FilterOption } from "app/components/FilterNetwork";
 import { Icon } from "app/components/Icon";
 import { Input } from "app/components/Input";
+import { useEnvironmentContext } from "app/contexts";
 import { useDebounce } from "app/hooks";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { assets as availableCoins, AVAILABLE_CATEGORIES } from "../../data";
+import { AVAILABLE_CATEGORIES } from "../../data";
 import { SelectCategory } from "./components/SelectCategory";
 
 interface Option {
 	name: string;
 	isSelected: boolean;
 }
-
-type CoinOption = {
-	coin: string;
-} & Option;
 
 interface NewsOptionsProperties {
 	selectedCategories: string[];
@@ -31,6 +29,8 @@ const VERTICAL_PADDING = 20 + 32;
 // endregion
 
 export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSubmit }: NewsOptionsProperties) => {
+	const { env } = useEnvironmentContext();
+
 	const { t } = useTranslation();
 
 	const [categories, setCategories] = useState<Option[]>(
@@ -40,12 +40,22 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 		})),
 	);
 
-	const [coins, setCoins] = useState(
-		availableCoins.map((coin: CoinOption) => ({
-			...coin,
-			isSelected: selectedCoins.includes(coin.coin),
-		})),
-	);
+	const [coinOptions, setCoinOptions] = useState(() => {
+		const coins: Record<string, { network: Networks.Network; isSelected: boolean }> = {};
+
+		for (const network of env.availableNetworks()) {
+			const coin = network.coin();
+
+			if (!coins[coin]) {
+				coins[coin] = {
+					isSelected: selectedCoins.includes(coin),
+					network,
+				};
+			}
+		}
+
+		return Object.values(coins);
+	});
 
 	const [searchQuery, setSearchQuery] = useState("");
 	const debouncedSearchQuery = useDebounce(searchQuery, 500);
@@ -95,9 +105,9 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 			[],
 		);
 
-		const coinNames = coins.reduce(
-			(accumulator: string[], coin: CoinOption) =>
-				coin.isSelected ? accumulator.concat(coin.coin) : accumulator,
+		const coinNames = coinOptions.reduce(
+			(accumulator: string[], option: FilterOption) =>
+				option.isSelected ? accumulator.concat(option.network.coin()) : accumulator,
 			[],
 		);
 
@@ -106,7 +116,7 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 			coins: coinNames,
 			searchQuery: debouncedSearchQuery,
 		});
-	}, [onSubmit, categories, debouncedSearchQuery, coins]);
+	}, [onSubmit, categories, debouncedSearchQuery, coinOptions]);
 
 	useEffect(() => {
 		handleQueryUpdate();
@@ -180,9 +190,9 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 
 						<FilterNetwork
 							className="pb-2.5"
-							networks={coins}
+							options={coinOptions}
 							hideViewAll
-							onChange={(_, networks) => setCoins(networks)}
+							onChange={(_, networks) => setCoinOptions(networks)}
 						/>
 					</div>
 				</div>

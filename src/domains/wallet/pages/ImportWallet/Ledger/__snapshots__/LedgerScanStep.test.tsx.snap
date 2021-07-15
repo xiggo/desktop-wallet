@@ -51,7 +51,7 @@ exports[`LedgerScanStep should render 1`] = `
           <div
             class="fixed invisible w-auto whitespace-nowrap"
           >
-            
+            ARK Devnet
             …
           </div>
           <div
@@ -87,7 +87,7 @@ exports[`LedgerScanStep should render 1`] = `
                 disabled=""
                 id="ImportWallet__network-input"
                 placeholder="Enter a cryptoasset name"
-                value=""
+                value="ARK Devnet"
               />
               
             </div>

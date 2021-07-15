@@ -1,29 +1,46 @@
+import { Networks } from "@payvo/sdk";
 import React from "react";
+import { availableNetworksMock } from "tests/mocks/networks";
 import { render } from "utils/testing-library";
 
 import { NetworkIcon } from "./NetworkIcon";
 
-describe("NetworkIcon", () => {
-	it.each([
-		["ark.mainnet", "ARK"],
-		["ark.devnet", "ARK Devnet"],
-	])("should render network (%s)", (network, label) => {
-		const { getByTestId } = render(<NetworkIcon coin="ARK" network={network} />, {});
+let network: Networks.Network;
 
-		expect(getByTestId(`NetworkIcon-ARK-${network}`)).toHaveAttribute("aria-label", label);
+describe("NetworkIcon", () => {
+	beforeEach(() => {
+		network = availableNetworksMock[0];
+	});
+
+	it("should render", () => {
+		const { getByTestId } = render(<NetworkIcon network={network} />, {});
+
+		expect(getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
+			"aria-label",
+			network.displayName(),
+		);
 		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
 	});
 
-	it("should render placeholder", () => {
-		const { queryByTestId } = render(<NetworkIcon coin="TEST" />, {});
+	it("should render with test network", () => {
+		network = availableNetworksMock[1];
 
-		expect(queryByTestId("NetworkIcon__placeholder")).toBeTruthy();
+		const { getByTestId } = render(<NetworkIcon network={network} />, {});
+
+		expect(getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
+			"aria-label",
+			network.displayName(),
+		);
+		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
 	});
 
 	it("should render network with custom classname", () => {
-		const { getByTestId } = render(<NetworkIcon coin="ARK" network="ark.devnet" className="test" />, {});
+		const { getByTestId } = render(<NetworkIcon network={network} className="test" />, {});
 
-		expect(getByTestId("NetworkIcon-ARK-ark.devnet")).toHaveAttribute("aria-label", "ARK Devnet");
+		expect(getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
+			"aria-label",
+			network.displayName(),
+		);
 		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
 	});
 });

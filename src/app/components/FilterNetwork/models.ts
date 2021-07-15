@@ -1,22 +1,21 @@
+import { Networks } from "@payvo/sdk";
+
 export interface ToggleAllOptionProperties {
 	onClick?: any;
 	isHidden?: boolean;
 	isSelected?: boolean;
 }
 
-export interface Network {
-	id?: string;
-	name: string;
+export interface FilterOption {
+	network: Networks.Network;
 	isSelected: boolean;
-	coin: string;
 	onClick?: any;
-	isLive?: boolean;
 }
 
-export interface FilterNetworkProperties {
+export interface FilterNetworksProperties {
 	title?: string;
-	networks?: Network[];
-	onChange?: (network: Network, networks: Network[]) => void;
+	options?: FilterOption[];
+	onChange?: (network: FilterOption, networks: FilterOption[]) => void;
 	onViewAll?: any;
 	hideViewAll?: boolean;
 	className?: string;

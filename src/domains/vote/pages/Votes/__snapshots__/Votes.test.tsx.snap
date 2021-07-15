@@ -5908,7 +5908,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                                 >
                                   <li
                                     class="inline-block pr-5 pb-5 cursor-pointer"
-                                    data-testid="NetworkOption__ARK"
+                                    data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
                                       class="Circle__CircleWrapper-d5u41q-0 bWntUS relative border-theme-success-500 text-theme-success-500 ring-theme-background"
@@ -6450,7 +6450,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                                 >
                                   <li
                                     class="inline-block pr-5 pb-5 cursor-pointer"
-                                    data-testid="NetworkOption__ARK"
+                                    data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
                                       class="Circle__CircleWrapper-d5u41q-0 bWntUS relative border-theme-success-500 text-theme-success-500 ring-theme-background"
@@ -8754,7 +8754,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                                 >
                                   <li
                                     class="inline-block pr-5 pb-5 cursor-pointer"
-                                    data-testid="NetworkOption__ARK"
+                                    data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
                                       class="Circle__CircleWrapper-d5u41q-0 bWntUS relative border-theme-success-500 text-theme-success-500 ring-theme-background"

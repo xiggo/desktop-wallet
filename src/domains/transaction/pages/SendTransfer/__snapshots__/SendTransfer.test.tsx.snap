@@ -461,7 +461,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -6226,7 +6226,7 @@ exports[`SendTransfer should render network step without test networks 1`] = `
           <div
             class="fixed invisible w-auto whitespace-nowrap"
           >
-            …
+            ARK Devnet…
           </div>
           <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
@@ -6259,7 +6259,7 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                 data-testid="SelectNetworkInput__input"
                 id="SendTransfer__network-step__select-input"
                 placeholder="Enter a cryptoasset name"
-                value=""
+                value="ARK Devnet"
               />
             </div>
           </div>
@@ -6373,7 +6373,7 @@ exports[`SendTransfer should render review step 1`] = `
       </div>
       <div
         aria-label="ARK Devnet"
-        class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+        class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
         data-testid="NetworkIcon-ARK-ark.devnet"
       >
         <div
@@ -6767,7 +6767,7 @@ exports[`SendTransfer should render summary step 1`] = `
         </div>
         <div
           aria-label="ARK Devnet"
-          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -8892,7 +8892,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -9561,7 +9561,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -10230,7 +10230,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -11208,7 +11208,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -11877,7 +11877,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -12546,7 +12546,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div

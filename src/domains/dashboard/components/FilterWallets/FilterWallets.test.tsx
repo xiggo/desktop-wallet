@@ -1,48 +1,33 @@
+import { Contracts } from "@payvo/profiles";
 import { act } from "@testing-library/react-hooks";
 import React from "react";
-import { fireEvent, render } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render } from "testing-library";
 
 import { FilterWallets } from "./FilterWallets";
 
-const networks = [
-	{
-		coin: "ARK",
-		id: "ark.mainnet",
-		isLive: true,
-		isSelected: false,
-		name: "ARK Devnet",
-	},
-	{
-		coin: "LSK",
-		id: "lsk.testnet",
-		isLive: false,
-		isSelected: true,
-		name: "LSK Testnet",
-	},
-	{
-		coin: "BIND",
-		id: "compedia.mainnet",
-		isLive: false,
-		isSelected: false,
-		name: "Compedia",
-	},
-	{
-		coin: "ETH",
-		id: "eth.mainnet",
-		isLive: true,
-		isSelected: true,
-		name: "Ethereum",
-	},
-	{
-		coin: "BTC",
-		id: "btc.mainnet",
-		isLive: true,
-		isSelected: false,
-		name: "Bitcoin",
-	},
-];
+let profile: Contracts.IProfile;
+let networkOptions: FilterOption[];
 
 describe("FilterWallets", () => {
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		const networks: Record<string, FilterOption> = {};
+
+		for (const wallet of profile.wallets().values()) {
+			const networkId = wallet.networkId();
+
+			if (!networks[networkId]) {
+				networks[networkId] = {
+					isSelected: false,
+					network: wallet.network(),
+				};
+			}
+		}
+
+		networkOptions = Object.values(networks);
+	});
+
 	it("should render", () => {
 		const { container } = render(<FilterWallets />);
 
@@ -50,7 +35,7 @@ describe("FilterWallets", () => {
 	});
 
 	it("should render with networks selection", () => {
-		const { container } = render(<FilterWallets networks={networks} />);
+		const { container } = render(<FilterWallets networks={networkOptions} useTestNetworks />);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -58,19 +43,19 @@ describe("FilterWallets", () => {
 	it("should emit onChange for network selection", () => {
 		const onChange = jest.fn();
 
-		const { getByTestId } = render(<FilterWallets networks={networks} onChange={onChange} />);
+		const { getByTestId } = render(<FilterWallets networks={networkOptions} onChange={onChange} useTestNetworks />);
 
 		act(() => {
-			fireEvent.click(getByTestId("NetworkOption__ARK"));
+			fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 		});
 
-		expect(onChange).toBeCalled();
+		expect(onChange).toBeCalledWith("selectedNetworkIds", [networkOptions[0].network.id()]);
 	});
 
 	it("should emit onChange for wallets display type change", () => {
 		const onChange = jest.fn();
 
-		const { getByTestId } = render(<FilterWallets networks={networks} onChange={onChange} />);
+		const { getByTestId } = render(<FilterWallets networks={networkOptions} onChange={onChange} />);
 
 		act(() => {
 			fireEvent.click(getByTestId("filter-wallets__wallets"));
@@ -86,7 +71,7 @@ describe("FilterWallets", () => {
 	it("should not emit onChange for wallet display type change", () => {
 		const onChange = jest.fn();
 
-		const { getByTestId } = render(<FilterWallets networks={networks} />);
+		const { getByTestId } = render(<FilterWallets networks={networkOptions} />);
 
 		act(() => {
 			fireEvent.click(getByTestId("filter-wallets__wallets"));

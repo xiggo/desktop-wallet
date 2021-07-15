@@ -28,11 +28,11 @@ export const FilterWallets = ({ networks, walletsDisplayType, useTestNetworks, o
 
 			<FilterNetworks
 				useTestNetworks={useTestNetworks}
-				networks={networks}
-				onChange={(_: any, networks: any[]) => {
+				options={networks}
+				onChange={(_: any, options: any[]) => {
 					onChange?.(
 						"selectedNetworkIds",
-						networks.filter((network) => network.isSelected).map((network) => network.id),
+						options.filter((option) => option.isSelected).map((option) => option.network.id()),
 					);
 				}}
 			/>

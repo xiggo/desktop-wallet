@@ -3,15 +3,11 @@ import { Divider } from "app/components/Divider";
 import { Toggle } from "app/components/Toggle";
 import cn from "classnames";
 import { NetworkOption } from "domains/network/components/NetworkOption";
-import { CoinNetworkExtended } from "domains/network/data";
-import { getNetworkExtendedData } from "domains/network/helpers";
 import { useCombobox } from "downshift";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { SelectNetworkInput } from "./SelectNetworkInput";
-
-type Network = Networks.Network & { extra?: CoinNetworkExtended };
 
 interface SelectNetworkProperties {
 	selected?: Networks.Network;
@@ -26,7 +22,7 @@ interface SelectNetworkProperties {
 	onSelect?: (network?: Networks.Network | null) => void;
 }
 
-export const itemToString = (item: Network | null) => item?.extra?.displayName || "";
+export const itemToString = (item: Networks.Network | null) => item?.displayName() || "";
 
 export const SelectNetwork = ({
 	selected,
@@ -41,26 +37,11 @@ export const SelectNetwork = ({
 }: SelectNetworkProperties) => {
 	const { t } = useTranslation();
 
-	const [items, setItems] = useState<Network[]>([]);
 	const [suggestion, setSuggestion] = useState("");
-
 	const [showDevelopmentNetworks, setShowDevelopmentNetworks] = useState(false);
 
-	const extendedItems = useMemo(
-		() =>
-			networks.map((network) => {
-				const extended = getNetworkExtendedData(network.id());
-				return Object.assign(network, { extra: extended });
-			}),
-		[networks],
-	);
-
-	useEffect(() => {
-		setItems(extendedItems);
-	}, [networks, extendedItems]);
-
-	const isMatch = (inputValue: string, network: Network) =>
-		inputValue && network.extra?.displayName?.toLowerCase().startsWith(inputValue.toLowerCase());
+	const isMatch = (inputValue: string, network: Networks.Network) =>
+		inputValue && network.displayName().toLowerCase().startsWith(inputValue.toLowerCase());
 
 	const {
 		openMenu,
@@ -72,14 +53,14 @@ export const SelectNetwork = ({
 		selectedItem,
 		inputValue,
 		reset,
-	} = useCombobox<Network | null>({
+	} = useCombobox<Networks.Network | null>({
 		id,
 		itemToString,
-		items,
+		items: networks,
 		onInputValueChange: ({ inputValue, selectedItem }) => {
 			// Clear selection when user is changing input,
 			// and input does not match previously selected item
-			if (selectedItem && selectedItem.extra?.displayName !== inputValue) {
+			if (selectedItem && selectedItem.displayName() !== inputValue) {
 				reset();
 			}
 
@@ -90,11 +71,11 @@ export const SelectNetwork = ({
 
 			let newSuggestion = "";
 
-			if (inputValue !== selectedItem?.extra?.displayName) {
-				const matches = items.filter((network: Networks.Network) => isMatch(inputValue, network));
+			if (inputValue !== selectedItem?.displayName()) {
+				const matches = networks.filter((network: Networks.Network) => isMatch(inputValue, network));
 
 				if (matches.length > 0) {
-					newSuggestion = [inputValue, matches[0].extra?.displayName?.slice(inputValue.length)].join("");
+					newSuggestion = [inputValue, matches[0].displayName().slice(inputValue.length)].join("");
 				}
 			}
 
@@ -127,13 +108,14 @@ export const SelectNetwork = ({
 		selectItem(item);
 	};
 
-	const publicNetworks = items.filter((network) => network.isLive());
-	const developmentNetworks = items.filter((network) => network.isTest());
+	const publicNetworks = networks.filter((network) => network.isLive());
+	const developmentNetworks = networks.filter((network) => network.isTest());
 
-	const optionClassName = (network: Network) => {
+	const optionClassName = (network: Networks.Network) => {
 		if (selectedItem) {
 			// `network` is the selected item
-			if (selectedItem.extra?.displayName === network.extra?.displayName) {
+
+			if (selectedItem.displayName() === network.displayName()) {
 				return "border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200";
 			}
 
@@ -165,7 +147,7 @@ export const SelectNetwork = ({
 						onFocus: openMenu,
 						onKeyDown: (event: any) => {
 							if (event.key === "Tab" || event.key === "Enter") {
-								const firstMatch = items.find((network: Networks.Network) =>
+								const firstMatch = networks.find((network: Networks.Network) =>
 									isMatch(inputValue, network),
 								);
 								if (inputValue && firstMatch) {

@@ -206,7 +206,7 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
 
-		fireEvent.click(screen.getByTestId("NetworkOption__ARK"));
+		fireEvent.click(screen.getByTestId("NetworkOption__ark.mainnet"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(0));
 		await waitFor(() => expect(screen.queryAllByTestId("EmptyResults")).toHaveLength(1));

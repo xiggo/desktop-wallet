@@ -492,7 +492,7 @@ exports[`SendIpfs should render form step 1`] = `
       </div>
       <div
         aria-label="ARK Devnet"
-        class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+        class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
         data-testid="NetworkIcon-ARK-ark.devnet"
       >
         <div
@@ -798,7 +798,7 @@ exports[`SendIpfs should render review step 1`] = `
       </div>
       <div
         aria-label="ARK Devnet"
-        class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+        class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
         data-testid="NetworkIcon-ARK-ark.devnet"
       >
         <div
@@ -1495,7 +1495,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -2079,7 +2079,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -2665,7 +2665,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -3249,7 +3249,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -3716,7 +3716,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-d5u41q-0 jezFKu text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div

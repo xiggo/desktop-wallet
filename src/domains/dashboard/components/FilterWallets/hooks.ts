@@ -1,5 +1,5 @@
-import { uniqBy } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
+import { Networks } from "@payvo/sdk";
 import { useWalletConfig } from "domains/dashboard/hooks";
 import { useMemo } from "react";
 
@@ -12,18 +12,20 @@ export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) =
 
 	const allWalletsLength = profile.wallets().values().length;
 	const networks = useMemo(() => {
-		const networks = profile
-			.wallets()
-			.values()
-			.map((wallet) => ({
-				coin: wallet.network().coin(),
-				id: wallet.network().id(),
-				isLive: wallet.network().isLive(),
-				isSelected: selectedNetworkIds.includes(wallet.network().id()),
-				name: wallet.network().name(),
-			}));
+		const networks: Record<string, { network: Networks.Network; isSelected: boolean }> = {};
 
-		return uniqBy(networks, (network) => network.id);
+		for (const wallet of profile.wallets().values()) {
+			const networkId = wallet.networkId();
+
+			if (!networks[networkId]) {
+				networks[networkId] = {
+					isSelected: selectedNetworkIds.includes(networkId),
+					network: wallet.network(),
+				};
+			}
+		}
+
+		return Object.values(networks);
 	}, [profile, selectedNetworkIds, allWalletsLength]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const isFilterChanged = useMemo(() => {

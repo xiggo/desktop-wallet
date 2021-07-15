@@ -2,7 +2,6 @@ import { sortByDesc } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { BarItem } from "app/components/PercentageBar";
 import { useEnvironmentContext } from "app/contexts";
-import { getNetworkExtendedData } from "domains/network/helpers";
 import { useMemo } from "react";
 
 export const usePortfolioData = ({ profile }: { profile: Contracts.IProfile }) => {
@@ -31,17 +30,7 @@ export const usePortfolioData = ({ profile }: { profile: Contracts.IProfile }) =
 		},
 	];
 
-	const availableNetworks = useMemo(
-		() =>
-			env
-				.availableNetworks()
-				.filter((network) => network.isLive())
-				.map((network) => {
-					const extended = getNetworkExtendedData(network.id());
-					return Object.assign(network, { extra: extended });
-				}),
-		[env],
-	);
+	const availableNetworks = useMemo(() => env.availableNetworks().filter((network) => network.isLive()), [env]);
 
 	const balancePerCoin: any = useMemo(() => profile.portfolio().breakdown(), [profile]);
 
@@ -50,7 +39,7 @@ export const usePortfolioData = ({ profile }: { profile: Contracts.IProfile }) =
 
 		for (const coin of Object.keys(balancePerCoin)) {
 			for (const network of availableNetworks) {
-				if (network.extra && network.ticker() === coin) {
+				if (network.ticker() === coin) {
 					data.push({
 						color: "primary-600",
 						label: coin,

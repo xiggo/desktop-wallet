@@ -47,7 +47,7 @@ test("should display news feed", async (t) => {
 
 test("should filter news results", async (t) => {
 	// Filter technical category
-	const ark = "NetworkOption__ARK";
+	const ark = "NetworkOption__ark.mainnet";
 	const query = "major league hacking";
 
 	const queryInput = Selector('[data-testid="NewsOptions__search"]');

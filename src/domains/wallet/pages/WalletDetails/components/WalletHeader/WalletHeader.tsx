@@ -249,8 +249,7 @@ export const WalletHeader = ({
 				<div className="flex items-center pr-12 w-1/2 border-r h-13 border-theme-secondary-800">
 					<div className="flex -space-x-1">
 						<NetworkIcon
-							coin={wallet.coinId()}
-							network={wallet.networkId()}
+							network={wallet.network()}
 							size="lg"
 							className="border-theme-secondary-700 text-theme-secondary-text"
 							noShadow
@@ -432,7 +431,6 @@ export const WalletHeader = ({
 			<ReceiveFunds
 				isOpen={modal === "receive-funds"}
 				address={wallet.address()}
-				icon={wallet.coinId()}
 				name={wallet.alias()}
 				network={wallet.network()}
 				onClose={() => setModal(undefined)}

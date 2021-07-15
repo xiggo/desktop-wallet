@@ -1,5 +1,5 @@
-import { availableNetworksMock } from "domains/network/data";
 import React from "react";
+import { availableNetworksMock } from "tests/mocks/networks";
 import { fireEvent, render, screen, within } from "utils/testing-library";
 
 import { itemToString, SelectNetwork } from "./SelectNetwork";
@@ -30,7 +30,7 @@ describe("SelectNetwork", () => {
 
 		fireEvent.focus(input);
 
-		const availableNetworksLength = availableNetworksMock.filter((network) => network.extra).length;
+		const availableNetworksLength = availableNetworksMock.filter((network) => network).length;
 
 		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(availableNetworksLength);
 

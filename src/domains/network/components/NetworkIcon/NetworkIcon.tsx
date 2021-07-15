@@ -1,13 +1,12 @@
+import { Networks } from "@payvo/sdk";
 import { Circle, CircleProps } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
-import { getNetworkExtendedData } from "domains/network/helpers";
 import React from "react";
 import { Size } from "types";
 
 interface Properties {
-	coin?: string;
-	network?: string;
+	network?: Networks.Network;
 	as?: React.ElementType;
 	size?: Size;
 	className?: string;
@@ -25,21 +24,17 @@ const Placeholder = (properties: CircleProps) => (
 	/>
 );
 
-export const NetworkIcon = ({ coin, network, iconSize, className, showTooltip, ...properties }: Properties) => {
-	const networkExtendedData = coin && network ? getNetworkExtendedData(network) : undefined;
-
-	if (!networkExtendedData) {
+export const NetworkIcon = ({ network, iconSize, className, showTooltip, ...properties }: Properties) => {
+	if (!network) {
 		return <Placeholder className={className} {...properties} />;
 	}
-
-	const { iconName, displayName, isLive } = networkExtendedData;
 
 	const getClassName = () => {
 		if (className) {
 			return className;
 		}
 
-		if (isLive) {
+		if (network.isLive()) {
 			return "text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600";
 		}
 
@@ -47,14 +42,14 @@ export const NetworkIcon = ({ coin, network, iconSize, className, showTooltip, .
 	};
 
 	return (
-		<Tooltip content={displayName} disabled={!showTooltip || !displayName}>
+		<Tooltip content={network.displayName()} disabled={!showTooltip}>
 			<Circle
-				aria-label={displayName}
-				data-testid={`NetworkIcon-${coin}-${network}`}
+				aria-label={network.displayName()}
+				data-testid={`NetworkIcon-${network.coin()}-${network.id()}`}
 				className={getClassName()}
 				{...properties}
 			>
-				<Icon data-testid="NetworkIcon__icon" name={iconName} size={iconSize} />
+				<Icon data-testid="NetworkIcon__icon" name={network.ticker()} size={iconSize} />
 			</Circle>
 		</Tooltip>
 	);

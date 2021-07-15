@@ -67,7 +67,7 @@ describe("NewsOptions", () => {
 	it("should select asset", () => {
 		const { getByTestId } = render(<NewsOptions selectedCategories={categories} selectedCoins={coins} />);
 
-		const arkOption = getByTestId("NetworkOption__ARK");
+		const arkOption = getByTestId("NetworkOption__ark.mainnet");
 		act(() => {
 			fireEvent.click(arkOption);
 		});
@@ -82,7 +82,7 @@ describe("NewsOptions", () => {
 
 		act(() => {
 			fireEvent.click(getByTestId("NewsOptions__category-Technical"));
-			fireEvent.click(getByTestId("NetworkOption__ARK"));
+			fireEvent.click(getByTestId("NetworkOption__ark.mainnet"));
 			fireEvent.change(getByTestId("NewsOptions__search"), {
 				target: {
 					value: "test query",
@@ -97,24 +97,5 @@ describe("NewsOptions", () => {
 				searchQuery: "test query",
 			}),
 		);
-	});
-
-	it("should handle multiple selections", () => {
-		const onSubmit = jest.fn();
-
-		const { getByTestId } = render(
-			<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={onSubmit} />,
-		);
-
-		act(() => {
-			fireEvent.click(getByTestId("NetworkOption__ARK"));
-			fireEvent.click(getByTestId("NetworkOption__LSK"));
-		});
-
-		expect(onSubmit).toBeCalledWith({
-			categories: ["Technical"],
-			coins: ["ARK", "LSK"],
-			searchQuery: "",
-		});
 	});
 });

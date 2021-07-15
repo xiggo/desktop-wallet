@@ -15,14 +15,13 @@ import { useTranslation } from "react-i18next";
 
 interface ReceiveFundsProperties {
 	address: string;
-	icon: string;
 	name?: string;
 	network: Networks.Network;
 	isOpen: boolean;
 	onClose?: () => void;
 }
 
-const ReceiveFunds = ({ address, icon, name, network, isOpen, onClose }: ReceiveFundsProperties) => {
+const ReceiveFunds = ({ address, name, network, isOpen, onClose }: ReceiveFundsProperties) => {
 	const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
 
 	const { t } = useTranslation();
@@ -50,7 +49,7 @@ const ReceiveFunds = ({ address, icon, name, network, isOpen, onClose }: Receive
 					<TransactionDetail
 						borderPosition="bottom"
 						label={t("COMMON.NAME")}
-						extra={<NetworkIcon size="lg" coin={icon} network={network.id()} />}
+						extra={<NetworkIcon size="lg" network={network} />}
 					>
 						{name}
 					</TransactionDetail>
@@ -63,7 +62,7 @@ const ReceiveFunds = ({ address, icon, name, network, isOpen, onClose }: Receive
 					borderPosition="bottom"
 					extra={
 						<div className="-space-x-2 whitespace-nowrap">
-							{!name && <NetworkIcon size="lg" coin={icon} network={network.id()} />}
+							{!name && <NetworkIcon size="lg" network={network} />}
 							<Avatar address={address} size="lg" />
 						</div>
 					}
