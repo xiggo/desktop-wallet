@@ -1442,7 +1442,28 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
           <div
             class="hidden"
             data-testid="SelectNetwork__options"
-          />
+          >
+            <div
+              class="mt-6 hidden"
+            >
+              <ul
+                aria-labelledby="SendTransfer__network-label"
+                class="grid grid-cols-7 gap-3 mt-3"
+                id="SendTransfer__network-menu"
+                role="listbox"
+              />
+            </div>
+            <div
+              class="mt-6 hidden"
+            >
+              <ul
+                aria-labelledby="SendTransfer__network-label"
+                class="grid grid-cols-7 gap-3 mt-3"
+                id="SendTransfer__network-menu"
+                role="listbox"
+              />
+            </div>
+          </div>
         </div>
       </fieldset>
       <fieldset
@@ -2312,6 +2333,21 @@ exports[`SendTransfer should render form and use location state 1`] = `
                             class="hidden"
                             data-testid="SelectNetwork__options"
                           >
+                            <div
+                              class="mt-6 hidden"
+                            >
+                              <div
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                PUBLIC NETWORKS
+                              </div>
+                              <ul
+                                aria-labelledby="SendTransfer__network-label"
+                                class="grid grid-cols-7 gap-3 mt-3"
+                                id="SendTransfer__network-menu"
+                                role="listbox"
+                              />
+                            </div>
                             <div
                               class="mt-6"
                             >
@@ -3323,6 +3359,21 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             data-testid="SelectNetwork__options"
                           >
                             <div
+                              class="mt-6 hidden"
+                            >
+                              <div
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                PUBLIC NETWORKS
+                              </div>
+                              <ul
+                                aria-labelledby="SendTransfer__network-label"
+                                class="grid grid-cols-7 gap-3 mt-3"
+                                id="SendTransfer__network-menu"
+                                role="listbox"
+                              />
+                            </div>
+                            <div
                               class="mt-6"
                             >
                               <ul
@@ -4009,7 +4060,28 @@ exports[`SendTransfer should render form step 1`] = `
           <div
             class="hidden"
             data-testid="SelectNetwork__options"
-          />
+          >
+            <div
+              class="mt-6 hidden"
+            >
+              <ul
+                aria-labelledby="SendTransfer__network-label"
+                class="grid grid-cols-7 gap-3 mt-3"
+                id="SendTransfer__network-menu"
+                role="listbox"
+              />
+            </div>
+            <div
+              class="mt-6 hidden"
+            >
+              <ul
+                aria-labelledby="SendTransfer__network-label"
+                class="grid grid-cols-7 gap-3 mt-3"
+                id="SendTransfer__network-menu"
+                role="listbox"
+              />
+            </div>
+          </div>
         </div>
       </fieldset>
       <fieldset
@@ -4556,7 +4628,28 @@ exports[`SendTransfer should render form step with deeplink values and use them 
           <div
             class="hidden"
             data-testid="SelectNetwork__options"
-          />
+          >
+            <div
+              class="mt-6 hidden"
+            >
+              <ul
+                aria-labelledby="SendTransfer__network-label"
+                class="grid grid-cols-7 gap-3 mt-3"
+                id="SendTransfer__network-menu"
+                role="listbox"
+              />
+            </div>
+            <div
+              class="mt-6 hidden"
+            >
+              <ul
+                aria-labelledby="SendTransfer__network-label"
+                class="grid grid-cols-7 gap-3 mt-3"
+                id="SendTransfer__network-menu"
+                role="listbox"
+              />
+            </div>
+          </div>
         </div>
       </fieldset>
       <fieldset
@@ -6102,6 +6195,21 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                           data-testid="SelectNetwork__options"
                         >
                           <div
+                            class="mt-6 hidden"
+                          >
+                            <div
+                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                            >
+                              PUBLIC NETWORKS
+                            </div>
+                            <ul
+                              aria-labelledby="SendTransfer__network-step__select-label"
+                              class="grid grid-cols-7 gap-3 mt-3"
+                              id="SendTransfer__network-step__select-menu"
+                              role="listbox"
+                            />
+                          </div>
+                          <div
                             class="mt-6"
                           >
                             <ul
@@ -6320,6 +6428,41 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                 </div>
               </li>
             </ul>
+          </div>
+          <div
+            class="mt-6 hidden"
+          >
+            <div
+              class="flex justify-between items-center"
+            >
+              <span
+                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+              >
+                DEVELOPMENT NETWORKS
+              </span>
+              <label
+                class="flex"
+              >
+                <input
+                  class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                  data-testid="SelectNetwork__developmentNetworks"
+                  type="checkbox"
+                />
+                <div
+                  class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                >
+                  <span
+                    class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                  />
+                </div>
+              </label>
+            </div>
+            <ul
+              aria-labelledby="SendTransfer__network-step__select-label"
+              class="grid grid-cols-7 gap-3 mt-3"
+              id="SendTransfer__network-step__select-menu"
+              role="listbox"
+            />
           </div>
         </div>
       </div>
@@ -7352,6 +7495,21 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                             data-testid="SelectNetwork__options"
                           >
                             <div
+                              class="mt-6 hidden"
+                            >
+                              <div
+                                class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                              >
+                                PUBLIC NETWORKS
+                              </div>
+                              <ul
+                                aria-labelledby="SendTransfer__network-label"
+                                class="grid grid-cols-7 gap-3 mt-3"
+                                id="SendTransfer__network-menu"
+                                role="listbox"
+                              />
+                            </div>
+                            <div
                               class="mt-6"
                             >
                               <ul
@@ -8358,6 +8516,21 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                           class=""
                           data-testid="SelectNetwork__options"
                         >
+                          <div
+                            class="mt-6 hidden"
+                          >
+                            <div
+                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                            >
+                              PUBLIC NETWORKS
+                            </div>
+                            <ul
+                              aria-labelledby="SendTransfer__network-step__select-label"
+                              class="grid grid-cols-7 gap-3 mt-3"
+                              id="SendTransfer__network-step__select-menu"
+                              role="listbox"
+                            />
+                          </div>
                           <div
                             class="mt-6"
                           >
