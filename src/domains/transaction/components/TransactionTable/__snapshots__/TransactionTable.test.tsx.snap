@@ -3655,9 +3655,6 @@ exports[`TransactionTable should render 1`] = `
                     >
                       Vote
                     </span>
-                    <span
-                      class="pl-2 ml-2 font-semibold border-l truncate text-theme-primary-600 border-theme-secondary-300 dark:border-theme-secondary-800"
-                    />
                   </span>
                 </div>
               </div>
@@ -3810,9 +3807,6 @@ exports[`TransactionTable should render 1`] = `
                     >
                       Unvote
                     </span>
-                    <span
-                      class="pl-2 ml-2 font-semibold border-l truncate text-theme-primary-600 border-theme-secondary-300 dark:border-theme-secondary-800"
-                    />
                   </span>
                 </div>
               </div>
@@ -6049,9 +6043,6 @@ exports[`TransactionTable should render compact 1`] = `
                     >
                       Unvote
                     </span>
-                    <span
-                      class="pl-2 ml-2 font-semibold border-l truncate text-theme-primary-600 border-theme-secondary-300 dark:border-theme-secondary-800"
-                    />
                   </span>
                 </div>
               </div>
@@ -6127,9 +6118,6 @@ exports[`TransactionTable should render compact 1`] = `
                     >
                       Vote
                     </span>
-                    <span
-                      class="pl-2 ml-2 font-semibold border-l truncate text-theme-primary-600 border-theme-secondary-300 dark:border-theme-secondary-800"
-                    />
                   </span>
                 </div>
               </div>
@@ -7298,9 +7286,6 @@ exports[`TransactionTable should render with sign 1`] = `
                     >
                       Vote
                     </span>
-                    <span
-                      class="pl-2 ml-2 font-semibold border-l truncate text-theme-primary-600 border-theme-secondary-300 dark:border-theme-secondary-800"
-                    />
                   </span>
                 </div>
               </div>
@@ -7453,9 +7438,6 @@ exports[`TransactionTable should render with sign 1`] = `
                     >
                       Unvote
                     </span>
-                    <span
-                      class="pl-2 ml-2 font-semibold border-l truncate text-theme-primary-600 border-theme-secondary-300 dark:border-theme-secondary-800"
-                    />
                   </span>
                 </div>
               </div>
@@ -9723,9 +9705,6 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     >
                       Vote
                     </span>
-                    <span
-                      class="pl-2 ml-2 font-semibold border-l truncate text-theme-primary-600 border-theme-secondary-300 dark:border-theme-secondary-800"
-                    />
                   </span>
                 </div>
               </div>
@@ -9851,9 +9830,6 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                     >
                       Unvote
                     </span>
-                    <span
-                      class="pl-2 ml-2 font-semibold border-l truncate text-theme-primary-600 border-theme-secondary-300 dark:border-theme-secondary-800"
-                    />
                   </span>
                 </div>
               </div>
