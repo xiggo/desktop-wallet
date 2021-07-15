@@ -83,13 +83,20 @@ export const PluginDetails = () => {
 		setIsLoadingSize(false);
 	};
 
-	const onEnable = () => {
+	const handleEnable = () => {
 		try {
 			pluginCtrl?.enable(activeProfile, { autoRun: true });
 			trigger();
+			toasts.success(t("PLUGINS.ENABLE_SUCCESS", { name: pluginData.title }));
 		} catch (error) {
 			toasts.error(t("PLUGINS.ENABLE_FAILURE", { msg: error.message, name: pluginData.title }));
 		}
+	};
+
+	const handleDisable = () => {
+		pluginCtrl?.disable(activeProfile);
+		trigger();
+		toasts.success(t("PLUGINS.DISABLE_SUCCESS", { name: pluginData.title }));
 	};
 
 	useEffect(() => {
@@ -112,11 +119,8 @@ export const PluginDetails = () => {
 					onDelete={() => setIsUninstallOpen(true)}
 					onReport={handleReportPlugin}
 					onInstall={() => setIsInstallOpen(true)}
-					onEnable={onEnable}
-					onDisable={() => {
-						pluginCtrl?.disable(activeProfile);
-						trigger();
-					}}
+					onEnable={handleEnable}
+					onDisable={handleDisable}
 					onUpdate={() => updatePlugin(pluginData.name)}
 					updatingStats={updatingStats?.[pluginData.name]}
 					hasLaunch={hasLaunch}

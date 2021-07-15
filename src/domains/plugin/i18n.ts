@@ -9,7 +9,10 @@ export const translations: { [key: string]: any } = {
 	},
 
 	DEVELOPER_RESPONSE: "Developer response",
+
+	DISABLE_SUCCESS: `The plugin "{{name}}" was disabled`,
 	ENABLE_FAILURE: `Failed to enable plugin "{{name}}". Reason: {{msg}}.`,
+	ENABLE_SUCCESS: `The plugin "{{name}}" was enabled`,
 
 	FILTERS: {
 		CATEGORIES: {

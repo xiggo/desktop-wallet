@@ -79,7 +79,11 @@ export const PluginGrid = ({
 				if (plugin.isEnabled) {
 					result.push({ label: t("COMMON.DISABLE"), value: "disable" });
 				} else {
-					result.push({ label: t("COMMON.ENABLE"), value: "enable" });
+					result.push({
+						disabled: plugin.isCompatible === false,
+						label: t("COMMON.ENABLE"),
+						value: "enable",
+					});
 				}
 
 				result.push({ label: t("COMMON.DELETE"), value: "delete" });

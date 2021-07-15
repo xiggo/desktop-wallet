@@ -1,5 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
+import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import nock from "nock";
 import {
@@ -13,7 +14,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
 
-import { toasts } from "../../../../app/services";
 import { translations } from "../../i18n";
 import { PluginDetails } from "./PluginDetails";
 
@@ -231,6 +231,8 @@ describe("PluginDetails", () => {
 	});
 
 	it("should enable package from header", async () => {
+		const toastSpy = jest.spyOn(toasts, "success").mockImplementation();
+
 		const plugin = new PluginController(
 			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-plugin" },
 			() => void 0,
@@ -264,7 +266,11 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(true));
 
+		expect(toastSpy).toHaveBeenCalled();
+
 		manager.plugins().removeById(plugin.config().id(), profile);
+
+		toastSpy.mockRestore();
 	});
 
 	it("should fail to enable package", async () => {
@@ -304,6 +310,8 @@ describe("PluginDetails", () => {
 		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
 
 		manager.plugins().removeById(plugin.config().id(), profile);
+
+		toastSpy.mockRestore();
 	});
 
 	it("should disable package from header", async () => {

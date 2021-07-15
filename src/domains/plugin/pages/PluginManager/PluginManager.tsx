@@ -244,6 +244,7 @@ export const PluginManager = () => {
 		try {
 			pluginManager.plugins().findById(pluginData.id)?.enable(activeProfile, { autoRun: true });
 			persist();
+			toasts.success(t("PLUGINS.ENABLE_SUCCESS", { name: pluginData.title }));
 		} catch (error) {
 			toasts.error(t("PLUGINS.ENABLE_FAILURE", { msg: error.message, name: pluginData.title }));
 		}
