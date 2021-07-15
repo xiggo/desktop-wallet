@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { translations as commonTranslations } from "app/i18n/common/i18n";
+import { toasts } from "app/services";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import { fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "testing-library";
 import page1Fixture from "tests/fixtures/news/page-1.json";
+import page2Fixture from "tests/fixtures/news/page-2.json";
+import { fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
 
-import { assets } from "../../data";
 import { News } from "./News";
 
 const history = createMemoryHistory();
@@ -16,9 +17,7 @@ const newsURL = `/profiles/${getDefaultProfileId()}/news`;
 jest.setTimeout(10_000);
 
 describe("News", () => {
-	beforeAll(async () => {
-		history.push(newsURL);
-
+	beforeAll(() => {
 		nock.disableNetConnect();
 
 		nock("https://news.payvo.com")
@@ -38,20 +37,24 @@ describe("News", () => {
 					meta,
 				};
 			})
+			.get("/api")
+			.query((parameters) => !!parameters.categories)
+			.reply(200, () => require("tests/fixtures/news/filtered.json"))
+			.get("/api?coins=ARK&query=NoResult&page=1")
+			.reply(200, require("tests/fixtures/news/empty-response.json"))
+			.persist();
+
+		nock("https://news.payvo.com")
+			.get("/api?coins=ARK&page=2")
+			.replyWithError({ code: "ETIMEDOUT" })
 			.get("/api?coins=ARK&page=2")
 			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/news/page-2.json");
+				const { meta, data } = page2Fixture;
 				return {
 					data: data.slice(0, 1),
 					meta,
 				};
-			})
-			.get("/api?coins=ARK&query=NoResult&page=1")
-			.reply(200, require("tests/fixtures/news/empty-response.json"))
-			.get("/api")
-			.query((parameters) => !!parameters.categories)
-			.reply(200, require("tests/fixtures/news/filtered.json"))
-			.persist();
+			});
 
 		window.scrollTo = jest.fn();
 	});
@@ -72,6 +75,31 @@ describe("News", () => {
 		);
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+	});
+
+	it("should show error toast if news cannot be fetched", async () => {
+		const toastSpy = jest.spyOn(toasts, "error");
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/news">
+				<News />
+			</Route>,
+			{
+				history,
+				routes: [newsURL],
+			},
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+
+		fireEvent.click(screen.getByTestId("Pagination__next"));
+
+		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(0));
+		await waitFor(() => expect(screen.queryAllByTestId("EmptyResults")).toHaveLength(1));
+
+		expect(toastSpy).toHaveBeenCalled();
+
+		toastSpy.mockRestore();
 	});
 
 	it("should navigate on next and previous pages", async () => {
@@ -97,11 +125,9 @@ describe("News", () => {
 	});
 
 	it("should show no results screen", async () => {
-		history.push(newsURL);
-
 		renderWithRouter(
 			<Route path="/profiles/:profileId/news">
-				<News defaultAssets={assets} />
+				<News />
 			</Route>,
 			{
 				history,

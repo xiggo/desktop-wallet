@@ -27,6 +27,9 @@ export const translations: { [key: string]: any } = {
 	},
 
 	PAGE_NEWS: {
+		ERRORS: {
+			NETWORK_ERROR: "Failed to retrieve news items. Please retry in a few minutes",
+		},
 		POWERED_BY: "Powered by",
 		TITLE: "Blockchain News",
 	},

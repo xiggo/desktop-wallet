@@ -7,7 +7,7 @@ import { Page, Section } from "app/components/Layout";
 import { Pagination } from "app/components/Pagination";
 import { useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
-import { httpClient } from "app/services";
+import { httpClient, toasts } from "app/services";
 import { BlockfolioAd } from "domains/news/components/BlockfolioAd";
 import { NewsCard, NewsCardSkeleton } from "domains/news/components/NewsCard";
 import { NewsOptions } from "domains/news/components/NewsOptions";
@@ -62,7 +62,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 			setIsLoading(true);
 			setNews([]);
 
-			if (coins.length > 0) {
+			if (categories.length > 0 && coins.length > 0) {
 				const query = {
 					coins,
 					page: currentPage,
@@ -70,17 +70,21 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 					...(searchQuery && { query: searchQuery }),
 				};
 
-				const { data, meta }: BlockfolioResponse = await blockfolio.findByCoin(query);
+				try {
+					const { data, meta }: BlockfolioResponse = await blockfolio.findByCoin(query);
 
-				setNews(data);
-				setTotalCount(meta.total);
+					setNews(data);
+					setTotalCount(meta.total);
+				} catch {
+					toasts.error(t("NEWS.PAGE_NEWS.ERRORS.NETWORK_ERROR"));
+				}
 			}
 
 			setIsLoading(false);
 		};
 
 		fetchNews();
-	}, [blockfolio, currentPage, categories, coins, searchQuery]);
+	}, [blockfolio, currentPage, categories, coins, searchQuery, t]);
 
 	useEffect(() => {
 		const updateSettings = async () => {
