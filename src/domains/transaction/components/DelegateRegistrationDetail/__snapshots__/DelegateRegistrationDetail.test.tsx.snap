@@ -126,7 +126,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-text border-theme-text dark:text-theme-secondary-600 dark:border-theme-secondary-600 ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ hjDozt"
@@ -426,7 +426,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-text ring-theme-background"
+                class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-text border-theme-text dark:text-theme-secondary-600 dark:border-theme-secondary-600 ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ hjDozt"

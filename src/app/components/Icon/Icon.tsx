@@ -9,7 +9,7 @@ type Properties = {
 	size?: Size;
 	as?: React.ElementType;
 	fallback?: React.ReactNode;
-} & Omit<React.HTMLProps<any>, "size">;
+} & Omit<React.HTMLProps<any>, "size" | "width" | "height">;
 
 interface WrapperProperties {
 	width: number;

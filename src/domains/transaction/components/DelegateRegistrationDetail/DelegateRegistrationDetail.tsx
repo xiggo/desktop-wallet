@@ -30,7 +30,10 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Del
 			<TransactionDetail
 				label={t("TRANSACTION.DELEGATE_NAME")}
 				extra={
-					<Circle className="border-theme-text" size="lg">
+					<Circle
+						className="text-theme-text border-theme-text dark:text-theme-secondary-600 dark:border-theme-secondary-600"
+						size="lg"
+					>
 						<Icon name="Delegate" size="lg" />
 					</Circle>
 				}

@@ -105,7 +105,10 @@ export const SummaryStep = ({
 				<TransactionDetail
 					label={t("TRANSACTION.IPFS_HASH")}
 					extra={
-						<Circle className="border-theme-text" size="lg">
+						<Circle
+							className="text-theme-text border-theme-text dark:text-theme-secondary-600 dark:border-theme-secondary-600"
+							size="lg"
+						>
 							<Icon name="Ipfs" size="lg" />
 						</Circle>
 					}

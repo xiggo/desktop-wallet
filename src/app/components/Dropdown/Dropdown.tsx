@@ -124,24 +124,10 @@ const renderOptions = (options: DropdownOption[] | DropdownOptionGroup[], onSele
 };
 
 const renderToggle = (isOpen: boolean, children: any, toggleIcon: string, toggleSize?: Size) => {
-	// Default with toggleIcon
-	const getSize = (size?: Size) => {
-		switch (size) {
-			case "sm":
-				return 10;
-			case "lg":
-				return 30;
-			default:
-				return 20;
-		}
-	};
-
 	if (!children) {
-		const size = getSize(toggleSize);
-
 		return (
 			<div className="cursor-pointer outline-none focus:outline-none">
-				<Icon name={toggleIcon} width={size} height={size} />
+				<Icon name={toggleIcon} size={toggleSize} />
 			</div>
 		);
 	}
