@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { useWalletAlias } from "app/hooks/use-wallet-alias";
 import { DelegateRegistrationDetail } from "domains/transaction/components/DelegateRegistrationDetail";
 import { DelegateResignationDetail } from "domains/transaction/components/DelegateResignationDetail";
 import { IpfsDetail } from "domains/transaction/components/IpfsDetail";
@@ -8,16 +8,61 @@ import { MultiSignatureRegistrationDetail } from "domains/transaction/components
 import { SecondSignatureDetail } from "domains/transaction/components/SecondSignatureDetail";
 import { TransferDetail } from "domains/transaction/components/TransferDetail";
 import { VoteDetail } from "domains/transaction/components/VoteDetail";
-import React from "react";
+import React, { useMemo } from "react";
 
-interface TransactionDetailModalProperties {
-	isOpen: boolean;
-	transactionItem: DTO.ExtendedConfirmedTransactionData;
-	onClose?: any;
-}
+import { TransactionAliases, TransactionDetailModalProperties } from "./TransactionDetailModal.models";
 
-export const TransactionDetailModal = ({ isOpen, transactionItem, onClose }: TransactionDetailModalProperties) => {
+export const TransactionDetailModal = ({
+	isOpen,
+	transactionItem,
+	profile,
+	onClose,
+}: TransactionDetailModalProperties) => {
+	const { getWalletAlias } = useWalletAlias();
+
+	const aliases: TransactionAliases | undefined = useMemo(() => {
+		if (!transactionItem.isTransfer() && !transactionItem.isMultiPayment()) {
+			return;
+		}
+
+		const senderAlias = getWalletAlias({
+			address: transactionItem.sender(),
+			network: transactionItem.wallet().network(),
+			profile,
+		});
+
+		const recipientAliases: (string | undefined)[] = [];
+
+		if (transactionItem.isTransfer()) {
+			recipientAliases.push(
+				getWalletAlias({
+					address: transactionItem.recipient(),
+					network: transactionItem.wallet().network(),
+					profile,
+				}),
+			);
+		}
+
+		if (transactionItem.isMultiPayment()) {
+			for (const recipient of transactionItem.recipients()) {
+				recipientAliases.push(
+					getWalletAlias({
+						address: recipient.address,
+						network: transactionItem.wallet().network(),
+						profile,
+					}),
+				);
+			}
+		}
+
+		return {
+			recipients: recipientAliases,
+			sender: senderAlias,
+		};
+	}, [transactionItem, getWalletAlias, profile]);
+
 	const transactionType = transactionItem.type();
+
 	let TransactionModal;
 
 	switch (transactionType) {
@@ -59,7 +104,7 @@ export const TransactionDetailModal = ({ isOpen, transactionItem, onClose }: Tra
 		throw new Error(`Transaction type [${transactionType}] is not supported.`);
 	}
 
-	return <TransactionModal isOpen={isOpen} transaction={transactionItem} onClose={onClose} />;
+	return <TransactionModal isOpen={isOpen} transaction={transactionItem} aliases={aliases} onClose={onClose} />;
 };
 
 TransactionDetailModal.defaultProps = {

@@ -9,30 +9,41 @@ import {
 	TransactionSender,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
+import { TransactionAliases } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 interface MultiPaymentDetailProperties {
 	isOpen: boolean;
 	transaction: any;
+	aliases?: TransactionAliases;
 	onClose?: any;
 }
 
-export const MultiPaymentDetail = ({ isOpen, transaction, onClose }: MultiPaymentDetailProperties) => {
+export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: MultiPaymentDetailProperties) => {
 	const { t } = useTranslation();
 
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
+
+	const recipients = [];
+
+	for (const [index, recipient] of transaction.recipients().entries()) {
+		recipients.push({
+			...recipient,
+			alias: aliases?.recipients[index],
+		});
+	}
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionSender
 				address={transaction.sender()}
-				alias={wallet.alias()}
+				alias={aliases?.sender}
 				isDelegate={wallet.isDelegate() && !wallet.isResignedDelegate()}
 				border={false}
 			/>
 
-			<TransactionRecipients currency={wallet.currency()} recipients={transaction.recipients()} />
+			<TransactionRecipients currency={wallet.currency()} recipients={recipients} />
 
 			<TransactionAmount
 				amount={transaction.amount()}

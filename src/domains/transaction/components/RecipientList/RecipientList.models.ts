@@ -9,7 +9,7 @@ export interface RecipientListItem {
 	label?: string;
 	listIndex?: number;
 	variant?: "condensed";
-	walletName?: string;
+	alias?: string;
 	showAmount?: boolean;
 	tooltipDisabled?: string;
 	disableButton?: (address: string) => boolean;

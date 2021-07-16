@@ -28,7 +28,7 @@ const RecipientListItem = ({
 	label,
 	listIndex,
 	variant,
-	walletName,
+	alias,
 	onRemove,
 	tooltipDisabled,
 	disableButton,
@@ -47,7 +47,7 @@ const RecipientListItem = ({
 				</td>
 
 				<td className="flex-1 ml-4 w-28">
-					<Address address={address} walletName={walletName} />
+					<Address address={address} walletName={alias} />
 				</td>
 
 				{showAmount && (
@@ -74,7 +74,7 @@ const RecipientListItem = ({
 				<div className="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 					<span>{t(label || "COMMON.RECIPIENT_#", { count: listIndex! + 1 })}</span>
 				</div>
-				<Address address={address} walletName={walletName} />
+				<Address address={address} walletName={alias} />
 			</td>
 
 			{showAmount && (
@@ -150,7 +150,7 @@ export const RecipientList = ({
 						label={label}
 						listIndex={index}
 						variant={variant}
-						walletName={recipient.walletName}
+						alias={recipient.alias}
 						tooltipDisabled={tooltipDisabled}
 						disableButton={disableButton}
 						onRemove={onRemove}

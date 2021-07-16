@@ -18,22 +18,30 @@ export const TransactionRecipients = ({ currency, recipients, ...properties }: T
 		return null;
 	}
 
-	return recipients.length > 1 ? (
-		<TransactionDetail
-			data-testid="TransactionRecipients"
-			label={t("TRANSACTION.RECIPIENTS_COUNT", { count: recipients.length })}
-			{...properties}
-		>
-			<RecipientList recipients={recipients} assetSymbol={currency} variant="condensed" />
-		</TransactionDetail>
-	) : (
-		<TransactionDetail
-			data-testid="TransactionRecipients"
-			label={t("TRANSACTION.RECIPIENT")}
-			extra={<Avatar size="lg" address={recipients[0].address} />}
-			{...properties}
-		>
-			<Address address={recipients[0].address} walletName={recipients[0].alias} />
-		</TransactionDetail>
-	);
+	const renderRecipients = () => {
+		if (recipients.length > 1) {
+			return (
+				<TransactionDetail
+					data-testid="TransactionRecipients"
+					label={t("TRANSACTION.RECIPIENTS_COUNT", { count: recipients.length })}
+					{...properties}
+				>
+					<RecipientList recipients={recipients} assetSymbol={currency} variant="condensed" />
+				</TransactionDetail>
+			);
+		}
+
+		return (
+			<TransactionDetail
+				data-testid="TransactionRecipients"
+				label={t("TRANSACTION.RECIPIENT")}
+				extra={<Avatar size="lg" address={recipients[0].address} />}
+				{...properties}
+			>
+				<Address address={recipients[0].address} walletName={recipients[0].alias} />
+			</TransactionDetail>
+		);
+	};
+
+	return renderRecipients();
 };

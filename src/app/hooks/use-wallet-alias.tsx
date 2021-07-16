@@ -1,34 +1,48 @@
 import { Contracts } from "@payvo/profiles";
+import { Networks } from "@payvo/sdk";
 import { useEnvironmentContext } from "app/contexts";
+import { useCallback } from "react";
+import { assertProfile, assertString } from "utils/assertions";
 
 interface Properties {
-	address: string;
-	profile: Contracts.IProfile;
-	coinId?: string;
-	networkId?: string;
+	address?: string;
+	network?: Networks.Network;
+	profile?: Contracts.IProfile;
 }
 
-export const useWalletAlias = ({ address, profile, coinId, networkId }: Properties) => {
+export const useWalletAlias = () => {
 	const { env } = useEnvironmentContext();
 
-	const contact = profile.contacts().findByAddress(address)[0];
+	const getWalletAlias = useCallback(
+		({ address, profile, network }: Properties) => {
+			try {
+				assertString(address);
+				assertProfile(profile);
 
-	if (contact) {
-		return contact.name();
-	}
+				const contact = profile.contacts().findByAddress(address)[0];
 
-	try {
-		const alias = profile.wallets().findByAddress(address)?.displayName();
+				if (contact) {
+					return contact.name();
+				}
 
-		if (alias) {
-			return alias;
-		}
+				const alias = profile.wallets().findByAddress(address)?.displayName();
 
-		if (coinId && networkId) {
-			const delegate = env.delegates().findByAddress(coinId, networkId, address);
-			return delegate.username();
-		}
-	} catch {
-		//
-	}
+				if (alias) {
+					return alias;
+				}
+
+				if (network) {
+					const delegate = env.delegates().findByAddress(network.coin(), network.id(), address);
+					return delegate.username();
+				}
+			} catch {
+				//
+			}
+
+			return undefined;
+		},
+		[env],
+	);
+
+	return { getWalletAlias };
 };

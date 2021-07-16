@@ -8,7 +8,7 @@ import { Input } from "app/components/Input";
 import { useWalletAlias } from "app/hooks";
 import { SearchWallet } from "domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "domains/wallet/components/SearchWallet/SearchWallet.models";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 type SelectAddressProperties = {
@@ -52,10 +52,16 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			onChange?.(address);
 		};
 
-		const alias = useWalletAlias({
-			address: selectedAddress || "",
-			profile,
-		});
+		const { getWalletAlias } = useWalletAlias();
+
+		const alias = useMemo(
+			() =>
+				getWalletAlias({
+					address: selectedAddress,
+					profile,
+				}),
+			[getWalletAlias, profile, selectedAddress],
+		);
 
 		return (
 			<>
@@ -67,7 +73,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					disabled={disabled}
 				>
 					<span className="flex absolute inset-0 items-center px-14 w-full border border-transparent">
-						<Address walletName={alias} address={selectedAddress} />
+						<Address address={selectedAddress} walletName={alias} />
 					</span>
 
 					<Input

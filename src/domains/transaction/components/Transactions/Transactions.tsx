@@ -176,6 +176,7 @@ export const Transactions = memo(
 					<TransactionDetailModal
 						isOpen={!!transactionModalItem}
 						transactionItem={transactionModalItem}
+						profile={profile}
 						onClose={() => setTransactionModalItem(undefined)}
 					/>
 				)}

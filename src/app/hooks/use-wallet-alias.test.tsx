@@ -22,16 +22,16 @@ describe("UseWalletAlias", () => {
 	});
 
 	it("should return undefined when no wallet or contact was found", () => {
-		const { result } = renderHook(() => useWalletAlias({ address: "wrong-address", profile }), { wrapper });
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current).toBe(undefined);
+		expect(result.current.getWalletAlias({ address: "wrong-address", profile })).toBe(undefined);
 	});
 
 	it("should return undefined if wallet has no display name", () => {
 		const displayNameSpy = jest.spyOn(wallet, "displayName").mockReturnValue(undefined);
-		const { result } = renderHook(() => useWalletAlias({ address: wallet.address(), profile }), { wrapper });
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current).toBe(undefined);
+		expect(result.current.getWalletAlias({ address: wallet.address(), profile })).toBe(undefined);
 
 		displayNameSpy.mockRestore();
 	});
@@ -42,17 +42,17 @@ describe("UseWalletAlias", () => {
 			{ address: wallet.address(), coin: wallet.coinId(), name: wallet.address(), network: wallet.networkId() },
 		]);
 
-		const { result } = renderHook(() => useWalletAlias({ address: wallet.address(), profile }), { wrapper });
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current).toBe(contact.name());
+		expect(result.current.getWalletAlias({ address: wallet.address(), profile })).toBe(contact.name());
 
 		profile.contacts().forget(contact.id());
 	});
 
 	it("should return displayName", () => {
-		const { result } = renderHook(() => useWalletAlias({ address: wallet.address(), profile }), { wrapper });
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current).toBe(wallet.displayName());
+		expect(result.current.getWalletAlias({ address: wallet.address(), profile })).toBe(wallet.displayName());
 	});
 
 	it("should return delegate name", async () => {
@@ -63,18 +63,15 @@ describe("UseWalletAlias", () => {
 
 		const delegate = env.delegates().all(wallet.coinId(), wallet.networkId())[0];
 
-		const { result } = renderHook(
-			() =>
-				useWalletAlias({
-					address: delegate.address(),
-					coinId: wallet.coinId(),
-					networkId: wallet.networkId(),
-					profile,
-				}),
-			{ wrapper },
-		);
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current).toBe(delegate.username());
+		expect(
+			result.current.getWalletAlias({
+				address: delegate.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toBe(delegate.username());
 
 		walletsSpy.mockRestore();
 		contactsSpy.mockRestore();
@@ -86,18 +83,15 @@ describe("UseWalletAlias", () => {
 		const walletsSpy = jest.spyOn(profile.wallets(), "findByAddress").mockReturnValue(undefined);
 		const contactsSpy = jest.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
-		const { result } = renderHook(
-			() =>
-				useWalletAlias({
-					address: wallet.address(),
-					coinId: wallet.coinId(),
-					networkId: wallet.networkId(),
-					profile,
-				}),
-			{ wrapper },
-		);
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current).toBe(undefined);
+		expect(
+			result.current.getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toBe(undefined);
 
 		walletsSpy.mockRestore();
 		contactsSpy.mockRestore();

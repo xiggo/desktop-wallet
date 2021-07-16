@@ -38,12 +38,17 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 		[isSelected],
 	);
 
-	const alias = useWalletAlias({
-		address: wallet.address(),
-		coinId: wallet.coinId(),
-		networkId: wallet.networkId(),
-		profile: activeProfile,
-	});
+	const { getWalletAlias } = useWalletAlias();
+
+	const alias = useMemo(
+		() =>
+			getWalletAlias({
+				address: wallet?.address(),
+				network: wallet?.network(),
+				profile: activeProfile,
+			}),
+		[activeProfile, getWalletAlias, wallet],
+	);
 
 	let lastCellContent = undefined;
 

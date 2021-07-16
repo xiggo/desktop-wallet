@@ -8,7 +8,7 @@ import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import { WalletIcons } from "app/components/WalletIcons";
 import { useActiveProfile, useWalletAlias } from "app/hooks";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
-import React from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
@@ -37,12 +37,17 @@ export const WalletCard = ({
 	const history = useHistory();
 	const { t } = useTranslation();
 
-	const alias = useWalletAlias({
-		address: wallet?.address() || "",
-		coinId: wallet?.coinId(),
-		networkId: wallet?.networkId(),
-		profile: activeProfile,
-	});
+	const { getWalletAlias } = useWalletAlias();
+
+	const alias = useMemo(
+		() =>
+			getWalletAlias({
+				address: wallet?.address(),
+				network: wallet?.network(),
+				profile: activeProfile,
+			}),
+		[activeProfile, getWalletAlias, wallet],
+	);
 
 	if (isLoading) {
 		return <WalletCardSkeleton />;

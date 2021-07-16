@@ -128,14 +128,14 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						isMultiPayment: () => true,
+						isTransfer: () => false,
+						recipients: () => [
+							{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
+							{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", amount: 1 },
+						],
 						type: () => "multiPayment",
-						wallet: () => ({
-							alias: () => "Test Wallet",
-							currency: () => "ARK",
-							exchangeCurrency: () => "BTC",
-							isDelegate: () => true,
-							isResignedDelegate: () => false,
-						}),
+						wallet: () => wallet,
 					}}
 				/>
 				,

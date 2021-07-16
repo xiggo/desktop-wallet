@@ -10,7 +10,7 @@ import { useWalletAlias } from "app/hooks/use-wallet-alias";
 import cn from "classnames";
 import { useProfileAddresses } from "domains/profile/hooks/use-profile-addresses";
 import { SearchRecipient } from "domains/transaction/components/SearchRecipient";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 type SelectRecipientProperties = {
 	network?: Networks.Network;
@@ -39,7 +39,17 @@ const ProfileAvatar = ({ address }: any) => {
 
 const OptionLabel = ({ option, profile }: { option: any; profile: Contracts.IProfile }) => {
 	const address = option.value;
-	const alias = useWalletAlias({ address, profile });
+
+	const { getWalletAlias } = useWalletAlias();
+
+	const alias = useMemo(
+		() =>
+			getWalletAlias({
+				address,
+				profile,
+			}),
+		[address, getWalletAlias, profile],
+	);
 
 	return (
 		<div className="flex items-center space-x-2 whitespace-nowrap">
