@@ -86,17 +86,21 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex items-center"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
-                          title="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20"
-                        />
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        >
+                          <img
+                            alt="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
+                            title="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
@@ -413,17 +417,21 @@ exports[`Add Participant should fail to find 1`] = `
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex items-center"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                          title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
-                        />
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        >
+                          <img
+                            alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                            title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
@@ -740,18 +748,28 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex items-center"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        >
+                          <img
+                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          />
+                        </div>
                       </div>
+                      <span
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0 font-semibold ml-2"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
                     </div>
                     <div
                       class="relative flex flex-1 h-full"
@@ -1129,17 +1147,21 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex items-center"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hcZuqD flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"70\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
-                          title="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
-                        />
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        >
+                          <img
+                            alt="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"70\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
+                            title="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1438,8 +1460,12 @@ exports[`Add Participant should render custom participants 1`] = `
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                   >
                     <div
-                      class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
-                    />
+                      class="flex items-center"
+                    >
+                      <div
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                      />
+                    </div>
                     <div
                       class="relative flex flex-1 h-full"
                     >
@@ -1722,8 +1748,12 @@ exports[`Add Participant should work with a remote wallet 1`] = `
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                   >
                     <div
-                      class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
-                    />
+                      class="flex items-center"
+                    >
+                      <div
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                      />
+                    </div>
                     <div
                       class="relative flex flex-1 h-full"
                     >
@@ -2389,8 +2419,12 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
                   >
                     <div
-                      class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
-                    />
+                      class="flex items-center"
+                    >
+                      <div
+                        class="Circle__CircleWrapper-d5u41q-0 cmuOiP bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                      />
+                    </div>
                     <div
                       class="relative flex flex-1 h-full"
                     >

@@ -6,6 +6,7 @@ import { Circle } from "app/components/Circle";
 import { useFormField } from "app/components/Form/useFormField";
 import { Icon } from "app/components/Icon";
 import { Select } from "app/components/SelectDropdown";
+import { TruncateEnd } from "app/components/TruncateEnd";
 import { useWalletAlias } from "app/hooks/use-wallet-alias";
 import cn from "classnames";
 import { useProfileAddresses } from "domains/profile/hooks/use-profile-addresses";
@@ -72,6 +73,9 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 		const [isRecipientSearchOpen, setIsRecipientSearchOpen] = useState(false);
 		const [selectedAddress, setSelectedAddress] = useState(address);
 		const fieldContext = useFormField();
+
+		const { getWalletAlias } = useWalletAlias();
+		const selectedWalletAlias = getWalletAlias({ address: selectedAddress, profile });
 
 		const isInvalidValue = isInvalid || fieldContext?.isInvalid;
 
@@ -142,7 +146,18 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 								),
 							},
 							start: {
-								content: <ProfileAvatar address={selectedAddress} />,
+								content: (
+									<div className="flex items-center">
+										<ProfileAvatar address={selectedAddress} />
+										{!!selectedWalletAlias && (
+											<TruncateEnd
+												className="font-semibold ml-2"
+												text={selectedWalletAlias}
+												showTooltip
+											/>
+										)}
+									</div>
+								),
 							},
 						}}
 						renderLabel={(option) => <OptionLabel option={option} profile={profile} />}
