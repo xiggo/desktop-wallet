@@ -629,7 +629,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                 </div>
                                 <ul
                                   aria-labelledby="select-passphrase-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-passphrase-language-menu"
                                   role="listbox"
                                 />
@@ -743,7 +743,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                 </div>
                                 <ul
                                   aria-labelledby="select-currency-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-currency-menu"
                                   role="listbox"
                                 />
@@ -861,7 +861,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                 </div>
                                 <ul
                                   aria-labelledby="select-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-language-menu"
                                   role="listbox"
                                 />
@@ -975,7 +975,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                 </div>
                                 <ul
                                   aria-labelledby="select-market-provider-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-market-provider-menu"
                                   role="listbox"
                                 />
@@ -1089,7 +1089,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                 </div>
                                 <ul
                                   aria-labelledby="select-time-format-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-time-format-menu"
                                   role="listbox"
                                 />
@@ -1292,7 +1292,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                   </div>
                                   <ul
                                     aria-labelledby="select-auto-signout-label"
-                                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                     id="select-auto-signout-menu"
                                     role="listbox"
                                   />
@@ -2172,7 +2172,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                 </div>
                                 <ul
                                   aria-labelledby="select-passphrase-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-passphrase-language-menu"
                                   role="listbox"
                                 />
@@ -2286,7 +2286,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                 </div>
                                 <ul
                                   aria-labelledby="select-currency-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-currency-menu"
                                   role="listbox"
                                 />
@@ -2404,7 +2404,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                 </div>
                                 <ul
                                   aria-labelledby="select-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-language-menu"
                                   role="listbox"
                                 />
@@ -2518,7 +2518,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                 </div>
                                 <ul
                                   aria-labelledby="select-market-provider-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-market-provider-menu"
                                   role="listbox"
                                 />
@@ -2632,7 +2632,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                 </div>
                                 <ul
                                   aria-labelledby="select-time-format-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-time-format-menu"
                                   role="listbox"
                                 />
@@ -2835,7 +2835,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                   </div>
                                   <ul
                                     aria-labelledby="select-auto-signout-label"
-                                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                     id="select-auto-signout-menu"
                                     role="listbox"
                                   />
@@ -3700,7 +3700,7 @@ exports[`General Settings should render 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-passphrase-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-passphrase-language-menu"
                                   role="listbox"
                                 />
@@ -3814,7 +3814,7 @@ exports[`General Settings should render 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-currency-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-currency-menu"
                                   role="listbox"
                                 />
@@ -3932,7 +3932,7 @@ exports[`General Settings should render 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-language-menu"
                                   role="listbox"
                                 />
@@ -4046,7 +4046,7 @@ exports[`General Settings should render 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-market-provider-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-market-provider-menu"
                                   role="listbox"
                                 />
@@ -4160,7 +4160,7 @@ exports[`General Settings should render 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-time-format-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-time-format-menu"
                                   role="listbox"
                                 />
@@ -4363,7 +4363,7 @@ exports[`General Settings should render 1`] = `
                                   </div>
                                   <ul
                                     aria-labelledby="select-auto-signout-label"
-                                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                     id="select-auto-signout-menu"
                                     role="listbox"
                                   />
@@ -5228,7 +5228,7 @@ exports[`General Settings should update profile 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-passphrase-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-passphrase-language-menu"
                                   role="listbox"
                                 />
@@ -5342,7 +5342,7 @@ exports[`General Settings should update profile 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-currency-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-currency-menu"
                                   role="listbox"
                                 />
@@ -5460,7 +5460,7 @@ exports[`General Settings should update profile 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-language-menu"
                                   role="listbox"
                                 />
@@ -5574,7 +5574,7 @@ exports[`General Settings should update profile 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-market-provider-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-market-provider-menu"
                                   role="listbox"
                                 />
@@ -5688,7 +5688,7 @@ exports[`General Settings should update profile 1`] = `
                                 </div>
                                 <ul
                                   aria-labelledby="select-time-format-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-time-format-menu"
                                   role="listbox"
                                 />
@@ -5892,7 +5892,7 @@ exports[`General Settings should update profile 1`] = `
                                   </div>
                                   <ul
                                     aria-labelledby="select-auto-signout-label"
-                                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                     id="select-auto-signout-menu"
                                     role="listbox"
                                   />
@@ -6756,7 +6756,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-passphrase-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-passphrase-language-menu"
                                   role="listbox"
                                 />
@@ -6870,7 +6870,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-currency-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-currency-menu"
                                   role="listbox"
                                 />
@@ -6988,7 +6988,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-language-menu"
                                   role="listbox"
                                 />
@@ -7102,7 +7102,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-market-provider-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-market-provider-menu"
                                   role="listbox"
                                 />
@@ -7216,7 +7216,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-time-format-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-time-format-menu"
                                   role="listbox"
                                 />
@@ -7419,7 +7419,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                   </div>
                                   <ul
                                     aria-labelledby="select-auto-signout-label"
-                                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                     id="select-auto-signout-menu"
                                     role="listbox"
                                   />
@@ -8296,7 +8296,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-passphrase-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-passphrase-language-menu"
                                   role="listbox"
                                 />
@@ -8410,7 +8410,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-currency-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-currency-menu"
                                   role="listbox"
                                 />
@@ -8528,7 +8528,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-language-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-language-menu"
                                   role="listbox"
                                 />
@@ -8642,7 +8642,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-market-provider-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-market-provider-menu"
                                   role="listbox"
                                 />
@@ -8756,7 +8756,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                 </div>
                                 <ul
                                   aria-labelledby="select-time-format-label"
-                                  class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                   id="select-time-format-menu"
                                   role="listbox"
                                 />
@@ -8959,7 +8959,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                   </div>
                                   <ul
                                     aria-labelledby="select-auto-signout-label"
-                                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                                     id="select-auto-signout-menu"
                                     role="listbox"
                                   />

@@ -135,7 +135,7 @@ exports[`ContactForm should render 1`] = `
               </div>
               <ul
                 aria-labelledby="downshift-0-label"
-                class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                 id="downshift-0-menu"
                 role="listbox"
               />
@@ -381,7 +381,7 @@ exports[`ContactForm should render with errors 1`] = `
               </div>
               <ul
                 aria-labelledby="downshift-3-label"
-                class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                 id="downshift-3-menu"
                 role="listbox"
               />

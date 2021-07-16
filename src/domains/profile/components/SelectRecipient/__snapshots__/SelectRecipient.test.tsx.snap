@@ -102,7 +102,7 @@ exports[`SelectRecipient should render disabled 1`] = `
             </div>
             <ul
               aria-labelledby="downshift-2-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+              class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
               id="downshift-2-menu"
               role="listbox"
             />
@@ -214,7 +214,7 @@ exports[`SelectRecipient should render empty 1`] = `
             </div>
             <ul
               aria-labelledby="downshift-0-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+              class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
               id="downshift-0-menu"
               role="listbox"
             />
@@ -358,7 +358,7 @@ exports[`SelectRecipient should render invalid 1`] = `
             </div>
             <ul
               aria-labelledby="downshift-4-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+              class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
               id="downshift-4-menu"
               role="listbox"
             />
@@ -470,7 +470,7 @@ exports[`SelectRecipient should render with preselected address 1`] = `
             </div>
             <ul
               aria-labelledby="downshift-6-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+              class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
               id="downshift-6-menu"
               role="listbox"
             />
@@ -593,7 +593,7 @@ exports[`SelectRecipient should update internal state when prop changes 1`] = `
             </div>
             <ul
               aria-labelledby="downshift-8-label"
-              class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+              class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
               id="downshift-8-menu"
               role="listbox"
             />

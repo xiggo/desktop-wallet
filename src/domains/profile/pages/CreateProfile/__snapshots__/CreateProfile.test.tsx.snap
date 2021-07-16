@@ -388,7 +388,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-74-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                           id="downshift-74-menu"
                           role="listbox"
                         >
@@ -1132,7 +1132,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                         </div>
                         <ul
                           aria-labelledby="downshift-25-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                           id="downshift-25-menu"
                           role="listbox"
                         >
@@ -1876,7 +1876,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                         </div>
                         <ul
                           aria-labelledby="downshift-36-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                           id="downshift-36-menu"
                           role="listbox"
                         >
@@ -2620,7 +2620,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                         </div>
                         <ul
                           aria-labelledby="downshift-47-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                           id="downshift-47-menu"
                           role="listbox"
                         >
@@ -3374,7 +3374,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                         </div>
                         <ul
                           aria-labelledby="downshift-100-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                           id="downshift-100-menu"
                           role="listbox"
                         />
@@ -3864,7 +3864,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-122-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                           id="downshift-122-menu"
                           role="listbox"
                         >
@@ -4577,7 +4577,7 @@ exports[`CreateProfile should render 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-0-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                           id="downshift-0-menu"
                           role="listbox"
                         />
@@ -5088,7 +5088,7 @@ exports[`CreateProfile should store profile 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-4-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                           id="downshift-4-menu"
                           role="listbox"
                         >
@@ -5800,7 +5800,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-58-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                           id="downshift-58-menu"
                           role="listbox"
                         >
@@ -6520,7 +6520,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         </div>
                         <ul
                           aria-labelledby="downshift-90-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                           id="downshift-90-menu"
                           role="listbox"
                         />
@@ -7018,7 +7018,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         </div>
                         <ul
                           aria-labelledby="downshift-90-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                           id="downshift-90-menu"
                           role="listbox"
                         />
@@ -7508,7 +7508,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-106-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                           id="downshift-106-menu"
                           role="listbox"
                         >

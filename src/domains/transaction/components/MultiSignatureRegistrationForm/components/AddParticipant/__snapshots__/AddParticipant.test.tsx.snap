@@ -159,7 +159,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                   </div>
                   <ul
                     aria-labelledby="downshift-33-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                     id="downshift-33-menu"
                     role="listbox"
                   />
@@ -490,7 +490,7 @@ exports[`Add Participant should fail to find 1`] = `
                   </div>
                   <ul
                     aria-labelledby="downshift-0-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                     id="downshift-0-menu"
                     role="listbox"
                   />
@@ -837,7 +837,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                   </div>
                   <ul
                     aria-labelledby="downshift-26-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                     id="downshift-26-menu"
                     role="listbox"
                   >
@@ -1220,7 +1220,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                   </div>
                   <ul
                     aria-labelledby="downshift-13-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                     id="downshift-13-menu"
                     role="listbox"
                   />
@@ -1508,7 +1508,7 @@ exports[`Add Participant should render custom participants 1`] = `
                   </div>
                   <ul
                     aria-labelledby="downshift-84-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
                     id="downshift-84-menu"
                     role="listbox"
                   />
@@ -1796,7 +1796,7 @@ exports[`Add Participant should work with a remote wallet 1`] = `
                   </div>
                   <ul
                     aria-labelledby="downshift-63-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                     id="downshift-63-menu"
                     role="listbox"
                   >
@@ -2467,7 +2467,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                   </div>
                   <ul
                     aria-labelledby="downshift-46-label"
-                    class="styles__SelectOptionsList-sc-120rtxy-0 gXyWbn is-open"
+                    class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
                     id="downshift-46-menu"
                     role="listbox"
                   >
