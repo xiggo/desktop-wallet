@@ -66,12 +66,16 @@ const signTransaction = async ({ env, form, profile }: SendRegistrationSignOptio
 
 	const transactionId = accepted[0];
 
+	// Need to sync before too to make sure we have all transactions from the server.
 	await senderWallet!.transaction().sync();
+
 	await senderWallet!.transaction().addSignature(
 		transactionId,
 		// @TODO: support WIF
 		(await senderWallet?.signatory().mnemonic(mnemonic))!,
 	);
+
+	await senderWallet!.transaction().sync();
 
 	await env.persist();
 
@@ -80,6 +84,7 @@ const signTransaction = async ({ env, form, profile }: SendRegistrationSignOptio
 	transaction.generatedAddress = (
 		await senderWallet!.coin().address().fromMultiSignature(minParticipants, publicKeys)
 	).address;
+
 	return transaction;
 };
 
