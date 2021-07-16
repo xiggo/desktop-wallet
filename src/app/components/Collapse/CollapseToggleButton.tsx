@@ -5,7 +5,7 @@ import tw, { styled } from "twin.macro";
 import { Icon } from "../Icon";
 
 const ToggleIcon = styled.span<{ isOpen: boolean; isDisabled?: boolean }>`
-	${tw`w-4 h-4 inline-flex items-center justify-center rounded-full transition duration-200 transform bg-theme-primary-100 dark:bg-theme-secondary-800 text-theme-primary-600 dark:text-theme-secondary-200`}
+	${tw`inline-flex items-center justify-center rounded-full transition duration-200 transform bg-theme-primary-100 dark:bg-theme-secondary-800 text-theme-primary-600 dark:text-theme-secondary-200`}
 	${({ isOpen }) => (isOpen ? tw`bg-theme-primary-600 text-theme-primary-100 rotate-180` : "")}
 	${({ isDisabled }) =>
 		isDisabled
@@ -32,7 +32,7 @@ export const CollapseToggleButton = ({ isOpen, className, label, alternativeLabe
 		>
 			<span>{isOpen ? label || t("COMMON.HIDE") : alternativeLabel || label || t("COMMON.SHOW")}</span>
 			<ToggleIcon isOpen={isOpen!} isDisabled={properties.disabled}>
-				<Icon name="ChevronDown" size="sm" />
+				<Icon name="ChevronDown" size="sm" className="p-1" />
 			</ToggleIcon>
 		</button>
 	);

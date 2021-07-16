@@ -37,10 +37,10 @@ exports[`WalletBottomSheetMenu should render 1`] = `
               Show
             </span>
             <span
-              class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 iYbIdK"
+              class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bWsFZo"
             >
               <div
-                class="sc-bdfBwQ eZRpTZ"
+                class="sc-bdfBwQ eZRpTZ p-1"
                 height="10"
                 width="10"
               >
