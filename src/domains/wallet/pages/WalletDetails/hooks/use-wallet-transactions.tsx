@@ -28,7 +28,7 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 		() => [
 			{
 				callback: syncPending,
-				interval: 15_000,
+				interval: 5000,
 			},
 		],
 		[syncPending],

@@ -103,7 +103,7 @@ describe("Wallet Transactions Hook", () => {
 
 		render(<Component />);
 
-		jest.advanceTimersByTime(30_000);
+		jest.advanceTimersByTime(10_000);
 
 		await waitFor(() => expect(spySync).toHaveBeenCalledTimes(2));
 
