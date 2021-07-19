@@ -51,7 +51,7 @@ exports[`FilterWallets should render 1`] = `
                 class="inline-block mr-2 font-semibold"
               />
               <div
-                class="sc-bdfBwQ eZRpTZ transition-transform "
+                class="sc-bdnxRM AkeAK transition-transform "
                 height="10"
                 width="10"
               >
@@ -113,10 +113,10 @@ exports[`FilterWallets should render with networks selection 1`] = `
             data-testid="NetworkOption__ark.devnet"
           >
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
             >
               <div
-                class="sc-bdfBwQ hjDozt"
+                class="sc-bdnxRM NjstW"
                 height="20"
                 width="20"
               >
@@ -125,7 +125,7 @@ exports[`FilterWallets should render with networks selection 1`] = `
                 </svg>
               </div>
               <span
-                class="Badge__Wrapper-w9wbbm-0 godhYe flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
               >
                 <span />
               </span>
@@ -162,7 +162,7 @@ exports[`FilterWallets should render with networks selection 1`] = `
                 class="inline-block mr-2 font-semibold"
               />
               <div
-                class="sc-bdfBwQ eZRpTZ transition-transform "
+                class="sc-bdnxRM AkeAK transition-transform "
                 height="10"
                 width="10"
               >

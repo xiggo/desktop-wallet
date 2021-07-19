@@ -4,7 +4,7 @@ exports[`BlankPluginCard should render 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -42,7 +42,7 @@ exports[`BlankPluginCard should render with category 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -70,7 +70,7 @@ exports[`BlankPluginCard should render with category 1`] = `
             class="flex items-center mt-4 space-x-2 text-theme-primary-100 dark:text-theme-secondary-800"
           >
             <div
-              class="sc-bdfBwQ hjDozt"
+              class="sc-bdnxRM NjstW"
               height="20"
               width="20"
             >
@@ -98,7 +98,7 @@ exports[`BlankPluginCard should render with name 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -139,7 +139,7 @@ exports[`PluginCard should render 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -151,7 +151,7 @@ exports[`PluginCard should render 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -180,7 +180,7 @@ exports[`PluginCard should render 1`] = `
               class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
             >
               <div
-                class="sc-bdfBwQ hjDozt"
+                class="sc-bdnxRM NjstW"
                 height="20"
                 width="20"
               >
@@ -216,7 +216,7 @@ exports[`PluginCard should render alert icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -228,7 +228,7 @@ exports[`PluginCard should render alert icon 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -257,7 +257,7 @@ exports[`PluginCard should render alert icon 1`] = `
               class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
             >
               <div
-                class="sc-bdfBwQ hjDozt"
+                class="sc-bdnxRM NjstW"
                 height="20"
                 width="20"
               >
@@ -284,7 +284,7 @@ exports[`PluginCard should render alert icon 1`] = `
               data-testid="PluginCard__minimum-version-warning"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ text-theme-warning-500"
+                class="sc-bdnxRM AFVmm text-theme-warning-500"
                 height="16"
                 width="16"
               >
@@ -308,7 +308,7 @@ exports[`PluginCard should render grant icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -320,7 +320,7 @@ exports[`PluginCard should render grant icon 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -345,7 +345,7 @@ exports[`PluginCard should render grant icon 1`] = `
                 ARK Explorer
               </div>
               <div
-                class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                class="sc-bdnxRM AFVmm text-theme-warning-600"
                 height="16"
                 width="16"
               >
@@ -358,7 +358,7 @@ exports[`PluginCard should render grant icon 1`] = `
               class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
             >
               <div
-                class="sc-bdfBwQ hjDozt"
+                class="sc-bdnxRM NjstW"
                 height="20"
                 width="20"
               >
@@ -394,7 +394,7 @@ exports[`PluginCard should render official icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -406,7 +406,7 @@ exports[`PluginCard should render official icon 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -431,7 +431,7 @@ exports[`PluginCard should render official icon 1`] = `
                 ARK Explorer
               </div>
               <div
-                class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                class="sc-bdnxRM AFVmm text-theme-warning-600"
                 height="16"
                 width="16"
               >
@@ -444,7 +444,7 @@ exports[`PluginCard should render official icon 1`] = `
               class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
             >
               <div
-                class="sc-bdfBwQ hjDozt"
+                class="sc-bdnxRM NjstW"
                 height="20"
                 width="20"
               >
@@ -480,7 +480,7 @@ exports[`PluginCard should render update icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -492,7 +492,7 @@ exports[`PluginCard should render update icon 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -521,7 +521,7 @@ exports[`PluginCard should render update icon 1`] = `
               class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
             >
               <div
-                class="sc-bdfBwQ hjDozt"
+                class="sc-bdnxRM NjstW"
                 height="20"
                 width="20"
               >
@@ -550,7 +550,7 @@ exports[`PluginCard should render update icon 1`] = `
               tabindex="0"
             >
               <div
-                class="sc-bdfBwQ hjDozt"
+                class="sc-bdnxRM NjstW"
                 height="20"
                 width="20"
               >
@@ -574,7 +574,7 @@ exports[`PluginCard should render without category 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -586,7 +586,7 @@ exports[`PluginCard should render without category 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -633,7 +633,7 @@ exports[`PluginCard should trigger view 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
         data-testid="Card"
         type="button"
       >
@@ -644,7 +644,7 @@ exports[`PluginCard should trigger view 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -673,7 +673,7 @@ exports[`PluginCard should trigger view 1`] = `
               class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
             >
               <div
-                class="sc-bdfBwQ hjDozt"
+                class="sc-bdnxRM NjstW"
                 height="20"
                 width="20"
               >

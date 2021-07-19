@@ -7,16 +7,16 @@ exports[`Plugin View should render plugin content 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 gqEtOc"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 nFzZM"
     >
       <div
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 bDoEXD flex w-12"
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 tELEj flex w-12"
         >
           <div
-            class="sc-bdfBwQ eZRpTZ mx-auto"
+            class="sc-bdnxRM AkeAK mx-auto"
             height="10"
             width="10"
           >
@@ -32,7 +32,7 @@ exports[`Plugin View should render plugin content 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -113,10 +113,10 @@ exports[`Plugin View should render plugin content 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ group"
+                    class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -124,7 +124,7 @@ exports[`Plugin View should render plugin content 1`] = `
                         class="flex relative items-center space-x-2"
                       >
                         <div
-                          class="sc-bdfBwQ hjDozt p-1"
+                          class="sc-bdnxRM NjstW p-1"
                           height="20"
                           width="20"
                         >
@@ -152,10 +152,10 @@ exports[`Plugin View should render plugin content 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -163,7 +163,7 @@ exports[`Plugin View should render plugin content 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt p-1"
+                      class="sc-bdnxRM NjstW p-1"
                       height="20"
                       width="20"
                     >
@@ -182,10 +182,10 @@ exports[`Plugin View should render plugin content 1`] = `
               class="flex items-center"
             >
               <div
-                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 izugbJ"
+                class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -193,7 +193,7 @@ exports[`Plugin View should render plugin content 1`] = `
                     class="flex relative items-center space-x-2"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt p-1"
+                      class="sc-bdnxRM NjstW p-1"
                       height="20"
                       width="20"
                     >
@@ -242,7 +242,7 @@ exports[`Plugin View should render plugin content 1`] = `
                   data-testid="navbar__useractions"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -279,7 +279,7 @@ exports[`Plugin View should render plugin content 1`] = `
             class="flex items-center space-x-3"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 hIEJEu bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kHIAge bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>

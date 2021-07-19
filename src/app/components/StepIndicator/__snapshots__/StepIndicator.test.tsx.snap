@@ -3,13 +3,13 @@
 exports[`StepIndicator should render 1`] = `
 <DocumentFragment>
   <ul
-    class="StepIndicator__StepWrapper-sc-1kbqtlh-1 eAMWbJ"
+    class="StepIndicator__StepWrapper-sc-1kbqtlh-1 htQxZl"
   >
     <li
-      class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
+      class="StepIndicator__StepStyled-sc-1kbqtlh-0 kcRpjv"
     />
     <li
-      class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
+      class="StepIndicator__StepStyled-sc-1kbqtlh-0 cqvTyD"
     />
   </ul>
 </DocumentFragment>

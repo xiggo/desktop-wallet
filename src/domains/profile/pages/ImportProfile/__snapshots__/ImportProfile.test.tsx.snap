@@ -7,7 +7,7 @@ exports[`ImportProfile should render first step 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -19,7 +19,7 @@ exports[`ImportProfile should render first step 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -40,7 +40,7 @@ exports[`ImportProfile should render first step 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col"
       >
         <div
           class="container px-10 mx-auto"
@@ -49,16 +49,16 @@ exports[`ImportProfile should render first step 1`] = `
             class="mx-auto max-w-xl"
           >
             <ul
-              class="StepIndicator__StepWrapper-sc-1kbqtlh-1 eAMWbJ"
+              class="StepIndicator__StepWrapper-sc-1kbqtlh-1 htQxZl"
             >
               <li
-                class="StepIndicator__StepStyled-sc-1kbqtlh-0 JLiFn"
+                class="StepIndicator__StepStyled-sc-1kbqtlh-0 kcRpjv"
               />
               <li
-                class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
+                class="StepIndicator__StepStyled-sc-1kbqtlh-0 cqvTyD"
               />
               <li
-                class="StepIndicator__StepStyled-sc-1kbqtlh-0 fkxBGD"
+                class="StepIndicator__StepStyled-sc-1kbqtlh-0 cqvTyD"
               />
             </ul>
             <div
@@ -99,7 +99,7 @@ exports[`ImportProfile should render first step 1`] = `
                       data-testid="SelectFile__drop-zone"
                     >
                       <div
-                        class="sc-bdfBwQ gfGMlR"
+                        class="sc-bdnxRM cTrAIK"
                         height="40"
                         width="40"
                       >
@@ -158,7 +158,7 @@ exports[`ImportProfile should render first step 1`] = `
                     class="flex justify-end mt-8 space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                       data-testid="SelectFileStep__back"
                       type="button"
                     >

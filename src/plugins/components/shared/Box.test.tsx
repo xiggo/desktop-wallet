@@ -10,7 +10,7 @@ describe("Shared Box", () => {
 		expect(container).toMatchInlineSnapshot(`
 		<div>
 		  <div
-		    class="sc-gsTCUz ecpqZT"
+		    class="sc-gtsrHT fAKPwJ"
 		  />
 		</div>
 	`);

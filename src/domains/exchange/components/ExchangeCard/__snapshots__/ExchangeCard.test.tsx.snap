@@ -7,7 +7,7 @@ exports[`ExchangeCard should render 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -19,7 +19,7 @@ exports[`ExchangeCard should render 1`] = `
             class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -61,7 +61,7 @@ exports[`ExchangeCard should render a blank card 1`] = `
 <div>
   <div>
     <button
-      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
       data-testid="Card"
       tabindex="-1"
       type="button"

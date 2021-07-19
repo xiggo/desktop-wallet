@@ -63,14 +63,14 @@ exports[`PluginSpecs should render properly 1`] = `
             class="font-semibold text-theme-secondary-text"
           >
             <a
-              class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
               data-testid="PluginSpecs__url"
               href="#"
               rel="noopener noreferrer"
               to="https://github.com/arkecosystem/explorer"
             >
               <span
-                class="Link__Content-ec014t-1 emZiaA"
+                class="Link__Content-sc-ec014t-1 hUiuRR"
               >
                 github.com
               </span>
@@ -78,7 +78,7 @@ exports[`PluginSpecs should render properly 1`] = `
                 class="align-middle"
               >
                 <div
-                  class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                  class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
                   data-testid="Link__external"
                   height="16"
                   width="16"

@@ -3,20 +3,20 @@
 exports[`Link should open an external link 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
     data-testid="Link"
     href="#"
     rel="noopener noreferrer"
     to="https://payvo.com/"
   >
     <span
-      class="Link__Content-ec014t-1 emZiaA"
+      class="Link__Content-sc-ec014t-1 hUiuRR"
     />
     <span
       class="align-middle"
     >
       <div
-        class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200"
+        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
         data-testid="Link__external"
         height="16"
         width="16"
@@ -33,12 +33,12 @@ exports[`Link should open an external link 1`] = `
 exports[`Link should render 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
     data-testid="Link"
     href="/test"
   >
     <span
-      class="Link__Content-ec014t-1 emZiaA"
+      class="Link__Content-sc-ec014t-1 hUiuRR"
     >
       Test
     </span>
@@ -49,20 +49,20 @@ exports[`Link should render 1`] = `
 exports[`Link should render external without children 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
     data-testid="Link"
     href="#"
     rel="noopener noreferrer"
     to="https://payvo.com"
   >
     <span
-      class="Link__Content-ec014t-1 emZiaA"
+      class="Link__Content-sc-ec014t-1 hUiuRR"
     />
     <span
       class="align-middle"
     >
       <div
-        class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200"
+        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
         data-testid="Link__external"
         height="16"
         width="16"
@@ -79,12 +79,12 @@ exports[`Link should render external without children 1`] = `
 exports[`Link should render with tooltip 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
     data-testid="Link"
     href="/test"
   >
     <span
-      class="Link__Content-ec014t-1 emZiaA"
+      class="Link__Content-sc-ec014t-1 hUiuRR"
     >
       Test
     </span>
@@ -95,20 +95,20 @@ exports[`Link should render with tooltip 1`] = `
 exports[`Link should show a toast when trying to open an invalid external link 1`] = `
 <DocumentFragment>
   <a
-    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
     data-testid="Link"
     href="#"
     rel="noopener noreferrer"
     to="invalid-url"
   >
     <span
-      class="Link__Content-ec014t-1 emZiaA"
+      class="Link__Content-sc-ec014t-1 hUiuRR"
     />
     <span
       class="align-middle"
     >
       <div
-        class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200"
+        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
         data-testid="Link__external"
         height="16"
         width="16"

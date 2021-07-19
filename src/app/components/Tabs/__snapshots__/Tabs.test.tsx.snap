@@ -4,7 +4,7 @@ exports[`Tabs should react to use effect call 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 hjejks"
+      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA"
     >
       <button
         aria-selected="true"
@@ -50,7 +50,7 @@ exports[`Tabs should render 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 hjejks"
+      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA"
     >
       <button
         aria-selected="false"
@@ -109,7 +109,7 @@ exports[`Tabs should render wit counts 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 joVAoa"
+      class="Tabs__TabList-sc-1t8sbwb-1 bDWntm"
     >
       <button
         aria-selected="false"
@@ -186,7 +186,7 @@ exports[`Tabs should render without background 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 joVAoa"
+      class="Tabs__TabList-sc-1t8sbwb-1 bDWntm"
     >
       <button
         aria-selected="false"

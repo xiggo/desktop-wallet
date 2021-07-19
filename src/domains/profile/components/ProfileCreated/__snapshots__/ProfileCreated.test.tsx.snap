@@ -9,7 +9,7 @@ exports[`ProfileCreated should render a modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
+      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`ProfileCreated should render a modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -28,7 +28,7 @@ exports[`ProfileCreated should render a modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -72,7 +72,7 @@ exports[`ProfileCreated should render a modal 1`] = `
                 class="flex justify-end space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -82,7 +82,7 @@ exports[`ProfileCreated should render a modal 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
                   type="button"
                 >
                   <div

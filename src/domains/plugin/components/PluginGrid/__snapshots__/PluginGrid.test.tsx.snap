@@ -13,7 +13,7 @@ exports[`PluginGrid should not render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -24,7 +24,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -49,7 +49,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     ARK Explorer
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -62,7 +62,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -94,7 +94,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -114,7 +114,7 @@ exports[`PluginGrid should not render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -125,7 +125,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -150,7 +150,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     ARK Avatars
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -163,7 +163,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -195,7 +195,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -215,7 +215,7 @@ exports[`PluginGrid should not render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -226,7 +226,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -251,7 +251,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     ARK Theme
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -264,7 +264,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -296,7 +296,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -332,7 +332,7 @@ exports[`PluginGrid should render custom number of skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+            class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -437,7 +437,7 @@ exports[`PluginGrid should render custom number of skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+            class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -542,7 +542,7 @@ exports[`PluginGrid should render custom number of skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+            class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -660,7 +660,7 @@ exports[`PluginGrid should render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -671,7 +671,7 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -696,7 +696,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     ARK Explorer
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -709,7 +709,7 @@ exports[`PluginGrid should render pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -741,7 +741,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -761,7 +761,7 @@ exports[`PluginGrid should render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -772,7 +772,7 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -797,7 +797,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     ARK Avatars
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -810,7 +810,7 @@ exports[`PluginGrid should render pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -842,7 +842,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -862,7 +862,7 @@ exports[`PluginGrid should render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -873,7 +873,7 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -898,7 +898,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     ARK Theme
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -911,7 +911,7 @@ exports[`PluginGrid should render pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -943,7 +943,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -963,7 +963,7 @@ exports[`PluginGrid should render pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -974,7 +974,7 @@ exports[`PluginGrid should render pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -999,7 +999,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     Drakula Theme
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -1012,7 +1012,7 @@ exports[`PluginGrid should render pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -1044,7 +1044,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -1064,7 +1064,7 @@ exports[`PluginGrid should render pagination 1`] = `
       class="flex justify-center mt-10 w-full"
     >
       <nav
-        class="Pagination__Wrapper-sc-1rc32i9-0 jQUFVd"
+        class="Pagination__Wrapper-sc-1rc32i9-0 gurSFZ"
         data-testid="Pagination"
       >
         <div
@@ -1073,21 +1073,21 @@ exports[`PluginGrid should render pagination 1`] = `
           <button
             aria-current="true"
             aria-label="Page 1"
-            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe current-page"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 REFYy current-page"
             type="button"
           >
             1
           </button>
           <button
             aria-label="Page 2"
-            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 REFYy"
             type="button"
           >
             2
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
           data-testid="Pagination__next"
           type="button"
         >
@@ -1096,7 +1096,7 @@ exports[`PluginGrid should render pagination 1`] = `
           >
             Next
             <div
-              class="sc-bdfBwQ eZRpTZ ml-2"
+              class="sc-bdnxRM AkeAK ml-2"
               height="10"
               width="10"
             >
@@ -1125,7 +1125,7 @@ exports[`PluginGrid should render skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+            class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -1230,7 +1230,7 @@ exports[`PluginGrid should render skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+            class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -1335,7 +1335,7 @@ exports[`PluginGrid should render skeletons 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+            class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
             data-testid="Card"
             tabindex="-1"
             type="button"
@@ -1453,7 +1453,7 @@ exports[`PluginGrid should render without pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -1464,7 +1464,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -1489,7 +1489,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     ARK Explorer
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -1502,7 +1502,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -1534,7 +1534,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -1554,7 +1554,7 @@ exports[`PluginGrid should render without pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -1565,7 +1565,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -1590,7 +1590,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     ARK Avatars
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -1603,7 +1603,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -1635,7 +1635,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -1655,7 +1655,7 @@ exports[`PluginGrid should render without pagination 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -1666,7 +1666,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -1691,7 +1691,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     ARK Theme
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -1704,7 +1704,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -1736,7 +1736,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -1782,7 +1782,7 @@ exports[`PluginGrid should split by page 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -1793,7 +1793,7 @@ exports[`PluginGrid should split by page 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -1818,7 +1818,7 @@ exports[`PluginGrid should split by page 1`] = `
                     ARK Avatars
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -1831,7 +1831,7 @@ exports[`PluginGrid should split by page 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -1863,7 +1863,7 @@ exports[`PluginGrid should split by page 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >
@@ -1883,11 +1883,11 @@ exports[`PluginGrid should split by page 1`] = `
       class="flex justify-center mt-10 w-full"
     >
       <nav
-        class="Pagination__Wrapper-sc-1rc32i9-0 jQUFVd"
+        class="Pagination__Wrapper-sc-1rc32i9-0 gurSFZ"
         data-testid="Pagination"
       >
         <button
-          class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
           data-testid="Pagination__previous"
           type="button"
         >
@@ -1895,7 +1895,7 @@ exports[`PluginGrid should split by page 1`] = `
             class="flex relative items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ eZRpTZ mr-2"
+              class="sc-bdnxRM AkeAK mr-2"
               height="10"
               width="10"
             >
@@ -1911,7 +1911,7 @@ exports[`PluginGrid should split by page 1`] = `
         >
           <button
             aria-label="Page 1"
-            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 REFYy"
             type="button"
           >
             1
@@ -1919,21 +1919,21 @@ exports[`PluginGrid should split by page 1`] = `
           <button
             aria-current="true"
             aria-label="Page 2"
-            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe current-page"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 REFYy current-page"
             type="button"
           >
             2
           </button>
           <button
             aria-label="Page 3"
-            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 IpoVe"
+            class="Pagination__PaginationButtonStyled-sc-1rc32i9-1 REFYy"
             type="button"
           >
             3
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
           data-testid="Pagination__next"
           type="button"
         >
@@ -1942,7 +1942,7 @@ exports[`PluginGrid should split by page 1`] = `
           >
             Next
             <div
-              class="sc-bdfBwQ eZRpTZ ml-2"
+              class="sc-bdnxRM AkeAK ml-2"
               height="10"
               width="10"
             >
@@ -1971,7 +1971,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
       >
         <div>
           <button
-            class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+            class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
             data-testid="Card"
             type="button"
           >
@@ -1982,7 +1982,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                 class="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25"
               >
                 <div
-                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 loctND bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                  class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                   data-testid="PluginImage"
                 >
                   <svg>
@@ -2007,7 +2007,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                     ARK Explorer
                   </div>
                   <div
-                    class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                    class="sc-bdnxRM AFVmm text-theme-warning-600"
                     height="16"
                     width="16"
                   >
@@ -2020,7 +2020,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -2049,7 +2049,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -2069,7 +2069,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                       height="16"
                       width="16"
                     >

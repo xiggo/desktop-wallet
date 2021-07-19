@@ -7,19 +7,19 @@ exports[`Range should render 1`] = `
     data-testid="Range"
   >
     <div
-      class="Range__Track-sc-1xikdd-0 eUXcsE"
+      class="Range__Track-sc-1xikdd-0 bGbiFA"
       data-testid="Range__track"
       style="transform: scale(1); cursor: pointer;"
     >
       <div
-        class="Range__TrackFilled-sc-1xikdd-1 dqZquU"
+        class="Range__TrackFilled-sc-1xikdd-1 hzsbow"
         data-testid="Range__track__filled"
       >
         <div
           aria-valuemax="100"
           aria-valuemin="1"
           aria-valuenow="10"
-          class="Range__Thumb-sc-1xikdd-2 hBqhUX"
+          class="Range__Thumb-sc-1xikdd-2 dBmeYr"
           data-testid="Range__thumb"
           draggable="false"
           role="slider"
@@ -39,19 +39,19 @@ exports[`Range should render invalid 1`] = `
     data-testid="Range"
   >
     <div
-      class="Range__Track-sc-1xikdd-0 eUXcsE"
+      class="Range__Track-sc-1xikdd-0 bGbiFA"
       data-testid="Range__track"
       style="transform: scale(1); cursor: pointer;"
     >
       <div
-        class="Range__TrackFilled-sc-1xikdd-1 dqZquU"
+        class="Range__TrackFilled-sc-1xikdd-1 hzsbow"
         data-testid="Range__track__filled"
       >
         <div
           aria-valuemax="100"
           aria-valuemin="1"
           aria-valuenow="10"
-          class="Range__Thumb-sc-1xikdd-2 hBqhUX"
+          class="Range__Thumb-sc-1xikdd-2 dBmeYr"
           data-testid="Range__thumb"
           draggable="false"
           role="slider"

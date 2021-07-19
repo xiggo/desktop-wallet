@@ -5,7 +5,7 @@ exports[`TableRow should render with border 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
         data-testid="TableRow"
       />
     </tbody>
@@ -18,7 +18,7 @@ exports[`TableRow should render with onClick callback 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
         data-testid="TableRow"
       />
     </tbody>
@@ -31,7 +31,7 @@ exports[`TableRow should render without border 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 hTjdSD"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 jzTbDS"
         data-testid="TableRow"
       />
     </tbody>
@@ -44,7 +44,7 @@ exports[`TableRow should render without onClick callback 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
         data-testid="TableRow"
       />
     </tbody>

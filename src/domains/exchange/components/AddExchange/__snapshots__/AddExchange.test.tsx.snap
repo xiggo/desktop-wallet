@@ -9,7 +9,7 @@ exports[`AddExchange should render a modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 kgvmbP"
+      class="Modal__ModalContainer-sc-5lu2mc-0 cNCTXz"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`AddExchange should render a modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -28,7 +28,7 @@ exports[`AddExchange should render a modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -54,7 +54,7 @@ exports[`AddExchange should render a modal 1`] = `
               class="mt-8 -mb-6"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
                 role="table"
               >
                 <table
@@ -84,7 +84,7 @@ exports[`AddExchange should render a modal 1`] = `
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -114,7 +114,7 @@ exports[`AddExchange should render a modal 1`] = `
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -160,12 +160,12 @@ exports[`AddExchange should render a modal 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-5"
                         >
                           <div
                             class="bg-theme-primary-100 text-theme-primary-600 w-11 h-11"
@@ -183,7 +183,7 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
                             Atomars
@@ -192,7 +192,7 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
                             v 1.3.8
@@ -203,10 +203,10 @@ exports[`AddExchange should render a modal 1`] = `
                         class="w-16"
                       >
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             type="button"
                           >
                             <div
@@ -219,12 +219,12 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-5"
                         >
                           <div
                             class="bg-theme-primary-100 text-theme-primary-600 w-11 h-11"
@@ -242,7 +242,7 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
                             Binance
@@ -251,7 +251,7 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
                             v 1.3.8
@@ -262,10 +262,10 @@ exports[`AddExchange should render a modal 1`] = `
                         class="w-16"
                       >
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             type="button"
                           >
                             <div
@@ -278,12 +278,12 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-5"
                         >
                           <div
                             class="bg-theme-primary-100 text-theme-primary-600 w-11 h-11"
@@ -301,7 +301,7 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
                             ChangeNOW
@@ -310,7 +310,7 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
                             v 1.3.8
@@ -321,10 +321,10 @@ exports[`AddExchange should render a modal 1`] = `
                         class="w-16"
                       >
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             type="button"
                           >
                             <div
@@ -337,12 +337,12 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-5"
                         >
                           <div
                             class="bg-theme-primary-100 text-theme-primary-600 w-11 h-11"
@@ -360,7 +360,7 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
                             ARK Ecosystem
@@ -369,7 +369,7 @@ exports[`AddExchange should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
                             v 1.3.8
@@ -380,10 +380,10 @@ exports[`AddExchange should render a modal 1`] = `
                         class="w-16"
                       >
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             type="button"
                           >
                             <div

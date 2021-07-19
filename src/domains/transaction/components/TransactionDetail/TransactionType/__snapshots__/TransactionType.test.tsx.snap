@@ -3,7 +3,7 @@
 exports[`TransactionType should render 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionType"
   >
     <div
@@ -21,10 +21,10 @@ exports[`TransactionType should render 1`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-text border-theme-text dark:text-theme-secondary-600 dark:border-theme-secondary-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-text border-theme-text dark:text-theme-secondary-600 dark:border-theme-secondary-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ hjDozt"
+        class="sc-bdnxRM NjstW"
         height="20"
         width="20"
       >

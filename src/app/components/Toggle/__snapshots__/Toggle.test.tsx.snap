@@ -6,14 +6,14 @@ exports[`Toggle should render 1`] = `
     class="flex"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+      class="Toggle__Input-sc-6s3wfu-0 lktEK"
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+      class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+        class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
       />
     </div>
   </label>
@@ -26,14 +26,14 @@ exports[`Toggle should render always on 1`] = `
     class="flex"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+      class="Toggle__Input-sc-6s3wfu-0 lktEK"
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+      class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 iHqYbC"
+        class="Toggle__HandleInner-sc-6s3wfu-2 hvRTqG"
       />
     </div>
   </label>
@@ -46,16 +46,16 @@ exports[`Toggle should render disabled 1`] = `
     class="flex"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+      class="Toggle__Input-sc-6s3wfu-0 lktEK"
       disabled=""
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 liVEyY"
+      class="Toggle__Handle-sc-6s3wfu-1 bIoSPE"
       disabled=""
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 bTyxJm"
+        class="Toggle__HandleInner-sc-6s3wfu-2 bceDMq"
         disabled=""
       />
     </div>
@@ -69,14 +69,14 @@ exports[`Toggle should render small 1`] = `
     class="flex"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+      class="Toggle__Input-sc-6s3wfu-0 lktEK"
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
+      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 cmnsRE"
+        class="Toggle__HandleInner-sc-6s3wfu-2 izKGpU"
       />
     </div>
   </label>
@@ -89,14 +89,14 @@ exports[`Toggle should toggle checked 1`] = `
     class="flex"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+      class="Toggle__Input-sc-6s3wfu-0 lktEK"
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+      class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+        class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
       />
     </div>
   </label>

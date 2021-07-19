@@ -31,7 +31,7 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
         </div>
       </div>
       <fieldset
-        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -46,13 +46,13 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
             class="relative flex flex-1 h-full"
           >
             <input
-              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="AuthenticationStep__wif"
               name="wif"
               type="password"
@@ -74,7 +74,7 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -123,7 +123,7 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
         </div>
       </div>
       <fieldset
-        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -138,13 +138,13 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
             class="relative flex flex-1 h-full"
           >
             <input
-              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="AuthenticationStep__mnemonic"
               name="mnemonic"
               type="password"
@@ -166,7 +166,7 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -180,7 +180,7 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -195,14 +195,14 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 hwtqjt"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
           disabled=""
         >
           <div
             class="relative flex flex-1 h-full"
           >
             <input
-              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-theme-secondary-text"
+              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full text-theme-secondary-text"
               data-testid="AuthenticationStep__second-mnemonic"
               disabled=""
               name="secondMnemonic"
@@ -225,7 +225,7 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -274,7 +274,7 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
         </div>
       </div>
       <fieldset
-        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -289,13 +289,13 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
             class="relative flex flex-1 h-full"
           >
             <input
-              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="AuthenticationStep__mnemonic"
               name="mnemonic"
               type="password"
@@ -317,7 +317,7 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -366,7 +366,7 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
         </div>
       </div>
       <fieldset
-        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -381,13 +381,13 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
             class="relative flex flex-1 h-full"
           >
             <input
-              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="AuthenticationStep__mnemonic"
               name="mnemonic"
               type="password"
@@ -409,7 +409,7 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -458,7 +458,7 @@ exports[`AuthenticationStep should request private key if wallet was imported us
         </div>
       </div>
       <fieldset
-        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -473,13 +473,13 @@ exports[`AuthenticationStep should request private key if wallet was imported us
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
             class="relative flex flex-1 h-full"
           >
             <input
-              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="AuthenticationStep__private-key"
               name="privateKey"
               type="password"
@@ -501,7 +501,7 @@ exports[`AuthenticationStep should request private key if wallet was imported us
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -550,7 +550,7 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
         </div>
       </div>
       <fieldset
-        class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
       >
         <label
           class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -565,13 +565,13 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
           …
         </div>
         <div
-          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
             class="relative flex flex-1 h-full"
           >
             <input
-              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
               data-testid="AuthenticationStep__secret"
               name="secret"
               type="password"
@@ -593,7 +593,7 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
                   class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                 />
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -653,7 +653,7 @@ exports[`AuthenticationStep should show ledger waiting app screen 1`] = `
           class="inline-flex justify-center items-center space-x-3 w-full"
         >
           <div
-            class="Spinner-sc-1rpx65r-0 fqZPZB"
+            class="Spinner-sc-1rpx65r-0 jouzuN"
             color="info"
           />
           <span
@@ -711,7 +711,7 @@ exports[`AuthenticationStep should show ledger waiting device screen 1`] = `
           class="inline-flex justify-center items-center space-x-3 w-full"
         >
           <div
-            class="Spinner-sc-1rpx65r-0 fqZPZB"
+            class="Spinner-sc-1rpx65r-0 jouzuN"
             color="info"
           />
           <span
@@ -766,7 +766,7 @@ exports[`AuthenticationStep should show only ledger confirmation 1`] = `
         class="inline-flex justify-center items-center mt-8 space-x-3 w-full"
       >
         <div
-          class="Spinner-sc-1rpx65r-0 fqZPZB"
+          class="Spinner-sc-1rpx65r-0 jouzuN"
           color="info"
         />
         <span

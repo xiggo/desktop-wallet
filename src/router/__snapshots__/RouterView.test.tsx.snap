@@ -3,7 +3,7 @@
 exports[`RouterView should render 1`] = `
 <DocumentFragment>
   <div
-    class="RouterView__Wrapper-fll7t2-0"
+    class="RouterView__Wrapper-sc-fll7t2-0"
     data-testid="RouterView__wrapper"
   >
     <h1>
@@ -16,7 +16,7 @@ exports[`RouterView should render 1`] = `
 exports[`RouterView should render with custom wrapper 1`] = `
 <DocumentFragment>
   <section
-    class="RouterView__Wrapper-fll7t2-0"
+    class="RouterView__Wrapper-sc-fll7t2-0"
     data-testid="RouterView__wrapper"
   >
     <h1>

@@ -9,7 +9,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
+      class="Modal__ModalContainer-sc-5lu2mc-0 qXMrO"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -28,7 +28,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -59,7 +59,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
                 role="table"
               >
                 <table
@@ -89,7 +89,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -119,7 +119,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -149,7 +149,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 hVnaun group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cPVrtX group"
                                 >
                                   <div
                                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -161,7 +161,7 @@ exports[`SearchRecipient should not render recipient if not in same network 1`] 
                                       Search
                                     </span>
                                     <div
-                                      class="sc-bdfBwQ hjDozt"
+                                      class="sc-bdnxRM NjstW"
                                       height="20"
                                       width="20"
                                     >
@@ -199,7 +199,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
+      class="Modal__ModalContainer-sc-5lu2mc-0 qXMrO"
       tabindex="-1"
     >
       <div
@@ -210,7 +210,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -218,7 +218,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -249,7 +249,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
                 role="table"
               >
                 <table
@@ -279,7 +279,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -309,7 +309,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -339,7 +339,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 hVnaun group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cPVrtX group"
                                 >
                                   <div
                                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -351,7 +351,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                                       Search
                                     </span>
                                     <div
-                                      class="sc-bdfBwQ hjDozt"
+                                      class="sc-bdnxRM NjstW"
                                       height="20"
                                       width="20"
                                     >
@@ -372,15 +372,15 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -418,7 +418,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -429,10 +429,10 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -446,15 +446,15 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -492,7 +492,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -503,10 +503,10 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -520,15 +520,15 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -566,7 +566,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -577,10 +577,10 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -594,15 +594,15 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -640,7 +640,7 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -651,10 +651,10 @@ exports[`SearchRecipient should not render recipient if not in same network 2`] 
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -686,7 +686,7 @@ exports[`SearchRecipient should render a modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
+      class="Modal__ModalContainer-sc-5lu2mc-0 qXMrO"
       tabindex="-1"
     >
       <div
@@ -697,7 +697,7 @@ exports[`SearchRecipient should render a modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -705,7 +705,7 @@ exports[`SearchRecipient should render a modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -736,7 +736,7 @@ exports[`SearchRecipient should render a modal 1`] = `
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
                 role="table"
               >
                 <table
@@ -766,7 +766,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -796,7 +796,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -826,7 +826,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 hVnaun group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cPVrtX group"
                                 >
                                   <div
                                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -838,7 +838,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                                       Search
                                     </span>
                                     <div
-                                      class="sc-bdfBwQ hjDozt"
+                                      class="sc-bdnxRM NjstW"
                                       height="20"
                                       width="20"
                                     >
@@ -859,15 +859,15 @@ exports[`SearchRecipient should render a modal 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -905,7 +905,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -916,10 +916,10 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -933,15 +933,15 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -979,7 +979,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -990,10 +990,10 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -1007,15 +1007,15 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1053,7 +1053,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -1064,10 +1064,10 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -1081,15 +1081,15 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1127,7 +1127,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -1138,10 +1138,10 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -1155,15 +1155,15 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1201,7 +1201,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -1212,10 +1212,10 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -1247,7 +1247,7 @@ exports[`SearchRecipient should render a modal with custom title and description
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hJQewe"
+      class="Modal__ModalContainer-sc-5lu2mc-0 qXMrO"
       tabindex="-1"
     >
       <div
@@ -1258,7 +1258,7 @@ exports[`SearchRecipient should render a modal with custom title and description
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1266,7 +1266,7 @@ exports[`SearchRecipient should render a modal with custom title and description
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -1297,7 +1297,7 @@ exports[`SearchRecipient should render a modal with custom title and description
               class="mt-8"
             >
               <div
-                class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+                class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
                 role="table"
               >
                 <table
@@ -1327,7 +1327,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -1357,7 +1357,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                             class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                              class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                               height="10"
                               role="img"
                               width="10"
@@ -1387,7 +1387,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 hVnaun group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cPVrtX group"
                                 >
                                   <div
                                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
@@ -1399,7 +1399,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                                       Search
                                     </span>
                                     <div
-                                      class="sc-bdfBwQ hjDozt"
+                                      class="sc-bdnxRM NjstW"
                                       height="20"
                                       width="20"
                                     >
@@ -1420,15 +1420,15 @@ exports[`SearchRecipient should render a modal with custom title and description
                     role="rowgroup"
                   >
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1466,7 +1466,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -1477,10 +1477,10 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -1494,15 +1494,15 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1540,7 +1540,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -1551,10 +1551,10 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -1568,15 +1568,15 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1614,7 +1614,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -1625,10 +1625,10 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -1642,15 +1642,15 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1688,7 +1688,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -1699,10 +1699,10 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >
@@ -1716,15 +1716,15 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                     </tr>
                     <tr
-                      class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+                      class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1762,7 +1762,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span
                             data-testid="RecipientListItem__type"
@@ -1773,10 +1773,10 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                          class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                             data-testid="RecipientListItem__select-button"
                             type="button"
                           >

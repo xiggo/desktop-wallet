@@ -10,7 +10,7 @@ exports[`Wallet Card should render 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
         data-testid="Card"
         type="button"
       >
@@ -25,11 +25,11 @@ exports[`Wallet Card should render 1`] = `
             >
               <div
                 aria-label="ARK Devnet"
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.devnet"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   data-testid="NetworkIcon__icon"
                   height="20"
                   width="20"
@@ -40,7 +40,7 @@ exports[`Wallet Card should render 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -80,7 +80,7 @@ exports[`Wallet Card should render 1`] = `
             data-testid="WalletIcon__Ledger"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -94,7 +94,7 @@ exports[`Wallet Card should render 1`] = `
             data-testid="WalletIcon__Star"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -108,7 +108,7 @@ exports[`Wallet Card should render 1`] = `
             data-testid="WalletIcon__Multisig"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -134,7 +134,7 @@ exports[`Wallet Card should render blank 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -146,10 +146,10 @@ exports[`Wallet Card should render blank 1`] = `
             class="flex -space-x-2"
           >
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
             />
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
             />
           </div>
           <div
@@ -182,7 +182,7 @@ exports[`Wallet Card should render blank with ledger display type 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -194,10 +194,10 @@ exports[`Wallet Card should render blank with ledger display type 1`] = `
             class="flex -space-x-2"
           >
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
             />
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
             />
           </div>
           <div
@@ -215,7 +215,7 @@ exports[`Wallet Card should render blank with ledger display type 1`] = `
           class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
         >
           <div
-            class="sc-bdfBwQ bcEVDZ text-theme-primary-100 dark:text-theme-secondary-800"
+            class="sc-bdnxRM AFVmm text-theme-primary-100 dark:text-theme-secondary-800"
             height="16"
             width="16"
           >
@@ -240,7 +240,7 @@ exports[`Wallet Card should render blank with starred display type 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -252,10 +252,10 @@ exports[`Wallet Card should render blank with starred display type 1`] = `
             class="flex -space-x-2"
           >
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
             />
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
             />
           </div>
           <div
@@ -273,7 +273,7 @@ exports[`Wallet Card should render blank with starred display type 1`] = `
           class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
         >
           <div
-            class="sc-bdfBwQ bcEVDZ text-theme-primary-100 dark:text-theme-secondary-800"
+            class="sc-bdnxRM AFVmm text-theme-primary-100 dark:text-theme-secondary-800"
             height="16"
             width="16"
           >
@@ -294,7 +294,7 @@ exports[`Wallet Card should render loading state 1`] = `
     class="bg-theme-background"
   >
     <button
-      class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -310,7 +310,7 @@ exports[`Wallet Card should render loading state 1`] = `
             class="flex items-center mr-4 -space-x-1"
           >
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
             >
               <span>
                 <span
@@ -327,7 +327,7 @@ exports[`Wallet Card should render loading state 1`] = `
               </span>
             </div>
             <div
-              class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
+              class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
             >
               <span>
                 <span
@@ -424,7 +424,7 @@ exports[`Wallet Card should render with actions 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
         data-testid="Card"
         type="button"
       >
@@ -439,11 +439,11 @@ exports[`Wallet Card should render with actions 1`] = `
             >
               <div
                 aria-label="ARK Devnet"
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.devnet"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   data-testid="NetworkIcon__icon"
                   height="20"
                   width="20"
@@ -454,7 +454,7 @@ exports[`Wallet Card should render with actions 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -494,7 +494,7 @@ exports[`Wallet Card should render with actions 1`] = `
             data-testid="WalletIcon__Ledger"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -508,7 +508,7 @@ exports[`Wallet Card should render with actions 1`] = `
             data-testid="WalletIcon__Star"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -522,7 +522,7 @@ exports[`Wallet Card should render with actions 1`] = `
             data-testid="WalletIcon__Multisig"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -541,7 +541,7 @@ exports[`Wallet Card should render with actions 1`] = `
                 class="flex overflow-hidden justify-center w-4"
               >
                 <div
-                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                   height="16"
                   width="16"
                 >
@@ -569,7 +569,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
         data-testid="Card"
         type="button"
       >
@@ -584,11 +584,11 @@ exports[`Wallet Card should render with wallet data 1`] = `
             >
               <div
                 aria-label="ARK Devnet"
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.devnet"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   data-testid="NetworkIcon__icon"
                   height="20"
                   width="20"
@@ -599,7 +599,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -639,7 +639,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
             data-testid="WalletIcon__Ledger"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -653,7 +653,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
             data-testid="WalletIcon__Star"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -667,7 +667,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
             data-testid="WalletIcon__Multisig"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -694,7 +694,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
         data-testid="Card"
         type="button"
       >
@@ -709,11 +709,11 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             >
               <div
                 aria-label="ARK Devnet"
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.devnet"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   data-testid="NetworkIcon__icon"
                   height="20"
                   width="20"
@@ -724,7 +724,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -764,7 +764,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             data-testid="WalletIcon__Ledger"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -778,7 +778,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             data-testid="WalletIcon__Star"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -792,7 +792,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             data-testid="WalletIcon__Multisig"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >

@@ -4,7 +4,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
 <DocumentFragment>
   <div>
     <nav
-      class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 gldbYz sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
+      class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
       data-testid="PluginManagerNavigationBar"
     >
       <div
@@ -14,7 +14,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
           class="-mx-6 w-full"
         >
           <div
-            class="Tabs__TabList-sc-1t8sbwb-1 joVAoa w-full h-18"
+            class="Tabs__TabList-sc-1t8sbwb-1 bDWntm w-full h-18"
           >
             <button
               aria-selected="true"
@@ -129,14 +129,14 @@ exports[`PluginManagerNavigationBar should render 1`] = `
                 class="group"
               >
                 <button
-                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
+                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
                   data-testid="LayoutControls__list--icon"
                 >
                   <div
                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                   />
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -154,14 +154,14 @@ exports[`PluginManagerNavigationBar should render 1`] = `
                 class="group"
               >
                 <button
-                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
+                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
                   data-testid="LayoutControls__grid--icon"
                 >
                   <div
                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                   />
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -184,7 +184,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
 <DocumentFragment>
   <div>
     <nav
-      class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 gldbYz sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
+      class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
       data-testid="PluginManagerNavigationBar"
     >
       <div
@@ -194,7 +194,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
           class="-mx-6 w-full"
         >
           <div
-            class="Tabs__TabList-sc-1t8sbwb-1 joVAoa w-full h-18"
+            class="Tabs__TabList-sc-1t8sbwb-1 bDWntm w-full h-18"
           >
             <button
               aria-selected="true"
@@ -309,14 +309,14 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
                 class="group"
               >
                 <button
-                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group"
+                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
                   data-testid="LayoutControls__list--icon"
                 >
                   <div
                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                   />
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >
@@ -334,14 +334,14 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
                 class="group"
               >
                 <button
-                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 dfiBmJ group active"
+                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
                   data-testid="LayoutControls__grid--icon"
                 >
                   <div
                     class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                   />
                   <div
-                    class="sc-bdfBwQ hjDozt"
+                    class="sc-bdnxRM NjstW"
                     height="20"
                     width="20"
                   >

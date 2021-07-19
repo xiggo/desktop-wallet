@@ -3,7 +3,7 @@
 exports[`TransactionAmount should render 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionAmount"
   >
     <div
@@ -18,7 +18,7 @@ exports[`TransactionAmount should render 1`] = `
         class="font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 lmoJAx"
+          class="Label-sc-4akkzw-0 iTKkeF"
           color="success"
         >
           <span
@@ -30,10 +30,10 @@ exports[`TransactionAmount should render 1`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ bcEVDZ"
+        class="sc-bdnxRM AFVmm"
         height="16"
         width="16"
       >
@@ -49,7 +49,7 @@ exports[`TransactionAmount should render 1`] = `
 exports[`TransactionAmount should render currency amount 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionAmount"
   >
     <div
@@ -64,7 +64,7 @@ exports[`TransactionAmount should render currency amount 1`] = `
         class="font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 lmoJAx"
+          class="Label-sc-4akkzw-0 iTKkeF"
           color="success"
         >
           <span
@@ -76,10 +76,10 @@ exports[`TransactionAmount should render currency amount 1`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ bcEVDZ"
+        class="sc-bdnxRM AFVmm"
         height="16"
         width="16"
       >
@@ -95,7 +95,7 @@ exports[`TransactionAmount should render currency amount 1`] = `
 exports[`TransactionAmount should render label for multiple recipients 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionAmount"
   >
     <div
@@ -110,7 +110,7 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
         class="font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 lmoJAx"
+          class="Label-sc-4akkzw-0 iTKkeF"
           color="success"
         >
           <span
@@ -122,10 +122,10 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ bcEVDZ"
+        class="sc-bdnxRM AFVmm"
         height="16"
         width="16"
       >
@@ -141,7 +141,7 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
 exports[`TransactionAmount should render label for multiple recipients 2`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionAmount"
   >
     <div
@@ -156,7 +156,7 @@ exports[`TransactionAmount should render label for multiple recipients 2`] = `
         class="font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 lmoJAx"
+          class="Label-sc-4akkzw-0 iTKkeF"
           color="success"
         >
           <span
@@ -168,10 +168,10 @@ exports[`TransactionAmount should render label for multiple recipients 2`] = `
       </div>
     </div>
     <div
-      class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdfBwQ bcEVDZ"
+        class="sc-bdnxRM AFVmm"
         height="16"
         width="16"
       >

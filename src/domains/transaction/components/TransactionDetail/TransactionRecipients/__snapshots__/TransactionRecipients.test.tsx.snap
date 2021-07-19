@@ -3,7 +3,7 @@
 exports[`TransactionRecipients should render a recipients array 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionRecipients"
   >
     <div
@@ -18,10 +18,10 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
         class="font-semibold"
       >
         <div
-          class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hnMilg"
+          class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
         >
           <div
-            class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
             role="table"
           >
             <table
@@ -86,7 +86,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
                 >
                   <td>
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -130,7 +130,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
                 >
                   <td>
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -181,7 +181,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
 exports[`TransactionRecipients should render a single recipient 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionRecipients"
   >
     <div
@@ -208,7 +208,7 @@ exports[`TransactionRecipients should render a single recipient 1`] = `
       </div>
     </div>
     <div
-      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+      class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
       data-testid="Avatar"
     >
       <div
@@ -228,7 +228,7 @@ exports[`TransactionRecipients should render a single recipient 1`] = `
 exports[`TransactionRecipients should render a single recipient with alias 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionRecipients"
   >
     <div
@@ -266,7 +266,7 @@ exports[`TransactionRecipients should render a single recipient with alias 1`] =
       </div>
     </div>
     <div
-      class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+      class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
       data-testid="Avatar"
     >
       <div

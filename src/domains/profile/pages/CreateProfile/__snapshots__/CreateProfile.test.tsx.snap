@@ -7,7 +7,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -19,7 +19,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -40,7 +40,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -82,7 +82,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -97,13 +97,13 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -125,10 +125,10 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -136,7 +136,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -153,7 +153,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -168,13 +168,13 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -196,7 +196,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -210,7 +210,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -225,14 +225,14 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
                         aria-invalid="true"
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -247,7 +247,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                         data-testid="Input__error"
                       >
                         <div
-                          class="sc-bdfBwQ hjDozt text-theme-danger-500"
+                          class="sc-bdnxRM NjstW text-theme-danger-500"
                           height="20"
                           width="20"
                         >
@@ -268,7 +268,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -282,7 +282,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -300,13 +300,13 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                       BTC…
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -334,7 +334,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                           BTC (Ƀ)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -345,7 +345,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-controls="downshift-74-menu"
                               aria-labelledby="downshift-74-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
                               id="downshift-74-input"
                               name="currency"
@@ -374,7 +374,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
                                   height="10"
                                   width="10"
                                 >
@@ -388,7 +388,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-74-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
                           id="downshift-74-menu"
                           role="listbox"
                         >
@@ -636,7 +636,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -664,15 +664,15 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -690,14 +690,14 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -707,7 +707,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -735,7 +735,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -747,7 +747,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -768,7 +768,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -810,7 +810,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -825,14 +825,14 @@ exports[`CreateProfile should not be able to create new profile if name already 
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
                             aria-invalid="true"
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -846,7 +846,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                             data-testid="Input__error"
                           >
                             <div
-                              class="sc-bdfBwQ hjDozt text-theme-danger-500"
+                              class="sc-bdnxRM NjstW text-theme-danger-500"
                               height="20"
                               width="20"
                             >
@@ -872,10 +872,10 @@ exports[`CreateProfile should not be able to create new profile if name already 
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -883,7 +883,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -900,7 +900,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -921,13 +921,13 @@ exports[`CreateProfile should not be able to create new profile if name already 
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -949,7 +949,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -963,7 +963,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -984,13 +984,13 @@ exports[`CreateProfile should not be able to create new profile if name already 
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -1012,7 +1012,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -1026,7 +1026,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1044,13 +1044,13 @@ exports[`CreateProfile should not be able to create new profile if name already 
                       BTC…
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -1078,7 +1078,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                           BTC (Ƀ)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -1089,7 +1089,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-controls="downshift-25-menu"
                               aria-labelledby="downshift-25-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
                               id="downshift-25-input"
                               name="currency"
@@ -1118,7 +1118,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
                                   height="10"
                                   width="10"
                                 >
@@ -1132,7 +1132,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                         </div>
                         <ul
                           aria-labelledby="downshift-25-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
                           id="downshift-25-menu"
                           role="listbox"
                         >
@@ -1380,7 +1380,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -1408,15 +1408,15 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -1434,14 +1434,14 @@ exports[`CreateProfile should not be able to create new profile if name already 
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -1451,7 +1451,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -1479,7 +1479,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -1491,7 +1491,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -1512,7 +1512,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -1554,7 +1554,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1569,14 +1569,14 @@ exports[`CreateProfile should not be able to create new profile if name consists
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
                             aria-invalid="true"
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -1590,7 +1590,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                             data-testid="Input__error"
                           >
                             <div
-                              class="sc-bdfBwQ hjDozt text-theme-danger-500"
+                              class="sc-bdnxRM NjstW text-theme-danger-500"
                               height="20"
                               width="20"
                             >
@@ -1616,10 +1616,10 @@ exports[`CreateProfile should not be able to create new profile if name consists
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -1627,7 +1627,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -1644,7 +1644,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1665,13 +1665,13 @@ exports[`CreateProfile should not be able to create new profile if name consists
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -1693,7 +1693,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -1707,7 +1707,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1728,13 +1728,13 @@ exports[`CreateProfile should not be able to create new profile if name consists
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -1756,7 +1756,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -1770,7 +1770,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -1788,13 +1788,13 @@ exports[`CreateProfile should not be able to create new profile if name consists
                       BTC…
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -1822,7 +1822,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                           BTC (Ƀ)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -1833,7 +1833,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-controls="downshift-36-menu"
                               aria-labelledby="downshift-36-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
                               id="downshift-36-input"
                               name="currency"
@@ -1862,7 +1862,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
                                   height="10"
                                   width="10"
                                 >
@@ -1876,7 +1876,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                         </div>
                         <ul
                           aria-labelledby="downshift-36-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
                           id="downshift-36-menu"
                           role="listbox"
                         >
@@ -2124,7 +2124,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -2152,15 +2152,15 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -2178,14 +2178,14 @@ exports[`CreateProfile should not be able to create new profile if name consists
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -2195,7 +2195,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -2223,7 +2223,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -2235,7 +2235,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -2256,7 +2256,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -2298,7 +2298,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2313,14 +2313,14 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
                             aria-invalid="true"
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -2334,7 +2334,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                             data-testid="Input__error"
                           >
                             <div
-                              class="sc-bdfBwQ hjDozt text-theme-danger-500"
+                              class="sc-bdnxRM NjstW text-theme-danger-500"
                               height="20"
                               width="20"
                             >
@@ -2360,10 +2360,10 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -2371,7 +2371,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -2388,7 +2388,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2409,13 +2409,13 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -2437,7 +2437,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -2451,7 +2451,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2472,13 +2472,13 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -2500,7 +2500,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -2514,7 +2514,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2532,13 +2532,13 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                       BTC…
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -2566,7 +2566,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                           BTC (Ƀ)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -2577,7 +2577,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-controls="downshift-47-menu"
                               aria-labelledby="downshift-47-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
                               id="downshift-47-input"
                               name="currency"
@@ -2606,7 +2606,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
                                   height="10"
                                   width="10"
                                 >
@@ -2620,7 +2620,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                         </div>
                         <ul
                           aria-labelledby="downshift-47-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
                           id="downshift-47-menu"
                           role="listbox"
                         >
@@ -2868,7 +2868,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -2896,15 +2896,15 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -2922,14 +2922,14 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -2939,7 +2939,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -2967,7 +2967,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -2979,7 +2979,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -3000,7 +3000,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -3042,7 +3042,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3057,14 +3057,14 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
                             aria-invalid="true"
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -3078,7 +3078,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                             data-testid="Input__error"
                           >
                             <div
-                              class="sc-bdfBwQ hjDozt text-theme-danger-500"
+                              class="sc-bdnxRM NjstW text-theme-danger-500"
                               height="20"
                               width="20"
                             >
@@ -3101,7 +3101,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                         class="relative w-20 h-20"
                       >
                         <div
-                          class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
+                          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 eZhBhl"
                         >
                           <img
                             alt="Avatar"
@@ -3118,7 +3118,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                             >
                               <div
-                                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                class="sc-bdnxRM NjstW text-white dark:text-theme-secondary-200"
                                 height="20"
                                 width="20"
                               >
@@ -3130,7 +3130,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                           </button>
                         </div>
                         <button
-                          class="OriginalButton__StyledButton-o0fs2j-0 hsRXUZ flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
                           data-testid="SelectProfileImage__remove-button"
                           type="button"
                         >
@@ -3138,7 +3138,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                             class="flex relative items-center space-x-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ"
+                              class="sc-bdnxRM AkeAK"
                               height="10"
                               width="10"
                             >
@@ -3153,7 +3153,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3174,13 +3174,13 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -3202,7 +3202,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -3216,7 +3216,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3237,13 +3237,13 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -3265,7 +3265,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -3279,7 +3279,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3297,13 +3297,13 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -3331,7 +3331,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                           …
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -3341,7 +3341,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                               aria-controls="downshift-100-menu"
                               aria-labelledby="downshift-100-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
                               id="downshift-100-input"
                               name="currency"
@@ -3360,7 +3360,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
                                   height="10"
                                   width="10"
                                 >
@@ -3374,7 +3374,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                         </div>
                         <ul
                           aria-labelledby="downshift-100-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
                           id="downshift-100-menu"
                           role="listbox"
                         />
@@ -3387,7 +3387,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -3415,15 +3415,15 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -3441,14 +3441,14 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -3458,7 +3458,7 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -3486,7 +3486,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -3498,7 +3498,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -3519,7 +3519,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -3561,7 +3561,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3576,13 +3576,13 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -3604,10 +3604,10 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -3615,7 +3615,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -3632,7 +3632,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3653,13 +3653,13 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -3681,7 +3681,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -3695,7 +3695,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3716,13 +3716,13 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -3744,7 +3744,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -3758,7 +3758,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -3776,13 +3776,13 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                       BTC…
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -3810,7 +3810,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                           BTC (Ƀ)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -3821,7 +3821,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-controls="downshift-122-menu"
                               aria-labelledby="downshift-122-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
                               id="downshift-122-input"
                               name="currency"
@@ -3850,7 +3850,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
                                   height="10"
                                   width="10"
                                 >
@@ -3864,7 +3864,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-122-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
                           id="downshift-122-menu"
                           role="listbox"
                         >
@@ -4112,7 +4112,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -4140,15 +4140,15 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -4166,14 +4166,14 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -4183,7 +4183,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >
@@ -4210,7 +4210,7 @@ exports[`CreateProfile should render 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -4222,7 +4222,7 @@ exports[`CreateProfile should render 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -4243,7 +4243,7 @@ exports[`CreateProfile should render 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -4285,7 +4285,7 @@ exports[`CreateProfile should render 1`] = `
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4300,13 +4300,13 @@ exports[`CreateProfile should render 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -4328,10 +4328,10 @@ exports[`CreateProfile should render 1`] = `
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -4339,7 +4339,7 @@ exports[`CreateProfile should render 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -4356,7 +4356,7 @@ exports[`CreateProfile should render 1`] = `
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4377,13 +4377,13 @@ exports[`CreateProfile should render 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -4405,7 +4405,7 @@ exports[`CreateProfile should render 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -4419,7 +4419,7 @@ exports[`CreateProfile should render 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4440,13 +4440,13 @@ exports[`CreateProfile should render 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -4468,7 +4468,7 @@ exports[`CreateProfile should render 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -4482,7 +4482,7 @@ exports[`CreateProfile should render 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4500,13 +4500,13 @@ exports[`CreateProfile should render 1`] = `
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -4534,7 +4534,7 @@ exports[`CreateProfile should render 1`] = `
                           …
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -4544,7 +4544,7 @@ exports[`CreateProfile should render 1`] = `
                               aria-controls="downshift-0-menu"
                               aria-labelledby="downshift-0-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
                               id="downshift-0-input"
                               name="currency"
@@ -4563,7 +4563,7 @@ exports[`CreateProfile should render 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
                                   height="10"
                                   width="10"
                                 >
@@ -4577,7 +4577,7 @@ exports[`CreateProfile should render 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-0-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
                           id="downshift-0-menu"
                           role="listbox"
                         />
@@ -4590,7 +4590,7 @@ exports[`CreateProfile should render 1`] = `
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -4618,15 +4618,15 @@ exports[`CreateProfile should render 1`] = `
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -4644,14 +4644,14 @@ exports[`CreateProfile should render 1`] = `
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -4661,7 +4661,7 @@ exports[`CreateProfile should render 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -4689,7 +4689,7 @@ exports[`CreateProfile should store profile 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -4701,7 +4701,7 @@ exports[`CreateProfile should store profile 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -4722,7 +4722,7 @@ exports[`CreateProfile should store profile 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -4764,7 +4764,7 @@ exports[`CreateProfile should store profile 1`] = `
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4779,13 +4779,13 @@ exports[`CreateProfile should store profile 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -4804,7 +4804,7 @@ exports[`CreateProfile should store profile 1`] = `
                         class="relative w-20 h-20"
                       >
                         <div
-                          class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
+                          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 eZhBhl"
                         >
                           <img
                             alt="Avatar"
@@ -4821,7 +4821,7 @@ exports[`CreateProfile should store profile 1`] = `
                               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                             >
                               <div
-                                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                class="sc-bdnxRM NjstW text-white dark:text-theme-secondary-200"
                                 height="20"
                                 width="20"
                               >
@@ -4833,7 +4833,7 @@ exports[`CreateProfile should store profile 1`] = `
                           </button>
                         </div>
                         <button
-                          class="OriginalButton__StyledButton-o0fs2j-0 hsRXUZ flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
                           data-testid="SelectProfileImage__remove-button"
                           type="button"
                         >
@@ -4841,7 +4841,7 @@ exports[`CreateProfile should store profile 1`] = `
                             class="flex relative items-center space-x-2"
                           >
                             <div
-                              class="sc-bdfBwQ eZRpTZ"
+                              class="sc-bdnxRM AkeAK"
                               height="10"
                               width="10"
                             >
@@ -4856,7 +4856,7 @@ exports[`CreateProfile should store profile 1`] = `
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4877,13 +4877,13 @@ exports[`CreateProfile should store profile 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -4905,7 +4905,7 @@ exports[`CreateProfile should store profile 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -4919,7 +4919,7 @@ exports[`CreateProfile should store profile 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4940,13 +4940,13 @@ exports[`CreateProfile should store profile 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -4968,7 +4968,7 @@ exports[`CreateProfile should store profile 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -4982,7 +4982,7 @@ exports[`CreateProfile should store profile 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -5000,13 +5000,13 @@ exports[`CreateProfile should store profile 1`] = `
                       BTC…
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -5034,7 +5034,7 @@ exports[`CreateProfile should store profile 1`] = `
                           BTC (Ƀ)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -5045,7 +5045,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-controls="downshift-4-menu"
                               aria-labelledby="downshift-4-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
                               id="downshift-4-input"
                               name="currency"
@@ -5074,7 +5074,7 @@ exports[`CreateProfile should store profile 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
                                   height="10"
                                   width="10"
                                 >
@@ -5088,7 +5088,7 @@ exports[`CreateProfile should store profile 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-4-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
                           id="downshift-4-menu"
                           role="listbox"
                         >
@@ -5336,7 +5336,7 @@ exports[`CreateProfile should store profile 1`] = `
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -5364,15 +5364,15 @@ exports[`CreateProfile should store profile 1`] = `
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -5390,14 +5390,14 @@ exports[`CreateProfile should store profile 1`] = `
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -5407,7 +5407,7 @@ exports[`CreateProfile should store profile 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >
@@ -5434,7 +5434,7 @@ exports[`CreateProfile should store profile with password 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -5446,7 +5446,7 @@ exports[`CreateProfile should store profile with password 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -5467,7 +5467,7 @@ exports[`CreateProfile should store profile with password 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -5509,7 +5509,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -5524,13 +5524,13 @@ exports[`CreateProfile should store profile with password 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -5552,10 +5552,10 @@ exports[`CreateProfile should store profile with password 1`] = `
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -5563,7 +5563,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -5580,7 +5580,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -5595,13 +5595,13 @@ exports[`CreateProfile should store profile with password 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -5623,7 +5623,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -5637,7 +5637,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -5652,13 +5652,13 @@ exports[`CreateProfile should store profile with password 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -5680,7 +5680,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -5694,7 +5694,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -5712,13 +5712,13 @@ exports[`CreateProfile should store profile with password 1`] = `
                       BTC…
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -5746,7 +5746,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                           BTC (Ƀ)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -5757,7 +5757,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-controls="downshift-58-menu"
                               aria-labelledby="downshift-58-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
                               id="downshift-58-input"
                               name="currency"
@@ -5786,7 +5786,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
                                   height="10"
                                   width="10"
                                 >
@@ -5800,7 +5800,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-58-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
                           id="downshift-58-menu"
                           role="listbox"
                         >
@@ -6048,7 +6048,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -6076,15 +6076,15 @@ exports[`CreateProfile should store profile with password 1`] = `
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -6102,14 +6102,14 @@ exports[`CreateProfile should store profile with password 1`] = `
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -6119,7 +6119,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >
@@ -6146,7 +6146,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -6158,7 +6158,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -6179,7 +6179,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -6221,7 +6221,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6236,13 +6236,13 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -6261,7 +6261,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         class="relative w-20 h-20"
                       >
                         <div
-                          class="SelectProfileImage__ProfileImageStyled-vg16mg-1 bLwLSA"
+                          class="SelectProfileImage__ProfileImageStyled-sc-vg16mg-1 eZhBhl"
                         >
                           <img
                             alt="Avatar"
@@ -6283,7 +6283,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                               class="flex justify-center items-center h-full rounded-full dark:bg-black bg-theme-secondary-900 opacity-85"
                             >
                               <div
-                                class="sc-bdfBwQ hjDozt text-white dark:text-theme-secondary-200"
+                                class="sc-bdnxRM NjstW text-white dark:text-theme-secondary-200"
                                 height="20"
                                 width="20"
                               >
@@ -6299,7 +6299,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6320,13 +6320,13 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -6348,7 +6348,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -6362,7 +6362,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6383,13 +6383,13 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -6411,7 +6411,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -6425,7 +6425,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6443,13 +6443,13 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -6477,7 +6477,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           …
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -6487,7 +6487,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                               aria-controls="downshift-90-menu"
                               aria-labelledby="downshift-90-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
                               id="downshift-90-input"
                               name="currency"
@@ -6506,7 +6506,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
                                   height="10"
                                   width="10"
                                 >
@@ -6520,7 +6520,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         </div>
                         <ul
                           aria-labelledby="downshift-90-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
                           id="downshift-90-menu"
                           role="listbox"
                         />
@@ -6533,7 +6533,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -6561,15 +6561,15 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -6587,14 +6587,14 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -6604,7 +6604,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -6632,7 +6632,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -6644,7 +6644,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -6665,7 +6665,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -6707,7 +6707,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 kOvwNG flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kknRCr flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6722,14 +6722,14 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bxAzkt"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
                             aria-invalid="true"
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -6743,7 +6743,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             data-testid="Input__error"
                           >
                             <div
-                              class="sc-bdfBwQ hjDozt text-theme-danger-500"
+                              class="sc-bdnxRM NjstW text-theme-danger-500"
                               height="20"
                               width="20"
                             >
@@ -6769,10 +6769,10 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -6780,7 +6780,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -6797,7 +6797,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6818,13 +6818,13 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -6846,7 +6846,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -6860,7 +6860,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6881,13 +6881,13 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -6909,7 +6909,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -6923,7 +6923,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6941,13 +6941,13 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                       …
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -6975,7 +6975,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           …
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -6985,7 +6985,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                               aria-controls="downshift-90-menu"
                               aria-labelledby="downshift-90-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
                               id="downshift-90-input"
                               name="currency"
@@ -7004,7 +7004,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500"
                                   height="10"
                                   width="10"
                                 >
@@ -7018,7 +7018,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         </div>
                         <ul
                           aria-labelledby="downshift-90-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
                           id="downshift-90-menu"
                           role="listbox"
                         />
@@ -7031,7 +7031,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -7059,15 +7059,15 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -7085,14 +7085,14 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -7102,7 +7102,7 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 jmXqYL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
@@ -7130,7 +7130,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+      class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
     >
       <div
         class="flex relative h-21"
@@ -7142,7 +7142,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
             class="flex items-center my-auto"
           >
             <div
-              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+              class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
             >
               <svg
                 height="28"
@@ -7163,7 +7163,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center"
+        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center"
       >
         <div
           class="container px-10 mx-auto"
@@ -7205,7 +7205,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                     class="mr-6 w-full"
                   >
                     <fieldset
-                      class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                      class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                     >
                       <label
                         class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -7220,13 +7220,13 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                         …
                       </div>
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
                           class="relative flex flex-1 h-full"
                         >
                           <input
-                            class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                             data-testid="Input"
                             name="name"
                             value=""
@@ -7248,10 +7248,10 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                           class="overflow-hidden h-full rounded-full"
                         >
                           <div
-                            class="SelectProfileImage__UploadButtonWrapper-vg16mg-0 iJifwS"
+                            class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
@@ -7259,7 +7259,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                                 class="flex relative items-center space-x-2"
                               >
                                 <div
-                                  class="sc-bdfBwQ hjDozt text-theme-primary-600 dark:text-theme-secondary-200"
+                                  class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
                                   height="20"
                                   width="20"
                                 >
@@ -7276,7 +7276,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                   </div>
                 </div>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -7297,13 +7297,13 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="password"
                         type="password"
@@ -7325,7 +7325,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -7339,7 +7339,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -7360,13 +7360,13 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                     …
                   </div>
                   <div
-                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
                       class="relative flex flex-1 h-full"
                     >
                       <input
-                        class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                        class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                         data-testid="InputPassword"
                         name="confirmPassword"
                         type="password"
@@ -7388,7 +7388,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                           />
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -7402,7 +7402,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                   </div>
                 </fieldset>
                 <fieldset
-                  class="FormField__FormFieldStyled-q4bblx-0 bpBovi flex flex-col space-y-2"
+                  class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
                 >
                   <label
                     class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -7420,13 +7420,13 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                       BTC…
                     </div>
                     <div
-                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq sr-only"
+                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
                         class="relative flex flex-1 h-full"
                       >
                         <input
-                          class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="select-list__input"
                           name="currency"
                           readonly=""
@@ -7454,7 +7454,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                           BTC (Ƀ)…
                         </div>
                         <div
-                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 bDHBGq"
+                          class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
                           <div
                             class="relative flex flex-1 h-full"
@@ -7465,7 +7465,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-controls="downshift-106-menu"
                               aria-labelledby="downshift-106-label"
                               autocomplete="off"
-                              class="Input__InputStyled-sc-1i8sd1r-1 lpjmUZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
                               id="downshift-106-input"
                               name="currency"
@@ -7494,7 +7494,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                                 data-testid="SelectDropdown__caret"
                               >
                                 <div
-                                  class="sc-bdfBwQ eZRpTZ transition-transform text-theme-secondary-500 transform rotate-180"
+                                  class="sc-bdnxRM AkeAK transition-transform text-theme-secondary-500 transform rotate-180"
                                   height="10"
                                   width="10"
                                 >
@@ -7508,7 +7508,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                         </div>
                         <ul
                           aria-labelledby="downshift-106-label"
-                          class="styles__SelectOptionsList-sc-120rtxy-0 jzIrQF is-open"
+                          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
                           id="downshift-106-menu"
                           role="listbox"
                         >
@@ -7756,7 +7756,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                 class="pb-4 mt-8"
               >
                 <ul
-                  class="sc-hKgILt gfmZFQ"
+                  class="sc-hKFxyN etOObf"
                   data-testid="list-divided__items"
                 >
                   <li
@@ -7784,15 +7784,15 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               class="flex"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 jRoonw"
+                                  class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
                                 />
                               </div>
                             </label>
@@ -7810,14 +7810,14 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                 </ul>
               </div>
               <div
-                class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-800"
+                class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-800"
                 type="horizontal"
               />
               <div
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 guPjPB"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
                   type="button"
                 >
                   <div
@@ -7827,7 +7827,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >

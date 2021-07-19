@@ -3,19 +3,19 @@
 exports[`Card Control should render 1`] = `
 <DocumentFragment>
   <label
-    class="CardControl___StyledLabel-l56akm-3 kWZzWb"
+    class="CardControl___StyledLabel-sc-l56akm-3 ivpdVq"
   >
     <input
-      class="CardControl__Input-l56akm-0 kIMKII"
+      class="CardControl__Input-sc-l56akm-0 czdQbd"
       data-testid="card-control__undefined"
       type="checkbox"
       value=""
     />
     <div
-      class="CardControl__CustomCard-l56akm-1 vtDHp"
+      class="CardControl__CustomCard-sc-l56akm-1 dyHEYM"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -32,19 +32,19 @@ exports[`Card Control should render 1`] = `
 exports[`Card Control should render with a control state 1`] = `
 <DocumentFragment>
   <label
-    class="CardControl___StyledLabel-l56akm-3 kWZzWb grid"
+    class="CardControl___StyledLabel-sc-l56akm-3 ivpdVq grid"
   >
     <input
-      class="CardControl__Input-l56akm-0 kIMKII"
+      class="CardControl__Input-sc-l56akm-0 czdQbd"
       data-testid="card-control__undefined"
       type="checkbox"
       value=""
     />
     <div
-      class="CardControl__CustomCard-l56akm-1 vtDHp"
+      class="CardControl__CustomCard-sc-l56akm-1 dyHEYM"
     >
       <button
-        class="Cardstyles__CardButton-ajtauu-0 glZyeH"
+        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -56,11 +56,11 @@ exports[`Card Control should render with a control state 1`] = `
             Bitcoin
           </span>
           <div
-            class="CardControl__StateStyle-l56akm-2 eBxqrj"
+            class="CardControl__StateStyle-sc-l56akm-2 jWgIwi"
             data-testid="card__control-state"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >

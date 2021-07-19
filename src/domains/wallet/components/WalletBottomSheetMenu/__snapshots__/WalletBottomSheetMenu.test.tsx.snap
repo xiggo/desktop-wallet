@@ -37,10 +37,10 @@ exports[`WalletBottomSheetMenu should render 1`] = `
               Show
             </span>
             <span
-              class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bWsFZo"
+              class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bJlGcn"
             >
               <div
-                class="sc-bdfBwQ eZRpTZ p-1"
+                class="sc-bdnxRM AkeAK p-1"
                 height="10"
                 width="10"
               >
@@ -67,7 +67,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+            class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
             role="table"
           >
             <table
@@ -97,7 +97,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                         class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                       >
                         <div
-                          class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                          class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                           height="10"
                           role="img"
                           width="10"
@@ -141,7 +141,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                         class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                       >
                         <div
-                          class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                          class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                           height="10"
                           role="img"
                           width="10"
@@ -171,7 +171,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                         class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                       >
                         <div
-                          class="sc-bdfBwQ eZRpTZ transition-transform transform rotate-180"
+                          class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
                           height="10"
                           role="img"
                           width="10"
@@ -189,23 +189,23 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="TableRow__TableRowStyled-y9j4av-0 fKSwtJ group"
+                  class="TableRow__TableRowStyled-sc-y9j4av-0 iMsbqY group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-success-900"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-success-900"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
-                            class="sc-bdfBwQ hjDozt"
+                            class="sc-bdnxRM NjstW"
                             data-testid="NetworkIcon__icon"
                             height="20"
                             width="20"
@@ -216,7 +216,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-success-900 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-success-900 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -255,7 +255,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -264,7 +264,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -275,30 +275,30 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>
                   </td>
                 </tr>
                 <tr
-                  class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+                  class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
                   data-testid="TableRow"
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                     >
                       <div
                         class="flex-shrink-0 -space-x-2"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-d5u41q-0 bWntUS text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
-                            class="sc-bdfBwQ hjDozt"
+                            class="sc-bdnxRM NjstW"
                             data-testid="NetworkIcon__icon"
                             height="20"
                             width="20"
@@ -309,7 +309,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dcjHal group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -348,7 +348,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -358,7 +358,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           data-testid="WalletIcon__Key"
                         >
                           <div
-                            class="sc-bdfBwQ bcEVDZ"
+                            class="sc-bdnxRM AFVmm"
                             height="16"
                             width="16"
                           >
@@ -372,7 +372,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
                         data-testid="AmountCrypto"
@@ -383,7 +383,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
                     >
                       N/A
                     </div>

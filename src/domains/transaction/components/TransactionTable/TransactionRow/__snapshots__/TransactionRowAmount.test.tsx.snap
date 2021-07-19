@@ -3,7 +3,7 @@
 exports[`TransactionRowAmount should show as received 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
     color="success"
   >
     <span

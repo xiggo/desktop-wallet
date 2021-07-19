@@ -5,24 +5,24 @@ exports[`Notifications should render notification item 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
         data-testid="TableRow"
       >
         <td
           class="w-3/5"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 pWmsj flex space-x-3"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC flex space-x-3"
           >
             <div
               class="flex items-center -space-x-1"
               data-testid="TransactionRowMode"
             >
               <div
-                class="Circle__CircleWrapper-d5u41q-0 kOCeHB ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ eZRpTZ"
+                  class="sc-bdnxRM AkeAK"
                   height="10"
                   width="10"
                 >
@@ -32,7 +32,7 @@ exports[`Notifications should render notification item 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -64,10 +64,10 @@ exports[`Notifications should render notification item 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 csVVPn justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
           >
             <div
-              class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+              class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
               color="success"
             >
               <span

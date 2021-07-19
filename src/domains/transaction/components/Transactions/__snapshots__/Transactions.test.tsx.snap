@@ -15,7 +15,7 @@ exports[`Transactions should fetch more transactions 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA w-full h-15"
     >
       <button
         aria-selected="true"
@@ -92,10 +92,10 @@ exports[`Transactions should fetch more transactions 1`] = `
                 </span>
               </span>
               <span
-                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bWsFZo"
+                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bJlGcn"
               >
                 <div
-                  class="sc-bdfBwQ eZRpTZ p-1"
+                  class="sc-bdnxRM AkeAK p-1"
                   height="10"
                   width="10"
                 >
@@ -115,7 +115,7 @@ exports[`Transactions should fetch more transactions 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
       role="table"
     >
       <table
@@ -159,7 +159,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -231,7 +231,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -263,25 +263,25 @@ exports[`Transactions should fetch more transactions 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -295,7 +295,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -307,17 +307,17 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -327,7 +327,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -359,7 +359,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -371,14 +371,14 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -392,13 +392,13 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -414,7 +414,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -426,25 +426,25 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -458,7 +458,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -470,17 +470,17 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -490,7 +490,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -522,7 +522,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -534,14 +534,14 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -555,13 +555,13 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -577,7 +577,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -589,25 +589,25 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -621,7 +621,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -633,17 +633,17 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -653,7 +653,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -685,7 +685,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -697,14 +697,14 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -718,13 +718,13 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -740,7 +740,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -752,25 +752,25 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -784,7 +784,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -796,17 +796,17 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -816,7 +816,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -848,7 +848,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -860,14 +860,14 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -881,13 +881,13 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -903,7 +903,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -915,25 +915,25 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -947,7 +947,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -959,17 +959,17 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -979,7 +979,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1011,7 +1011,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -1023,14 +1023,14 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -1044,13 +1044,13 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -1066,7 +1066,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1078,25 +1078,25 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -1110,7 +1110,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1122,17 +1122,17 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -1142,7 +1142,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1174,7 +1174,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -1186,14 +1186,14 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -1207,13 +1207,13 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -1229,7 +1229,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1241,25 +1241,25 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -1273,7 +1273,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1285,17 +1285,17 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -1305,7 +1305,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1337,7 +1337,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -1349,14 +1349,14 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -1370,13 +1370,13 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -1392,7 +1392,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1404,25 +1404,25 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -1436,7 +1436,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1448,17 +1448,17 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -1468,7 +1468,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1500,7 +1500,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -1512,14 +1512,14 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -1533,13 +1533,13 @@ exports[`Transactions should fetch more transactions 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -1555,7 +1555,7 @@ exports[`Transactions should fetch more transactions 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1571,7 +1571,7 @@ exports[`Transactions should fetch more transactions 1`] = `
     </div>
   </div>
   <button
-    class="OriginalButton__StyledButton-o0fs2j-0 guPjPB mt-10 mb-5 w-full"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY mt-10 mb-5 w-full"
     data-testid="transactions__fetch-more-button"
     type="button"
   >
@@ -1599,7 +1599,7 @@ exports[`Transactions should hide view more button when there are no next pages 
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA w-full h-15"
     >
       <button
         aria-selected="true"
@@ -1676,10 +1676,10 @@ exports[`Transactions should hide view more button when there are no next pages 
                 </span>
               </span>
               <span
-                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bWsFZo"
+                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bJlGcn"
               >
                 <div
-                  class="sc-bdfBwQ eZRpTZ p-1"
+                  class="sc-bdnxRM AkeAK p-1"
                   height="10"
                   width="10"
                 >
@@ -1699,7 +1699,7 @@ exports[`Transactions should hide view more button when there are no next pages 
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
       role="table"
     >
       <table
@@ -1743,7 +1743,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -1815,7 +1815,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -1847,25 +1847,25 @@ exports[`Transactions should hide view more button when there are no next pages 
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -1879,7 +1879,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1891,17 +1891,17 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -1911,7 +1911,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -1943,7 +1943,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -1955,14 +1955,14 @@ exports[`Transactions should hide view more button when there are no next pages 
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -1976,13 +1976,13 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -1998,7 +1998,7 @@ exports[`Transactions should hide view more button when there are no next pages 
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2010,25 +2010,25 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -2042,7 +2042,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2054,17 +2054,17 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -2074,7 +2074,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2106,7 +2106,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -2118,14 +2118,14 @@ exports[`Transactions should hide view more button when there are no next pages 
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -2139,13 +2139,13 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -2161,7 +2161,7 @@ exports[`Transactions should hide view more button when there are no next pages 
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2173,25 +2173,25 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -2205,7 +2205,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2217,17 +2217,17 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -2237,7 +2237,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2269,7 +2269,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -2281,14 +2281,14 @@ exports[`Transactions should hide view more button when there are no next pages 
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -2302,13 +2302,13 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -2324,7 +2324,7 @@ exports[`Transactions should hide view more button when there are no next pages 
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2336,25 +2336,25 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -2368,7 +2368,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2380,17 +2380,17 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -2400,7 +2400,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2432,7 +2432,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -2444,14 +2444,14 @@ exports[`Transactions should hide view more button when there are no next pages 
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -2465,13 +2465,13 @@ exports[`Transactions should hide view more button when there are no next pages 
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -2487,7 +2487,7 @@ exports[`Transactions should hide view more button when there are no next pages 
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2520,7 +2520,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA w-full h-15"
     >
       <button
         aria-selected="true"
@@ -2597,10 +2597,10 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 </span>
               </span>
               <span
-                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bWsFZo"
+                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bJlGcn"
               >
                 <div
-                  class="sc-bdfBwQ eZRpTZ p-1"
+                  class="sc-bdnxRM AkeAK p-1"
                   height="10"
                   width="10"
                 >
@@ -2620,7 +2620,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
       role="table"
     >
       <table
@@ -2664,7 +2664,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -2736,7 +2736,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -2768,25 +2768,25 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -2800,7 +2800,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2812,17 +2812,17 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -2832,7 +2832,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -2864,7 +2864,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -2876,14 +2876,14 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -2897,13 +2897,13 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -2919,7 +2919,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2931,25 +2931,25 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -2963,7 +2963,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -2975,17 +2975,17 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -2995,7 +2995,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3027,7 +3027,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -3039,14 +3039,14 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -3060,13 +3060,13 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -3082,7 +3082,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3094,25 +3094,25 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -3126,7 +3126,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3138,17 +3138,17 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -3158,7 +3158,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3190,7 +3190,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -3202,14 +3202,14 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -3223,13 +3223,13 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -3245,7 +3245,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3257,25 +3257,25 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -3289,7 +3289,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3301,17 +3301,17 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -3321,7 +3321,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3353,7 +3353,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -3365,14 +3365,14 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -3386,13 +3386,13 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -3408,7 +3408,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3441,7 +3441,7 @@ exports[`Transactions should render 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA w-full h-15"
     >
       <button
         aria-selected="true"
@@ -3518,10 +3518,10 @@ exports[`Transactions should render 1`] = `
                 </span>
               </span>
               <span
-                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bWsFZo"
+                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bJlGcn"
               >
                 <div
-                  class="sc-bdfBwQ eZRpTZ p-1"
+                  class="sc-bdnxRM AkeAK p-1"
                   height="10"
                   width="10"
                 >
@@ -3541,7 +3541,7 @@ exports[`Transactions should render 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
       role="table"
     >
       <table
@@ -3585,7 +3585,7 @@ exports[`Transactions should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -3657,7 +3657,7 @@ exports[`Transactions should render 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -3689,25 +3689,25 @@ exports[`Transactions should render 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -3721,7 +3721,7 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3733,17 +3733,17 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -3753,7 +3753,7 @@ exports[`Transactions should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3785,7 +3785,7 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -3797,14 +3797,14 @@ exports[`Transactions should render 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -3818,13 +3818,13 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -3840,7 +3840,7 @@ exports[`Transactions should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3852,25 +3852,25 @@ exports[`Transactions should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -3884,7 +3884,7 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -3896,17 +3896,17 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -3916,7 +3916,7 @@ exports[`Transactions should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -3948,7 +3948,7 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -3960,14 +3960,14 @@ exports[`Transactions should render 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -3981,13 +3981,13 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -4003,7 +4003,7 @@ exports[`Transactions should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4015,25 +4015,25 @@ exports[`Transactions should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -4047,7 +4047,7 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4059,17 +4059,17 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -4079,7 +4079,7 @@ exports[`Transactions should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4111,7 +4111,7 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -4123,14 +4123,14 @@ exports[`Transactions should render 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -4144,13 +4144,13 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -4166,7 +4166,7 @@ exports[`Transactions should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4178,25 +4178,25 @@ exports[`Transactions should render 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -4210,7 +4210,7 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4222,17 +4222,17 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -4242,7 +4242,7 @@ exports[`Transactions should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4274,7 +4274,7 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -4286,14 +4286,14 @@ exports[`Transactions should render 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -4307,13 +4307,13 @@ exports[`Transactions should render 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -4329,7 +4329,7 @@ exports[`Transactions should render 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4362,7 +4362,7 @@ exports[`Transactions should render with custom title 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA w-full h-15"
     >
       <button
         aria-selected="true"
@@ -4439,10 +4439,10 @@ exports[`Transactions should render with custom title 1`] = `
                 </span>
               </span>
               <span
-                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bWsFZo"
+                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 bJlGcn"
               >
                 <div
-                  class="sc-bdfBwQ eZRpTZ p-1"
+                  class="sc-bdnxRM AkeAK p-1"
                   height="10"
                   width="10"
                 >
@@ -4462,7 +4462,7 @@ exports[`Transactions should render with custom title 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG -mt-3"
+      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
       role="table"
     >
       <table
@@ -4506,7 +4506,7 @@ exports[`Transactions should render with custom title 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -4578,7 +4578,7 @@ exports[`Transactions should render with custom title 1`] = `
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
                 >
                   <div
-                    class="sc-bdfBwQ eZRpTZ transition-transform"
+                    class="sc-bdnxRM AkeAK transition-transform"
                     height="10"
                     role="img"
                     width="10"
@@ -4610,25 +4610,25 @@ exports[`Transactions should render with custom title 1`] = `
           role="rowgroup"
         >
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -4642,7 +4642,7 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4654,17 +4654,17 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -4674,7 +4674,7 @@ exports[`Transactions should render with custom title 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4706,7 +4706,7 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -4718,14 +4718,14 @@ exports[`Transactions should render with custom title 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -4739,13 +4739,13 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -4761,7 +4761,7 @@ exports[`Transactions should render with custom title 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4773,25 +4773,25 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -4805,7 +4805,7 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4817,17 +4817,17 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -4837,7 +4837,7 @@ exports[`Transactions should render with custom title 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -4869,7 +4869,7 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -4881,14 +4881,14 @@ exports[`Transactions should render with custom title 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -4902,13 +4902,13 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -4924,7 +4924,7 @@ exports[`Transactions should render with custom title 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4936,25 +4936,25 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -4968,7 +4968,7 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4980,17 +4980,17 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -5000,7 +5000,7 @@ exports[`Transactions should render with custom title 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5032,7 +5032,7 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -5044,14 +5044,14 @@ exports[`Transactions should render with custom title 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -5065,13 +5065,13 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -5087,7 +5087,7 @@ exports[`Transactions should render with custom title 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5099,25 +5099,25 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
           </tr>
           <tr
-            class="TableRow__TableRowStyled-y9j4av-0 gSLHww group"
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
             data-testid="TableRow"
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
                   to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                 >
                   <span
-                    class="Link__Content-ec014t-1 emZiaA"
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
                   >
                     <div
-                      class="sc-bdfBwQ bcEVDZ"
+                      class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
@@ -5131,7 +5131,7 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg text-theme-secondary-text"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5143,17 +5143,17 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg flex space-x-4"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
               >
                 <div
                   class="flex items-center -space-x-1"
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-d5u41q-0 bWntUS ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
-                      class="sc-bdfBwQ hjDozt"
+                      class="sc-bdnxRM NjstW"
                       height="20"
                       width="20"
                     >
@@ -5163,7 +5163,7 @@ exports[`Transactions should render with custom title 1`] = `
                     </div>
                   </div>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -5195,7 +5195,7 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex space-x-1 align-middle"
@@ -5207,14 +5207,14 @@ exports[`Transactions should render with custom title 1`] = `
               class="w-16"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="inline-flex p-1 align-middle"
                   data-testid="TransactionRowConfirmation"
                 >
                   <div
-                    class="sc-bdfBwQ hjDozt text-theme-success-600"
+                    class="sc-bdnxRM NjstW text-theme-success-600"
                     data-testid="TransactionRowConfirmation__confirmed"
                     height="20"
                     width="20"
@@ -5228,13 +5228,13 @@ exports[`Transactions should render with custom title 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
                     color="success"
                   >
                     <span
@@ -5250,7 +5250,7 @@ exports[`Transactions should render with custom title 1`] = `
               class="hidden xl:block"
             >
               <div
-                class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5283,7 +5283,7 @@ exports[`Transactions should update wallet filters 1`] = `
     class="mb-8"
   >
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 hjejks w-full h-15"
+      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA w-full h-15"
     >
       <button
         aria-selected="false"
@@ -5361,10 +5361,10 @@ exports[`Transactions should update wallet filters 1`] = `
                 </span>
               </span>
               <span
-                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 jcghAJ"
+                class="CollapseToggleButton__ToggleIcon-sc-1wkp6k4-0 gRZfRO"
               >
                 <div
-                  class="sc-bdfBwQ eZRpTZ p-1"
+                  class="sc-bdnxRM AkeAK p-1"
                   height="10"
                   width="10"
                 >
@@ -5384,7 +5384,7 @@ exports[`Transactions should update wallet filters 1`] = `
     data-testid="TransactionTable"
   >
     <div
-      class="Table__TableWrapper-sc-1gcp0fb-0 jwykaG"
+      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO"
       role="table"
     >
       <table

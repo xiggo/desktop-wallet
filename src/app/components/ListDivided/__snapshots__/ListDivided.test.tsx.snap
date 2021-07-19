@@ -13,7 +13,7 @@ exports[`ListDivided should render an empty list divided 1`] = `
 exports[`ListDivided should render an list divided with items 1`] = `
 <DocumentFragment>
   <ul
-    class="sc-gsTCUz gZXjGp"
+    class="sc-gtsrHT gbzwCT"
     data-testid="list-divided__items"
   >
     <li

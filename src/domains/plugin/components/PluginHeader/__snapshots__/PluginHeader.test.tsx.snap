@@ -10,7 +10,7 @@ exports[`PluginHeader should render properly 1`] = `
       class="flex w-full"
     >
       <div
-        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 jvUDyT bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
         data-testid="PluginImage"
       >
         <svg>
@@ -43,7 +43,7 @@ exports[`PluginHeader should render properly 1`] = `
             class="flex"
           >
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
               data-testid="PluginHeader__button--install"
               type="button"
             >
@@ -54,7 +54,7 @@ exports[`PluginHeader should render properly 1`] = `
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB ml-3"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-3"
               data-testid="PluginHeader__button--report"
               type="button"
             >
@@ -62,7 +62,7 @@ exports[`PluginHeader should render properly 1`] = `
                 class="flex relative items-center space-x-2"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   height="20"
                   width="20"
                 >
@@ -75,7 +75,7 @@ exports[`PluginHeader should render properly 1`] = `
           </div>
         </div>
         <div
-          class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
           type="horizontal"
         />
         <div
@@ -139,14 +139,14 @@ exports[`PluginHeader should render properly 1`] = `
                   class="font-semibold text-theme-secondary-text"
                 >
                   <a
-                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                     data-testid="PluginSpecs__url"
                     href="#"
                     rel="noopener noreferrer"
                     to="https://github.com/arkecosystem"
                   >
                     <span
-                      class="Link__Content-ec014t-1 emZiaA"
+                      class="Link__Content-sc-ec014t-1 hUiuRR"
                     >
                       github.com
                     </span>
@@ -154,7 +154,7 @@ exports[`PluginHeader should render properly 1`] = `
                       class="align-middle"
                     >
                       <div
-                        class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
                         data-testid="Link__external"
                         height="16"
                         width="16"
@@ -230,7 +230,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
       class="flex w-full"
     >
       <div
-        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 gCsaHv bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+        class="PluginImage__PluginImageWrapper-sc-10kztrf-0 hqpRvv bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
         data-testid="PluginImage"
       >
         <svg
@@ -314,7 +314,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
             class="flex"
           >
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
               data-testid="PluginHeader__button--install"
               type="button"
             >
@@ -325,7 +325,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB ml-3"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-3"
               data-testid="PluginHeader__button--report"
               type="button"
             >
@@ -333,7 +333,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
                 class="flex relative items-center space-x-2"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   height="20"
                   width="20"
                 >
@@ -346,7 +346,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
           </div>
         </div>
         <div
-          class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+          class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
           type="horizontal"
         />
         <div
@@ -410,14 +410,14 @@ exports[`PluginHeader should render updating plugin 1`] = `
                   class="font-semibold text-theme-secondary-text"
                 >
                   <a
-                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                     data-testid="PluginSpecs__url"
                     href="#"
                     rel="noopener noreferrer"
                     to="https://github.com/arkecosystem"
                   >
                     <span
-                      class="Link__Content-ec014t-1 emZiaA"
+                      class="Link__Content-sc-ec014t-1 hUiuRR"
                     >
                       github.com
                     </span>
@@ -425,7 +425,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
                       class="align-middle"
                     >
                       <div
-                        class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
                         data-testid="Link__external"
                         height="16"
                         width="16"

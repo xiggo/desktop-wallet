@@ -27,7 +27,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
       >
         <div
-          class="sc-bdfBwQ hjDozt"
+          class="sc-bdnxRM NjstW"
           height="20"
           width="20"
         >
@@ -411,7 +411,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
       </li>
     </ul>
     <div
-      class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
       type="horizontal"
     />
     <div
@@ -432,7 +432,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         </p>
       </div>
       <div
-        class="sc-bdfBwQ gfGMlR text-black dark:text-theme-secondary-600"
+        class="sc-bdnxRM cTrAIK text-black dark:text-theme-secondary-600"
         height="40"
         width="40"
       >
@@ -448,7 +448,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         class="relative"
       >
         <button
-          class="ClipboardButton__StyledButton-cammp1-0 kUVLdV"
+          class="ClipboardButton__StyledButton-sc-cammp1-0 bdsvAo"
           data-testid="CreateWallet__copy"
           type="button"
         >
@@ -456,7 +456,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
             class="flex items-center space-x-2"
           >
             <div
-              class="sc-bdfBwQ bcEVDZ"
+              class="sc-bdnxRM AFVmm"
               height="16"
               width="16"
             >
@@ -471,7 +471,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex items-center space-x-2"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY flex items-center space-x-2"
         data-testid="CreateWallet__download"
         type="button"
       >
@@ -479,7 +479,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
           class="flex relative items-center space-x-2"
         >
           <div
-            class="sc-bdfBwQ bcEVDZ"
+            class="sc-bdnxRM AFVmm"
             height="16"
             width="16"
           >
@@ -494,7 +494,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
       </button>
     </div>
     <div
-      class="Divider-sc-17ehhxk-0 EvPEZ border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="Divider-sc-17ehhxk-0 hZpmpp border-theme-secondary-300 dark:border-theme-secondary-800"
       type="horizontal"
     />
   </section>

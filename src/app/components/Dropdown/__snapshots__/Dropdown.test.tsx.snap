@@ -12,7 +12,7 @@ exports[`Dropdown should render 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -38,7 +38,7 @@ exports[`Dropdown should render a bottom position 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -49,7 +49,7 @@ exports[`Dropdown should render a bottom position 1`] = `
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 fGPvnu opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 fXguai opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
@@ -57,7 +57,7 @@ exports[`Dropdown should render a bottom position 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -66,7 +66,7 @@ exports[`Dropdown should render a bottom position 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -92,7 +92,7 @@ exports[`Dropdown should render a bottom-left position 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -103,7 +103,7 @@ exports[`Dropdown should render a bottom-left position 1`] = `
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 fKVRqA opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 ihzndE opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
@@ -111,7 +111,7 @@ exports[`Dropdown should render a bottom-left position 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -120,7 +120,7 @@ exports[`Dropdown should render a bottom-left position 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -146,7 +146,7 @@ exports[`Dropdown should render a large one 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ hjDozt"
+          class="sc-bdnxRM NjstW"
           height="20"
           width="20"
         >
@@ -172,7 +172,7 @@ exports[`Dropdown should render a left position 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -183,7 +183,7 @@ exports[`Dropdown should render a left position 1`] = `
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 jvlwvy opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 cOaIvy opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
@@ -191,7 +191,7 @@ exports[`Dropdown should render a left position 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -200,7 +200,7 @@ exports[`Dropdown should render a left position 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -226,7 +226,7 @@ exports[`Dropdown should render a small one 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ eZRpTZ"
+          class="sc-bdnxRM AkeAK"
           height="10"
           width="10"
         >
@@ -252,7 +252,7 @@ exports[`Dropdown should render a top 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -263,7 +263,7 @@ exports[`Dropdown should render a top 1`] = `
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 brKqfO opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 PwLxW opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
@@ -271,7 +271,7 @@ exports[`Dropdown should render a top 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -280,7 +280,7 @@ exports[`Dropdown should render a top 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -306,7 +306,7 @@ exports[`Dropdown should render a top-left position 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -317,7 +317,7 @@ exports[`Dropdown should render a top-left position 1`] = `
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 eUqWts opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 gHkhBc opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
@@ -325,7 +325,7 @@ exports[`Dropdown should render a top-left position 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -334,7 +334,7 @@ exports[`Dropdown should render a top-left position 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -360,7 +360,7 @@ exports[`Dropdown should render a top-right 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -371,7 +371,7 @@ exports[`Dropdown should render a top-right 1`] = `
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 jpVhdP opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 kzAPDb opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
@@ -379,7 +379,7 @@ exports[`Dropdown should render a top-right 1`] = `
         data-testid="dropdown__options"
       >
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--0"
           tabindex="0"
         >
@@ -388,7 +388,7 @@ exports[`Dropdown should render a top-right 1`] = `
           </span>
         </li>
         <li
-          class="sc-gsTCUz AoHYO group"
+          class="sc-gtsrHT hZLfuI group"
           data-testid="dropdown__option--1"
           tabindex="0"
         >
@@ -414,7 +414,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -425,7 +425,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 jpVhdP opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 kzAPDb opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
@@ -445,7 +445,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
               data-testid="dropdown__options"
             >
               <li
-                class="sc-gsTCUz AoHYO group"
+                class="sc-gtsrHT hZLfuI group"
                 data-testid="dropdown__option--primary-0"
                 tabindex="0"
               >
@@ -454,7 +454,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
                 </span>
               </li>
               <li
-                class="sc-gsTCUz AoHYO group"
+                class="sc-gtsrHT hZLfuI group"
                 data-testid="dropdown__option--primary-1"
                 tabindex="0"
               >
@@ -472,7 +472,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
             class="mx-8 -my-2"
           >
             <div
-              class="Divider-sc-17ehhxk-0 jAjZLw border-theme-secondary-300 dark:border-theme-secondary-600"
+              class="Divider-sc-17ehhxk-0 lgtApE border-theme-secondary-300 dark:border-theme-secondary-600"
               type="horizontal"
             />
           </div>
@@ -486,7 +486,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
               data-testid="dropdown__options"
             >
               <li
-                class="sc-gsTCUz AoHYO group"
+                class="sc-gtsrHT hZLfuI group"
                 data-testid="dropdown__option--secondary-0"
                 tabindex="0"
               >
@@ -494,18 +494,18 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
                   Secondary Options 1.1
                 </span>
                 <div
-                  class="sc-bdfBwQ bcEVDZ dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                  class="sc-bdnxRM AFVmm dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                   height="16"
                   width="16"
                 />
               </li>
               <li
-                class="sc-gsTCUz AoHYO group"
+                class="sc-gtsrHT hZLfuI group"
                 data-testid="dropdown__option--secondary-1"
                 tabindex="0"
               >
                 <div
-                  class="sc-bdfBwQ bcEVDZ dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+                  class="sc-bdnxRM AFVmm dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
                   height="16"
                   width="16"
                 />
@@ -539,7 +539,7 @@ exports[`Dropdown should render toggle icon 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -565,7 +565,7 @@ exports[`Dropdown should render with a disabled option 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -576,7 +576,7 @@ exports[`Dropdown should render with a disabled option 1`] = `
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 jYYWcF opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 fCdAih opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
@@ -585,7 +585,7 @@ exports[`Dropdown should render with a disabled option 1`] = `
       >
         <li
           aria-disabled="true"
-          class="sc-gsTCUz bboXA-d"
+          class="sc-gtsrHT krrxCz"
           data-testid="dropdown__option--0"
           disabled=""
           tabindex="-1"
@@ -644,7 +644,7 @@ exports[`Dropdown should render with options 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -670,7 +670,7 @@ exports[`Dropdown should render without options one 1`] = `
         class="cursor-pointer outline-none focus:outline-none"
       >
         <div
-          class="sc-bdfBwQ bcEVDZ"
+          class="sc-bdnxRM AFVmm"
           height="16"
           width="16"
         >
@@ -681,7 +681,7 @@ exports[`Dropdown should render without options one 1`] = `
       </div>
     </span>
     <div
-      class="Dropdown__Wrapper-sc-4ty2ol-0 jpVhdP opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
+      class="Dropdown__Wrapper-sc-4ty2ol-0 kzAPDb opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl"
       data-testid="dropdown__content"
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >

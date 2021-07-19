@@ -5,15 +5,15 @@ exports[`PluginListItem should render 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bdbYlY bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -34,7 +34,7 @@ exports[`PluginListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               ARK.io
@@ -43,7 +43,7 @@ exports[`PluginListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               v1.3.8
@@ -52,7 +52,7 @@ exports[`PluginListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               4.2 MB
@@ -61,14 +61,14 @@ exports[`PluginListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <div
               class="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
               data-testid="PluginListItem__not-installed"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -83,10 +83,10 @@ exports[`PluginListItem should render 1`] = `
           class="w-16"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex-1"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >
@@ -109,15 +109,15 @@ exports[`PluginListItem should render grant icon 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bdbYlY bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -134,7 +134,7 @@ exports[`PluginListItem should render grant icon 1`] = `
                 ARK Explorer
               </span>
               <div
-                class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                class="sc-bdnxRM AFVmm text-theme-warning-600"
                 height="16"
                 width="16"
               >
@@ -147,7 +147,7 @@ exports[`PluginListItem should render grant icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               ARK.io
@@ -156,7 +156,7 @@ exports[`PluginListItem should render grant icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               v1.3.8
@@ -165,7 +165,7 @@ exports[`PluginListItem should render grant icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               4.2 MB
@@ -174,14 +174,14 @@ exports[`PluginListItem should render grant icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <div
               class="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
               data-testid="PluginListItem__not-installed"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -196,10 +196,10 @@ exports[`PluginListItem should render grant icon 1`] = `
           class="w-16"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex-1"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >
@@ -222,15 +222,15 @@ exports[`PluginListItem should render official icon 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bdbYlY bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -247,7 +247,7 @@ exports[`PluginListItem should render official icon 1`] = `
                 ARK Explorer
               </span>
               <div
-                class="sc-bdfBwQ bcEVDZ text-theme-warning-600"
+                class="sc-bdnxRM AFVmm text-theme-warning-600"
                 height="16"
                 width="16"
               >
@@ -260,7 +260,7 @@ exports[`PluginListItem should render official icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               ARK.io
@@ -269,7 +269,7 @@ exports[`PluginListItem should render official icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               v1.3.8
@@ -278,7 +278,7 @@ exports[`PluginListItem should render official icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               4.2 MB
@@ -287,14 +287,14 @@ exports[`PluginListItem should render official icon 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <div
               class="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
               data-testid="PluginListItem__not-installed"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -309,10 +309,10 @@ exports[`PluginListItem should render official icon 1`] = `
           class="w-16"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex-1"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >
@@ -335,15 +335,15 @@ exports[`PluginListItem should trigger install 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-5"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-5"
           >
             <div
-              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 eqtfYw bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              class="PluginImage__PluginImageWrapper-sc-10kztrf-0 bdbYlY bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
               data-testid="PluginImage"
             >
               <svg>
@@ -364,7 +364,7 @@ exports[`PluginListItem should trigger install 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               ARK.io
@@ -373,7 +373,7 @@ exports[`PluginListItem should trigger install 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               v1.3.8
@@ -382,7 +382,7 @@ exports[`PluginListItem should trigger install 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <span>
               4.2 MB
@@ -391,14 +391,14 @@ exports[`PluginListItem should trigger install 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
             <div
               class="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
               data-testid="PluginListItem__not-installed"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -413,10 +413,10 @@ exports[`PluginListItem should trigger install 1`] = `
           class="w-16"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 guPjPB flex-1"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY flex-1"
               data-testid="PluginListItem__install"
               type="button"
             >

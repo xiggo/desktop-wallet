@@ -6,7 +6,7 @@ exports[`Switch should render 1`] = `
     class="flex items-center"
   >
     <span
-      class="Switch__SwitchText-sc-161iiro-0 hRupY"
+      class="Switch__SwitchText-sc-161iiro-0 eZQQaE"
       role="button"
     >
       Option A
@@ -15,19 +15,19 @@ exports[`Switch should render 1`] = `
       class="flex"
     >
       <input
-        class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+        class="Toggle__Input-sc-6s3wfu-0 lktEK"
         type="checkbox"
       />
       <div
-        class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+        class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
       >
         <span
-          class="Toggle__HandleInner-sc-6s3wfu-2 iHqYbC"
+          class="Toggle__HandleInner-sc-6s3wfu-2 hvRTqG"
         />
       </div>
     </label>
     <span
-      class="Switch__SwitchText-sc-161iiro-0 jgjaTp"
+      class="Switch__SwitchText-sc-161iiro-0 OMZuZ"
       role="button"
     >
       Option B
@@ -42,7 +42,7 @@ exports[`Switch should render disabled 1`] = `
     class="flex items-center"
   >
     <span
-      class="Switch__SwitchText-sc-161iiro-0 kMLYPQ"
+      class="Switch__SwitchText-sc-161iiro-0 ePGhWU"
       disabled=""
       role="button"
     >
@@ -52,22 +52,22 @@ exports[`Switch should render disabled 1`] = `
       class="flex"
     >
       <input
-        class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+        class="Toggle__Input-sc-6s3wfu-0 lktEK"
         disabled=""
         type="checkbox"
       />
       <div
-        class="Toggle__Handle-sc-6s3wfu-1 liVEyY"
+        class="Toggle__Handle-sc-6s3wfu-1 bIoSPE"
         disabled=""
       >
         <span
-          class="Toggle__HandleInner-sc-6s3wfu-2 bTyxJm"
+          class="Toggle__HandleInner-sc-6s3wfu-2 bceDMq"
           disabled=""
         />
       </div>
     </label>
     <span
-      class="Switch__SwitchText-sc-161iiro-0 iZVAWZ"
+      class="Switch__SwitchText-sc-161iiro-0 dCLirF"
       disabled=""
       role="button"
     >
@@ -83,7 +83,7 @@ exports[`Switch should render large labels 1`] = `
     class="flex items-center"
   >
     <span
-      class="Switch__SwitchText-sc-161iiro-0 dRDYtv"
+      class="Switch__SwitchText-sc-161iiro-0 dHvvEP"
       role="button"
     >
       Option A
@@ -92,19 +92,19 @@ exports[`Switch should render large labels 1`] = `
       class="flex"
     >
       <input
-        class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+        class="Toggle__Input-sc-6s3wfu-0 lktEK"
         type="checkbox"
       />
       <div
-        class="Toggle__Handle-sc-6s3wfu-1 cSYMfL"
+        class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
       >
         <span
-          class="Toggle__HandleInner-sc-6s3wfu-2 iHqYbC"
+          class="Toggle__HandleInner-sc-6s3wfu-2 hvRTqG"
         />
       </div>
     </label>
     <span
-      class="Switch__SwitchText-sc-161iiro-0 hPQGCm"
+      class="Switch__SwitchText-sc-161iiro-0 fRJBgu"
       role="button"
     >
       Option B
@@ -119,7 +119,7 @@ exports[`Switch should render small labels 1`] = `
     class="flex items-center"
   >
     <span
-      class="Switch__SwitchText-sc-161iiro-0 ddtFSz"
+      class="Switch__SwitchText-sc-161iiro-0 faOaTv"
       role="button"
     >
       Option A
@@ -128,19 +128,19 @@ exports[`Switch should render small labels 1`] = `
       class="flex"
     >
       <input
-        class="Toggle__Input-sc-6s3wfu-0 lksfSS"
+        class="Toggle__Input-sc-6s3wfu-0 lktEK"
         type="checkbox"
       />
       <div
-        class="Toggle__Handle-sc-6s3wfu-1 fOBaxM"
+        class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
       >
         <span
-          class="Toggle__HandleInner-sc-6s3wfu-2 jLcWyW"
+          class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
         />
       </div>
     </label>
     <span
-      class="Switch__SwitchText-sc-161iiro-0 bxLfsC"
+      class="Switch__SwitchText-sc-161iiro-0 bBuInq"
       role="button"
     >
       Option B

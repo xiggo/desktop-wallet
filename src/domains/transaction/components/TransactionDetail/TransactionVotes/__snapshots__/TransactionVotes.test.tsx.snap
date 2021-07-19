@@ -41,7 +41,7 @@ exports[`TransactionVotes should render loading state 1`] = `
 exports[`TransactionVotes should render with unvotes 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionUnvotes"
   >
     <div
@@ -65,7 +65,7 @@ exports[`TransactionVotes should render with unvotes 1`] = `
               class="flex items-center py-4 space-x-4"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -111,7 +111,7 @@ exports[`TransactionVotes should render with unvotes 1`] = `
 exports[`TransactionVotes should render with votes 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionVotes"
   >
     <div
@@ -135,7 +135,7 @@ exports[`TransactionVotes should render with votes 1`] = `
               class="flex items-center py-4 space-x-4"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -181,7 +181,7 @@ exports[`TransactionVotes should render with votes 1`] = `
 exports[`TransactionVotes should render with votes and unvotes 1`] = `
 <div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionVotes"
   >
     <div
@@ -205,7 +205,7 @@ exports[`TransactionVotes should render with votes and unvotes 1`] = `
               class="flex items-center py-4 space-x-4"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -246,7 +246,7 @@ exports[`TransactionVotes should render with votes and unvotes 1`] = `
     </div>
   </div>
   <div
-    class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionUnvotes"
   >
     <div
@@ -270,7 +270,7 @@ exports[`TransactionVotes should render with votes and unvotes 1`] = `
               class="flex items-center py-4 space-x-4"
             >
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 qzkIa flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div

@@ -7,12 +7,12 @@ exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
       data-testid="WalletListSkeleton"
     >
       <tr
-        class="TableRow__TableRowStyled-y9j4av-0 hGTGw"
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 hvhfUK space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
           >
             <div
               class="-space-x-2"
@@ -21,7 +21,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
                 class="flex items-center mr-2 -space-x-1"
               >
                 <div
-                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
+                  class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
                 >
                   <span>
                     <span
@@ -33,7 +33,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Circle__CircleWrapper-d5u41q-0 bWntUS border-transparent ring-theme-background"
+                  class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
                 >
                   <span>
                     <span
@@ -58,7 +58,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg justify-center text-sm font-bold text-center align-middle"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
           >
             <span>
               <span
@@ -72,7 +72,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 fHHBzg font-semibold justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
           >
             <span>
               <span
@@ -86,7 +86,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-v39gua-0 auIyS justify-end text-theme-secondary-400"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
           >
             <span>
               <span

@@ -14,7 +14,7 @@ exports[`App should close splash screen if not e2e 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
         >
           <div
             class="flex relative h-21"
@@ -26,7 +26,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                 class="flex items-center my-auto"
               >
                 <div
-                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
                 >
                   <svg
                     height="28"
@@ -47,7 +47,7 @@ exports[`App should close splash screen if not e2e 1`] = `
           class="flex flex-col flex-1"
         >
           <div
-            class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
+            class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center"
           >
             <div
               class="container px-10 mx-auto"
@@ -82,7 +82,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -93,7 +93,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -132,7 +132,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -150,7 +150,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -161,7 +161,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -181,10 +181,10 @@ exports[`App should close splash screen if not e2e 1`] = `
                               </div>
                             </div>
                             <span
-                              class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                              class="Badge__Wrapper-sc-w9wbbm-0 huiJhL flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                             >
                               <div
-                                class="sc-bdfBwQ hjDozt"
+                                class="sc-bdnxRM NjstW"
                                 height="20"
                                 width="20"
                               >
@@ -214,7 +214,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -232,7 +232,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -241,10 +241,10 @@ exports[`App should close splash screen if not e2e 1`] = `
                         >
                           <div>
                             <div
-                              class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-sc-d5u41q-0 eBfcUe dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                             >
                               <div
-                                class="sc-bdfBwQ bcEVDZ"
+                                class="sc-bdnxRM AFVmm"
                                 height="16"
                                 width="16"
                               >
@@ -274,13 +274,13 @@ exports[`App should close splash screen if not e2e 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-ec014t-1 emZiaA"
+                      class="Link__Content-sc-ec014t-1 hUiuRR"
                     >
                       Import it here.
                     </span>
@@ -310,7 +310,7 @@ exports[`App should not migrate profiles 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
         >
           <div
             class="flex relative h-21"
@@ -322,7 +322,7 @@ exports[`App should not migrate profiles 1`] = `
                 class="flex items-center my-auto"
               >
                 <div
-                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
                 >
                   <svg
                     height="28"
@@ -343,7 +343,7 @@ exports[`App should not migrate profiles 1`] = `
           class="flex flex-col flex-1"
         >
           <div
-            class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
+            class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center"
           >
             <div
               class="container px-10 mx-auto"
@@ -378,7 +378,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -389,7 +389,7 @@ exports[`App should not migrate profiles 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -428,7 +428,7 @@ exports[`App should not migrate profiles 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -446,7 +446,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -457,7 +457,7 @@ exports[`App should not migrate profiles 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -477,10 +477,10 @@ exports[`App should not migrate profiles 1`] = `
                               </div>
                             </div>
                             <span
-                              class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                              class="Badge__Wrapper-sc-w9wbbm-0 huiJhL flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                             >
                               <div
-                                class="sc-bdfBwQ hjDozt"
+                                class="sc-bdnxRM NjstW"
                                 height="20"
                                 width="20"
                               >
@@ -510,7 +510,7 @@ exports[`App should not migrate profiles 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -528,7 +528,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -537,10 +537,10 @@ exports[`App should not migrate profiles 1`] = `
                         >
                           <div>
                             <div
-                              class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-sc-d5u41q-0 eBfcUe dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                             >
                               <div
-                                class="sc-bdfBwQ bcEVDZ"
+                                class="sc-bdnxRM AFVmm"
                                 height="16"
                                 width="16"
                               >
@@ -570,13 +570,13 @@ exports[`App should not migrate profiles 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-ec014t-1 emZiaA"
+                      class="Link__Content-sc-ec014t-1 hUiuRR"
                     >
                       Import it here.
                     </span>
@@ -603,7 +603,7 @@ exports[`App should render application error if the app fails to boot 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+        class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
       >
         <div
           class="flex relative h-21"
@@ -615,7 +615,7 @@ exports[`App should render application error if the app fails to boot 1`] = `
               class="flex items-center my-auto"
             >
               <div
-                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+                class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
               >
                 <svg
                   height="28"
@@ -631,7 +631,7 @@ exports[`App should render application error if the app fails to boot 1`] = `
         class="flex flex-col flex-1"
       >
         <div
-          class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
+          class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center"
         >
           <div
             class="container px-10 mx-auto"
@@ -659,7 +659,7 @@ exports[`App should render application error if the app fails to boot 1`] = `
               </p>
             </div>
             <button
-              class="OriginalButton__StyledButton-o0fs2j-0 dABsWA mt-8"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ mt-8"
               data-testid="ApplicationError__button--reload"
               type="button"
             >
@@ -691,7 +691,7 @@ exports[`App should render mock 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
         >
           <div
             class="flex relative h-21"
@@ -703,7 +703,7 @@ exports[`App should render mock 1`] = `
                 class="flex items-center my-auto"
               >
                 <div
-                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
                 >
                   <svg
                     height="28"
@@ -724,7 +724,7 @@ exports[`App should render mock 1`] = `
           class="flex flex-col flex-1"
         >
           <div
-            class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
+            class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center"
           >
             <div
               class="container px-10 mx-auto"
@@ -759,7 +759,7 @@ exports[`App should render mock 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -770,7 +770,7 @@ exports[`App should render mock 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -809,7 +809,7 @@ exports[`App should render mock 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -827,7 +827,7 @@ exports[`App should render mock 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -838,7 +838,7 @@ exports[`App should render mock 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -858,10 +858,10 @@ exports[`App should render mock 1`] = `
                               </div>
                             </div>
                             <span
-                              class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                              class="Badge__Wrapper-sc-w9wbbm-0 huiJhL flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                             >
                               <div
-                                class="sc-bdfBwQ hjDozt"
+                                class="sc-bdnxRM NjstW"
                                 height="20"
                                 width="20"
                               >
@@ -891,7 +891,7 @@ exports[`App should render mock 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -909,7 +909,7 @@ exports[`App should render mock 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -918,10 +918,10 @@ exports[`App should render mock 1`] = `
                         >
                           <div>
                             <div
-                              class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-sc-d5u41q-0 eBfcUe dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                             >
                               <div
-                                class="sc-bdfBwQ bcEVDZ"
+                                class="sc-bdnxRM AFVmm"
                                 height="16"
                                 width="16"
                               >
@@ -951,13 +951,13 @@ exports[`App should render mock 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-ec014t-1 emZiaA"
+                      class="Link__Content-sc-ec014t-1 hUiuRR"
                     >
                       Import it here.
                     </span>
@@ -987,7 +987,7 @@ exports[`App should render splash screen 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
         >
           <div
             class="flex relative h-21"
@@ -999,7 +999,7 @@ exports[`App should render splash screen 1`] = `
                 class="flex items-center my-auto"
               >
                 <div
-                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
                 >
                   <svg
                     height="28"
@@ -1020,7 +1020,7 @@ exports[`App should render splash screen 1`] = `
           class="flex flex-col flex-1"
         >
           <div
-            class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
+            class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center"
           >
             <div
               class="container px-10 mx-auto"
@@ -1055,7 +1055,7 @@ exports[`App should render splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -1066,7 +1066,7 @@ exports[`App should render splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1105,7 +1105,7 @@ exports[`App should render splash screen 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -1123,7 +1123,7 @@ exports[`App should render splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -1134,7 +1134,7 @@ exports[`App should render splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1154,10 +1154,10 @@ exports[`App should render splash screen 1`] = `
                               </div>
                             </div>
                             <span
-                              class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                              class="Badge__Wrapper-sc-w9wbbm-0 huiJhL flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                             >
                               <div
-                                class="sc-bdfBwQ hjDozt"
+                                class="sc-bdnxRM NjstW"
                                 height="20"
                                 width="20"
                               >
@@ -1187,7 +1187,7 @@ exports[`App should render splash screen 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -1205,7 +1205,7 @@ exports[`App should render splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -1214,10 +1214,10 @@ exports[`App should render splash screen 1`] = `
                         >
                           <div>
                             <div
-                              class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-sc-d5u41q-0 eBfcUe dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                             >
                               <div
-                                class="sc-bdfBwQ bcEVDZ"
+                                class="sc-bdnxRM AFVmm"
                                 height="16"
                                 width="16"
                               >
@@ -1247,13 +1247,13 @@ exports[`App should render splash screen 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-ec014t-1 emZiaA"
+                      class="Link__Content-sc-ec014t-1 hUiuRR"
                     >
                       Import it here.
                     </span>
@@ -1283,7 +1283,7 @@ exports[`App should render the offline screen if there is no internet connection
       >
         <nav
           aria-labelledby="main menu"
-          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
         >
           <div
             class="flex relative h-21"
@@ -1295,7 +1295,7 @@ exports[`App should render the offline screen if there is no internet connection
                 class="flex items-center my-auto"
               >
                 <div
-                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
                 >
                   <svg
                     height="28"
@@ -1311,7 +1311,7 @@ exports[`App should render the offline screen if there is no internet connection
           class="flex flex-col flex-1"
         >
           <div
-            class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
+            class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center"
           >
             <div
               class="container px-10 mx-auto"
@@ -1361,7 +1361,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 rEBdf"
+          class="NavigationBar__NavWrapper-sc-1nkmx4c-0 kwMnUP"
         >
           <div
             class="flex relative h-21"
@@ -1373,7 +1373,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                 class="flex items-center my-auto"
               >
                 <div
-                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bQNieu"
+                  class="NavigationBar__LogoContainer-sc-1nkmx4c-1 bfIa-di"
                 >
                   <svg
                     height="28"
@@ -1394,7 +1394,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
           class="flex flex-col flex-1"
         >
           <div
-            class="Section__SectionWrapper-plnv9l-0 hMcwPe flex flex-col flex-1 justify-center text-center"
+            class="Section__SectionWrapper-sc-plnv9l-0 efrBqv flex flex-col flex-1 justify-center text-center"
           >
             <div
               class="container px-10 mx-auto"
@@ -1429,7 +1429,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -1440,7 +1440,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1479,7 +1479,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -1497,7 +1497,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -1508,7 +1508,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 eGyvUj flex-shrink-0"
+                              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cLJiNf flex-shrink-0"
                               data-testid="Avatar"
                             >
                               <div
@@ -1528,10 +1528,10 @@ exports[`App should render welcome screen after splash screen 1`] = `
                               </div>
                             </div>
                             <span
-                              class="Badge__Wrapper-w9wbbm-0 hebbam flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+                              class="Badge__Wrapper-sc-w9wbbm-0 huiJhL flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 bg-theme-background border-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
                             >
                               <div
-                                class="sc-bdfBwQ hjDozt"
+                                class="sc-bdnxRM NjstW"
                                 height="20"
                                 width="20"
                               >
@@ -1561,7 +1561,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                                 class="flex overflow-hidden justify-center w-4"
                               >
                                 <div
-                                  class="sc-bdfBwQ bcEVDZ p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                                  class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
                                   height="16"
                                   width="16"
                                 >
@@ -1579,7 +1579,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-ajtauu-0 kpWDAM"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
                         data-testid="Card"
                         type="button"
                       >
@@ -1588,10 +1588,10 @@ exports[`App should render welcome screen after splash screen 1`] = `
                         >
                           <div>
                             <div
-                              class="Circle__CircleWrapper-d5u41q-0 kFyjdv dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
+                              class="Circle__CircleWrapper-sc-d5u41q-0 eBfcUe dark:text-white group-hover:text-white text-theme-primary-600 dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-700 ring-theme-background"
                             >
                               <div
-                                class="sc-bdfBwQ bcEVDZ"
+                                class="sc-bdnxRM AFVmm"
                                 height="16"
                                 width="16"
                               >
@@ -1621,13 +1621,13 @@ exports[`App should render welcome screen after splash screen 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
                   >
                     <span
-                      class="Link__Content-ec014t-1 emZiaA"
+                      class="Link__Content-sc-ec014t-1 hUiuRR"
                     >
                       Import it here.
                     </span>

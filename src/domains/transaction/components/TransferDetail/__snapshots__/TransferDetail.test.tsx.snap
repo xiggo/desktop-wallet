@@ -9,7 +9,7 @@ exports[`TransferDetail should render a modal 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
+      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
       tabindex="-1"
     >
       <div
@@ -20,7 +20,7 @@ exports[`TransferDetail should render a modal 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -28,7 +28,7 @@ exports[`TransferDetail should render a modal 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -51,7 +51,7 @@ exports[`TransferDetail should render a modal 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -81,7 +81,7 @@ exports[`TransferDetail should render a modal 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -97,7 +97,7 @@ exports[`TransferDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionRecipients"
             >
               <div
@@ -124,7 +124,7 @@ exports[`TransferDetail should render a modal 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -139,7 +139,7 @@ exports[`TransferDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -154,7 +154,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 inMXqe"
+                    class="Label-sc-4akkzw-0 cuqVRO"
                     color="danger"
                   >
                     <span
@@ -166,10 +166,10 @@ exports[`TransferDetail should render a modal 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -180,7 +180,7 @@ exports[`TransferDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -203,7 +203,7 @@ exports[`TransferDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -228,7 +228,7 @@ exports[`TransferDetail should render a modal 1`] = `
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   height="20"
                   width="20"
                 >
@@ -239,7 +239,7 @@ exports[`TransferDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -258,7 +258,7 @@ exports[`TransferDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -279,7 +279,7 @@ exports[`TransferDetail should render a modal 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-600"
                       height="20"
                       width="20"
                     >
@@ -292,7 +292,7 @@ exports[`TransferDetail should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -313,14 +313,14 @@ exports[`TransferDetail should render a modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-ec014t-1 emZiaA"
+                          class="Link__Content-sc-ec014t-1 hUiuRR"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -332,7 +332,7 @@ exports[`TransferDetail should render a modal 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
                             height="16"
                             width="16"
@@ -356,7 +356,7 @@ exports[`TransferDetail should render a modal 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ bcEVDZ"
+                          class="sc-bdnxRM AFVmm"
                           height="16"
                           width="16"
                         >
@@ -385,7 +385,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
+      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
       tabindex="-1"
     >
       <div
@@ -396,7 +396,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -404,7 +404,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -427,7 +427,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -457,7 +457,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -473,7 +473,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionRecipients"
             >
               <div
@@ -500,7 +500,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -515,7 +515,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -530,7 +530,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 inMXqe"
+                    class="Label-sc-4akkzw-0 cuqVRO"
                     color="danger"
                   >
                     <span
@@ -542,10 +542,10 @@ exports[`TransferDetail should render as confirmed 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -556,7 +556,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -579,7 +579,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -604,7 +604,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   height="20"
                   width="20"
                 >
@@ -615,7 +615,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -634,7 +634,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -656,7 +656,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                     </span>
                     <span>
                       <div
-                        class="sc-bdfBwQ hjDozt text-theme-success-600"
+                        class="sc-bdnxRM NjstW text-theme-success-600"
                         height="20"
                         width="20"
                       >
@@ -670,7 +670,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -691,14 +691,14 @@ exports[`TransferDetail should render as confirmed 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-ec014t-1 emZiaA"
+                          class="Link__Content-sc-ec014t-1 hUiuRR"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -710,7 +710,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
                             height="16"
                             width="16"
@@ -734,7 +734,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ bcEVDZ"
+                          class="sc-bdnxRM AFVmm"
                           height="16"
                           width="16"
                         >
@@ -763,7 +763,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
+      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
       tabindex="-1"
     >
       <div
@@ -774,7 +774,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -782,7 +782,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -805,7 +805,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -835,7 +835,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -851,7 +851,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionRecipients"
             >
               <div
@@ -878,7 +878,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -893,7 +893,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -908,7 +908,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx"
+                    class="Label-sc-4akkzw-0 iTKkeF"
                     color="success"
                   >
                     <span
@@ -920,10 +920,10 @@ exports[`TransferDetail should render as not is sent 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -934,7 +934,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -957,7 +957,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -982,7 +982,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   height="20"
                   width="20"
                 >
@@ -993,7 +993,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -1012,7 +1012,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1033,7 +1033,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-600"
                       height="20"
                       width="20"
                     >
@@ -1046,7 +1046,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1067,14 +1067,14 @@ exports[`TransferDetail should render as not is sent 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-ec014t-1 emZiaA"
+                          class="Link__Content-sc-ec014t-1 hUiuRR"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1086,7 +1086,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
                             height="16"
                             width="16"
@@ -1110,7 +1110,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ bcEVDZ"
+                          class="sc-bdnxRM AFVmm"
                           height="16"
                           width="16"
                         >
@@ -1139,7 +1139,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
     data-testid="modal__overlay"
   >
     <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 hPOIxS"
+      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
       tabindex="-1"
     >
       <div
@@ -1150,7 +1150,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-o0fs2j-0 gAvGnc w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1158,7 +1158,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
               class="flex relative items-center space-x-2"
             >
               <div
-                class="sc-bdfBwQ bcEVDZ"
+                class="sc-bdnxRM AFVmm"
                 height="16"
                 width="16"
               >
@@ -1181,7 +1181,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
             class="flex-1"
           >
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 cUTMDU no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
               data-testid="TransactionSender"
             >
               <div
@@ -1211,7 +1211,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                 class="flex items-center -space-x-2"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div
@@ -1227,7 +1227,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionRecipients"
             >
               <div
@@ -1254,7 +1254,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                 </div>
               </div>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 ehnmnK flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -1269,7 +1269,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionAmount"
             >
               <div
@@ -1284,7 +1284,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 lmoJAx"
+                    class="Label-sc-4akkzw-0 iTKkeF"
                     color="success"
                   >
                     <span
@@ -1296,10 +1296,10 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                 </div>
               </div>
               <div
-                class="Circle__CircleWrapper-d5u41q-0 bWntUS border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ bcEVDZ"
+                  class="sc-bdnxRM AFVmm"
                   height="16"
                   width="16"
                 >
@@ -1310,7 +1310,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionFee"
             >
               <div
@@ -1333,7 +1333,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionMemo"
             >
               <div
@@ -1358,7 +1358,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                 class="flex justify-center w-11 text-theme-secondary-900 dark:text-theme-secondary-600"
               >
                 <div
-                  class="sc-bdfBwQ hjDozt"
+                  class="sc-bdnxRM NjstW"
                   height="20"
                   width="20"
                 >
@@ -1369,7 +1369,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionTimestamp"
             >
               <div
@@ -1388,7 +1388,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1409,7 +1409,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                       Not confirmed
                     </span>
                     <div
-                      class="sc-bdfBwQ hjDozt text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-600"
                       height="20"
                       width="20"
                     >
@@ -1422,7 +1422,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-r7sfme-0 hEJkEi no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1443,14 +1443,14 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-ec014t-0 hgIIXP group"
+                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
                         to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       >
                         <span
-                          class="Link__Content-ec014t-1 emZiaA"
+                          class="Link__Content-sc-ec014t-1 hUiuRR"
                         >
                           <span
                             class="inline-flex overflow-hidden"
@@ -1462,7 +1462,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                           class="align-middle"
                         >
                           <div
-                            class="sc-bdfBwQ bcEVDZ flex-shrink-0 duration-200 inline-block pb-px text-sm"
+                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
                             data-testid="Link__external"
                             height="16"
                             width="16"
@@ -1486,7 +1486,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                           class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
                         />
                         <div
-                          class="sc-bdfBwQ bcEVDZ"
+                          class="sc-bdnxRM AFVmm"
                           height="16"
                           width="16"
                         >
