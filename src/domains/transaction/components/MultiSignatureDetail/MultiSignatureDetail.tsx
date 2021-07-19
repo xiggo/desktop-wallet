@@ -6,6 +6,7 @@ import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext } from "app/contexts";
 import { toasts } from "app/services";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
+import { SignInput, useWalletSignatory } from "domains/transaction/hooks";
 import React, { useCallback, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -77,6 +78,8 @@ export const MultiSignatureDetail = ({ isOpen, wallet, transaction, onClose }: M
 
 	const [activeStep, setActiveStep] = useState(1);
 
+	const { sign } = useWalletSignatory(wallet);
+
 	const canBeBroadascated =
 		wallet.transaction().canBeBroadcasted(transaction.id()) &&
 		!wallet.transaction().isAwaitingConfirmation(transaction.id());
@@ -104,9 +107,17 @@ export const MultiSignatureDetail = ({ isOpen, wallet, transaction, onClose }: M
 	}, [wallet, transaction, persist]);
 
 	const addSignature = useCallback(
-		async ({ mnemonic }: { mnemonic: string }) => {
+		async ({ encryptionPassword, mnemonic, privateKey, secondMnemonic, secret, wif }: SignInput) => {
 			try {
-				const signature = await wallet.coin().signatory().mnemonic(mnemonic);
+				const signature = await sign({
+					encryptionPassword,
+					mnemonic,
+					privateKey,
+					secondMnemonic,
+					secret,
+					wif,
+				});
+
 				await wallet.transaction().addSignature(transaction.id(), signature);
 				await wallet.transaction().sync();
 
@@ -115,7 +126,7 @@ export const MultiSignatureDetail = ({ isOpen, wallet, transaction, onClose }: M
 				toasts.error(t("TRANSACTION.MULTISIGNATURE.ERROR.FAILED_TO_SIGN"));
 			}
 		},
-		[transaction, wallet, broadcast, t],
+		[transaction, wallet, broadcast, t, sign],
 	);
 
 	return (

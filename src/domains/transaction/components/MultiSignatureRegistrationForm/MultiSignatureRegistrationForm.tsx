@@ -37,11 +37,11 @@ const transactionDetails = ({ transaction, translations, wallet }: SendRegistrat
 StepsComponent.displayName = "MultiSignatureRegistrationForm";
 transactionDetails.displayName = "MultiSignatureRegistrationFormTransactionDetails";
 
-const signTransaction = async ({ env, form, profile }: SendRegistrationSignOptions) => {
+const signTransaction = async ({ env, form, profile, signatory }: SendRegistrationSignOptions) => {
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { fee, minParticipants, participants, senderAddress, mnemonic } = getValues();
+	const { fee, minParticipants, participants, senderAddress } = getValues();
 	const senderWallet = profile.wallets().findByAddress(senderAddress);
 
 	const publicKeys = (participants as Participant[]).map((item) => item.publicKey);
@@ -68,12 +68,7 @@ const signTransaction = async ({ env, form, profile }: SendRegistrationSignOptio
 
 	// Need to sync before too to make sure we have all transactions from the server.
 	await senderWallet!.transaction().sync();
-
-	await senderWallet!.transaction().addSignature(
-		transactionId,
-		// @TODO: support WIF
-		(await senderWallet?.signatory().mnemonic(mnemonic))!,
-	);
+	await senderWallet!.transaction().addSignature(transactionId, signatory);
 
 	await senderWallet!.transaction().sync();
 

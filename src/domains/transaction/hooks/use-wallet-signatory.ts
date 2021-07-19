@@ -2,7 +2,7 @@ import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
 import { useCallback } from "react";
 
-interface SignInput {
+export interface SignInput {
 	encryptionPassword?: string;
 	mnemonic?: string;
 	secondMnemonic?: string;
