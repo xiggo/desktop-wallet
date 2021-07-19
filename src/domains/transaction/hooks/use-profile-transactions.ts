@@ -162,7 +162,13 @@ export const useProfileTransactions = ({
 
 	const filterTransactions = ({ showUnconfirmed, transactions }: FilterTransactionProperties) => {
 		if (!showUnconfirmed) {
-			return transactions.items().filter((transaction) => transaction.isConfirmed());
+			return transactions.items().filter((transaction) => {
+				if (!transaction.isSent()) {
+					return true;
+				}
+
+				return transaction.isConfirmed();
+			});
 		}
 
 		return transactions.items();
