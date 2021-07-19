@@ -306,9 +306,9 @@
 			"app-update.yml"
 		],
 		"protocols": {
-			"name": "ARK URI scheme",
+			"name": "Payvo URI scheme",
 			"schemes": [
-				"ark"
+				"payvo"
 			],
 			"role": "Viewer"
 		},
@@ -339,7 +339,7 @@
 				"tar.gz"
 			],
 			"desktop": {
-				"MimeType": "x-scheme-handler/ark;"
+				"MimeType": "x-scheme-handler/payvo;"
 			}
 		},
 		"deb": {
