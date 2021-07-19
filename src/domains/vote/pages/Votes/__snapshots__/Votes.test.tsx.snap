@@ -52,13 +52,11 @@ exports[`Votes should filter current delegates 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -66,13 +64,11 @@ exports[`Votes should filter current delegates 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -80,13 +76,11 @@ exports[`Votes should filter current delegates 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -94,13 +88,11 @@ exports[`Votes should filter current delegates 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -309,11 +301,8 @@ exports[`Votes should filter current delegates 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -349,7 +338,7 @@ exports[`Votes should filter current delegates 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
                           <div
                             class="flex absolute right-0 justify-center items-center -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background mr-1"
@@ -358,9 +347,6 @@ exports[`Votes should filter current delegates 1`] = `
                               class="w-2 h-2 rounded-full bg-theme-primary-500"
                             />
                           </div>
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -553,7 +539,8 @@ exports[`Votes should filter current delegates 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -819,13 +806,11 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -833,13 +818,11 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -847,13 +830,11 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -861,13 +842,11 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -1076,11 +1055,8 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -1116,11 +1092,8 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -1268,7 +1241,8 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -1344,7 +1318,8 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -1420,7 +1395,8 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -1690,13 +1666,11 @@ exports[`Votes should render 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -1704,13 +1678,11 @@ exports[`Votes should render 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -1718,13 +1690,11 @@ exports[`Votes should render 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -1732,13 +1702,11 @@ exports[`Votes should render 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -1947,11 +1915,8 @@ exports[`Votes should render 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -1987,11 +1952,8 @@ exports[`Votes should render 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -2139,7 +2101,8 @@ exports[`Votes should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -2215,7 +2178,8 @@ exports[`Votes should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -2291,7 +2255,8 @@ exports[`Votes should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -2557,13 +2522,11 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -2571,13 +2534,11 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -2585,13 +2546,11 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -2599,13 +2558,11 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -2814,11 +2771,8 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -2854,11 +2808,8 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -3006,7 +2957,8 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -3082,7 +3034,8 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -3158,7 +3111,8 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -3424,13 +3378,11 @@ exports[`Votes should render with no wallets 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/cba050f1-880f-45f0-9af9-cfe48f406052/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -3438,13 +3390,11 @@ exports[`Votes should render with no wallets 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/cba050f1-880f-45f0-9af9-cfe48f406052/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -3452,13 +3402,11 @@ exports[`Votes should render with no wallets 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/cba050f1-880f-45f0-9af9-cfe48f406052/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -3466,13 +3414,11 @@ exports[`Votes should render with no wallets 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/cba050f1-880f-45f0-9af9-cfe48f406052/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -3804,13 +3750,11 @@ exports[`Votes should select a delegate 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -3818,13 +3762,11 @@ exports[`Votes should select a delegate 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -3832,13 +3774,11 @@ exports[`Votes should select a delegate 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -3846,13 +3786,11 @@ exports[`Votes should select a delegate 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -4061,11 +3999,8 @@ exports[`Votes should select a delegate 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -4101,11 +4036,8 @@ exports[`Votes should select a delegate 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -4253,7 +4185,8 @@ exports[`Votes should select a delegate 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -4329,7 +4262,8 @@ exports[`Votes should select a delegate 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -4405,7 +4339,8 @@ exports[`Votes should select a delegate 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -4672,13 +4607,11 @@ exports[`Votes should select an address without vote 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -4686,13 +4619,11 @@ exports[`Votes should select an address without vote 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -4700,13 +4631,11 @@ exports[`Votes should select an address without vote 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -4714,13 +4643,11 @@ exports[`Votes should select an address without vote 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -4929,11 +4856,8 @@ exports[`Votes should select an address without vote 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -4969,11 +4893,8 @@ exports[`Votes should select an address without vote 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -5121,7 +5042,8 @@ exports[`Votes should select an address without vote 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -5197,7 +5119,8 @@ exports[`Votes should select an address without vote 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -5273,7 +5196,8 @@ exports[`Votes should select an address without vote 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -5539,13 +5463,11 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -5553,13 +5475,11 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -5567,13 +5487,11 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -5581,13 +5499,11 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -5796,11 +5712,8 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -5836,7 +5749,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
                           <div
                             class="flex absolute right-0 justify-center items-center -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background mr-1"
@@ -5845,9 +5758,6 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                               class="w-2 h-2 rounded-full bg-theme-primary-500"
                             />
                           </div>
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -6081,13 +5991,11 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -6095,13 +6003,11 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -6109,13 +6015,11 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -6123,13 +6027,11 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -6338,11 +6240,8 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -6378,7 +6277,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
                           <div
                             class="flex absolute right-0 justify-center items-center -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background mr-1"
@@ -6387,9 +6286,6 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                               class="w-2 h-2 rounded-full bg-theme-primary-500"
                             />
                           </div>
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -6623,13 +6519,11 @@ exports[`Votes should show network warning 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -6637,13 +6531,11 @@ exports[`Votes should show network warning 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -6651,13 +6543,11 @@ exports[`Votes should show network warning 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -6665,13 +6555,11 @@ exports[`Votes should show network warning 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -6880,11 +6768,8 @@ exports[`Votes should show network warning 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -6920,11 +6805,8 @@ exports[`Votes should show network warning 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -7072,7 +6954,8 @@ exports[`Votes should show network warning 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -7148,7 +7031,8 @@ exports[`Votes should show network warning 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -7224,7 +7108,8 @@ exports[`Votes should show network warning 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -7489,13 +7374,11 @@ exports[`Votes should show resigned delegate notice 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -7503,13 +7386,11 @@ exports[`Votes should show resigned delegate notice 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -7517,13 +7398,11 @@ exports[`Votes should show resigned delegate notice 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -7531,13 +7410,11 @@ exports[`Votes should show resigned delegate notice 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -7746,11 +7623,8 @@ exports[`Votes should show resigned delegate notice 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -7786,11 +7660,8 @@ exports[`Votes should show resigned delegate notice 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >
@@ -7972,7 +7843,8 @@ exports[`Votes should show resigned delegate notice 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -8048,7 +7920,8 @@ exports[`Votes should show resigned delegate notice 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -8124,7 +7997,8 @@ exports[`Votes should show resigned delegate notice 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
                       >
                         <a
-                          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="DelegateRow__address"
                           href="#"
                           rel="noopener noreferrer"
@@ -8392,13 +8266,11 @@ exports[`Votes should toggle network selection from network filters 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -8406,13 +8278,11 @@ exports[`Votes should toggle network selection from network filters 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -8420,13 +8290,11 @@ exports[`Votes should toggle network selection from network filters 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -8434,13 +8302,11 @@ exports[`Votes should toggle network selection from network filters 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -8649,11 +8515,8 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="flex items-center space-x-3 h-5"
                       >
@@ -8689,11 +8552,8 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                         class="group"
                       >
                         <button
-                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                          class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
-                          <div
-                            class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="flex justify-center items-center w-5 h-5"
                           >

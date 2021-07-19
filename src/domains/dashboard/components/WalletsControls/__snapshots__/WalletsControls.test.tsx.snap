@@ -19,12 +19,9 @@ exports[`WalletsControls should render 1`] = `
             class="group"
           >
             <button
-              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
               data-testid="LayoutControls__list--icon"
             >
-              <div
-                class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW"
                 height="20"
@@ -44,12 +41,9 @@ exports[`WalletsControls should render 1`] = `
             class="group"
           >
             <button
-              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
               data-testid="LayoutControls__grid--icon"
             >
-              <div
-                class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW"
                 height="20"
@@ -78,11 +72,8 @@ exports[`WalletsControls should render 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
               >
-                <div
-                  class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="flex justify-center items-center w-5 h-5"
                 >
@@ -207,12 +198,9 @@ exports[`WalletsControls should render with networks selection 1`] = `
             class="group"
           >
             <button
-              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
               data-testid="LayoutControls__list--icon"
             >
-              <div
-                class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW"
                 height="20"
@@ -232,12 +220,9 @@ exports[`WalletsControls should render with networks selection 1`] = `
             class="group"
           >
             <button
-              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
               data-testid="LayoutControls__grid--icon"
             >
-              <div
-                class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW"
                 height="20"
@@ -266,11 +251,8 @@ exports[`WalletsControls should render with networks selection 1`] = `
               class="group"
             >
               <button
-                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
               >
-                <div
-                  class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="flex justify-center items-center w-5 h-5"
                 >

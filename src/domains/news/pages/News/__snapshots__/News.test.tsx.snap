@@ -49,13 +49,11 @@ exports[`News should filter results based on category query and asset 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -63,13 +61,11 @@ exports[`News should filter results based on category query and asset 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -77,13 +73,11 @@ exports[`News should filter results based on category query and asset 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -92,13 +86,11 @@ exports[`News should filter results based on category query and asset 1`] = `
             >
               <a
                 aria-current="page"
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group active"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -410,7 +402,8 @@ exports[`News should filter results based on category query and asset 1`] = `
                           Major League Hacking is having another virtual workshop showcasing ARK technology on August 19th 2020. Anyone can join at 5PM EDT to Build a Blockchain Taco Shop with ARK!
 
                           <a
-                            class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                            class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                            data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="#"
                             rel="noopener noreferrer"
@@ -468,7 +461,8 @@ exports[`News should filter results based on category query and asset 1`] = `
                       class="flex flex-col items-start space-y-5 text-white"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -496,7 +490,8 @@ exports[`News should filter results based on category query and asset 1`] = `
                       class="flex mt-12 space-x-2"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -513,7 +508,8 @@ exports[`News should filter results based on category query and asset 1`] = `
                         </span>
                       </a>
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -803,13 +799,11 @@ exports[`News should filter results based on category query and asset 2`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -817,13 +811,11 @@ exports[`News should filter results based on category query and asset 2`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -831,13 +823,11 @@ exports[`News should filter results based on category query and asset 2`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -846,13 +836,11 @@ exports[`News should filter results based on category query and asset 2`] = `
             >
               <a
                 aria-current="page"
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group active"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -1177,7 +1165,8 @@ exports[`News should filter results based on category query and asset 2`] = `
                         >
                           Recently we released our all-in-one toolkit the ARK Platform SDK, along with an overview and what blockchain projects it will initially support. Today we are going into more details on a technical level. 
                           <a
-                            class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                            class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                            data-ring-focus-margin="-m-1"
                             data-testid="Link"
                             href="#"
                             rel="noopener noreferrer"
@@ -1235,7 +1224,8 @@ exports[`News should filter results based on category query and asset 2`] = `
                       class="flex flex-col items-start space-y-5 text-white"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -1263,7 +1253,8 @@ exports[`News should filter results based on category query and asset 2`] = `
                       class="flex mt-12 space-x-2"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -1280,7 +1271,8 @@ exports[`News should filter results based on category query and asset 2`] = `
                         </span>
                       </a>
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"

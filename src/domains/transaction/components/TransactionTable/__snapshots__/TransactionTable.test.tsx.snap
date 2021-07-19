@@ -3573,7 +3573,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -3725,7 +3726,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -3877,7 +3879,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -4025,7 +4028,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -4177,7 +4181,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -4329,7 +4334,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -4481,7 +4487,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -4633,7 +4640,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -4785,7 +4793,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -4937,7 +4946,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -5089,7 +5099,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -5241,7 +5252,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -5389,7 +5401,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -5541,7 +5554,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -5696,7 +5710,8 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -7204,7 +7219,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -7356,7 +7372,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -7508,7 +7525,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -7656,7 +7674,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -7846,7 +7865,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -7998,7 +8018,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -8150,7 +8171,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -8302,7 +8324,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -8454,7 +8477,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -8606,7 +8630,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -8758,7 +8783,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -8910,7 +8936,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -9058,7 +9085,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -9210,7 +9238,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"
@@ -9365,7 +9394,8 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="TransactionRow__ID"
                   href="#"
                   rel="noopener noreferrer"

@@ -3,7 +3,12 @@ import React from "react";
 import tw, { css, styled } from "twin.macro";
 
 const ControlButtonStyled = styled.button<{ noBorder?: boolean; disabled?: boolean }>`
-	${tw`flex items-center justify-center font-semibold transition-colors duration-200 relative cursor-pointer py-2 text-theme-primary-300 dark:text-theme-secondary-600 border-t-2 border-b-2 border-transparent focus:outline-none`}
+	${tw`relative flex items-center justify-center py-2`}
+	${tw`font-semibold text-theme-primary-300 dark:text-theme-secondary-600`}
+    ${tw`border-t-2 border-b-2 border-transparent`}
+    ${tw`transition-colors duration-200`}
+    ${tw`cursor-pointer`}
+    ${tw`focus:outline-none`}
 	${tw`disabled:(cursor-not-allowed text-theme-secondary-400 dark:text-theme-secondary-700)`}
 
 	${({ noBorder }) => {
@@ -30,6 +35,9 @@ const ControlButtonStyled = styled.button<{ noBorder?: boolean; disabled?: boole
 					color: var(--theme-color-primary-400);
 				}
 				&.active {
+					&[data-focus-visible-added] {
+						${tw`rounded`}
+					}
 					border-bottom-color: var(--theme-color-primary-600);
 					color: var(--theme-color-primary-600);
 				}
@@ -49,7 +57,7 @@ interface ControlButtonProperties {
 
 export const ControlButton = ({ isChanged, children, className, ...properties }: ControlButtonProperties) => (
 	<div className="group">
-		<ControlButtonStyled className={cn("group", className)} {...properties}>
+		<ControlButtonStyled className={cn("ring-focus", className)} {...properties}>
 			{isChanged && (
 				<div
 					className={cn(
@@ -60,7 +68,6 @@ export const ControlButton = ({ isChanged, children, className, ...properties }:
 					<div className="w-2 h-2 rounded-full bg-theme-primary-500" />
 				</div>
 			)}
-			<div className="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400" />
 			{children}
 		</ControlButtonStyled>
 	</div>

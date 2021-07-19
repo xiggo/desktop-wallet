@@ -38,7 +38,8 @@ exports[`DelegateRow should emit action on select button 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
           >
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
@@ -123,7 +124,8 @@ exports[`DelegateRow should render 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
           >
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
@@ -208,7 +210,8 @@ exports[`DelegateRow should render the selected delegate 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
           >
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
@@ -293,7 +296,8 @@ exports[`DelegateRow should render the selected vote 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
@@ -369,7 +373,8 @@ exports[`DelegateRow should render the selected vote 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
           >
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"
@@ -445,7 +450,8 @@ exports[`DelegateRow should render the selected vote 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
           >
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="DelegateRow__address"
               href="#"
               rel="noopener noreferrer"

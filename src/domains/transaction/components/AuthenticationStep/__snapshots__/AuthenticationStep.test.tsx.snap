@@ -66,13 +66,11 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
               class=""
             >
               <button
-                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                data-ring-focus-margin="-m-1"
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="sc-bdnxRM AFVmm"
                   height="16"
@@ -158,13 +156,11 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
               class=""
             >
               <button
-                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                data-ring-focus-margin="-m-1"
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="sc-bdnxRM AFVmm"
                   height="16"
@@ -217,13 +213,11 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
               class=""
             >
               <button
-                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                data-ring-focus-margin="-m-1"
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="sc-bdnxRM AFVmm"
                   height="16"
@@ -309,13 +303,11 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
               class=""
             >
               <button
-                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                data-ring-focus-margin="-m-1"
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="sc-bdnxRM AFVmm"
                   height="16"
@@ -401,13 +393,11 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
               class=""
             >
               <button
-                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                data-ring-focus-margin="-m-1"
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="sc-bdnxRM AFVmm"
                   height="16"
@@ -493,13 +483,11 @@ exports[`AuthenticationStep should request private key if wallet was imported us
               class=""
             >
               <button
-                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                data-ring-focus-margin="-m-1"
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="sc-bdnxRM AFVmm"
                   height="16"
@@ -585,13 +573,11 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
               class=""
             >
               <button
-                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                data-ring-focus-margin="-m-1"
                 data-testid="InputPassword__toggle"
                 type="button"
               >
-                <div
-                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 <div
                   class="sc-bdnxRM AFVmm"
                   height="16"

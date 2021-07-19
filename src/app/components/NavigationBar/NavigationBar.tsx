@@ -146,9 +146,9 @@ const NavigationBar = ({
 				<NavLink
 					to={menuItem.mountPath(profile.id())}
 					title={menuItem.title}
-					className="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+					className="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+					data-ring-focus-margin="-mx-2"
 				>
-					<div className="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400" />
 					{menuItem.title}
 				</NavLink>
 			</li>

@@ -71,13 +71,11 @@ exports[`WalletHeader should render 1`] = `
             class="flex items-end mb-1 space-x-3 text-theme-secondary-text"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -89,13 +87,11 @@ exports[`WalletHeader should render 1`] = `
               </div>
             </button>
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -284,13 +280,11 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
             class="flex items-end mb-1 space-x-3 text-theme-secondary-text"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -302,13 +296,11 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
               </div>
             </button>
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -503,13 +495,11 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
             class="flex items-end mb-1 space-x-3 text-theme-secondary-text"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -521,13 +511,11 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
               </div>
             </button>
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -734,13 +722,11 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
             class="flex items-end mb-1 space-x-3 text-theme-secondary-text"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -752,13 +738,11 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
               </div>
             </button>
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -994,13 +978,11 @@ exports[`WalletHeader should show modifiers 1`] = `
             class="flex items-end mb-1 space-x-3 text-theme-secondary-text"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -1012,13 +994,11 @@ exports[`WalletHeader should show modifiers 1`] = `
               </div>
             </button>
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -1207,13 +1187,11 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
             class="flex items-end mb-1 space-x-3 text-theme-secondary-text"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"
@@ -1225,13 +1203,11 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
               </div>
             </button>
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="sc-bdnxRM NjstW hover:text-theme-secondary-500"
                 height="20"

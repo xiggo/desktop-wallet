@@ -237,7 +237,8 @@ exports[`DelegateResignationDetail should render a modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -272,13 +273,11 @@ exports[`DelegateResignationDetail should render a modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -539,7 +538,8 @@ exports[`DelegateResignationDetail should render as confirmed 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -574,13 +574,11 @@ exports[`DelegateResignationDetail should render as confirmed 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"

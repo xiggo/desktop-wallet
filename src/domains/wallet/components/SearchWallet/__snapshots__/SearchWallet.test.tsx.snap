@@ -147,11 +147,8 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cPVrtX group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 gPoGMb ring-focus"
                                 >
-                                  <div
-                                    class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                  />
                                   <div
                                     class="flex items-center space-x-3 h-5"
                                   >
@@ -526,11 +523,8 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cPVrtX group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 gPoGMb ring-focus"
                                 >
-                                  <div
-                                    class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                  />
                                   <div
                                     class="flex items-center space-x-3 h-5"
                                   >
@@ -935,11 +929,8 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cPVrtX group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 gPoGMb ring-focus"
                                 >
-                                  <div
-                                    class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                  />
                                   <div
                                     class="flex items-center space-x-3 h-5"
                                   >
@@ -1366,11 +1357,8 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                 class="group"
                               >
                                 <button
-                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cPVrtX group"
+                                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 gPoGMb ring-focus"
                                 >
-                                  <div
-                                    class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                  />
                                   <div
                                     class="flex items-center space-x-3 h-5"
                                   >

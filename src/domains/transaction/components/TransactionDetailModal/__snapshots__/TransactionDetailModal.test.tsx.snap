@@ -237,7 +237,8 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -272,13 +273,11 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -538,7 +537,8 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -573,13 +573,11 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -852,7 +850,8 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -887,13 +886,11 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -1134,7 +1131,8 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -1169,13 +1167,11 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -1642,7 +1638,8 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -1677,13 +1674,11 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -1991,7 +1986,8 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -2026,13 +2022,11 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -2273,7 +2267,8 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -2308,13 +2303,11 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -2650,7 +2643,8 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -2685,13 +2679,11 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -3062,7 +3054,8 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -3097,13 +3090,11 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"
@@ -3474,7 +3465,8 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                       class="overflow-hidden"
                     >
                       <a
-                        class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
@@ -3509,13 +3501,11 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                       class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                     >
                       <button
-                        class="relative focus:outline-none group"
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
                         data-testid="clipboard-icon__wrapper"
                         type="button"
                       >
-                        <div
-                          class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="sc-bdnxRM AFVmm"
                           height="16"

@@ -188,13 +188,11 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -260,13 +258,11 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                         class="pl-3"
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -941,13 +937,11 @@ exports[`CreateProfile should not be able to create new profile if name already 
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -1004,13 +998,11 @@ exports[`CreateProfile should not be able to create new profile if name already 
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -1685,13 +1677,11 @@ exports[`CreateProfile should not be able to create new profile if name consists
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -1748,13 +1738,11 @@ exports[`CreateProfile should not be able to create new profile if name consists
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -2429,13 +2417,11 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -2492,13 +2478,11 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -3194,13 +3178,11 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -3257,13 +3239,11 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -3673,13 +3653,11 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -3736,13 +3714,11 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -4397,13 +4373,11 @@ exports[`CreateProfile should render 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -4460,13 +4434,11 @@ exports[`CreateProfile should render 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -4897,13 +4869,11 @@ exports[`CreateProfile should store profile 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -4960,13 +4930,11 @@ exports[`CreateProfile should store profile 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -5615,13 +5583,11 @@ exports[`CreateProfile should store profile with password 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -5672,13 +5638,11 @@ exports[`CreateProfile should store profile with password 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -6340,13 +6304,11 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -6403,13 +6365,11 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -6838,13 +6798,11 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -6901,13 +6859,11 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -7317,13 +7273,11 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"
@@ -7380,13 +7334,11 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                         class=""
                       >
                         <button
-                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                          class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
                           data-testid="InputPassword__toggle"
                           type="button"
                         >
-                          <div
-                            class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                          />
                           <div
                             class="sc-bdnxRM AFVmm"
                             height="16"

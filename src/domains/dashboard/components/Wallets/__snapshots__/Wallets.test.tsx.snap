@@ -34,12 +34,9 @@ exports[`Wallets should load more wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
                       data-testid="LayoutControls__list--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -59,12 +56,9 @@ exports[`Wallets should load more wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       data-testid="LayoutControls__grid--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -93,11 +87,8 @@ exports[`Wallets should load more wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       >
-                        <div
-                          class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="flex justify-center items-center w-5 h-5"
                         >
@@ -687,12 +678,9 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
                       data-testid="LayoutControls__list--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -712,12 +700,9 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       data-testid="LayoutControls__grid--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -746,11 +731,8 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       >
-                        <div
-                          class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="flex justify-center items-center w-5 h-5"
                         >
@@ -1429,12 +1411,9 @@ exports[`Wallets should render empty profile wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
                       data-testid="LayoutControls__list--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -1454,12 +1433,9 @@ exports[`Wallets should render empty profile wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       data-testid="LayoutControls__grid--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -1488,12 +1464,9 @@ exports[`Wallets should render empty profile wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 HXhIO group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bfZYDG ring-focus"
                         disabled=""
                       >
-                        <div
-                          class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="flex justify-center items-center w-5 h-5"
                         >
@@ -1649,12 +1622,9 @@ exports[`Wallets should render grid 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       data-testid="LayoutControls__list--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -1674,12 +1644,9 @@ exports[`Wallets should render grid 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
                       data-testid="LayoutControls__grid--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -1708,11 +1675,8 @@ exports[`Wallets should render grid 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       >
-                        <div
-                          class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="flex justify-center items-center w-5 h-5"
                         >
@@ -2148,12 +2112,9 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       data-testid="LayoutControls__list--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -2173,12 +2134,9 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
                       data-testid="LayoutControls__grid--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -2207,11 +2165,8 @@ exports[`Wallets should render grid in loading state 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       >
-                        <div
-                          class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="flex justify-center items-center w-5 h-5"
                         >
@@ -2647,12 +2602,9 @@ exports[`Wallets should render list 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
                       data-testid="LayoutControls__list--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -2672,12 +2624,9 @@ exports[`Wallets should render list 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       data-testid="LayoutControls__grid--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -2706,11 +2655,8 @@ exports[`Wallets should render list 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       >
-                        <div
-                          class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="flex justify-center items-center w-5 h-5"
                         >
@@ -3300,12 +3246,9 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       data-testid="LayoutControls__list--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -3325,12 +3268,9 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
                       data-testid="LayoutControls__grid--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -3359,11 +3299,8 @@ exports[`Wallets should render without testnet wallets 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       >
-                        <div
-                          class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="flex justify-center items-center w-5 h-5"
                         >
@@ -3718,12 +3655,9 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       data-testid="LayoutControls__list--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -3743,12 +3677,9 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="group"
                   >
                     <button
-                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group active"
+                      class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
                       data-testid="LayoutControls__grid--icon"
                     >
-                      <div
-                        class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                      />
                       <div
                         class="sc-bdnxRM NjstW"
                         height="20"
@@ -3777,11 +3708,8 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                       class="group"
                     >
                       <button
-                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 bVyHTp group"
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                       >
-                        <div
-                          class="absolute inset-0 -mx-0.5 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                        />
                         <div
                           class="flex justify-center items-center w-5 h-5"
                         >

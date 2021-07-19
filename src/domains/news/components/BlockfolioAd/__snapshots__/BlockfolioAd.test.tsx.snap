@@ -26,7 +26,8 @@ exports[`BlockfolioAd should render 1`] = `
         class="flex flex-col items-start space-y-5 text-white"
       >
         <a
-          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+          data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="#"
           rel="noopener noreferrer"
@@ -54,7 +55,8 @@ exports[`BlockfolioAd should render 1`] = `
         class="flex mt-12 space-x-2"
       >
         <a
-          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+          data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="#"
           rel="noopener noreferrer"
@@ -71,7 +73,8 @@ exports[`BlockfolioAd should render 1`] = `
           </span>
         </a>
         <a
-          class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+          data-ring-focus-margin="-m-1"
           data-testid="Link"
           href="#"
           rel="noopener noreferrer"

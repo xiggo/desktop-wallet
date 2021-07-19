@@ -299,13 +299,11 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -756,13 +754,11 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -1198,13 +1194,11 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -1587,13 +1581,11 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -2160,13 +2152,11 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -2519,13 +2509,11 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -2961,13 +2949,11 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -3385,13 +3371,11 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -3809,13 +3793,11 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -4251,13 +4233,11 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"
@@ -4719,13 +4699,11 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                               class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                             >
                               <button
-                                class="relative focus:outline-none group"
+                                class="relative focus:outline-none ring-focus"
+                                data-ring-focus-margin="-m-1"
                                 data-testid="clipboard-icon__wrapper"
                                 type="button"
                               >
-                                <div
-                                  class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                />
                                 <div
                                   class="sc-bdnxRM AFVmm"
                                   height="16"

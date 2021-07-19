@@ -139,7 +139,8 @@ exports[`PluginHeader should render properly 1`] = `
                   class="font-semibold text-theme-secondary-text"
                 >
                   <a
-                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                    data-ring-focus-margin="-m-1"
                     data-testid="PluginSpecs__url"
                     href="#"
                     rel="noopener noreferrer"
@@ -410,7 +411,8 @@ exports[`PluginHeader should render updating plugin 1`] = `
                   class="font-semibold text-theme-secondary-text"
                 >
                   <a
-                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                    data-ring-focus-margin="-m-1"
                     data-testid="PluginSpecs__url"
                     href="#"
                     rel="noopener noreferrer"

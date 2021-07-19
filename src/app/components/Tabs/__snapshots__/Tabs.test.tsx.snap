@@ -4,34 +4,30 @@ exports[`Tabs should react to use effect call 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA"
+      class="Tabs__TabList-sc-1t8sbwb-1 hxalnc"
     >
       <button
         aria-selected="true"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
         tabindex="0"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           First
         </span>
       </button>
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           Second
         </span>
@@ -50,49 +46,43 @@ exports[`Tabs should render 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 etgQSA"
+      class="Tabs__TabList-sc-1t8sbwb-1 hxalnc"
     >
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           First
         </span>
       </button>
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           Second
         </span>
       </button>
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           Third
         </span>
@@ -109,19 +99,17 @@ exports[`Tabs should render wit counts 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 bDWntm"
+      class="Tabs__TabList-sc-1t8sbwb-1 bVYhpi"
     >
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           First
         </span>
@@ -134,15 +122,13 @@ exports[`Tabs should render wit counts 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           Second
         </span>
@@ -155,15 +141,13 @@ exports[`Tabs should render wit counts 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           Third
         </span>
@@ -186,49 +170,43 @@ exports[`Tabs should render without background 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Tabs__TabList-sc-1t8sbwb-1 bDWntm"
+      class="Tabs__TabList-sc-1t8sbwb-1 bVYhpi"
     >
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           First
         </span>
       </button>
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           Second
         </span>
       </button>
       <button
         aria-selected="false"
-        class="Tabs__TabButton-sc-1t8sbwb-0 group"
+        class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+        data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"
         tabindex="-1"
         type="button"
       >
-        <div
-          class="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-        />
         <span>
           Third
         </span>

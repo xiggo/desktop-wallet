@@ -120,7 +120,8 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -196,7 +197,8 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -272,7 +274,8 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -605,7 +608,8 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -681,7 +685,8 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -757,7 +762,8 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -1090,7 +1096,8 @@ exports[`DelegateTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -1166,7 +1173,8 @@ exports[`DelegateTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -1242,7 +1250,8 @@ exports[`DelegateTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -2338,7 +2347,8 @@ exports[`DelegateTable should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -2724,7 +2734,8 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -2800,7 +2811,8 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -2876,7 +2888,8 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -3209,7 +3222,8 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -3285,7 +3299,8 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -3361,7 +3376,8 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -3697,7 +3713,8 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -3773,7 +3790,8 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -3849,7 +3867,8 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -4207,7 +4226,8 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -4283,7 +4303,8 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -4359,7 +4380,8 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -4693,7 +4715,8 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -4769,7 +4792,8 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -4845,7 +4869,8 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -5181,7 +5206,8 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -5257,7 +5283,8 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -5333,7 +5360,8 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -5667,7 +5695,8 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -5743,7 +5772,8 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -5819,7 +5849,8 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -6152,7 +6183,8 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -6228,7 +6260,8 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -6304,7 +6337,8 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -6638,7 +6672,8 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -6714,7 +6749,8 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"
@@ -6790,7 +6826,8 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t border-b border-transparent"
               >
                 <a
-                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
                   data-testid="DelegateRow__address"
                   href="#"
                   rel="noopener noreferrer"

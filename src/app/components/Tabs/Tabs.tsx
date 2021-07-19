@@ -48,10 +48,11 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			data-testid={`tabs__tab-button-${properties.tabId}`}
 			role="tab"
 			type="button"
-			className="group"
+			className="ring-focus"
 			ref={reference}
 			aria-selected={isActive}
 			tabIndex={isActive ? 0 : -1}
+			data-ring-focus-margin="-mx-3"
 			onKeyDown={(event: any) => {
 				switch (event.key) {
 					case "ArrowLeft": {
@@ -95,8 +96,6 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 			}}
 			onClick={() => context?.setCurrentId(properties.tabId)}
 		>
-			<div className="absolute inset-0 -mx-3 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400" />
-
 			<span>{properties.children}</span>
 
 			{properties.count !== undefined && (
@@ -130,10 +129,8 @@ export const TabList = styled.div<{ noBackground?: boolean }>`
 			${tw`text-theme-text`}
 		}
 
-		& + ${TabButton}:after {
-			content: "";
-			width: 1px;
-			${tw`h-4 bg-theme-secondary-300 dark:bg-theme-secondary-800 absolute -left-6 top-1/2 transform -translate-y-1/2 block`};
+		& + ${TabButton}:before {
+			${tw`content h-4 w-px bg-theme-secondary-300 dark:bg-theme-secondary-800 absolute -left-6 top-1/2 transform -translate-y-1/2 block`};
 		}
 	}
 `;

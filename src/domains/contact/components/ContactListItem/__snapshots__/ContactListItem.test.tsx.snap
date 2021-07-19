@@ -101,13 +101,11 @@ exports[`ContactListItem should render 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -291,13 +289,11 @@ exports[`ContactListItem should render as delegate 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -495,13 +491,11 @@ exports[`ContactListItem should render using variant 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -678,13 +672,11 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -833,13 +825,11 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -988,13 +978,11 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -1192,13 +1180,11 @@ exports[`ContactListItem should render with multiple options 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -1347,13 +1333,11 @@ exports[`ContactListItem should render with multiple options 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -1502,13 +1486,11 @@ exports[`ContactListItem should render with multiple options 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -1706,13 +1688,11 @@ exports[`ContactListItem should render with one option 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -1846,13 +1826,11 @@ exports[`ContactListItem should render with one option 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >
@@ -1986,13 +1964,11 @@ exports[`ContactListItem should render with one option 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4 justify-center"
           >
             <button
-              class="relative focus:outline-none group"
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="clipboard-icon__wrapper"
               type="button"
             >
-              <div
-                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-              />
               <div
                 class="text-theme-primary-300 dark:text-theme-secondary-700"
               >

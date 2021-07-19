@@ -4,7 +4,7 @@ import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink, LinkProps } from "react-router-dom";
-import tw, { css, styled } from "twin.macro";
+import tw, { styled } from "twin.macro";
 import { openExternal } from "utils/electron-utils";
 
 import { Icon } from "../Icon";
@@ -15,15 +15,7 @@ const AnchorStyled = styled.a(() => [
 	tw`cursor-pointer no-underline`,
 	tw`hover:text-theme-primary-700`,
 	tw`active:text-theme-primary-400`,
-	tw`focus:(outline-none after:ring-2)`,
-	tw`after:(content absolute inset-0 -m-1 ring-theme-primary-400 rounded)`,
-	css`
-		& :focus:not([data-focus-visible-added]) {
-			&:after {
-				${tw`ring-0`}
-			}
-		}
-	`,
+	tw`focus:outline-none`,
 ]);
 
 const Content = styled.span(() => [
@@ -42,7 +34,7 @@ type AnchorProperties = {
 const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 	({ isExternal, showExternalIcon, href, children, rel, ...properties }: AnchorProperties, reference) => (
 		<AnchorStyled
-			className="group"
+			className="group ring-focus"
 			data-testid="Link"
 			rel={isExternal ? "noopener noreferrer" : rel}
 			ref={reference}
@@ -52,6 +44,7 @@ const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 				return properties.navigate?.();
 			}}
 			href={href || "#"}
+			data-ring-focus-margin="-m-1"
 			{...properties}
 		>
 			<Content>{children}</Content>

@@ -48,13 +48,11 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -62,13 +60,11 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -76,13 +72,11 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -90,13 +84,11 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -661,13 +653,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -675,13 +665,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -689,13 +677,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -703,13 +689,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -1276,13 +1260,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -1290,13 +1272,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -1304,13 +1284,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -1318,13 +1296,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -1816,13 +1792,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -1830,13 +1804,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -1844,13 +1816,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -1858,13 +1828,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -2129,13 +2097,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                             class=""
                           >
                             <button
-                              class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                              class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                              data-ring-focus-margin="-m-1"
                               data-testid="InputPassword__toggle"
                               type="button"
                             >
-                              <div
-                                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                              />
                               <div
                                 class="sc-bdnxRM AFVmm"
                                 height="16"
@@ -2188,13 +2154,11 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                             class=""
                           >
                             <button
-                              class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                              class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                              data-ring-focus-margin="-m-1"
                               data-testid="InputPassword__toggle"
                               type="button"
                             >
-                              <div
-                                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                              />
                               <div
                                 class="sc-bdnxRM AFVmm"
                                 height="16"
@@ -2307,13 +2271,11 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -2321,13 +2283,11 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -2335,13 +2295,11 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -2349,13 +2307,11 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -2726,13 +2682,11 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -2740,13 +2694,11 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -2754,13 +2706,11 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -2768,13 +2718,11 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -3039,13 +2987,11 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                             class=""
                           >
                             <button
-                              class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                              class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                              data-ring-focus-margin="-m-1"
                               data-testid="InputPassword__toggle"
                               type="button"
                             >
-                              <div
-                                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                              />
                               <div
                                 class="sc-bdnxRM AFVmm"
                                 height="16"
@@ -3111,13 +3057,11 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                             class="pl-3"
                           >
                             <button
-                              class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none group"
+                              class="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
+                              data-ring-focus-margin="-m-1"
                               data-testid="InputPassword__toggle"
                               type="button"
                             >
-                              <div
-                                class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                              />
                               <div
                                 class="sc-bdnxRM AFVmm"
                                 height="16"
@@ -3230,13 +3174,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -3244,13 +3186,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -3258,13 +3198,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -3272,13 +3210,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -3534,7 +3470,8 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 class="overflow-hidden"
                               >
                                 <a
-                                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                                  data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="#"
                                   rel="noopener noreferrer"
@@ -3569,13 +3506,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                               >
                                 <button
-                                  class="relative focus:outline-none group"
+                                  class="relative focus:outline-none ring-focus"
+                                  data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
                                 >
-                                  <div
-                                    class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                  />
                                   <div
                                     class="sc-bdnxRM AFVmm"
                                     height="16"
@@ -3822,13 +3757,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Portfolio
               </a>
             </li>
@@ -3836,13 +3769,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
                 title="Plugins"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Plugins
               </a>
             </li>
@@ -3850,13 +3781,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 Exchange
               </a>
             </li>
@@ -3864,13 +3793,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
               class="flex"
             >
               <a
-                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text group"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
                 href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
                 title="News"
               >
-                <div
-                  class="absolute inset-0 -mx-2 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                />
                 News
               </a>
             </li>
@@ -4126,7 +4053,8 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 class="overflow-hidden"
                               >
                                 <a
-                                  class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                                  data-ring-focus-margin="-m-1"
                                   data-testid="Link"
                                   href="#"
                                   rel="noopener noreferrer"
@@ -4161,13 +4089,11 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 class="flex text-theme-primary-300 dark:text-theme-secondary-600"
                               >
                                 <button
-                                  class="relative focus:outline-none group"
+                                  class="relative focus:outline-none ring-focus"
+                                  data-ring-focus-margin="-m-1"
                                   data-testid="clipboard-icon__wrapper"
                                   type="button"
                                 >
-                                  <div
-                                    class="absolute inset-0 -m-1 rounded group-focus-visible group-focus:ring-2 ring-theme-primary-400"
-                                  />
                                   <div
                                     class="sc-bdnxRM AFVmm"
                                     height="16"

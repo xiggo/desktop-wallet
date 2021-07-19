@@ -274,7 +274,8 @@ exports[`App should close splash screen if not e2e 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                    data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
@@ -570,7 +571,8 @@ exports[`App should not migrate profiles 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                    data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
@@ -951,7 +953,8 @@ exports[`App should render mock 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                    data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
@@ -1247,7 +1250,8 @@ exports[`App should render splash screen 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                    data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"
@@ -1621,7 +1625,8 @@ exports[`App should render welcome screen after splash screen 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+                    class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                    data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="/profiles/import"
                     title="Import Profile"

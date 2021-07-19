@@ -98,7 +98,8 @@ exports[`NewsCard should render 1`] = `
           >
             Recently we released our all-in-one toolkit the ARK Platform SDK, along with an overview and what blockchain projects it will initially support. Today we are going into more details on a technical level. 
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="#"
               rel="noopener noreferrer"
@@ -233,7 +234,8 @@ exports[`NewsCard should render with cover image 1`] = `
           >
             June is over and it's time for the Monthly Update. This blog post will cover last month’s highlights, activities, development, partner activities, news and updates of our upcoming releases. 
             <a
-              class="Link__AnchorStyled-sc-ec014t-0 htEgTC group"
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="#"
               rel="noopener noreferrer"
