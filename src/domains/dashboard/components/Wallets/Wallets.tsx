@@ -53,7 +53,7 @@ export const Wallets = ({
 			.filter((wallet) => wallet.network().isLive());
 	}, [activeProfile, walletsCount]); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const { listWallets, listHasMore, gridWallets, sliderOptions } = useWalletDisplay({
+	const { listWallets, listHasMore, gridWallets, sliderOptions, hasWalletsMatchingOtherNetworks } = useWalletDisplay({
 		displayType: walletsDisplayType,
 		listPagerLimit,
 		selectedNetworkIds,
@@ -97,13 +97,14 @@ export const Wallets = ({
 			/>
 
 			<WalletsList
-				isVisible={viewType === "list"}
-				isLoading={isLoading && walletsCount === 0}
-				wallets={listWallets}
-				walletsDisplayType={walletsDisplayType}
 				hasMore={listHasMore}
+				hasWalletsMatchingOtherNetworks={hasWalletsMatchingOtherNetworks}
+				isLoading={isLoading && walletsCount === 0}
+				isVisible={viewType === "list"}
 				onRowClick={handleClick}
 				onViewMore={() => setViewMore(true)}
+				wallets={listWallets}
+				walletsDisplayType={walletsDisplayType}
 			/>
 
 			{isWaitingLedger && (

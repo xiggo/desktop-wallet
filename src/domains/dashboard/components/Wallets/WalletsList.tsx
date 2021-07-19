@@ -11,13 +11,14 @@ import { WalletListProperties } from ".";
 
 export const WalletsList = memo(
 	({
-		isVisible = true,
-		wallets,
 		hasMore,
-		walletsDisplayType = "all",
+		hasWalletsMatchingOtherNetworks,
+		isLoading = false,
+		isVisible = true,
 		onRowClick,
 		onViewMore,
-		isLoading = false,
+		wallets,
+		walletsDisplayType = "all",
 	}: WalletListProperties) => {
 		const { t } = useTranslation();
 
@@ -82,12 +83,18 @@ export const WalletsList = memo(
 					<EmptyBlock>
 						{walletsDisplayType !== "all" ? (
 							<Trans
-								i18nKey="DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE"
+								i18nKey={
+									hasWalletsMatchingOtherNetworks
+										? "DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE_FILTERED"
+										: "DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE"
+								}
 								values={{
 									type: walletsDisplayType === "starred" ? t("COMMON.STARRED") : t("COMMON.LEDGER"),
 								}}
 								components={{ bold: <strong /> }}
 							/>
+						) : hasWalletsMatchingOtherNetworks ? (
+							t("DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE_FILTERED")
 						) : (
 							t("DASHBOARD.WALLET_CONTROLS.EMPTY_MESSAGE")
 						)}

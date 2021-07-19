@@ -126,7 +126,7 @@ describe("useWalletDisplay", () => {
 		expect(result.current.listWallets).toHaveLength(0);
 	});
 
-	it("shoudl return 2 grid wallet padded with 1 additional empty grid wallet", async () => {
+	it("should return 2 grid wallet padded with 1 additional empty grid wallet", async () => {
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}> {children} </EnvironmentProvider>;
 		const { result } = renderHook(() => useWalletDisplay({ selectedNetworkIds: ["ark.devnet"], wallets }), {
 			wrapper,
@@ -204,5 +204,64 @@ describe("useWalletDisplay", () => {
 		expect(result.current.gridWallets).toHaveLength(3);
 
 		ledgerMock.mockRestore();
+	});
+
+	it("should return a value that indicates if there are wallets for networks that are not selected", async () => {
+		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
+		const { result: resultAll } = renderHook(
+			() =>
+				useWalletDisplay({
+					displayType: "all",
+					selectedNetworkIds: ["ark.devnet"],
+					wallets,
+				}),
+			{
+				wrapper,
+			},
+		);
+
+		expect(resultAll.current.hasWalletsMatchingOtherNetworks).toBeTruthy();
+
+		const { result: resultStarred } = renderHook(
+			() =>
+				useWalletDisplay({
+					displayType: "starred",
+					selectedNetworkIds: ["ark.devnet"],
+					wallets,
+				}),
+			{
+				wrapper,
+			},
+		);
+
+		expect(resultStarred.current.hasWalletsMatchingOtherNetworks).toBeFalsy();
+
+		const { result: resultLedger } = renderHook(
+			() =>
+				useWalletDisplay({
+					displayType: "starred",
+					selectedNetworkIds: ["ark.devnet"],
+					wallets,
+				}),
+			{
+				wrapper,
+			},
+		);
+
+		expect(resultLedger.current.hasWalletsMatchingOtherNetworks).toBeFalsy();
+
+		const { result: resultWithMainnet } = renderHook(
+			() =>
+				useWalletDisplay({
+					displayType: "all",
+					selectedNetworkIds: ["ark.devnet", "ark.mainnet"],
+					wallets,
+				}),
+			{
+				wrapper,
+			},
+		);
+
+		expect(resultWithMainnet.current.hasWalletsMatchingOtherNetworks).toBeFalsy();
 	});
 });

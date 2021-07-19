@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import { screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -98,5 +99,25 @@ describe("WalletsList", () => {
 
 		expect(getAllByTestId("TableRow").length).toBeGreaterThan(0);
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should show proper message when no wallets match the filters", () => {
+		const { rerender } = render(
+			<WalletsList wallets={[]} walletsDisplayType="all" hasWalletsMatchingOtherNetworks={true} />,
+		);
+
+		expect(screen.getByTestId("EmptyBlock")).toHaveTextContent(translations.WALLET_CONTROLS.EMPTY_MESSAGE_FILTERED);
+
+		rerender(<WalletsList wallets={[]} walletsDisplayType="starred" hasWalletsMatchingOtherNetworks={true} />);
+
+		expect(screen.getByTestId("EmptyBlock")).toHaveTextContent(
+			translations.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE_FILTERED.replace("<bold>{{type}}</bold>", "Starred"),
+		);
+
+		rerender(<WalletsList wallets={[]} walletsDisplayType="ledger" hasWalletsMatchingOtherNetworks={true} />);
+
+		expect(screen.getByTestId("EmptyBlock")).toHaveTextContent(
+			translations.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE_FILTERED.replace("<bold>{{type}}</bold>", "Ledger"),
+		);
 	});
 });

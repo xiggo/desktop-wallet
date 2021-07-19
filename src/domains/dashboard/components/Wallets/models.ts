@@ -14,13 +14,14 @@ export interface WalletGridProperties {
 }
 
 export interface WalletListProperties {
+	hasWalletsMatchingOtherNetworks: boolean;
+	hasMore?: boolean;
+	isLoading?: boolean;
+	isVisible?: boolean;
+	onRowClick?: (walletId: string) => void;
+	onViewMore?: any;
 	wallets: GridWallet[];
 	walletsDisplayType?: string;
-	isVisible?: boolean;
-	isLoading?: boolean;
-	hasMore?: boolean;
-	onViewMore?: any;
-	onRowClick?: (walletId: string) => void;
 }
 
 export interface UseWalletDisplayProperties {

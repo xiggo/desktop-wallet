@@ -27,7 +27,9 @@ export const translations: { [key: string]: any } = {
 	WALLET_CONTROLS: {
 		CREATE: "Create",
 		EMPTY_MESSAGE: "You don't have any wallets yet.",
+		EMPTY_MESSAGE_FILTERED: "You don't have any wallets matching the selected networks.",
 		EMPTY_MESSAGE_TYPE: "You don't have any <bold>{{type}}</bold> wallets.",
+		EMPTY_MESSAGE_TYPE_FILTERED: "You don't have any <bold>{{type}}</bold> wallets matching the selected networks.",
 		IMPORT: "Import",
 		IMPORT_LEDGER: "Import Ledger",
 	},

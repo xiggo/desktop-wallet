@@ -19,7 +19,7 @@ export const useWalletDisplay = ({
 		spaceBetween: 18,
 	};
 
-	const { listWallets, gridWallets, listHasMore } = useMemo(() => {
+	const { listWallets, gridWallets, listHasMore, hasWalletsMatchingOtherNetworks } = useMemo(() => {
 		const listWallets = wallets
 			.filter((wallet: Contracts.IReadWriteWallet) => {
 				if (!selectedNetworkIds?.includes(wallet.network().id())) {
@@ -66,12 +66,27 @@ export const useWalletDisplay = ({
 			return result;
 		};
 
+		const hasWalletsMatchingOtherNetworks = wallets
+			.filter((wallet) => {
+				if (displayType === "starred") {
+					return wallet.isStarred();
+				}
+
+				if (displayType === "ledger") {
+					return wallet.isLedger();
+				}
+
+				return true;
+			})
+			.some((wallet) => !selectedNetworkIds?.includes(wallet.network().id()));
+
 		return {
 			gridWallets: loadGridWallets(),
+			hasWalletsMatchingOtherNetworks,
 			listHasMore: wallets.length > 0 && listWallets.length > listPagerLimit && !viewMore,
 			listWallets: viewMore ? listWallets : listWallets.slice(0, listPagerLimit),
 		};
 	}, [wallets, selectedNetworkIds, displayType, viewMore, sliderOptions.slidesPerView, listPagerLimit]);
 
-	return { gridWallets, listHasMore, listWallets, sliderOptions };
+	return { gridWallets, hasWalletsMatchingOtherNetworks, listHasMore, listWallets, sliderOptions };
 };
