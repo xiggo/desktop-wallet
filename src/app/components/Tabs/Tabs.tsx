@@ -63,7 +63,8 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProperties>((propertie
 						}
 
 						if (!previousTab) {
-							previousTab = event.target.parentElement.querySelector("[role=tab]:last-child");
+							const tabs = event.target.parentElement.querySelectorAll("[role=tab]");
+							previousTab = tabs[tabs.length - 1];
 						}
 
 						previousTab.focus();
