@@ -1,6 +1,6 @@
 # Payvo Wallet
 
-![Ark Desktop Wallet](./banner.png)
+![Payvo Wallet](./banner.png)
 
 [![Build Status](https://badgen.now.sh/github/status/PayvoHQ/wallet)](https://github.com/PayvoHQ/wallet/actions?query=branch%3Adevelop)
 [![Latest Version](https://badgen.now.sh/github/release/PayvoHQ/wallet)](https://github.com/PayvoHQ/wallet/releases)
