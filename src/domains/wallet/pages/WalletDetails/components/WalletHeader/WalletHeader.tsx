@@ -1,10 +1,9 @@
 import { Contracts } from "@payvo/profiles";
-import { Enums } from "@payvo/sdk";
 import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { Clipboard } from "app/components/Clipboard";
-import { Dropdown, DropdownOption, DropdownOptionGroup } from "app/components/Dropdown";
+import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
@@ -25,6 +24,8 @@ import { useHistory } from "react-router-dom";
 import tw, { styled } from "twin.macro";
 import { openExternal } from "utils/electron-utils";
 
+import { useWalletOptions } from "../../hooks/use-wallet-options";
+
 interface WalletHeaderProperties {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
@@ -37,14 +38,6 @@ interface WalletHeaderProperties {
 const WalletHeaderButton = styled.button`
 	${tw`inline-flex items-center justify-center w-8 h-8 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text hover:text-theme-secondary-500 disabled:(cursor-not-allowed text-theme-secondary-800)`}
 `;
-
-const isMultiSignature = (wallet: Contracts.IReadWriteWallet): boolean => {
-	try {
-		return wallet.isMultiSignature();
-	} catch {
-		return false;
-	}
-};
 
 export const WalletHeader = ({
 	profile,
@@ -66,6 +59,8 @@ export const WalletHeader = ({
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 
+	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
+
 	const handleStar = async () => {
 		wallet.toggleStarred();
 		await persist();
@@ -79,121 +74,6 @@ export const WalletHeader = ({
 		await persist();
 
 		history.push(`/profiles/${profile.id()}/dashboard`);
-	};
-
-	const primaryOptions: DropdownOptionGroup = {
-		key: "primary",
-		options: [
-			{
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME"),
-				value: "wallet-name",
-			},
-			{
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS"),
-				secondaryLabel: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS_QR"),
-				value: "receive-funds",
-			},
-		],
-		title: t("WALLETS.PAGE_WALLET_DETAILS.PRIMARY_OPTIONS"),
-	};
-
-	const registrationOptions: DropdownOptionGroup = {
-		key: "registrations",
-		options: [],
-		title: t("WALLETS.PAGE_WALLET_DETAILS.REGISTRATION_OPTIONS"),
-	};
-
-	if (
-		!wallet.isLedger() &&
-		!isMultiSignature(wallet) &&
-		wallet.hasBeenFullyRestored() &&
-		wallet.hasSyncedWithNetwork()
-	) {
-		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateRegistration) &&
-			!wallet.isDelegate() &&
-			!wallet.isResignedDelegate()
-		) {
-			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE"),
-				value: "delegate-registration",
-			});
-		}
-
-		if (
-			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateResignation) &&
-			wallet.isDelegate() &&
-			!wallet.isResignedDelegate()
-		) {
-			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE"),
-				value: "delegate-resignation",
-			});
-		}
-
-		if (wallet.network().allows(Enums.FeatureFlag.TransactionSecondSignature) && !wallet.isSecondSignature()) {
-			registrationOptions.options.push({
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE"),
-				value: "second-signature",
-			});
-		}
-	}
-
-	if (!isMultiSignature(wallet) && wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature)) {
-		registrationOptions.options.push({
-			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
-			value: "multi-signature",
-		});
-	}
-
-	const additionalOptions: DropdownOptionGroup = {
-		key: "additional",
-		options: [],
-		title: t("WALLETS.PAGE_WALLET_DETAILS.ADDITIONAL_OPTIONS"),
-	};
-
-	if (!isMultiSignature(wallet) && wallet.network().allows(Enums.FeatureFlag.MessageSign)) {
-		additionalOptions.options.push({
-			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE"),
-			value: "sign-message",
-		});
-	}
-
-	if (!isMultiSignature(wallet) && wallet.network().allows(Enums.FeatureFlag.MessageVerify)) {
-		additionalOptions.options.push({
-			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE"),
-			value: "verify-message",
-		});
-	}
-
-	if (
-		wallet.network().allows(Enums.FeatureFlag.TransactionIpfs) &&
-		wallet.hasBeenFullyRestored() &&
-		wallet.hasSyncedWithNetwork()
-	) {
-		additionalOptions.options.push({
-			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH"),
-			value: "store-hash",
-		});
-	}
-
-	const secondaryOptions = {
-		hasDivider: true,
-		key: "secondary",
-		options: [
-			{
-				icon: "OpenExplorer",
-				iconPosition: "start",
-				label: t("COMMON.OPEN_IN_EXPLORER"),
-				value: "open-explorer",
-			},
-			{
-				icon: "Trash",
-				iconPosition: "start",
-				label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.DELETE"),
-				value: "delete-wallet",
-			},
-		],
 	};
 
 	const handleSelect = (option: DropdownOption) => {

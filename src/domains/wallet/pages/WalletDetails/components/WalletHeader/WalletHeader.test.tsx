@@ -393,4 +393,19 @@ describe("WalletHeader", () => {
 
 		historySpy.mockRestore();
 	});
+
+	it("should handle isMultiSignature exception", async () => {
+		await wallet.synchroniser().identity();
+
+		const multisigSpy = jest.spyOn(wallet, "isMultiSignature").mockImplementationOnce(() => {
+			throw new Error("error");
+		});
+
+		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+
+		expect(() => getByTestId("WalletIcon__Multisig")).toThrow();
+
+		multisigSpy.mockRestore();
+	});
 });
