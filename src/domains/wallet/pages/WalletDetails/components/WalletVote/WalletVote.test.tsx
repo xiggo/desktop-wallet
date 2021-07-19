@@ -183,6 +183,8 @@ describe("WalletVote", () => {
 					wallet: new ReadOnlyWallet({
 						address: wallet.address(),
 						explorerLink: "",
+						isDelegate: true,
+						isResignedDelegate: false,
 						publicKey: wallet.publicKey(),
 						username: "arkx",
 					}),
@@ -321,6 +323,145 @@ describe("WalletVote", () => {
 			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
 			expect(getByText("Active 1")).toBeTruthy();
 			expect(getByText("/ Standby 1")).toBeTruthy();
+
+			expect(getByText("information-circle.svg")).toBeTruthy();
+			expect(asFragment()).toMatchSnapshot();
+
+			walletSpy.mockRestore();
+		});
+
+		it("should render a vote for multiple active and resigned delegates", async () => {
+			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						isDelegate: true,
+						publicKey: wallet.publicKey(),
+						rank: 1,
+						username: "arkx",
+					}),
+				},
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						isDelegate: true,
+						isResignedDelegate: true,
+						publicKey: wallet.publicKey(),
+						username: "arky",
+					}),
+				},
+			]);
+
+			const { asFragment, getByText, getByTestId } = render(
+				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
+			);
+
+			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+
+			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
+
+			expect(getByTestId("WalletVote")).toHaveTextContent("Active 1");
+			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
+
+			expect(getByText("information-circle.svg")).toBeTruthy();
+			expect(asFragment()).toMatchSnapshot();
+
+			walletSpy.mockRestore();
+		});
+
+		it("should render a vote for multiple standby and resigned delegates", async () => {
+			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						isDelegate: true,
+						publicKey: wallet.publicKey(),
+						username: "arkx",
+					}),
+				},
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						isDelegate: true,
+						isResignedDelegate: true,
+						publicKey: wallet.publicKey(),
+						username: "arky",
+					}),
+				},
+			]);
+
+			const { asFragment, getByText, getByTestId } = render(
+				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
+			);
+
+			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+
+			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
+
+			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
+			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
+
+			expect(getByText("information-circle.svg")).toBeTruthy();
+			expect(asFragment()).toMatchSnapshot();
+
+			walletSpy.mockRestore();
+		});
+
+		it("should render a vote for multiple active, standby and resigned delegates", async () => {
+			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						isDelegate: true,
+						publicKey: wallet.publicKey(),
+						rank: 1,
+						username: "arkx",
+					}),
+				},
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						isDelegate: true,
+						publicKey: wallet.publicKey(),
+						username: "arky",
+					}),
+				},
+				{
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: wallet.address(),
+						explorerLink: "",
+						isDelegate: true,
+						isResignedDelegate: true,
+						publicKey: wallet.publicKey(),
+						username: "arkz",
+					}),
+				},
+			]);
+
+			const { asFragment, getByText, getByTestId } = render(
+				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
+			);
+
+			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+
+			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
+
+			expect(getByTestId("WalletVote")).toHaveTextContent("Active 1");
+			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
+			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
 			expect(getByText("information-circle.svg")).toBeTruthy();
 			expect(asFragment()).toMatchSnapshot();
