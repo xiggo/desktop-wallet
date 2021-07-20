@@ -1,6 +1,5 @@
 import { Contracts } from "@payvo/profiles";
 import { Header } from "app/components/Header";
-import cn from "classnames";
 import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
 import {
 	TransactionMemo,
@@ -36,11 +35,11 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 
 			<TransactionSender address={wallet.address()} alias={wallet.alias()} />
 
-			<TransactionRecipients currency={wallet.currency()} recipients={recipients} paddingPosition="top" />
+			<TransactionRecipients currency={wallet.currency()} recipients={recipients} />
 
 			{memo && <TransactionMemo memo={memo} />}
 
-			<div className={cn({ "mt-2": memo, "mt-4": !memo })}>
+			<div className={recipients.length > 1 && !memo ? "-mt-2" : "mt-2"}>
 				<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
 			</div>
 		</section>

@@ -80,6 +80,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let secondWallet: Contracts.IReadWriteWallet;
 
 describe("SendTransfer", () => {
 	beforeAll(async () => {
@@ -89,6 +90,7 @@ describe("SendTransfer", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().first();
+		secondWallet = profile.wallets().last();
 
 		nock("https://dwallets.ark.io")
 			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
@@ -278,6 +280,49 @@ describe("SendTransfer", () => {
 		expect(container).toHaveTextContent(wallet.network().name());
 		expect(container).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		expect(container).toHaveTextContent("test memo");
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it.each([
+		["with memo", "memo"],
+		["without memo", undefined],
+	])("should render review step with multiple recipients (%s)", async (_, memo) => {
+		const { result: form } = renderHook(() =>
+			useForm({
+				defaultValues: {
+					fee: "1",
+					memo,
+					network: wallet.network(),
+					recipients: [
+						{
+							address: wallet.address(),
+							amount: BigNumber.make(1),
+						},
+						{
+							address: secondWallet.address(),
+							amount: BigNumber.make(1),
+						},
+					],
+					senderAddress: wallet.address(),
+				},
+			}),
+		);
+
+		const { asFragment, container, getByTestId } = render(
+			<FormProvider {...form.current}>
+				<ReviewStep wallet={wallet} />
+			</FormProvider>,
+		);
+
+		expect(getByTestId("SendTransfer__review-step")).toBeTruthy();
+		expect(container).toHaveTextContent(wallet.network().name());
+		expect(container).toHaveTextContent(wallet.address());
+		expect(container).toHaveTextContent(secondWallet.address());
+
+		if (memo) {
+			expect(container).toHaveTextContent(memo);
+		}
 
 		expect(asFragment()).toMatchSnapshot();
 	});
