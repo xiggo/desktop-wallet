@@ -14,7 +14,10 @@ export const BaseTransactionRowInfo = ({ memo, isMultiSignatureRegistration, isL
 	const { t } = useTranslation();
 
 	return (
-		<div data-testid="TransactionRowInfo" className="inline-flex space-x-1 align-middle">
+		<div
+			data-testid="TransactionRowInfo"
+			className="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+		>
 			{isLedger && (
 				<Tooltip content={t("COMMON.LEDGER")}>
 					<span className="p-1">

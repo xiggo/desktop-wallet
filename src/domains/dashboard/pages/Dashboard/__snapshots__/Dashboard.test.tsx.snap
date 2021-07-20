@@ -1116,7 +1116,7 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
                       >
                         <div
-                          class="inline-flex space-x-1 align-middle"
+                          class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                           data-testid="TransactionRowInfo"
                         />
                       </div>
@@ -1280,7 +1280,7 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
                       >
                         <div
-                          class="inline-flex space-x-1 align-middle"
+                          class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                           data-testid="TransactionRowInfo"
                         />
                       </div>
@@ -1444,7 +1444,7 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
                       >
                         <div
-                          class="inline-flex space-x-1 align-middle"
+                          class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                           data-testid="TransactionRowInfo"
                         />
                       </div>
@@ -1608,7 +1608,7 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
                       >
                         <div
-                          class="inline-flex space-x-1 align-middle"
+                          class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                           data-testid="TransactionRowInfo"
                         />
                       </div>
@@ -5540,7 +5540,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
                       >
                         <div
-                          class="inline-flex space-x-1 align-middle"
+                          class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                           data-testid="TransactionRowInfo"
                         />
                       </div>
@@ -5704,7 +5704,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
                       >
                         <div
-                          class="inline-flex space-x-1 align-middle"
+                          class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                           data-testid="TransactionRowInfo"
                         />
                       </div>
@@ -5868,7 +5868,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
                       >
                         <div
-                          class="inline-flex space-x-1 align-middle"
+                          class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                           data-testid="TransactionRowInfo"
                         />
                       </div>
@@ -6032,7 +6032,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
                       >
                         <div
-                          class="inline-flex space-x-1 align-middle"
+                          class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                           data-testid="TransactionRowInfo"
                         />
                       </div>

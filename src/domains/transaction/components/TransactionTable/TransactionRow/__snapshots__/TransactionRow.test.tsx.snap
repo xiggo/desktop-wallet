@@ -105,7 +105,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
             <div
-              class="inline-flex space-x-1 align-middle"
+              class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
               data-testid="TransactionRowInfo"
             >
               <span
@@ -293,7 +293,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
             <div
-              class="inline-flex space-x-1 align-middle"
+              class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
               data-testid="TransactionRowInfo"
             >
               <span

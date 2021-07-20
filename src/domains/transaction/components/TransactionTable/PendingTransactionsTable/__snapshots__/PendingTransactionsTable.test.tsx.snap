@@ -246,7 +246,7 @@ exports[`Signed Transaction Table should render pending transfers 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -716,7 +716,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span
@@ -1032,7 +1032,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -1337,7 +1337,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span
@@ -1653,7 +1653,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span
@@ -1992,7 +1992,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span
@@ -2331,7 +2331,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span
@@ -2666,7 +2666,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -2967,7 +2967,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span
@@ -3306,7 +3306,7 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span
@@ -3645,7 +3645,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span

@@ -3665,7 +3665,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -3818,7 +3818,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -3967,7 +3967,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4120,7 +4120,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4273,7 +4273,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4426,7 +4426,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4579,7 +4579,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4732,7 +4732,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4885,7 +4885,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -5038,7 +5038,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -5191,7 +5191,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -5340,7 +5340,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -5493,7 +5493,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -5649,7 +5649,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -5802,7 +5802,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -7311,7 +7311,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -7464,7 +7464,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -7613,7 +7613,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -7766,7 +7766,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 >
                   <span
@@ -7957,7 +7957,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -8110,7 +8110,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -8263,7 +8263,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -8416,7 +8416,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -8569,7 +8569,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -8722,7 +8722,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -8875,7 +8875,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -9024,7 +9024,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -9177,7 +9177,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -9333,7 +9333,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -9486,7 +9486,7 @@ exports[`TransactionTable should render with sign 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -9744,7 +9744,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -9869,7 +9869,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -9990,7 +9990,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -10115,7 +10115,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -10240,7 +10240,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -10365,7 +10365,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -10490,7 +10490,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -10615,7 +10615,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -10740,7 +10740,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -10865,7 +10865,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -10990,7 +10990,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -11111,7 +11111,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -11236,7 +11236,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -11364,7 +11364,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -11489,7 +11489,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle"
+                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
