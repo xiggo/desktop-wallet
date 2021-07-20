@@ -169,13 +169,15 @@ export const WalletHeader = ({
 									<Icon name="CopyAddress" className="hover:text-theme-secondary-500" size="lg" />
 								</Clipboard>
 
-								<Clipboard
-									variant="icon"
-									data={wallet.publicKey() || ""}
-									tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
-								>
-									<Icon name="CopyKey" className="hover:text-theme-secondary-500" size="lg" />
-								</Clipboard>
+								{!!wallet.publicKey() && (
+									<Clipboard
+										variant="icon"
+										data={wallet.publicKey() || ""}
+										tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
+									>
+										<Icon name="CopyKey" className="hover:text-theme-secondary-500" size="lg" />
+									</Clipboard>
+								)}
 							</div>
 						</div>
 					</div>
