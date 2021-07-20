@@ -81,7 +81,7 @@ describe("useWalletSignatory", () => {
 		expect(() => signatory.confirmKey()).toThrow();
 	});
 
-	it("should sign multisignature wallet", async () => {
+	it("should sign with multisignature wallet", async () => {
 		const mockIsMultiSignature = jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
 
 		const { result } = renderHook(() => useWalletSignatory(wallet));
@@ -96,11 +96,48 @@ describe("useWalletSignatory", () => {
 		mockIsMultiSignature.mockRestore();
 	});
 
+	it("should sign with ledger wallet", async () => {
+		const mockIsLedger = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		const { result } = renderHook(() => useWalletSignatory(wallet));
+
+		const signatory = await result.current.sign({});
+
+		expect(signatory).toBeInstanceOf(Signatories.Signatory);
+		expect(signatory.actsWithSenderPublicKey()).toBeTrue();
+		expect(signatory.signingKey()).toBe("03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc");
+		expect(() => signatory.confirmKey()).toThrow();
+
+		mockIsLedger.mockRestore();
+	});
+
 	it("should throw error if no input is provided", async () => {
 		const { result } = renderHook(() => useWalletSignatory(wallet));
 
 		await expect(result.current.sign({})).rejects.toThrowError(
 			"Signing failed. No mnemonic or encryption password provided",
 		);
+	});
+
+	it("should sign with ledger wallet using derivation path", async () => {
+		const publicKey = wallet.publicKey();
+
+		jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+		jest.spyOn(wallet, "publicKey").mockReturnValueOnce(undefined);
+		jest.spyOn(wallet.data(), "get").mockReturnValue("123");
+		jest.spyOn(wallet, "ledger").mockImplementation(() => ({
+			getPublicKey: () => publicKey,
+		}));
+
+		const { result } = renderHook(() => useWalletSignatory(wallet));
+
+		const signatory = await result.current.sign({});
+
+		expect(signatory).toBeInstanceOf(Signatories.Signatory);
+		expect(signatory.actsWithSenderPublicKey()).toBeTrue();
+		expect(signatory.signingKey()).toBe("03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc");
+		expect(() => signatory.confirmKey()).toThrow();
+
+		jest.clearAllMocks();
 	});
 });

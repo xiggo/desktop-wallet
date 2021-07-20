@@ -1,6 +1,7 @@
 import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
 import { useCallback } from "react";
+import { assertString } from "utils/assertions";
 
 export interface SignInput {
 	encryptionPassword?: string;
@@ -37,8 +38,24 @@ export const useWalletSignatory = (
 				return wallet.signatory().wif(await wallet.wif().get(encryptionPassword));
 			}
 
-			if (wallet.isMultiSignature() || wallet.isLedger()) {
-				return wallet.signatory().senderPublicKey(wallet.publicKey()!);
+			if (wallet.isMultiSignature()) {
+				const publicKey: string | undefined = wallet.publicKey();
+				assertString(publicKey);
+
+				return wallet.signatory().senderPublicKey(publicKey);
+			}
+
+			if (wallet.isLedger()) {
+				let publicKey: string | undefined = wallet.publicKey();
+
+				if (publicKey === undefined) {
+					const derivationPath = wallet.data().get(ProfileContracts.WalletData.DerivationPath);
+					assertString(derivationPath);
+
+					publicKey = await wallet.ledger().getPublicKey(derivationPath);
+				}
+
+				return wallet.signatory().senderPublicKey(publicKey);
 			}
 
 			if (wif) {
