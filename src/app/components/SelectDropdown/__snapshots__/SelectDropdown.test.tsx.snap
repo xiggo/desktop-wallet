@@ -88,7 +88,7 @@ exports[`SelectDropdown should render 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-0-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-0-menu"
           role="listbox"
         />
@@ -188,7 +188,7 @@ exports[`SelectDropdown should render disabled 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-7-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-7-menu"
           role="listbox"
         />
@@ -318,7 +318,7 @@ exports[`SelectDropdown should render invalid 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-5-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-5-menu"
           role="listbox"
         />
@@ -416,7 +416,7 @@ exports[`SelectDropdown should render with custom label 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-2-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA is-open"
           id="downshift-2-menu"
           role="listbox"
         >
@@ -560,7 +560,7 @@ exports[`SelectDropdown should render with default value when free text is allow
         </div>
         <ul
           aria-labelledby="downshift-130-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-130-menu"
           role="listbox"
         />
@@ -658,7 +658,7 @@ exports[`SelectDropdown should render with empty options 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-20-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-20-menu"
           role="listbox"
         />
@@ -766,7 +766,7 @@ exports[`SelectDropdown should render with initial default value 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-15-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-15-menu"
           role="listbox"
         />
@@ -864,7 +864,7 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-22-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-22-menu"
           role="listbox"
         />
@@ -962,7 +962,7 @@ exports[`SelectDropdown should render with wrong default value 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-18-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-18-menu"
           role="listbox"
         />
@@ -1038,7 +1038,7 @@ exports[`SelectDropdown should render without caret 1`] = `
         </div>
         <ul
           aria-labelledby="downshift-9-label"
-          class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+          class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
           id="downshift-9-menu"
           role="listbox"
         />

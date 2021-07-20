@@ -1706,7 +1706,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                           </div>
                           <ul
                             aria-labelledby="downshift-12-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                             id="downshift-12-menu"
                             role="listbox"
                           />
@@ -2646,7 +2646,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                           </div>
                                           <ul
                                             aria-labelledby="downshift-18-label"
-                                            class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                                            class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                                             id="downshift-18-menu"
                                             role="listbox"
                                           />
@@ -3656,7 +3656,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                           </div>
                                           <ul
                                             aria-labelledby="downshift-45-label"
-                                            class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                                            class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                                             id="downshift-45-menu"
                                             role="listbox"
                                           />
@@ -4309,7 +4309,7 @@ exports[`SendTransfer should render form step 1`] = `
                           </div>
                           <ul
                             aria-labelledby="downshift-0-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                             id="downshift-0-menu"
                             role="listbox"
                           />
@@ -4892,7 +4892,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                           </div>
                           <ul
                             aria-labelledby="downshift-6-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                             id="downshift-6-menu"
                             role="listbox"
                           />
@@ -5584,7 +5584,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                           </div>
                           <ul
                             aria-labelledby="downshift-3-label"
-                            class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                            class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                             id="downshift-3-menu"
                             role="listbox"
                           />
@@ -7794,7 +7794,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                           </div>
                                           <ul
                                             aria-labelledby="downshift-115-label"
-                                            class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                                            class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                                             id="downshift-115-menu"
                                             role="listbox"
                                           />

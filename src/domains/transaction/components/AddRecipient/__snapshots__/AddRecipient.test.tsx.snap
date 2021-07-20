@@ -175,7 +175,7 @@ exports[`AddRecipient should render 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-0-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                       id="downshift-0-menu"
                       role="listbox"
                     />
@@ -437,7 +437,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-7-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                       id="downshift-7-menu"
                       role="listbox"
                     />
@@ -710,7 +710,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-4-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                       id="downshift-4-menu"
                       role="listbox"
                     />
@@ -972,7 +972,7 @@ exports[`AddRecipient should render without recipients 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-2-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                       id="downshift-2-menu"
                       role="listbox"
                     />
@@ -1184,7 +1184,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-9-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                       id="downshift-9-menu"
                       role="listbox"
                     />
@@ -1446,7 +1446,7 @@ exports[`AddRecipient should set available amount 1`] = `
                     </div>
                     <ul
                       aria-labelledby="downshift-23-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                       id="downshift-23-menu"
                       role="listbox"
                     />
@@ -1708,7 +1708,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                     </div>
                     <ul
                       aria-labelledby="downshift-25-label"
-                      class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                      class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                       id="downshift-25-menu"
                       role="listbox"
                     />

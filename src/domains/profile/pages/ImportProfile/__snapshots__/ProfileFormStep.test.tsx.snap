@@ -381,7 +381,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                       </div>
                       <ul
                         aria-labelledby="downshift-47-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA is-open"
                         id="downshift-47-menu"
                         role="listbox"
                       >
@@ -1079,7 +1079,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                       </div>
                       <ul
                         aria-labelledby="downshift-0-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                         id="downshift-0-menu"
                         role="listbox"
                       />
@@ -1542,7 +1542,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                       </div>
                       <ul
                         aria-labelledby="downshift-12-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                         id="downshift-12-menu"
                         role="listbox"
                       />
@@ -2005,7 +2005,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                       </div>
                       <ul
                         aria-labelledby="downshift-6-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                         id="downshift-6-menu"
                         role="listbox"
                       />
@@ -2454,7 +2454,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                       </div>
                       <ul
                         aria-labelledby="downshift-33-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA is-open"
                         id="downshift-33-menu"
                         role="listbox"
                       >
@@ -3150,7 +3150,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                       </div>
                       <ul
                         aria-labelledby="downshift-18-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl is-open"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA is-open"
                         id="downshift-18-menu"
                         role="listbox"
                       >
@@ -3845,7 +3845,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       </div>
                       <ul
                         aria-labelledby="downshift-61-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                         id="downshift-61-menu"
                         role="listbox"
                       />
@@ -4305,7 +4305,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                       </div>
                       <ul
                         aria-labelledby="downshift-61-label"
-                        class="styles__SelectOptionsList-sc-120rtxy-0 dsMShl"
+                        class="styles__SelectOptionsList-sc-120rtxy-0 jsmpaA"
                         id="downshift-61-menu"
                         role="listbox"
                       />

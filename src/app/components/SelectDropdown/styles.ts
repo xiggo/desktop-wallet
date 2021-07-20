@@ -2,7 +2,7 @@ import tw, { styled } from "twin.macro";
 
 export const SelectOptionsList = styled.ul`
 	& {
-		${tw`absolute top-full mt-1 z-10 w-full`};
+		${tw`absolute top-full mt-[5px] z-10 -inset-x-px`};
 		${tw`bg-theme-background dark:bg-theme-secondary-800`};
 		${tw`rounded-lg shadow-xl outline-none`};
 	}
@@ -26,11 +26,11 @@ export const SelectOptionsList = styled.ul`
 
 		&.is-highlighted,
 		&.is-selected {
-			${tw`-mt-0.5 pt-0.5`};
+			${tw`-mt-px pt-px`};
 		}
 
 		&.is-highlighted {
-			${tw`bg-theme-secondary-100 dark:bg-theme-secondary-900`};
+			${tw`bg-theme-secondary-100 dark:bg-theme-secondary-900 z-10`};
 
 			.select-list-option__label {
 				${tw`border-transparent`};
@@ -38,7 +38,7 @@ export const SelectOptionsList = styled.ul`
 		}
 
 		&.is-selected {
-			${tw`bg-theme-primary-50 dark:bg-black text-theme-primary-600 font-semibold`};
+			${tw`bg-theme-primary-50 dark:bg-black text-theme-primary-600 font-semibold z-20`};
 
 			.select-list-option__label {
 				${tw`border-theme-primary-50 dark:border-black`};
