@@ -1,15 +1,19 @@
 import Transport from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/profiles";
 import { Coins } from "@payvo/sdk";
+import { toasts } from "app/services";
 import retry from "async-retry";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
 import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 import { useEnvironmentContext } from "../../Environment";
 import { formatLedgerDerivationPath, LedgerData } from "../utils";
 import { connectionReducer, defaultConnectionState } from "./connection.state";
 
 export const useLedgerConnection = (transport: typeof Transport) => {
+	const { t } = useTranslation();
+
 	const { persist } = useEnvironmentContext();
 	const [state, dispatch] = useReducer(connectionReducer, defaultConnectionState);
 	const abortRetryReference = useRef<boolean>(false);
@@ -25,13 +29,16 @@ export const useLedgerConnection = (transport: typeof Transport) => {
 				// @ts-ignore
 				next: ({ type, descriptor, deviceModel }) => {
 					if (type === "add") {
+						toasts.success(t("COMMON.LEDGER_CONNECTED", { device: deviceModel?.productName || "Ledger" }));
 						dispatch({ id: deviceModel?.id || "nanoS", path: descriptor, type: "add" });
 						return;
 					}
+
+					toasts.warning(t("COMMON.LEDGER_DISCONNECTED", { device: deviceModel?.productName || "Ledger" }));
 					dispatch({ type: "remove" });
 				},
 			}),
-		[transport],
+		[t, transport],
 	);
 
 	const importLedgerWallets = useCallback(

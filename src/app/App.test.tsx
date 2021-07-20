@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Bcrypt } from "@payvo/cryptography";
 import { Contracts, Environment } from "@payvo/profiles";
+import { toasts } from "app/services";
 import { translations as errorTranslations } from "domains/error/i18n";
 import { translations as profileTranslations } from "domains/profile/i18n";
 import electron from "electron";
@@ -73,6 +74,7 @@ describe("App", () => {
 			}
 			return true;
 		});
+
 		jest.spyOn(electron.ipcRenderer, "on").mockImplementation(
 			(event_: any, callback: (event__: any, progress: any) => void) => {
 				if (event_ === "updater:download-progress") {
@@ -80,6 +82,8 @@ describe("App", () => {
 				}
 			},
 		);
+
+		jest.spyOn(toasts, "success").mockImplementation();
 	});
 
 	afterAll(() => {

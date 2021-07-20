@@ -1,6 +1,7 @@
 import Transport, { Observer } from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
+import { toasts } from "app/services";
 import React from "react";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
@@ -82,6 +83,59 @@ describe("Use Ledger Connection", () => {
 		});
 
 		await waitFor(() => expect(screen.queryByText("Test Error")).toBeInTheDocument());
+
+		listenSpy.mockReset();
+	});
+
+	it("should display toasts when device connects and disconnects", () => {
+		const Component = () => {
+			useLedgerConnection(transport);
+			return <></>;
+		};
+
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		let toastSpy = jest.SpyInstance;
+
+		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
+		render(<Component />);
+
+		toastSpy = jest.spyOn(toasts, "success").mockImplementationOnce();
+
+		act(() => {
+			observer!.next({ descriptor: "", type: "add" });
+		});
+
+		expect(toastSpy).toHaveBeenCalledWith("Ledger connected");
+
+		toastSpy = jest.spyOn(toasts, "warning").mockImplementationOnce();
+
+		act(() => {
+			observer!.next({ descriptor: "", type: "remove" });
+		});
+
+		expect(toastSpy).toHaveBeenCalledWith("Ledger disconnected");
+
+		toastSpy = jest.spyOn(toasts, "success").mockImplementationOnce();
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { productName: "Ledger Nano S" }, type: "add" });
+		});
+
+		expect(toastSpy).toHaveBeenCalledWith("Ledger Nano S connected");
+
+		toastSpy = jest.spyOn(toasts, "warning").mockImplementationOnce();
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { productName: "Ledger Nano S" }, type: "remove" });
+		});
+
+		expect(toastSpy).toHaveBeenCalledWith("Ledger Nano S disconnected");
 
 		listenSpy.mockReset();
 	});
