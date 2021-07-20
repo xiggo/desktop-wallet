@@ -1,3 +1,4 @@
+import { uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
@@ -5,6 +6,7 @@ import { StepIndicator } from "app/components/StepIndicator";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { LedgerData, useLedgerContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
+import { useWalletConfig } from "domains/dashboard/hooks";
 import { NetworkStep } from "domains/wallet/components/NetworkStep";
 import React, { useCallback, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -90,6 +92,7 @@ export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Propertie
 
 	const history = useHistory();
 	const { importLedgerWallets, isBusy } = useLedgerContext();
+	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
 
 	const { t } = useTranslation();
 
@@ -109,8 +112,10 @@ export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Propertie
 			setImportedWallets(wallets);
 			const coin = activeProfile.coins().set(network.coin(), network.id());
 			await importLedgerWallets(wallets, coin, activeProfile);
+
+			setValue("selectedNetworkIds", uniq([...selectedNetworkIds, coin.network().id()]));
 		},
-		[importLedgerWallets, activeProfile],
+		[importLedgerWallets, activeProfile, setValue, selectedNetworkIds],
 	);
 
 	const handleNext = useCallback(async () => {
