@@ -510,7 +510,7 @@ exports[`Contacts should render with contacts 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 btoCFd text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -689,7 +689,7 @@ exports[`Contacts should render with contacts 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 btoCFd text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -856,7 +856,7 @@ exports[`Contacts should render with contacts 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 btoCFd text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -1023,7 +1023,7 @@ exports[`Contacts should render with contacts 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 btoCFd text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div

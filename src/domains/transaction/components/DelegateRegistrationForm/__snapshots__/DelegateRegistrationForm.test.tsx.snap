@@ -75,7 +75,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -425,7 +425,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -730,7 +730,7 @@ exports[`DelegateRegistrationForm should render review step 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -978,7 +978,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -1286,7 +1286,7 @@ exports[`DelegateRegistrationForm should set username 1`] = `
           </div>
           <div
             aria-label="ARK Devnet"
-            class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -1617,7 +1617,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
           </div>
           <div
             aria-label="ARK Devnet"
-            class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -1967,7 +1967,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
           </div>
           <div
             aria-label="ARK Devnet"
-            class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div

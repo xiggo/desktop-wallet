@@ -341,7 +341,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                             class="flex items-center space-x-4"
                           >
                             <div
-                              class="Circle__CircleWrapper-sc-d5u41q-0 btoCFd ring-theme-background"
+                              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup ring-theme-background"
                               data-testid="NetworkIcon__placeholder"
                             />
                             <div>
@@ -1092,7 +1092,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="Circle__CircleWrapper-sc-d5u41q-0 btoCFd text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                              class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                               data-testid="NetworkIcon-ARK-ark.mainnet"
                             >
                               <div

@@ -66,7 +66,7 @@ export const ContactListItem = ({ item, variant, onAction, onSend, options }: Co
 							</TableCell>
 
 							<TableCell innerClassName="justify-center">
-								<NetworkIcon network={network} noShadow />
+								<NetworkIcon network={network} size="lg" noShadow />
 							</TableCell>
 
 							<TableCell

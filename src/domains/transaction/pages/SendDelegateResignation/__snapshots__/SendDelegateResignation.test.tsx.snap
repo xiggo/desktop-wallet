@@ -362,7 +362,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div
@@ -967,7 +967,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div
@@ -1548,7 +1548,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div
@@ -3578,7 +3578,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -4161,7 +4161,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                         </div>
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 egCVFn text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div

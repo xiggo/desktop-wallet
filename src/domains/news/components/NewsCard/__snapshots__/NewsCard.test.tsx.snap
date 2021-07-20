@@ -25,7 +25,7 @@ exports[`NewsCard should render 1`] = `
             >
               <div
                 aria-label="ARK"
-                class="Circle__CircleWrapper-sc-d5u41q-0 btoCFd text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.mainnet"
               >
                 <div
@@ -161,7 +161,7 @@ exports[`NewsCard should render with cover image 1`] = `
             >
               <div
                 aria-label="ARK"
-                class="Circle__CircleWrapper-sc-d5u41q-0 btoCFd text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
                 data-testid="NetworkIcon-ARK-ark.mainnet"
               >
                 <div

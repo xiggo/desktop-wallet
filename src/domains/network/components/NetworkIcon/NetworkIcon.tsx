@@ -8,7 +8,7 @@ import { Size } from "types";
 interface Properties {
 	network?: Networks.Network;
 	as?: React.ElementType;
-	size?: Size;
+	size: Size;
 	className?: string;
 	shadowClassName?: string;
 	iconSize?: Size;
