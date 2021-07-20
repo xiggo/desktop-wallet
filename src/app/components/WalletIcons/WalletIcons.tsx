@@ -3,6 +3,7 @@ import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Size } from "types";
 
 const getIconName = (type: string) => {
 	switch (type) {
@@ -17,9 +18,20 @@ const getIconName = (type: string) => {
 	}
 };
 
-const getIconColor = (type: string) => (type === "Starred" ? "text-theme-warning-400" : "text-theme-text");
+const getIconColor = (type: string) =>
+	type === "Starred" ? "text-theme-warning-400" : "text-theme-text dark:text-theme-secondary-600";
 
-const WalletIcon = ({ type, label, iconColor }: { type: string; label?: string; iconColor?: string }) => {
+const WalletIcon = ({
+	type,
+	label,
+	iconColor,
+	iconSize,
+}: {
+	type: string;
+	label?: string;
+	iconColor?: string;
+	iconSize?: Size;
+}) => {
 	const { t } = useTranslation();
 
 	return (
@@ -28,20 +40,21 @@ const WalletIcon = ({ type, label, iconColor }: { type: string; label?: string; 
 				data-testid={`WalletIcon__${getIconName(type)}`}
 				className={`inline-block p-1 ${iconColor || getIconColor(type)}`}
 			>
-				<Icon name={getIconName(type)} />
+				<Icon name={getIconName(type)} size={iconSize} />
 			</div>
 		</Tooltip>
 	);
 };
 
 export const WalletIcons = ({
-	wallet,
-	iconColor,
 	exclude,
+	wallet,
+	...iconProperties
 }: {
-	wallet: Contracts.IReadWriteWallet;
-	iconColor?: string;
 	exclude?: string[];
+	iconColor?: string;
+	iconSize?: Size;
+	wallet: Contracts.IReadWriteWallet;
 }) => {
 	const { t } = useTranslation();
 
@@ -51,18 +64,16 @@ export const WalletIcons = ({
 				<WalletIcon
 					type="Verified"
 					label={t(`COMMON.VERIFIED`, { value: wallet.knownName() })}
-					iconColor={iconColor}
+					{...iconProperties}
 				/>
 			)}
 			{!exclude?.includes("isSecondSignature") && wallet.hasSyncedWithNetwork() && wallet.isSecondSignature() && (
-				<WalletIcon type="SecondSignature" label={t("COMMON.SECOND_SIGNATURE")} iconColor={iconColor} />
+				<WalletIcon type="SecondSignature" label={t("COMMON.SECOND_SIGNATURE")} {...iconProperties} />
 			)}
-			{!exclude?.includes("isLedger") && wallet.isLedger() && <WalletIcon type="Ledger" iconColor={iconColor} />}
-			{!exclude?.includes("isStarred") && wallet.isStarred() && (
-				<WalletIcon type="Starred" iconColor={iconColor} />
-			)}
+			{!exclude?.includes("isLedger") && wallet.isLedger() && <WalletIcon type="Ledger" {...iconProperties} />}
+			{!exclude?.includes("isStarred") && wallet.isStarred() && <WalletIcon type="Starred" {...iconProperties} />}
 			{!exclude?.includes("isMultiSignature") && wallet.hasSyncedWithNetwork() && wallet.isMultiSignature() && (
-				<WalletIcon type="MultiSignature" iconColor={iconColor} />
+				<WalletIcon type="MultiSignature" {...iconProperties} />
 			)}
 		</>
 	);

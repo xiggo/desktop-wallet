@@ -76,7 +76,7 @@ exports[`Wallet Card should render 1`] = `
           class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
         >
           <div
-            class="inline-block p-1 text-theme-text"
+            class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
             data-testid="WalletIcon__Ledger"
           >
             <div
@@ -104,7 +104,7 @@ exports[`Wallet Card should render 1`] = `
             </div>
           </div>
           <div
-            class="inline-block p-1 text-theme-text"
+            class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
             data-testid="WalletIcon__Multisig"
           >
             <div
@@ -490,7 +490,7 @@ exports[`Wallet Card should render with actions 1`] = `
           class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
         >
           <div
-            class="inline-block p-1 text-theme-text"
+            class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
             data-testid="WalletIcon__Ledger"
           >
             <div
@@ -518,7 +518,7 @@ exports[`Wallet Card should render with actions 1`] = `
             </div>
           </div>
           <div
-            class="inline-block p-1 text-theme-text"
+            class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
             data-testid="WalletIcon__Multisig"
           >
             <div
@@ -635,7 +635,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
           class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
         >
           <div
-            class="inline-block p-1 text-theme-text"
+            class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
             data-testid="WalletIcon__Ledger"
           >
             <div
@@ -663,7 +663,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
             </div>
           </div>
           <div
-            class="inline-block p-1 text-theme-text"
+            class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
             data-testid="WalletIcon__Multisig"
           >
             <div
@@ -760,7 +760,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
           class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
         >
           <div
-            class="inline-block p-1 text-theme-text"
+            class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
             data-testid="WalletIcon__Ledger"
           >
             <div
@@ -788,7 +788,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             </div>
           </div>
           <div
-            class="inline-block p-1 text-theme-text"
+            class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
             data-testid="WalletIcon__Multisig"
           >
             <div

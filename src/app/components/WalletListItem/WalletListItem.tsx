@@ -70,7 +70,7 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 
 			<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle">
 				<div className="inline-flex items-center space-x-1">
-					<WalletIcons wallet={wallet} />
+					<WalletIcons wallet={wallet} iconSize="lg" />
 				</div>
 			</TableCell>
 

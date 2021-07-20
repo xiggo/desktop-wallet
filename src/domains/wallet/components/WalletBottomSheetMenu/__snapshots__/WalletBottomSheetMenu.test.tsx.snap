@@ -354,13 +354,13 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                         class="inline-flex items-center space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text"
+                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               key.svg
