@@ -555,7 +555,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
         class="inline-flex items-center mt-4 space-x-3 cursor-pointer text-theme-secondary-text"
       >
         <input
-          class="Checkbox-sc-1aq7nos-0 dQdqGT"
+          class="Checkbox-sc-1aq7nos-0 drePYo"
           color="success"
           data-testid="FilterNetwork__select-all-checkbox"
           type="checkbox"

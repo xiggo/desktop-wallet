@@ -378,7 +378,7 @@ exports[`Votes should filter current delegates 1`] = `
                           >
                             <input
                               checked=""
-                              class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                              class="Checkbox-sc-1aq7nos-0 drePYo"
                               color="success"
                               name="all"
                               type="checkbox"
@@ -394,7 +394,7 @@ exports[`Votes should filter current delegates 1`] = `
                             data-testid="VotesFilter__option--current"
                           >
                             <input
-                              class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                              class="Checkbox-sc-1aq7nos-0 drePYo"
                               color="success"
                               name="current"
                               type="checkbox"

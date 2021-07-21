@@ -77,7 +77,7 @@ exports[`SearchBarPluginFilters should render categories 1`] = `
               >
                 <span>
                   <input
-                    class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                    class="Checkbox-sc-1aq7nos-0 drePYo"
                     color="success"
                     data-testid="SearchBarPluginFilters-category-game"
                     name="category"
@@ -167,7 +167,7 @@ exports[`SearchBarPluginFilters should render default categories 1`] = `
               >
                 <span>
                   <input
-                    class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                    class="Checkbox-sc-1aq7nos-0 drePYo"
                     color="success"
                     data-testid="SearchBarPluginFilters-category-game"
                     name="category"
@@ -185,7 +185,7 @@ exports[`SearchBarPluginFilters should render default categories 1`] = `
               >
                 <span>
                   <input
-                    class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                    class="Checkbox-sc-1aq7nos-0 drePYo"
                     color="success"
                     data-testid="SearchBarPluginFilters-category-utility"
                     name="category"
@@ -203,7 +203,7 @@ exports[`SearchBarPluginFilters should render default categories 1`] = `
               >
                 <span>
                   <input
-                    class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                    class="Checkbox-sc-1aq7nos-0 drePYo"
                     color="success"
                     data-testid="SearchBarPluginFilters-category-exchange"
                     name="category"
@@ -221,7 +221,7 @@ exports[`SearchBarPluginFilters should render default categories 1`] = `
               >
                 <span>
                   <input
-                    class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                    class="Checkbox-sc-1aq7nos-0 drePYo"
                     color="success"
                     data-testid="SearchBarPluginFilters-category-other"
                     name="category"
@@ -311,7 +311,7 @@ exports[`SearchBarPluginFilters should render with null initialValues 1`] = `
               >
                 <span>
                   <input
-                    class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                    class="Checkbox-sc-1aq7nos-0 drePYo"
                     color="success"
                     data-testid="SearchBarPluginFilters-category-utility"
                     name="category"
@@ -329,7 +329,7 @@ exports[`SearchBarPluginFilters should render with null initialValues 1`] = `
               >
                 <span>
                   <input
-                    class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                    class="Checkbox-sc-1aq7nos-0 drePYo"
                     color="success"
                     data-testid="SearchBarPluginFilters-category-game"
                     name="category"
@@ -420,7 +420,7 @@ exports[`SearchBarPluginFilters should render with selected values 1`] = `
                 <span>
                   <input
                     checked=""
-                    class="Checkbox-sc-1aq7nos-0 dQdqGT"
+                    class="Checkbox-sc-1aq7nos-0 drePYo"
                     color="success"
                     data-testid="SearchBarPluginFilters-category-game"
                     name="category"

@@ -62,6 +62,7 @@ export const LedgerTable = ({
 			Header: (
 				<Tippy content={isAllSelected ? t("COMMON.UNSELECT_ALL") : t("COMMON.SELECT_ALL")}>
 					<Checkbox
+						disabled={isScanning}
 						data-testid="LedgerScanStep__select-all"
 						onChange={() => toggleSelectAll()}
 						checked={isAllSelected}

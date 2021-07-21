@@ -11,7 +11,7 @@ const baseStyle = [
 	tw`focus:(ring-offset-0 ring-theme-primary-400)`,
 	tw`dark:border-theme-secondary-600`,
 	tw`disabled:(
-		bg-theme-secondary-200 border-theme-secondary-300 cursor-default
+		bg-theme-secondary-200 border-theme-secondary-300 cursor-not-allowed
 		dark:(bg-theme-secondary-800 border-theme-secondary-600)
 	)!`,
 	css`
