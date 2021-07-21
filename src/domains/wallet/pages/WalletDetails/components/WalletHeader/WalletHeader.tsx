@@ -232,7 +232,7 @@ export const WalletHeader = ({
 								type="button"
 								aria-busy={isSyncing}
 								onClick={syncWallet}
-								disabled={!wallet.hasSyncedWithNetwork() || isSyncing}
+								disabled={isSyncing}
 							>
 								<Icon
 									name="Reload"
