@@ -520,13 +520,13 @@ describe("Votes", () => {
 	it("should hide testnet wallet if disabled from profile setting", async () => {
 		profile.settings().set(ProfileSetting.UseTestNetworks, false);
 
-		profile.wallets().push(
-			await profile.walletFactory().fromAddress({
-				address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-				coin: "ARK",
-				network: "ark.mainnet",
-			}),
-		);
+		const mainnetWallet = await profile.walletFactory().fromAddress({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		profile.wallets().push(mainnetWallet);
 
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		const { asFragment, container, getByTestId } = renderPage(route);
@@ -539,17 +539,17 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		profile.settings().set(ProfileSetting.UseTestNetworks, true);
+
+		// cleanup
+		profile.wallets().forget(mainnetWallet.id());
 	});
 
 	it("should filter wallets by address", async () => {
-		jest.useFakeTimers();
-		jest.advanceTimersByTime(100);
-
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
 		const { getByTestId, queryAllByTestId } = renderPage(route, routePath);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(3));
 
 		act(() => {
 			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
@@ -564,18 +564,14 @@ describe("Votes", () => {
 		});
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
-		jest.useRealTimers();
 	});
 
 	it("should filter wallets by alias", async () => {
-		jest.useFakeTimers();
-		jest.advanceTimersByTime(100);
-
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
 		const { getByTestId, queryAllByTestId } = renderPage(route, routePath);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(3));
 
 		act(() => {
 			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
@@ -590,19 +586,16 @@ describe("Votes", () => {
 		});
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
-		jest.useRealTimers();
 	});
 
 	it("should reset wallet search", async () => {
 		profile.settings().set(ProfileSetting.UseTestNetworks, true);
-		jest.useFakeTimers();
-		jest.advanceTimersByTime(100);
 
 		const route = `/profiles/${profile.id()}/votes`;
 		const routePath = "/profiles/:profileId/votes";
 		const { getByTestId, queryAllByTestId } = renderPage(route, routePath);
 
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(3));
 
 		act(() => {
 			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
@@ -625,9 +618,7 @@ describe("Votes", () => {
 		});
 
 		await waitFor(() => expect(searchInput).toHaveValue(""));
-		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(4));
-
-		jest.useRealTimers();
+		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(3));
 	});
 
 	it("should show resigned delegate notice", async () => {

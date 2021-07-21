@@ -51,7 +51,7 @@ export const useDelegates = ({
 		// @ts-ignore @TODO ?????
 		return filteredDelegatesVotes?.filter((delegate) => {
 			// @ts-ignore @TODO ?????
-			const wallet = delegate ? delegate.wallet : delegate;
+			const wallet = delegate.wallet ?? delegate;
 
 			return (
 				wallet.address().toLowerCase().includes(searchQuery.toLowerCase()) ||
