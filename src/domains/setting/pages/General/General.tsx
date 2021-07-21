@@ -10,6 +10,7 @@ import { SelectProfileImage } from "app/components/SelectProfileImage";
 import { Toggle } from "app/components/Toggle";
 import { useEnvironmentContext } from "app/contexts";
 import { useActiveProfile, useProfileJobs, useValidation } from "app/hooks";
+import { useCurrencyOptions } from "app/hooks/use-currency-options";
 import { toasts } from "app/services";
 import { PlatformSdkChoices } from "data";
 import { ResetProfile } from "domains/profile/components/ResetProfile";
@@ -47,6 +48,7 @@ export const GeneralSettings: React.FC = () => {
 
 	const history = useHistory();
 	const { t } = useTranslation();
+	const currencyOptions = useCurrencyOptions();
 
 	const getDefaultValues = (): Partial<GeneralSettingsState> => {
 		const settings = profile.settings();
@@ -334,7 +336,7 @@ export const GeneralSettings: React.FC = () => {
 											field: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 										}).toString(),
 									})}
-									options={PlatformSdkChoices.currencies}
+									options={currencyOptions}
 									defaultValue={getDefaultValues().exchangeCurrency}
 									onChange={(exchangeCurrency: any) =>
 										setValue("exchangeCurrency", exchangeCurrency?.value, { shouldDirty: true })

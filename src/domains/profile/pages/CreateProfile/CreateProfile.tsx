@@ -11,7 +11,7 @@ import { SelectProfileImage } from "app/components/SelectProfileImage";
 import { Toggle } from "app/components/Toggle";
 import { useEnvironmentContext } from "app/contexts";
 import { useProfileRestore, useTheme, useValidation } from "app/hooks";
-import { PlatformSdkChoices } from "data";
+import { useCurrencyOptions } from "app/hooks/use-currency-options";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -24,6 +24,7 @@ export const CreateProfile = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 	const { restoreProfileConfig } = useProfileRestore();
+	const currencyOptions = useCurrencyOptions();
 
 	const { watch, register, formState, setValue, trigger } = form;
 	const { name, confirmPassword, isDarkMode, password } = watch(
@@ -160,7 +161,7 @@ export const CreateProfile = () => {
 										option: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 									})}
 									ref={register(createProfile.currency())}
-									options={PlatformSdkChoices.currencies}
+									options={currencyOptions}
 									onChange={(currency: any) =>
 										setValue("currency", currency?.value, {
 											shouldDirty: true,

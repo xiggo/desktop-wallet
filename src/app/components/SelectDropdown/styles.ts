@@ -11,8 +11,23 @@ export const SelectOptionsList = styled.ul`
 		${tw`py-6 overflow-y-auto max-h-64`}
 	}
 
+	.select-list-option-group:not(:last-child) {
+		${tw`mb-3`};
+	}
+
+	.select-list-option-head,
 	.select-list-option {
-		${tw`relative px-10 border-0 text-theme-secondary-900 dark:text-theme-secondary-200 cursor-pointer transition-colors duration-200`};
+		${tw`relative px-10 border-0`};
+	}
+
+	.select-list-option-head {
+		&__label {
+			${tw`text-xs font-bold text-theme-secondary-500 dark:text-theme-secondary-700 pb-1 uppercase select-none`};
+		}
+	}
+
+	.select-list-option {
+		${tw`text-theme-secondary-900 dark:text-theme-secondary-200 cursor-pointer transition-colors duration-200`};
 
 		&__label {
 			${tw`py-4`};

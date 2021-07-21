@@ -9,8 +9,8 @@ import { Select } from "app/components/SelectDropdown";
 import { SelectProfileImage } from "app/components/SelectProfileImage";
 import { Toggle } from "app/components/Toggle";
 import { useTheme, useValidation } from "app/hooks";
+import { useCurrencyOptions } from "app/hooks/use-currency-options";
 import { ReadableFile } from "app/hooks/use-files";
-import { PlatformSdkChoices } from "data";
 import { FilePreview } from "domains/profile/components/FilePreview";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -36,6 +36,7 @@ const CreateProfileForm = ({
 	shouldValidate = false,
 }: CreateProfileFormProperties) => {
 	const { t } = useTranslation();
+	const currencyOptions = useCurrencyOptions();
 
 	const form = useForm<any>({
 		defaultValues: {
@@ -185,7 +186,7 @@ const CreateProfileForm = ({
 									option: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 								})}
 								ref={register(createProfile.currency())}
-								options={PlatformSdkChoices.currencies}
+								options={currencyOptions}
 								onChange={(currency: any) =>
 									setValue("currency", currency?.value, {
 										shouldDirty: true,

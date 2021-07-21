@@ -4,48 +4,18 @@ import { Input } from "app/components/Input";
 import cn from "classnames";
 import { useCombobox } from "downshift";
 import React, { useEffect, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
 
+import { getMainOptions, isMatch, matchOptions } from "./SelectDropdown.helpers";
+import { OptionProperties, SelectDropdownProperties, SelectProperties } from "./SelectDropdown.models";
+import { SelectDropdownRenderOptions as RenderOptions } from "./SelectDropdownRenderOptions";
 import { SelectOptionsList } from "./styles";
 
-interface Option {
-	label: string;
-	value: string | number;
-	isSelected?: boolean;
-}
-
-type SelectProperties = {
-	addons?: any;
-	options: Option[];
-	defaultValue?: string;
-	innerClassName?: string;
-	isInvalid?: boolean;
-	showCaret?: boolean;
-	disabled?: boolean;
-	allowFreeInput?: boolean;
-	onChange?: (selected: Option) => void;
-	renderLabel?: (option: Option) => JSX.Element;
-} & React.InputHTMLAttributes<any>;
-
-type SelectDropdownProperties = {
-	addons?: any;
-	options: Option[];
-	defaultSelectedItem?: Option;
-	placeholder?: string;
-	innerClassName?: string;
-	showCaret?: boolean;
-	isInvalid?: boolean;
-	disabled?: boolean;
-	allowFreeInput?: boolean;
-	onSelectedItemChange: any;
-	renderLabel?: (option: Option) => JSX.Element;
-} & React.InputHTMLAttributes<any>;
-
-const itemToString = (item: Option | null) => item?.label || "";
+const itemToString = (item: OptionProperties | null) => item?.label || "";
 
 const SelectDropdown = ({
 	addons,
 	options,
+	mainOptions,
 	defaultSelectedItem,
 	placeholder,
 	disabled,
@@ -58,14 +28,10 @@ const SelectDropdown = ({
 	renderLabel,
 	id,
 }: SelectDropdownProperties) => {
-	const { t } = useTranslation();
-
+	const [data, setData] = useState(options);
 	const [isTyping, setIsTyping] = useState(false);
 
-	const isMatch = (inputValue: string, option: Option) =>
-		inputValue && option.label.toLowerCase().startsWith(inputValue.toLowerCase());
-
-	const handleInputChange = ({ selectedItem }: { selectedItem: Option }) => {
+	const handleInputChange = ({ selectedItem }: { selectedItem: OptionProperties }) => {
 		if (!allowFreeInput) {
 			return;
 		}
@@ -87,10 +53,10 @@ const SelectDropdown = ({
 		reset,
 		toggleMenu,
 		selectedItem,
-	} = useCombobox<Option | null>({
+	} = useCombobox<OptionProperties | null>({
 		id,
 		itemToString,
-		items: options,
+		items: getMainOptions(data),
 		onInputValueChange: ({ inputValue, selectedItem, type }) => {
 			if (type === "__input_change__") {
 				setIsTyping(true);
@@ -104,9 +70,7 @@ const SelectDropdown = ({
 				selectItem(selected);
 				onSelectedItemChange({ selected });
 
-				const matchedOptions = inputValue
-					? options.filter((option: Option) => isMatch(inputValue, option))
-					: options;
+				const matchedOptions = inputValue ? matchOptions(options, inputValue) : mainOptions;
 
 				if (matchedOptions.length === 0) {
 					closeMenu();
@@ -131,17 +95,23 @@ const SelectDropdown = ({
 	});
 
 	useEffect(() => {
+		if (isTyping && inputValue) {
+			return setData(matchOptions(options, inputValue));
+		}
+
+		setData(options);
+	}, [inputValue, isTyping, options]);
+
+	useEffect(() => {
 		selectItem(defaultSelectedItem || null);
 	}, [defaultSelectedItem, selectItem]);
 
 	const suggestion = useMemo(() => {
-		const firstMatch = options.find((option) => isMatch(inputValue, option));
+		const firstMatch = mainOptions.find((option) => isMatch(inputValue, option));
 		if (inputValue && firstMatch) {
 			return [inputValue, firstMatch.label.slice(inputValue.length)].join("");
 		}
-	}, [inputValue, options]);
-
-	const data = isTyping && inputValue ? options.filter((option: Option) => isMatch(inputValue, option)) : options;
+	}, [inputValue, mainOptions]);
 
 	if (showCaret) {
 		addons = {
@@ -177,7 +147,7 @@ const SelectDropdown = ({
 			return;
 		}
 
-		const firstMatch = options.find((option) => isMatch(inputValue, option));
+		const firstMatch = mainOptions.find((option) => isMatch(inputValue, option));
 
 		if (inputValue && firstMatch) {
 			selectItem(firstMatch);
@@ -197,7 +167,7 @@ const SelectDropdown = ({
 			}
 
 			// Select first suggestion
-			const firstMatch = options.find((option) => isMatch(inputValue, option));
+			const firstMatch = mainOptions.find((option) => isMatch(inputValue, option));
 
 			if (inputValue && firstMatch) {
 				selectItem(firstMatch);
@@ -208,6 +178,12 @@ const SelectDropdown = ({
 				}
 			}
 		}
+	};
+
+	const onMouseDown = (item: OptionProperties) => {
+		selectItem(item);
+		handleInputChange({ selectedItem: item });
+		closeMenu();
 	};
 
 	return (
@@ -230,37 +206,16 @@ const SelectDropdown = ({
 					})}
 				/>
 				<SelectOptionsList {...getMenuProps({ className: isOpen ? "is-open" : "" })}>
-					{isOpen &&
-						(data.length > 0 ? (
-							data.map((item: Option, index: number) => (
-								<li
-									key={`${item.value}${index}`}
-									data-testid={`SelectDropdown__option--${index}`}
-									{...getItemProps({
-										className: cn(
-											"select-list-option",
-											{ "is-highlighted": highlightedIndex === index },
-											{ "is-selected": item.label === inputValue },
-										),
-										index,
-										item,
-										onMouseDown: () => {
-											selectItem(item);
-											handleInputChange({ selectedItem: item });
-											closeMenu();
-										},
-									})}
-								>
-									<div className="select-list-option__label">
-										{renderLabel
-											? renderLabel({ ...item, isSelected: item.label === inputValue })
-											: item.label}
-									</div>
-								</li>
-							))
-						) : (
-							<li className="select-list-option is-empty">{t("COMMON.NO_OPTIONS")}</li>
-						))}
+					{isOpen && (
+						<RenderOptions
+							data={data}
+							getItemProps={getItemProps}
+							highlightedIndex={highlightedIndex}
+							inputValue={inputValue}
+							onMouseDown={onMouseDown}
+							renderLabel={renderLabel}
+						/>
+					)}
 				</SelectOptionsList>
 			</div>
 		</div>
@@ -286,12 +241,14 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 		}: SelectProperties,
 		reference,
 	) => {
+		const mainOptions = useMemo(() => getMainOptions(options), [options]);
+
 		const defaultSelectedItem = useMemo(
 			() =>
 				allowFreeInput
-					? ({ label: defaultValue, value: defaultValue } as Option)
-					: options.find((option: Option) => option.value === defaultValue),
-			[defaultValue, allowFreeInput, options],
+					? ({ label: defaultValue, value: defaultValue } as OptionProperties)
+					: mainOptions.find((option: OptionProperties) => option.value === defaultValue),
+			[defaultValue, allowFreeInput, mainOptions],
 		);
 
 		const [selected, setSelected] = useState(defaultSelectedItem);
@@ -317,12 +274,13 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 					className={className}
 					innerClassName={innerClassName}
 					options={options}
+					mainOptions={mainOptions}
 					defaultSelectedItem={defaultSelectedItem}
 					placeholder={placeholder}
 					disabled={disabled}
 					isInvalid={isInvalidField}
 					addons={addons}
-					onSelectedItemChange={({ selected }: { selected: Option }) => {
+					onSelectedItemChange={({ selected }: { selected: OptionProperties }) => {
 						setSelected(selected);
 						onChange?.(selected);
 					}}
