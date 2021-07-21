@@ -38,10 +38,14 @@ export const SendTransfer = () => {
 
 	const queryParameters = useQueryParams();
 
+	const shouldResetForm = queryParameters.get("reset") === "1";
+
 	const deepLinkParameters = useMemo(() => {
 		const result: Record<string, string> = {};
 		for (const [key, value] of queryParameters.entries()) {
-			result[key] = value;
+			if (key !== "reset") {
+				result[key] = value;
+			}
 		}
 		return result;
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -51,10 +55,10 @@ export const SendTransfer = () => {
 	const showNetworkStep = !hasDeepLinkParameters && !hasWalletId;
 	const firstTabIndex = showNetworkStep ? 0 : 1;
 
-	const [activeTab, setActiveTab] = useState(showNetworkStep ? 0 : 1);
+	const [activeTab, setActiveTab] = useState(firstTabIndex);
 	const [unconfirmedTransactions, setUnconfirmedTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
-	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | null>(null);
+	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const { persist } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
@@ -96,6 +100,29 @@ export const SendTransfer = () => {
 	const transactionBuilder = useTransactionBuilder();
 	const { sign } = useWalletSignatory(wallet!);
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
+
+	useEffect(() => {
+		if (shouldResetForm) {
+			setActiveTab(firstTabIndex);
+
+			const resetValues = window.setTimeout(() => {
+				reset({ ...defaultValues, network });
+
+				setErrorMessage(undefined);
+				setUnconfirmedTransactions([]);
+				setTransaction(undefined);
+				setLastEstimatedExpiration(undefined);
+				setWallet(undefined);
+
+				// remove all query params
+				history.replace(history.location.pathname);
+			});
+
+			return () => {
+				window.clearTimeout(resetValues);
+			};
+		}
+	}, [defaultValues, firstTabIndex, history, network, reset, shouldResetForm]);
 
 	useEffect(() => {
 		register("remainingBalance");

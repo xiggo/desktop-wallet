@@ -2281,4 +2281,31 @@ describe("SendTransfer", () => {
 
 		await waitFor(() => expect(container).toMatchSnapshot());
 	});
+
+	it("should show initial step when reset=1 is added to route query params", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(`${transferURL}?reset=1`);
+
+		const replaceSpy = jest.spyOn(history, "replace").mockImplementation();
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/send-transfer">
+				<LedgerProvider transport={getDefaultLedgerTransport()}>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
+		);
+
+		await waitFor(() => expect(replaceSpy).toHaveBeenCalledWith(transferURL));
+
+		expect(screen.getByTestId("SendTransfer__network-step")).toBeTruthy();
+
+		replaceSpy.mockRestore();
+	});
 });

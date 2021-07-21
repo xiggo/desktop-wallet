@@ -15,6 +15,14 @@ export const goToTransferPage = async (t: any) => {
 		.ok({ timeout: 60_000 });
 };
 
+export const goToTransferPageThroughNavbar = async (t: any) => {
+	await t.click(Selector("[data-testid=navbar__buttons--send]"));
+	await t.expect(Selector("[data-testid=SendTransfer__network-step]").exists).ok();
+	await t
+		.expect(Selector("h1").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.NETWORK_STEP.TITLE).exists)
+		.ok();
+};
+
 export const goToRegistrationPage = async (t: any) => {
 	await t.click(Selector('[data-testid="navbar__useractions"]'));
 	await t.expect(Selector("li").withText(translations.COMMON.REGISTRATIONS).exists).ok({ timeout: 60_000 });

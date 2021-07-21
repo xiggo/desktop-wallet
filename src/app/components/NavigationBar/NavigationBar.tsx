@@ -214,7 +214,15 @@ const NavigationBar = ({
 												disabled={wallets.length === 0}
 												size="icon"
 												variant="transparent"
-												onClick={() => history.push(`/profiles/${profile?.id()}/send-transfer`)}
+												onClick={() => {
+													const sendTransferPath = `/profiles/${profile?.id()}/send-transfer`;
+
+													// add query param reset = 1 if already on send transfer page
+													/* istanbul ignore next: tested in e2e */
+													const reset =
+														history.location.pathname === sendTransferPath ? 1 : 0;
+													history.push(`${sendTransferPath}?reset=${reset}`);
+												}}
 											>
 												<Icon name="Send" size="lg" className="p-1" />
 											</Button>
