@@ -22,7 +22,7 @@ describe("TransactionDetailModal", () => {
 
 	beforeAll(() => {
 		nock.disableNetConnect();
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/delegates")
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))

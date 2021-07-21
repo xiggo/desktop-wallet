@@ -10,7 +10,7 @@ describe("Wallet Transactions Hook", () => {
 	let profile: Contracts.IProfile;
 
 	beforeAll(() => {
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions")
 			.query((parameters) => parameters.page === undefined || parameters.page === "1")
 			.reply(200, () => {

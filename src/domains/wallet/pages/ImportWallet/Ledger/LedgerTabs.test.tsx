@@ -20,7 +20,7 @@ describe("LedgerTabs", () => {
 	let onClickEditWalletName: jest.Mock;
 
 	beforeAll(() => {
-		nock("https://dwallets.ark.io/api")
+		nock("https://ark-test.payvo.com/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)
 			.reply(200, {

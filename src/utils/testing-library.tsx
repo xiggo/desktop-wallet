@@ -90,7 +90,7 @@ export const defaultNetMocks = () => {
 	nock.disableNetConnect();
 
 	// devnet
-	nock("https://dwallets.ark.io")
+	nock("https://ark-test.payvo.com")
 		.get("/api/blockchain")
 		.reply(200, require("../tests/fixtures/coins/ark/devnet/blockchain.json"))
 		.get("/api/node/configuration")
@@ -134,7 +134,7 @@ export const defaultNetMocks = () => {
 		.persist();
 
 	// mainnet
-	nock("https://wallets.ark.io")
+	nock("https://ark-live.payvo.com")
 		.get("/api/node/configuration")
 		.reply(200, require("../tests/fixtures/coins/ark/mainnet/configuration.json"))
 		.get("/api/peers")

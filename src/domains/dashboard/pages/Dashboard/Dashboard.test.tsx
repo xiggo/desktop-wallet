@@ -41,7 +41,7 @@ beforeAll(async () => {
 		.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
 		.reply(200, []);
 
-	nock("https://dwallets.ark.io")
+	nock("https://ark-test.payvo.com")
 		.get("/api/transactions")
 		.query(true)
 		.reply(200, () => {

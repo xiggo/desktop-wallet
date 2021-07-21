@@ -12,7 +12,7 @@ export const scrollTo = ClientFunction((top: number, left = 0, behavior = "auto"
 export const scrollToTop = ClientFunction(() => window.scrollTo({ top: 0 }));
 export const scrollToBottom = ClientFunction(() => window.scrollTo({ top: document.body.scrollHeight }));
 
-export const BASEURL = "https://dwallets.ark.io/api/";
+export const BASEURL = "https://ark-test.payvo.com/api/";
 
 const pluginNames: string[] = [
 	"@dated/transaction-export-plugin",
@@ -41,18 +41,18 @@ const walletMocks = () => {
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
 	const devnetMocks = [...addresses, ...publicKeys].map((identifier: string) =>
-		mockRequest(`https://dwallets.ark.io/api/wallets/${identifier}`, `coins/ark/devnet/wallets/${identifier}`),
+		mockRequest(`https://ark-test.payvo.com/api/wallets/${identifier}`, `coins/ark/devnet/wallets/${identifier}`),
 	);
 
 	const mainnetMocks = ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"].map((identifier: string) =>
-		mockRequest(`https://wallets.ark.io/api/wallets/${identifier}`, `coins/ark/mainnet/wallets/${identifier}`),
+		mockRequest(`https://ark-live.payvo.com/api/wallets/${identifier}`, `coins/ark/mainnet/wallets/${identifier}`),
 	);
 
 	// We want to use a clean version of this wallet in E2E tests so we don't have
 	// any pre-defined behaviours like delegation, voting and whatever else exists
 	devnetMocks.push(
 		mockRequest(
-			"https://dwallets.ark.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.payvo.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
 		),
 	);
@@ -76,11 +76,11 @@ const multisignatureMocks = () => {
 
 	for (const state of ["ready", "pending"]) {
 		mocks.push(
-			...publicKeys.map((identifier: string) =>
-				mockRequest(`https://dmusig1.ark.io/transactions?publicKey=${identifier}&state=${state}`, []),
+			...publicKeys.map((publicKey: string) =>
+				mockMuSigRequest("https://ark-test-musig.payvo.com", "list", { result: [] }, { publicKey, state }),
 			),
-			...publicKeysMainnet.map((identifier: string) =>
-				mockRequest(`https://musig1.ark.io/transactions?publicKey=${identifier}&state=${state}`, []),
+			...publicKeysMainnet.map((publicKey: string) =>
+				mockMuSigRequest("https://ark-live-musig.payvo.com", "list", { result: [] }, { publicKey, state }),
 			),
 		);
 	}
@@ -137,8 +137,8 @@ const searchAddressesMocks = () => {
 				mockRequest(
 					(request: any) =>
 						request.url ===
-							`https://dwallets.ark.io/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
-						request.url === `https://dwallets.ark.io/api/transactions?limit=${limit}&address=${address}`,
+							`https://ark-test.payvo.com/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
+						request.url === `https://ark-test.payvo.com/api/transactions?limit=${limit}&address=${address}`,
 					`coins/ark/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),
@@ -174,32 +174,62 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 			},
 		);
 
+export const mockMuSigRequest = (host: string, method: string, fixture: object, params?: object) =>
+	mockRequest((req: RequestOptions) => {
+		if (req.method !== "post") {
+			return false;
+		}
+
+		if (req.url !== host) {
+			return false;
+		}
+
+		const body = JSON.parse(req.body.toString());
+
+		if (body.method !== method) {
+			return false;
+		}
+
+		if (params && body.params !== params) {
+			for (const [key, value] of Object.entries(params)) {
+				if (body.params[key] !== value) {
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}, fixture);
+
 export const requestMocks = {
 	configuration: [
 		// devnet
-		mockRequest("https://dwallets.ark.io/api/blockchain", "coins/ark/devnet/blockchain"),
-		mockRequest("https://dwallets.ark.io/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://dwallets.ark.io/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://dwallets.ark.io/api/node/fees", "coins/ark/devnet/node-fees"),
-		mockRequest("https://dwallets.ark.io/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://dwallets.ark.io/api/peers", "coins/ark/devnet/peers"),
+		mockRequest("https://ark-test.payvo.com/api/blockchain", "coins/ark/devnet/blockchain"),
+		mockRequest("https://ark-test.payvo.com/api/node/configuration", "coins/ark/devnet/configuration"),
+		mockRequest("https://ark-test.payvo.com/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
+		mockRequest("https://ark-test.payvo.com/api/node/fees", "coins/ark/devnet/node-fees"),
+		mockRequest("https://ark-test.payvo.com/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://ark-test.payvo.com/api/peers", "coins/ark/devnet/peers"),
 
 		// mainnet
-		mockRequest("https://wallets.ark.io/api/node/configuration/crypto", "coins/ark/mainnet/cryptoConfiguration"),
-		mockRequest("https://wallets.ark.io/api/node/syncing", "coins/ark/mainnet/syncing"),
-		mockRequest("https://wallets.ark.io/api/node/fees", "coins/ark/mainnet/node-fees"),
+		mockRequest(
+			"https://ark-live.payvo.com/api/node/configuration/crypto",
+			"coins/ark/mainnet/cryptoConfiguration",
+		),
+		mockRequest("https://ark-live.payvo.com/api/node/syncing", "coins/ark/mainnet/syncing"),
+		mockRequest("https://ark-live.payvo.com/api/node/fees", "coins/ark/mainnet/node-fees"),
 	],
 	delegates: [
 		// devnet
-		mockRequest("https://dwallets.ark.io/api/delegates", "coins/ark/devnet/delegates"),
-		mockRequest("https://dwallets.ark.io/api/delegates?page=1", "coins/ark/devnet/delegates"),
-		mockRequest("https://dwallets.ark.io/api/delegates?page=2", "coins/ark/devnet/delegates"),
-		mockRequest("https://dwallets.ark.io/api/delegates?page=3", "coins/ark/devnet/delegates"),
-		mockRequest("https://dwallets.ark.io/api/delegates?page=4", "coins/ark/devnet/delegates"),
-		mockRequest("https://dwallets.ark.io/api/delegates?page=5", "coins/ark/devnet/delegates"),
+		mockRequest("https://ark-test.payvo.com/api/delegates", "coins/ark/devnet/delegates"),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=1", "coins/ark/devnet/delegates"),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=2", "coins/ark/devnet/delegates"),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=3", "coins/ark/devnet/delegates"),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=4", "coins/ark/devnet/delegates"),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=5", "coins/ark/devnet/delegates"),
 
 		// mainnet
-		mockRequest("https://wallets.ark.io/api/delegates", "coins/ark/mainnet/delegates"),
+		mockRequest("https://ark-live.payvo.com/api/delegates", "coins/ark/mainnet/delegates"),
 	],
 	exchange: [
 		mockRequest(
@@ -259,100 +289,100 @@ export const requestMocks = {
 
 	transactions: [
 		// devnet
-		mockRequest("https://dwallets.ark.io/api/transactions/fees", "coins/ark/devnet/transaction-fees"),
-		mockRequest("https://dwallets.ark.io/api/transactions?limit=10", "coins/ark/devnet/transactions"),
-		mockRequest("https://dwallets.ark.io/api/transactions?limit=20", "coins/ark/devnet/transactions"),
+		mockRequest("https://ark-test.payvo.com/api/transactions/fees", "coins/ark/devnet/transaction-fees"),
+		mockRequest("https://ark-test.payvo.com/api/transactions?limit=10", "coins/ark/devnet/transactions"),
+		mockRequest("https://ark-test.payvo.com/api/transactions?limit=20", "coins/ark/devnet/transactions"),
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://ark-test.payvo.com/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"coins/ark/devnet/transactions",
 		),
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"coins/ark/devnet/transactions",
 		),
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.payvo.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			"coins/ark/devnet/transactions",
 		),
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+			"https://ark-test.payvo.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
 			"coins/ark/devnet/transactions",
 		),
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.payvo.com/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/transactions",
 		),
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"coins/ark/devnet/notification-transactions",
 		),
 
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			"coins/ark/devnet/notification-transactions",
 		),
 
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/transactions",
 		),
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.payvo.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			"coins/ark/devnet/transactions",
 		),
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+			"https://ark-test.payvo.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
 			"coins/ark/devnet/transactions",
 		),
 		// unconfirmed transactions list before sending single or multiPayment transaction
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
 			"coins/ark/devnet/transactions",
 		),
 
 		mockRequest(
-			/https:\/\/dwallets\.ark\.io\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
+			/https:\/\/ark-test\.payvo\.com\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
 			"coins/ark/devnet/transactions",
 		),
 
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"coins/ark/devnet/transactions",
 		),
 
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			"coins/ark/devnet/transactions",
 		),
 
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
 			"coins/ark/devnet/transactions",
 		),
 
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/transactions",
 		),
 
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			{ data: [], meta: {} },
 		),
 
 		mockRequest(
-			"https://dwallets.ark.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			{ data: [], meta: {} },
 		),
 
 		// mainnet
-		mockRequest("https://wallets.ark.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
+		mockRequest("https://ark-live.payvo.com/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
 
 		...searchAddressesMocks(),
 	],
 	wallets: [
 		mockRequest(
-			"https://dwallets.ark.io/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
+			"https://ark-test.payvo.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
 			"coins/ark/devnet/votes",
 		),
 

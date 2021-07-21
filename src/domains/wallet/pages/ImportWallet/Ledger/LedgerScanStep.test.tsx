@@ -18,7 +18,7 @@ describe("LedgerScanStep", () => {
 	let publicKeyPaths = new Map();
 
 	beforeAll(() => {
-		nock("https://dwallets.ark.io/api")
+		nock("https://ark-test.payvo.com/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)
 			.reply(200, {

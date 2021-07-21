@@ -92,7 +92,7 @@ describe("SendTransfer", () => {
 		wallet = profile.wallets().first();
 		secondWallet = profile.wallets().last();
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
@@ -1728,11 +1728,11 @@ describe("SendTransfer", () => {
 	});
 
 	it("should send a multi payment", async () => {
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/wallets/DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T.json"));
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json"));
 

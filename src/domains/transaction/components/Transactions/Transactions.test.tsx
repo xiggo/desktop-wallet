@@ -39,7 +39,7 @@ describe("Transactions", () => {
 			meta: {},
 		};
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&typeGroup=2")
 			.reply(200, () => emptyResponse)
 			.get("/api/transactions?limit=30&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb&typeGroup=2")
@@ -48,7 +48,7 @@ describe("Transactions", () => {
 			.reply(200, () => emptyResponse)
 			.persist();
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
 			.reply(200, () => emptyResponse)
 			.get("/api/transactions?page=2&limit=30&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb")
@@ -57,7 +57,7 @@ describe("Transactions", () => {
 			.reply(200, () => emptyResponse)
 			.persist();
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => {
@@ -360,7 +360,7 @@ describe("Transactions", () => {
 		nock.cleanAll();
 		const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => ({

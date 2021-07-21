@@ -11,7 +11,7 @@ describe("useProfileTransactions", () => {
 	beforeAll(async () => {
 		useDefaultNetMocks();
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"))

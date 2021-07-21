@@ -29,7 +29,7 @@ describe("Add Participant", () => {
 	});
 
 	it("should fail to find", async () => {
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/wallets")
 			.query({ address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba" })
 			.reply(404);
@@ -59,7 +59,7 @@ describe("Add Participant", () => {
 	});
 
 	it("should fail with cold wallet", async () => {
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/wallets")
 			.query({ address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P" })
 			.reply(200, {
@@ -131,7 +131,7 @@ describe("Add Participant", () => {
 	});
 
 	it("should fail if cannot find the address remotely", async () => {
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/wallets")
 			.query({ address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20" })
 			.reply(200, {
@@ -192,7 +192,7 @@ describe("Add Participant", () => {
 	});
 
 	it("should work with a remote wallet", async () => {
-		const scope = nock("https://dwallets.ark.io")
+		const scope = nock("https://ark-test.payvo.com")
 			.get("/api/wallets")
 			.query((parameters) => !!parameters.address)
 			.reply(200, {

@@ -12,7 +12,7 @@ createFixture(`Save settings`, [
 	mockRequest(
 		{
 			method: "POST",
-			url: "https://wallets.ark.io/api/transactions/search?page=1&limit=20",
+			url: "https://ark-live.payvo.com/api/transactions/search?page=1&limit=20",
 		},
 		{
 			addresses: ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"],
@@ -21,7 +21,7 @@ createFixture(`Save settings`, [
 	mockRequest(
 		{
 			method: "POST",
-			url: "https://wallets.ark.io/api/transactions/search?limit=30",
+			url: "https://ark-live.payvo.com/api/transactions/search?limit=30",
 		},
 		{
 			addresses: ["AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"],

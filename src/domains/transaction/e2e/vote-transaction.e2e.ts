@@ -10,7 +10,7 @@ const translations = buildTranslations();
 const transactionMock = mockRequest(
 	{
 		method: "POST",
-		url: "https://dwallets.ark.io/api/transactions",
+		url: "https://ark-test.payvo.com/api/transactions",
 	},
 	{
 		data: {
@@ -25,7 +25,7 @@ const transactionMock = mockRequest(
 const walletMock = mockRequest(
 	{
 		method: "POST",
-		url: "https://dwallets.ark.io/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		url: "https://ark-test.payvo.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 	},
 	{
 		data: {

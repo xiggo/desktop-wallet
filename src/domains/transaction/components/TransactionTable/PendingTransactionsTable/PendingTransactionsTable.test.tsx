@@ -40,7 +40,7 @@ describe("Signed Transaction Table", () => {
 
 	beforeAll(() => {
 		nock.disableNetConnect();
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => {

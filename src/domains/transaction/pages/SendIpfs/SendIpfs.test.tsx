@@ -52,7 +52,7 @@ describe("SendIpfs", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions")
 			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))

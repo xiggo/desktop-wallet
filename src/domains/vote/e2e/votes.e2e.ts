@@ -1,7 +1,7 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { createFixture, mockRequest } from "../../../utils/e2e-utils";
+import { createFixture, mockMuSigRequest, mockRequest } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { goToWallet } from "../../wallet/e2e/common";
 
@@ -10,7 +10,7 @@ const translations = buildTranslations();
 const transactionMock = mockRequest(
 	{
 		method: "POST",
-		url: "https://dwallets.ark.io/api/transactions",
+		url: "https://ark-test.payvo.com/api/transactions",
 	},
 	{
 		data: {
@@ -25,7 +25,7 @@ const transactionMock = mockRequest(
 const walletMock = mockRequest(
 	{
 		method: "POST",
-		url: "https://dwallets.ark.io/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		url: "https://ark-test.payvo.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 	},
 	{
 		data: {
@@ -50,15 +50,11 @@ const walletMock = mockRequest(
 createFixture("Votes", [
 	transactionMock,
 	walletMock,
-	mockRequest(
-		{
-			method: "POST",
-			url: "https://dmusig1.ark.io/transaction",
-		},
-		{
+	mockMuSigRequest("https://ark-test-musig.payvo.com", "store", {
+		result: {
 			id: "transaction-id",
 		},
-	),
+	}),
 ]);
 
 test("should navigate to votes page from navigation bar", async (t) => {

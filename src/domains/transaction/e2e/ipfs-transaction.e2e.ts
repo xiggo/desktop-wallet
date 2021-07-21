@@ -1,7 +1,7 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { createFixture, MNEMONICS, mockRequest } from "../../../utils/e2e-utils";
+import { createFixture, MNEMONICS, mockMuSigRequest, mockRequest } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 import { goToWallet, importWallet } from "../../wallet/e2e/common";
 
@@ -11,7 +11,7 @@ createFixture("IPFS Transaction action", [
 	mockRequest(
 		{
 			method: "POST",
-			url: "https://dwallets.ark.io/api/transactions",
+			url: "https://ark-test.payvo.com/api/transactions",
 		},
 		{
 			data: {
@@ -22,15 +22,11 @@ createFixture("IPFS Transaction action", [
 			},
 		},
 	),
-	mockRequest(
-		{
-			method: "POST",
-			url: "https://dmusig1.ark.io/transaction",
-		},
-		{
+	mockMuSigRequest("https://ark-test-musig.payvo.com", "store", {
+		result: {
 			id: "transaction-id",
 		},
-	),
+	}),
 ]);
 
 test("should send IPFS successfully", async (t) => {

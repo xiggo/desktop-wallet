@@ -12,7 +12,7 @@ createFixture("Multiple Transfer action", [
 	mockRequest(
 		{
 			method: "POST",
-			url: "https://dwallets.ark.io/api/transactions",
+			url: "https://ark-test.payvo.com/api/transactions",
 		},
 		{
 			data: {

@@ -35,7 +35,7 @@ describe("App", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/transactions")
 			.query({ limit: 20 })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/notification-transactions.json"))

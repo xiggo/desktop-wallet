@@ -12,7 +12,7 @@ let notification: any;
 
 describe("Notifications", () => {
 	beforeAll(() => {
-		nock("https://dwallets.ark.io").get("/api/transactions").query(true).reply(200, {
+		nock("https://ark-test.payvo.com").get("/api/transactions").query(true).reply(200, {
 			data: TransactionsFixture.data,
 			meta: TransactionsFixture.meta,
 		});

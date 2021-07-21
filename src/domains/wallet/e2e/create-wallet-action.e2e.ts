@@ -1,7 +1,7 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations as translations } from "../../../app/i18n/helpers";
-import { BASEURL, createFixture, mockRequest } from "../../../utils/e2e-utils";
+import { BASEURL, createFixture, mockMuSigRequest, mockRequest } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 
 // match(new RegExp(base + "wallets\/([-0-9a-zA-Z]{1,34})"))
@@ -33,13 +33,7 @@ createFixture(
 				},
 			},
 		),
-		mockRequest(
-			(request: any) =>
-				!!new RegExp(
-					"https://dmusig1.ark.io/transactions\\?publicKey=([-0-9a-zA-Z]{1,66})&state=(ready|pending)",
-				).test(request.url),
-			[],
-		),
+		mockMuSigRequest("https://ark-test-musig.payvo.com", "list", { result: [] }),
 	],
 );
 

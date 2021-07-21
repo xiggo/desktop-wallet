@@ -6,7 +6,7 @@ import { defaultNetMocks, env, waitFor } from "utils/testing-library";
 import { HttpPluginService } from "./HttpPluginService";
 
 const config = {
-	"desktop-wallet": { permissions: ["HTTP"], urls: ["https://dwallets.ark.io"] },
+	"desktop-wallet": { permissions: ["HTTP"], urls: ["https://ark-test.payvo.com"] },
 	name: "test",
 	version: "1.1",
 };
@@ -31,7 +31,7 @@ describe("HttpPluginService", () => {
 		let response: any;
 
 		const fixture = async (api: PluginAPI) => {
-			const result = await api.http().create().get("https://dwallets.ark.io/api/node/fees");
+			const result = await api.http().create().get("https://ark-test.payvo.com/api/node/fees");
 			response = result.json();
 		};
 
@@ -52,7 +52,7 @@ describe("HttpPluginService", () => {
 		let response: any;
 
 		const fixture = async (api: PluginAPI) => {
-			const result = await api.http().get("https://dwallets.ark.io/api/node/fees");
+			const result = await api.http().get("https://ark-test.payvo.com/api/node/fees");
 			response = result.json();
 		};
 
@@ -75,7 +75,7 @@ describe("HttpPluginService", () => {
 
 		const fixture = (api: PluginAPI) => {
 			api.http()
-				.get("https://wallets.ark.io")
+				.get("https://ark-live.payvo.com")
 				.then((result) => result.json())
 				.catch((error) => console.log(error));
 		};

@@ -112,7 +112,7 @@ describe("WalletDetails", () => {
 
 		await syncDelegates(profile);
 
-		nock("https://dwallets.ark.io")
+		nock("https://ark-test.payvo.com")
 			.get("/api/delegates")
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
@@ -435,7 +435,7 @@ describe("WalletDetails", () => {
 
 		profile.wallets().push(newWallet);
 
-		nock("https://dwallets.ark.io").get(`/api/wallets/${newWallet.address()}`).reply(200, walletMock);
+		nock("https://ark-test.payvo.com").get(`/api/wallets/${newWallet.address()}`).reply(200, walletMock);
 
 		await newWallet.synchroniser().identity();
 

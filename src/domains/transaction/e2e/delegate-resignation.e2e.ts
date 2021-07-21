@@ -12,7 +12,7 @@ createFixture("Delegate Resignation action", [
 	mockRequest(
 		{
 			method: "POST",
-			url: "https://dwallets.ark.io/api/transactions",
+			url: "https://ark-test.payvo.com/api/transactions",
 		},
 		{
 			data: {
@@ -23,7 +23,7 @@ createFixture("Delegate Resignation action", [
 			},
 		},
 	),
-	mockRequest("https://dwallets.ark.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
+	mockRequest("https://ark-test.payvo.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
 		data: {
 			address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			attributes: {
