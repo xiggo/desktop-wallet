@@ -21,14 +21,14 @@ export const common = (t: any) => ({
 					});
 				}
 
-				if (fee > balance) {
+				if (+fee > balance) {
 					return t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 						balance,
 						coinId: network.coin(),
 					});
 				}
 
-				if (fee === 0 && network && !network.chargesZeroFees()) {
+				if (+fee === 0 && network && !network.chargesZeroFees()) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: t("COMMON.FEE"),
 					});
