@@ -7,17 +7,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import multiSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import { TransactionFees } from "types";
-import {
-	act,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	MNEMONICS,
-	render,
-	screen,
-	syncFees,
-	waitFor,
-} from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "utils/testing-library";
 
 import { translations as transactionTranslations } from "../../i18n";
 import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
@@ -28,27 +18,15 @@ describe("MultiSignature Registration Form", () => {
 	let wallet2: ProfilesContracts.IReadWriteWallet;
 	let fees: TransactionFees;
 
-	const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
-		// @ts-ignore
-		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-			amount: () => multiSignatureFixture.data.amount / 1e8,
-			data: () => ({ data: () => multiSignatureFixture.data }),
-			explorerLink: () => `https://dexplorer.ark.io/transaction/${multiSignatureFixture.data.id}`,
-			fee: () => multiSignatureFixture.data.fee / 1e8,
-			id: () => multiSignatureFixture.data.id,
-			recipient: () => multiSignatureFixture.data.recipient,
-			sender: () => multiSignatureFixture.data.sender,
-		});
-
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 		wallet2 = profile.wallets().last();
 		fees = {
-			avg: "1.354",
-			max: "10",
-			min: "0",
-			static: "0",
+			avg: 1.354,
+			max: 10,
+			min: 0,
+			static: 0,
 		};
 
 		await profile.sync();
@@ -208,108 +186,5 @@ describe("MultiSignature Registration Form", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionDetail")).toBeTruthy());
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should sign transaction", async () => {
-		const form = {
-			clearErrors: jest.fn(),
-			getValues: () => ({
-				fee: "1",
-				minParticipants: 2,
-				mnemonic: MNEMONICS[0],
-				participants: [
-					{
-						address: wallet.address(),
-						publicKey: wallet.publicKey()!,
-					},
-					{
-						address: wallet2.address(),
-						publicKey: wallet2.publicKey()!,
-					},
-				],
-				senderAddress: wallet.address(),
-			}),
-			setError: jest.fn(),
-			setValue: jest.fn(),
-		};
-		const signMock = jest
-			.spyOn(wallet.transaction(), "signMultiSignature")
-			.mockReturnValue(Promise.resolve(multiSignatureFixture.data.id));
-		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockImplementation();
-		const broadcastMock = jest
-			.spyOn(wallet.transaction(), "broadcast")
-			.mockResolvedValue({ accepted: ["id"], errors: {}, rejected: [] });
-		const transactionMock = createTransactionMock(wallet);
-
-		await MultiSignatureRegistrationForm.signTransaction({
-			env,
-			form,
-			profile,
-		});
-
-		expect(signMock).toHaveBeenCalled();
-		expect(addSignatureMock).toHaveBeenCalled();
-		expect(broadcastMock).toHaveBeenCalled();
-		expect(transactionMock).toHaveBeenCalled();
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-	});
-
-	it("should sign transaction using encryption password", async () => {
-		const walletUsesWIFMock = jest.spyOn(wallet.wif(), "exists").mockReturnValue(true);
-		const walletWifMock = jest.spyOn(wallet.wif(), "get").mockImplementation(() => {
-			const wif = "S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV";
-			return Promise.resolve(wif);
-		});
-
-		const form = {
-			clearErrors: jest.fn(),
-			getValues: () => ({
-				encryptionPassword: "password",
-				fee: "1",
-				minParticipants: 2,
-				mnemonic: MNEMONICS[0],
-				participants: [
-					{
-						address: wallet.address(),
-						publicKey: wallet.publicKey()!,
-					},
-					{
-						address: wallet2.address(),
-						publicKey: wallet2.publicKey()!,
-					},
-				],
-				senderAddress: wallet.address(),
-			}),
-			setError: jest.fn(),
-			setValue: jest.fn(),
-		};
-		const signMock = jest
-			.spyOn(wallet.transaction(), "signMultiSignature")
-			.mockReturnValue(Promise.resolve(multiSignatureFixture.data.id));
-		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockImplementation();
-		const broadcastMock = jest
-			.spyOn(wallet.transaction(), "broadcast")
-			.mockResolvedValue({ accepted: ["id"], errors: {}, rejected: [] });
-		const transactionMock = createTransactionMock(wallet);
-
-		await MultiSignatureRegistrationForm.signTransaction({
-			env,
-			form,
-			profile,
-		});
-
-		expect(signMock).toHaveBeenCalled();
-		expect(addSignatureMock).toHaveBeenCalled();
-		expect(broadcastMock).toHaveBeenCalled();
-		expect(transactionMock).toHaveBeenCalled();
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-		walletUsesWIFMock.mockRestore();
-		walletWifMock.mockRestore();
 	});
 });
