@@ -46,14 +46,10 @@ const ControlButtonStyled = styled.button<{ noBorder?: boolean; disabled?: boole
 	}}
 `;
 
-interface ControlButtonProperties {
-	className?: string;
+type ControlButtonProperties = {
 	isChanged?: boolean;
 	noBorder?: boolean;
-	disabled?: boolean;
-	children?: React.ReactNode;
-	onClick?: any;
-}
+} & React.ButtonHTMLAttributes<any>;
 
 export const ControlButton = ({ isChanged, children, className, ...properties }: ControlButtonProperties) => (
 	<div className="group">
