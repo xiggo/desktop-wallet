@@ -49,12 +49,13 @@ const CreateProfileForm = ({
 		mode: "onChange",
 	});
 
-	const { watch, register, formState, setValue, trigger } = form;
-	const { name, confirmPassword, isDarkMode, currency } = watch([
-		"name",
+	const { watch, register, formState, setValue, trigger, getValues } = form;
+	const { confirmPassword, currency, isDarkMode, name, password: watchedPassword } = watch([
 		"confirmPassword",
 		"currency",
 		"isDarkMode",
+		"name",
+		"password",
 	]);
 
 	const [avatarImage, setAvatarImage] = useState(profile?.avatar());
@@ -83,6 +84,12 @@ const CreateProfileForm = ({
 			setValue("isDarkMode", true);
 		}
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+	useEffect(() => {
+		if (getValues("confirmPassword")) {
+			trigger("confirmPassword");
+		}
+	}, [watchedPassword, trigger, getValues]);
 
 	useEffect(() => {
 		const newTheme = isDarkMode ? "dark" : "light";
@@ -155,24 +162,20 @@ const CreateProfileForm = ({
 						{showPasswordFields && (
 							<>
 								<FormField name="password">
-									<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")} optional />
-									<InputPassword
-										ref={register(passwordValidation.password())}
-										onChange={() => {
-											if (confirmPassword) {
-												trigger("confirmPassword");
-											}
-										}}
+									<FormLabel
+										label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")}
+										optional={!watchedPassword && !confirmPassword}
 									/>
+									<InputPassword ref={register(passwordValidation.password())} />
 								</FormField>
 
 								<FormField name="confirmPassword">
 									<FormLabel
 										label={t("SETTINGS.GENERAL.PERSONAL.CONFIRM_PASSWORD")}
-										optional={!watch("password")}
+										optional={!watchedPassword && !confirmPassword}
 									/>
 									<InputPassword
-										ref={register(passwordValidation.confirmOptionalPassword(watch("password")!))}
+										ref={register(passwordValidation.confirmOptionalPassword(watchedPassword))}
 									/>
 								</FormField>
 							</>

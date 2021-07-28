@@ -39,7 +39,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		const { container, getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
-				<ImportProfileForm env={env} profile={profile} showCurrencyField={true} showThemeToggleField={true} />
+				<ImportProfileForm env={env} profile={profile} />
 			</EnvironmentProvider>,
 		);
 
@@ -70,12 +70,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		const { container, getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
-				<ImportProfileForm
-					env={env}
-					profile={emptyProfile}
-					showCurrencyField={true}
-					showThemeToggleField={true}
-				/>
+				<ImportProfileForm env={env} profile={emptyProfile} />
 			</EnvironmentProvider>,
 		);
 
@@ -88,12 +83,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = env.profiles().create("test3");
 		const { asFragment, container, getAllByTestId, getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
-				<ImportProfileForm
-					env={env}
-					profile={emptyProfile}
-					showCurrencyField={true}
-					showThemeToggleField={true}
-				/>
+				<ImportProfileForm env={env} profile={emptyProfile} />
 			</EnvironmentProvider>,
 		);
 
@@ -123,7 +113,7 @@ describe("Import Profile - Profile Form Step", () => {
 		expect(emptyProfile.usesPassword()).toBe(false);
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile 2" } });
-		fireEvent.click(container.querySelector("input[name=isDarkMode]"));
+		fireEvent.click(container.querySelector("input[name=isDarkMode]")!);
 
 		await act(async () => {
 			fireEvent.click(getByTestId("CreateProfile__submit-button"));
@@ -142,7 +132,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		const { asFragment, container, getAllByTestId, getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
-				<ImportProfileForm env={env} showCurrencyField={true} showThemeToggleField={true} />
+				<ImportProfileForm env={env} />
 			</EnvironmentProvider>,
 		);
 
@@ -170,7 +160,7 @@ describe("Import Profile - Profile Form Step", () => {
 		});
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "profile2" } });
-		fireEvent.click(container.querySelector("input[name=isDarkMode]"));
+		fireEvent.click(container.querySelector("input[name=isDarkMode]")!);
 
 		await act(async () => {
 			fireEvent.change(getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword" } });
@@ -189,12 +179,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = env.profiles().create("test4");
 		const { asFragment, getAllByTestId, getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
-				<ImportProfileForm
-					env={env}
-					profile={emptyProfile}
-					showCurrencyField={true}
-					showThemeToggleField={true}
-				/>
+				<ImportProfileForm env={env} profile={emptyProfile} />
 			</EnvironmentProvider>,
 		);
 
@@ -204,20 +189,22 @@ describe("Import Profile - Profile Form Step", () => {
 		fireEvent.focus(selectDropdown);
 		fireEvent.click(getByTestId("SelectDropdown__option--0"));
 
-		fireEvent.change(getAllByTestId("InputPassword")[0], { target: { value: "test password" } });
-		fireEvent.change(getAllByTestId("InputPassword")[1], { target: { value: "wrong" } });
+		fireEvent.change(getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!&" } });
+		fireEvent.change(getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
 
 		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
-		fireEvent.input(getAllByTestId("InputPassword")[0], { target: { value: "password" } });
-		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "password" } });
+		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!&" } });
 
 		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
 
-		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "test password" } });
-		fireEvent.input(getAllByTestId("InputPassword")[0], { target: { value: "wrong" } });
+		fireEvent.input(getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!" } });
 
 		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+
+		fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
+
+		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -228,13 +215,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		const { asFragment, getAllByTestId, getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
-				<ImportProfileForm
-					env={env}
-					profile={emptyProfile}
-					showThemeToggleField={false}
-					showCurrencyField={false}
-					shouldValidate
-				/>
+				<ImportProfileForm env={env} profile={emptyProfile} shouldValidate />
 			</EnvironmentProvider>,
 		);
 
