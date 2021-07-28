@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { screen } from "@testing-library/react";
 import { EnvironmentProvider } from "app/contexts";
 import { ImportProfile } from "domains/profile/pages/ImportProfile/ImportProfile";
 import fs from "fs";
@@ -8,6 +9,8 @@ import { act, env, fireEvent, renderWithRouter, waitFor } from "utils/testing-li
 
 const passwordProtectedDwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.dwe");
 const corruptedDwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupted-profile.dwe");
+const darkThemeDwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-dark-theme.dwe");
+const lightThemeDwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-light-theme.dwe");
 const history = createMemoryHistory();
 
 describe("ImportProfile", () => {
@@ -210,6 +213,43 @@ describe("ImportProfile", () => {
 		fireEvent.click(getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+	});
+
+	it.each([
+		["dark", darkThemeDwe],
+		["light", lightThemeDwe],
+	])("should apply theme setting of imported profile regardless of OS preferences", async (theme, dweFile) => {
+		history.push(`/profiles/import`);
+
+		jest.spyOn(fs, "readFileSync").mockReturnValueOnce(dweFile);
+
+		const { asFragment } = renderWithRouter(
+			<EnvironmentProvider env={env}>
+				<ImportProfile />
+			</EnvironmentProvider>,
+			{ history },
+		);
+
+		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
+
+		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+			},
+		});
+
+		await waitFor(() => expect(screen.getByTestId("ProcessingImport")).toBeInTheDocument());
+
+		expect(screen.getByRole("checkbox")).toHaveAttribute("name", "isDarkMode");
+
+		if (theme === "dark") {
+			expect(screen.getByRole("checkbox")).toBeChecked();
+		} else {
+			expect(screen.getByRole("checkbox")).not.toBeChecked();
+		}
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should go to step 3 and back", async () => {
