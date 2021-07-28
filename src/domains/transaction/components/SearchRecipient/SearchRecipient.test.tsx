@@ -1,124 +1,226 @@
 import { Contracts } from "@payvo/profiles";
-import { fireEvent } from "@testing-library/react";
+import { fireEvent, waitFor, within } from "@testing-library/react";
 import React from "react";
-import { act, env, getDefaultProfileId, render, waitFor } from "testing-library";
+import { act, env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { SearchRecipient } from "./SearchRecipient";
+import { RecipientProperties } from "./SearchRecipient.models";
 
-let profile: Contracts.IProfile;
+let recipients: RecipientProperties[];
 
 describe("SearchRecipient", () => {
-	let newContact: Contracts.IContact;
+	beforeAll(() => {
+		const profile: Contracts.IProfile = env.profiles().findById(getDefaultProfileId());
+		const wallets: Contracts.IReadWriteWallet[] = profile.wallets().values();
 
-	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		await env.profiles().restore(profile);
-
-		newContact = profile.contacts().create("New Contact");
-		await profile.contacts().update(newContact.id(), {
-			addresses: [
-				{
-					address: "DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T",
-					coin: "ARK",
-					name: "DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T",
-					network: "ark.devnet",
-				},
-				{
-					address: "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-					coin: "ARK",
-					name: "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-					network: "ark.devnet",
-				},
-				{
-					address: "DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
-					coin: "ARK",
-					name: "DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
-					network: "ark.devnet",
-				},
-			],
-		});
+		recipients = wallets.map((wallet) => ({
+			address: wallet.address(),
+			alias: wallet.alias(),
+			avatar: wallet.avatar(),
+			id: wallet.id(),
+			network: wallet.networkId(),
+			type: "wallet",
+		}));
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(
-			<SearchRecipient isOpen={false} profile={profile} onAction={jest.fn} />,
-		);
+		const { asFragment } = render(<SearchRecipient isOpen={false} recipients={recipients} onAction={jest.fn} />);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = render(
-			<SearchRecipient isOpen={true} profile={profile} onAction={jest.fn} />,
-		);
+		const { asFragment } = render(<SearchRecipient isOpen={true} recipients={recipients} onAction={jest.fn} />);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION);
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should handle close", () => {
+		const onClose = jest.fn();
+
+		render(<SearchRecipient isOpen={true} recipients={recipients} onClose={onClose} onAction={jest.fn} />);
+
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
+
+		expect(onClose).toHaveBeenCalled();
 	});
 
 	it("should render a modal with custom title and description", () => {
 		const title = "Modal title";
 		const description = "Modal description";
-		const { asFragment, getByTestId } = render(
+		const { asFragment } = render(
 			<SearchRecipient
 				isOpen={true}
-				profile={profile}
+				recipients={recipients}
 				title={title}
 				description={description}
 				onAction={jest.fn()}
 			/>,
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent("Modal title");
-		expect(getByTestId("modal__inner")).toHaveTextContent("Modal description");
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent("Modal title");
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent("Modal description");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should not render recipient if not in same network", () => {
-		const coin = profile.coins().set("ARK", "ark.mainnet");
-		const { asFragment, getByTestId } = render(
-			<SearchRecipient isOpen={true} profile={profile} network={coin.network()} onAction={jest.fn()} />,
+	it("should filter recipients by address", async () => {
+		jest.useFakeTimers();
+
+		render(<SearchRecipient isOpen={true} recipients={recipients} onAction={jest.fn} />);
+
+		await waitFor(() =>
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
+		);
+		await waitFor(() =>
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+				translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION,
+			),
 		);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION);
-		expect(() => getByTestId("TableRow")).toThrow();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should not render recipient if not in same network", () => {
-		const coin = profile.coins().set("ARK", "ark.devnet");
-		const mockContactNetwork = jest.spyOn(newContact.addresses().last(), "network").mockReturnValue("ark.mainnet");
-		const { asFragment, getByTestId } = render(
-			<SearchRecipient isOpen={true} profile={profile} network={coin.network()} onAction={jest.fn()} />,
-		);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION);
-		expect(() => getByTestId("TableRow")).toThrow();
-		expect(asFragment()).toMatchSnapshot();
-
-		mockContactNetwork.mockRestore();
-	});
-
-	it("should not render recipient if network is missing", async () => {
-		const onAction = jest.fn();
-		const { getAllByTestId, getByTestId } = render(
-			<SearchRecipient isOpen={true} profile={profile} onAction={onAction} />,
-		);
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION);
-
-		await waitFor(() => expect(getAllByTestId("RecipientListItem__select-button").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
 		act(() => {
-			fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		expect(onAction).toHaveBeenCalled();
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(searchInput).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
+		});
+
+		act(() => {
+			jest.advanceTimersByTime(100);
+		});
+
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+		jest.useRealTimers();
+	});
+
+	it("should filter recipients by alias", async () => {
+		jest.useFakeTimers();
+
+		render(<SearchRecipient isOpen={true} recipients={recipients} onAction={jest.fn} />);
+
+		await waitFor(() =>
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
+		);
+		await waitFor(() =>
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+				translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION,
+			),
+		);
+
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+
+		act(() => {
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(searchInput).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
+		});
+
+		act(() => {
+			jest.advanceTimersByTime(100);
+		});
+
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+		jest.useRealTimers();
+	});
+
+	it("should reset recipient search", async () => {
+		jest.useFakeTimers();
+
+		render(<SearchRecipient isOpen={true} recipients={recipients} onAction={jest.fn} />);
+
+		await waitFor(() =>
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
+		);
+		await waitFor(() =>
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+				translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION,
+			),
+		);
+
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+
+		act(() => {
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(searchInput).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
+		});
+
+		act(() => {
+			jest.advanceTimersByTime(100);
+		});
+
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+
+		// Reset search
+		act(() => {
+			fireEvent.click(screen.getByTestId("header-search-bar__reset"));
+		});
+
+		await waitFor(() => expect(searchInput).toHaveValue(""));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+
+		jest.useRealTimers();
+	});
+
+	it("should not find recipient and show empty results screen", async () => {
+		jest.useFakeTimers();
+
+		render(<SearchRecipient isOpen={true} recipients={recipients} onAction={jest.fn} />);
+
+		await waitFor(() =>
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
+		);
+		await waitFor(() =>
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+				translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION,
+			),
+		);
+
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
+
+		act(() => {
+			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
+		await waitFor(() => expect(searchInput).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.change(searchInput, { target: { value: "non-existent recipient address" } });
+		});
+
+		act(() => {
+			jest.advanceTimersByTime(100);
+		});
+
+		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non-existent recipient address"));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
+
+		await waitFor(() => expect(screen.getByTestId("EmptyResults")).toBeInTheDocument());
+
+		jest.useRealTimers();
 	});
 });

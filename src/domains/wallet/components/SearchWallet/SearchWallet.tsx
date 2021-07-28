@@ -1,5 +1,4 @@
 import { Contracts } from "@payvo/profiles";
-import { Networks } from "@payvo/sdk";
 import { Address } from "app/components/Address";
 import { Amount, AmountCrypto } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
@@ -8,27 +7,12 @@ import { EmptyResults } from "app/components/EmptyResults";
 import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
 import { Modal } from "app/components/Modal";
 import { Table, TableCell, TableRow } from "app/components/Table";
+import { useSearchWallet } from "app/hooks/use-search-wallet";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Size } from "types";
 
-import { SelectedWallet } from "./SearchWallet.models";
-
-interface SearchWalletListItemProperties {
-	address: string;
-	balance: number;
-	convertedBalance: number;
-	currency: string;
-	disabled?: boolean;
-	exchangeCurrency: string;
-	index: number;
-	name?: string;
-	network: Networks.Network;
-	showConvertedValue?: boolean;
-	showNetwork?: boolean;
-	onAction: (wallet: SelectedWallet) => void;
-}
+import { SearchWalletListItemProperties, SearchWalletProperties } from "./SearchWallet.models";
 
 const SearchWalletListItem = ({
 	address,
@@ -80,21 +64,6 @@ const SearchWalletListItem = ({
 	);
 };
 
-interface SearchWalletProperties {
-	isOpen: boolean;
-	title: string;
-	description?: string;
-	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
-	wallets: Contracts.IReadWriteWallet[];
-	searchPlaceholder?: string;
-	size?: Size;
-	showConvertedValue?: boolean;
-	showNetwork?: boolean;
-	onClose?: any;
-	onSelectWallet: (wallet: SelectedWallet) => void;
-	profile?: Contracts.IProfile;
-}
-
 export const SearchWallet = ({
 	isOpen,
 	title,
@@ -109,7 +78,7 @@ export const SearchWallet = ({
 	onSelectWallet,
 	profile,
 }: SearchWalletProperties) => {
-	const [query, setQuery] = useState("");
+	const { setSearchKeyword, filteredList: filteredWallets, isEmptyResults } = useSearchWallet(wallets);
 
 	const { t } = useTranslation();
 
@@ -139,8 +108,8 @@ export const SearchWallet = ({
 						<HeaderSearchBar
 							placeholder={searchPlaceholder}
 							offsetClassName="top-1/3 -translate-y-16 -translate-x-6"
-							onSearch={setQuery}
-							onReset={() => setQuery("")}
+							onSearch={setSearchKeyword}
+							onReset={() => setSearchKeyword("")}
 							debounceTimeout={100}
 							noToggleBorder
 						/>
@@ -159,8 +128,8 @@ export const SearchWallet = ({
 					<HeaderSearchBar
 						placeholder={searchPlaceholder}
 						offsetClassName="top-1/3 -translate-y-16 -translate-x-6"
-						onSearch={setQuery}
-						onReset={() => setQuery("")}
+						onSearch={setSearchKeyword}
+						onReset={() => setSearchKeyword("")}
 						debounceTimeout={100}
 						noToggleBorder
 					/>
@@ -170,21 +139,7 @@ export const SearchWallet = ({
 				disableSortBy: true,
 			},
 		];
-	}, [searchPlaceholder, showConvertedValue, t]);
-
-	const filteredWallets = useMemo(() => {
-		if (query.length === 0) {
-			return wallets;
-		}
-
-		return wallets.filter(
-			(wallet) =>
-				wallet.address().toLowerCase().includes(query.toLowerCase()) ||
-				wallet.alias()?.toLowerCase()?.includes(query.toLowerCase()),
-		);
-	}, [wallets, query]);
-
-	const isEmptyResults = query.length > 0 && filteredWallets.length === 0;
+	}, [searchPlaceholder, setSearchKeyword, showConvertedValue, t]);
 
 	return (
 		<Modal title={title} description={description} isOpen={isOpen} size={size} onClose={onClose}>
