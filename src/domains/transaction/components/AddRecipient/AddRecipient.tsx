@@ -6,7 +6,7 @@ import { Icon } from "app/components/Icon";
 import { InputCurrency } from "app/components/Input";
 import { Switch } from "app/components/Switch";
 import { Tooltip } from "app/components/Tooltip";
-import { useValidation } from "app/hooks";
+import { useValidation, WalletAliasResult } from "app/hooks";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";
 import cn from "classnames";
 import { SelectRecipient } from "domains/profile/components/SelectRecipient";
@@ -74,11 +74,11 @@ const InputButtonStyled = styled.button(() => [
 ]);
 
 export const AddRecipient = ({
-	assetSymbol,
+	assetSymbol = "ARK",
 	profile,
 	wallet,
-	recipients,
-	showMultiPaymentOption,
+	recipients = [],
+	showMultiPaymentOption = true,
 	disableMultiPaymentOption,
 	withDeeplink,
 	onChange,
@@ -100,10 +100,8 @@ export const AddRecipient = ({
 		clearErrors,
 		formState: { errors },
 	} = useFormContext();
-	const { network, senderAddress, fee, recipientAddress, amount } = watch();
+	const { network, senderAddress, fee, recipientAddress, amount, recipientAlias } = watch();
 	const { sendTransfer } = useValidation();
-
-	const [recipientAlias, setRecipientAlias] = useState<string>("");
 
 	const ticker = network?.ticker();
 	const exchangeTicker = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency) as string;
@@ -138,6 +136,7 @@ export const AddRecipient = ({
 	useEffect(() => {
 		register("remainingBalance");
 		register("isSendAllSelected");
+		register("recipientAlias");
 	}, [register]);
 
 	useEffect(() => {
@@ -236,30 +235,42 @@ export const AddRecipient = ({
 	}, []);
 	//endregion
 
-	const singleRecipientOnChange = (amountValue: number, recipientAddressValue: string, alias?: string) => {
+	const singleRecipientOnChange = ({
+		address,
+		alias,
+		amount,
+	}: {
+		address: string | undefined;
+		alias?: WalletAliasResult;
+		amount: string | number | undefined;
+	}) => {
 		if (!isSingle) {
 			return;
 		}
 
-		if (!recipientAddressValue || !amountValue) {
+		if (!address || !amount) {
 			return onChange?.([]);
 		}
 
 		onChange?.([
 			{
-				address: recipientAddressValue,
-				alias: alias ?? recipientAlias,
-				amount: +amountValue,
+				address,
+				alias: alias?.alias,
+				amount: +amount,
+				isDelegate: alias?.isDelegate,
 			},
 		]);
 	};
 
-	const handleAddRecipient = (address: string, amount: number, displayAmount: string) => {
+	const handleAddRecipient = () => {
+		const amount = getValues("amount");
+
 		let newRecipient: RecipientListItem = {
-			address,
-			alias: recipientAlias,
-			amount: +amount,
-			displayAmount,
+			address: recipientAddress,
+			alias: recipientAlias?.alias,
+			amount,
+			displayAmount: amount,
+			isDelegate: recipientAlias?.isDelegate,
 		};
 
 		/* istanbul ignore next */
@@ -333,10 +344,14 @@ export const AddRecipient = ({
 							address={recipientAddress}
 							profile={profile}
 							placeholder={t("COMMON.ADDRESS")}
-							onChange={(address: string, alias: string) => {
+							onChange={(address, alias) => {
 								setValue("recipientAddress", address, { shouldDirty: true, shouldValidate: true });
-								setRecipientAlias(alias);
-								singleRecipientOnChange(getValues("amount"), address, alias);
+								setValue("recipientAlias", alias);
+								singleRecipientOnChange({
+									address,
+									alias,
+									amount: getValues("amount"),
+								});
 							}}
 						/>
 					</FormField>
@@ -364,7 +379,11 @@ export const AddRecipient = ({
 										setValue("isSendAllSelected", false);
 										setValue("displayAmount", amount);
 										setValue("amount", amount, { shouldDirty: true, shouldValidate: true });
-										singleRecipientOnChange(+amount, recipientAddress);
+										singleRecipientOnChange({
+											address: recipientAddress,
+											alias: recipientAlias,
+											amount,
+										});
 									}}
 								/>
 							</div>
@@ -389,7 +408,11 @@ export const AddRecipient = ({
 													shouldValidate: true,
 												});
 
-												singleRecipientOnChange(remaining!, recipientAddress);
+												singleRecipientOnChange({
+													address: recipientAddress,
+													alias: recipientAlias,
+													amount: remaining,
+												});
 											}
 										}}
 										data-testid="AddRecipient__send-all"
@@ -414,13 +437,7 @@ export const AddRecipient = ({
 						data-testid="AddRecipient__add-button"
 						variant="secondary"
 						className="mt-4 w-full"
-						onClick={() =>
-							handleAddRecipient(
-								recipientAddress as string,
-								getValues("amount"),
-								getValues("displayAmount"),
-							)
-						}
+						onClick={handleAddRecipient}
 					>
 						{t("TRANSACTION.ADD_RECIPIENT")}
 					</Button>
@@ -440,10 +457,4 @@ export const AddRecipient = ({
 			)}
 		</AddRecipientWrapper>
 	);
-};
-
-AddRecipient.defaultProps = {
-	assetSymbol: "ARK",
-	recipients: [],
-	showMultiPaymentOption: true,
 };

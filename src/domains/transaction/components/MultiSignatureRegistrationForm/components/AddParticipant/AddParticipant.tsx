@@ -124,7 +124,7 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 									findDuplicate,
 								},
 							})}
-							onChange={(address: string) => setValue("address", address, { shouldDirty: true })}
+							onChange={(address) => setValue("address", address, { shouldDirty: true })}
 						/>
 					</FormField>
 

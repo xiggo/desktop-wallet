@@ -38,7 +38,7 @@ const renderWithFormProvider = async (children: any, defaultValues?: any) => {
 describe("AddRecipient", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		wallet = profile.wallets().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")!;
 		network = wallet.network();
 	});
 
@@ -99,6 +99,12 @@ describe("AddRecipient", () => {
 
 	it("should set amount", async () => {
 		const onChange = jest.fn();
+		const findDelegateSpy = jest.spyOn(env.delegates(), "findByAddress").mockImplementation(
+			() =>
+				({
+					username: () => "delegate username",
+				} as any),
+		);
 
 		const { getByTestId, form } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" onChange={onChange} />,
@@ -118,13 +124,19 @@ describe("AddRecipient", () => {
 			});
 		});
 
-		await waitFor(() => {
-			expect(form.current.getValues("amount")).toEqual("1");
-			expect(getByTestId("SelectDropdown__input")).toHaveValue("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT");
-			expect(onChange).toHaveBeenCalledWith([
-				{ address: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT", alias: "", amount: expect.any(Number) },
-			]);
-		});
+		await waitFor(() => expect(form.current.getValues("amount")).toEqual("1"));
+
+		expect(getByTestId("SelectDropdown__input")).toHaveValue("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT");
+		expect(onChange).toHaveBeenCalledWith([
+			{
+				address: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",
+				alias: "delegate username",
+				amount: 1,
+				isDelegate: true,
+			},
+		]);
+
+		findDelegateSpy.mockRestore();
 	});
 
 	it("should select recipient", async () => {
@@ -360,28 +372,21 @@ describe("AddRecipient", () => {
 
 		render(<Component />);
 
-		act(() => {
-			fireEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
-		});
+		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("");
 
-		await act(async () => {
-			fireEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
-		});
+		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		await act(async () => {
-			fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
-		});
+		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
-		});
+		expect(screen.getByTestId("modal__inner")).toBeTruthy();
 
-		const firstAddress = screen.getAllByTestId("RecipientListItem__select-button")[0];
-		await act(async () => {
-			fireEvent.click(firstAddress);
-		});
+		userEvent.click(screen.getAllByTestId("RecipientListItem__select-button")[0]);
+
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+
+		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue(""));
 
 		fireEvent.input(screen.getByTestId("AddRecipient__amount"), {
 			target: {
@@ -389,7 +394,7 @@ describe("AddRecipient", () => {
 			},
 		});
 
-		fireEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
 

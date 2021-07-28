@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 
 import { RecipientListItemProperties, RecipientProperties, SearchRecipientProperties } from "./SearchRecipient.models";
 
-const RecipientListItem = ({ recipient, onAction }: RecipientListItemProperties) => {
+const RecipientListItem = ({ recipient, onAction, selectedAddress }: RecipientListItemProperties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -30,6 +30,7 @@ const RecipientListItem = ({ recipient, onAction }: RecipientListItemProperties)
 
 			<TableCell variant="end" innerClassName="justify-end">
 				<Button
+					disabled={selectedAddress === recipient.address}
 					data-testid="RecipientListItem__select-button"
 					variant="secondary"
 					onClick={() => onAction(recipient.address)}
@@ -44,10 +45,11 @@ const RecipientListItem = ({ recipient, onAction }: RecipientListItemProperties)
 export const SearchRecipient = ({
 	title,
 	description,
-	recipients,
 	isOpen,
 	onClose,
 	onAction,
+	recipients,
+	selectedAddress,
 }: SearchRecipientProperties) => {
 	const { setSearchKeyword, filteredList: filteredRecipients, isEmptyResults } = useSearchWallet(recipients);
 
@@ -90,7 +92,11 @@ export const SearchRecipient = ({
 			<div className="mt-8">
 				<Table columns={columns} data={filteredRecipients}>
 					{(recipient: RecipientProperties) => (
-						<RecipientListItem recipient={recipient} onAction={onAction} />
+						<RecipientListItem
+							selectedAddress={selectedAddress}
+							recipient={recipient}
+							onAction={onAction}
+						/>
 					)}
 				</Table>
 

@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
+import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
@@ -55,45 +57,34 @@ describe("SelectRecipient", () => {
 			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 		});
 
-		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
-		});
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
 		});
 
-		await waitFor(() => {
-			expect(() => getByTestId("modal__inner").toBeFalsy());
-		});
+		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should select address from contacts modal", async () => {
-		const { getByTestId, getAllByTestId } = render(
-			<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />,
-		);
+		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />);
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
-		});
+		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
-		});
+		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeTruthy());
 
-		const firstAddress = getAllByTestId("RecipientListItem__select-button")[profile.wallets().values().length];
-		act(() => {
-			fireEvent.click(firstAddress);
-		});
+		const firstContactAddress = screen.getAllByTestId("RecipientListItem__select-button")[
+			profile.wallets().values().length
+		];
 
-		await waitFor(() => {
-			expect(() => getByTestId("modal__inner").toThrow(/Unable to find an element by/));
-		});
+		userEvent.click(firstContactAddress);
+
+		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		await waitFor(() =>
-			expect(getByTestId("SelectDropdown__input")).toHaveValue(
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(
 				profile.contacts().values()[0].addresses().values()[0].address(),
 			),
 		);
@@ -110,15 +101,13 @@ describe("SelectRecipient", () => {
 			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 		});
 
-		await waitFor(() => {
-			expect(() => getByTestId("modal__inner").toThrow(/Unable to find an element by/));
-		});
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 	});
 
 	it("should call onChange prop when entered address in input", async () => {
 		const contactsSpy = jest.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
-		const function_ = jest.fn();
-		const { getByTestId } = render(<SelectRecipient profile={profile} onChange={function_} />);
+		const onChange = jest.fn();
+		const { getByTestId } = render(<SelectRecipient profile={profile} onChange={onChange} />);
 		const address = "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT";
 		const recipientInputField = getByTestId("SelectDropdown__input");
 
@@ -127,24 +116,27 @@ describe("SelectRecipient", () => {
 		});
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(address);
-		expect(function_).toBeCalledWith(address, "");
+		expect(onChange).toBeCalledWith(address, {
+			alias: undefined,
+			isContact: false,
+			isDelegate: false,
+			isKnown: false,
+		});
 
 		contactsSpy.mockRestore();
 	});
 
 	it("should call onChange prop if provided", async () => {
-		const function_ = jest.fn();
+		const onChange = jest.fn();
 
 		const { getByTestId, getAllByTestId } = render(
 			<SelectRecipient
 				profile={profile}
-				onChange={function_}
+				onChange={onChange}
 				address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"
 			/>,
 		);
 
-		expect(function_).toBeCalledWith("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT", "");
-
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		act(() => {
@@ -161,24 +153,24 @@ describe("SelectRecipient", () => {
 			fireEvent.click(firstAddress);
 		});
 
-		waitFor(() => expect(getByTestId("modal__inner")).toBeFalsy());
+		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		const selectedAddressValue = profile.contacts().values()[0].addresses().values()[0].address();
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
-		expect(function_).toHaveBeenLastCalledWith(selectedAddressValue, "Brian");
+		expect(onChange).toBeCalledWith(selectedAddressValue, expect.any(Object));
 	});
 
 	it("should call onChange prop only when values change", async () => {
-		const function_ = jest.fn();
+		const onChange = jest.fn();
 
 		const { getByTestId, getAllByTestId } = render(
-			<SelectRecipient profile={profile} onChange={function_} address="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" />,
+			<SelectRecipient profile={profile} onChange={onChange} address="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" />,
 		);
 
-		expect(function_).toBeCalledTimes(1);
+		const selectedAddressValue = profile.contacts().values()[0].addresses().values()[0].address();
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
 
 		act(() => {
 			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
@@ -194,12 +186,8 @@ describe("SelectRecipient", () => {
 			fireEvent.click(firstAddress);
 		});
 
-		waitFor(() => expect(getByTestId("modal__inner")).toBeFalsy());
-
-		const selectedAddressValue = profile.contacts().values()[0].addresses().values()[0].address();
-
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
-		expect(function_).toBeCalledTimes(1);
+		expect(onChange).not.toBeCalled();
 	});
 
 	it("should filter recipients list by network if provided", async () => {
@@ -221,7 +209,7 @@ describe("SelectRecipient", () => {
 		await act(async () => {
 			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-			expect(() => getAllByTestId("RecipientListItem__select-button").toThrow());
+			expect(() => getAllByTestId("RecipientListItem__select-button")).toThrow();
 		});
 	});
 });

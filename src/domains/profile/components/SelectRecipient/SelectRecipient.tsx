@@ -7,11 +7,11 @@ import { useFormField } from "app/components/Form/useFormField";
 import { Icon } from "app/components/Icon";
 import { Select } from "app/components/SelectDropdown";
 import { TruncateEnd } from "app/components/TruncateEnd";
-import { useWalletAlias } from "app/hooks/use-wallet-alias";
+import { useWalletAlias, WalletAliasResult } from "app/hooks/use-wallet-alias";
 import cn from "classnames";
 import { useProfileAddresses } from "domains/profile/hooks/use-profile-addresses";
 import { SearchRecipient } from "domains/transaction/components/SearchRecipient";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 type SelectRecipientProperties = {
 	network?: Networks.Network;
@@ -22,7 +22,7 @@ type SelectRecipientProperties = {
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
-	onChange?: (address: string, alias: string) => void;
+	onChange?: (address: string | undefined, alias: WalletAliasResult) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
 const ProfileAvatar = ({ address }: any) => {
@@ -70,34 +70,47 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 		{ address, profile, disabled, isInvalid, network, placeholder, onChange }: SelectRecipientProperties,
 		reference,
 	) => {
+		const { getWalletAlias } = useWalletAlias();
+
 		const [isRecipientSearchOpen, setIsRecipientSearchOpen] = useState(false);
-		const [selectedAddress, setSelectedAddress] = useState(address);
+
+		/*
+		 * Initial value for selected address is set in useEffect below via onChangeAddress.
+		 * This is made to also retrieve alias information of the selected address.
+		 */
+		const [selectedAddress, setSelectedAddress] = useState<string | undefined>();
+		const [selectedAddressAlias, setSelectedAddressAlias] = useState<WalletAliasResult | undefined>();
+
 		const fieldContext = useFormField();
 
-		const { getWalletAlias } = useWalletAlias();
-		const { alias: selectedWalletAlias } = getWalletAlias({
-			address: selectedAddress,
-			network,
-			profile,
-		});
+		const onChangeAddress = useCallback(
+			(addressValue: string | undefined, emitOnChange = true) => {
+				if (addressValue === selectedAddress) {
+					return;
+				}
+
+				const alias = getWalletAlias({
+					address: addressValue,
+					network,
+					profile,
+				});
+
+				setSelectedAddress(addressValue);
+				setSelectedAddressAlias(alias);
+
+				if (emitOnChange) {
+					onChange?.(addressValue, alias);
+				}
+			},
+			[getWalletAlias, network, onChange, profile, selectedAddress],
+		);
 
 		const isInvalidValue = isInvalid || fieldContext?.isInvalid;
 
 		// Modify the address from parent component
 		useEffect(() => {
-			if (address === selectedAddress) {
-				return;
-			}
-
-			setSelectedAddress(address);
-		}, [address, setSelectedAddress]); // eslint-disable-line react-hooks/exhaustive-deps
-
-		// Emit onChange after address changed to make sure the alias updated
-		useEffect(() => {
-			if (selectedAddress) {
-				onChange?.(selectedAddress, selectedWalletAlias ?? "");
-			}
-		}, [selectedAddress, selectedWalletAlias]); // eslint-disable-line react-hooks/exhaustive-deps
+			onChangeAddress(address, false);
+		}, [address]); // eslint-disable-line react-hooks/exhaustive-deps
 
 		const { allAddresses } = useProfileAddresses({ network, profile });
 		const recipientAddresses = allAddresses.map(({ address }) => ({
@@ -105,29 +118,12 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			value: address,
 		}));
 
-		const handleSelectAddress = (changedAddress: string) => {
-			if (selectedAddress === changedAddress) {
-				return;
-			}
-
-			setSelectedAddress(changedAddress);
-			setIsRecipientSearchOpen(false);
-		};
-
 		const openRecipients = () => {
 			if (disabled) {
 				return;
 			}
 
 			setIsRecipientSearchOpen(true);
-		};
-
-		const onInputChange = (changedAddress: string) => {
-			if (selectedAddress === changedAddress) {
-				return;
-			}
-
-			setSelectedAddress(changedAddress);
 		};
 
 		return (
@@ -142,7 +138,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 						ref={reference}
 						options={recipientAddresses}
 						allowFreeInput={true}
-						onChange={(option: any) => onInputChange(option.value)}
+						onChange={(option: any) => onChangeAddress(option.value)}
 						addons={{
 							end: {
 								content: (
@@ -159,10 +155,10 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 								content: (
 									<div className="flex items-center">
 										<ProfileAvatar address={selectedAddress} />
-										{!!selectedWalletAlias && (
+										{!!selectedAddressAlias?.alias && (
 											<TruncateEnd
 												className="font-semibold ml-2"
-												text={selectedWalletAlias}
+												text={selectedAddressAlias.alias}
 												showTooltip
 											/>
 										)}
@@ -177,8 +173,12 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 				<SearchRecipient
 					isOpen={isRecipientSearchOpen}
 					recipients={allAddresses}
-					onAction={(address: string) => handleSelectAddress(address)}
+					onAction={(changedAddress: string) => {
+						onChangeAddress(changedAddress);
+						setIsRecipientSearchOpen(false);
+					}}
 					onClose={() => setIsRecipientSearchOpen(false)}
+					selectedAddress={selectedAddress}
 				/>
 			</div>
 		);
