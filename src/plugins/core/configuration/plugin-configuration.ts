@@ -155,7 +155,7 @@ export class PluginConfigurationData {
 	logo() {
 		let logo: string | undefined;
 
-		logo = this.#config.has("logo") ? this.#config.get("logo") : this.#manifest.get("logo");
+		logo = this.#config.has("logo") ? this.#config.get("logo") : this.manifest().get("logo");
 
 		const regex = /(?:ht{2}ps?:)?\/raw\.githubusercontent\.com\/([\w.-]+)\/[\dA-z-].*(\.(jpe?g|png|gif))$/;
 
@@ -172,7 +172,7 @@ export class PluginConfigurationData {
 		const title = this.manifest().get<string>("title");
 
 		if (title) {
-			return startCase(title);
+			return title;
 		}
 
 		const name = this.get("name")!;

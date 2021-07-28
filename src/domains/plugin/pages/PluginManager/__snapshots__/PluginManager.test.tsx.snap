@@ -806,7 +806,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                                 class="flex items-center space-x-2 font-semibold link"
                                 data-testid="PluginListItem__link"
                               >
-                                Ark Delegate Calculator
+                                ARK Delegate Calculator
                               </span>
                             </div>
                           </div>
@@ -903,7 +903,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                                 class="flex items-center space-x-2 font-semibold link"
                                 data-testid="PluginListItem__link"
                               >
-                                Ark Explorer
+                                ARK Explorer
                               </span>
                               <div
                                 class="sc-bdnxRM AFVmm text-theme-warning-600"
@@ -3884,7 +3884,7 @@ exports[`PluginManager should render 1`] = `
                               <div
                                 class="truncate"
                               >
-                                Ark Delegate Calculator
+                                ARK Delegate Calculator
                               </div>
                             </div>
                             <div
@@ -3978,7 +3978,7 @@ exports[`PluginManager should render 1`] = `
                               <div
                                 class="truncate"
                               >
-                                Ark Explorer
+                                ARK Explorer
                               </div>
                               <div
                                 class="sc-bdnxRM AFVmm text-theme-warning-600"
@@ -5767,7 +5767,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                               <div
                                 class="truncate"
                               >
-                                Ark Delegate Calculator
+                                ARK Delegate Calculator
                               </div>
                             </div>
                             <div
@@ -5861,7 +5861,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                               <div
                                 class="truncate"
                               >
-                                Ark Explorer
+                                ARK Explorer
                               </div>
                               <div
                                 class="sc-bdnxRM AFVmm text-theme-warning-600"
@@ -6743,7 +6743,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                               <div
                                 class="truncate"
                               >
-                                Ark Delegate Calculator
+                                ARK Delegate Calculator
                               </div>
                             </div>
                             <div
@@ -6837,7 +6837,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                               <div
                                 class="truncate"
                               >
-                                Ark Explorer
+                                ARK Explorer
                               </div>
                               <div
                                 class="sc-bdnxRM AFVmm text-theme-warning-600"
@@ -7922,7 +7922,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                               <div
                                 class="truncate"
                               >
-                                Ark Delegate Calculator
+                                ARK Delegate Calculator
                               </div>
                             </div>
                             <div
@@ -8016,7 +8016,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                               <div
                                 class="truncate"
                               >
-                                Ark Explorer
+                                ARK Explorer
                               </div>
                               <div
                                 class="sc-bdnxRM AFVmm text-theme-warning-600"
@@ -9163,7 +9163,7 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                               <div
                                 class="truncate"
                               >
-                                Ark Delegate Calculator
+                                ARK Delegate Calculator
                               </div>
                             </div>
                             <div
@@ -9257,7 +9257,7 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                               <div
                                 class="truncate"
                               >
-                                Ark Explorer
+                                ARK Explorer
                               </div>
                               <div
                                 class="sc-bdnxRM AFVmm text-theme-warning-600"

@@ -48,4 +48,47 @@ describe("Plugin View", () => {
 
 		manager.plugins().removeById(plugin.config().id(), profile);
 	});
+
+	it.each(["message", "stack"])("should render error boundary with error %s", (type) => {
+		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => null);
+
+		const Component = () => {
+			const error = new Error("error");
+
+			if (type === "stack") {
+				error.stack = "stacktrace";
+			} else {
+				error.stack = undefined;
+			}
+
+			throw error;
+		};
+
+		const plugin = new PluginController(
+			{ "desktop-wallet": { permissions: ["LAUNCH"] }, name: "test-plugin" },
+			(api) => api.launch().render(<Component />),
+		);
+
+		manager.plugins().push(plugin);
+
+		plugin.enable(profile, { autoRun: true });
+
+		const { container } = renderWithRouter(
+			<Route path="/profiles/:profileId/plugins/view">
+				<PluginManagerProvider manager={manager} services={[]}>
+					<PluginView />
+				</PluginManagerProvider>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/plugins/view?pluginId=${plugin.config().id()}`],
+			},
+		);
+
+		expect(container).toHaveTextContent("An error occurred!");
+		expect(container).toMatchSnapshot();
+
+		manager.plugins().removeById(plugin.config().id(), profile);
+
+		consoleSpy.mockRestore();
+	});
 });

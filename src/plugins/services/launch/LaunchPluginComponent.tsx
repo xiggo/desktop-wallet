@@ -1,10 +1,10 @@
 import { WithPluginManager } from "plugins/types";
 import React, { useMemo } from "react";
-import { ErrorBoundary } from "react-error-boundary";
+import { ErrorBoundary, FallbackProps } from "react-error-boundary";
 
 interface Properties {
 	pluginId: string;
-	fallback?: React.ReactNode;
+	fallback: React.ComponentType<FallbackProps>;
 }
 
 export const LaunchRender = ({ pluginId, fallback, manager }: WithPluginManager<Properties>) => {
@@ -18,7 +18,7 @@ export const LaunchRender = ({ pluginId, fallback, manager }: WithPluginManager<
 	}, [pluginId, manager]);
 
 	return (
-		<ErrorBoundary fallback={<>{fallback}</>}>
+		<ErrorBoundary FallbackComponent={fallback}>
 			<>{result || fallback}</>
 		</ErrorBoundary>
 	);

@@ -1,8 +1,30 @@
 import { Page } from "app/components/Layout";
+import { TextArea } from "app/components/TextArea";
 import { useActiveProfile, useQueryParams } from "app/hooks";
 import { PluginImage } from "domains/plugin/components/PluginImage";
 import { LaunchRender, usePluginManagerContext } from "plugins";
-import React from "react";
+import React, { useRef } from "react";
+import { FallbackProps } from "react-error-boundary";
+
+const ErrorFallback = ({ error }: FallbackProps) => {
+	const errorMessageReference = useRef();
+
+	return (
+		<div className="flex items-center py-10 w-full">
+			<div className="container flex flex-col mx-auto">
+				<h3 className="mb-4">An error occurred!</h3>
+
+				<TextArea
+					className="py-4"
+					initialHeight={70}
+					defaultValue={error.stack || error.message}
+					ref={errorMessageReference}
+					disabled
+				/>
+			</div>
+		</div>
+	);
+};
 
 export const PluginView = () => {
 	const queryParameters = useQueryParams();
@@ -41,11 +63,7 @@ export const PluginView = () => {
 			</div>
 
 			<div className="flex relative flex-1 w-full h-full">
-				<LaunchRender
-					manager={pluginManager}
-					pluginId={pluginId}
-					fallback={<h1>Plugin not loaded or enabled</h1>}
-				/>
+				<LaunchRender manager={pluginManager} pluginId={pluginId} fallback={ErrorFallback} />
 			</div>
 		</Page>
 	);

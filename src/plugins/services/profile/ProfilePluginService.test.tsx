@@ -24,6 +24,22 @@ describe("ProfilePluginService", () => {
 		manager.services().boot();
 	});
 
+	it("should get id", () => {
+		let id;
+
+		const fixture = (api: PluginAPI) => {
+			id = api.profile().id();
+		};
+
+		ctrl = new PluginController(config, fixture);
+		ctrl.enable(profile);
+
+		manager.plugins().push(ctrl);
+		manager.plugins().runAllEnabled(profile);
+
+		expect(id).toBe(profile.id());
+	});
+
 	it("should get wallets", () => {
 		let wallets;
 

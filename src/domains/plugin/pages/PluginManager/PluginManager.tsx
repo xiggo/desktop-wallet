@@ -24,6 +24,7 @@ import { PluginController, usePluginManagerContext } from "plugins";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { assertPluginController } from "utils/assertions";
 
 const categories = ["gaming", "utility", "exchange", "other"];
 
@@ -240,19 +241,27 @@ export const PluginManager = () => {
 	const handleSelectPlugin = (pluginData: any) =>
 		history.push(`/profiles/${activeProfile.id()}/plugins/details?pluginId=${pluginData.id}`);
 
-	const handleEnablePlugin = (pluginData: any) => {
+	const handleEnablePlugin = async (pluginData: any) => {
+		const pluginController = pluginManager.plugins().findById(pluginData.id);
+
+		assertPluginController(pluginController);
+
 		try {
-			pluginManager.plugins().findById(pluginData.id)?.enable(activeProfile, { autoRun: true });
-			persist();
+			pluginController.enable(activeProfile, { autoRun: true });
+			await persist();
 			toasts.success(t("PLUGINS.ENABLE_SUCCESS", { name: pluginData.title }));
 		} catch (error) {
 			toasts.error(t("PLUGINS.ENABLE_FAILURE", { msg: error.message, name: pluginData.title }));
 		}
 	};
 
-	const handleDisablePlugin = (pluginData: any) => {
-		pluginManager.plugins().findById(pluginData.id)?.disable(activeProfile);
-		persist();
+	const handleDisablePlugin = async (pluginData: any) => {
+		const pluginController = pluginManager.plugins().findById(pluginData.id);
+
+		assertPluginController(pluginController);
+
+		pluginController.disable(activeProfile);
+		await persist();
 	};
 
 	const handleDeletePlugin = (pluginData: any) => {
@@ -261,7 +270,6 @@ export const PluginManager = () => {
 
 	const handleLaunchPlugin = (pluginData: any) => {
 		history.push(`/profiles/${activeProfile.id()}/plugins/view?pluginId=${pluginData.id}`);
-		persist();
 	};
 
 	const handleManualInstall = (result: { pluginId: string; repositoryURL: string }) => {

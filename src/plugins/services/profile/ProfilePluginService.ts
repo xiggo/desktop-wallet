@@ -17,8 +17,9 @@ export class ProfilePluginService implements PluginService {
 	}
 
 	api() {
-		// TODO: return ReadOnlyWallet[]
 		return {
+			id: () => this.#profile?.id(),
+			// TODO: return ReadOnlyWallet[]
 			wallets: () =>
 				this.#profile
 					?.wallets()
