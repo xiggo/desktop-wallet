@@ -142,6 +142,7 @@ module.exports = {
 				"8xl": "85rem",
 				32: "8rem",
 				72: "18rem",
+				88: "22rem",
 				128: "32rem",
 			},
 			maxHeight: {
@@ -163,7 +164,9 @@ module.exports = {
 				15: "3.75rem",
 				22: "5.5rem",
 				25: "6.25rem",
+				30: "7.5rem",
 				50: "12.5rem",
+				88: "22rem",
 				128: "32rem",
 				144: "36rem",
 				125: "31.25rem",

@@ -1,14 +1,13 @@
-import { Badge } from "app/components/Badge";
 import { Button } from "app/components/Button";
-import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
-import React, { useMemo } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { PluginImage } from "../PluginImage";
+import { PluginLaunchButton, PluginMenu } from "./PluginListItem.blocks";
 
 interface PluginListItemProperties {
 	onDelete?: (plugin: any) => void;
@@ -45,27 +44,33 @@ export const PluginListItem = ({
 		onInstall?.(plugin);
 	};
 
-	const actions = useMemo(() => {
-		const result: DropdownOption[] = [];
-
-		if (plugin.hasUpdateAvailable) {
-			result.push({
-				disabled: plugin.isCompatible === false,
-				label: t("COMMON.UPDATE"),
-				value: "update",
-			});
+	const renderPluginButtons = () => {
+		if (!plugin.isInstalled) {
+			return (
+				<Button
+					variant="secondary"
+					onClick={handleInstall}
+					data-testid="PluginListItem__install"
+					className="flex-1"
+				>
+					{t("COMMON.INSTALL")}
+				</Button>
+			);
 		}
 
-		if (plugin.isEnabled) {
-			result.push({ label: t("COMMON.DISABLE"), value: "disable" });
-		} else {
-			result.push({ disabled: plugin.isCompatible === false, label: t("COMMON.ENABLE"), value: "enable" });
-		}
-
-		result.push({ label: t("COMMON.DELETE"), value: "delete" });
-
-		return result;
-	}, [t, plugin]);
+		return (
+			<div className="flex items-center w-full space-x-2">
+				<PluginLaunchButton plugin={plugin} onLaunch={onLaunch} />
+				<PluginMenu
+					plugin={plugin}
+					onDelete={onDelete}
+					onEnable={onEnable}
+					onDisable={onDisable}
+					onUpdate={onUpdate}
+				/>
+			</div>
+		);
+	};
 
 	return (
 		<TableRow>
@@ -82,7 +87,7 @@ export const PluginListItem = ({
 					<span
 						data-testid="PluginListItem__link"
 						onClick={() => onClick?.(plugin)}
-						className="flex items-center space-x-2 font-semibold link"
+						className="font-semibold link truncate max-w-88"
 					>
 						{plugin.title}
 					</span>
@@ -107,7 +112,7 @@ export const PluginListItem = ({
 			</TableCell>
 
 			<TableCell>
-				<span>{plugin.author}</span>
+				<span className="truncate w-50">{plugin.author}</span>
 			</TableCell>
 
 			{showCategory && (
@@ -117,7 +122,7 @@ export const PluginListItem = ({
 			)}
 
 			<TableCell>
-				<span>v{plugin.version}</span>
+				<span className="truncate w-30">{plugin.version}</span>
 			</TableCell>
 
 			<TableCell>
@@ -133,7 +138,7 @@ export const PluginListItem = ({
 									data-testid="PluginListItem__enabled"
 									className="mx-auto text-2xl text-theme-success-500"
 								>
-									<Icon name="StatusOk" />
+									<Icon name="StatusOk" size="lg" />
 								</div>
 							</Tooltip>
 						) : (
@@ -142,7 +147,7 @@ export const PluginListItem = ({
 									data-testid="PluginListItem__disabled"
 									className="mx-auto text-2xl text-theme-danger-400"
 								>
-									<Icon name="StatusFailed" />
+									<Icon name="StatusFailed" size="lg" />
 								</div>
 							</Tooltip>
 						)}
@@ -153,75 +158,14 @@ export const PluginListItem = ({
 							data-testid="PluginListItem__not-installed"
 							className="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"
 						>
-							<Icon name="Dash" />
+							<Icon name="Dash" size="lg" />
 						</div>
 					</Tooltip>
 				)}
 			</TableCell>
 
-			<TableCell variant="end" className="w-16" innerClassName="justify-end">
-				{!plugin.isInstalled && (
-					<Button
-						variant="secondary"
-						onClick={handleInstall}
-						data-testid="PluginListItem__install"
-						className="flex-1"
-					>
-						{t("COMMON.INSTALL")}
-					</Button>
-				)}
-
-				{plugin.isInstalled && (
-					<div className="flex items-center space-x-2">
-						{plugin.hasLaunch && (
-							<Button
-								variant="secondary"
-								onClick={() => onLaunch?.(plugin)}
-								data-testid="PluginListItem__launch"
-							>
-								{t("COMMON.LAUNCH")}
-							</Button>
-						)}
-						<Dropdown
-							toggleContent={
-								<div className="relative">
-									{plugin.hasUpdateAvailable && (
-										<Tooltip content={t("PLUGINS.NEW_VERSION_AVAILABLE")}>
-											<Badge
-												data-testid="PluginListItem__update-badge"
-												size="sm"
-												className="bg-theme-danger-500"
-												position="top-right"
-											/>
-										</Tooltip>
-									)}
-									<Button variant="secondary" size="icon" className="text-left">
-										<Icon name="Settings" size="lg" />
-									</Button>
-								</div>
-							}
-							options={actions}
-							onSelect={(option: any) => {
-								if (option.value === "delete") {
-									onDelete?.(plugin);
-								}
-
-								if (option.value === "enable") {
-									return onEnable?.(plugin);
-								}
-
-								if (option.value === "disable") {
-									return onDisable?.(plugin);
-								}
-
-								if (option.value === "update") {
-									return onUpdate?.(plugin);
-								}
-							}}
-							dropdownClass="top-3 text-left"
-						/>
-					</div>
-				)}
+			<TableCell variant="end" innerClassName="justify-end">
+				{renderPluginButtons()}
 			</TableCell>
 		</TableRow>
 	);

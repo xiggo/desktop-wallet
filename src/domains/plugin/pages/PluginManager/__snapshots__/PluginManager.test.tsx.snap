@@ -659,7 +659,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-56 min-w-56"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -689,7 +689,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-36 min-w-36"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -719,7 +719,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -749,13 +749,13 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
                           colspan="1"
                           data-testid="table__th--4"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top justify-center no-border"
+                            class="flex flex-inline align-top justify-center"
                           >
                             <div>
                               Status
@@ -763,13 +763,13 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-44 min-w-44"
                           colspan="1"
                           data-testid="table__th--5"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top hidden"
+                            class="flex flex-inline align-top hidden no-border"
                           >
                             <div>
                               Actions
@@ -803,7 +803,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                               class="flex items-center space-x-2 text-left"
                             >
                               <span
-                                class="flex items-center space-x-2 font-semibold link"
+                                class="font-semibold link truncate max-w-88"
                                 data-testid="PluginListItem__link"
                               >
                                 ARK Delegate Calculator
@@ -815,7 +815,9 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
+                            <span
+                              class="truncate w-50"
+                            >
                               Edgar Goetzendorff
                             </span>
                           </div>
@@ -824,8 +826,10 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
-                              v1.0.4
+                            <span
+                              class="truncate w-30"
+                            >
+                              1.0.4
                             </span>
                           </div>
                         </td>
@@ -847,9 +851,9 @@ exports[`PluginManager should cancel install plugin 1`] = `
                               data-testid="PluginListItem__not-installed"
                             >
                               <div
-                                class="sc-bdnxRM AFVmm"
-                                height="16"
-                                width="16"
+                                class="sc-bdnxRM NjstW"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   dash.svg
@@ -858,9 +862,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="w-16"
-                        >
+                        <td>
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                           >
@@ -900,7 +902,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                               class="flex items-center space-x-2 text-left"
                             >
                               <span
-                                class="flex items-center space-x-2 font-semibold link"
+                                class="font-semibold link truncate max-w-88"
                                 data-testid="PluginListItem__link"
                               >
                                 ARK Explorer
@@ -921,7 +923,9 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
+                            <span
+                              class="truncate w-50"
+                            >
                               ARK Ecosystem
                             </span>
                           </div>
@@ -930,8 +934,10 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
-                              v0.1.13
+                            <span
+                              class="truncate w-30"
+                            >
+                              0.1.13
                             </span>
                           </div>
                         </td>
@@ -953,9 +959,9 @@ exports[`PluginManager should cancel install plugin 1`] = `
                               data-testid="PluginListItem__not-installed"
                             >
                               <div
-                                class="sc-bdnxRM AFVmm"
-                                height="16"
-                                width="16"
+                                class="sc-bdnxRM NjstW"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   dash.svg
@@ -964,9 +970,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="w-16"
-                        >
+                        <td>
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                           >
@@ -1006,7 +1010,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                               class="flex items-center space-x-2 text-left"
                             >
                               <span
-                                class="flex items-center space-x-2 font-semibold link"
+                                class="font-semibold link truncate max-w-88"
                                 data-testid="PluginListItem__link"
                               >
                                 Transaction Export
@@ -1018,7 +1022,9 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
+                            <span
+                              class="truncate w-50"
+                            >
                               Edgar Goetzendorff
                             </span>
                           </div>
@@ -1027,8 +1033,10 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
-                              v1.0.3
+                            <span
+                              class="truncate w-30"
+                            >
+                              1.0.3
                             </span>
                           </div>
                         </td>
@@ -1050,9 +1058,9 @@ exports[`PluginManager should cancel install plugin 1`] = `
                               data-testid="PluginListItem__not-installed"
                             >
                               <div
-                                class="sc-bdnxRM AFVmm"
-                                height="16"
-                                width="16"
+                                class="sc-bdnxRM NjstW"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   dash.svg
@@ -1061,9 +1069,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="w-16"
-                        >
+                        <td>
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                           >
@@ -1774,7 +1780,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-56 min-w-56"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1804,7 +1810,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-36 min-w-36"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1834,7 +1840,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-36 min-w-36"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -1864,7 +1870,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
                           colspan="1"
                           data-testid="table__th--4"
                           role="columnheader"
@@ -1894,13 +1900,13 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
                           colspan="1"
                           data-testid="table__th--5"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top justify-center no-border"
+                            class="flex flex-inline align-top justify-center"
                           >
                             <div>
                               Status
@@ -1908,13 +1914,13 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-44 min-w-44"
                           colspan="1"
                           data-testid="table__th--6"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top hidden"
+                            class="flex flex-inline align-top hidden no-border"
                           >
                             <div>
                               Actions
@@ -1946,7 +1952,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                               class="flex items-center space-x-2 text-left"
                             >
                               <span
-                                class="flex items-center space-x-2 font-semibold link"
+                                class="font-semibold link truncate max-w-88"
                                 data-testid="PluginListItem__link"
                               >
                                 Test Plugin
@@ -1958,7 +1964,9 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
+                            <span
+                              class="truncate w-50"
+                            >
                               Unknown
                             </span>
                           </div>
@@ -1976,8 +1984,10 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
-                              v0.0.0
+                            <span
+                              class="truncate w-30"
+                            >
+                              0.0.0
                             </span>
                           </div>
                         </td>
@@ -1999,9 +2009,9 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                               data-testid="PluginListItem__disabled"
                             >
                               <div
-                                class="sc-bdnxRM AFVmm"
-                                height="16"
-                                width="16"
+                                class="sc-bdnxRM NjstW"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   status-failed.svg
@@ -2010,15 +2020,37 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="w-16"
-                        >
+                        <td>
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                           >
                             <div
-                              class="flex items-center space-x-2"
+                              class="flex items-center w-full space-x-2"
                             >
+                              <div
+                                class="w-full"
+                              >
+                                <button
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy w-full"
+                                  data-testid="PluginListItem__launch"
+                                  disabled=""
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex relative items-center space-x-2"
+                                  >
+                                    <div
+                                      class="sc-bdnxRM NjstW"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg>
+                                        dash.svg
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </div>
                               <div
                                 class="relative"
                               >
@@ -2684,7 +2716,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-56 min-w-56"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2714,7 +2746,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-36 min-w-36"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -2744,7 +2776,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-36 min-w-36"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -2774,7 +2806,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
                           colspan="1"
                           data-testid="table__th--4"
                           role="columnheader"
@@ -2804,13 +2836,13 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
                           colspan="1"
                           data-testid="table__th--5"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top justify-center no-border"
+                            class="flex flex-inline align-top justify-center"
                           >
                             <div>
                               Status
@@ -2818,13 +2850,13 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-44 min-w-44"
                           colspan="1"
                           data-testid="table__th--6"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top hidden"
+                            class="flex flex-inline align-top hidden no-border"
                           >
                             <div>
                               Actions
@@ -2856,7 +2888,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                               class="flex items-center space-x-2 text-left"
                             >
                               <span
-                                class="flex items-center space-x-2 font-semibold link"
+                                class="font-semibold link truncate max-w-88"
                                 data-testid="PluginListItem__link"
                               >
                                 Test Plugin
@@ -2868,7 +2900,9 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
+                            <span
+                              class="truncate w-50"
+                            >
                               Unknown
                             </span>
                           </div>
@@ -2886,8 +2920,10 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
-                              v0.0.0
+                            <span
+                              class="truncate w-30"
+                            >
+                              0.0.0
                             </span>
                           </div>
                         </td>
@@ -2909,9 +2945,9 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                               data-testid="PluginListItem__enabled"
                             >
                               <div
-                                class="sc-bdnxRM AFVmm"
-                                height="16"
-                                width="16"
+                                class="sc-bdnxRM NjstW"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   status-ok.svg
@@ -2920,15 +2956,37 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="w-16"
-                        >
+                        <td>
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                           >
                             <div
-                              class="flex items-center space-x-2"
+                              class="flex items-center w-full space-x-2"
                             >
+                              <div
+                                class="w-full"
+                              >
+                                <button
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy w-full"
+                                  data-testid="PluginListItem__launch"
+                                  disabled=""
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex relative items-center space-x-2"
+                                  >
+                                    <div
+                                      class="sc-bdnxRM NjstW"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg>
+                                        dash.svg
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </div>
                               <div
                                 class="relative"
                               >
@@ -10083,7 +10141,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-56 min-w-56"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -10113,7 +10171,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-36 min-w-36"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -10143,7 +10201,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-36 min-w-36"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -10173,7 +10231,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
                           colspan="1"
                           data-testid="table__th--4"
                           role="columnheader"
@@ -10203,13 +10261,13 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
                           colspan="1"
                           data-testid="table__th--5"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top justify-center no-border"
+                            class="flex flex-inline align-top justify-center"
                           >
                             <div>
                               Status
@@ -10217,13 +10275,13 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                          class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-44 min-w-44"
                           colspan="1"
                           data-testid="table__th--6"
                           role="columnheader"
                         >
                           <div
-                            class="flex flex-inline align-top hidden"
+                            class="flex flex-inline align-top hidden no-border"
                           >
                             <div>
                               Actions
@@ -10255,7 +10313,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                               class="flex items-center space-x-2 text-left"
                             >
                               <span
-                                class="flex items-center space-x-2 font-semibold link"
+                                class="font-semibold link truncate max-w-88"
                                 data-testid="PluginListItem__link"
                               >
                                 Transaction Export Plugin
@@ -10267,7 +10325,9 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
+                            <span
+                              class="truncate w-50"
+                            >
                               Unknown
                             </span>
                           </div>
@@ -10285,8 +10345,10 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                           >
-                            <span>
-                              v0.0.0
+                            <span
+                              class="truncate w-30"
+                            >
+                              0.0.0
                             </span>
                           </div>
                         </td>
@@ -10308,9 +10370,9 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                               data-testid="PluginListItem__disabled"
                             >
                               <div
-                                class="sc-bdnxRM AFVmm"
-                                height="16"
-                                width="16"
+                                class="sc-bdnxRM NjstW"
+                                height="20"
+                                width="20"
                               >
                                 <svg>
                                   status-failed.svg
@@ -10319,15 +10381,37 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                             </div>
                           </div>
                         </td>
-                        <td
-                          class="w-16"
-                        >
+                        <td>
                           <div
                             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                           >
                             <div
-                              class="flex items-center space-x-2"
+                              class="flex items-center w-full space-x-2"
                             >
+                              <div
+                                class="w-full"
+                              >
+                                <button
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy w-full"
+                                  data-testid="PluginListItem__launch"
+                                  disabled=""
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex relative items-center space-x-2"
+                                  >
+                                    <div
+                                      class="sc-bdnxRM NjstW"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg>
+                                        dash.svg
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </div>
                               <div
                                 class="relative"
                               >

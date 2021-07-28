@@ -116,6 +116,8 @@ export const translations: { [key: string]: any } = {
 		ABOUT: "About",
 		DISCLAIMER:
 			"The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.",
+		NOT_ENABLED: "This Plugin is not enabled",
+		NOT_LAUNCHEABLE: "This Plugin cannot be launched",
 		PERMISSIONS: "Permissions",
 		REPORT: "Report Plugin",
 		REQUIREMENTS: "Requirements",

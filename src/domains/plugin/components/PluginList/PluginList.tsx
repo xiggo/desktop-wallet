@@ -59,24 +59,29 @@ export const PluginList = ({
 		{
 			Header: t("COMMON.AUTHOR"),
 			accessor: "author",
+			cellWidth: "w-56",
 		},
 		{
 			Header: t("COMMON.VERSION"),
 			accessor: "version",
+			cellWidth: "w-36",
 		},
 		{
 			Header: t("COMMON.SIZE"),
 			accessor: "size",
+			cellWidth: "w-24",
 		},
 		{
 			Header: t("COMMON.STATUS"),
 			accessor: "isInstalled",
-			className: "justify-center no-border",
+			cellWidth: "w-20",
+			className: "justify-center",
 			disableSortBy: true,
 		},
 		{
 			Header: "Actions",
-			className: "hidden",
+			cellWidth: "w-44",
+			className: "hidden no-border",
 			disableSortBy: true,
 		},
 	];
@@ -85,6 +90,7 @@ export const PluginList = ({
 		columns.splice(2, 0, {
 			Header: t("COMMON.CATEGORY"),
 			accessor: "category",
+			cellWidth: "w-36",
 		});
 	}
 

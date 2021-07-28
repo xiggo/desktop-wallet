@@ -24,7 +24,7 @@ exports[`PluginListItem should render 1`] = `
               class="flex items-center space-x-2 text-left"
             >
               <span
-                class="flex items-center space-x-2 font-semibold link"
+                class="font-semibold link truncate max-w-88"
                 data-testid="PluginListItem__link"
               >
                 ARK Explorer
@@ -36,7 +36,9 @@ exports[`PluginListItem should render 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
-            <span>
+            <span
+              class="truncate w-50"
+            >
               ARK.io
             </span>
           </div>
@@ -45,8 +47,10 @@ exports[`PluginListItem should render 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
-            <span>
-              v1.3.8
+            <span
+              class="truncate w-30"
+            >
+              1.3.8
             </span>
           </div>
         </td>
@@ -68,9 +72,9 @@ exports[`PluginListItem should render 1`] = `
               data-testid="PluginListItem__not-installed"
             >
               <div
-                class="sc-bdnxRM AFVmm"
-                height="16"
-                width="16"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
                 <svg>
                   dash.svg
@@ -79,9 +83,7 @@ exports[`PluginListItem should render 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="w-16"
-        >
+        <td>
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
@@ -128,7 +130,7 @@ exports[`PluginListItem should render grant icon 1`] = `
               class="flex items-center space-x-2 text-left"
             >
               <span
-                class="flex items-center space-x-2 font-semibold link"
+                class="font-semibold link truncate max-w-88"
                 data-testid="PluginListItem__link"
               >
                 ARK Explorer
@@ -149,7 +151,9 @@ exports[`PluginListItem should render grant icon 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
-            <span>
+            <span
+              class="truncate w-50"
+            >
               ARK.io
             </span>
           </div>
@@ -158,8 +162,10 @@ exports[`PluginListItem should render grant icon 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
-            <span>
-              v1.3.8
+            <span
+              class="truncate w-30"
+            >
+              1.3.8
             </span>
           </div>
         </td>
@@ -181,9 +187,9 @@ exports[`PluginListItem should render grant icon 1`] = `
               data-testid="PluginListItem__not-installed"
             >
               <div
-                class="sc-bdnxRM AFVmm"
-                height="16"
-                width="16"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
                 <svg>
                   dash.svg
@@ -192,9 +198,7 @@ exports[`PluginListItem should render grant icon 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="w-16"
-        >
+        <td>
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
@@ -241,7 +245,7 @@ exports[`PluginListItem should render official icon 1`] = `
               class="flex items-center space-x-2 text-left"
             >
               <span
-                class="flex items-center space-x-2 font-semibold link"
+                class="font-semibold link truncate max-w-88"
                 data-testid="PluginListItem__link"
               >
                 ARK Explorer
@@ -262,7 +266,9 @@ exports[`PluginListItem should render official icon 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
-            <span>
+            <span
+              class="truncate w-50"
+            >
               ARK.io
             </span>
           </div>
@@ -271,8 +277,10 @@ exports[`PluginListItem should render official icon 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
-            <span>
-              v1.3.8
+            <span
+              class="truncate w-30"
+            >
+              1.3.8
             </span>
           </div>
         </td>
@@ -294,9 +302,9 @@ exports[`PluginListItem should render official icon 1`] = `
               data-testid="PluginListItem__not-installed"
             >
               <div
-                class="sc-bdnxRM AFVmm"
-                height="16"
-                width="16"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
                 <svg>
                   dash.svg
@@ -305,9 +313,7 @@ exports[`PluginListItem should render official icon 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="w-16"
-        >
+        <td>
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
@@ -354,7 +360,7 @@ exports[`PluginListItem should trigger install 1`] = `
               class="flex items-center space-x-2 text-left"
             >
               <span
-                class="flex items-center space-x-2 font-semibold link"
+                class="font-semibold link truncate max-w-88"
                 data-testid="PluginListItem__link"
               >
                 ARK Explorer
@@ -366,7 +372,9 @@ exports[`PluginListItem should trigger install 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
-            <span>
+            <span
+              class="truncate w-50"
+            >
               ARK.io
             </span>
           </div>
@@ -375,8 +383,10 @@ exports[`PluginListItem should trigger install 1`] = `
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
           >
-            <span>
-              v1.3.8
+            <span
+              class="truncate w-30"
+            >
+              1.3.8
             </span>
           </div>
         </td>
@@ -398,9 +408,9 @@ exports[`PluginListItem should trigger install 1`] = `
               data-testid="PluginListItem__not-installed"
             >
               <div
-                class="sc-bdnxRM AFVmm"
-                height="16"
-                width="16"
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
               >
                 <svg>
                   dash.svg
@@ -409,9 +419,7 @@ exports[`PluginListItem should trigger install 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="w-16"
-        >
+        <td>
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
