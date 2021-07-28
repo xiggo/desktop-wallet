@@ -3,12 +3,13 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import electron from "electron";
 import { createMemoryHistory } from "history";
+import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { Route } from "react-router-dom";
 import {
-	act as utilsAct,
 	env,
 	getDefaultProfileId,
+	pluginManager,
 	renderWithRouter,
 	syncDelegates,
 	waitFor,
@@ -186,7 +187,9 @@ describe("useProfileSynchronizer", () => {
 
 	it("should clear last profile sync jobs", async () => {
 		history.push(dashboardURL);
+
 		jest.useFakeTimers();
+
 		const { getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<div data-testid="ProfileSynced">test</div>
@@ -198,16 +201,16 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		jest.runAllTimers();
+		jest.runOnlyPendingTimers();
+
 		await waitFor(() => expect(getByTestId("ProfileSynced")).toBeInTheDocument(), { timeout: 4000 });
 
 		history.push("/");
 
-		await utilsAct(async () => {
-			jest.runAllTimers();
-			await waitFor(() => expect(history.location.pathname).toEqual("/"));
-			await waitFor(() => expect(() => getByTestId("ProfileSynced")).toThrow(), { timeout: 4000 });
-		});
+		jest.runAllTimers();
+
+		await waitFor(() => expect(history.location.pathname).toEqual("/"));
+		await waitFor(() => expect(() => getByTestId("ProfileSynced")).toThrow(), { timeout: 4000 });
 
 		jest.clearAllTimers();
 	});
@@ -327,7 +330,11 @@ describe("useProfileRestore", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -354,7 +361,11 @@ describe("useProfileRestore", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -388,7 +399,11 @@ describe("useProfileRestore", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -423,7 +438,11 @@ describe("useProfileRestore", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
+				<ConfigurationProvider>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);
 
@@ -453,7 +472,9 @@ describe("useProfileRestore", () => {
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<ConfigurationProvider defaultConfiguration={{ restoredProfiles: [profile.id()] }}>
-					{children}
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
 				</ConfigurationProvider>
 			</EnvironmentProvider>
 		);

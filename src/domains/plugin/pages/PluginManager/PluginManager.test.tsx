@@ -1,16 +1,25 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { pluginManager, PluginProviders } from "app/PluginProviders";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import { createMemoryHistory } from "history";
 import nock from "nock";
-import { LaunchPluginService, PluginController, usePluginManagerContext } from "plugins";
+import { LaunchPluginService, PluginController } from "plugins";
+import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { act, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor, within } from "testing-library";
-import { env } from "utils/testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	pluginManager,
+	renderWithRouter,
+	screen,
+	waitFor,
+	within,
+} from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { PluginManager } from "./PluginManager";
@@ -64,9 +73,7 @@ describe("PluginManager", () => {
 	it("should render", async () => {
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -91,9 +98,7 @@ describe("PluginManager", () => {
 	it("should toggle between list and grid on latest", async () => {
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -125,9 +130,7 @@ describe("PluginManager", () => {
 	it("should toggle between list and grid on all", async () => {
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -158,9 +161,7 @@ describe("PluginManager", () => {
 	it.each(["utility"])("should toggle between list and grid on %s tab", async (category) => {
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -198,9 +199,7 @@ describe("PluginManager", () => {
 	it("should switch to category by clicking on view all link", async () => {
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -224,9 +223,7 @@ describe("PluginManager", () => {
 	it.skip("should download & install plugin on latest", async () => {
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -266,9 +263,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -300,9 +295,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -345,9 +338,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -376,9 +367,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<PluginManager />
-				</PluginProviders>
+				<PluginManager />
 			</Route>,
 			{
 				history,
@@ -416,9 +405,7 @@ describe("PluginManager", () => {
 	it("should cancel install plugin", async () => {
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -446,9 +433,7 @@ describe("PluginManager", () => {
 	it("should search for plugin", async () => {
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -494,9 +479,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -535,9 +518,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -574,9 +555,7 @@ describe("PluginManager", () => {
 	it("should select plugin on latest grids", async () => {
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -602,9 +581,7 @@ describe("PluginManager", () => {
 
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -642,9 +619,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -680,9 +655,7 @@ describe("PluginManager", () => {
 
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -717,9 +690,7 @@ describe("PluginManager", () => {
 
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -758,9 +729,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -797,9 +766,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -842,9 +809,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -878,9 +843,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -906,9 +869,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,
@@ -966,9 +927,7 @@ describe("PluginManager", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
-				<PluginProviders>
-					<Component />
-				</PluginProviders>
+				<Component />
 			</Route>,
 			{
 				history,

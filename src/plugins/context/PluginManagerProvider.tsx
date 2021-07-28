@@ -74,6 +74,23 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		}
 	}, []);
 
+	const restoreEnabledPlugins = useCallback(
+		(profile: Contracts.IProfile) => {
+			pluginManager.plugins().runAllEnabled(profile);
+			trigger();
+		},
+		[pluginManager, trigger],
+	);
+
+	const resetPlugins = useCallback(() => {
+		try {
+			pluginManager.plugins().dispose();
+			trigger();
+		} catch {
+			//
+		}
+	}, [pluginManager, trigger]);
+
 	const deletePlugin = useCallback(
 		async (plugin: PluginController, profile: Contracts.IProfile) => {
 			try {
@@ -315,6 +332,8 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		pluginRegistry,
 		reportPlugin,
 		resetFilters: () => setFilters(defaultFilters),
+		resetPlugins,
+		restoreEnabledPlugins,
 		searchResults,
 		state,
 		trigger,

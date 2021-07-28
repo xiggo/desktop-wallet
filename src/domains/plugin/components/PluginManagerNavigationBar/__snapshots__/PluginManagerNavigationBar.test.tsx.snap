@@ -2,325 +2,320 @@
 
 exports[`PluginManagerNavigationBar should render 1`] = `
 <DocumentFragment>
-  <div>
-    <nav
-      class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
-      data-testid="PluginManagerNavigationBar"
+  <nav
+    class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
+    data-testid="PluginManagerNavigationBar"
+  >
+    <div
+      class="container flex justify-between items-center px-10 mx-auto"
     >
       <div
-        class="container flex justify-between items-center px-10 mx-auto"
+        class="-mx-6 w-full"
       >
         <div
-          class="-mx-6 w-full"
+          class="Tabs__TabList-sc-1t8sbwb-1 bVYhpi w-full h-18"
         >
-          <div
-            class="Tabs__TabList-sc-1t8sbwb-1 bVYhpi w-full h-18"
+          <button
+            aria-selected="true"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-latest"
+            role="tab"
+            tabindex="0"
+            type="button"
           >
-            <button
-              aria-selected="true"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-latest"
-              role="tab"
-              tabindex="0"
-              type="button"
-            >
-              <span>
-                Latest
-              </span>
-            </button>
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-gaming"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                Gaming
-              </span>
-            </button>
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-utility"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                Utility
-              </span>
-            </button>
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-exchange"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                Exchange
-              </span>
-            </button>
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-other"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                Other
-              </span>
-            </button>
-            <div
-              class="flex flex-1"
-            />
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-my-plugins"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                <span>
-                  My Plugins
-                </span>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div
-          class="flex h-18"
-        >
+            <span>
+              Latest
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-gaming"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              Gaming
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-utility"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              Utility
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-exchange"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              Exchange
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-other"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              Other
+            </span>
+          </button>
           <div
-            class="my-auto mx-8 w-px h-10 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex flex-1"
           />
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-my-plugins"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              <span>
+                My Plugins
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex h-18"
+      >
+        <div
+          class="my-auto mx-8 w-px h-10 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+        />
+        <div
+          class="flex items-center space-x-1"
+        >
           <div
-            class="flex items-center space-x-1"
+            data-testid="LayoutControls__list"
           >
             <div
-              data-testid="LayoutControls__list"
+              class="group"
             >
-              <div
-                class="group"
+              <button
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+                data-testid="LayoutControls__list--icon"
               >
-                <button
-                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
-                  data-testid="LayoutControls__list--icon"
+                <div
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="sc-bdnxRM NjstW"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      list-view.svg
-                    </svg>
-                  </div>
-                </button>
-              </div>
+                  <svg>
+                    list-view.svg
+                  </svg>
+                </div>
+              </button>
             </div>
+          </div>
+          <div
+            data-testid="LayoutControls__grid"
+          >
             <div
-              data-testid="LayoutControls__grid"
+              class="group"
             >
-              <div
-                class="group"
+              <button
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
+                data-testid="LayoutControls__grid--icon"
               >
-                <button
-                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
-                  data-testid="LayoutControls__grid--icon"
+                <div
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="sc-bdnxRM NjstW"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      grid-view.svg
-                    </svg>
-                  </div>
-                </button>
-              </div>
+                  <svg>
+                    grid-view.svg
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </DocumentFragment>
 `;
 
 exports[`PluginManagerNavigationBar should update selected 1`] = `
 <DocumentFragment>
-  <div>
-    <nav
-      class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
-      data-testid="PluginManagerNavigationBar"
+  <nav
+    class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
+    data-testid="PluginManagerNavigationBar"
+  >
+    <div
+      class="container flex justify-between items-center px-10 mx-auto"
     >
       <div
-        class="container flex justify-between items-center px-10 mx-auto"
+        class="-mx-6 w-full"
       >
         <div
-          class="-mx-6 w-full"
+          class="Tabs__TabList-sc-1t8sbwb-1 bVYhpi w-full h-18"
         >
-          <div
-            class="Tabs__TabList-sc-1t8sbwb-1 bVYhpi w-full h-18"
+          <button
+            aria-selected="true"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-latest"
+            role="tab"
+            tabindex="0"
+            type="button"
           >
-            <button
-              aria-selected="true"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-latest"
-              role="tab"
-              tabindex="0"
-              type="button"
-            >
-              <span>
-                Latest
-              </span>
-            </button>
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-gaming"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                Gaming
-              </span>
-            </button>
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-utility"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                Utility
-              </span>
-            </button>
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-exchange"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                Exchange
-              </span>
-            </button>
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-other"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                Other
-              </span>
-            </button>
-            <div
-              class="flex flex-1"
-            />
-            <button
-              aria-selected="false"
-              class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-              data-ring-focus-margin="-mx-3"
-              data-testid="tabs__tab-button-my-plugins"
-              role="tab"
-              tabindex="-1"
-              type="button"
-            >
-              <span>
-                <span>
-                  My Plugins
-                </span>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div
-          class="flex h-18"
-        >
+            <span>
+              Latest
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-gaming"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              Gaming
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-utility"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              Utility
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-exchange"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              Exchange
+            </span>
+          </button>
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-other"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              Other
+            </span>
+          </button>
           <div
-            class="my-auto mx-8 w-px h-10 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="flex flex-1"
           />
+          <button
+            aria-selected="false"
+            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
+            data-ring-focus-margin="-mx-3"
+            data-testid="tabs__tab-button-my-plugins"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span>
+              <span>
+                My Plugins
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex h-18"
+      >
+        <div
+          class="my-auto mx-8 w-px h-10 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+        />
+        <div
+          class="flex items-center space-x-1"
+        >
           <div
-            class="flex items-center space-x-1"
+            data-testid="LayoutControls__list"
           >
             <div
-              data-testid="LayoutControls__list"
+              class="group"
             >
-              <div
-                class="group"
+              <button
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+                data-testid="LayoutControls__list--icon"
               >
-                <button
-                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
-                  data-testid="LayoutControls__list--icon"
+                <div
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="sc-bdnxRM NjstW"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      list-view.svg
-                    </svg>
-                  </div>
-                </button>
-              </div>
+                  <svg>
+                    list-view.svg
+                  </svg>
+                </div>
+              </button>
             </div>
+          </div>
+          <div
+            data-testid="LayoutControls__grid"
+          >
             <div
-              data-testid="LayoutControls__grid"
+              class="group"
             >
-              <div
-                class="group"
+              <button
+                class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
+                data-testid="LayoutControls__grid--icon"
               >
-                <button
-                  class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
-                  data-testid="LayoutControls__grid--icon"
+                <div
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
-                  <div
-                    class="sc-bdnxRM NjstW"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      grid-view.svg
-                    </svg>
-                  </div>
-                </button>
-              </div>
+                  <svg>
+                    grid-view.svg
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </nav>
-    ,
-  </div>
+    </div>
+  </nav>
 </DocumentFragment>
 `;

@@ -178,6 +178,7 @@ const CreateProfileForm = ({
 						<FormField name="currency">
 							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.CURRENCY")} />
 							<Select
+								id="CreateProfile__currency"
 								defaultValue={currency}
 								placeholder={t("COMMON.SELECT_OPTION", {
 									option: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),

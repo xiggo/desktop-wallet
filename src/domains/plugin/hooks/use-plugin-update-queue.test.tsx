@@ -1,7 +1,8 @@
 import { waitFor } from "@testing-library/react";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";
-import { PluginManager, PluginManagerProvider } from "plugins";
+import { PluginManager } from "plugins";
+import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { env } from "utils/testing-library";
 

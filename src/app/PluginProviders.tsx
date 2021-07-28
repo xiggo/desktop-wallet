@@ -5,12 +5,12 @@ import {
 	HttpPluginService,
 	LaunchPluginService,
 	PluginManager,
-	PluginManagerProvider,
 	ProfilePluginService,
 	StorePluginService,
 	ThemePluginService,
 	TimersPluginService,
 } from "plugins";
+import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import { MessagePluginService } from "plugins/services/message/MessagePluginService";
 import React from "react";
 

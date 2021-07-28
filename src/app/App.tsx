@@ -21,8 +21,7 @@ import { ARK } from "@payvo/sdk-ark";
 import { LSK } from "@payvo/sdk-lsk";
 import { Offline } from "domains/error/pages";
 import { Splash } from "domains/splash/pages";
-import { usePluginManagerContext } from "plugins";
-import { PluginRouterWrapper } from "plugins/components/PluginRouterWrapper";
+import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useLayoutEffect, useState } from "react";
 import { useErrorHandler } from "react-error-boundary";
 import { I18nextProvider } from "react-i18next";
@@ -42,9 +41,7 @@ import { SentryRouterWrapper } from "./sentry/SentryRouterWrapper";
 import { httpClient } from "./services";
 
 const RouteWrappers = ({ children }: { children: React.ReactNode }) => (
-	<SentryRouterWrapper>
-		<PluginRouterWrapper>{children}</PluginRouterWrapper>
-	</SentryRouterWrapper>
+	<SentryRouterWrapper>{children}</SentryRouterWrapper>
 );
 
 const Main = () => {

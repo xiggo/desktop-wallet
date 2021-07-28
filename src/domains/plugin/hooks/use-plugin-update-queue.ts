@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-import { usePluginManagerContext } from "plugins";
+import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export const usePluginUpdateQueue = () => {

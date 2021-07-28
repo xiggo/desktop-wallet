@@ -2,7 +2,8 @@ import { Page } from "app/components/Layout";
 import { TextArea } from "app/components/TextArea";
 import { useActiveProfile, useQueryParams } from "app/hooks";
 import { PluginImage } from "domains/plugin/components/PluginImage";
-import { LaunchRender, usePluginManagerContext } from "plugins";
+import { LaunchRender } from "plugins";
+import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useRef } from "react";
 import { FallbackProps } from "react-error-boundary";
 

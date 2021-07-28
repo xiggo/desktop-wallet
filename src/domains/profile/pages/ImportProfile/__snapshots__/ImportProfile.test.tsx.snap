@@ -396,12 +396,12 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                   <div
                                     aria-expanded="false"
                                     aria-haspopup="listbox"
-                                    aria-owns="downshift-20-menu"
+                                    aria-owns="CreateProfile__currency-menu"
                                     role="combobox"
                                   >
                                     <label
-                                      for="downshift-20-input"
-                                      id="downshift-20-label"
+                                      for="CreateProfile__currency-input"
+                                      id="CreateProfile__currency-label"
                                     />
                                     <div
                                       class="fixed invisible w-auto whitespace-nowrap"
@@ -416,12 +416,12 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                       >
                                         <input
                                           aria-autocomplete="list"
-                                          aria-controls="downshift-20-menu"
-                                          aria-labelledby="downshift-20-label"
+                                          aria-controls="CreateProfile__currency-menu"
+                                          aria-labelledby="CreateProfile__currency-label"
                                           autocomplete="off"
                                           class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                                           data-testid="SelectDropdown__input"
-                                          id="downshift-20-input"
+                                          id="CreateProfile__currency-input"
                                           name="currency"
                                           placeholder="Select Currency"
                                           value="BTC (Ƀ)"
@@ -461,9 +461,9 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                       </div>
                                     </div>
                                     <ul
-                                      aria-labelledby="downshift-20-label"
+                                      aria-labelledby="CreateProfile__currency-label"
                                       class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
-                                      id="downshift-20-menu"
+                                      id="CreateProfile__currency-menu"
                                       role="listbox"
                                     />
                                   </div>
@@ -969,12 +969,12 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                   <div
                                     aria-expanded="false"
                                     aria-haspopup="listbox"
-                                    aria-owns="downshift-30-menu"
+                                    aria-owns="CreateProfile__currency-menu"
                                     role="combobox"
                                   >
                                     <label
-                                      for="downshift-30-input"
-                                      id="downshift-30-label"
+                                      for="CreateProfile__currency-input"
+                                      id="CreateProfile__currency-label"
                                     />
                                     <div
                                       class="fixed invisible w-auto whitespace-nowrap"
@@ -989,12 +989,12 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                       >
                                         <input
                                           aria-autocomplete="list"
-                                          aria-controls="downshift-30-menu"
-                                          aria-labelledby="downshift-30-label"
+                                          aria-controls="CreateProfile__currency-menu"
+                                          aria-labelledby="CreateProfile__currency-label"
                                           autocomplete="off"
                                           class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                                           data-testid="SelectDropdown__input"
-                                          id="downshift-30-input"
+                                          id="CreateProfile__currency-input"
                                           name="currency"
                                           placeholder="Select Currency"
                                           value="BTC (Ƀ)"
@@ -1034,9 +1034,9 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                       </div>
                                     </div>
                                     <ul
-                                      aria-labelledby="downshift-30-label"
+                                      aria-labelledby="CreateProfile__currency-label"
                                       class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
-                                      id="downshift-30-menu"
+                                      id="CreateProfile__currency-menu"
                                       role="listbox"
                                     />
                                   </div>

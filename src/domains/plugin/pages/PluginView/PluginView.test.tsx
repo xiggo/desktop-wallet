@@ -1,5 +1,6 @@
 import { Contracts } from "@payvo/profiles";
-import { LaunchPluginService, PluginManagerProvider } from "plugins";
+import { LaunchPluginService } from "plugins";
+import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import { PluginController, PluginManager } from "plugins/core";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -39,6 +40,7 @@ describe("Plugin View", () => {
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/view?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 

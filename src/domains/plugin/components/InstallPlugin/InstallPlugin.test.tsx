@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 
 import { ipcRenderer } from "electron";
-import { PluginManager, PluginManagerProvider } from "plugins";
+import { PluginManager } from "plugins";
+import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { fireEvent, render, waitFor } from "utils/testing-library";
 

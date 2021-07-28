@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { ARK } from "@payvo/sdk-ark";
-import { EnvironmentProvider } from "app/contexts";
 import { httpClient } from "app/services";
 import electron from "electron";
 import os from "os";
@@ -42,11 +41,7 @@ const baseSettings = {
 };
 
 const renderComponent = async () => {
-	const result = renderWithRouter(
-		<EnvironmentProvider env={env}>
-			<CreateProfile />
-		</EnvironmentProvider>,
-	);
+	const result = renderWithRouter(<CreateProfile />);
 	await waitFor(() => expect(result.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 	return result;
 };

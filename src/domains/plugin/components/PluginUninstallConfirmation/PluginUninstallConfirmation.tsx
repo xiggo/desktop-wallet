@@ -4,7 +4,8 @@ import { Icon } from "app/components/Icon";
 import { Image } from "app/components/Image";
 import { Modal } from "app/components/Modal";
 import { useEnvironmentContext } from "app/contexts";
-import { PluginController, usePluginManagerContext } from "plugins";
+import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
+import { PluginController } from "plugins/core/plugin-controller";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

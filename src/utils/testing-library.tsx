@@ -9,6 +9,8 @@ import { i18n } from "app/i18n";
 import { httpClient } from "app/services";
 import { createMemoryHistory } from "history";
 import nock from "nock";
+import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
+import { PluginManager } from "plugins/core/plugin-manager";
 import React from "react";
 import { I18nextProvider } from "react-i18next";
 import { Router } from "react-router-dom";
@@ -31,6 +33,8 @@ const ProfileSynchronizer = ({ children }: { children?: React.ReactNode }) => {
 	return <>{children}</>;
 };
 
+export const pluginManager = new PluginManager();
+
 export const WithProviders: React.FC = ({ children }: { children?: React.ReactNode }) => (
 	<I18nextProvider i18n={i18n}>
 		<EnvironmentProvider env={env}>
@@ -48,9 +52,19 @@ const renderWithRouter = (
 		routes = ["/"],
 		history = createMemoryHistory({ initialEntries: routes }),
 		withProviders = true,
+		withPluginProvider = true,
 		withProfileSynchronizer = false,
 	} = {},
 ) => {
+	const PluginProviderWrapper = ({ children }: { children: React.ReactNode }) =>
+		withPluginProvider ? (
+			<PluginManagerProvider manager={pluginManager} services={[]}>
+				{children}
+			</PluginManagerProvider>
+		) : (
+			<>{children}</>
+		);
+
 	const ProfileSynchronizerWrapper = ({ children }: { children: React.ReactNode }) =>
 		withProfileSynchronizer ? <ProfileSynchronizer>{children}</ProfileSynchronizer> : <>{children}</>;
 
@@ -58,7 +72,9 @@ const renderWithRouter = (
 		withProviders ? (
 			<WithProviders>
 				<Router history={history}>
-					<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
+					<PluginProviderWrapper>
+						<ProfileSynchronizerWrapper>{children}</ProfileSynchronizerWrapper>
+					</PluginProviderWrapper>
 				</Router>
 			</WithProviders>
 		) : (

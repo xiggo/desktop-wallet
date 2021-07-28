@@ -5,7 +5,7 @@ import { InstallPlugin } from "domains/plugin/components/InstallPlugin";
 import { PluginHeader } from "domains/plugin/components/PluginHeader";
 import { PluginInfo } from "domains/plugin/components/PluginInfo";
 import { PluginUninstallConfirmation } from "domains/plugin/components/PluginUninstallConfirmation/PluginUninstallConfirmation";
-import { usePluginManagerContext } from "plugins";
+import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";

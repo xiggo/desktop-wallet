@@ -3,7 +3,7 @@ import { Modal } from "app/components/Modal";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
-import { usePluginManagerContext } from "plugins";
+import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 

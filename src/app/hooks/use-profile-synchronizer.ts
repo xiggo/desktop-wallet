@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/profiles";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useAccentColor } from "app/hooks/use-accent-color";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
+import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import { useEffect, useMemo, useRef } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
 import { isIdle } from "utils/electron-utils";
@@ -190,6 +191,7 @@ export const useProfileSyncStatus = () => {
 export const useProfileRestore = () => {
 	const { shouldRestore, markAsRestored, setStatus } = useProfileSyncStatus();
 	const { persist, env } = useEnvironmentContext();
+	const { pluginManager, resetPlugins, restoreEnabledPlugins } = usePluginManagerContext();
 	const { getProfileFromUrl, getProfileStoredPassword } = useProfileUtils(env);
 	const { setConfiguration } = useConfiguration();
 	const history = useHistory();
@@ -213,6 +215,19 @@ export const useProfileRestore = () => {
 		setConfiguration({ dashboard: config });
 	};
 
+	const restorePlugins = (profile: Contracts.IProfile) => {
+		const current = pluginManager.plugins().currentProfile();
+
+		if (current === undefined) {
+			restoreEnabledPlugins(profile);
+			return;
+		}
+
+		if (current?.id() !== profile.id()) {
+			resetPlugins();
+		}
+	};
+
 	const restoreProfile = async (profile: Contracts.IProfile, passwordInput?: string) => {
 		if (!shouldRestore(profile)) {
 			return false;
@@ -229,6 +244,9 @@ export const useProfileRestore = () => {
 		// Restore profile's config
 		restoreProfileConfig(profile);
 
+		// Restore enabled plugins
+		restorePlugins(profile);
+
 		// Profile restore finished but url changed in the meanwhile.
 		// Prevent from unecessary save of old profile.
 		const activeProfile = getProfileFromUrl(history?.location?.pathname);
@@ -241,6 +259,7 @@ export const useProfileRestore = () => {
 	};
 
 	return {
+		restorePlugins,
 		restoreProfile,
 		restoreProfileConfig,
 	};
@@ -252,6 +271,7 @@ interface ProfileSynchronizerProperties {
 
 export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchronizerProperties = {}) => {
 	const { env, persist } = useEnvironmentContext();
+	const { resetPlugins } = usePluginManagerContext();
 	const { setConfiguration, profileIsSyncing } = useConfiguration();
 	const { restoreProfile } = useProfileRestore();
 	const profile = useProfileWatcher();
@@ -281,6 +301,7 @@ export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchro
 
 			resetTheme();
 			resetAccentColor();
+			resetPlugins();
 
 			resetStatuses(env.profiles().values());
 
@@ -335,6 +356,7 @@ export const useProfileSynchronizer = ({ onProfileRestoreError }: ProfileSynchro
 		env,
 		resetAccentColor,
 		resetTheme,
+		resetPlugins,
 		setProfileTheme,
 		setProfileAccentColor,
 		allJobs,

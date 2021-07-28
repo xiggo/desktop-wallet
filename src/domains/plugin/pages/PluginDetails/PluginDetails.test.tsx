@@ -3,27 +3,28 @@ import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import nock from "nock";
-import {
-	LaunchPluginService,
-	PluginController,
-	PluginManager,
-	PluginManagerProvider,
-	usePluginManagerContext,
-} from "plugins";
+import { LaunchPluginService, PluginController } from "plugins";
+import { PluginManagerProvider, usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import {
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	pluginManager,
+	renderWithRouter,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { PluginDetails } from "./PluginDetails";
 
 describe("PluginDetails", () => {
-	let manager: PluginManager;
 	let profile: Contracts.IProfile;
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		manager = new PluginManager();
 	});
 
 	afterAll(() => {
@@ -36,7 +37,7 @@ describe("PluginDetails", () => {
 			() => void 0,
 		);
 
-		manager.plugins().push(plugin);
+		pluginManager.plugins().push(plugin);
 
 		const FetchComponent = () => {
 			const { fetchPluginPackages } = usePluginManagerContext();
@@ -45,13 +46,14 @@ describe("PluginDetails", () => {
 
 		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -60,6 +62,8 @@ describe("PluginDetails", () => {
 		await waitFor(() => expect(screen.getAllByText("Test Plugin").length).toBeGreaterThan(0));
 
 		expect(container).toMatchSnapshot();
+
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should render properly for remote package", async () => {
@@ -80,13 +84,14 @@ describe("PluginDetails", () => {
 
 		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=remote-plugin`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -132,13 +137,14 @@ describe("PluginDetails", () => {
 
 		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=@dated/transaction-export-plugin`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -157,7 +163,7 @@ describe("PluginDetails", () => {
 			() => void 0,
 		);
 
-		manager.plugins().push(plugin);
+		pluginManager.plugins().push(plugin);
 
 		const FetchComponent = () => {
 			const { fetchPluginPackages } = usePluginManagerContext();
@@ -166,13 +172,14 @@ describe("PluginDetails", () => {
 
 		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -190,6 +197,8 @@ describe("PluginDetails", () => {
 		);
 
 		ipcRendererMock.mockRestore();
+
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should open the plugin view", async () => {
@@ -197,8 +206,8 @@ describe("PluginDetails", () => {
 			{ "desktop-wallet": { permissions: ["LAUNCH"] }, name: "test-plugin" },
 			(api) => api.launch().render(<h1>Test</h1>),
 		);
-		manager.services().register([new LaunchPluginService()]);
-		manager.plugins().push(plugin);
+		pluginManager.services().register([new LaunchPluginService()]);
+		pluginManager.plugins().push(plugin);
 		plugin.enable(profile, { autoRun: true });
 
 		const FetchComponent = () => {
@@ -208,13 +217,14 @@ describe("PluginDetails", () => {
 
 		const { history } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -227,7 +237,7 @@ describe("PluginDetails", () => {
 		expect(history.location.pathname).toEqual(`/profiles/${profile.id()}/plugins/view`);
 		expect(history.location.search).toEqual(`?pluginId=${plugin.config().id()}`);
 
-		manager.plugins().removeById(plugin.config().id(), profile);
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should enable package from header", async () => {
@@ -238,7 +248,7 @@ describe("PluginDetails", () => {
 			() => void 0,
 		);
 
-		manager.plugins().push(plugin);
+		pluginManager.plugins().push(plugin);
 
 		const FetchComponent = () => {
 			const { fetchPluginPackages } = usePluginManagerContext();
@@ -247,13 +257,14 @@ describe("PluginDetails", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -268,7 +279,7 @@ describe("PluginDetails", () => {
 
 		expect(toastSpy).toHaveBeenCalled();
 
-		manager.plugins().removeById(plugin.config().id(), profile);
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 
 		toastSpy.mockRestore();
 	});
@@ -281,7 +292,7 @@ describe("PluginDetails", () => {
 			{ incompatible: true },
 		);
 
-		manager.plugins().push(plugin);
+		pluginManager.plugins().push(plugin);
 
 		const FetchComponent = () => {
 			const { fetchPluginPackages } = usePluginManagerContext();
@@ -290,13 +301,14 @@ describe("PluginDetails", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -309,7 +321,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
 
-		manager.plugins().removeById(plugin.config().id(), profile);
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 
 		toastSpy.mockRestore();
 	});
@@ -320,7 +332,7 @@ describe("PluginDetails", () => {
 			() => void 0,
 		);
 
-		manager.plugins().push(plugin);
+		pluginManager.plugins().push(plugin);
 		plugin.enable(profile, { autoRun: true });
 
 		const FetchComponent = () => {
@@ -330,13 +342,14 @@ describe("PluginDetails", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -348,7 +361,7 @@ describe("PluginDetails", () => {
 		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(false));
-		manager.plugins().removeById(plugin.config().id(), profile);
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should remove package", async () => {
@@ -357,7 +370,7 @@ describe("PluginDetails", () => {
 			() => void 0,
 		);
 
-		manager.plugins().push(plugin);
+		pluginManager.plugins().push(plugin);
 
 		const FetchComponent = () => {
 			const { fetchPluginPackages } = usePluginManagerContext();
@@ -366,13 +379,14 @@ describe("PluginDetails", () => {
 
 		const { history } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -386,10 +400,12 @@ describe("PluginDetails", () => {
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
 		fireEvent.click(screen.getByTestId("PluginUninstall__submit-button"));
 
-		await waitFor(() => expect(manager.plugins().findById(plugin.config().id())).toBeUndefined());
+		await waitFor(() => expect(pluginManager.plugins().findById(plugin.config().id())).toBeUndefined());
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/plugins`));
 
 		invokeMock.mockRestore();
+
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should close remove confirmation", async () => {
@@ -398,7 +414,7 @@ describe("PluginDetails", () => {
 			() => void 0,
 		);
 
-		manager.plugins().push(plugin);
+		pluginManager.plugins().push(plugin);
 
 		const FetchComponent = () => {
 			const { fetchPluginPackages } = usePluginManagerContext();
@@ -407,13 +423,14 @@ describe("PluginDetails", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=${plugin.config().id()}`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -429,6 +446,8 @@ describe("PluginDetails", () => {
 		await waitFor(() => expect(screen.queryByTestId("PluginUninstallConfirmation")).not.toBeInTheDocument());
 
 		invokeMock.mockRestore();
+
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should install package", async () => {
@@ -464,7 +483,7 @@ describe("PluginDetails", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
@@ -473,6 +492,7 @@ describe("PluginDetails", () => {
 				routes: [
 					`/profiles/${profile.id()}/plugins/details?pluginId=remote-plugin&repositoryURL=https://github.com/arkecosystem/remote-plugin`,
 				],
+				withPluginProvider: false,
 			},
 		);
 
@@ -518,7 +538,7 @@ describe("PluginDetails", () => {
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
@@ -527,6 +547,7 @@ describe("PluginDetails", () => {
 				routes: [
 					`/profiles/${profile.id()}/plugins/details?pluginId=remote-plugin&repositoryURL=https://github.com/arkecosystem/remote-plugin`,
 				],
+				withPluginProvider: false,
 			},
 		);
 
@@ -556,7 +577,7 @@ describe("PluginDetails", () => {
 			},
 			() => void 0,
 		);
-		manager.plugins().push(plugin);
+		pluginManager.plugins().push(plugin);
 
 		nock("https://registry.npmjs.com")
 			.get("/-/v1/search")
@@ -581,13 +602,14 @@ describe("PluginDetails", () => {
 
 		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={manager} services={[]}>
+				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
 					<PluginDetails />
 				</PluginManagerProvider>
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=@dated/transaction-export-plugin`],
+				withPluginProvider: false,
 			},
 		);
 
@@ -608,5 +630,7 @@ describe("PluginDetails", () => {
 		expect(container).toMatchSnapshot();
 
 		jest.useRealTimers();
+
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 });

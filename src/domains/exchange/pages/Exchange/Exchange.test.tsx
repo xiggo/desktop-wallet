@@ -1,13 +1,21 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { pluginManager, PluginProviders } from "app/PluginProviders";
 import { translations as pluginTranslations } from "domains/plugin/i18n";
 import { createMemoryHistory } from "history";
 import { LaunchPluginService, PluginController } from "plugins";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, waitFor, within } from "testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	pluginManager,
+	renderWithRouter,
+	waitFor,
+	within,
+} from "testing-library";
 
 import { translations } from "../../i18n";
 import { Exchange } from "./Exchange";
@@ -26,9 +34,7 @@ describe("Exchange", () => {
 	it("should render", () => {
 		const { container, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,
@@ -55,9 +61,7 @@ describe("Exchange", () => {
 
 		const { container, getByTestId, getByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,
@@ -88,9 +92,7 @@ describe("Exchange", () => {
 
 		const { getAllByTestId, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,
@@ -129,9 +131,7 @@ describe("Exchange", () => {
 
 		const { getAllByTestId, getByTestId, getByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,
@@ -161,9 +161,7 @@ describe("Exchange", () => {
 	it("should render filler exchange cards", () => {
 		const { container, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,
@@ -200,9 +198,7 @@ describe("Exchange", () => {
 
 		const { container, getByTestId, getByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,
@@ -245,9 +241,7 @@ describe("Exchange", () => {
 
 		const { getAllByTestId, getByTestId, getByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,
@@ -290,9 +284,7 @@ describe("Exchange", () => {
 
 		const { getAllByTestId, getByTestId, getByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,
@@ -321,9 +313,7 @@ describe("Exchange", () => {
 	it("should open & close add exchange modal", async () => {
 		const { container, findByText, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
-				<PluginProviders>
-					<Exchange />
-				</PluginProviders>
+				<Exchange />
 			</Route>,
 			{
 				history,

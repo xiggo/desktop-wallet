@@ -1,5 +1,4 @@
 import { act, renderHook } from "@testing-library/react-hooks";
-import { PluginProviders } from "app/PluginProviders";
 import { translations as pluginTranslations } from "domains/plugin/i18n";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
@@ -17,11 +16,7 @@ describe("PluginManagerNavigationBar", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment, getByTestId } = render(
-			<PluginProviders>
-				<PluginManagerNavigationBar menu={menu} />
-			</PluginProviders>,
-		);
+		const { asFragment, getByTestId } = render(<PluginManagerNavigationBar menu={menu} />);
 
 		expect(getByTestId("PluginManagerNavigationBar")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
@@ -38,14 +33,11 @@ describe("PluginManagerNavigationBar", () => {
 		});
 
 		const { asFragment, getByTestId, rerender } = render(
-			<PluginProviders>
-				<PluginManagerNavigationBar
-					menu={menu}
-					selectedView={result.current.currentView}
-					onChange={result.current.setCurrentView}
-				/>
-				,
-			</PluginProviders>,
+			<PluginManagerNavigationBar
+				menu={menu}
+				selectedView={result.current.currentView}
+				onChange={result.current.setCurrentView}
+			/>,
 		);
 
 		const navIds = ["gaming", "utility", "exchange", "other", "my-plugins", "latest"];
@@ -58,14 +50,11 @@ describe("PluginManagerNavigationBar", () => {
 			});
 
 			rerender(
-				<PluginProviders>
-					<PluginManagerNavigationBar
-						menu={menu}
-						selectedView={result.current.currentView}
-						onChange={result.current.setCurrentView}
-					/>
-					,
-				</PluginProviders>,
+				<PluginManagerNavigationBar
+					menu={menu}
+					selectedView={result.current.currentView}
+					onChange={result.current.setCurrentView}
+				/>,
 			);
 
 			expect(result.current.currentView).toBe(navId);
@@ -77,9 +66,7 @@ describe("PluginManagerNavigationBar", () => {
 
 	it("should show installed plugins count", () => {
 		const { getByTestId } = render(
-			<PluginProviders>
-				<PluginManagerNavigationBar menu={menu} selectedView="" installedPluginsCount={8} />,
-			</PluginProviders>,
+			<PluginManagerNavigationBar menu={menu} selectedView="" installedPluginsCount={8} />,
 		);
 
 		expect(getByTestId("tabs__tab-button-my-plugins-count")).toHaveTextContent("8");

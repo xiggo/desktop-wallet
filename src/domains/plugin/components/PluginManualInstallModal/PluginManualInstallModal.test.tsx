@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { toasts } from "app/services";
 import nock from "nock";
-import { PluginManager, PluginManagerProvider } from "plugins";
+import { PluginManager } from "plugins";
+import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
