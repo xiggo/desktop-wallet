@@ -1,13 +1,13 @@
 {
 	"_id": "@arkecosystem/desktop-wallet-explorer",
 	"_rev": "10-f10b0bbb3f97d1f49ac33782b45f3a6d",
-	"name": "@arkecosystem/desktop-wallet-explorer",
+	"name": "@payvo/desktop-wallet-explorer",
 	"dist-tags": {
 		"latest": "0.1.13"
 	},
 	"versions": {
 		"0.1.4": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"title": "ARK Explorer on the wallet",
 			"version": "0.1.4",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
@@ -91,7 +91,7 @@
 			"_hasShrinkwrap": false
 		},
 		"0.1.6": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"title": "ARK Explorer on the wallet",
 			"version": "0.1.6",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
@@ -173,7 +173,7 @@
 			"_hasShrinkwrap": false
 		},
 		"0.1.7": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"title": "ARK Explorer on the wallet",
 			"version": "0.1.7",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
@@ -255,7 +255,7 @@
 			"_hasShrinkwrap": false
 		},
 		"0.1.8": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"title": "ARK Explorer on the wallet",
 			"version": "0.1.8",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
@@ -337,7 +337,7 @@
 			"_hasShrinkwrap": false
 		},
 		"0.1.9": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"title": "ARK Explorer Wallet Edition",
 			"version": "0.1.9",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
@@ -419,7 +419,7 @@
 			"_hasShrinkwrap": false
 		},
 		"0.1.10": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"title": "ARK Explorer Wallet Edition",
 			"version": "0.1.10",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
@@ -498,7 +498,7 @@
 			"_hasShrinkwrap": false
 		},
 		"0.1.11": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"title": "ARK Explorer Wallet Edition",
 			"version": "0.1.11",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
@@ -577,7 +577,7 @@
 			"_hasShrinkwrap": false
 		},
 		"0.1.12": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"version": "0.1.12",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
 			"main": "index.js",
@@ -656,7 +656,7 @@
 			"_hasShrinkwrap": false
 		},
 		"0.1.13": {
-			"name": "@arkecosystem/desktop-wallet-explorer",
+			"name": "@payvo/desktop-wallet-explorer",
 			"version": "0.1.13",
 			"description": "Use the ARK Mainnet explorer directly within the wallet",
 			"main": "index.js",

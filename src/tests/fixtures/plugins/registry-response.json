@@ -82,7 +82,7 @@
 		},
 		{
 			"package": {
-				"name": "@arkecosystem/desktop-wallet-explorer",
+				"name": "@payvo/desktop-wallet-explorer",
 				"scope": "arkecosystem",
 				"version": "0.1.13",
 				"description": "Use the ARK Mainnet explorer directly within the wallet",
@@ -132,7 +132,7 @@
 		},
 		{
 			"package": {
-				"name": "@arkecosystem/desktop-wallet-sound-notifications",
+				"name": "@payvo/desktop-wallet-sound-notifications",
 				"scope": "arkecosystem",
 				"version": "0.1.6",
 				"description": "Play a notification sound when you receive new transactions",

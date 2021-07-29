@@ -11,7 +11,7 @@ describe("PluginSpecs", () => {
 
 		const { asFragment, findByText, getByTestId } = render(
 			<PluginSpecs
-				author="ARK Ecosystem"
+				author="Payvo"
 				category="Utility"
 				url="https://github.com/arkecosystem/explorer"
 				version="1.3.8"
@@ -23,7 +23,7 @@ describe("PluginSpecs", () => {
 
 		expect(ipcRendererMock).toHaveBeenLastCalledWith("open-external", "https://github.com/arkecosystem/explorer");
 
-		expect(await findByText("ARK Ecosystem")).toBeTruthy();
+		expect(await findByText("Payvo")).toBeTruthy();
 		expect(await findByText("Utility")).toBeTruthy();
 		expect(await findByText("View")).toBeTruthy();
 		expect(await findByText("1.3.8")).toBeTruthy();
@@ -35,19 +35,17 @@ describe("PluginSpecs", () => {
 
 	it("should render without url and size", async () => {
 		const { asFragment, findAllByText, findByText } = render(
-			<PluginSpecs author="ARK Ecosystem" category="Utility" version="1.3.8" isOfficial />,
+			<PluginSpecs author="Payvo" category="Utility" version="1.3.8" isOfficial />,
 		);
 
-		expect(await findByText("ARK Ecosystem")).toBeTruthy();
+		expect(await findByText("Payvo")).toBeTruthy();
 		expect(await findByText("Utility")).toBeTruthy();
 		expect(await findAllByText("N/A")).toHaveLength(2);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show loading state for size", () => {
-		const { container } = render(
-			<PluginSpecs author="ARK Ecosystem" category="Utility" version="1.3.8" isLoadingSize />,
-		);
+		const { container } = render(<PluginSpecs author="Payvo" category="Utility" version="1.3.8" isLoadingSize />);
 
 		expect(screen.getByTestId("PluginSpecs__size-skeleton")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();

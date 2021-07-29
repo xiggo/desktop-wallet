@@ -1,5 +1,5 @@
 {
-	"name": "@arkecosystem/desktop-wallet-sound-notifications",
+	"name": "@payvo/desktop-wallet-sound-notifications",
 	"version": "0.1.6",
 	"description": "Play a notification sound when you receive new transactions",
 	"keywords": [

@@ -925,7 +925,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           <span
                             class="truncate w-50"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                         </div>
                       </td>
@@ -3990,7 +3990,7 @@ exports[`PluginManager should render 1`] = `
                   </div>
                 </div>
                 <div
-                  data-testid="PluginCard--@arkecosystem/desktop-wallet-explorer"
+                  data-testid="PluginCard--@payvo/desktop-wallet-explorer"
                 >
                   <div>
                     <button
@@ -4021,7 +4021,7 @@ exports[`PluginManager should render 1`] = `
                           <span
                             class="text-sm font-semibold truncate text-theme-secondary-500 dark:text-theme-secondary-700"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                           <div
                             class="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200"
@@ -5869,7 +5869,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                   </div>
                 </div>
                 <div
-                  data-testid="PluginCard--@arkecosystem/desktop-wallet-explorer"
+                  data-testid="PluginCard--@payvo/desktop-wallet-explorer"
                 >
                   <div>
                     <button
@@ -5900,7 +5900,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                           <span
                             class="text-sm font-semibold truncate text-theme-secondary-500 dark:text-theme-secondary-700"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                           <div
                             class="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200"
@@ -5972,7 +5972,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                   </div>
                 </div>
                 <div
-                  data-testid="PluginCard--@arkecosystem/desktop-wallet-sound-notifications"
+                  data-testid="PluginCard--@payvo/desktop-wallet-sound-notifications"
                 >
                   <div>
                     <button
@@ -6003,7 +6003,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                           <span
                             class="text-sm font-semibold truncate text-theme-secondary-500 dark:text-theme-secondary-700"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                           <div
                             class="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200"
@@ -6843,7 +6843,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                   </div>
                 </div>
                 <div
-                  data-testid="PluginCard--@arkecosystem/desktop-wallet-explorer"
+                  data-testid="PluginCard--@payvo/desktop-wallet-explorer"
                 >
                   <div>
                     <button
@@ -6874,7 +6874,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                           <span
                             class="text-sm font-semibold truncate text-theme-secondary-500 dark:text-theme-secondary-700"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                           <div
                             class="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200"
@@ -6946,7 +6946,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                   </div>
                 </div>
                 <div
-                  data-testid="PluginCard--@arkecosystem/desktop-wallet-sound-notifications"
+                  data-testid="PluginCard--@payvo/desktop-wallet-sound-notifications"
                 >
                   <div>
                     <button
@@ -6977,7 +6977,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                           <span
                             class="text-sm font-semibold truncate text-theme-secondary-500 dark:text-theme-secondary-700"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                           <div
                             class="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200"
@@ -8020,7 +8020,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                   </div>
                 </div>
                 <div
-                  data-testid="PluginCard--@arkecosystem/desktop-wallet-explorer"
+                  data-testid="PluginCard--@payvo/desktop-wallet-explorer"
                 >
                   <div>
                     <button
@@ -8051,7 +8051,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                           <span
                             class="text-sm font-semibold truncate text-theme-secondary-500 dark:text-theme-secondary-700"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                           <div
                             class="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200"
@@ -9259,7 +9259,7 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                   </div>
                 </div>
                 <div
-                  data-testid="PluginCard--@arkecosystem/desktop-wallet-explorer"
+                  data-testid="PluginCard--@payvo/desktop-wallet-explorer"
                 >
                   <div>
                     <button
@@ -9290,7 +9290,7 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                           <span
                             class="text-sm font-semibold truncate text-theme-secondary-500 dark:text-theme-secondary-700"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                           <div
                             class="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200"
@@ -9362,7 +9362,7 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                   </div>
                 </div>
                 <div
-                  data-testid="PluginCard--@arkecosystem/desktop-wallet-sound-notifications"
+                  data-testid="PluginCard--@payvo/desktop-wallet-sound-notifications"
                 >
                   <div>
                     <button
@@ -9393,7 +9393,7 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                           <span
                             class="text-sm font-semibold truncate text-theme-secondary-500 dark:text-theme-secondary-700"
                           >
-                            ARK Ecosystem
+                            Payvo
                           </span>
                           <div
                             class="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200"

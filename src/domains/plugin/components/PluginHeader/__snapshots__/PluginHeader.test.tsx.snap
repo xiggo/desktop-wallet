@@ -101,7 +101,7 @@ exports[`PluginHeader should render properly 1`] = `
                   <span
                     class="font-semibold text-theme-secondary-text truncate max-w-48"
                   >
-                    ARK Ecosystem
+                    Payvo
                   </span>
                 </span>
               </div>
@@ -395,7 +395,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
                   <span
                     class="font-semibold text-theme-secondary-text truncate max-w-48"
                   >
-                    ARK Ecosystem
+                    Payvo
                   </span>
                 </span>
               </div>

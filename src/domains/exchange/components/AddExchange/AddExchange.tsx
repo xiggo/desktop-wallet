@@ -33,7 +33,7 @@ export const AddExchange = ({ isOpen, onClose }: AddExchangeProperties) => {
 			version: "1.3.8",
 		},
 		{
-			author: "ARK Ecosystem",
+			author: "Payvo",
 			category: "Other",
 			title: "OKEx",
 			version: "1.3.8",

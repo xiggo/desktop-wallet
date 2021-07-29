@@ -59,7 +59,7 @@ export class PluginConfigurationData {
 
 	author() {
 		if (this.isOfficial()) {
-			return `ARK Ecosystem`;
+			return "Payvo";
 		}
 
 		const author = this.get<string | { name: string }>("author");
@@ -190,7 +190,7 @@ export class PluginConfigurationData {
 			return false;
 		}
 
-		const scopeRegex = new RegExp(`^@arkecosystem/`);
+		const scopeRegex = new RegExp(`^@payvo/`);
 		return scopeRegex.test(name);
 	}
 

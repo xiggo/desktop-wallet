@@ -25,7 +25,7 @@ exports[`PluginSpecs should render properly 1`] = `
             <span
               class="font-semibold text-theme-secondary-text truncate max-w-48"
             >
-              ARK Ecosystem
+              Payvo
             </span>
           </span>
         </div>
@@ -189,7 +189,7 @@ exports[`PluginSpecs should render without url and size 1`] = `
             <span
               class="font-semibold text-theme-secondary-text truncate max-w-48"
             >
-              ARK Ecosystem
+              Payvo
             </span>
           </span>
         </div>
@@ -326,7 +326,7 @@ exports[`PluginSpecs should show loading state for size 1`] = `
             <span
               class="font-semibold text-theme-secondary-text truncate max-w-48"
             >
-              ARK Ecosystem
+              Payvo
             </span>
           </span>
         </div>

@@ -6,7 +6,7 @@ import { PluginHeader } from "./PluginHeader";
 
 describe("PluginHeader", () => {
 	const pluginDataFixture = {
-		author: "ARK Ecosystem",
+		author: "Payvo",
 		category: "Utility",
 		size: "4.2 Mb",
 		title: "Test Plugin",

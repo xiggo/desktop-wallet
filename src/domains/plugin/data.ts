@@ -1,7 +1,7 @@
 export const pluginData = {
 	about:
 		"Use the ARK Explorer to get full visibility of critical data from the ARK network. Data such as the latest blocks, wallet addresses and transactions. Plus monitor delegate status, their position and more.",
-	author: "ARK Ecosystem",
+	author: "Payvo",
 	averageRating: "4.6",
 	category: "Utility",
 	name: "ARK Explorer",
@@ -14,7 +14,7 @@ export const pluginData = {
 
 export const plugins = [
 	{
-		author: "ARK Ecosystem",
+		author: "Payvo",
 		category: "Utility",
 		description: "This is a description",
 		id: 0,

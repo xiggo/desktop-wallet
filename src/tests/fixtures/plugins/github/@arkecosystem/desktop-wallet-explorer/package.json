@@ -1,5 +1,5 @@
 {
-	"name": "@arkecosystem/desktop-wallet-explorer",
+	"name": "@payvo/desktop-wallet-explorer",
 	"version": "0.1.13",
 	"description": "Use the ARK Mainnet explorer directly within the wallet",
 	"keywords": [

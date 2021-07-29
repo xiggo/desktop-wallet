@@ -19,7 +19,7 @@ describe("Plugin Configuration", () => {
 	});
 
 	it("should format title with scope", () => {
-		const subject = PluginConfigurationData.make({ name: "@arkecosystem/plugin-test" });
+		const subject = PluginConfigurationData.make({ name: "@payvo/plugin-test" });
 
 		expect(subject.title()).toBe("Plugin Test");
 	});
@@ -37,19 +37,19 @@ describe("Plugin Configuration", () => {
 	});
 
 	it("should format id", () => {
-		const subject1 = PluginConfigurationData.make({ name: "@arkecosystem/plugin-test" });
+		const subject1 = PluginConfigurationData.make({ name: "@payvo/plugin-test" });
 
-		expect(subject1.id()).toBe("@arkecosystem/plugin-test");
+		expect(subject1.id()).toBe("@payvo/plugin-test");
 
-		const subject2 = PluginConfigurationData.make({ name: "@arkecosystem/plugin-explorer" });
+		const subject2 = PluginConfigurationData.make({ name: "@payvo/plugin-explorer" });
 
-		expect(subject2.id()).toBe("@arkecosystem/plugin-explorer");
+		expect(subject2.id()).toBe("@payvo/plugin-explorer");
 	});
 
 	it("should return author if official scope", () => {
-		const subject = PluginConfigurationData.make({ name: "@arkecosystem/plugin-test" });
+		const subject = PluginConfigurationData.make({ name: "@payvo/plugin-test" });
 
-		expect(subject.author()).toBe("ARK Ecosystem");
+		expect(subject.author()).toBe("Payvo");
 	});
 
 	it("should return unknown author if not defined", () => {
