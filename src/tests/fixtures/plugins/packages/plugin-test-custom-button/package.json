@@ -2,9 +2,8 @@
 	"name": "plugin-test-custom-button",
 	"version": "0.0.1",
 	"keywords": [
-		"@arkecosystem",
-		"desktop-wallet",
-		"plugin"
+		"@payvo",
+		"wallet-plugin"
 	],
 	"author": "Lucio",
 	"desktop-wallet": {
@@ -15,6 +14,6 @@
 		"permissions": [
 			"THEME"
 		],
-		"minimumVersion": "3.0.0"
+		"minimumVersion": "1.0.0"
 	}
 }

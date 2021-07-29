@@ -79,7 +79,7 @@ describe("InstallPlugin", () => {
 		const invokeSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:loader-fs.find") {
 				return {
-					config: { keywords: ["@arkecosystem", "desktop-wallet"], name: "remote-plugin", version: "0.0.1" },
+					config: { keywords: ["@payvo", "wallet-plugin"], name: "remote-plugin", version: "0.0.1" },
 					dir: "/plugins/remote-plugin",
 					source: () => void 0,
 					sourcePath: "/plugins/remote-plugin/index.js",

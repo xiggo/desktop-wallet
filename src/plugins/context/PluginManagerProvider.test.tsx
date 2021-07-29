@@ -171,7 +171,7 @@ describe("PluginManagerProvider", () => {
 
 			if (channel === "plugin:loader-fs.find") {
 				return {
-					config: { keywords: ["@arkecosystem", "desktop-wallet"], name: "test-plugin", version: "0.0.1" },
+					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
 					dir: "/plugins/test-plugin",
 					source: () => void 0,
 					sourcePath: "/plugins/test-plugin/index.js",
@@ -229,7 +229,7 @@ describe("PluginManagerProvider", () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:loader-fs.find") {
 				return {
-					config: { keywords: ["@arkecosystem", "desktop-wallet"], name: "test-plugin", version: "0.0.1" },
+					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
 					dir: "/plugins/test-plugin",
 					source: () => void 0,
 					sourcePath: "/plugins/test-plugin/index.js",
@@ -277,7 +277,7 @@ describe("PluginManagerProvider", () => {
 	it("should render properly for remote package", async () => {
 		nock("https://github.com/")
 			.get("/arkecosystem/remote-plugin/raw/master/package.json")
-			.reply(200, { keywords: ["@arkecosystem", "desktop-wallet"], name: "remote-plugin" });
+			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "remote-plugin" });
 
 		const Component = () => {
 			const { fetchLatestPackageConfiguration, pluginConfigurations } = usePluginManagerContext();
@@ -404,7 +404,7 @@ describe("PluginManagerProvider", () => {
 			if (channel === "plugin:loader-fs.find") {
 				return {
 					config: {
-						keywords: ["@arkecosystem", "desktop-wallet"],
+						keywords: ["@payvo", "wallet-plugin"],
 						name: "@dated/transaction-export-plugin",
 						version: "1.0.1",
 					},

@@ -5,7 +5,7 @@ import { PluginConfigurationData } from "./plugin-configuration";
 describe("Plugin Configuration", () => {
 	it("should validate successful", () => {
 		const subject = PluginConfigurationData.make({
-			keywords: ["@arkecosystem", "desktop-wallet"],
+			keywords: ["@payvo", "wallet-plugin"],
 			name: "plugin-test",
 		});
 

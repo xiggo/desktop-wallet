@@ -7,9 +7,8 @@
 		"rewards",
 		"staking",
 		"delegates",
-		"@arkecosystem",
-		"desktop-wallet",
-		"plugin"
+		"@payvo",
+		"wallet-plugin"
 	],
 	"homepage": "https://github.com/dated/delegate-calculator-plugin",
 	"bugs": {

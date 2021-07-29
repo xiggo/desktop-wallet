@@ -363,7 +363,7 @@ describe("PluginManager", () => {
 	it("should install plugin from header install button", async () => {
 		nock("https://github.com/")
 			.get("/arkecosystem/test-plugin/raw/master/package.json")
-			.reply(200, { keywords: ["@arkecosystem", "desktop-wallet"], name: "test-plugin" });
+			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin" });
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">

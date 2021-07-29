@@ -6,7 +6,7 @@
 				"scope": "dated",
 				"version": "1.0.3",
 				"description": "Export your wallet transaction history",
-				"keywords": ["utility", "export", "transactions", "taxes", "@arkecosystem", "desktop-wallet", "plugin"],
+				"keywords": ["utility", "export", "transactions", "taxes", "@payvo", "wallet-plugin", "plugin"],
 				"date": "2020-11-26T21:18:44.681Z",
 				"links": {
 					"npm": "https://www.npmjs.com/package/%40dated%2Ftransaction-export-plugin",
@@ -46,7 +46,7 @@
 				"scope": "dated",
 				"version": "1.0.4",
 				"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the Payvo Wallet",
-				"keywords": ["utility", "rewards", "staking", "delegates", "@arkecosystem", "desktop-wallet", "plugin"],
+				"keywords": ["utility", "rewards", "staking", "delegates", "@payvo", "wallet-plugin", "plugin"],
 				"date": "2020-03-26T16:59:19.719Z",
 				"links": {
 					"npm": "https://www.npmjs.com/package/%40dated%2Fdelegate-calculator-plugin",
@@ -86,7 +86,7 @@
 				"scope": "arkecosystem",
 				"version": "0.1.13",
 				"description": "Use the ARK Mainnet explorer directly within the wallet",
-				"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+				"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 				"date": "2020-03-03T17:49:37.930Z",
 				"links": {
 					"npm": "https://www.npmjs.com/package/%40arkecosystem%2Fdesktop-wallet-explorer",
@@ -136,7 +136,7 @@
 				"scope": "arkecosystem",
 				"version": "0.1.6",
 				"description": "Play a notification sound when you receive new transactions",
-				"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+				"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 				"date": "2019-12-09T21:54:40.610Z",
 				"links": {
 					"npm": "https://www.npmjs.com/package/%40arkecosystem%2Fdesktop-wallet-sound-notifications",

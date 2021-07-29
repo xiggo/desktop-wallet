@@ -49,7 +49,7 @@
 				"urls": ["^"],
 				"minimumVersion": "2.9.1"
 			},
-			"keywords": ["utility", "export", "transactions", "taxes", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "export", "transactions", "taxes", "@payvo", "wallet-plugin", "plugin"],
 			"bugs": {
 				"url": "https://github.com/dated/transaction-export-plugin/issues"
 			},
@@ -120,7 +120,7 @@
 				"urls": ["^"],
 				"minimumVersion": "2.9.1"
 			},
-			"keywords": ["utility", "export", "transactions", "taxes", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "export", "transactions", "taxes", "@payvo", "wallet-plugin", "plugin"],
 			"bugs": {
 				"url": "https://github.com/dated/transaction-export-plugin/issues"
 			},
@@ -187,7 +187,7 @@
 				"urls": ["^"],
 				"minimumVersion": "2.9.1"
 			},
-			"keywords": ["utility", "export", "transactions", "taxes", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "export", "transactions", "taxes", "@payvo", "wallet-plugin", "plugin"],
 			"bugs": {
 				"url": "https://github.com/dated/transaction-export-plugin/issues"
 			},
@@ -234,7 +234,7 @@
 	],
 	"description": "Export your wallet transaction history",
 	"homepage": "https://github.com/dated/transaction-export-plugin",
-	"keywords": ["utility", "export", "transactions", "taxes", "@arkecosystem", "desktop-wallet", "plugin"],
+	"keywords": ["utility", "export", "transactions", "taxes", "@payvo", "wallet-plugin", "plugin"],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/dated/transaction-export-plugin.git"

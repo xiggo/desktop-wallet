@@ -2,9 +2,8 @@
 	"name": "plugin-test-launch",
 	"version": "0.1.1",
 	"keywords": [
-		"@arkecosystem",
-		"desktop-wallet",
-		"plugin"
+		"@payvo",
+		"wallet-plugin"
 	],
 	"author": "Lucio",
 	"desktop-wallet": {
@@ -17,6 +16,6 @@
 			"MESSAGE",
 			"PROFILE"
 		],
-		"minimumVersion": "3.0.0"
+		"minimumVersion": "1.0.0"
 	}
 }

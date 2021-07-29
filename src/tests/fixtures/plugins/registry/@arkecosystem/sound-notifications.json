@@ -16,7 +16,7 @@
 				"name": "Lucio Rubens",
 				"email": "lucio@ark.io"
 			},
-			"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Lucio Rubens",
@@ -94,7 +94,7 @@
 				"categories": ["utility"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Lucio Rubens",
@@ -172,7 +172,7 @@
 				"categories": ["utility"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Lucio Rubens",
@@ -255,7 +255,7 @@
 				"categories": ["utility"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Lucio Rubens",
@@ -338,7 +338,7 @@
 				"categories": ["other"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Lucio Rubens",
@@ -422,7 +422,7 @@
 				"permissions": ["SANDBOX", "AUDIO", "EVENTS", "ALERTS"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Lucio Rubens",
@@ -505,7 +505,7 @@
 				"permissions": ["SANDBOX", "AUDIO", "EVENTS", "ALERTS"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Lucio Rubens",
@@ -603,7 +603,7 @@
 		}
 	],
 	"description": "Play a notification sound when you receive new transactions",
-	"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+	"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 	"contributors": [
 		{
 			"name": "Lucio Rubens",

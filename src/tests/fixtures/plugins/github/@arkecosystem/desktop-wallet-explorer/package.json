@@ -5,9 +5,8 @@
 	"keywords": [
 		"utility",
 		"explorer",
-		"@arkecosystem",
-		"desktop-wallet",
-		"plugin"
+		"@payvo",
+		"wallet-plugin"
 	],
 	"homepage": "https://github.com/ark-ecosystem-desktop-plugins/explorer#readme",
 	"bugs": {

@@ -16,7 +16,7 @@ export const schema = yup.object().shape({
 		.test(
 			"missing-keywords",
 			"Does not contain required keywords",
-			(keywords) => !!(keywords?.includes("@arkecosystem") && keywords?.includes("desktop-wallet")),
+			(keywords) => !!(keywords?.includes("@payvo") && keywords?.includes("wallet-plugin")),
 		),
 	name: yup.string().required(),
 

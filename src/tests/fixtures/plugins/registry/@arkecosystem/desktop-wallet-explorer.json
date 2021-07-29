@@ -21,7 +21,7 @@
 				"categories": ["utility"],
 				"minimumVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -105,7 +105,7 @@
 				"categories": ["utility"],
 				"minimumVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -187,7 +187,7 @@
 				"categories": ["utility"],
 				"minimumVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -269,7 +269,7 @@
 				"categories": ["utility"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -351,7 +351,7 @@
 				"categories": ["utility"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -434,7 +434,7 @@
 				"categories": ["utility"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -513,7 +513,7 @@
 				"categories": ["utility"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -592,7 +592,7 @@
 				"permissions": ["COMPONENTS", "ROUTES", "MENU_ITEMS", "UI_COMPONENTS", "WEBFRAME"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -675,7 +675,7 @@
 				"permissions": ["COMPONENTS", "ROUTES", "MENU_ITEMS", "UI_COMPONENTS", "PROFILE_CURRENT", "WEBFRAME"],
 				"minVersion": "2.6"
 			},
-			"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 			"contributors": [
 				{
 					"name": "Alex Barnsley",
@@ -772,7 +772,7 @@
 	],
 	"description": "Use the ARK Mainnet explorer directly within the wallet",
 	"homepage": "https://github.com/ark-ecosystem-desktop-plugins/explorer#readme",
-	"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+	"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/ark-ecosystem-desktop-plugins/explorer.git"

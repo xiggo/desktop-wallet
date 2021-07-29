@@ -31,7 +31,7 @@
 			"urls": ["^"],
 			"minimumVersion": "2.9.1"
 		},
-		"keywords": ["utility", "export", "transactions", "taxes", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["utility", "export", "transactions", "taxes", "@payvo", "wallet-plugin", "plugin"],
 		"bugs": { "url": "https://github.com/dated/transaction-export-plugin/issues" },
 		"homepage": "https://github.com/dated/transaction-export-plugin",
 		"repository": { "type": "git", "url": "git+https://github.com/dated/transaction-export-plugin.git" },
@@ -95,7 +95,7 @@
 			],
 			"minVersion": "2.6"
 		},
-		"keywords": ["@arkecosystem", "desktop-wallet", "plugin", "switchain", "exchange", "swap"],
+		"keywords": ["@payvo", "wallet-plugin", "plugin", "switchain", "exchange", "swap"],
 		"bugs": { "url": "https://github.com/elevenyellow/ark-switchain-plugin/issues" },
 		"homepage": "http://URL",
 		"repository": { "type": "git", "url": "git+https://github.com/elevenyellow/ark-switchain-plugin.git" },
@@ -157,7 +157,7 @@
 			"urls": ["^"],
 			"minimumVersion": "2.9.1"
 		},
-		"keywords": ["utility", "rewards", "staking", "delegates", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["utility", "rewards", "staking", "delegates", "@payvo", "wallet-plugin", "plugin"],
 		"bugs": { "url": "https://github.com/dated/delegate-calculator-plugin/issues" },
 		"homepage": "https://github.com/dated/delegate-calculator-plugin",
 		"repository": { "type": "git", "url": "git+https://github.com/dated/delegate-calculator-plugin.git" },
@@ -188,7 +188,7 @@
 		"description": "ChangeNOW plugin on Ark Desktop Wallet",
 		"main": "src/index.js",
 		"license": "MIT",
-		"keywords": ["@arkecosystem", "desktop-wallet", "plugin", "changenow", "exchange", "swap"],
+		"keywords": ["@payvo", "wallet-plugin", "plugin", "changenow", "exchange", "swap"],
 		"logo": "https://raw.githubusercontent.com/ChangeNow-io/ARKPlugin/master/logo.png",
 		"repository": { "type": "git", "url": "git+https://github.com/ChangeNow-io/ARKPlugin.git" },
 		"homepage": "https://github.com/ChangeNow-io/ARKPlugin",
@@ -327,7 +327,7 @@
 			"permissions": ["LANGUAGES"],
 			"minimumVersion": "2.9.1"
 		},
-		"keywords": ["italian", "language", "translations", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["italian", "language", "translations", "@payvo", "wallet-plugin", "plugin"],
 		"bugs": { "url": "https://github.com/dated/italian-language-plugin/issues" },
 		"homepage": "https://github.com/dated/italian-language-plugin#readme",
 		"repository": { "type": "git", "url": "git+https://github.com/dated/italian-language-plugin.git" },
@@ -366,7 +366,7 @@
 			"permissions": ["LANGUAGES"],
 			"minimumVersion": "2.9.1"
 		},
-		"keywords": ["language", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["language", "@payvo", "wallet-plugin", "plugin"],
 		"author": { "name": "Breno Polanski", "email": "breno.polanski@gmail.com", "url": "http://brenopolanski.com" },
 		"license": "MIT",
 		"bugs": { "url": "https://github.com/brenopolanski/brazilian-portuguese-language-plugin/issues" },
@@ -405,7 +405,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Daniel Barta" }],
 		"bugs": { "url": "https://github.com/bartadaniel/lively-theme/issues" },
 		"homepage": "https://github.com/bartadaniel/lively-theme",
@@ -445,7 +445,7 @@
 			"permissions": ["LANGUAGES"],
 			"minimumVersion": "2.9.1"
 		},
-		"keywords": ["german", "language", "translations", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["german", "language", "translations", "@payvo", "wallet-plugin", "plugin"],
 		"bugs": { "url": "https://github.com/jarunik/german-language-plugin/issues" },
 		"homepage": "https://github.com/jarunik/german-language-plugin#readme",
 		"repository": { "type": "git", "url": "git+https://github.com/jarunik/german-language-plugin.git" },
@@ -484,7 +484,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.7"
 		},
-		"keywords": ["theme", "@borismar", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "@borismar", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Boris Martirosov" }],
 		"bugs": { "url": "https://github.com/bobobobob/ark-theme-one/issues" },
 		"homepage": "https://github.com/bobobobob/ark-theme-one#readme",
@@ -527,7 +527,7 @@
 			"permissions": ["COMPONENTS", "ROUTES", "MENU_ITEMS", "UI_COMPONENTS", "PROFILE_CURRENT", "WEBFRAME"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["utility", "explorer", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [
 			{ "name": "Alex Barnsley", "email": "alex@ark.io" },
 			{ "name": "Juan A. Martín", "email": "juan@ark.io" }
@@ -620,7 +620,7 @@
 			"urls": [],
 			"minVersion": "2.6"
 		},
-		"keywords": ["avatar", "@arkecosystem", "desktop-wallet", "plugin", "animal-avatars"],
+		"keywords": ["avatar", "@payvo", "wallet-plugin", "plugin", "animal-avatars"],
 		"author": { "name": "Breno Polanski", "email": "breno.polanski@gmail.com", "url": "http://brenopolanski.com" },
 		"license": "MIT",
 		"bugs": { "url": "https://github.com/brenopolanski/animal-avatars-ark-wallet/issues" },
@@ -660,7 +660,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Author Name" }],
 		"bugs": { "url": "https://github.com/cambo/CYJ-Theme/blob/master/issues" },
 		"homepage": "https://github.com/cambo/cyj-theme_2",
@@ -700,7 +700,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Author Name" }],
 		"bugs": { "url": "https://github.com/azure-infinity/cyberpunk-theme/issues" },
 		"homepage": "https://github.com/azure-infinity/cyberpunk-theme",
@@ -740,7 +740,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Author Name" }],
 		"bugs": { "url": "https://github.com/azure-infinity/beyond-infinity/issues" },
 		"homepage": "https://github.com/azure-infinity/beyond-infinity",
@@ -785,7 +785,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "dark", "dracula", "dracula-theme", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "dark", "dracula", "dracula-theme", "@payvo", "wallet-plugin", "plugin"],
 		"author": { "name": "Breno Polanski", "email": "breno.polanski@gmail.com", "url": "http://brenopolanski.com" },
 		"license": "MIT",
 		"bugs": { "url": "https://github.com/brenopolanski/dracula-theme-ark-wallet/issues" },
@@ -832,7 +832,7 @@
 			"permissions": ["THEMES"],
 			"minimumVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Author Name" }],
 		"bugs": { "url": "https://github.com/elaine-egan/ankh-morpork.git" },
 		"homepage": "https://github.com/elaine-egan/ankh-morpork.git#readme",
@@ -880,7 +880,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "dark", "contrast", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "dark", "contrast", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Juan A. Martín", "email": "juan@ark.io" }],
 		"license": "MIT",
 		"bugs": { "url": "https://github.com/ark-ecosystem-desktop-plugins/dark-contrast-theme/issues" },
@@ -925,7 +925,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Rastrow" }],
 		"bugs": { "url": "https://github.com/rastrow/theme-template/issues" },
 		"homepage": "https://github.com/rastrow/theme-template",
@@ -964,7 +964,7 @@
 			"permissions": ["THEMES"],
 			"minimumVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{}],
 		"bugs": { "url": "https://github.com/elaine-egan-/theme-template/issues" },
 		"homepage": "https://github.com/elaine-egan/theme-template",
@@ -1004,7 +1004,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "ross121" }],
 		"bugs": { "url": "https://github.com/ross121/red-snow-theme/issues" },
 		"homepage": "https://github.com/ross121/red-snow-theme",
@@ -1042,7 +1042,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Author Name" }],
 		"bugs": { "url": "https://github.com/DVNCL/dvnc-theme/issues" },
 		"homepage": "https://github.com/DVNCL/dvnc-theme",
@@ -1090,7 +1090,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "PieFacE" }],
 		"bugs": { "url": "https://github.com/avfcpieface/avfc-theme/issues" },
 		"homepage": "https://github.com/avfcpieface/avfc-theme#readme",
@@ -1129,7 +1129,7 @@
 			"permissions": ["SANDBOX", "AUDIO", "EVENTS", "ALERTS"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["utility", "notification", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Lucio Rubens", "email": "lucio@ark.io" }],
 		"devDependencies": { "audio-loader": "^1.0.3", "glob": "^7.1.3" },
 		"license": "MIT",
@@ -1176,7 +1176,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Khlilo58" }],
 		"bugs": { "url": "https://github.com/Khlilo58/captivating-theme-template/issues" },
 		"homepage": "https://github.com/Khlilo58/captivating-theme-template",
@@ -1216,7 +1216,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Sam Harper-Pittam" }],
 		"bugs": { "url": "https://github.com/doubled1c3/youtube-demo-theme/issues" },
 		"homepage": "https://github.com/doubled1c3/youtube-demo-theme",
@@ -1259,7 +1259,7 @@
 			"permissions": ["THEMES"],
 			"minVersion": "2.6"
 		},
-		"keywords": ["theme", "template", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["theme", "template", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Author Name" }],
 		"bugs": { "url": "https://github.com/azure-infinity/infinite-universe/issues" },
 		"homepage": "https://github.com/azure-infinity/infinite-universe",
@@ -1305,7 +1305,7 @@
 			"urls": [],
 			"minVersion": "2.6"
 		},
-		"keywords": ["avatar", "@arkecosystem", "desktop-wallet", "plugin"],
+		"keywords": ["avatar", "@payvo", "wallet-plugin", "plugin"],
 		"contributors": [{ "name": "Alex Barnsley", "email": "alex@ark.io" }],
 		"bugs": { "url": "URL" },
 		"homepage": "http://URL",
