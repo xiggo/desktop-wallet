@@ -345,6 +345,33 @@ describe("MultiSignatureDetail", () => {
 		broadcastMock.mockRestore();
 	});
 
+	it("should not broadcast if wallet is not ready to do so", async () => {
+		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
+		// @ts-ignore
+		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(void 0);
+
+		const { container } = render(
+			<LedgerProvider transport={getDefaultLedgerTransport()}>
+				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
+			</LedgerProvider>,
+		);
+
+		await waitFor(() => expect(screen.getByTestId("MultiSignatureDetail__broadcast")));
+
+		expect(container).toMatchSnapshot();
+
+		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
+		});
+
+		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
+
+		broadcastMock.mockRestore();
+	});
+
 	it("should not show send button when waiting for confirmations", async () => {
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockImplementationOnce(() => true);
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
