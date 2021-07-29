@@ -60,7 +60,10 @@ describe("MultiSignatureDetail", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);
@@ -80,7 +83,10 @@ describe("MultiSignatureDetail", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);
@@ -107,7 +113,10 @@ describe("MultiSignatureDetail", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);
@@ -131,7 +140,10 @@ describe("MultiSignatureDetail", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);
@@ -155,7 +167,10 @@ describe("MultiSignatureDetail", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);
@@ -173,7 +188,10 @@ describe("MultiSignatureDetail", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);
@@ -526,6 +544,7 @@ describe("MultiSignatureDetail", () => {
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(toastsMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
+		jest.restoreAllMocks();
 	});
 
 	it("should sign transaction with a ledger wallet", async () => {
@@ -533,7 +552,6 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-
 		// Ledger mocks
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
@@ -560,11 +578,42 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "44'/1'/1'/0/0";
+		const votes = wallet.voting().current();
+		const publicKey = wallet.publicKey();
+
+		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+
+			if (key == Contracts.WalletData.PublicKey) {
+				return publicKey;
+			}
+
+			if (key == Contracts.WalletData.Votes) {
+				return votes;
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+
 		act(() => {
 			fireEvent.click(screen.getByTestId("Paginator__sign"));
 		});
 
-		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
+		await waitFor(() => expect(() => screen.getByTestId("Paginator__continue")), { timeout: 1000 });
 
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
@@ -576,5 +625,6 @@ describe("MultiSignatureDetail", () => {
 		getPublicKeyMock.mockRestore();
 		broadcastMock.mockRestore();
 		addSignatureSpy.mockRestore();
+		mockWalletData.mockRestore();
 	});
 });

@@ -41,9 +41,10 @@ describe("Wallet Transactions Hook", () => {
 	});
 
 	it("should sync pending transactions", async () => {
-		const signatory = await wallet
-			.signatory()
-			.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]);
+		const signatory = await wallet.signatory().multiSignature({
+			min: 2,
+			publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+		});
 
 		const transfer = await wallet
 			.coin()
@@ -127,9 +128,10 @@ describe("Wallet Transactions Hook", () => {
 				signatory: mnemonicSignatory,
 			});
 
-		const signatory = await wallet
-			.signatory()
-			.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]);
+		const signatory = await wallet.signatory().multiSignature({
+			min: 2,
+			publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+		});
 
 		const transferWithMultisig = await wallet
 			.coin()

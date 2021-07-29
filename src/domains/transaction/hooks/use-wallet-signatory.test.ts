@@ -52,7 +52,7 @@ describe("useWalletSignatory", () => {
 		const signatory = await result.current.sign({ mnemonic: MNEMONICS[0], secondMnemonic: MNEMONICS[1] });
 
 		expect(signatory).toBeInstanceOf(Signatories.Signatory);
-		expect(signatory.actsWithSecondaryMnemonic()).toBeTrue();
+		expect(signatory.actsWithConfirmationMnemonic()).toBeTrue();
 		expect(signatory.signingKey()).toBe(MNEMONICS[0]);
 		expect(signatory.confirmKey()).toBe(MNEMONICS[1]);
 	});
@@ -63,7 +63,7 @@ describe("useWalletSignatory", () => {
 		const signatory = await result.current.sign({ wif: "SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA" });
 
 		expect(signatory).toBeInstanceOf(Signatories.Signatory);
-		expect(signatory.actsWithWif()).toBeTrue();
+		expect(signatory.actsWithWIF()).toBeTrue();
 		expect(signatory.signingKey()).toBe("SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA");
 		expect(() => signatory.confirmKey()).toThrow();
 	});
@@ -81,36 +81,6 @@ describe("useWalletSignatory", () => {
 		expect(() => signatory.confirmKey()).toThrow();
 	});
 
-	it("should sign with multisignature wallet", async () => {
-		const mockIsMultiSignature = jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-
-		const { result } = renderHook(() => useWalletSignatory(wallet));
-
-		const signatory = await result.current.sign({});
-
-		expect(signatory).toBeInstanceOf(Signatories.Signatory);
-		expect(signatory.actsWithSenderPublicKey()).toBeTrue();
-		expect(signatory.signingKey()).toBe("03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc");
-		expect(() => signatory.confirmKey()).toThrow();
-
-		mockIsMultiSignature.mockRestore();
-	});
-
-	it("should sign with ledger wallet", async () => {
-		const mockIsLedger = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-
-		const { result } = renderHook(() => useWalletSignatory(wallet));
-
-		const signatory = await result.current.sign({});
-
-		expect(signatory).toBeInstanceOf(Signatories.Signatory);
-		expect(signatory.actsWithSenderPublicKey()).toBeTrue();
-		expect(signatory.signingKey()).toBe("03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc");
-		expect(() => signatory.confirmKey()).toThrow();
-
-		mockIsLedger.mockRestore();
-	});
-
 	it("should throw error if no input is provided", async () => {
 		const { result } = renderHook(() => useWalletSignatory(wallet));
 
@@ -124,7 +94,7 @@ describe("useWalletSignatory", () => {
 
 		jest.spyOn(wallet, "isLedger").mockReturnValue(true);
 		jest.spyOn(wallet, "publicKey").mockReturnValueOnce(undefined);
-		jest.spyOn(wallet.data(), "get").mockReturnValue("123");
+		jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/0'/0'/0/0");
 		jest.spyOn(wallet, "ledger").mockImplementation(() => ({
 			getPublicKey: () => publicKey,
 		}));
@@ -134,8 +104,8 @@ describe("useWalletSignatory", () => {
 		const signatory = await result.current.sign({});
 
 		expect(signatory).toBeInstanceOf(Signatories.Signatory);
-		expect(signatory.actsWithSenderPublicKey()).toBeTrue();
-		expect(signatory.signingKey()).toBe("03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc");
+		expect(signatory.actsWithLedger()).toBeTrue();
+		expect(signatory.signingKey()).toBe("m/44'/0'/0'/0/0");
 		expect(() => signatory.confirmKey()).toThrow();
 
 		jest.clearAllMocks();

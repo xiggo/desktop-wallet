@@ -110,6 +110,8 @@ export const SendIpfs = () => {
 
 			handleBroadcastError(response);
 
+			await activeWallet.transaction().sync();
+
 			await persist();
 
 			setTransaction(transaction);

@@ -78,7 +78,10 @@ describe("Signed Transaction Table", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);

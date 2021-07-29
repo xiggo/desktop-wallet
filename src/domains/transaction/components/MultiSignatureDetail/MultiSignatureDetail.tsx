@@ -7,6 +7,7 @@ import { useEnvironmentContext, useLedgerContext } from "app/contexts";
 import { toasts } from "app/services";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import { SignInput, useMultiSignatureRegistration, useWalletSignatory } from "domains/transaction/hooks";
+import { handleBroadcastError } from "domains/transaction/utils";
 import React, { useCallback, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -89,7 +90,7 @@ export const MultiSignatureDetail = ({
 	const { sign } = useWalletSignatory(wallet);
 	const { addSignature } = useMultiSignatureRegistration();
 
-	const canBeBroadascated =
+	const canBeBroadcasted =
 		wallet.transaction().canBeBroadcasted(transaction.id()) &&
 		!wallet.transaction().isAwaitingConfirmation(transaction.id());
 
@@ -104,7 +105,10 @@ export const MultiSignatureDetail = ({
 	const broadcast = useCallback(async () => {
 		try {
 			if (wallet.transaction().canBeBroadcasted(transaction.id())) {
-				await wallet.transaction().broadcast(transaction.id());
+				const response = await wallet.transaction().broadcast(transaction.id());
+				handleBroadcastError(response);
+
+				await wallet.transaction().sync();
 			}
 
 			await persist();
@@ -118,6 +122,11 @@ export const MultiSignatureDetail = ({
 	const sendSignature = useCallback(
 		async ({ encryptionPassword, mnemonic, privateKey, secondMnemonic, secret, wif }: SignInput) => {
 			try {
+				if (wallet.isLedger()) {
+					await connect(profile, wallet.coinId(), wallet.networkId());
+					await wallet.ledger().connect(transport);
+				}
+
 				const signatory = await sign({
 					encryptionPassword,
 					mnemonic,
@@ -129,20 +138,20 @@ export const MultiSignatureDetail = ({
 
 				await addSignature({ signatory, transactionId: transaction.id(), wallet });
 				await wallet.transaction().sync();
-				await broadcast();
+
+				setActiveStep(3);
+				await persist();
 			} catch {
 				toasts.error(t("TRANSACTION.MULTISIGNATURE.ERROR.FAILED_TO_SIGN"));
 			}
 		},
-		[transaction, wallet, broadcast, t, sign, addSignature],
+		[transaction, wallet, t, sign, addSignature, connect, profile, transport, persist],
 	);
 
-	const handleSign = async () => {
+	const handleSign = () => {
 		setActiveStep(2);
 
 		if (wallet.isLedger()) {
-			await connect(profile, wallet.coinId(), wallet.networkId());
-			await wallet.ledger().connect(transport);
 			handleSubmit((data: any) => sendSignature(data))();
 		}
 	};
@@ -176,7 +185,7 @@ export const MultiSignatureDetail = ({
 						/>
 					</TabPanel>
 
-					{canBeBroadascated && !canBeSigned && activeStep === 1 && (
+					{canBeBroadcasted && !canBeSigned && activeStep === 1 && (
 						<div className="flex justify-center mt-8 space-x-2">
 							<Button
 								disabled={isSubmitting}

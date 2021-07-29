@@ -138,9 +138,14 @@ describe("Registration", () => {
 		nock.cleanAll();
 		defaultNetMocks();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test-musig.payvo.com/")
 			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json"));
+
+		nock("https://ark-test-musig.payvo.com")
+			.post("/")
+			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
+			.persist();
 	});
 
 	it.each([
@@ -429,6 +434,7 @@ describe("Registration", () => {
 		// Step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
+		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("44'/1'/1'/0/0");
 		// Skip Authentication Step
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
@@ -441,6 +447,7 @@ describe("Registration", () => {
 		signTransactionMock.mockRestore();
 		multiSignatureRegistrationMock.mockRestore();
 		addSignatureMock.mockRestore();
+		mockDerivationPath.mockRestore();
 	});
 
 	it("should set fee", async () => {

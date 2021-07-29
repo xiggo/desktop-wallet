@@ -307,6 +307,8 @@ export const SendTransfer = () => {
 
 			handleBroadcastError(response);
 
+			await wallet.transaction().sync();
+
 			await persist();
 
 			setTransaction(transaction);

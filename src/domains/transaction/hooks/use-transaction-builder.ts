@@ -11,10 +11,7 @@ const prepareMultiSignature = async (
 	wallet: ProfileContracts.IReadWriteWallet,
 ): Promise<Services.TransactionInputs> => ({
 	...input,
-	nonce: wallet.nonce().plus(1).toFixed(0), // @TODO: let the PSDK handle this - needs some reworks for musig derivation
-	signatory: await wallet
-		.signatory()
-		.multiSignature(wallet.multiSignature().all().min!, wallet.multiSignature().all().publicKeys!),
+	signatory: await wallet.signatory().multiSignature(wallet.multiSignature().all() as Services.MultiSignatureAsset),
 });
 
 const prepareLedger = async (input: Services.TransactionInputs, wallet: ProfileContracts.IReadWriteWallet) => ({
@@ -33,6 +30,8 @@ export const useTransactionBuilder = () => {
 			abortSignal?: AbortSignal;
 		},
 	): Promise<{ uuid: string; transaction: DTO.ExtendedSignedTransactionData }> => {
+		await wallet.transaction().sync();
+
 		const service = wallet.transaction();
 
 		// @ts-ignore

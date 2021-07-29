@@ -861,7 +861,6 @@ describe("SendVote", () => {
 			expect.objectContaining({
 				data: expect.anything(),
 				fee: expect.any(Number),
-				nonce: expect.any(String),
 				signatory: expect.any(Object),
 			}),
 		);
@@ -929,6 +928,37 @@ describe("SendVote", () => {
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeTruthy();
 
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "44'/1'/1'/0/0";
+		const votes = wallet.voting().current();
+		const publicKey = wallet.publicKey();
+
+		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+
+			if (key == Contracts.WalletData.PublicKey) {
+				return publicKey;
+			}
+
+			if (key == Contracts.WalletData.Votes) {
+				return votes;
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		await act(async () => {
@@ -944,6 +974,7 @@ describe("SendVote", () => {
 		isLedgerSpy.mockRestore();
 		broadcastMock.mockRestore();
 		voteTransactionMock.mockRestore();
+		mockWalletData.mockRestore();
 	});
 
 	it("should send a vote transaction using encryption password", async () => {

@@ -131,7 +131,10 @@ describe("SendIpfs", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 		);
 
@@ -669,7 +672,6 @@ describe("SendIpfs", () => {
 			expect.objectContaining({
 				data: expect.anything(),
 				fee: expect.any(Number),
-				nonce: expect.any(String),
 				signatory: expect.any(Object),
 			}),
 		);
@@ -738,6 +740,37 @@ describe("SendIpfs", () => {
 		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "10" } });
 		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("10"));
 
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "44'/1'/1'/0/0";
+		const votes = wallet.voting().current();
+		const publicKey = wallet.publicKey();
+
+		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+
+			if (key == Contracts.WalletData.PublicKey) {
+				return publicKey;
+			}
+
+			if (key == Contracts.WalletData.Votes) {
+				return votes;
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
@@ -758,6 +791,7 @@ describe("SendIpfs", () => {
 		isLedgerSpy.mockRestore();
 		signTransactionSpy.mockRestore();
 		transactionMock.mockRestore();
+		mockWalletData.mockRestore();
 
 		expect(container).toMatchSnapshot();
 	});

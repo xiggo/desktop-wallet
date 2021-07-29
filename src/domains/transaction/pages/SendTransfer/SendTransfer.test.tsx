@@ -354,7 +354,10 @@ describe("SendTransfer", () => {
 					signatory: await wallet
 						.coin()
 						.signatory()
-						.multiSignature(2, [wallet.publicKey()!, profile.wallets().last().publicKey()!]),
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
 				}),
 			wallet,
 		);
@@ -1219,7 +1222,6 @@ describe("SendTransfer", () => {
 			expect.objectContaining({
 				data: expect.anything(),
 				fee: expect.any(Number),
-				nonce: expect.any(String),
 				signatory: expect.any(Object),
 			}),
 		);
@@ -1300,6 +1302,23 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "44'/1'/1'/0/0";
+
+		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+
 		// Step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
@@ -1317,6 +1336,7 @@ describe("SendTransfer", () => {
 		isLedgerSpy.mockRestore();
 		signTransactionSpy.mockRestore();
 		transactionMock.mockRestore();
+		mockWalletData.mockRestore();
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {

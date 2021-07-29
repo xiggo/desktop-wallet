@@ -4,12 +4,16 @@ export const isNoDeviceError = (error: any) => String(error).includes("no device
 
 export const isRejectionError = (error: any) => String(error).includes("Condition of use not satisfied");
 
-export const handleBroadcastError = ({ rejected, errors }: Services.BroadcastResponse) => {
-	if (rejected.length === 0) {
+export const handleBroadcastError = (
+	{ errors }: Services.BroadcastResponse = { accepted: [], errors: {}, rejected: [] },
+) => {
+	const allErrors = Object.values(errors);
+
+	if (allErrors.length === 0) {
 		return;
 	}
 
-	throw new Error(Object.values(errors as object)[0]);
+	throw new Error(allErrors[0]);
 };
 
 export const withAbortPromise = (signal?: AbortSignal, callback?: () => void) => <T>(promise: Promise<T>) =>

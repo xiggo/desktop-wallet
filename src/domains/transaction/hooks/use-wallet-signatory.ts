@@ -1,5 +1,5 @@
 import { Contracts as ProfileContracts } from "@payvo/profiles";
-import { Signatories } from "@payvo/sdk";
+import { Services, Signatories } from "@payvo/sdk";
 import { useCallback } from "react";
 import { assertString } from "utils/assertions";
 
@@ -27,7 +27,7 @@ export const useWalletSignatory = (
 	sign: useCallback(
 		async ({ mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret }: SignInput) => {
 			if (mnemonic && secondMnemonic) {
-				return wallet.signatory().secondaryMnemonic(mnemonic, secondMnemonic);
+				return wallet.signatory().confirmationMnemonic(mnemonic, secondMnemonic);
 			}
 
 			if (mnemonic) {
@@ -39,23 +39,15 @@ export const useWalletSignatory = (
 			}
 
 			if (wallet.isMultiSignature()) {
-				const publicKey: string | undefined = wallet.publicKey();
-				assertString(publicKey);
-
-				return wallet.signatory().senderPublicKey(publicKey);
+				return wallet.signatory().multiSignature(wallet.multiSignature().all() as Services.MultiSignatureAsset);
 			}
 
 			if (wallet.isLedger()) {
-				let publicKey: string | undefined = wallet.publicKey();
+				const derivationPath = wallet.data().get(ProfileContracts.WalletData.DerivationPath);
 
-				if (publicKey === undefined) {
-					const derivationPath = wallet.data().get(ProfileContracts.WalletData.DerivationPath);
-					assertString(derivationPath);
+				assertString(derivationPath);
 
-					publicKey = await wallet.ledger().getPublicKey(derivationPath);
-				}
-
-				return wallet.signatory().senderPublicKey(publicKey);
+				return wallet.signatory().ledger(derivationPath);
 			}
 
 			if (wif) {

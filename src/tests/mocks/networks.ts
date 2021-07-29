@@ -31,7 +31,7 @@ export const availableNetworksMock: Networks.Network[] = [
 	// createNetwork(ETH, "eth.mainnet"),
 	// createNetwork(ETH, "eth.rinkeby"),
 	// createNetwork(ETH, "eth.ropsten"),
-	createNetwork(LSK, "lsk.mainnet"),
+	// createNetwork(LSK, "lsk.mainnet"),
 	createNetwork(LSK, "lsk.testnet"),
 	// createNetwork(NEO, "neo.mainnet"),
 	// createNetwork(NEO, "neo.testnet"),

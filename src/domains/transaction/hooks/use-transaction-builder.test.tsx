@@ -82,7 +82,7 @@ describe("Use Transaction Builder Hook", () => {
 			transaction = (await result.current.build("transfer", input, wallet)).transaction;
 		});
 
-		expect(transaction.id()).toBe("119633912d66d40d4c7ac33675255638c9255a17acec8054986d35237bd14662");
+		expect(transaction.id()).toBe("d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a");
 
 		jest.clearAllMocks();
 	});
