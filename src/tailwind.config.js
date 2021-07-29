@@ -34,6 +34,17 @@ module.exports = {
 			"theme-primary-800": "var(--theme-color-primary-800)",
 			"theme-primary-900": "var(--theme-color-primary-900)",
 
+			"theme-primary-reverse-50": "var(--theme-color-primary-reverse-50)",
+			"theme-primary-reverse-100": "var(--theme-color-primary-reverse-100)",
+			"theme-primary-reverse-200": "var(--theme-color-primary-reverse-200)",
+			"theme-primary-reverse-300": "var(--theme-color-primary-reverse-300)",
+			"theme-primary-reverse-400": "var(--theme-color-primary-reverse-400)",
+			"theme-primary-reverse-500": "var(--theme-color-primary-reverse-500)",
+			"theme-primary-reverse-600": "var(--theme-color-primary-reverse-600)",
+			"theme-primary-reverse-700": "var(--theme-color-primary-reverse-700)",
+			"theme-primary-reverse-800": "var(--theme-color-primary-reverse-800)",
+			"theme-primary-reverse-900": "var(--theme-color-primary-reverse-900)",
+
 			"theme-secondary-50": "var(--theme-color-secondary-50)",
 			"theme-secondary-100": "var(--theme-color-secondary-100)",
 			"theme-secondary-200": "var(--theme-color-secondary-200)",
@@ -184,6 +195,7 @@ module.exports = {
 			margin: {
 				"-14": "-3.5rem",
 				"-6.5": "-1.625rem",
+				"-5.5": "-1.375rem",
 				"-4.5": "-1.125rem",
 				4.5: "1.125rem",
 				18: "4.5rem",

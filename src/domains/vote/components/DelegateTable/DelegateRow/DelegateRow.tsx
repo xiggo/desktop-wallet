@@ -54,7 +54,7 @@ export const DelegateRow = ({
 		}
 
 		if (isSelectedVote) {
-			return "bg-theme-info-50 dark:bg-theme-background dark:border-theme-info-600";
+			return "bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600";
 		}
 	}, [isVoted, isSelectedVote, isSelectedUnvote]);
 
@@ -89,7 +89,7 @@ export const DelegateRow = ({
 
 		return (
 			<Button
-				variant={isSelectedVote ? "info" : "secondary"}
+				variant={isSelectedVote ? "reverse" : "secondary"}
 				onClick={() => onVoteSelect?.(delegate.address())}
 				data-testid={`DelegateRow__toggle-${index}`}
 			>
@@ -102,15 +102,15 @@ export const DelegateRow = ({
 		<TableRow>
 			<TableCell
 				variant="start"
-				innerClassName={cn("space-x-4 font-bold border border-r-0 border-transparent", rowColor)}
+				innerClassName={cn("space-x-4 font-bold border-2 border-r-0 border-transparent", rowColor)}
 			>
-				<Avatar size="lg" address={delegate.address()} noShadow />
+				<Avatar size="lg" className="-ml-0.5" address={delegate.address()} noShadow />
 				<span>{delegate.username()}</span>
 			</TableCell>
 
 			<TableCell
 				className="w-24"
-				innerClassName={cn("justify-center border-t border-b border-transparent", rowColor)}
+				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor)}
 			>
 				<Link
 					data-testid="DelegateRow__address"
@@ -126,9 +126,9 @@ export const DelegateRow = ({
 			<TableCell
 				variant="end"
 				className="w-40"
-				innerClassName={cn("justify-end border border-l-0 border-transparent", rowColor)}
+				innerClassName={cn("justify-end border-2 border-l-0 border-transparent", rowColor)}
 			>
-				{renderButton()}
+				<div className="-mr-0.5">{renderButton()}</div>
 			</TableCell>
 		</TableRow>
 	);

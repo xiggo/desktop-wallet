@@ -41,6 +41,13 @@ const getVariant = (variant: ButtonVariant, disabled: boolean): any => {
 				dark:(bg-theme-info-600 text-white)
 				focus:ring-theme-info-300
 			`;
+		case "reverse":
+			return tw`
+				bg-theme-primary-reverse-100 text-theme-primary-reverse-600
+				hover:(bg-theme-primary-reverse-700 text-white)
+				dark:(bg-theme-primary-reverse-600 text-white)
+				focus:ring-theme-primary-reverse-300
+			`;
 		default:
 			return tw`border-none`;
 	}

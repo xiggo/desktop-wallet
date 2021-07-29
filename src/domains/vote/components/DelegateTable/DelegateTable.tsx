@@ -66,9 +66,9 @@ export const DelegateTable = ({
 			disableSortBy: true,
 		},
 		{
-			Header: "Actions",
+			Header: t("VOTE.DELEGATE_TABLE.VOTE"),
 			accessor: "onSelect",
-			className: "hidden",
+			className: "justify-end",
 			disableSortBy: true,
 		},
 	];
