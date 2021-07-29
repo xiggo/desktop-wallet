@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 	const { t } = useTranslation();
 
+	const isRestoredAndSynced = wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork();
+
 	const isMultiSignature = useMemo((): boolean => {
 		try {
 			return wallet.isMultiSignature();
@@ -37,13 +39,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 		title: t("WALLETS.PAGE_WALLET_DETAILS.REGISTRATION_OPTIONS"),
 	};
 
-	if (
-		wallet.balance() > 0 &&
-		!wallet.isLedger() &&
-		!isMultiSignature &&
-		wallet.hasBeenFullyRestored() &&
-		wallet.hasSyncedWithNetwork()
-	) {
+	if (wallet.balance() > 0 && !wallet.isLedger() && !isMultiSignature && isRestoredAndSynced) {
 		if (
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateRegistration) &&
 			!wallet.isDelegate() &&
@@ -76,10 +72,9 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 
 	if (
 		wallet.balance() > 0 &&
-		wallet.hasBeenFullyRestored() &&
-		wallet.hasSyncedWithNetwork() &&
+		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature) &&
 		!isMultiSignature &&
-		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature)
+		isRestoredAndSynced
 	) {
 		registrationOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
@@ -107,12 +102,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 		});
 	}
 
-	if (
-		wallet.balance() > 0 &&
-		wallet.network().allows(Enums.FeatureFlag.TransactionIpfs) &&
-		wallet.hasBeenFullyRestored() &&
-		wallet.hasSyncedWithNetwork()
-	) {
+	if (wallet.balance() > 0 && wallet.network().allows(Enums.FeatureFlag.TransactionIpfs) && isRestoredAndSynced) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH"),
 			value: "store-hash",
@@ -145,6 +135,6 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 			registrationOptions,
 			secondaryOptions,
 		}),
-		[wallet], // eslint-disable-line react-hooks/exhaustive-deps
+		[wallet, isRestoredAndSynced], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 };
