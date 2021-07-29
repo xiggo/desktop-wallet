@@ -1,18 +1,20 @@
 import { Link } from "app/components/Link";
 import { Skeleton } from "app/components/Skeleton";
-// @ts-ignore
-import extractDomain from "extract-domain";
+import cn from "classnames";
+import { usePluginStatus } from "domains/plugin/hooks/use-plugin-status";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 interface Properties {
 	author?: string;
 	category?: string;
+	isEnabled?: boolean;
+	isInstalled?: boolean;
+	isLoadingSize?: boolean;
+	logo?: string;
+	size?: string;
 	url?: string;
 	version?: string;
-	size?: string;
-	logo?: string;
-	isLoadingSize?: boolean;
 }
 
 interface GridColProperties {
@@ -21,13 +23,13 @@ interface GridColProperties {
 }
 
 interface GridItemProperties {
-	label: string;
 	children: React.ReactNode;
-	textDirection?: string;
+	label: string;
+	className?: string;
 }
 
-const GridItem = ({ label, children, textDirection }: GridItemProperties) => (
-	<div className={`flex flex-col ${textDirection && `text-${textDirection}`}`}>
+const GridItem = ({ label, children, className }: GridItemProperties) => (
+	<div className={cn("flex flex-col", className)}>
 		<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">{label}</span>
 		<span className="font-semibold text-theme-secondary-text">{children}</span>
 	</div>
@@ -47,41 +49,57 @@ const GridCol = ({ children, padding }: GridColProperties) => {
 	return <div className={mountClassName()}>{children}</div>;
 };
 
-export const PluginSpecs = ({ author, category, url, version, size, isLoadingSize }: Properties) => {
-	const domain = url && extractDomain(url);
+export const PluginSpecs = ({
+	author,
+	category,
+	url,
+	version,
+	size,
+	isEnabled,
+	isInstalled,
+	isLoadingSize,
+}: Properties) => {
 	const { t } = useTranslation();
+
+	const { renderPluginStatus } = usePluginStatus();
 
 	return (
 		<div className="flex justify-between space-4">
-			<div className="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
+			<div className="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
 				<GridCol>
 					<GridItem label={t("COMMON.AUTHOR")}>
-						<span className="font-semibold text-theme-secondary-text">{author}</span>
+						<span className="font-semibold text-theme-secondary-text truncate max-w-48">{author}</span>
 					</GridItem>
 				</GridCol>
 
-				<GridCol padding="pl-8">
+				<GridCol padding="pl-6">
 					<GridItem label={t("COMMON.CATEGORY")}>
-						{t(`PLUGINS.CATEGORIES.${category?.toUpperCase()}`)}
+						{category && t(`PLUGINS.CATEGORIES.${category.toUpperCase()}`)}
 					</GridItem>
 				</GridCol>
 
-				<GridCol padding="pl-8">
-					<GridItem label={t("COMMON.URL")}>
-						{domain ? (
-							<Link data-testid="PluginSpecs__url" to={url} isExternal>
-								{domain}
+				<GridCol padding="pl-6">
+					<GridItem label={t("COMMON.WEBSITE")}>
+						{url ? (
+							<Link data-testid="PluginSpecs__website" to={url} isExternal>
+								<span>{t("COMMON.VIEW")}</span>
 							</Link>
 						) : (
-							"N/A"
+							<span>{t("COMMON.NOT_AVAILABLE")}</span>
 						)}
+					</GridItem>
+				</GridCol>
+
+				<GridCol padding="pl-6">
+					<GridItem label={t("COMMON.STATUS")}>
+						<span>{renderPluginStatus({ isEnabled, isInstalled })}</span>
 					</GridItem>
 				</GridCol>
 			</div>
 
-			<div className="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
-				<GridCol padding="pl-8">
-					<GridItem label={t("COMMON.SIZE")} textDirection="right">
+			<div className="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
+				<GridCol padding="pl-6">
+					<GridItem label={t("COMMON.SIZE")} className="text-right">
 						{isLoadingSize ? (
 							<span data-testid="PluginSpecs__size-skeleton">
 								<Skeleton width={60} height={20} className="mt-0.5" />
@@ -92,8 +110,8 @@ export const PluginSpecs = ({ author, category, url, version, size, isLoadingSiz
 					</GridItem>
 				</GridCol>
 
-				<GridCol padding="pl-8">
-					<GridItem label={t("COMMON.VERSION")} textDirection="right">
+				<GridCol padding="pl-6">
+					<GridItem label={t("COMMON.VERSION")} className="text-right">
 						{version!}
 					</GridItem>
 				</GridCol>

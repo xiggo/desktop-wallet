@@ -27,7 +27,7 @@ export const PluginInfo = ({ description, permissions, images, minimumVersion }:
 		<>
 			{description ? (
 				<div>
-					<p className="font-bold">{t("PLUGINS.PLUGIN_INFO.ABOUT")}</p>
+					<h4 className="font-bold">{t("PLUGINS.PLUGIN_INFO.ABOUT")}</h4>
 					<p className="mt-3 text-theme-secondary-600" data-testid="plugin-info__about">
 						{description}
 					</p>
@@ -36,8 +36,8 @@ export const PluginInfo = ({ description, permissions, images, minimumVersion }:
 
 			{permissions.length > 0 ? (
 				<div className="mt-8">
-					<p className="font-bold">{t("PLUGINS.PLUGIN_INFO.PERMISSIONS")}</p>
-					<div className="inline-flex items-baseline mt-3 space-x-2">
+					<h4 className="font-bold">{t("PLUGINS.PLUGIN_INFO.PERMISSIONS")}</h4>
+					<div className="inline-flex items-baseline space-x-2">
 						<p className="mt-3 text-theme-secondary-600" data-testid="plugin-info__permissions">
 							<TruncateEnd maxChars={50} showTooltip={false} text={permissionsString} />
 						</p>
@@ -56,7 +56,7 @@ export const PluginInfo = ({ description, permissions, images, minimumVersion }:
 
 			{hasRequirements ? (
 				<div className="mt-8">
-					<p className="font-bold">{t("PLUGINS.PLUGIN_INFO.REQUIREMENTS")}</p>
+					<h4 className="font-bold">{t("PLUGINS.PLUGIN_INFO.REQUIREMENTS")}</h4>
 					{minimumVersion && (
 						<p className="mt-3 text-theme-secondary-600" data-testid="plugin-info__mininum-version">
 							<span>

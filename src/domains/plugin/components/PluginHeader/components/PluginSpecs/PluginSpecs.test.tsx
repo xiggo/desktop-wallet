@@ -19,13 +19,13 @@ describe("PluginSpecs", () => {
 			/>,
 		);
 
-		fireEvent.click(getByTestId("PluginSpecs__url"));
+		fireEvent.click(getByTestId("PluginSpecs__website"));
 
 		expect(ipcRendererMock).toHaveBeenLastCalledWith("open-external", "https://github.com/arkecosystem/explorer");
 
 		expect(await findByText("ARK Ecosystem")).toBeTruthy();
 		expect(await findByText("Utility")).toBeTruthy();
-		expect(await findByText("github.com")).toBeTruthy();
+		expect(await findByText("View")).toBeTruthy();
 		expect(await findByText("1.3.8")).toBeTruthy();
 		expect(await findByText("4.2 Mb")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();

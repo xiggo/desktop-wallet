@@ -6,13 +6,13 @@ exports[`PluginSpecs should render properly 1`] = `
     class="flex justify-between space-4"
   >
     <div
-      class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
         class="flex"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -23,7 +23,7 @@ exports[`PluginSpecs should render properly 1`] = `
             class="font-semibold text-theme-secondary-text"
           >
             <span
-              class="font-semibold text-theme-secondary-text"
+              class="font-semibold text-theme-secondary-text truncate max-w-48"
             >
               ARK Ecosystem
             </span>
@@ -31,10 +31,10 @@ exports[`PluginSpecs should render properly 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -49,15 +49,15 @@ exports[`PluginSpecs should render properly 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
           >
-            URL
+            Website
           </span>
           <span
             class="font-semibold text-theme-secondary-text"
@@ -65,7 +65,7 @@ exports[`PluginSpecs should render properly 1`] = `
             <a
               class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
               data-ring-focus-margin="-m-1"
-              data-testid="PluginSpecs__url"
+              data-testid="PluginSpecs__website"
               href="#"
               rel="noopener noreferrer"
               to="https://github.com/arkecosystem/explorer"
@@ -73,7 +73,9 @@ exports[`PluginSpecs should render properly 1`] = `
               <span
                 class="Link__Content-sc-ec014t-1 hUiuRR"
               >
-                github.com
+                <span>
+                  View
+                </span>
               </span>
               <span
                 class="align-middle"
@@ -93,12 +95,32 @@ exports[`PluginSpecs should render properly 1`] = `
           </span>
         </div>
       </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Status
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span>
+              Not installed
+            </span>
+          </span>
+        </div>
+      </div>
     </div>
     <div
-      class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
           class="flex flex-col text-right"
@@ -120,7 +142,7 @@ exports[`PluginSpecs should render properly 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
           class="flex flex-col text-right"
@@ -148,13 +170,13 @@ exports[`PluginSpecs should render without url and size 1`] = `
     class="flex justify-between space-4"
   >
     <div
-      class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
         class="flex"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -165,7 +187,7 @@ exports[`PluginSpecs should render without url and size 1`] = `
             class="font-semibold text-theme-secondary-text"
           >
             <span
-              class="font-semibold text-theme-secondary-text"
+              class="font-semibold text-theme-secondary-text truncate max-w-48"
             >
               ARK Ecosystem
             </span>
@@ -173,10 +195,10 @@ exports[`PluginSpecs should render without url and size 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -191,29 +213,51 @@ exports[`PluginSpecs should render without url and size 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
           >
-            URL
+            Website
           </span>
           <span
             class="font-semibold text-theme-secondary-text"
           >
-            N/A
+            <span>
+              N/A
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Status
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span>
+              Not installed
+            </span>
           </span>
         </div>
       </div>
     </div>
     <div
-      class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
           class="flex flex-col text-right"
@@ -235,7 +279,7 @@ exports[`PluginSpecs should render without url and size 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
           class="flex flex-col text-right"
@@ -263,13 +307,13 @@ exports[`PluginSpecs should show loading state for size 1`] = `
     class="flex justify-between space-4"
   >
     <div
-      class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
         class="flex"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -280,7 +324,7 @@ exports[`PluginSpecs should show loading state for size 1`] = `
             class="font-semibold text-theme-secondary-text"
           >
             <span
-              class="font-semibold text-theme-secondary-text"
+              class="font-semibold text-theme-secondary-text truncate max-w-48"
             >
               ARK Ecosystem
             </span>
@@ -288,10 +332,10 @@ exports[`PluginSpecs should show loading state for size 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -306,29 +350,51 @@ exports[`PluginSpecs should show loading state for size 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
-          class="flex flex-col undefined"
+          class="flex flex-col"
         >
           <span
             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
           >
-            URL
+            Website
           </span>
           <span
             class="font-semibold text-theme-secondary-text"
           >
-            N/A
+            <span>
+              N/A
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Status
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span>
+              Not installed
+            </span>
           </span>
         </div>
       </div>
     </div>
     <div
-      class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
           class="flex flex-col text-right"
@@ -362,7 +428,7 @@ exports[`PluginSpecs should show loading state for size 1`] = `
         </div>
       </div>
       <div
-        class="flex pl-8"
+        class="flex pl-6"
       >
         <div
           class="flex flex-col text-right"

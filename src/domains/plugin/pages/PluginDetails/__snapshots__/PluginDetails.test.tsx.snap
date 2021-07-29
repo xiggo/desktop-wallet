@@ -278,7 +278,7 @@ exports[`PluginDetails should render properly 1`] = `
               class="flex w-full"
             >
               <div
-                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 filter-grayscale"
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                 data-testid="PluginImage"
               >
                 <svg>
@@ -298,7 +298,7 @@ exports[`PluginDetails should render properly 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <span
-                        class="text-2xl font-bold"
+                        class="text-2xl font-bold truncate"
                       >
                         Test Plugin
                       </span>
@@ -370,13 +370,13 @@ exports[`PluginDetails should render properly 1`] = `
                   class="flex justify-between space-4"
                 >
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
                       class="flex"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -387,7 +387,7 @@ exports[`PluginDetails should render properly 1`] = `
                           class="font-semibold text-theme-secondary-text"
                         >
                           <span
-                            class="font-semibold text-theme-secondary-text"
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
                           >
                             Unknown
                           </span>
@@ -395,10 +395,10 @@ exports[`PluginDetails should render properly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -413,29 +413,51 @@ exports[`PluginDetails should render properly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                         >
-                          URL
+                          Website
                         </span>
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          N/A
+                          <span>
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Disabled
+                          </span>
                         </span>
                       </div>
                     </div>
                   </div>
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -457,7 +479,7 @@ exports[`PluginDetails should render properly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -808,7 +830,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
               class="flex w-full"
             >
               <div
-                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 filter-grayscale"
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                 data-testid="PluginImage"
               >
                 <svg>
@@ -828,7 +850,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <span
-                        class="text-2xl font-bold"
+                        class="text-2xl font-bold truncate"
                       >
                         Remote Plugin
                       </span>
@@ -880,13 +902,13 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                   class="flex justify-between space-4"
                 >
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
                       class="flex"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -897,7 +919,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                           class="font-semibold text-theme-secondary-text"
                         >
                           <span
-                            class="font-semibold text-theme-secondary-text"
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
                           >
                             Unknown
                           </span>
@@ -905,10 +927,10 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -923,29 +945,51 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                         >
-                          URL
+                          Website
                         </span>
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          N/A
+                          <span>
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Not installed
+                          </span>
                         </span>
                       </div>
                     </div>
                   </div>
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -967,7 +1011,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -1318,7 +1362,7 @@ exports[`PluginDetails should report plugin 1`] = `
               class="flex w-full"
             >
               <div
-                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 filter-grayscale"
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                 data-testid="PluginImage"
               >
                 <svg>
@@ -1338,7 +1382,7 @@ exports[`PluginDetails should report plugin 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <span
-                        class="text-2xl font-bold"
+                        class="text-2xl font-bold truncate"
                       >
                         Test Plugin
                       </span>
@@ -1410,13 +1454,13 @@ exports[`PluginDetails should report plugin 1`] = `
                   class="flex justify-between space-4"
                 >
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
                       class="flex"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -1427,7 +1471,7 @@ exports[`PluginDetails should report plugin 1`] = `
                           class="font-semibold text-theme-secondary-text"
                         >
                           <span
-                            class="font-semibold text-theme-secondary-text"
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
                           >
                             Unknown
                           </span>
@@ -1435,10 +1479,10 @@ exports[`PluginDetails should report plugin 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -1453,29 +1497,51 @@ exports[`PluginDetails should report plugin 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                         >
-                          URL
+                          Website
                         </span>
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          N/A
+                          <span>
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Disabled
+                          </span>
                         </span>
                       </div>
                     </div>
                   </div>
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -1497,7 +1563,7 @@ exports[`PluginDetails should report plugin 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -1848,7 +1914,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
               class="flex w-full"
             >
               <div
-                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 filter-grayscale"
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                 data-testid="PluginImage"
               >
                 <svg>
@@ -1868,7 +1934,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <span
-                        class="text-2xl font-bold"
+                        class="text-2xl font-bold truncate"
                       >
                         My Export Transaction
                       </span>
@@ -1922,13 +1988,13 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                   class="flex justify-between space-4"
                 >
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
                       class="flex"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -1939,7 +2005,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                           class="font-semibold text-theme-secondary-text"
                         >
                           <span
-                            class="font-semibold text-theme-secondary-text"
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
                           >
                             Edgar Goetzendorff
                           </span>
@@ -1947,10 +2013,10 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -1965,15 +2031,15 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                         >
-                          URL
+                          Website
                         </span>
                         <span
                           class="font-semibold text-theme-secondary-text"
@@ -1981,7 +2047,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                           <a
                             class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
                             data-ring-focus-margin="-m-1"
-                            data-testid="PluginSpecs__url"
+                            data-testid="PluginSpecs__website"
                             href="#"
                             rel="noopener noreferrer"
                             to="https://github.com/dated/transaction-export-plugin"
@@ -1989,7 +2055,9 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                             <span
                               class="Link__Content-sc-ec014t-1 hUiuRR"
                             >
-                              github.com
+                              <span>
+                                View
+                              </span>
                             </span>
                             <span
                               class="align-middle"
@@ -2009,12 +2077,32 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                         </span>
                       </div>
                     </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Not installed
+                          </span>
+                        </span>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -2036,7 +2124,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -2067,11 +2155,11 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
           class="container px-10 mx-auto"
         >
           <div>
-            <p
+            <h4
               class="font-bold"
             >
               About
-            </p>
+            </h4>
             <p
               class="mt-3 text-theme-secondary-600"
               data-testid="plugin-info__about"
@@ -2400,7 +2488,7 @@ exports[`PluginDetails should update package 1`] = `
               class="flex w-full"
             >
               <div
-                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 filter-grayscale"
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 kWnglb bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
                 data-testid="PluginImage"
               >
                 <svg>
@@ -2420,7 +2508,7 @@ exports[`PluginDetails should update package 1`] = `
                       class="flex items-center space-x-2"
                     >
                       <span
-                        class="text-2xl font-bold"
+                        class="text-2xl font-bold truncate"
                       >
                         Transaction Export Plugin
                       </span>
@@ -2492,13 +2580,13 @@ exports[`PluginDetails should update package 1`] = `
                   class="flex justify-between space-4"
                 >
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
                       class="flex"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2509,7 +2597,7 @@ exports[`PluginDetails should update package 1`] = `
                           class="font-semibold text-theme-secondary-text"
                         >
                           <span
-                            class="font-semibold text-theme-secondary-text"
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
                           >
                             Unknown
                           </span>
@@ -2517,10 +2605,10 @@ exports[`PluginDetails should update package 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -2535,29 +2623,51 @@ exports[`PluginDetails should update package 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
-                        class="flex flex-col undefined"
+                        class="flex flex-col"
                       >
                         <span
                           class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                         >
-                          URL
+                          Website
                         </span>
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          N/A
+                          <span>
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Disabled
+                          </span>
                         </span>
                       </div>
                     </div>
                   </div>
                   <div
-                    class="flex space-x-8 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"
@@ -2579,7 +2689,7 @@ exports[`PluginDetails should update package 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex pl-8"
+                      class="flex pl-6"
                     >
                       <div
                         class="flex flex-col text-right"

@@ -133,7 +133,7 @@ export const PluginListItem = ({
 				{plugin.isInstalled ? (
 					<>
 						{plugin.isEnabled ? (
-							<Tooltip content="Enabled">
+							<Tooltip content={t("PLUGINS.STATUS.ENABLED")}>
 								<div
 									data-testid="PluginListItem__enabled"
 									className="mx-auto text-2xl text-theme-success-500"
@@ -142,7 +142,7 @@ export const PluginListItem = ({
 								</div>
 							</Tooltip>
 						) : (
-							<Tooltip content="Disabled">
+							<Tooltip content={t("PLUGINS.STATUS.DISABLED")}>
 								<div
 									data-testid="PluginListItem__disabled"
 									className="mx-auto text-2xl text-theme-danger-400"
@@ -153,7 +153,7 @@ export const PluginListItem = ({
 						)}
 					</>
 				) : (
-					<Tooltip content="Not installed">
+					<Tooltip content={t("PLUGINS.STATUS.NOT_INSTALLED")}>
 						<div
 							data-testid="PluginListItem__not-installed"
 							className="flex justify-center items-center mx-auto w-6 h-6 text-theme-secondary-500"

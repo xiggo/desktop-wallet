@@ -136,7 +136,6 @@
 		"electron-updater": "^4.3.8",
 		"electron-window-state": "^5.0.3",
 		"enhanced-resolve": "^5.7.0",
-		"extract-domain": "^2.2.1",
 		"file-type": "^16.5.0",
 		"focus-visible": "^5.2.0",
 		"framer-motion": "^4.0.3",

@@ -151,7 +151,6 @@ export const PluginHeader = ({
 				<PluginImage
 					size="xl"
 					logoURL={properties.logo}
-					isEnabled={properties.isEnabled}
 					isExchange={properties.category === "exchange"}
 					isUpdating={updatingStats?.percent !== undefined}
 					updatingProgress={updatingStats?.percent}
@@ -162,7 +161,7 @@ export const PluginHeader = ({
 					<div className="flex justify-between items-end">
 						<div className="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight">
 							<div className="flex items-center space-x-2">
-								<span className="text-2xl font-bold">{properties.title}</span>
+								<span className="text-2xl font-bold truncate">{properties.title}</span>
 								{renderPluginIcon({
 									isGrant: !!properties.isGrant,
 									isOfficial: !!properties.isOfficial,

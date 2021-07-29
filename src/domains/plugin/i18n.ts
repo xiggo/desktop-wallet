@@ -127,6 +127,12 @@ export const translations: { [key: string]: any } = {
 
 	REQUIRED_VERSION: "Required Version",
 
+	STATUS: {
+		DISABLED: "Disabled",
+		ENABLED: "Enabled",
+		NOT_INSTALLED: "Not installed",
+	},
+
 	UPDATE_ALL: "Update All",
 
 	UPDATE_ALL_NOTICE: "There is {{count}} update available for your plugins. Would you like to update it?",

@@ -12,7 +12,6 @@ import { getStyles } from "./PluginImage.styles";
 interface Properties {
 	size?: Size;
 	logoURL?: string;
-	isEnabled?: boolean;
 	isExchange?: boolean;
 	isUpdating?: boolean;
 	updatingProgress?: number;
@@ -26,7 +25,6 @@ const PluginImageWrapper = styled.div<{ size?: Size; variant?: string }>(getStyl
 export const PluginImage = ({
 	size,
 	logoURL,
-	isEnabled,
 	isExchange,
 	isUpdating,
 	updatingProgress,
@@ -93,7 +91,6 @@ export const PluginImage = ({
 			className={cn(
 				"bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700",
 				className,
-				{ "filter-grayscale": !isEnabled },
 			)}
 			data-testid="PluginImage"
 		>
@@ -103,7 +100,6 @@ export const PluginImage = ({
 };
 
 PluginImage.defaultProps = {
-	isEnabled: true,
 	progressSize: 40,
 	updatingProgress: 0,
 };
