@@ -229,7 +229,7 @@ exports[`SelectNetwork should render with hidden options 1`] = `
               class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
             >
               <span
-                class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
               />
             </div>
           </label>
@@ -465,7 +465,7 @@ exports[`SelectNetwork should render with networks 1`] = `
               class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
             >
               <span
-                class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
               />
             </div>
           </label>

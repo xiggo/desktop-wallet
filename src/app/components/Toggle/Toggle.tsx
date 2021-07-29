@@ -20,9 +20,7 @@ const HandleInner = styled.span<{ alwaysOn?: boolean; disabled?: boolean; small?
 		disabled
 			? tw`bg-theme-primary-100 dark:bg-theme-secondary-800`
 			: css`
-					${Input} ~ ${Handle} & {
-						${alwaysOn ? tw`bg-theme-primary-600` : tw`bg-theme-secondary-400 dark:bg-theme-secondary-600`}
-					}
+					${alwaysOn ? tw`bg-theme-primary-600` : tw`bg-theme-secondary-400 dark:bg-theme-secondary-600`}
 
 					${Input}:checked ~ ${Handle} & {
 						${tw`translate-x-full bg-theme-primary-600`}

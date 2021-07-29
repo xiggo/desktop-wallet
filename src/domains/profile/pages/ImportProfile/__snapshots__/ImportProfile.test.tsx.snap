@@ -511,7 +511,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                             class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                           >
                                             <span
-                                              class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                              class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                             />
                                           </div>
                                         </label>
@@ -1084,7 +1084,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                             class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                           >
                                             <span
-                                              class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                              class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                             />
                                           </div>
                                         </label>

@@ -830,7 +830,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                   />
                                 </div>
                               </label>
@@ -1096,7 +1096,7 @@ exports[`ImportWallet should render network step 1`] = `
                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                   />
                 </div>
               </label>
@@ -1314,7 +1314,7 @@ exports[`ImportWallet should render network step without test networks 1`] = `
                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                   />
                 </div>
               </label>

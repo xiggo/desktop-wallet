@@ -1138,7 +1138,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -1342,7 +1342,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -1391,7 +1391,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -1441,7 +1441,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -2673,7 +2673,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -2877,7 +2877,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -2926,7 +2926,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -2976,7 +2976,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -4193,7 +4193,7 @@ exports[`General Settings should render 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -4397,7 +4397,7 @@ exports[`General Settings should render 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -4446,7 +4446,7 @@ exports[`General Settings should render 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -4496,7 +4496,7 @@ exports[`General Settings should render 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -5714,7 +5714,7 @@ exports[`General Settings should update profile 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -5918,7 +5918,7 @@ exports[`General Settings should update profile 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -5967,7 +5967,7 @@ exports[`General Settings should update profile 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -6016,7 +6016,7 @@ exports[`General Settings should update profile 1`] = `
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -7233,7 +7233,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -7437,7 +7437,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -7486,7 +7486,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -7536,7 +7536,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -8765,7 +8765,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -8969,7 +8969,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -9018,7 +9018,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>
@@ -9068,7 +9068,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                     />
                                   </div>
                                 </label>

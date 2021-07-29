@@ -1574,7 +1574,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -2516,7 +2516,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                                       />
                                     </div>
                                   </label>
@@ -2834,7 +2834,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                                   />
                                 </div>
                               </label>
@@ -3537,7 +3537,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                                       />
                                     </div>
                                   </label>
@@ -3844,7 +3844,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                   class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                                   />
                                 </div>
                               </label>
@@ -4188,7 +4188,7 @@ exports[`SendTransfer should render form step 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -4760,7 +4760,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -5295,7 +5295,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                     />
                   </div>
                 </label>
@@ -5463,7 +5463,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -6450,7 +6450,7 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                   />
                 </div>
               </label>
@@ -8483,7 +8483,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                                       />
                                     </div>
                                   </label>
@@ -8798,7 +8798,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                   class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                                   />
                                 </div>
                               </label>

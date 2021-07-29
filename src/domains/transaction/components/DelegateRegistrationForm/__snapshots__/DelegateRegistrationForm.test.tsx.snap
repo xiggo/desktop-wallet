@@ -236,7 +236,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -567,7 +567,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -1120,7 +1120,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -1428,7 +1428,7 @@ exports[`DelegateRegistrationForm should set username 1`] = `
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -1778,7 +1778,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>
@@ -2128,7 +2128,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
                       class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                       />
                     </div>
                   </label>

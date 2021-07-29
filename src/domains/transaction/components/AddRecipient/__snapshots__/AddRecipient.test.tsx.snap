@@ -37,7 +37,7 @@ exports[`AddRecipient should render 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                 />
               </div>
             </label>
@@ -299,7 +299,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                 />
               </div>
             </label>
@@ -561,7 +561,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                 />
               </div>
             </label>
@@ -834,7 +834,7 @@ exports[`AddRecipient should render without recipients 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                 />
               </div>
             </label>
@@ -1308,7 +1308,7 @@ exports[`AddRecipient should set available amount 1`] = `
                 class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                 />
               </div>
             </label>
@@ -1570,7 +1570,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                 class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                 />
               </div>
             </label>

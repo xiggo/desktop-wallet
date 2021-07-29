@@ -360,7 +360,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                         class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
                       >
                         <span
-                          class="Toggle__HandleInner-sc-6s3wfu-2 bzherC"
+                          class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
                         />
                       </div>
                     </label>

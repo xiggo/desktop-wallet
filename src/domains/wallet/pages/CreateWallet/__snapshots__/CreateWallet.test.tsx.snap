@@ -461,7 +461,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                   />
                                 </div>
                               </label>
@@ -1490,7 +1490,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                   />
                                 </div>
                               </label>
@@ -2521,7 +2521,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                   />
                                 </div>
                               </label>
@@ -3084,7 +3084,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                   />
                                 </div>
                               </label>
@@ -3689,7 +3689,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                                   class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 jTdzlo"
+                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
                                   />
                                 </div>
                               </label>
