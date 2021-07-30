@@ -41,13 +41,20 @@ export const GenerationStep = ({
 	}, [register, common, fees, wallet]);
 
 	useEffect(() => {
+		const secondMnemonic = getValues("secondMnemonic");
+
+		if (secondMnemonic) {
+			return;
+		}
+
 		const newMnemonic = BIP39.generate(
 			profile.settings().get<string>(Contracts.ProfileSetting.Bip39Locale, "english"),
 			wallet.network().wordCount(),
 		);
+
 		setValue("secondMnemonic", newMnemonic);
 		setValue("wallet", wallet);
-	}, [profile, setValue, wallet]);
+	}, [profile, getValues, setValue, wallet]);
 
 	return (
 		<section data-testid="SecondSignatureRegistrationForm__generation-step">

@@ -76,8 +76,35 @@ describe("SecondSignatureRegistrationForm", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		await waitFor(() => expect(result.current.getValues("secondMnemonic")).toEqual(passphrase));
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
+		await waitFor(() => expect(result.current.getValues("secondMnemonic")).toEqual(passphrase));
+
+		expect(bip39GenerateMock).toHaveBeenCalled();
+
+		bip39GenerateMock.mockRestore();
+	});
+
+	it("should not generate mnemonic if already set", async () => {
+		const { result } = renderHook(() =>
+			useForm({
+				defaultValues: {
+					secondMnemonic: "test mnemonic",
+				},
+			}),
+		);
+		const bip39GenerateMock = jest.spyOn(BIP39, "generate").mockImplementation();
+
+		act(() => {
+			const { asFragment } = render(<Component form={result.current} onSubmit={() => void 0} activeTab={1} />);
+
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
+
+		expect(result.current.getValues("secondMnemonic")).toEqual("test mnemonic");
+
+		expect(bip39GenerateMock).not.toHaveBeenCalled();
 
 		bip39GenerateMock.mockRestore();
 	});
