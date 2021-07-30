@@ -32,7 +32,7 @@ export const FormStep = ({
 	const { findByType } = useFees(profile);
 
 	const form = useFormContext();
-	const { setValue, watch } = form;
+	const { setValue, watch, getValues } = form;
 	const { fee, fees } = watch();
 
 	const inputFeeSettings = watch("inputFeeSettings") ?? {};
@@ -42,14 +42,17 @@ export const FormStep = ({
 			const fees = await findByType(network.coin(), network.id(), "vote");
 
 			setValue("fees", fees);
-			setValue("fee", fees?.avg, {
-				shouldDirty: true,
-				shouldValidate: true,
-			});
+
+			if (!getValues("fee")) {
+				setValue("fee", fees?.avg, {
+					shouldDirty: true,
+					shouldValidate: true,
+				});
+			}
 		};
 
 		setFees(wallet.network());
-	}, [env, wallet, setValue, findByType]);
+	}, [env, wallet, setValue, findByType, getValues]);
 
 	const showFeeInput = useMemo(() => !wallet.network().chargesZeroFees(), [wallet]);
 

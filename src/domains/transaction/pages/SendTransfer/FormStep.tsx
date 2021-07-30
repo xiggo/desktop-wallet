@@ -1,3 +1,4 @@
+import { isEqual } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Enums, Networks } from "@payvo/sdk";
 import { FormField, FormLabel } from "app/components/Form";
@@ -47,14 +48,16 @@ export const FormStep = ({
 				isSingle ? "transfer" : "multiPayment",
 			);
 
-			setValue("fees", transactionFees);
+			if (!isEqual(getValues("fees"), transactionFees)) {
+				setValue("fees", transactionFees);
 
-			setValue("fee", transactionFees.avg, {
-				shouldDirty: true,
-				shouldValidate: true,
-			});
+				setValue("fee", transactionFees.avg, {
+					shouldDirty: true,
+					shouldValidate: true,
+				});
+			}
 		},
-		[findByType, isSingle, setValue],
+		[findByType, isSingle, setValue, getValues],
 	);
 
 	useEffect(() => {

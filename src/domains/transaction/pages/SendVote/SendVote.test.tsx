@@ -424,6 +424,61 @@ describe("SendVote", () => {
 		transactionMock.mockRestore();
 	});
 
+	it("should keep the fee when user step back", async () => {
+		const history = createMemoryHistory();
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const parameters = new URLSearchParams({
+			unvotes: delegateData[1].address,
+		});
+
+		history.push({
+			pathname: voteURL,
+			search: `?${parameters}`,
+		});
+
+		const { getByTestId, getByText, getAllByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				<LedgerProvider transport={transport}>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [voteURL],
+			},
+		);
+
+		expect(getByTestId("SendVote__form-step")).toBeTruthy();
+
+		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
+
+		act(() => {
+			fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		});
+
+		fireEvent.input(getByTestId("InputCurrency"), { target: { value: "0.02" } });
+
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+
+		// Review Step
+		expect(getByTestId("SendVote__review-step")).toBeTruthy();
+
+		// Back to form
+		fireEvent.click(getByTestId("StepNavigation__back-button"));
+		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("0.02"));
+
+		// Back to review step
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+
+		expect(getByTestId("SendVote__review-step")).toBeTruthy();
+
+		await waitFor(() => expect(getAllByTestId("AmountCrypto")).toBeTruthy());
+
+		expect(getAllByTestId("AmountCrypto")[2]).toHaveTextContent("0.02");
+	});
+
 	it("should move back and forth between steps", async () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;

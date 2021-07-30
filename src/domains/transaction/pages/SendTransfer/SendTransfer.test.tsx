@@ -758,6 +758,77 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.1");
 	});
 
+	it("should keep the selected fee when user step back", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
+		const { getAllByTestId, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<LedgerProvider transport={getDefaultLedgerTransport()}>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
+		);
+
+		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+
+		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
+		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
+		await waitFor(() => expect(getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		// Select recipient
+		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
+
+		expect(getByTestId("modal__inner")).toBeTruthy();
+
+		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		await waitFor(() =>
+			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+		);
+
+		// Amount
+		fireEvent.input(getByTestId("AddRecipient__amount"), { target: { value: "12" } });
+		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue("12"));
+
+		// Fee
+		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
+		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
+
+		// Step 2
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+
+		const backButton = getByTestId("StepNavigation__back-button");
+
+		expect(backButton).not.toHaveAttribute("disabled");
+
+		fireEvent.click(backButton);
+
+		// Step 1 again
+		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+
+		// Thw fast fee should still be selected
+		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
+
+		// Go back to step 2 (the fast fee should still be the one used)
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+
+		await waitFor(() => expect(getAllByTestId("AmountCrypto")).toBeTruthy());
+
+		expect(getAllByTestId("AmountCrypto")[2]).toHaveTextContent("0.1");
+	});
+
 	it("should handle fee change", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?coin=ark&network=ark.devnet`;
 
