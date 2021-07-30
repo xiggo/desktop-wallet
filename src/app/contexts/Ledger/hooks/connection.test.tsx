@@ -1,6 +1,7 @@
 import Transport, { Observer } from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
+import { WalletData, WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
 import { toasts } from "app/services";
 import React from "react";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
@@ -165,13 +166,21 @@ describe("Use Ledger Connection", () => {
 		};
 
 		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
 
-		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce(() => ({ unsubscribe }));
+		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
 
 		const { getAllByTestId } = render(<Component />);
 
 		await waitFor(() => {
 			expect(getAllByTestId("Wallet").length).toBeGreaterThan(0);
+		});
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
 		listenSpy.mockReset();
@@ -183,6 +192,11 @@ describe("Use Ledger Connection", () => {
 		await waitFor(() => {
 			expect(getAllByTestId("Wallet").length).toBeGreaterThan(0);
 		});
+
+		const importedWallet = profile.wallets().findByAddress("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y");
+
+		expect(importedWallet?.isLedgerNanoX()).toBe(true);
+		expect(importedWallet?.data().get(WalletData.LedgerModel)).toEqual(WalletLedgerModel.NanoX);
 
 		profile.wallets().forget("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y");
 		env.persist();

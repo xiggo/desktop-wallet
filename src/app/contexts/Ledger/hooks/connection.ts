@@ -1,5 +1,6 @@
 import Transport from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/profiles";
+import { WalletData } from "@payvo/profiles/distribution/contracts";
 import { Coins } from "@payvo/sdk";
 import { toasts } from "app/services";
 import retry from "async-retry";
@@ -59,10 +60,12 @@ export const useLedgerConnection = (transport: typeof Transport) => {
 						profile,
 					}),
 				);
+
+				wallet.data().set(WalletData.LedgerModel, state.device?.id);
 			}
 			await persist();
 		},
-		[persist],
+		[persist, state],
 	);
 
 	const connect = useCallback(

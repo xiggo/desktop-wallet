@@ -5037,10 +5037,10 @@
     "@payvo/sdk-http" "^1.1.0"
     rss-parser "^3.9.0"
 
-"@payvo/profiles@^1.3.9":
-  version "1.3.9"
-  resolved "https://registry.yarnpkg.com/@payvo/profiles/-/profiles-1.3.9.tgz#6024fac7b6c33610558f9f00d875c90e07a36a1d"
-  integrity sha512-mZtmmfnbLtFQdE2pdhcWr4I4Q4eUuoeDAKW/2zky2iPQbpoRZ6dvmJYLO/lmdOdd6VPhZ0lK3hCHQkcc9m2O+Q==
+"@payvo/profiles@^1.3.11":
+  version "1.3.11"
+  resolved "https://registry.yarnpkg.com/@payvo/profiles/-/profiles-1.3.11.tgz#6fd18e5ba0da7a94b67e14f3cbac61898675662a"
+  integrity sha512-l/TOcAjiK/aj6l/CHpzY8oNF0iERO+daNpB/x3COxwnqLQ06QP0CuvsJF8p1WiV11oiFFqCtypGB0rpsdkrYdQ==
   dependencies:
     "@arkecosystem/utils" "^1.3.0"
     "@payvo/cryptography" "^1.0.1"
