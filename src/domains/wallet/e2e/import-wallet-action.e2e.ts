@@ -38,10 +38,8 @@ test("should import a wallet by mnemonic", async (t) => {
 
 	// Fill a passphrase and advance to third step
 	const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
-	const passphraseInput2 = Selector("[data-testid=ImportWallet__secondMnemonic-input]");
 
 	await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom");
-	await t.typeText(passphraseInput2, MNEMONICS[1]);
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 
 	await t.expect(Selector("[data-testid=EncryptPassword]").exists).ok();
@@ -113,7 +111,6 @@ test("should show an error message for invalid address", async (t) => {
 
 test("should show an error message for duplicate address", async (t) => {
 	let passphraseInput: Selector;
-	let passphrase2Input: Selector;
 
 	// Select a cryptoasset and advance to step two
 	await t.click('[data-testid="SelectNetworkInput__input"]');
@@ -127,10 +124,8 @@ test("should show an error message for duplicate address", async (t) => {
 
 	// Input passphrase
 	passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
-	passphrase2Input = Selector("[data-testid=ImportWallet__secondMnemonic-input]");
 
 	await t.typeText(passphraseInput, MNEMONICS[0], { paste: true, replace: true });
-	await t.typeText(passphrase2Input, MNEMONICS[1], { paste: true, replace: true });
 	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 
 	await t.expect(Selector("[data-testid=EncryptPassword]").exists).ok();

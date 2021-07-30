@@ -299,13 +299,10 @@ describe("ImportWallet", () => {
 		fireEvent.click(getByTestId("ImportWallet__continue-button"));
 
 		const passphraseInput = getByTestId("ImportWallet__mnemonic-input");
-		const secondPassphraseInput = getByTestId("ImportWallet__secondMnemonic-input");
 
 		expect(passphraseInput).toBeTruthy();
 
 		fireEvent.input(passphraseInput, { target: { value: mnemonic } });
-
-		fireEvent.input(secondPassphraseInput, { target: { value: MNEMONICS[2] } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("ImportWallet__continue-button"));
@@ -356,13 +353,10 @@ describe("ImportWallet", () => {
 		expect(getByTestId("ImportWallet__second-step")).toBeTruthy();
 
 		const passphraseInput = getByTestId("ImportWallet__mnemonic-input");
-		const secondPassphraseInput = getByTestId("ImportWallet__secondMnemonic-input");
 
 		expect(passphraseInput).toBeTruthy();
-		expect(secondPassphraseInput).toBeTruthy();
 
 		fireEvent.input(passphraseInput, { target: { value: MNEMONICS[3] } });
-		fireEvent.input(secondPassphraseInput, { target: { value: MNEMONICS[4] } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("ImportWallet__continue-button"));

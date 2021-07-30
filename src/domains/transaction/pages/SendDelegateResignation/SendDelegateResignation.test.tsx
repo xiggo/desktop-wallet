@@ -411,9 +411,6 @@ describe("SendDelegateResignation", () => {
 			const wifGetMock = jest
 				.spyOn(encryptedWallet.wif(), "get")
 				.mockResolvedValue("S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV");
-			const confirmationWifGetMock = jest
-				.spyOn(encryptedWallet.confirmationWIF(), "get")
-				.mockResolvedValue("SCoAuLqLrD6rfSBVhgcLqbdLKz2Gum2j4JR7pvLyiKaK9oiUfobg");
 
 			const secondPublicKeyMock = jest
 				.spyOn(encryptedWallet, "secondPublicKey")
@@ -470,7 +467,6 @@ describe("SendDelegateResignation", () => {
 			actsWithMnemonicMock.mockRestore();
 			actsWithWifWithEncryptionMock.mockRestore();
 			wifGetMock.mockRestore();
-			confirmationWifGetMock.mockRestore();
 		});
 	});
 });

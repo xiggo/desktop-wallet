@@ -1038,9 +1038,6 @@ describe("SendVote", () => {
 		const wifGetMock = jest
 			.spyOn(wallet.wif(), "get")
 			.mockResolvedValue("S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV");
-		const confirmationWifGetMock = jest
-			.spyOn(wallet.confirmationWIF(), "get")
-			.mockResolvedValue("SCoAuLqLrD6rfSBVhgcLqbdLKz2Gum2j4JR7pvLyiKaK9oiUfobg");
 
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
@@ -1124,6 +1121,5 @@ describe("SendVote", () => {
 		actsWithMnemonicMock.mockRestore();
 		actsWithWifWithEncryptionMock.mockRestore();
 		wifGetMock.mockRestore();
-		confirmationWifGetMock.mockRestore();
 	});
 });

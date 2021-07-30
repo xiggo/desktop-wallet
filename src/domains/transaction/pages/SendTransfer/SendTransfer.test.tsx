@@ -2318,9 +2318,6 @@ describe("SendTransfer", () => {
 		const wifGetMock = jest
 			.spyOn(wallet.wif(), "get")
 			.mockResolvedValue("S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV");
-		const confirmationWifGetMock = jest
-			.spyOn(wallet.confirmationWIF(), "get")
-			.mockResolvedValue("SCoAuLqLrD6rfSBVhgcLqbdLKz2Gum2j4JR7pvLyiKaK9oiUfobg");
 
 		const history = createMemoryHistory();
 		history.push(transferURL);
@@ -2418,7 +2415,6 @@ describe("SendTransfer", () => {
 		actsWithMnemonicMock.mockRestore();
 		actsWithWifWithEncryptionMock.mockRestore();
 		wifGetMock.mockRestore();
-		confirmationWifGetMock.mockRestore();
 
 		await waitFor(() => expect(container).toMatchSnapshot());
 
