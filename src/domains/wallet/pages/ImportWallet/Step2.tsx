@@ -5,9 +5,31 @@ import { Header } from "app/components/Header";
 import { Input, InputAddress, InputPassword } from "app/components/Input";
 import { Select } from "app/components/SelectDropdown";
 import { OptionsValue, useImportOptions } from "domains/wallet/hooks/use-import-options";
+import { TFunction } from "i18next";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+const validateAddress = async (
+	value: string,
+	profile: Contracts.IProfile,
+	findAddress: (value: string) => Promise<string>,
+	t: TFunction,
+) => {
+	try {
+		const address = await findAddress(value);
+
+		return (
+			!profile.wallets().findByAddress(address) ||
+			t("COMMON.INPUT_PASSPHRASE.VALIDATION.ADDRESS_ALREADY_EXISTS", {
+				address,
+			}).toString()
+		);
+	} catch (error) {
+		/* istanbul ignore next */
+		return error.message;
+	}
+};
 
 const MnemonicField = ({
 	profile,
@@ -30,21 +52,7 @@ const MnemonicField = ({
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: label,
 					}).toString(),
-					validate: async (value) => {
-						try {
-							const address = await findAddress(value);
-
-							return (
-								!profile.wallets().findByAddress(address) ||
-								t("COMMON.INPUT_PASSPHRASE.VALIDATION.ADDRESS_ALREADY_EXISTS", {
-									address,
-								}).toString()
-							);
-						} catch (error) {
-							/* istanbul ignore next */
-							return error.message;
-						}
-					},
+					validate: (value) => validateAddress(value, profile, findAddress, t),
 				})}
 				{...properties}
 			/>
@@ -85,21 +93,39 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 	const { register } = useFormContext();
 
 	if (type.startsWith("bip")) {
+		const findAddress = async (value: string) => {
+			try {
+				const { address } = await coin.address().fromMnemonic(value);
+				return address;
+			} catch {
+				/* istanbul ignore next */
+				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
+			}
+		};
+
 		return (
-			<MnemonicField
-				profile={profile}
-				label={t(`COMMON.MNEMONIC_TYPE.${type.toUpperCase()}`)}
-				data-testid="ImportWallet__mnemonic-input"
-				findAddress={async (value) => {
-					try {
-						const { address } = await coin.address().fromMnemonic(value);
-						return address;
-					} catch {
-						/* istanbul ignore next */
-						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
-					}
-				}}
-			/>
+			<>
+				<MnemonicField
+					profile={profile}
+					label={t(`COMMON.MNEMONIC_TYPE.${type.toUpperCase()}`)}
+					data-testid="ImportWallet__mnemonic-input"
+					findAddress={findAddress}
+				/>
+
+				<FormField name="secondMnemonic">
+					<FormLabel label={t("COMMON.SECOND_MNEMONIC")} />
+
+					<InputPassword
+						data-testid="ImportWallet__secondMnemonic-input"
+						ref={register({
+							required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+								field: t("COMMON.SECOND_MNEMONIC"),
+							}).toString(),
+							validate: (value) => validateAddress(value, profile, findAddress, t),
+						})}
+					/>
+				</FormField>
+			</>
 		);
 	}
 

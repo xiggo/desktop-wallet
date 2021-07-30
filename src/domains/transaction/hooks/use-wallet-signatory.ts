@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Services, Signatories } from "@payvo/sdk";
 import { useCallback } from "react";
@@ -35,7 +36,12 @@ export const useWalletSignatory = (
 			}
 
 			if (encryptionPassword) {
-				return wallet.signatory().wif(await wallet.wif().get(encryptionPassword));
+				return wallet
+					.signatory()
+					.confirmationWIF(
+						await wallet.wif().get(encryptionPassword),
+						await wallet.confirmationWIF().get(encryptionPassword),
+					);
 			}
 
 			if (wallet.isMultiSignature()) {
