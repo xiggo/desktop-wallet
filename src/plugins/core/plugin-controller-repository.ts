@@ -1,3 +1,4 @@
+import * as PayvoIntl from "@payvo/intl";
 import { Contracts } from "@payvo/profiles";
 import { Alert } from "app/components/Alert";
 import { OriginalButton } from "app/components/Button/OriginalButton";
@@ -125,6 +126,9 @@ export class PluginControllerRepository {
 							Tabs,
 							Tooltip,
 						},
+					},
+					sdk: {
+						Intl: PayvoIntl,
 					},
 				});
 				const plugin = new PluginController(
