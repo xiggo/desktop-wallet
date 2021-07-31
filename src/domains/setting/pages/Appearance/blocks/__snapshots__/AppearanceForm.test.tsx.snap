@@ -79,7 +79,7 @@ exports[`AppearanceForm should render 1`] = `
         </div>
       </li>
       <li
-        class="flex flex-col w-full pt-6"
+        class="flex flex-col w-full py-6"
         data-testid="list-divided-item__wrapper"
       >
         <div
@@ -168,6 +168,105 @@ exports[`AppearanceForm should render 1`] = `
                   </div>
                 </button>
               </div>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="flex flex-col w-full py-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex flex-col space-y-2 w-full"
+          >
+            <div
+              class="flex justify-between items-center space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Portfolio Transaction History
+              </span>
+              <span>
+                <label
+                  class="flex"
+                >
+                  <input
+                    checked=""
+                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                    data-testid="AppearanceToggle__toggle-dashboardTransactionHistory"
+                    name="dashboardTransactionHistory"
+                    type="checkbox"
+                  />
+                  <div
+                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                  >
+                    <span
+                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                    />
+                  </div>
+                </label>
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Enables transaction history on Portfolio page.
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="flex flex-col w-full pt-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex flex-col space-y-2 w-full"
+          >
+            <div
+              class="flex justify-between items-center space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Wallet Naming
+              </span>
+              <span>
+                <label
+                  class="flex"
+                >
+                  <input
+                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                    name="useNetworkWalletNames"
+                    type="checkbox"
+                  />
+                  <div
+                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                  >
+                    <span
+                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                    />
+                  </div>
+                </label>
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Prioritize showing network provided names over wallet names.
             </span>
           </div>
         </div>

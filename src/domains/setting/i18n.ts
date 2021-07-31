@@ -10,6 +10,10 @@ export const translations: { [key: string]: any } = {
 				DESCRIPTION: "Choose a color for buttons and other wallet features.",
 				TITLE: "Accent Color",
 			},
+			TRANSACTION_HISTORY: {
+				DESCRIPTION: "Enables transaction history on Portfolio page.",
+				TITLE: "Portfolio Transaction History",
+			},
 			VIEWING_MODE: {
 				DESCRIPTION: "Choose a light or dark viewing mode.",
 				TITLE: "Viewing Mode",
@@ -17,6 +21,10 @@ export const translations: { [key: string]: any } = {
 					DARK: "Dark",
 					LIGHT: "Light",
 				},
+			},
+			WALLET_NAMING: {
+				DESCRIPTION: "Prioritize showing network provided names over wallet names.",
+				TITLE: "Wallet Naming",
 			},
 		},
 		SUBTITLE: "Customize the look of the application.",
@@ -61,10 +69,6 @@ export const translations: { [key: string]: any } = {
 				TITLE: "Error Reporting",
 			},
 			TITLE: "Other",
-			TRANSACTION_HISTORY: {
-				DESCRIPTION: "Enables transaction history on Portfolio page",
-				TITLE: "Portfolio Transaction History",
-			},
 		},
 		PERSONAL: {
 			CONFIRM_PASSWORD: "Confirm Password",

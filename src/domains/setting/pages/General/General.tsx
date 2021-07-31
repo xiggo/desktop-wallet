@@ -27,7 +27,6 @@ interface GeneralSettingsState {
 	automaticSignOutPeriod: number;
 	avatar: string;
 	bip39Locale: string;
-	dashboardTransactionHistory: boolean;
 	errorReporting: boolean;
 	exchangeCurrency: string;
 	locale: string;
@@ -60,7 +59,6 @@ export const GeneralSettings: React.FC = () => {
 			automaticSignOutPeriod: settings.get<number>(Contracts.ProfileSetting.AutomaticSignOutPeriod),
 			avatar: settings.get(Contracts.ProfileSetting.Avatar) || Helpers.Avatar.make(name),
 			bip39Locale: settings.get(Contracts.ProfileSetting.Bip39Locale),
-			dashboardTransactionHistory: settings.get(Contracts.ProfileSetting.DashboardTransactionHistory),
 			errorReporting: settings.get(Contracts.ProfileSetting.ErrorReporting),
 			exchangeCurrency: settings.get(Contracts.ProfileSetting.ExchangeCurrency),
 			locale: settings.get(Contracts.ProfileSetting.Locale),
@@ -208,26 +206,12 @@ export const GeneralSettings: React.FC = () => {
 			labelDescription: t("SETTINGS.GENERAL.OTHER.ERROR_REPORTING.DESCRIPTION"),
 			wrapperClass: "py-6",
 		},
-		{
-			label: t("SETTINGS.GENERAL.OTHER.TRANSACTION_HISTORY.TITLE"),
-			labelAddon: (
-				<Toggle
-					ref={register()}
-					name="dashboardTransactionHistory"
-					defaultChecked={getDefaultValues().dashboardTransactionHistory}
-					data-testid="General-settings__toggle--dashboardTransactionHistory"
-				/>
-			),
-			labelDescription: t("SETTINGS.GENERAL.OTHER.TRANSACTION_HISTORY.DESCRIPTION"),
-			wrapperClass: "py-6",
-		},
 	];
 
 	const handleSubmit = async ({
 		automaticSignOutPeriod,
 		avatar,
 		bip39Locale,
-		dashboardTransactionHistory,
 		errorReporting,
 		exchangeCurrency,
 		locale,
@@ -239,7 +223,6 @@ export const GeneralSettings: React.FC = () => {
 	}: GeneralSettingsState) => {
 		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, +automaticSignOutPeriod);
 		profile.settings().set(Contracts.ProfileSetting.Bip39Locale, bip39Locale);
-		profile.settings().set(Contracts.ProfileSetting.DashboardTransactionHistory, dashboardTransactionHistory);
 		profile.settings().set(Contracts.ProfileSetting.ErrorReporting, errorReporting);
 		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, exchangeCurrency);
 		profile.settings().set(Contracts.ProfileSetting.Locale, locale);

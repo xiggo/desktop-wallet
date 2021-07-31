@@ -118,4 +118,21 @@ describe("useWalletAlias", () => {
 		walletsSpy.mockRestore();
 		contactsSpy.mockRestore();
 	});
+
+	it("should choose delegate name over alias if enabled in preferences", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
+
+		jest.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
+			username: () => "delegate username",
+		} as any);
+
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		expect(result.current.getWalletAlias({ address: wallet.address(), profile })).toEqual({
+			alias: "delegate username",
+			isContact: false,
+			isDelegate: true,
+			isKnown: true,
+		});
+	});
 });

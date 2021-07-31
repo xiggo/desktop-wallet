@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { camelCase } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -132,4 +133,36 @@ describe("Appearance Settings", () => {
 		expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
 		expect(toastSuccess).toHaveBeenCalled();
 	});
+
+	it.each([Contracts.ProfileSetting.DashboardTransactionHistory, Contracts.ProfileSetting.UseNetworkWalletNames])(
+		"should allow to toggle %s setting",
+		async (key) => {
+			const toastSuccess = jest.spyOn(toasts, "success");
+
+			profile.settings().set(key, true);
+
+			renderPage();
+
+			const toggleTestId = `AppearanceToggle__toggle-${camelCase(key)}`;
+
+			expect(screen.getByTestId(toggleTestId)).toBeChecked();
+			expect(profile.settings().get(key)).toBe(true);
+
+			await act(async () => {
+				userEvent.click(screen.getByTestId(toggleTestId));
+			});
+
+			expect(screen.getByTestId(toggleTestId)).not.toBeChecked();
+			expect(profile.settings().get(key)).toBe(true);
+
+			expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
+
+			await act(async () => {
+				userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+			});
+
+			expect(profile.settings().get(key)).toBe(false);
+			expect(toastSuccess).toHaveBeenCalled();
+		},
+	);
 });

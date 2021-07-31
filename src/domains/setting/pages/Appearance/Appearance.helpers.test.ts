@@ -10,10 +10,12 @@ describe("Appearance.helpers", () => {
 		it("should return items to render in the form", () => {
 			const { result } = renderHook(() => useAppearanceItems());
 
-			expect(result.current).toHaveLength(2);
+			expect(result.current).toHaveLength(4);
 
 			expect(result.current[0].label).toBe(translations.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE);
 			expect(result.current[1].label).toBe(translations.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE);
+			expect(result.current[2].label).toBe(translations.APPEARANCE.OPTIONS.TRANSACTION_HISTORY.TITLE);
+			expect(result.current[3].label).toBe(translations.APPEARANCE.OPTIONS.WALLET_NAMING.TITLE);
 		});
 	});
 
@@ -28,6 +30,8 @@ describe("Appearance.helpers", () => {
 
 			const testValues: AppearanceSettingsState = {
 				accentColor: "blue",
+				dashboardTransactionHistory: false,
+				useNetworkWalletNames: false,
 				viewingMode: "light",
 			};
 

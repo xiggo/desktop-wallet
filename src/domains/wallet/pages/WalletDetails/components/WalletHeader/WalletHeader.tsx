@@ -9,7 +9,7 @@ import { Tooltip } from "app/components/Tooltip";
 import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import { WalletIcons } from "app/components/WalletIcons";
 import { useEnvironmentContext } from "app/contexts";
-import { usePrevious } from "app/hooks";
+import { usePrevious, useWalletAlias } from "app/hooks";
 import cn from "classnames";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import { DeleteWallet } from "domains/wallet/components/DeleteWallet";
@@ -58,6 +58,14 @@ export const WalletHeader = ({
 
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
+
+	const { getWalletAlias } = useWalletAlias();
+
+	const { alias } = getWalletAlias({
+		address: wallet.address(),
+		network: wallet.network(),
+		profile,
+	});
 
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 
@@ -139,9 +147,9 @@ export const WalletHeader = ({
 
 					<div className="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full">
 						<div className="flex items-center space-x-5 text-theme-secondary-text">
-							{wallet.alias() && (
+							{!!alias && (
 								<span data-testid="WalletHeader__name" className="text-sm font-semibold">
-									{wallet.alias()}
+									{alias}
 								</span>
 							)}
 

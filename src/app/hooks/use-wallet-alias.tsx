@@ -27,60 +27,64 @@ const useWalletAlias = (): HookResult => {
 	const getWalletAlias = useCallback(
 		({ address, profile, network }: Properties) => {
 			try {
-				assertString(address);
 				assertProfile(profile);
+				assertString(address);
+
+				const getDelegateUsername = (network?: Networks.Network): string | undefined => {
+					if (!network) {
+						return undefined;
+					}
+
+					try {
+						const delegate = env.delegates().findByAddress(network.coin(), network.id(), address);
+
+						return delegate.username();
+					} catch {
+						return undefined;
+					}
+				};
+
+				const contact = profile.contacts().findByAddress(address)[0];
+
+				if (contact) {
+					return {
+						alias: contact.name(),
+						isContact: true,
+						isDelegate: !!getDelegateUsername(network),
+						isKnown: !!profile.wallets().findByAddress(address),
+					};
+				}
+
+				const wallet = profile.wallets().findByAddress(address);
+				const useNetworkWalletNames = !!profile.settings().get(Contracts.ProfileSetting.UseNetworkWalletNames);
+
+				if (wallet) {
+					const delegateUsername = getDelegateUsername(wallet.network());
+
+					let alias = wallet.displayName();
+
+					if (useNetworkWalletNames && delegateUsername) {
+						alias = delegateUsername;
+					}
+
+					return {
+						alias,
+						isContact: false,
+						isDelegate: !!delegateUsername,
+						isKnown: true,
+					};
+				}
+
+				if (network) {
+					return {
+						alias: getDelegateUsername(network),
+						isContact: false,
+						isDelegate: true,
+						isKnown: false,
+					};
+				}
 			} catch {
-				return {
-					alias: undefined,
-					isContact: false,
-					isDelegate: false,
-					isKnown: false,
-				};
-			}
-
-			const getDelegateUsername = (network?: Networks.Network): string | undefined => {
-				if (!network) {
-					return undefined;
-				}
-
-				try {
-					const delegate = env.delegates().findByAddress(network.coin(), network.id(), address);
-
-					return delegate.username();
-				} catch {
-					return undefined;
-				}
-			};
-
-			const contact = profile.contacts().findByAddress(address)[0];
-
-			if (contact) {
-				return {
-					alias: contact.name(),
-					isContact: true,
-					isDelegate: !!getDelegateUsername(network),
-					isKnown: !!profile.wallets().findByAddress(address),
-				};
-			}
-
-			const wallet = profile.wallets().findByAddress(address);
-
-			if (wallet) {
-				return {
-					alias: wallet.displayName(),
-					isContact: false,
-					isDelegate: !!getDelegateUsername(wallet.network()),
-					isKnown: true,
-				};
-			}
-
-			if (network) {
-				return {
-					alias: getDelegateUsername(network),
-					isContact: false,
-					isDelegate: true,
-					isKnown: false,
-				};
+				//
 			}
 
 			return {
