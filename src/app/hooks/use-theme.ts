@@ -21,7 +21,7 @@ export const useTheme = () => {
 	};
 
 	const setProfileTheme = (profile: Contracts.IProfile) => {
-		const profileTheme = profile.theme();
+		const profileTheme = profile.appearance().get("theme");
 		const hasDifferentTheme = shouldUseDarkColors() !== (profileTheme === "dark");
 
 		/* istanbul ignore else */
