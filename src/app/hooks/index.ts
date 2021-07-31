@@ -6,6 +6,7 @@ export * from "./use-accent-color";
 export * from "./use-clipboard";
 export * from "./use-deeplink";
 export * from "./use-fees";
+export * from "./use-ledger-model-status";
 export * from "./use-network-options";
 export * from "./use-previous";
 export * from "./use-profile-synchronizer";

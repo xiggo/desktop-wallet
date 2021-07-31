@@ -687,6 +687,7 @@ describe("SendIpfs", () => {
 
 	it("should send a ipfs transfer with a ledger wallet", async () => {
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+		const isNanoXMock = jest.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 
 		const isLedgerSpy = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
@@ -792,6 +793,7 @@ describe("SendIpfs", () => {
 		signTransactionSpy.mockRestore();
 		transactionMock.mockRestore();
 		mockWalletData.mockRestore();
+		isNanoXMock.mockRestore();
 
 		expect(container).toMatchSnapshot();
 	});

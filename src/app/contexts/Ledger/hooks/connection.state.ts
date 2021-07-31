@@ -1,7 +1,9 @@
+import { LedgerModel } from "app/hooks";
+
 interface State {
 	device?: {
 		path: string;
-		id: string;
+		id: LedgerModel;
 	};
 	isConnected: boolean;
 	isBusy: boolean;
@@ -26,7 +28,7 @@ export const connectionReducer = (state: State, action: Action): State => {
 			return {
 				...state,
 				device: {
-					id: action.id,
+					id: action.id as LedgerModel,
 					path: action.path,
 				},
 			};

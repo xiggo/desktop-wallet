@@ -4,11 +4,12 @@ import { Form } from "app/components/Form";
 import { Modal } from "app/components/Modal";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
+import { useLedgerModelStatus } from "app/hooks";
 import { toasts } from "app/services";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import { SignInput, useMultiSignatureRegistration, useWalletSignatory } from "domains/transaction/hooks";
 import { handleBroadcastError } from "domains/transaction/utils";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -79,7 +80,12 @@ export const MultiSignatureDetail = ({
 
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
-	const { hasDeviceAvailable, isConnected, connect, transport } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
+
+	const { isLedgerModelSupported } = useLedgerModelStatus({
+		connectedModel: ledgerDevice?.id,
+		supportedModels: [Contracts.WalletLedgerModel.NanoX],
+	});
 
 	const form = useForm({ mode: "onChange" });
 	const { handleSubmit, formState } = form;
@@ -151,10 +157,19 @@ export const MultiSignatureDetail = ({
 	const handleSign = () => {
 		setActiveStep(2);
 
-		if (wallet.isLedger()) {
+		if (wallet.isLedger() && isLedgerModelSupported) {
 			handleSubmit((data: any) => sendSignature(data))();
 		}
 	};
+
+	// Reset ledger authentication steps after reconnecting supported ledger
+	useEffect(() => {
+		const isAuthenticationStep = activeStep === 2;
+
+		if (isAuthenticationStep && wallet.isLedger() && isLedgerModelSupported) {
+			handleSubmit((data: any) => sendSignature(data))();
+		}
+	}, [ledgerDevice]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<Modal title={""} isOpen={isOpen} onClose={onClose}>
@@ -169,6 +184,8 @@ export const MultiSignatureDetail = ({
 							wallet={wallet}
 							ledgerIsAwaitingDevice={!hasDeviceAvailable}
 							ledgerIsAwaitingApp={!isConnected}
+							ledgerConnectedModel={ledgerDevice?.id}
+							ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
 						/>
 					</TabPanel>
 
@@ -205,7 +222,9 @@ export const MultiSignatureDetail = ({
 							onSign={handleSign}
 							onBack={() => setActiveStep(1)}
 							onContinue={handleSubmit((data: any) => sendSignature(data))}
-							isLoading={isSubmitting}
+							isLoading={
+								isSubmitting || (wallet.isLedger() && activeStep === 2 && !isLedgerModelSupported)
+							}
 							isEnabled={isValid}
 						/>
 					)}

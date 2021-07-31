@@ -2,30 +2,64 @@ import { Contracts } from "@payvo/profiles";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { InputPassword } from "app/components/Input";
-import { useValidation } from "app/hooks";
+import { LedgerModel, useLedgerModelStatus, useValidation } from "app/hooks";
 import { LedgerConfirmation } from "domains/transaction/components/LedgerConfirmation";
-import { LedgerWaitingAppContent, LedgerWaitingDeviceContent } from "domains/wallet/components/Ledger";
-import React from "react";
+import {
+	LedgerDeviceErrorContent,
+	LedgerWaitingAppContent,
+	LedgerWaitingDeviceContent,
+} from "domains/wallet/components/Ledger";
+import React, { useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
+	ledgerSupportedModels?: LedgerModel[];
+	ledgerConnectedModel?: LedgerModel;
 }
 
 const LedgerStateWrapper = ({
+	ledgerConnectedModel,
 	ledgerIsAwaitingApp,
 	ledgerIsAwaitingDevice,
-	coinName,
+	wallet,
 	children,
-}: { coinName: string; children: React.ReactNode } & LedgerStates) => {
+	ledgerSupportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoX],
+}: { wallet: Contracts.IReadWriteWallet; children: React.ReactNode } & LedgerStates) => {
+	const { t } = useTranslation();
+
+	const { isLedgerModelSupported } = useLedgerModelStatus({
+		connectedModel: ledgerConnectedModel,
+		supportedModels: ledgerSupportedModels,
+	});
+
+	const subtitle = useMemo(() => {
+		if (ledgerSupportedModels.length > 1 || !ledgerConnectedModel) {
+			return t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE");
+		}
+
+		const modelNames = {
+			[Contracts.WalletLedgerModel.NanoS]: t("WALLETS.MODAL_LEDGER_WALLET.LEDGER_NANO_S"),
+			[Contracts.WalletLedgerModel.NanoX]: t("WALLETS.MODAL_LEDGER_WALLET.LEDGER_NANO_X"),
+		};
+
+		return t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE_MODEL", { model: modelNames[ledgerSupportedModels[0]] });
+	}, [ledgerConnectedModel, ledgerSupportedModels, t]);
+
+	if (ledgerConnectedModel && !isLedgerModelSupported) {
+		return (
+			<LedgerDeviceErrorContent connectedModel={ledgerConnectedModel} supportedModel={ledgerSupportedModels[0]} />
+		);
+	}
+
 	if (ledgerIsAwaitingDevice) {
-		return <LedgerWaitingDeviceContent />;
+		return <LedgerWaitingDeviceContent subtitle={subtitle} />;
 	}
 
 	if (ledgerIsAwaitingApp) {
-		return <LedgerWaitingAppContent coinName={coinName} />;
+		return <LedgerWaitingAppContent coinName={wallet.network().coin()} subtitle={subtitle} />;
 	}
 
 	return <>{children}</>;
@@ -36,6 +70,8 @@ export const AuthenticationStep = ({
 	ledgerDetails,
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
+	ledgerSupportedModels,
+	ledgerConnectedModel,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	ledgerDetails?: React.ReactNode;
@@ -50,7 +86,9 @@ export const AuthenticationStep = ({
 				<LedgerStateWrapper
 					ledgerIsAwaitingApp={ledgerIsAwaitingApp}
 					ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
-					coinName={wallet.network().coin()}
+					ledgerSupportedModels={ledgerSupportedModels}
+					ledgerConnectedModel={ledgerConnectedModel}
+					wallet={wallet}
 				>
 					<>
 						<Header title={t("TRANSACTION.LEDGER_CONFIRMATION.TITLE")} />

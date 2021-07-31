@@ -11,7 +11,12 @@ export const translations: { [key: string]: any } = {
 	},
 	MODAL_LEDGER_WALLET: {
 		CONNECT_DEVICE: "Connect your Ledger and confirm input.",
+		CONNECT_DEVICE_MODEL: "Connect your {{model}} and confirm input.",
 		CONNECT_SUCCESS: "Successfully connected",
+		DEVICE_NOT_SUPPORTED:
+			"A <bold>{{connectedModel}}</bold> is connected, but his operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
+		LEDGER_NANO_S: "Ledger Nano S",
+		LEDGER_NANO_X: "Ledger Nano X",
 		NO_DEVICE_FOUND: "Ledger device was not found in time",
 		OPEN_APP: "Open the {{coin}} app on your device ...",
 		TITLE: "Ledger Wallet",

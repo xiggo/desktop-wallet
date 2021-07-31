@@ -24,9 +24,9 @@ describe("AuthenticationStep", () => {
 		wallet = profile.wallets().first();
 	});
 
-	const Component = ({ form }: any) => (
+	const Component = ({ form, ...props }: any) => (
 		<Form context={form} onSubmit={() => void 0}>
-			<AuthenticationStep wallet={wallet} />
+			<AuthenticationStep wallet={wallet} {...props} />
 		</Form>
 	);
 
@@ -309,6 +309,30 @@ describe("AuthenticationStep", () => {
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
 		expect(asFragment()).toMatchSnapshot();
+
+		jest.clearAllMocks();
+	});
+
+	it("should specify ledger supported model", async () => {
+		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+
+		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
+		const { asFragment } = renderWithRouter(
+			<Component
+				form={result.current}
+				ledgerIsAwaitingApp={false}
+				ledgerIsAwaitingDevice={true}
+				ledgerConnectedModel={Contracts.WalletLedgerModel.NanoS}
+				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
+			/>,
+		);
+
+		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
+		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+
+		expect(asFragment()).toMatchSnapshot();
+
+		jest.clearAllMocks();
 	});
 
 	it("should show ledger waiting device screen", () => {
@@ -324,6 +348,50 @@ describe("AuthenticationStep", () => {
 		expect(queryByTestId("LedgerWaitingDevice-loading_message")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should show ledger waiting device screen for Nano X", async () => {
+		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+
+		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
+		const { container } = renderWithRouter(
+			<Form context={result.current} onSubmit={() => void 0}>
+				<AuthenticationStep
+					wallet={wallet}
+					ledgerIsAwaitingDevice={false}
+					ledgerIsAwaitingApp={false}
+					ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
+				/>
+			</Form>,
+		);
+
+		await waitFor(() => expect(screen.queryByTestId("LedgerConfirmation-description")).toBeInTheDocument());
+
+		expect(container).toMatchSnapshot();
+
+		jest.restoreAllMocks();
+	});
+
+	it("should show ledger waiting device screen for Nano S", async () => {
+		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+
+		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
+		const { container } = renderWithRouter(
+			<Form context={result.current} onSubmit={() => void 0}>
+				<AuthenticationStep
+					wallet={wallet}
+					ledgerIsAwaitingDevice={false}
+					ledgerIsAwaitingApp={false}
+					ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoS]}
+				/>
+			</Form>,
+		);
+
+		await waitFor(() => expect(screen.queryByTestId("LedgerConfirmation-description")).toBeInTheDocument());
+
+		expect(container).toMatchSnapshot();
+
+		jest.restoreAllMocks();
 	});
 
 	it("should show ledger waiting app screen", () => {

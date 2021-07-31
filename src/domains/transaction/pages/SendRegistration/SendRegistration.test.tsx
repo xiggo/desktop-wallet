@@ -11,6 +11,7 @@ import DelegateRegistrationFixture from "tests/fixtures/coins/ark/devnet/transac
 import MultisignatureRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import SecondSignatureRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import {
+	act,
 	defaultNetMocks,
 	env,
 	fireEvent,
@@ -33,6 +34,7 @@ let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createMemoryHistory();
 const passphrase = getDefaultWalletMnemonic();
+const ledgerTransport = getDefaultLedgerTransport();
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
@@ -43,7 +45,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 	const rendered = renderWithRouter(
 		<Route path={path}>
-			<LedgerProvider transport={getDefaultLedgerTransport()}>
+			<LedgerProvider transport={ledgerTransport}>
 				<SendRegistration />
 			</LedgerProvider>
 		</Route>,
@@ -384,7 +386,19 @@ describe("Registration", () => {
 	});
 
 	it("should send multisignature registration with ledger wallet", async () => {
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const listenSpy = jest.spyOn(ledgerTransport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
 		const { getByTestId, getAllByTestId } = await renderPage(wallet, "multiSignature");
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		});
 
 		// Ledger mocks
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
@@ -448,6 +462,170 @@ describe("Registration", () => {
 		multiSignatureRegistrationMock.mockRestore();
 		addSignatureMock.mockRestore();
 		mockDerivationPath.mockRestore();
+		listenSpy.mockRestore();
+	});
+
+	it("should show ledger error screen in authentication if nanoS is connected", async () => {
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const listenSpy = jest.spyOn(ledgerTransport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
+		const { getByTestId, getAllByTestId } = await renderPage(wallet, "multiSignature");
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoS" }, type: "add" });
+		});
+
+		// Ledger mocks
+		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+
+		const getPublicKeyMock = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
+
+		const signTransactionMock = jest
+			.spyOn(wallet.transaction(), "signMultiSignature")
+			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
+
+		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
+			accepted: [MultisignatureRegistrationFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const multiSignatureRegistrationMock = createMultiSignatureRegistrationMock(wallet);
+
+		const wallet2 = profile.wallets().last();
+
+		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
+
+		const fees = within(getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
+		fireEvent.click(fees[1]);
+
+		fireEvent.click(
+			within(getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
+		);
+
+		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
+
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
+			target: {
+				value: wallet2.address(),
+			},
+		});
+
+		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+
+		await waitFor(() => expect(getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+
+		// Step 2
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+
+		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("44'/1'/1'/0/0");
+		// Skip Authentication Step
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+
+		await waitFor(() => expect(getByTestId("LedgerDeviceError")).toBeTruthy());
+
+		isLedgerMock.mockRestore();
+		getPublicKeyMock.mockRestore();
+		signTransactionMock.mockRestore();
+		multiSignatureRegistrationMock.mockRestore();
+		addSignatureMock.mockRestore();
+		mockDerivationPath.mockRestore();
+		listenSpy.mockRestore();
+	});
+
+	it("should should reset authentication when a supported Nano X is added", async () => {
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const listenSpy = jest.spyOn(ledgerTransport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
+		const { getByTestId, getAllByTestId } = await renderPage(wallet, "multiSignature");
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoS" }, type: "add" });
+		});
+
+		// Ledger mocks
+		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+
+		const getPublicKeyMock = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
+
+		const signTransactionMock = jest
+			.spyOn(wallet.transaction(), "signMultiSignature")
+			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
+
+		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
+			accepted: [MultisignatureRegistrationFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const multiSignatureRegistrationMock = createMultiSignatureRegistrationMock(wallet);
+
+		const wallet2 = profile.wallets().last();
+
+		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
+		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
+
+		const fees = within(getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
+		fireEvent.click(fees[1]);
+
+		fireEvent.click(
+			within(getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
+		);
+
+		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
+
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
+			target: {
+				value: wallet2.address(),
+			},
+		});
+
+		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+
+		await waitFor(() => expect(getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
+
+		// Step 2
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+
+		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("44'/1'/1'/0/0");
+		// Skip Authentication Step
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+
+		await waitFor(() => expect(getByTestId("LedgerDeviceError")).toBeTruthy());
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		});
+
+		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
+		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+
+		isLedgerMock.mockRestore();
+		getPublicKeyMock.mockRestore();
+		signTransactionMock.mockRestore();
+		multiSignatureRegistrationMock.mockRestore();
+		addSignatureMock.mockRestore();
+		mockDerivationPath.mockRestore();
+		listenSpy.mockRestore();
 	});
 
 	it("should set fee", async () => {

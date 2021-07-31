@@ -1308,6 +1308,7 @@ describe("SendTransfer", () => {
 		jest.useFakeTimers();
 		const isLedgerSpy = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+		const isNanoXMock = jest.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 
 		const getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -1408,6 +1409,7 @@ describe("SendTransfer", () => {
 		signTransactionSpy.mockRestore();
 		transactionMock.mockRestore();
 		mockWalletData.mockRestore();
+		isNanoXMock.mockRestore();
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {

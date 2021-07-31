@@ -1,4 +1,5 @@
 import { DTO } from "@payvo/profiles";
+import { WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
 import { Networks } from "@payvo/sdk";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
@@ -6,7 +7,7 @@ import { StepIndicator } from "app/components/StepIndicator";
 import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useFees, usePrevious } from "app/hooks";
+import { useActiveProfile, useActiveWallet, useFees, useLedgerModelStatus, usePrevious } from "app/hooks";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import {
 	DelegateRegistrationForm,
@@ -44,7 +45,12 @@ export const SendRegistration = () => {
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 
 	const { findByType } = useFees(activeProfile);
-	const { hasDeviceAvailable, isConnected, connect, transport } = useLedgerContext();
+	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
+
+	const { isLedgerModelSupported } = useLedgerModelStatus({
+		connectedModel: ledgerDevice?.id,
+		supportedModels: [WalletLedgerModel.NanoX],
+	});
 
 	const form = useForm({ mode: "onChange" });
 
@@ -119,6 +125,18 @@ export const SendRegistration = () => {
 			}
 		}
 	}, [registrationType, setFeesByRegistrationType]);
+
+	// Reset ledger authentication steps after reconnecting supported ledger
+	useEffect(() => {
+		const isAuthenticationStep = activeTab === stepCount - 1;
+		if (registrationType !== "multiSignature") {
+			return;
+		}
+
+		if (isAuthenticationStep && activeWallet.isLedger() && isLedgerModelSupported) {
+			handleSubmit();
+		}
+	}, [ledgerDevice]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const handleSubmit = async () => {
 		try {
@@ -215,7 +233,7 @@ export const SendRegistration = () => {
 		}
 
 		// Skip authentication step
-		if (isAuthenticationStep && activeWallet.isLedger()) {
+		if (isAuthenticationStep && activeWallet.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
 
@@ -262,6 +280,8 @@ export const SendRegistration = () => {
 											wallet={activeWallet}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
 											ledgerIsAwaitingApp={!isConnected}
+											ledgerSupportedModels={[WalletLedgerModel.NanoX]}
+											ledgerConnectedModel={ledgerDevice?.id}
 										/>
 									</TabPanel>
 

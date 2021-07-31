@@ -141,6 +141,7 @@ export const useLedgerConnection = (transport: typeof Transport) => {
 		isAwaitingDeviceConfirmation,
 		isBusy,
 		isConnected,
+		ledgerDevice: state.device,
 		setBusy,
 		setIdle,
 		transport,

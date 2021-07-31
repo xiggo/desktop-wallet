@@ -493,11 +493,24 @@ describe("MultiSignatureDetail", () => {
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast");
 		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
 
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const transport = getDefaultLedgerTransport();
+		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
 		const { container } = render(
-			<LedgerProvider transport={getDefaultLedgerTransport()}>
+			<LedgerProvider transport={transport}>
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</LedgerProvider>,
 		);
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		});
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
@@ -526,6 +539,8 @@ describe("MultiSignatureDetail", () => {
 		await waitFor(() => expect(screen.getByText(translations.SUCCESS.TITLE)).toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
+
+		listenSpy.mockRestore();
 	});
 
 	it("should fail to sign transaction after authentication page", async () => {
@@ -540,11 +555,24 @@ describe("MultiSignatureDetail", () => {
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast");
 		const toastsMock = jest.spyOn(toasts, "error");
 
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const transport = getDefaultLedgerTransport();
+		jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
 		render(
-			<LedgerProvider transport={getDefaultLedgerTransport()}>
+			<LedgerProvider transport={transport}>
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</LedgerProvider>,
 		);
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		});
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
@@ -579,6 +607,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		const isNanoXMock = jest.spyOn(wallet, "isLedgerNanoX").mockReturnValue(true);
 		// Ledger mocks
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
@@ -597,11 +626,23 @@ describe("MultiSignatureDetail", () => {
 
 		const addSignatureSpy = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(undefined);
 
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const transport = getDefaultLedgerTransport();
+		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
 		const { container } = render(
-			<LedgerProvider transport={getDefaultLedgerTransport()}>
+			<LedgerProvider transport={transport}>
 				<MultiSignatureDetail profile={profile} transaction={fixtures.multiSignature} wallet={wallet} isOpen />
 			</LedgerProvider>,
 		);
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		});
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
@@ -649,9 +690,109 @@ describe("MultiSignatureDetail", () => {
 		expect(container).toMatchSnapshot();
 
 		isLedgerMock.mockRestore();
+		isNanoXMock.mockRestore();
 		getPublicKeyMock.mockRestore();
 		broadcastMock.mockRestore();
 		addSignatureSpy.mockRestore();
 		mockWalletData.mockRestore();
+		listenSpy.mockRestore();
+	});
+
+	it("should show error screen for Nano S  and continue when NanoX is connected", async () => {
+		jest.spyOn(wallet, "actsWithMnemonic").mockImplementation(() => true);
+		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
+		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		// Ledger mocks
+		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+
+		const getPublicKeyMock = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
+
+		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [MultisignatureRegistrationFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(undefined);
+
+		const addSignatureSpy = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(undefined);
+
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const transport = getDefaultLedgerTransport();
+		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+		const { container } = render(
+			<LedgerProvider transport={transport}>
+				<MultiSignatureDetail profile={profile} transaction={fixtures.multiSignature} wallet={wallet} isOpen />
+			</LedgerProvider>,
+		);
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoS" }, type: "add" });
+		});
+
+		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
+
+		const address = wallet.address();
+		const balance = wallet.balance();
+		const derivationPath = "44'/1'/1'/0/0";
+		const votes = wallet.voting().current();
+		const publicKey = wallet.publicKey();
+
+		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+			if (key == Contracts.WalletData.Address) {
+				return address;
+			}
+
+			if (key == Contracts.WalletData.Balance) {
+				return balance;
+			}
+
+			if (key == Contracts.WalletData.PublicKey) {
+				return publicKey;
+			}
+
+			if (key == Contracts.WalletData.Votes) {
+				return votes;
+			}
+
+			if (key == Contracts.WalletData.DerivationPath) {
+				return derivationPath;
+			}
+		});
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("Paginator__sign"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("LedgerDeviceError")).toBeInTheDocument());
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		});
+
+		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
+		await waitFor(() => expect(screen.getByText(translations.SUCCESS.TITLE)).toBeInTheDocument());
+
+		expect(container).toMatchSnapshot();
+
+		isLedgerMock.mockRestore();
+		getPublicKeyMock.mockRestore();
+		broadcastMock.mockRestore();
+		addSignatureSpy.mockRestore();
+		mockWalletData.mockRestore();
+		listenSpy.mockRestore();
 	});
 });
