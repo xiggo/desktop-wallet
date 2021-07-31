@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 
 export interface Participant {
 	address: string;
+	alias?: string;
 	publicKey: string;
 }
 
@@ -28,13 +29,18 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 
 	const form = useForm({ mode: "onSubmit", reValidateMode: "onSubmit" });
 	const { register, handleSubmit, setValue, watch } = form;
-	const address = watch("address");
+	const { address, participantAlias } = watch();
+
+	useEffect(() => {
+		register("participantAlias");
+	}, [register]);
 
 	useEffect(() => {
 		if (defaultParticipants!.length === 0) {
 			setParticipants([
 				{
 					address: wallet.address(),
+					alias: wallet.alias(),
 					publicKey: wallet.publicKey()!,
 				},
 			]);
@@ -45,6 +51,7 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 		const reference = lastValidationReference.current as Contracts.IReadWriteWallet;
 		const participant = {
 			address: reference.address(),
+			alias: participantAlias,
 			publicKey: reference.publicKey()!,
 		};
 
@@ -124,7 +131,10 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 									findDuplicate,
 								},
 							})}
-							onChange={(address) => setValue("address", address, { shouldDirty: true })}
+							onChange={(address, alias) => {
+								setValue("address", address, { shouldDirty: true });
+								setValue("participantAlias", alias.alias);
+							}}
 						/>
 					</FormField>
 

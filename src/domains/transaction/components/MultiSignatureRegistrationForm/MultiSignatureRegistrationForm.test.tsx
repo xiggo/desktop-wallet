@@ -123,14 +123,41 @@ describe("MultiSignature Registration Form", () => {
 			expect(result.current.getValues("participants")).toEqual([
 				{
 					address: wallet.address(),
+					alias: wallet.alias(),
 					publicKey: wallet.publicKey(),
 				},
 				{
 					address: wallet2.address(),
+					alias: wallet2.alias(),
 					publicKey: wallet2.publicKey(),
 				},
 			]),
 		);
+	});
+
+	it("should show name of wallets in form step", async () => {
+		const { result, waitForNextUpdate } = renderHook(() => useForm());
+		result.current.register("fee");
+		result.current.register("participants");
+
+		render(<Component form={result.current} />);
+
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
+			target: {
+				value: wallet2.address(),
+			},
+		});
+
+		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+
+		await waitForNextUpdate();
+
+		await waitFor(() => expect(result.current.getValues("participants")).toHaveLength(2));
+
+		expect(screen.getByText("Participant #1")).toBeInTheDocument();
+		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[0]).toHaveTextContent("ARK Wallet 1");
+		expect(screen.getByText("Participant #2")).toBeInTheDocument();
+		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[1]).toHaveTextContent("ARK Wallet 2");
 	});
 
 	it("should render review step", () => {
@@ -159,6 +186,34 @@ describe("MultiSignature Registration Form", () => {
 		expect(screen.getByText(transactionTranslations.MULTISIGNATURE.MIN_SIGNATURES)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should show name of wallets in review step", () => {
+		const { result } = renderHook(() =>
+			useForm({
+				defaultValues: {
+					fee: fees.avg,
+					minParticipants: 2,
+					participants: [
+						{
+							address: wallet.address(),
+							alias: wallet.alias(),
+							publicKey: wallet.publicKey()!,
+						},
+						{
+							address: wallet2.address(),
+							alias: wallet2.alias(),
+							publicKey: wallet2.publicKey()!,
+						},
+					],
+				},
+			}),
+		);
+
+		render(<Component activeTab={2} form={result.current} />);
+
+		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[0]).toHaveTextContent("ARK Wallet 1");
+		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[1]).toHaveTextContent("ARK Wallet 2");
 	});
 
 	it("should render transaction details", async () => {
