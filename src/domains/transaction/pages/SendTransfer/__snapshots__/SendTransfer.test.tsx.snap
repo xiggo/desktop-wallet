@@ -7111,7 +7111,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
                 class="mt-1 text-lg font-semibold"
                 data-testid="AmountCrypto"
               >
-                11 DARK
+                2 DARK
               </span>
             </div>
             <div
@@ -7160,7 +7160,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
             class="text-2xl font-bold"
             data-testid="AmountCrypto"
           >
-            12 DARK
+            3 DARK
           </span>
         </div>
       </div>
@@ -7483,7 +7483,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
                 class="mt-1 text-lg font-semibold"
                 data-testid="AmountCrypto"
               >
-                11 DARK
+                2 DARK
               </span>
             </div>
             <div
@@ -7532,7 +7532,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
             class="text-2xl font-bold"
             data-testid="AmountCrypto"
           >
-            12 DARK
+            3 DARK
           </span>
         </div>
       </div>

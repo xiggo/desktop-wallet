@@ -268,7 +268,7 @@ export const AddRecipient = ({
 		let newRecipient: RecipientListItem = {
 			address: recipientAddress,
 			alias: recipientAlias?.alias,
-			amount,
+			amount: +amount,
 			displayAmount: amount,
 			isDelegate: recipientAlias?.isDelegate,
 		};

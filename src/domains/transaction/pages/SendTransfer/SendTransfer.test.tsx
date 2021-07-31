@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { BigNumber } from "@payvo/helpers";
 import { DateTime } from "@payvo/intl";
 import { Contracts, DTO } from "@payvo/profiles";
 import { screen } from "@testing-library/react";
@@ -263,7 +262,7 @@ describe("SendTransfer", () => {
 						{
 							address: wallet.address(),
 							alias: wallet.alias(),
-							amount: BigNumber.make(1),
+							amount: 1,
 						},
 					],
 					senderAddress: wallet.address(),
@@ -299,11 +298,11 @@ describe("SendTransfer", () => {
 					recipients: [
 						{
 							address: wallet.address(),
-							amount: BigNumber.make(1),
+							amount: 1,
 						},
 						{
 							address: secondWallet.address(),
-							amount: BigNumber.make(1),
+							amount: 1,
 						},
 					],
 					senderAddress: wallet.address(),
