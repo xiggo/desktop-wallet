@@ -621,7 +621,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
               class="pb-4 mt-8"
             >
               <ul
-                class="sc-dlnjwi ddVIoj"
+                class="sc-hKFxyN etOObf"
                 data-testid="list-divided__items"
               >
                 <li
@@ -1083,7 +1083,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
               class="pb-4 mt-8"
             >
               <ul
-                class="sc-dlnjwi ddVIoj"
+                class="sc-hKFxyN etOObf"
                 data-testid="list-divided__items"
               >
                 <li
@@ -1546,7 +1546,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
               class="pb-4 mt-8"
             >
               <ul
-                class="sc-dlnjwi ddVIoj"
+                class="sc-hKFxyN etOObf"
                 data-testid="list-divided__items"
               >
                 <li
@@ -2009,7 +2009,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
               class="pb-4 mt-8"
             >
               <ul
-                class="sc-dlnjwi ddVIoj"
+                class="sc-hKFxyN etOObf"
                 data-testid="list-divided__items"
               >
                 <li
@@ -2715,7 +2715,7 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
               class="pb-4 mt-8"
             >
               <ul
-                class="sc-dlnjwi ddVIoj"
+                class="sc-hKFxyN etOObf"
                 data-testid="list-divided__items"
               >
                 <li
@@ -3439,7 +3439,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
               class="pb-4 mt-8"
             >
               <ul
-                class="sc-dlnjwi ddVIoj"
+                class="sc-hKFxyN etOObf"
                 data-testid="list-divided__items"
               >
                 <li
@@ -3899,7 +3899,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
               class="pb-4 mt-8"
             >
               <ul
-                class="sc-dlnjwi ddVIoj"
+                class="sc-hKFxyN etOObf"
                 data-testid="list-divided__items"
               >
                 <li
@@ -4359,7 +4359,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
               class="pb-4 mt-8"
             >
               <ul
-                class="sc-dlnjwi ddVIoj"
+                class="sc-hKFxyN etOObf"
                 data-testid="list-divided__items"
               >
                 <li

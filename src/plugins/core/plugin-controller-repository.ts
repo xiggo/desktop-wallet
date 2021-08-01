@@ -2,6 +2,7 @@ import * as PayvoIntl from "@payvo/intl";
 import { Contracts } from "@payvo/profiles";
 import { Alert } from "app/components/Alert";
 import { OriginalButton } from "app/components/Button/OriginalButton";
+import { Card } from "app/components/Card";
 import { Checkbox } from "app/components/Checkbox";
 import { Clipboard } from "app/components/Clipboard";
 import { Icon } from "app/components/Icon";
@@ -111,6 +112,7 @@ export class PluginControllerRepository {
 							Alert,
 							Box,
 							Button: OriginalButton,
+							Card,
 							Checkbox,
 							Clipboard,
 							Icon,
