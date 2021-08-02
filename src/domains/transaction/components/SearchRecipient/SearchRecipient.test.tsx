@@ -67,6 +67,29 @@ describe("SearchRecipient", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with selected address", () => {
+		const onAction = jest.fn();
+
+		const { asFragment } = render(
+			<SearchRecipient
+				isOpen={true}
+				recipients={recipients}
+				selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+				onAction={onAction}
+			/>,
+		);
+
+		expect(screen.getByTestId("RecipientListItem__selected-button-0")).toBeInTheDocument();
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("RecipientListItem__selected-button-0"));
+		});
+
+		expect(onAction).toBeCalled();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should filter recipients by address", async () => {
 		jest.useFakeTimers();
 

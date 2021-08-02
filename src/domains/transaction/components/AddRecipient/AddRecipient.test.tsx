@@ -140,7 +140,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should select recipient", async () => {
-		const { getByTestId, getAllByTestId } = await renderWithFormProvider(
+		const { getByTestId } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -152,7 +152,7 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
-		const firstAddress = getAllByTestId("RecipientListItem__select-button")[0];
+		const firstAddress = getByTestId("RecipientListItem__select-button-0");
 		await act(async () => {
 			fireEvent.click(firstAddress);
 		});
@@ -382,7 +382,7 @@ describe("AddRecipient", () => {
 
 		expect(screen.getByTestId("modal__inner")).toBeTruthy();
 
-		userEvent.click(screen.getAllByTestId("RecipientListItem__select-button")[0]);
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -403,7 +403,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for low balance", async () => {
-		const { getByTestId, getAllByTestId, form } = await renderWithFormProvider(
+		const { getByTestId, form } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -417,7 +417,7 @@ describe("AddRecipient", () => {
 			expect(getByTestId("modal__inner")).toBeTruthy();
 		});
 
-		const firstAddress = getAllByTestId("RecipientListItem__select-button")[0];
+		const firstAddress = getByTestId("RecipientListItem__select-button-0");
 
 		await act(async () => {
 			fireEvent.click(firstAddress);
@@ -437,7 +437,7 @@ describe("AddRecipient", () => {
 	it("should show error for zero balance", async () => {
 		const mockWalletBalance = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { getByTestId, getAllByTestId, form } = await renderWithFormProvider(
+		const { getByTestId, form } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -451,7 +451,7 @@ describe("AddRecipient", () => {
 			expect(getByTestId("modal__inner")).toBeTruthy();
 		});
 
-		const firstAddress = getAllByTestId("RecipientListItem__select-button")[0];
+		const firstAddress = getByTestId("RecipientListItem__select-button-0");
 
 		await act(async () => {
 			fireEvent.click(firstAddress);
@@ -471,7 +471,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for invalid address", async () => {
-		const { getByTestId, getAllByTestId, form } = await renderWithFormProvider(
+		const { getByTestId, form } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -485,7 +485,7 @@ describe("AddRecipient", () => {
 			expect(getByTestId("modal__inner")).toBeTruthy();
 		});
 
-		const firstAddress = getAllByTestId("RecipientListItem__select-button")[0];
+		const firstAddress = getByTestId("RecipientListItem__select-button-0");
 		await act(async () => {
 			fireEvent.click(firstAddress);
 		});
@@ -678,7 +678,7 @@ describe("AddRecipient", () => {
 			expect(screen.getByTestId("modal__inner")).toBeTruthy();
 		});
 
-		const [firstAddress] = screen.getAllByTestId("RecipientListItem__select-button");
+		const firstAddress = screen.getByTestId("RecipientListItem__select-button-0");
 
 		await act(async () => {
 			userEvent.click(firstAddress);

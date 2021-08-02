@@ -115,6 +115,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					showNetwork={false}
 					onSelectWallet={handleSelectWallet}
 					onClose={() => setSearchWalletIsOpen(false)}
+					selectedAddress={selectedAddress}
 				/>
 			</>
 		);

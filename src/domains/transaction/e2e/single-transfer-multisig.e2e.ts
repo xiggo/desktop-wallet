@@ -43,7 +43,7 @@ test("should send transfer successfully with a multisig wallet", async (t) => {
 	// Select recipient
 	await t.click(Selector("[data-testid=SelectRecipient__select-recipient]"));
 	await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
-	await t.click(Selector("[data-testid=RecipientListItem__select-button]"));
+	await t.click(Selector("[data-testid=RecipientListItem__select-button-0]"));
 
 	// Amount
 	await t.click(Selector("[data-testid=AddRecipient__send-all]"));

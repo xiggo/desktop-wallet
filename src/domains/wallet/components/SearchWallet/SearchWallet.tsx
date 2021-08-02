@@ -27,8 +27,34 @@ const SearchWalletListItem = ({
 	showConvertedValue,
 	showNetwork,
 	onAction,
+	selectedAddress,
 }: SearchWalletListItemProperties) => {
 	const { t } = useTranslation();
+
+	const renderButton = () => {
+		if (selectedAddress === address) {
+			return (
+				<Button
+					data-testid={`SearchWalletListItem__selected-${index}`}
+					variant="reverse"
+					onClick={() => onAction({ address, name, network })}
+				>
+					{t("COMMON.SELECTED")}
+				</Button>
+			);
+		}
+
+		return (
+			<Button
+				data-testid={`SearchWalletListItem__select-${index}`}
+				disabled={disabled}
+				variant="secondary"
+				onClick={() => onAction({ address, name, network })}
+			>
+				{t("COMMON.SELECT")}
+			</Button>
+		);
+	};
 
 	return (
 		<TableRow>
@@ -51,14 +77,7 @@ const SearchWalletListItem = ({
 			)}
 
 			<TableCell variant="end" innerClassName="justify-end">
-				<Button
-					data-testid={`SearchWalletListItem__select-${index}`}
-					disabled={disabled}
-					variant="secondary"
-					onClick={() => onAction({ address, name, network })}
-				>
-					{t("COMMON.SELECT")}
-				</Button>
+				{renderButton()}
 			</TableCell>
 		</TableRow>
 	);
@@ -77,6 +96,7 @@ export const SearchWallet = ({
 	onClose,
 	onSelectWallet,
 	profile,
+	selectedAddress,
 }: SearchWalletProperties) => {
 	const { setSearchKeyword, filteredList: filteredWallets, isEmptyResults } = useSearchWallet(wallets);
 
@@ -162,6 +182,7 @@ export const SearchWallet = ({
 							showConvertedValue={showConvertedValue}
 							showNetwork={showNetwork}
 							onAction={onSelectWallet}
+							selectedAddress={selectedAddress}
 						/>
 					)}
 				</Table>

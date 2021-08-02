@@ -703,7 +703,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId } = renderWithRouter(
+		const { getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -725,7 +725,7 @@ describe("SendTransfer", () => {
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
 		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -786,7 +786,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -887,7 +887,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, container } = renderWithRouter(
+		const { getByTestId, container } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -920,7 +920,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -999,7 +999,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId } = renderWithRouter(
+		const { getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1032,7 +1032,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -1105,7 +1105,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, container } = renderWithRouter(
+		const { getByTestId, container } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1138,7 +1138,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -1226,7 +1226,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId } = renderWithRouter(
+		const { getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1249,7 +1249,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -1330,7 +1330,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId } = renderWithRouter(
+		const { getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1353,7 +1353,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -1417,7 +1417,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId } = renderWithRouter(
+		const { getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1439,7 +1439,7 @@ describe("SendTransfer", () => {
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
 		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -1493,7 +1493,7 @@ describe("SendTransfer", () => {
 			const history = createMemoryHistory();
 			history.push(transferURL);
 
-			const { getAllByTestId, getByTestId } = renderWithRouter(
+			const { getByTestId } = renderWithRouter(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 					<LedgerProvider transport={getDefaultLedgerTransport()}>
 						<SendTransfer />
@@ -1516,7 +1516,7 @@ describe("SendTransfer", () => {
 
 			expect(getByTestId("modal__inner")).toBeTruthy();
 
-			fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+			fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 			await waitFor(() =>
 				expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 			);
@@ -1576,7 +1576,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, container } = renderWithRouter(
+		const { getByTestId, container } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1599,7 +1599,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -1683,7 +1683,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, container } = renderWithRouter(
+		const { getByTestId, container } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1706,7 +1706,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address());
 
@@ -1764,7 +1764,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, container } = renderWithRouter(
+		const { getByTestId, container } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1787,7 +1787,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address());
 
@@ -1917,7 +1917,7 @@ describe("SendTransfer", () => {
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
 		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -1932,7 +1932,7 @@ describe("SendTransfer", () => {
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
 		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
@@ -2001,7 +2001,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId } = renderWithRouter(
+		const { getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2024,7 +2024,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -2081,7 +2081,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, container } = renderWithRouter(
+		const { getByTestId, container } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2114,7 +2114,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -2235,7 +2235,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, container } = renderWithRouter(
+		const { getByTestId, container } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2258,7 +2258,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -2323,7 +2323,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, container } = renderWithRouter(
+		const { getByTestId, container } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2356,7 +2356,7 @@ describe("SendTransfer", () => {
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
 
-		fireEvent.click(getAllByTestId("RecipientListItem__select-button")[0]);
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);

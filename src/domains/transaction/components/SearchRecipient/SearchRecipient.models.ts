@@ -8,9 +8,10 @@ export interface RecipientProperties {
 }
 
 export interface RecipientListItemProperties {
+	index: number;
 	recipient: RecipientProperties;
 	onAction: (address: string) => void;
-	selectedAddress: string | undefined;
+	selectedAddress?: string;
 }
 
 export interface SearchRecipientProperties {
@@ -20,5 +21,5 @@ export interface SearchRecipientProperties {
 	onClose?: () => void;
 	onAction: (address: string) => void;
 	recipients: RecipientProperties[];
-	selectedAddress: string | undefined;
+	selectedAddress?: string;
 }

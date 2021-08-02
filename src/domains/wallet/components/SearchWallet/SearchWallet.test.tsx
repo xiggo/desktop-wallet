@@ -3,7 +3,17 @@ import { Contracts } from "@payvo/profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, render, renderWithRouter, waitFor, within } from "testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	render,
+	renderWithRouter,
+	screen,
+	waitFor,
+	within,
+} from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { SearchWallet } from "./SearchWallet";
@@ -35,6 +45,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
+					onSelectWallet={() => undefined}
 				/>
 			</Route>,
 			{
@@ -65,6 +76,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
+					onSelectWallet={() => undefined}
 				/>
 			</Route>,
 			{
@@ -84,6 +96,32 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		walletWithExchangeCurrencyMock.mockRestore();
 	});
 
+	it("should render with selected address", async () => {
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId/dashboard">
+				<SearchWallet
+					profile={profile}
+					showConvertedValue={showConvertedValue}
+					isOpen={true}
+					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
+					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
+					wallets={wallets}
+					onSelectWallet={() => undefined}
+					selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+				/>
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		expect(screen.getByTestId("SearchWalletListItem__selected-0")).toBeInTheDocument();
+		expect(screen.getByTestId("SearchWalletListItem__select-1")).toBeInTheDocument();
+
+		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+	});
+
 	it("should handle close", () => {
 		const onClose = jest.fn();
 
@@ -96,6 +134,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					showConvertedValue={showConvertedValue}
 					wallets={[]}
 					title={"title"}
+					onSelectWallet={() => undefined}
 				/>
 			</Route>,
 			{
@@ -121,6 +160,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					showConvertedValue={showConvertedValue}
+					onSelectWallet={() => undefined}
 				/>
 			</Route>,
 			{
@@ -170,6 +210,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					showConvertedValue={showConvertedValue}
+					onSelectWallet={() => undefined}
 				/>
 			</Route>,
 			{
@@ -220,6 +261,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					showConvertedValue={showConvertedValue}
+					onSelectWallet={() => undefined}
 				/>
 			</Route>,
 			{
@@ -279,6 +321,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					showConvertedValue={showConvertedValue}
+					onSelectWallet={() => undefined}
 				/>
 			</Route>,
 			{
@@ -334,6 +377,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				wallets={wallets}
 				showConvertedValue={showConvertedValue}
 				disableAction={(wallet: Contracts.IReadWriteWallet) => wallet.alias() === "Sample Wallet"}
+				onSelectWallet={() => undefined}
 			/>,
 		);
 

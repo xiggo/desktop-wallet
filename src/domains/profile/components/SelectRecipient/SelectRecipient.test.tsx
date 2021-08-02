@@ -75,9 +75,7 @@ describe("SelectRecipient", () => {
 
 		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeTruthy());
 
-		const firstContactAddress = screen.getAllByTestId("RecipientListItem__select-button")[
-			profile.wallets().values().length
-		];
+		const firstContactAddress = screen.getByTestId("RecipientListItem__select-button-2");
 
 		userEvent.click(firstContactAddress);
 
@@ -129,7 +127,7 @@ describe("SelectRecipient", () => {
 	it("should call onChange prop if provided", async () => {
 		const onChange = jest.fn();
 
-		const { getByTestId, getAllByTestId } = render(
+		const { getByTestId } = render(
 			<SelectRecipient
 				profile={profile}
 				onChange={onChange}
@@ -147,7 +145,7 @@ describe("SelectRecipient", () => {
 			expect(getByTestId("modal__inner")).toBeTruthy();
 		});
 
-		const firstAddress = getAllByTestId("RecipientListItem__select-button")[profile.wallets().values().length];
+		const firstAddress = getByTestId("RecipientListItem__select-button-2");
 
 		act(() => {
 			fireEvent.click(firstAddress);
@@ -164,7 +162,7 @@ describe("SelectRecipient", () => {
 	it("should call onChange prop only when values change", async () => {
 		const onChange = jest.fn();
 
-		const { getByTestId, getAllByTestId } = render(
+		const { getByTestId } = render(
 			<SelectRecipient profile={profile} onChange={onChange} address="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" />,
 		);
 
@@ -180,10 +178,10 @@ describe("SelectRecipient", () => {
 			expect(getByTestId("modal__inner")).toBeTruthy();
 		});
 
-		const firstAddress = getAllByTestId("RecipientListItem__select-button")[profile.wallets().values().length];
+		const lastAddress = getByTestId("RecipientListItem__selected-button-2");
 
 		act(() => {
-			fireEvent.click(firstAddress);
+			fireEvent.click(lastAddress);
 		});
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);

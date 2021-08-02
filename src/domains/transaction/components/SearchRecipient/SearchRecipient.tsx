@@ -12,8 +12,32 @@ import { useTranslation } from "react-i18next";
 
 import { RecipientListItemProperties, RecipientProperties, SearchRecipientProperties } from "./SearchRecipient.models";
 
-const RecipientListItem = ({ recipient, onAction, selectedAddress }: RecipientListItemProperties) => {
+const RecipientListItem = ({ index, recipient, onAction, selectedAddress }: RecipientListItemProperties) => {
 	const { t } = useTranslation();
+
+	const renderButton = () => {
+		if (selectedAddress === recipient.address) {
+			return (
+				<Button
+					data-testid={`RecipientListItem__selected-button-${index}`}
+					variant="reverse"
+					onClick={() => onAction(recipient.address)}
+				>
+					{t("COMMON.SELECTED")}
+				</Button>
+			);
+		}
+
+		return (
+			<Button
+				data-testid={`RecipientListItem__select-button-${index}`}
+				variant="secondary"
+				onClick={() => onAction(recipient.address)}
+			>
+				{t("COMMON.SELECT")}
+			</Button>
+		);
+	};
 
 	return (
 		<TableRow key={recipient.id} border>
@@ -29,14 +53,7 @@ const RecipientListItem = ({ recipient, onAction, selectedAddress }: RecipientLi
 			</TableCell>
 
 			<TableCell variant="end" innerClassName="justify-end">
-				<Button
-					disabled={selectedAddress === recipient.address}
-					data-testid="RecipientListItem__select-button"
-					variant="secondary"
-					onClick={() => onAction(recipient.address)}
-				>
-					{t("COMMON.SELECT")}
-				</Button>
+				{renderButton()}
 			</TableCell>
 		</TableRow>
 	);
@@ -91,8 +108,9 @@ export const SearchRecipient = ({
 		>
 			<div className="mt-8">
 				<Table columns={columns} data={filteredRecipients}>
-					{(recipient: RecipientProperties) => (
+					{(recipient: RecipientProperties, index: number) => (
 						<RecipientListItem
+							index={index}
 							selectedAddress={selectedAddress}
 							recipient={recipient}
 							onAction={onAction}

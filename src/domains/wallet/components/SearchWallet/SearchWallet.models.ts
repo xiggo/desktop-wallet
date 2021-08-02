@@ -21,6 +21,7 @@ export interface SearchWalletListItemProperties {
 	showConvertedValue?: boolean;
 	showNetwork?: boolean;
 	onAction: (wallet: SelectedWallet) => void;
+	selectedAddress?: string;
 }
 
 export interface SearchWalletProperties {
@@ -36,4 +37,5 @@ export interface SearchWalletProperties {
 	onClose?: any;
 	onSelectWallet: (wallet: SelectedWallet) => void;
 	profile?: Contracts.IProfile;
+	selectedAddress?: string;
 }
