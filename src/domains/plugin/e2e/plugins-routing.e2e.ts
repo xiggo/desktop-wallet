@@ -31,10 +31,10 @@ test("should navigate and apply filters", async (t) => {
 });
 
 test("should navigate to plugin details and back", async (t) => {
-	await t.click(Selector('[data-testid="PluginGrid"] > div > div').withText("Transaction Export"));
-	await t.expect(Selector("span").withExactText("Transaction Export").exists).ok();
+	await t.click(Selector('[data-testid="PluginGrid"] > div > div').withText("ARK Delegate Calculator"));
+	await t.expect(Selector("span").withExactText("ARK Delegate Calculator").exists).ok();
 
-	await t.expect(getLocation()).contains("/plugins/details?pluginId=@dated/transaction-export-plugin");
+	await t.expect(getLocation()).contains("/plugins/details?pluginId=@dated/delegate-calculator-wallet-plugin");
 
 	await scrollToTop();
 

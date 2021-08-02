@@ -103,33 +103,6 @@ describe("PluginDetails", () => {
 	});
 
 	it("should show configuration for plugins from npm", async () => {
-		nock("https://registry.npmjs.com")
-			.get("/-/v1/search")
-			.query((parameters) => parameters.from === "0")
-			.once()
-			.reply(200, require("tests/fixtures/plugins/registry-response.json"))
-			.get("/-/v1/search")
-			.query((parameters) => parameters.from === "250")
-			.once()
-			.reply(200, {})
-			.persist();
-
-		nock("https://raw.github.com")
-			.get("/dated/transaction-export-plugin/master/package.json")
-			.reply(200, {
-				"desktop-wallet": { title: "My Export Transaction" },
-				name: "@dated/transaction-export-plugin",
-			})
-			.get("/dated/delegate-calculator-plugin/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/registry/@dated/delegate-calculator-plugin.json"))
-			.get("/ark-ecosystem-desktop-plugins/sound-notifications/master/package.json")
-			.reply(
-				200,
-				require("tests/fixtures/plugins/github/@arkecosystem/desktop-wallet-sound-notifications/package.json"),
-			)
-			.get("/ark-ecosystem-desktop-plugins/explorer/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/github/@arkecosystem/desktop-wallet-explorer/package.json"));
-
 		const FetchComponent = () => {
 			const { fetchPluginPackages } = usePluginManagerContext();
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
@@ -143,14 +116,14 @@ describe("PluginDetails", () => {
 				</PluginManagerProvider>
 			</Route>,
 			{
-				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=@dated/transaction-export-plugin`],
+				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=@dated/delegate-calculator-wallet-plugin`],
 				withPluginProvider: false,
 			},
 		);
 
 		fireEvent.click(screen.getByText("Fetch Packages"));
 
-		await waitFor(() => expect(screen.getAllByText("My Export Transaction").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByText("ARK Delegate Calculator").length).toBeGreaterThan(0));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -572,28 +545,12 @@ describe("PluginDetails", () => {
 
 		const plugin = new PluginController(
 			{
-				name: "@dated/transaction-export-plugin",
-				version: "1.0.0",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				version: "0.0.1",
 			},
 			() => void 0,
 		);
 		pluginManager.plugins().push(plugin);
-
-		nock("https://registry.npmjs.com")
-			.get("/-/v1/search")
-			.query((parameters) => parameters.from === "0")
-			.once()
-			.reply(200, require("tests/fixtures/plugins/registry-response.json"))
-			.get("/-/v1/search")
-			.query((parameters) => parameters.from === "250")
-			.once()
-			.reply(200, {})
-			.persist();
-
-		nock("https://raw.github.com")
-			.get("/dated/transaction-export-plugin/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/registry/@dated/transaction-export-plugin.json"))
-			.persist();
 
 		const FetchComponent = () => {
 			const { fetchPluginPackages } = usePluginManagerContext();
@@ -608,7 +565,7 @@ describe("PluginDetails", () => {
 				</PluginManagerProvider>
 			</Route>,
 			{
-				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=@dated/transaction-export-plugin`],
+				routes: [`/profiles/${profile.id()}/plugins/details?pluginId=@dated/delegate-calculator-wallet-plugin`],
 				withPluginProvider: false,
 			},
 		);
@@ -622,8 +579,8 @@ describe("PluginDetails", () => {
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "@dated/transaction-export-plugin",
-				url: "https://github.com/dated/transaction-export-plugin/archive/master.zip",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
 			}),
 		);
 

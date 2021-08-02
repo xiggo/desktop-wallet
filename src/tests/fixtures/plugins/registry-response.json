@@ -2,20 +2,20 @@
 	"objects": [
 		{
 			"package": {
-				"name": "@dated/transaction-export-plugin",
+				"name": "@dated/delegate-calculator-wallet-plugin",
 				"scope": "dated",
-				"version": "1.0.3",
-				"description": "Export your wallet transaction history",
-				"keywords": ["utility", "export", "transactions", "taxes", "@payvo", "wallet-plugin", "plugin"],
-				"date": "2020-11-26T21:18:44.681Z",
+				"version": "1.0.0",
+				"description": "Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet",
+				"keywords": ["utility", "delegates", "calculator", "@payvo", "wallet-plugin"],
+				"date": "2021-08-01T21:46:23.160Z",
 				"links": {
-					"npm": "https://www.npmjs.com/package/%40dated%2Ftransaction-export-plugin",
-					"homepage": "https://github.com/dated/transaction-export-plugin",
-					"repository": "https://github.com/dated/transaction-export-plugin",
-					"bugs": "https://github.com/dated/transaction-export-plugin/issues"
+					"npm": "https://www.npmjs.com/package/%40dated%2Fdelegate-calculator-wallet-plugin",
+					"homepage": "https://github.com/dated/delegate-calculator-wallet-plugin",
+					"repository": "https://github.com/dated/delegate-calculator-wallet-plugin",
+					"bugs": "https://github.com/dated/delegate-calculator-wallet-plugin/issues"
 				},
 				"author": {
-					"name": "Edgar Goetzendorff",
+					"name": "dated",
 					"email": "hello@dated.fun",
 					"username": "dated"
 				},
@@ -31,160 +31,54 @@
 				]
 			},
 			"score": {
-				"final": 0.27524236137537345,
+				"final": 0.15108533132628718,
 				"detail": {
-					"quality": 0.5213276902978076,
-					"popularity": 0.006221107483898577,
-					"maintenance": 0.3333333333333333
+					"quality": 0.503617771087624,
+					"popularity": 0,
+					"maintenance": 0
 				}
 			},
-			"searchScore": 7.242407e-7
+			"searchScore": 2.886311e-10
 		},
 		{
 			"package": {
-				"name": "@dated/delegate-calculator-plugin",
-				"scope": "dated",
-				"version": "1.0.4",
-				"description": "Compare delegate payouts and get an overview of your potential staking rewards directly in the Payvo Wallet",
-				"keywords": ["utility", "rewards", "staking", "delegates", "@payvo", "wallet-plugin", "plugin"],
-				"date": "2020-03-26T16:59:19.719Z",
+				"name": "@payvo/ark-explorer-wallet-plugin",
+				"scope": "payvo",
+				"version": "1.0.0",
+				"description": "Use the ARK Mainnet and Devnet Explorers directly within the Pavyo wallet",
+				"keywords": ["utility", "explorer", "@payvo", "wallet-plugin"],
+				"date": "2021-07-30T12:57:01.317Z",
 				"links": {
-					"npm": "https://www.npmjs.com/package/%40dated%2Fdelegate-calculator-plugin",
-					"homepage": "https://github.com/dated/delegate-calculator-plugin",
-					"repository": "https://github.com/dated/delegate-calculator-plugin",
-					"bugs": "https://github.com/dated/delegate-calculator-plugin/issues"
+					"npm": "https://www.npmjs.com/package/%40payvo%2Fark-explorer-wallet-plugin",
+					"homepage": "https://github.com/PayvoHQ/wallet-plugins/tree/master/ark-explorer",
+					"repository": "https://github.com/PayvoHQ/wallet-plugins",
+					"bugs": "https://github.com/PayvoHQ/wallet-plugins/issues"
 				},
 				"author": {
-					"name": "Edgar Goetzendorff",
-					"email": "hello@dated.fun",
-					"username": "dated"
+					"name": "Lúcio Rubens"
 				},
 				"publisher": {
-					"username": "dated",
-					"email": "hello@dated.fun"
-				},
-				"maintainers": [
-					{
-						"username": "dated",
-						"email": "hello@dated.fun"
-					}
-				]
-			},
-			"score": {
-				"final": 0.26758997776864846,
-				"detail": {
-					"quality": 0.5212781844381638,
-					"popularity": 0.006655463791565076,
-					"maintenance": 0.31107745745757587
-				}
-			},
-			"searchScore": 5.112795e-7
-		},
-		{
-			"package": {
-				"name": "@payvo/desktop-wallet-explorer",
-				"scope": "arkecosystem",
-				"version": "0.1.13",
-				"description": "Use the ARK Mainnet explorer directly within the wallet",
-				"keywords": ["utility", "explorer", "@payvo", "wallet-plugin", "plugin"],
-				"date": "2020-03-03T17:49:37.930Z",
-				"links": {
-					"npm": "https://www.npmjs.com/package/%40arkecosystem%2Fdesktop-wallet-explorer",
-					"homepage": "https://github.com/ark-ecosystem-desktop-plugins/explorer#readme",
-					"repository": "https://github.com/ark-ecosystem-desktop-plugins/explorer",
-					"bugs": "https://github.com/ark-ecosystem-desktop-plugins/explorer/issues"
-				},
-				"publisher": {
-					"username": "alexbarnsley",
-					"email": "alex@ark.io"
+					"username": "faustbrian",
+					"email": "hello@basecode.sh"
 				},
 				"maintainers": [
 					{
 						"username": "faustbrian",
 						"email": "hello@basecode.sh"
-					},
-					{
-						"username": "luciorubeens",
-						"email": "luciorubeens@gmail.com"
-					},
-					{
-						"username": "arkio",
-						"email": "fx.thoorens@ark.io"
-					},
-					{
-						"username": "alexbarnsley",
-						"email": "alex@ark.io"
 					}
 				]
 			},
-			"flags": {
-				"unstable": true
-			},
 			"score": {
-				"final": 0.21333400210169057,
+				"final": 0.1452584733304358,
 				"detail": {
-					"quality": 0.43089813554874384,
-					"popularity": 0.007756681360893317,
-					"maintenance": 0.23242777988787078
+					"quality": 0.48419491110145263,
+					"popularity": 0,
+					"maintenance": 0
 				}
 			},
-			"searchScore": 4.2806086e-8
-		},
-		{
-			"package": {
-				"name": "@payvo/desktop-wallet-sound-notifications",
-				"scope": "arkecosystem",
-				"version": "0.1.6",
-				"description": "Play a notification sound when you receive new transactions",
-				"keywords": ["utility", "notification", "@payvo", "wallet-plugin", "plugin"],
-				"date": "2019-12-09T21:54:40.610Z",
-				"links": {
-					"npm": "https://www.npmjs.com/package/%40arkecosystem%2Fdesktop-wallet-sound-notifications",
-					"homepage": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications#readme",
-					"repository": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications",
-					"bugs": "https://github.com/ark-ecosystem-desktop-plugins/sound-notifications/issues"
-				},
-				"author": {
-					"name": "Lucio Rubens",
-					"email": "lucio@ark.io"
-				},
-				"publisher": {
-					"username": "alexbarnsley",
-					"email": "alex@ark.io"
-				},
-				"maintainers": [
-					{
-						"username": "faustbrian",
-						"email": "hello@basecode.sh"
-					},
-					{
-						"username": "luciorubeens",
-						"email": "luciorubeens@gmail.com"
-					},
-					{
-						"username": "arkio",
-						"email": "fx.thoorens@ark.io"
-					},
-					{
-						"username": "alexbarnsley",
-						"email": "alex@ark.io"
-					}
-				]
-			},
-			"flags": {
-				"unstable": true
-			},
-			"score": {
-				"final": 0.1961109456896527,
-				"detail": {
-					"quality": 0.4011758320278612,
-					"popularity": 0.005858969509104429,
-					"maintenance": 0.21059301929459365
-				}
-			},
-			"searchScore": 1.1827373e-8
+			"searchScore": 3.2431902e-10
 		}
 	],
-	"total": 4,
-	"time": "Mon Jan 11 2021 05:43:32 GMT+0000 (UTC)"
+	"total": 2,
+	"time": "Sun Aug 01 2021 21:53:08 GMT+0000 (Coordinated Universal Time)"
 }

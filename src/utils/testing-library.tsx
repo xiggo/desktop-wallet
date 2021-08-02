@@ -100,7 +100,7 @@ export const getDefaultLedgerTransport = () => createTransportReplayer(RecordSto
 //@ts-ignore
 export const getDefaultPassword = () => TestingPasswords?.profiles[getPasswordProtectedProfileId()]?.password;
 
-const pluginNames: string[] = ["@dated/transaction-export-plugin", "@dated/delegate-calculator-plugin"];
+const pluginNames: string[] = ["@dated/delegate-calculator-wallet-plugin", "@payvo/ark-explorer-wallet-plugin"];
 
 export const defaultNetMocks = () => {
 	nock.disableNetConnect();
@@ -174,9 +174,15 @@ export const defaultNetMocks = () => {
 		.persist();
 
 	nock("https://raw.githubusercontent.com")
-		.get("/ArkEcosystem/common/master/desktop-wallet/whitelist.json")
+		.get("/PayvoHQ/wallet-plugins/master/whitelist.json")
 		.reply(200, require("tests/fixtures/plugins/whitelist.json"))
 		.persist();
+
+	nock("https://registry.npmjs.com")
+		.get("/-/v1/search")
+		.query((parameters) => parameters.from === "0")
+		.once()
+		.reply(200, require("tests/fixtures/plugins/registry-response.json"));
 
 	for (const pluginName of pluginNames) {
 		nock("https://registry.npmjs.com")
@@ -189,11 +195,6 @@ export const defaultNetMocks = () => {
 			.reply(200, require(`tests/fixtures/plugins/downloads/${pluginName}`))
 			.persist();
 	}
-
-	nock("https://raw.githubusercontent.com/dated/transaction-export-plugin/master")
-		.get("/logo.png")
-		.reply(404)
-		.persist();
 };
 
 export const useDefaultNetMocks = defaultNetMocks;

@@ -42,30 +42,6 @@ const Component = () => {
 
 describe("PluginManager", () => {
 	beforeEach(async () => {
-		nock("https://registry.npmjs.com")
-			.get("/-/v1/search")
-			.query((parameters) => parameters.from === "0")
-			.once()
-			.reply(200, require("tests/fixtures/plugins/registry-response.json"))
-			.get("/-/v1/search")
-			.query((parameters) => parameters.from === "250")
-			.once()
-			.reply(200, {});
-
-		nock("https://raw.github.com")
-			.get("/dated/transaction-export-plugin/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/github/@dated/transaction-export-plugin/package.json"))
-			.get("/dated/delegate-calculator-plugin/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/github/@dated/delegate-calculator-plugin/package.json"))
-			.get("/ark-ecosystem-desktop-plugins/sound-notifications/master/package.json")
-			.reply(
-				200,
-				require("tests/fixtures/plugins/github/@arkecosystem/desktop-wallet-sound-notifications/package.json"),
-			)
-			.get("/ark-ecosystem-desktop-plugins/explorer/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/github/@arkecosystem/desktop-wallet-explorer/package.json"))
-			.persist();
-
 		profile = env.profiles().findById(getDefaultProfileId());
 		history.push(pluginsURL);
 	});
@@ -86,7 +62,7 @@ describe("PluginManager", () => {
 
 		await waitFor(() =>
 			expect(
-				within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("Transaction Export"),
+				within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator"),
 			).toHaveLength(1),
 		);
 
@@ -108,7 +84,7 @@ describe("PluginManager", () => {
 
 		await waitFor(() =>
 			expect(
-				within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("Transaction Export"),
+				within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator"),
 			).toHaveLength(1),
 		);
 
@@ -142,7 +118,7 @@ describe("PluginManager", () => {
 
 		await waitFor(() =>
 			expect(
-				within(screen.getByTestId("PluginManager__container--all")).getAllByText("Transaction Export"),
+				within(screen.getByTestId("PluginManager__container--all")).getAllByText("ARK Delegate Calculator"),
 			).toHaveLength(1),
 		);
 
@@ -158,7 +134,9 @@ describe("PluginManager", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["utility"])("should toggle between list and grid on %s tab", async (category) => {
+	it("should toggle between list and grid on a category tab", async () => {
+		const category = "utility";
+
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
@@ -197,6 +175,18 @@ describe("PluginManager", () => {
 	});
 
 	it("should switch to category by clicking on view all link", async () => {
+		// add plugins to fill category
+		const plugins = Array.from({ length: 5 }).map((_, i) => {
+			const plugin = new PluginController(
+				{ "desktop-wallet": { categories: ["other"] }, name: `test-plugin-${i}` },
+				() => void 0,
+			);
+
+			pluginManager.plugins().push(plugin);
+
+			return plugin;
+		});
+
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
@@ -207,17 +197,24 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("Transaction Export"),
-			).toHaveLength(1),
-		);
+		await waitFor(() => {
+			for (const plugin of plugins.slice(0, 3)) {
+				expect(
+					within(screen.getByTestId("PluginManager__latest__other")).getAllByText(plugin.config().title()),
+				).toHaveLength(1);
+			}
+		});
 
-		fireEvent.click(screen.getByTestId("PluginManager__latest__utility__view-all"));
+		fireEvent.click(screen.getByTestId("PluginManager__latest__other__view-all"));
 
-		expect(screen.getByTestId("PluginManager__container--utility")).toBeTruthy();
+		expect(screen.getByTestId("PluginManager__container--other")).toBeTruthy();
 
 		expect(asFragment()).toMatchSnapshot();
+
+		// remove plugins
+		for (const plugin of plugins) {
+			pluginManager.plugins().removeById(plugin.config().id(), profile);
+		}
 	});
 
 	it.skip("should download & install plugin on latest", async () => {
@@ -361,6 +358,10 @@ describe("PluginManager", () => {
 	});
 
 	it("should install plugin from header install button", async () => {
+		const mockAcceptedManualInstallation = jest
+			.spyOn(profile, "hasAcceptedManualInstallationDisclaimer")
+			.mockReturnValue(true);
+
 		nock("https://github.com/")
 			.get("/arkecosystem/test-plugin/raw/master/package.json")
 			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin" });
@@ -400,6 +401,8 @@ describe("PluginManager", () => {
 		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(redirectUrl));
 
 		historySpy.mockRestore();
+
+		mockAcceptedManualInstallation.mockRestore();
 	});
 
 	it("should cancel install plugin", async () => {
@@ -450,7 +453,7 @@ describe("PluginManager", () => {
 		expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeTruthy();
 
 		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {
-			target: { value: "Transaction Export" },
+			target: { value: "ARK Delegate Calculator" },
 		});
 
 		await waitFor(() => expect(screen.getByText(translations.PAGE_PLUGIN_MANAGER.VIEW.SEARCH)).toBeInTheDocument());
@@ -492,7 +495,7 @@ describe("PluginManager", () => {
 		);
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
-		fireEvent.click(screen.getAllByTestId("PluginListItem__install")[2]);
+		fireEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION),
@@ -502,8 +505,8 @@ describe("PluginManager", () => {
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "@dated/transaction-export-plugin",
-				url: "https://github.com/dated/transaction-export-plugin/archive/master.zip",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
 			}),
 		);
 
@@ -531,7 +534,7 @@ describe("PluginManager", () => {
 		);
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
-		fireEvent.click(screen.getAllByTestId("PluginListItem__install")[2]);
+		fireEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION),
@@ -541,8 +544,8 @@ describe("PluginManager", () => {
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "@dated/transaction-export-plugin",
-				url: "https://github.com/dated/transaction-export-plugin/archive/master.zip",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
 			}),
 		);
 
@@ -563,15 +566,15 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByText("Transaction Export").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByText("ARK Delegate Calculator").length).toBeGreaterThan(0));
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
 
 		fireEvent.click(
-			within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("Transaction Export")[0],
+			within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator")[0],
 		);
 
 		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/plugins/details`);
-		expect(history.location.search).toEqual("?pluginId=@dated/transaction-export-plugin");
+		expect(history.location.search).toEqual("?pluginId=@dated/delegate-calculator-wallet-plugin");
 	});
 
 	it("should enable plugin on my-plugins", async () => {
@@ -589,7 +592,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByText("Transaction Export").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByText("ARK Delegate Calculator").length).toBeGreaterThan(0));
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
 
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
@@ -627,7 +630,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByText("Transaction Export").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByText("ARK Delegate Calculator").length).toBeGreaterThan(0));
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
 
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
@@ -685,7 +688,10 @@ describe("PluginManager", () => {
 	it("should update plugin on my-plugins", async () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockRejectedValue("Failed");
 
-		const plugin = new PluginController({ name: "@dated/transaction-export-plugin", version: "0.1" }, () => void 0);
+		const plugin = new PluginController(
+			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.1" },
+			() => void 0,
+		);
 		pluginManager.plugins().push(plugin);
 
 		const { asFragment } = renderWithRouter(
@@ -712,8 +718,8 @@ describe("PluginManager", () => {
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
-				name: "@dated/transaction-export-plugin",
-				url: "https://github.com/dated/transaction-export-plugin/archive/master.zip",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
 			}),
 		);
 
@@ -836,7 +842,7 @@ describe("PluginManager", () => {
 
 	it("should show update all banner", async () => {
 		const plugin = new PluginController(
-			{ name: "@dated/transaction-export-plugin", version: "1.0.0" },
+			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
 			() => void 0,
 		);
 		pluginManager.plugins().push(plugin);
@@ -862,7 +868,7 @@ describe("PluginManager", () => {
 		process.env.REACT_APP_PLUGIN_MINIMUM_VERSION = "100.0.0";
 
 		const plugin = new PluginController(
-			{ name: "@dated/transaction-export-plugin", version: "1.0.0" },
+			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
 			() => void 0,
 		);
 		pluginManager.plugins().push(plugin);
@@ -914,16 +920,18 @@ describe("PluginManager", () => {
 			}
 		});
 
-		const plugin = new PluginController(
-			{ name: "@dated/transaction-export-plugin", version: "1.0.0" },
-			() => void 0,
-		);
-		const plugin2 = new PluginController(
-			{ name: "@dated/delegate-calculator-plugin", version: "1.0.0" },
-			() => void 0,
-		);
-		pluginManager.plugins().push(plugin);
-		pluginManager.plugins().push(plugin2);
+		pluginManager
+			.plugins()
+			.push(
+				new PluginController(
+					{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
+					() => void 0,
+				),
+			);
+
+		pluginManager
+			.plugins()
+			.push(new PluginController({ name: "@payvo/ark-explorer-wallet-plugin", version: "0.0.1" }, () => void 0));
 
 		renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">

@@ -14,33 +14,6 @@ describe("PluginManagerProvider", () => {
 	let manager: PluginManager;
 	let profile: Contracts.IProfile;
 
-	beforeAll(() => {
-		nock("https://registry.npmjs.com")
-			.get("/-/v1/search")
-			.query((parameters) => parameters.from === "0")
-			.once()
-			.reply(200, require("tests/fixtures/plugins/registry-response.json"))
-			.get("/-/v1/search")
-			.query((parameters) => parameters.from === "250")
-			.once()
-			.reply(200, {})
-			.persist();
-
-		nock("https://raw.github.com")
-			.get("/dated/transaction-export-plugin/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/registry/@dated/transaction-export-plugin.json"))
-			.get("/dated/delegate-calculator-plugin/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/registry/@dated/delegate-calculator-plugin.json"))
-			.get("/ark-ecosystem-desktop-plugins/sound-notifications/master/package.json")
-			.reply(
-				200,
-				require("tests/fixtures/plugins/github/@arkecosystem/desktop-wallet-sound-notifications/package.json"),
-			)
-			.get("/ark-ecosystem-desktop-plugins/explorer/master/package.json")
-			.reply(200, require("tests/fixtures/plugins/github/@arkecosystem/desktop-wallet-explorer/package.json"))
-			.persist();
-	});
-
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		manager = new PluginManager();
@@ -158,7 +131,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(5));
+		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(3));
 
 		manager.plugins().removeById(plugin.config().id(), profile);
 	});
@@ -209,13 +182,13 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByText("Fetch"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(4));
+		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(2));
 
 		fireEvent.click(screen.getAllByText("Install")[0]);
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:install", {
-				name: "@dated/transaction-export-plugin",
+				name: "@dated/delegate-calculator-wallet-plugin",
 				savedPath: "/plugins/temp/test-plugin",
 			}),
 		);
@@ -335,8 +308,8 @@ describe("PluginManagerProvider", () => {
 		const plugin = new PluginController(
 			{
 				"desktop-wallet": { minimumVersion: "4.0.0" },
-				name: "@dated/transaction-export-plugin",
-				version: "1.0.0",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				version: "0.0.1",
 			},
 			() => void 0,
 		);
@@ -377,8 +350,8 @@ describe("PluginManagerProvider", () => {
 		const plugin = new PluginController(
 			{
 				"desktop-wallet": { minimumVersion: "4.0.0" },
-				name: "@dated/transaction-export-plugin",
-				version: "1.0.0",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				version: "0.0.1",
 			},
 			() => void 0,
 		);
@@ -405,8 +378,8 @@ describe("PluginManagerProvider", () => {
 				return {
 					config: {
 						keywords: ["@payvo", "wallet-plugin"],
-						name: "@dated/transaction-export-plugin",
-						version: "1.0.1",
+						name: "@dated/delegate-calculator-wallet-plugin",
+						version: "1.0.0",
 					},
 					dir: "/plugins/test-plugin",
 					source: () => void 0,
@@ -464,20 +437,22 @@ describe("PluginManagerProvider", () => {
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
-				name: "@dated/transaction-export-plugin",
-				url: "https://github.com/dated/transaction-export-plugin/archive/master.zip",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
 			}),
 		);
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:install", {
-				name: "@dated/transaction-export-plugin",
+				name: "@dated/delegate-calculator-wallet-plugin",
 				savedPath: "/plugins/temp/test-plugin",
 			}),
 		);
 
 		await waitFor(() =>
-			expect(manager.plugins().findById("@dated/transaction-export-plugin")?.config().version()).toBe("1.0.1"),
+			expect(manager.plugins().findById("@dated/delegate-calculator-wallet-plugin")?.config().version()).toBe(
+				"1.0.0",
+			),
 		);
 
 		act(() => {
@@ -497,8 +472,8 @@ describe("PluginManagerProvider", () => {
 		const plugin = new PluginController(
 			{
 				"desktop-wallet": { minimumVersion: "4.0.0" },
-				name: "@dated/transaction-export-plugin",
-				version: "1.0.0",
+				name: "@dated/delegate-calculator-wallet-plugin",
+				version: "0.0.1",
 			},
 			() => void 0,
 		);
@@ -556,7 +531,9 @@ describe("PluginManagerProvider", () => {
 		fireEvent.click(screen.getAllByText("Update")[0]);
 
 		await waitFor(() =>
-			expect(manager.plugins().findById("@dated/transaction-export-plugin")?.config().version()).toBe("1.0.0"),
+			expect(manager.plugins().findById("@dated/delegate-calculator-wallet-plugin")?.config().version()).toBe(
+				"0.0.1",
+			),
 		);
 
 		expect(screen.getAllByText("Updated failed")).toBeTruthy();
@@ -603,7 +580,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(5));
+		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(3));
 
 		fireEvent.click(screen.getByTestId("QueryByText"));
 		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(1));
@@ -624,7 +601,7 @@ describe("PluginManagerProvider", () => {
 					{searchResults.length > 0 && (
 						<div
 							onClick={() => {
-								filterBy({ query: "Transaction export" });
+								filterBy({ query: "Delegate Calculator" });
 							}}
 							data-testid="QueryByText"
 						/>
@@ -657,13 +634,13 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(5));
+		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(3));
 
 		fireEvent.click(screen.getByTestId("QueryByText"));
 		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(1));
 
 		fireEvent.click(screen.getByTestId("ResetFilters"));
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(5));
+		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(3));
 
 		manager.plugins().removeById(plugin.config().id(), profile);
 	});
@@ -696,9 +673,9 @@ describe("PluginManagerProvider", () => {
 		expect(screen.getByText("Size N/A")).toBeInTheDocument();
 
 		fireEvent.click(screen.getByText("Fetch Plugins"));
-		await waitFor(() => expect(screen.getByText("Plugins 4")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText("Plugins 2")).toBeInTheDocument());
 
 		fireEvent.click(screen.getByText("Fetch Size"));
-		await waitFor(() => expect(screen.getByText("Size 304 kB")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText("Size 123 kB")).toBeInTheDocument());
 	});
 });

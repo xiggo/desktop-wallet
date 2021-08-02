@@ -1,7 +1,7 @@
 {
 	"start": "2019-07-12",
 	"end": "2021-01-12",
-	"package": "@dated/delegate-calculator-plugin",
+	"package": "@dated/delegate-calculator-wallet-plugin",
 	"downloads": [
 		{
 			"downloads": 0,

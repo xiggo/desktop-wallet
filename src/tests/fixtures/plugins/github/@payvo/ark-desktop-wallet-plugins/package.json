@@ -1,0 +1,43 @@
+{
+	"name": "@payvo/ark-explorer-wallet-plugin",
+	"version": "1.0.0",
+	"description": "Use the ARK Mainnet and Devnet Explorers directly within the Pavyo wallet",
+	"main": "dist/payvo-ark-explorer-wallet-plugin.cjs.js",
+	"author": "Lúcio Rubens",
+	"license": "MIT",
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PayvoHQ/wallet-plugins.git"
+	},
+	"desktop-wallet": {
+		"title": "ARK Explorer",
+		"logo": "https://raw.githubusercontent.com/PayvoHQ/wallet-plugins/master/ark-explorer/images/logo.png",
+		"categories": [
+			"utility"
+		],
+		"permissions": [
+			"LAUNCH"
+		],
+		"minimumVersion": "1.0.0"
+	},
+	"keywords": [
+		"utility",
+		"explorer",
+		"@payvo",
+		"wallet-plugin"
+	],
+	"homepage": "https://github.com/PayvoHQ/wallet-plugins/tree/master/ark-explorer",
+	"scripts": {
+		"prepublishOnly": "yarn build",
+		"build": "preconstruct build",
+		"watch": "preconstruct watch"
+	},
+	"dependencies": {
+		"react": "^16.13.1"
+	},
+	"devDependencies": {
+		"@babel/preset-react": "^7.14.5",
+		"@preconstruct/cli": "^2.1.0"
+	}
+}
