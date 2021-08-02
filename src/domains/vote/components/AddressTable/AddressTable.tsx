@@ -22,6 +22,7 @@ export const AddressTable = ({ wallets, onSelect }: AddressTableProperties) => {
 		{
 			Header: t("COMMON.MY_ADDRESS"),
 			accessor: (wallet: Contracts.IReadWriteWallet) => wallet.alias() || wallet.address(),
+			cellWidth: "w-80",
 		},
 		{
 			Header: t("COMMON.WALLET_TYPE"),

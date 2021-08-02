@@ -76,7 +76,9 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 		<TableRow>
 			<TableCell variant="start" innerClassName="space-x-4">
 				<Avatar className="flex-shrink-0" size="lg" address={wallet.address()} noShadow />
-				<Address address={wallet.address()} walletName={wallet.alias()} />
+				<div className="w-40 flex-1">
+					<Address address={wallet.address()} walletName={wallet.alias()} />
+				</div>
 			</TableCell>
 
 			<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle">
