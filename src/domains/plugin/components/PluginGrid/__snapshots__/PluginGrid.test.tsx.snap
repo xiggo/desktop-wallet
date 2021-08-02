@@ -54,7 +54,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>
@@ -149,15 +149,6 @@ exports[`PluginGrid should not render pagination 1`] = `
                   >
                     ARK Avatars
                   </div>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -249,15 +240,6 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="truncate"
                   >
                     ARK Theme
-                  </div>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
                   </div>
                 </div>
                 <div
@@ -701,7 +683,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>
@@ -796,15 +778,6 @@ exports[`PluginGrid should render pagination 1`] = `
                   >
                     ARK Avatars
                   </div>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -897,15 +870,6 @@ exports[`PluginGrid should render pagination 1`] = `
                   >
                     ARK Theme
                   </div>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -997,15 +961,6 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="truncate"
                   >
                     Drakula Theme
-                  </div>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
                   </div>
                 </div>
                 <div
@@ -1494,7 +1449,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>
@@ -1589,15 +1544,6 @@ exports[`PluginGrid should render without pagination 1`] = `
                   >
                     ARK Avatars
                   </div>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
                 <div
                   class="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600"
@@ -1689,15 +1635,6 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="truncate"
                   >
                     ARK Theme
-                  </div>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
                   </div>
                 </div>
                 <div
@@ -1816,15 +1753,6 @@ exports[`PluginGrid should split by page 1`] = `
                     class="truncate"
                   >
                     ARK Avatars
-                  </div>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
                   </div>
                 </div>
                 <div
@@ -2012,7 +1940,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>

@@ -912,7 +912,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -4037,7 +4037,7 @@ exports[`PluginManager should render 1`] = `
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -5916,7 +5916,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -6019,7 +6019,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -6890,7 +6890,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -6993,7 +6993,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -8067,7 +8067,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -9306,7 +9306,7 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -9409,7 +9409,7 @@ exports[`PluginManager should toggle between list and grid on utility tab 1`] = 
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>

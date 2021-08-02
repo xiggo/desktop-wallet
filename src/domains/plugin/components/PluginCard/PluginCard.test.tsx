@@ -64,20 +64,7 @@ describe("PluginCard", () => {
 
 		const { asFragment, container } = render(<PluginCard plugin={plugin} />);
 
-		expect(container).toHaveTextContent("official-ark-plugin.svg");
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render grant icon", () => {
-		const plugin = {
-			...basePlugin,
-			isGrant: true,
-			isInstalled: false,
-		};
-
-		const { asFragment, container } = render(<PluginCard plugin={plugin} />);
-
-		expect(container).toHaveTextContent("grant.svg");
+		expect(container).toHaveTextContent("official-plugin.svg");
 		expect(asFragment()).toMatchSnapshot();
 	});
 

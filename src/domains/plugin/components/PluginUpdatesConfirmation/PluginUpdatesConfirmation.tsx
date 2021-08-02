@@ -60,10 +60,7 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 										{pluginData.title}
 									</span>
 
-									{renderPluginIcon({
-										isGrant: pluginData.isGrant,
-										isOfficial: pluginData.isOfficial,
-									})}
+									{renderPluginIcon({ isOfficial: pluginData.isOfficial })}
 								</div>
 							</TableCell>
 

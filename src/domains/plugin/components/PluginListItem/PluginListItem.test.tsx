@@ -264,32 +264,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		expect(getByText("official-ark-plugin.svg")).toBeTruthy();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render grant icon", () => {
-		const plugin = {
-			author: "ARK.io",
-			category: "utility",
-			id: "ark-explorer",
-			isGrant: true,
-			isInstalled: false,
-			size: "4.2 MB",
-			title: "ARK Explorer",
-			version: "1.3.8",
-		};
-
-		const { asFragment, getByText } = render(
-			<table>
-				<tbody>
-					<PluginListItem plugin={plugin} />
-				</tbody>
-			</table>,
-		);
-
-		expect(getByText("grant.svg")).toBeTruthy();
-
+		expect(getByText("official-plugin.svg")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

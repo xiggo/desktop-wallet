@@ -196,15 +196,6 @@ exports[`PluginList should not render pagination 1`] = `
                   >
                     ARK Avatars
                   </span>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
               </div>
             </td>
@@ -355,7 +346,7 @@ exports[`PluginList should not render pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>
@@ -636,15 +627,6 @@ exports[`PluginList should render pagination 1`] = `
                   >
                     ARK Avatars
                   </span>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
               </div>
             </td>
@@ -795,7 +777,7 @@ exports[`PluginList should render pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>
@@ -895,15 +877,6 @@ exports[`PluginList should render pagination 1`] = `
                   >
                     Avfc Theme
                   </span>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
               </div>
             </td>
@@ -1048,15 +1021,6 @@ exports[`PluginList should render pagination 1`] = `
                   >
                     Drakula Theme
                   </span>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
               </div>
             </td>
@@ -1427,15 +1391,6 @@ exports[`PluginList should render without pagination 1`] = `
                   >
                     ARK Avatars
                   </span>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
               </div>
             </td>
@@ -1586,7 +1541,7 @@ exports[`PluginList should render without pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>
@@ -1864,15 +1819,6 @@ exports[`PluginList should split by page 1`] = `
                   >
                     ARK Avatars
                   </span>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
               </div>
             </td>
@@ -2243,15 +2189,6 @@ exports[`PluginList should trigger delete 1`] = `
                   >
                     ARK Avatars
                   </span>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
               </div>
             </td>
@@ -2402,7 +2339,7 @@ exports[`PluginList should trigger delete 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>
@@ -2683,15 +2620,6 @@ exports[`PluginList should trigger install 1`] = `
                   >
                     ARK Avatars
                   </span>
-                  <div
-                    class="sc-bdnxRM AFVmm text-theme-warning-600"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      grant.svg
-                    </svg>
-                  </div>
                 </div>
               </div>
             </td>
@@ -2842,7 +2770,7 @@ exports[`PluginList should trigger install 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-ark-plugin.svg
+                      official-plugin.svg
                     </svg>
                   </div>
                 </div>

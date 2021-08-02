@@ -51,7 +51,6 @@ import { ReactComponent as FilePassword } from "./file-password.svg";
 import { ReactComponent as Filters } from "./filters.svg";
 import { ReactComponent as Forward } from "./forward.svg";
 import { ReactComponent as General } from "./general.svg";
-import { ReactComponent as Grant } from "./grant.svg";
 import { ReactComponent as GridView } from "./grid-view.svg";
 import { ReactComponent as Id } from "./id.svg";
 import { ReactComponent as Import } from "./import.svg";
@@ -71,7 +70,7 @@ import { ReactComponent as Msq } from "./msq.svg";
 import { ReactComponent as Multipayment } from "./multipayment.svg";
 import { ReactComponent as Multisig } from "./multisignature.svg";
 import { ReactComponent as Notification } from "./notification.svg";
-import { ReactComponent as OfficialArkPlugin } from "./official-ark-plugin.svg";
+import { ReactComponent as OfficialPlugin } from "./official-plugin.svg";
 import { ReactComponent as OpenExplorer } from "./open-explorer.svg";
 import { ReactComponent as PaginationFirst } from "./pagination-first.svg";
 import { ReactComponent as PaginationLast } from "./pagination-last.svg";
@@ -170,7 +169,6 @@ export const SvgCollection: any = {
 	Filters,
 	Forward,
 	General,
-	Grant,
 	GridView,
 	Id,
 	Import,
@@ -190,7 +188,7 @@ export const SvgCollection: any = {
 	Multipayment,
 	Multisig,
 	Notification,
-	OfficialArkPlugin,
+	OfficialPlugin,
 	OpenExplorer,
 	PaginationFirst,
 	PaginationLast,

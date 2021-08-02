@@ -12,7 +12,6 @@ describe("Plugin Updates Confirmation", () => {
 			title: "ARK Explorer",
 		},
 		{
-			isGrant: true,
 			minimumVersion: "3.1.0",
 			title: "Animal Avatars",
 		},

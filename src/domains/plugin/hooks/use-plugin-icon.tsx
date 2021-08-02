@@ -3,17 +3,12 @@ import React from "react";
 
 interface Properties {
 	isOfficial?: boolean;
-	isGrant?: boolean;
 }
 
 const usePluginIcon = () => {
-	const renderPluginIcon = ({ isOfficial, isGrant }: Properties) => {
+	const renderPluginIcon = ({ isOfficial }: Properties) => {
 		if (isOfficial) {
-			return <Icon className="text-theme-warning-600" name="OfficialArkPlugin" />;
-		}
-
-		if (isGrant) {
-			return <Icon className="text-theme-warning-600" name="Grant" />;
+			return <Icon className="text-theme-warning-600" name="OfficialPlugin" />;
 		}
 	};
 

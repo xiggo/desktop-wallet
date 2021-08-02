@@ -149,10 +149,7 @@ export const PluginCard = ({
 						<div className="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200">
 							<div className="truncate">{plugin.title}</div>
 
-							{renderPluginIcon({
-								isGrant: plugin.isGrant,
-								isOfficial: plugin.isOfficial,
-							})}
+							{renderPluginIcon({ isOfficial: plugin.isOfficial })}
 						</div>
 
 						{showCategory && (

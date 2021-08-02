@@ -92,10 +92,7 @@ export const PluginListItem = ({
 						{plugin.title}
 					</span>
 
-					{renderPluginIcon({
-						isGrant: plugin.isGrant,
-						isOfficial: plugin.isOfficial,
-					})}
+					{renderPluginIcon({ isOfficial: plugin.isOfficial })}
 
 					{plugin.hasUpdateAvailable && plugin.isCompatible === false && (
 						<Tooltip

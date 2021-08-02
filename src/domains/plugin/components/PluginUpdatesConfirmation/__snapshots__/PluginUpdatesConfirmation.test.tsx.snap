@@ -175,7 +175,7 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                               width="16"
                             >
                               <svg>
-                                official-ark-plugin.svg
+                                official-plugin.svg
                               </svg>
                             </div>
                           </div>
@@ -220,15 +220,6 @@ exports[`Plugin Updates Confirmation should render 1`] = `
                             >
                               Animal Avatars
                             </span>
-                            <div
-                              class="sc-bdnxRM AFVmm text-theme-warning-600"
-                              height="16"
-                              width="16"
-                            >
-                              <svg>
-                                grant.svg
-                              </svg>
-                            </div>
                           </div>
                         </div>
                       </td>

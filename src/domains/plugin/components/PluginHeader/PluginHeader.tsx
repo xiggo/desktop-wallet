@@ -21,7 +21,6 @@ interface Properties {
 	size?: string;
 	isInstalled?: boolean;
 	isOfficial?: boolean;
-	isGrant?: boolean;
 	isEnabled?: boolean;
 	hasUpdateAvailable?: boolean;
 	isCompatible?: boolean;
@@ -162,10 +161,7 @@ export const PluginHeader = ({
 						<div className="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight">
 							<div className="flex items-center space-x-2">
 								<span className="text-2xl font-bold truncate">{properties.title}</span>
-								{renderPluginIcon({
-									isGrant: !!properties.isGrant,
-									isOfficial: !!properties.isOfficial,
-								})}
+								{renderPluginIcon({ isOfficial: !!properties.isOfficial })}
 							</div>
 							<span className="text-medium text-theme-secondary-500 truncate">
 								{properties.description}
