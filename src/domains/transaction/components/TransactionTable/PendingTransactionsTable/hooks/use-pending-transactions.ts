@@ -12,6 +12,8 @@ export const usePendingTransactions = ({ wallet }: { wallet: Contracts.IReadWrit
 	const transactions = useMemo(() => {
 		const transactions: PendingTransaction[] = [];
 
+		wallet.transaction().restore();
+
 		for (const [id, transaction] of Object.entries(wallet.transaction().pending())) {
 			const hasBeenSigned = wallet.transaction().hasBeenSigned(id);
 			const isAwaitingConfirmation = wallet.transaction().isAwaitingConfirmation(id);
