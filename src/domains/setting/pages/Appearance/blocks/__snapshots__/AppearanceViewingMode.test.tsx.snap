@@ -12,7 +12,6 @@ exports[`AppearanceViewingMode should render 1`] = `
       aria-label="light"
       class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 bUnezw"
       data-testid="ButtonGroupOption"
-      disabled=""
       role="radio"
       type="button"
     >
@@ -38,7 +37,6 @@ exports[`AppearanceViewingMode should render 1`] = `
       aria-label="dark"
       class="ButtonGroup__ButtonGroupOptionStyled-sc-2f0qmd-0 bUnezw"
       data-testid="ButtonGroupOption"
-      disabled=""
       role="radio"
       type="button"
     >

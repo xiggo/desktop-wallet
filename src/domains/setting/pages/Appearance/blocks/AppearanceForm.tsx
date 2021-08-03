@@ -68,15 +68,3 @@ export const AppearanceForm: React.FC<Properties> = ({ profile }: Properties) =>
 		</Form>
 	);
 };
-
-export const AppearanceFormPlaceholder: React.FC = () => {
-	const items = useAppearanceItems();
-
-	return (
-		<section data-testid="AppearanceFormPlaceholder" className="mt-8">
-			<ListDivided items={items} />
-
-			<AppearanceFooterButtons isSaveDisabled={true} />
-		</section>
-	);
-};

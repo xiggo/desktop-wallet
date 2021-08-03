@@ -8,8 +8,14 @@ import { AppearanceAccentColor } from "./AppearanceAccentColor";
 
 describe("AppearanceAccentColor", () => {
 	it("should render", () => {
+		const watch = jest.fn();
+		const setValue = jest.fn();
+
+		jest.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(() => ({ setValue, watch } as any));
+
 		const { asFragment } = render(<AppearanceAccentColor />);
 
+		expect(watch).toHaveBeenCalledWith("accentColor");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -31,14 +37,5 @@ describe("AppearanceAccentColor", () => {
 			shouldDirty: true,
 			shouldValidate: true,
 		});
-	});
-
-	it("should be disabled when form is not initialized", () => {
-		jest.spyOn(reactHookForm, "useFormContext").mockReturnValue(null as any);
-
-		render(<AppearanceAccentColor />);
-
-		expect(screen.getAllByRole("radio")[0]).toBeDisabled();
-		expect(screen.getAllByRole("radio")[1]).toBeDisabled();
 	});
 });

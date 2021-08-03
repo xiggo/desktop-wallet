@@ -10,11 +10,11 @@ interface Properties {
 export const AppearanceToggle: React.FC<Properties> = ({ name }: Properties) => {
 	const form = useFormContext<AppearanceSettingsState>();
 
-	const value = form?.watch(name);
+	const value = form.watch(name);
 
 	return (
 		<Toggle
-			ref={form?.register()}
+			ref={form.register()}
 			name={name}
 			defaultChecked={!!value}
 			data-testid={`AppearanceToggle__toggle-${name}`}

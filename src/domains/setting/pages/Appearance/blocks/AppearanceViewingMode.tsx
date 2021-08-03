@@ -16,7 +16,7 @@ export const AppearanceViewingMode: React.FC = () => {
 
 	const form = useFormContext<AppearanceSettingsState>();
 
-	const viewingMode = form?.watch("viewingMode");
+	const viewingMode = form.watch("viewingMode");
 
 	const viewingModes: ViewingModeItem[] = [
 		{
@@ -35,11 +35,10 @@ export const AppearanceViewingMode: React.FC = () => {
 		<ButtonGroup>
 			{viewingModes.map(({ icon, name, value }) => (
 				<ButtonGroupOption
-					disabled={!form}
 					key={value}
 					isSelected={() => viewingMode === value}
 					setSelectedValue={() =>
-						form?.setValue("viewingMode", value, {
+						form.setValue("viewingMode", value, {
 							shouldDirty: true,
 							shouldValidate: true,
 						})

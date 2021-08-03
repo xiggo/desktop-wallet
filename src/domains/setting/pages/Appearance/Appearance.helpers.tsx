@@ -43,10 +43,10 @@ export const useAppearanceItems = (): Record<string, any>[] => {
 
 export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanceSettings => ({
 	getValues: (): AppearanceSettingsState => ({
-		accentColor: profile.settings().get(Contracts.ProfileSetting.AccentColor) as AccentColorType,
-		dashboardTransactionHistory: !!profile.settings().get(Contracts.ProfileSetting.DashboardTransactionHistory),
-		useNetworkWalletNames: !!profile.settings().get(Contracts.ProfileSetting.UseNetworkWalletNames),
-		viewingMode: profile.settings().get(Contracts.ProfileSetting.Theme) as ViewingModeType,
+		accentColor: profile.appearance().get("accentColor") as AccentColorType,
+		dashboardTransactionHistory: profile.appearance().get("dashboardTransactionHistory"),
+		useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
+		viewingMode: profile.appearance().get("theme") as ViewingModeType,
 	}),
 	setValues: (values: AppearanceSettingsState): void => {
 		profile.settings().set(Contracts.ProfileSetting.AccentColor, values.accentColor);

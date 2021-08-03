@@ -8,8 +8,14 @@ import { AppearanceViewingMode } from "./AppearanceViewingMode";
 
 describe("AppearanceViewingMode", () => {
 	it("should render", () => {
+		const watch = jest.fn();
+		const setValue = jest.fn();
+
+		jest.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(() => ({ setValue, watch } as any));
+
 		const { asFragment } = render(<AppearanceViewingMode />);
 
+		expect(watch).toHaveBeenCalledWith("viewingMode");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -31,14 +37,5 @@ describe("AppearanceViewingMode", () => {
 			shouldDirty: true,
 			shouldValidate: true,
 		});
-	});
-
-	it("should be disabled when form is not initialized", () => {
-		jest.spyOn(reactHookForm, "useFormContext").mockReturnValue(null as any);
-
-		render(<AppearanceViewingMode />);
-
-		expect(screen.getAllByRole("radio")[0]).toBeDisabled();
-		expect(screen.getAllByRole("radio")[1]).toBeDisabled();
 	});
 });

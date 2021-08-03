@@ -50,16 +50,6 @@ describe("Appearance Settings", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should disable form when profile is not restored yet", () => {
-		jest.spyOn(profile.status(), "isRestored").mockReturnValueOnce(false);
-
-		const { asFragment } = renderPage();
-
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeDisabled();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should go back when cancel button is clicked", async () => {
 		renderPage();
 

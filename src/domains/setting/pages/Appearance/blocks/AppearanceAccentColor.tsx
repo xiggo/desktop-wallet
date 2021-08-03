@@ -16,7 +16,7 @@ export const AppearanceAccentColor: React.FC = () => {
 
 	const form = useFormContext<AppearanceSettingsState>();
 
-	const accentColor = form?.watch("accentColor");
+	const accentColor = form.watch("accentColor");
 
 	const colors: AccentColorItem[] = [
 		{
@@ -36,11 +36,10 @@ export const AppearanceAccentColor: React.FC = () => {
 			{colors.map(({ className, key, tooltipContent }) => (
 				<ButtonGroupOption
 					tooltipContent={tooltipContent}
-					disabled={!form}
 					isSelected={() => accentColor === key}
 					key={key}
 					setSelectedValue={() =>
-						form?.setValue("accentColor", key, {
+						form.setValue("accentColor", key, {
 							shouldDirty: true,
 							shouldValidate: true,
 						})
