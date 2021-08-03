@@ -294,8 +294,8 @@ exports[`News should filter results based on category query and asset 1`] = `
                   </span>
                   <svg
                     class="text-black"
-                    height="27"
-                    width="100"
+                    height="20"
+                    width="65"
                   >
                     ftx.svg
                   </svg>
@@ -1045,8 +1045,8 @@ exports[`News should filter results based on category query and asset 2`] = `
                   </span>
                   <svg
                     class="text-black"
-                    height="27"
-                    width="100"
+                    height="20"
+                    width="65"
                   >
                     ftx.svg
                   </svg>
