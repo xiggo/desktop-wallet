@@ -235,6 +235,48 @@ describe("Add Participant", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should clear participant field when address is added", async () => {
+		nock("https://ark-test.payvo.com")
+			.get("/api/wallets")
+			.query((parameters) => !!parameters.address)
+			.reply(200, {
+				data: [walletFixture.data],
+				meta: { count: 1, pageCount: 1, totalCount: 1 },
+			});
+
+		render(<AddParticipant profile={profile} wallet={wallet} />);
+
+		expect(screen.queryAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1);
+
+		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("");
+
+		// add participant
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
+			target: {
+				value: wallet2.address(),
+			},
+		});
+
+		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+
+		await waitFor(() => expect(screen.queryAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
+
+		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(""));
+
+		// add participant
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
+			target: {
+				value: walletFixture.data.address,
+			},
+		});
+
+		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+
+		await waitFor(() => expect(screen.queryAllByTestId("recipient-list__recipient-list-item")).toHaveLength(3));
+
+		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(""));
+	});
+
 	it("should remove participant", async () => {
 		const onChange = jest.fn();
 		render(

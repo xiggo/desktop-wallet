@@ -59,7 +59,7 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 		setParticipants(newParticipants);
 		onChange?.(newParticipants);
 
-		setValue("address", "");
+		setTimeout(() => setValue("address", ""));
 	};
 
 	const removeParticipant = (index: number) => {
