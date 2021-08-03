@@ -74,7 +74,8 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 		wallet.balance() > 0 &&
 		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature) &&
 		!isMultiSignature &&
-		isRestoredAndSynced
+		isRestoredAndSynced &&
+		(wallet.isLedger() || !!wallet.publicKey())
 	) {
 		registrationOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
