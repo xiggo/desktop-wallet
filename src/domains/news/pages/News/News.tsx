@@ -1,4 +1,4 @@
-import { Blockfolio, BlockfolioResponse, BlockfolioSignal } from "@payvo/news";
+import { Blockfolio as FTX, BlockfolioResponse as FTXResponse, BlockfolioSignal as FTXSignal } from "@payvo/news";
 import { Contracts } from "@payvo/profiles";
 import { SvgCollection } from "app/assets/svg";
 import { EmptyResults } from "app/components/EmptyResults";
@@ -8,7 +8,7 @@ import { Pagination } from "app/components/Pagination";
 import { useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { httpClient, toasts } from "app/services";
-import { BlockfolioAd } from "domains/news/components/BlockfolioAd";
+import { FTXAd } from "domains/news/components/FTXAd";
 import { NewsCard, NewsCardSkeleton } from "domains/news/components/NewsCard";
 import { NewsOptions } from "domains/news/components/NewsOptions";
 import React, { useCallback, useEffect, useState } from "react";
@@ -31,7 +31,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 	const { persist } = useEnvironmentContext();
 
 	const [isLoading, setIsLoading] = useState(true);
-	const [blockfolio] = useState(() => new Blockfolio(httpClient));
+	const [ftx] = useState(() => new FTX(httpClient));
 
 	const [totalCount, setTotalCount] = useState(0);
 	const [currentPage, setCurrentPage] = useState(1);
@@ -49,7 +49,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 		return initialFilters;
 	});
 
-	const [news, setNews] = useState<BlockfolioSignal[]>([]);
+	const [news, setNews] = useState<FTXSignal[]>([]);
 
 	const skeletonCards = Array.from({ length: 8 }).fill({});
 
@@ -71,7 +71,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 				};
 
 				try {
-					const { data, meta }: BlockfolioResponse = await blockfolio.findByCoin(query);
+					const { data, meta }: FTXResponse = await ftx.findByCoin(query);
 
 					setNews(data);
 					setTotalCount(meta.total);
@@ -84,7 +84,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 		};
 
 		fetchNews();
-	}, [blockfolio, currentPage, categories, coins, searchQuery, t]);
+	}, [ftx, currentPage, categories, coins, searchQuery, t]);
 
 	useEffect(() => {
 		const updateSettings = async () => {
@@ -114,7 +114,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 							<span className="font-semibold text-theme-secondary-text">
 								{t("NEWS.PAGE_NEWS.POWERED_BY")}
 							</span>
-							<SvgCollection.Blockfolio width={100} height={27} />
+							<SvgCollection.FTX width={100} height={27} class="text-black" />
 						</div>
 					}
 				/>
@@ -146,7 +146,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 										<NewsCard key={index} {...data} />
 									))}
 
-									<BlockfolioAd />
+									<FTXAd />
 								</div>
 
 								<div className="flex justify-center mt-10 w-full">

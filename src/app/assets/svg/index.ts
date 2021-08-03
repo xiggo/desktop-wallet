@@ -14,7 +14,6 @@ import { ReactComponent as AwaitingFinalSignature } from "./awaiting-final-signa
 import { ReactComponent as AwaitingOtherSignature } from "./awaiting-other-signature.svg";
 import { ReactComponent as AwaitingOurSignature } from "./awaiting-our-signature.svg";
 import { ReactComponent as Back } from "./back.svg";
-import { ReactComponent as Blockfolio } from "./blockfolio.svg";
 import { ReactComponent as CaretDown } from "./caret-down.svg";
 import { ReactComponent as CaretUp } from "./caret-up.svg";
 import { ReactComponent as Category } from "./category.svg";
@@ -50,6 +49,7 @@ import { ReactComponent as File } from "./file.svg";
 import { ReactComponent as FilePassword } from "./file-password.svg";
 import { ReactComponent as Filters } from "./filters.svg";
 import { ReactComponent as Forward } from "./forward.svg";
+import { ReactComponent as FTX } from "./ftx.svg";
 import { ReactComponent as General } from "./general.svg";
 import { ReactComponent as GridView } from "./grid-view.svg";
 import { ReactComponent as Id } from "./id.svg";
@@ -132,7 +132,6 @@ export const SvgCollection: any = {
 	AwaitingOtherSignature,
 	AwaitingOurSignature,
 	Back,
-	Blockfolio,
 	CaretDown,
 	CaretUp,
 	Category,
@@ -164,6 +163,7 @@ export const SvgCollection: any = {
 	Eye,
 	EyeOff,
 	EyeTag,
+	FTX,
 	File,
 	FilePassword,
 	Filters,

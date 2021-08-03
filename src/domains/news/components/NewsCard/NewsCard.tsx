@@ -1,4 +1,4 @@
-import { BlockfolioSignal } from "@payvo/news";
+import { BlockfolioSignal as FTXSignal } from "@payvo/news";
 import { Networks } from "@payvo/sdk";
 import { Card } from "app/components/Card";
 import { Divider } from "app/components/Divider";
@@ -13,7 +13,7 @@ import Linkify from "react-linkify";
 
 type Properties = {
 	coverImage?: string;
-} & BlockfolioSignal;
+} & FTXSignal;
 
 export const NewsCard = ({ text, category, author, created_at: createdAt, coverImage }: Properties) => {
 	const { env } = useEnvironmentContext();

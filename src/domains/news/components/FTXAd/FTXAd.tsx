@@ -1,13 +1,13 @@
 import { images } from "app/assets/images";
 import { SvgCollection } from "app/assets/svg";
 import { Link } from "app/components/Link";
-import BlockfolioBanner from "domains/news/images/blockfolio-banner.png";
+import FTXBanner from "domains/news/images/ftx-banner.png";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 const { DownloadAppStoreButton, DownloadGooglePlayButton } = images.news.common;
 
-export const BlockfolioAd = () => {
+export const FTXAd = () => {
 	const { t } = useTranslation();
 
 	return (
@@ -17,15 +17,15 @@ export const BlockfolioAd = () => {
 			</div>
 
 			<img
-				src={BlockfolioBanner}
+				src={FTXBanner}
 				className="w-full rounded-lg border-2 border-theme-primary-100 dark:border-theme-secondary-800"
-				alt="Blockfolio Banner"
+				alt="FTX Banner"
 			/>
 
 			<div className="absolute left-10 top-16">
 				<div className="flex flex-col items-start space-y-5 text-white">
-					<Link to="https://blockfolio.com/" showExternalIcon={false} isExternal>
-						<SvgCollection.Blockfolio className="-mx-8 text-white" width={238} height={47} />
+					<Link to="https://ftx.com/" showExternalIcon={false} isExternal>
+						<SvgCollection.FTX className="-mx-8 text-white" width={238} height={47} />
 					</Link>
 					<p className="w-3/4 text-lg font-medium">
 						The world&apos;s most popular Bitcoin &amp; cryptocurrency portfolio tracker. 100% free.

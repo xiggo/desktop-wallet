@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlockfolioAd should render 1`] = `
+exports[`FTXAd should render 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -15,9 +15,9 @@ exports[`BlockfolioAd should render 1`] = `
       </span>
     </div>
     <img
-      alt="Blockfolio Banner"
+      alt="FTX Banner"
       class="w-full rounded-lg border-2 border-theme-primary-100 dark:border-theme-secondary-800"
-      src="blockfolio-banner.png"
+      src="ftx-banner.png"
     />
     <div
       class="absolute left-10 top-16"
@@ -31,7 +31,7 @@ exports[`BlockfolioAd should render 1`] = `
           data-testid="Link"
           href="#"
           rel="noopener noreferrer"
-          to="https://blockfolio.com/"
+          to="https://ftx.com/"
         >
           <span
             class="Link__Content-sc-ec014t-1 hUiuRR"
@@ -41,7 +41,7 @@ exports[`BlockfolioAd should render 1`] = `
               height="47"
               width="238"
             >
-              blockfolio.svg
+              ftx.svg
             </svg>
           </span>
         </a>

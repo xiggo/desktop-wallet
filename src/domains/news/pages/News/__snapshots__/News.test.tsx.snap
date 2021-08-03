@@ -293,10 +293,11 @@ exports[`News should filter results based on category query and asset 1`] = `
                     Powered by
                   </span>
                   <svg
+                    class="text-black"
                     height="27"
                     width="100"
                   >
-                    blockfolio.svg
+                    ftx.svg
                   </svg>
                 </div>
               </div>
@@ -450,9 +451,9 @@ exports[`News should filter results based on category query and asset 1`] = `
                     </span>
                   </div>
                   <img
-                    alt="Blockfolio Banner"
+                    alt="FTX Banner"
                     class="w-full rounded-lg border-2 border-theme-primary-100 dark:border-theme-secondary-800"
-                    src="blockfolio-banner.png"
+                    src="ftx-banner.png"
                   />
                   <div
                     class="absolute left-10 top-16"
@@ -466,7 +467,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
-                        to="https://blockfolio.com/"
+                        to="https://ftx.com/"
                       >
                         <span
                           class="Link__Content-sc-ec014t-1 hUiuRR"
@@ -476,7 +477,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                             height="47"
                             width="238"
                           >
-                            blockfolio.svg
+                            ftx.svg
                           </svg>
                         </span>
                       </a>
@@ -1043,10 +1044,11 @@ exports[`News should filter results based on category query and asset 2`] = `
                     Powered by
                   </span>
                   <svg
+                    class="text-black"
                     height="27"
                     width="100"
                   >
-                    blockfolio.svg
+                    ftx.svg
                   </svg>
                 </div>
               </div>
@@ -1213,9 +1215,9 @@ exports[`News should filter results based on category query and asset 2`] = `
                     </span>
                   </div>
                   <img
-                    alt="Blockfolio Banner"
+                    alt="FTX Banner"
                     class="w-full rounded-lg border-2 border-theme-primary-100 dark:border-theme-secondary-800"
-                    src="blockfolio-banner.png"
+                    src="ftx-banner.png"
                   />
                   <div
                     class="absolute left-10 top-16"
@@ -1229,7 +1231,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                         data-testid="Link"
                         href="#"
                         rel="noopener noreferrer"
-                        to="https://blockfolio.com/"
+                        to="https://ftx.com/"
                       >
                         <span
                           class="Link__Content-sc-ec014t-1 hUiuRR"
@@ -1239,7 +1241,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                             height="47"
                             width="238"
                           >
-                            blockfolio.svg
+                            ftx.svg
                           </svg>
                         </span>
                       </a>
