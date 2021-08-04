@@ -7,7 +7,14 @@ import { StepIndicator } from "app/components/StepIndicator";
 import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useFees, useLedgerModelStatus, usePrevious } from "app/hooks";
+import {
+	useActiveProfile,
+	useActiveWallet,
+	useFees,
+	useLedgerModelStatus,
+	usePrevious,
+	useValidation,
+} from "app/hooks";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import {
 	DelegateRegistrationForm,
@@ -43,6 +50,7 @@ export const SendRegistration = () => {
 	const activeWallet = useActiveWallet();
 	const { sign } = useWalletSignatory(activeWallet);
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
+	const { common } = useValidation();
 
 	const { findByType } = useFees(activeProfile);
 	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
@@ -80,7 +88,7 @@ export const SendRegistration = () => {
 	);
 
 	useEffect(() => {
-		register("fee");
+		register("fee", common.fee(activeWallet.balance(), activeWallet.network?.()));
 		register("fees");
 		register("inputFeeSettings");
 
@@ -88,7 +96,7 @@ export const SendRegistration = () => {
 		register("senderAddress", { required: true });
 
 		register("suppressWarning");
-	}, [register]);
+	}, [register, activeWallet, common]);
 
 	const {
 		dismissFeeWarning,
