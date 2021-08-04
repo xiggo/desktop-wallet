@@ -1,4 +1,3 @@
-import { Contracts } from "@payvo/profiles";
 import { Page, Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile, useProfileUtils } from "app/hooks";
@@ -7,7 +6,7 @@ import { Wallets } from "domains/dashboard/components/Wallets";
 import { useTutorial, useWalletConfig } from "domains/dashboard/hooks";
 import { ProfileCreated } from "domains/profile/components/ProfileCreated";
 import { Transactions } from "domains/transaction/components/Transactions";
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
@@ -24,10 +23,7 @@ export const Dashboard = () => {
 	const { selectedWallets } = useWalletConfig({ profile: activeProfile });
 
 	const profileWalletsCount = activeProfile.wallets().count();
-	const showTransactions = useMemo(
-		() => activeProfile.settings().get<boolean>(Contracts.ProfileSetting.DashboardTransactionHistory, true),
-		[activeProfile],
-	);
+	const showTransactions = activeProfile.appearance().get("dashboardTransactionHistory");
 
 	useEffect(() => {
 		if (profileIsSyncing) {

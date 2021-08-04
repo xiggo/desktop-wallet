@@ -56,14 +56,13 @@ const useWalletAlias = (): HookResult => {
 				}
 
 				const wallet = profile.wallets().findByAddress(address);
-				const useNetworkWalletNames = !!profile.settings().get(Contracts.ProfileSetting.UseNetworkWalletNames);
 
 				if (wallet) {
 					const delegateUsername = getDelegateUsername(wallet.network());
 
 					let alias = wallet.displayName();
 
-					if (useNetworkWalletNames && delegateUsername) {
+					if (delegateUsername && profile.appearance().get("useNetworkWalletNames")) {
 						alias = delegateUsername;
 					}
 
