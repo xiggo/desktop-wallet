@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useMemo } from "react";
 
-interface Address {
+interface AddressProperties {
 	id: string;
 	address: string;
 	alias?: string;
@@ -11,20 +11,31 @@ interface Address {
 	type: string;
 }
 
-export const useProfileAddresses = ({
-	profile,
-	network,
-}: {
+interface ProfileAddressesProperties {
 	profile: Contracts.IProfile;
 	network?: Networks.Network;
-}) => {
+}
+
+const isMultiSignature = (wallet: Contracts.IReadWriteWallet | Contracts.IContactAddress) => {
+	try {
+		return wallet.isMultiSignature();
+	} catch {
+		/* istanbul ignore next */
+		return false;
+	}
+};
+
+export const useProfileAddresses = (
+	{ profile, network }: ProfileAddressesProperties,
+	exceptMultiSignature?: boolean,
+) => {
 	const contacts = profile.contacts().values();
 	const profileWallets = profile.wallets().values();
 
 	return useMemo(() => {
-		const allAddresses: Address[] = [];
-		const profileAddresses: Address[] = [];
-		const contactAddresses: Address[] = [];
+		const allAddresses: AddressProperties[] = [];
+		const profileAddresses: AddressProperties[] = [];
+		const contactAddresses: AddressProperties[] = [];
 
 		const isNetworkSelected = (addressNetwork: string) => {
 			if (!network?.id()) {
@@ -36,6 +47,10 @@ export const useProfileAddresses = ({
 
 		for (const wallet of profileWallets) {
 			if (!isNetworkSelected(wallet.network().id())) {
+				continue;
+			}
+
+			if (exceptMultiSignature && isMultiSignature(wallet)) {
 				continue;
 			}
 
@@ -58,6 +73,10 @@ export const useProfileAddresses = ({
 					continue;
 				}
 
+				if (exceptMultiSignature && isMultiSignature(contactAddress)) {
+					continue;
+				}
+
 				const address = {
 					address: contactAddress.address(),
 					alias: contact.name(),
@@ -77,5 +96,5 @@ export const useProfileAddresses = ({
 			contactAddresses,
 			profileAddresses,
 		};
-	}, [profileWallets, contacts, network]);
+	}, [network, profileWallets, exceptMultiSignature, contacts]);
 };

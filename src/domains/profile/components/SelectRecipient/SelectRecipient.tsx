@@ -22,6 +22,7 @@ type SelectRecipientProperties = {
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
+	exceptMultiSignature?: boolean;
 	onChange?: (address: string | undefined, alias: WalletAliasResult) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
@@ -67,7 +68,16 @@ const OptionLabel = ({ option, profile }: { option: any; profile: Contracts.IPro
 
 export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipientProperties>(
 	(
-		{ address, profile, disabled, isInvalid, network, placeholder, onChange }: SelectRecipientProperties,
+		{
+			address,
+			profile,
+			disabled,
+			isInvalid,
+			network,
+			placeholder,
+			exceptMultiSignature,
+			onChange,
+		}: SelectRecipientProperties,
 		reference,
 	) => {
 		const { getWalletAlias } = useWalletAlias();
@@ -112,7 +122,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			onChangeAddress(address, false);
 		}, [address]); // eslint-disable-line react-hooks/exhaustive-deps
 
-		const { allAddresses } = useProfileAddresses({ network, profile });
+		const { allAddresses } = useProfileAddresses({ network, profile }, exceptMultiSignature);
 		const recipientAddresses = allAddresses.map(({ address }) => ({
 			label: address,
 			value: address,

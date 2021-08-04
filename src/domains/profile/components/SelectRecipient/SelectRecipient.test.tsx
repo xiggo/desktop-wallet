@@ -210,4 +210,36 @@ describe("SelectRecipient", () => {
 			expect(() => getAllByTestId("RecipientListItem__select-button")).toThrow();
 		});
 	});
+
+	it("should filter recipients list by MultiSignature type", async () => {
+		const { rerender } = render(<SelectRecipient profile={profile} />);
+
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(6);
+		});
+
+		const isMultiSignatureSpy = jest
+			.spyOn(profile.wallets().first(), "isMultiSignature")
+			.mockImplementation(() => true);
+
+		rerender(<SelectRecipient profile={profile} exceptMultiSignature />);
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
+		});
+
+		isMultiSignatureSpy.mockRestore();
+	});
 });

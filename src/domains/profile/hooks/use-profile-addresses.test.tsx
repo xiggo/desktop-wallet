@@ -48,4 +48,22 @@ describe("useProfileAddresses", () => {
 		expect(result.current.contactAddresses).toHaveLength(0);
 		expect(result.current.profileAddresses).toHaveLength(0);
 	});
+
+	it("should return all available addresses except MultiSignature", async () => {
+		const walletMultiSignatureSpy = jest
+			.spyOn(profile.wallets().first(), "isMultiSignature")
+			.mockImplementation(() => true);
+		const contactMultiSignatureSpy = jest
+			.spyOn(profile.contacts().first().addresses().values()[0], "isMultiSignature")
+			.mockImplementation(() => true);
+
+		const { result } = renderHook(() => useProfileAddresses({ profile }, true));
+
+		expect(result.current.allAddresses).toHaveLength(4);
+		expect(result.current.contactAddresses).toHaveLength(3);
+		expect(result.current.profileAddresses).toHaveLength(1);
+
+		walletMultiSignatureSpy.mockRestore();
+		contactMultiSignatureSpy.mockRestore();
+	});
 });
