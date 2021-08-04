@@ -37,6 +37,7 @@ const baseSettings = {
 	SCREENSHOT_PROTECTION: true,
 	THEME: "dark",
 	TIME_FORMAT: "h:mm A",
+	USE_EXPANDED_TABLES: false,
 	USE_NETWORK_WALLET_NAMES: false,
 	USE_TEST_NETWORKS: false,
 };
