@@ -152,7 +152,7 @@ app.on("open-url", (event, url) => {
 	broadcastURL(deeplinkingUrl);
 });
 
-app.setAsDefaultProtocolClient("ark", process.execPath, ["--"]);
+app.setAsDefaultProtocolClient("payvo", process.execPath, ["--"]);
 app.allowRendererProcessReuse = false;
 
 setupPlugins();
