@@ -128,15 +128,21 @@ export const translations: { [key: string]: any } = {
 	REQUIRED_VERSION: "Required Version",
 
 	STATUS: {
+		COMPATIBLE: "Compatible",
 		DISABLED: "Disabled",
 		ENABLED: "Enabled",
+		INCOMPATIBLE: "Incompatible",
 		NOT_INSTALLED: "Not installed",
 	},
 
 	UPDATE_ALL: "Update All",
 
 	UPDATE_ALL_NOTICE: "There is {{count}} update available for your plugins. Would you like to update it?",
+	UPDATE_ALL_NOTICE_INCOMPATIBLE:
+		"There is {{count}} update available for your plugins, but your wallet version is incompatible. Please update the Payvo Wallet to continue.",
 
+	UPDATE_ALL_NOTICE_INCOMPATIBLE_plural:
+		"There are {{count}} updates available for your plugins, but your wallet version is incompatible. Please update the Payvo Wallet to continue.",
 	UPDATE_ALL_NOTICE_plural:
 		"There are {{count}} updates available for your plugins. Would you like to update them all now?",
 

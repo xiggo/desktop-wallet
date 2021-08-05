@@ -2,6 +2,7 @@ import { prettyBytes, startCase, uniq } from "@arkecosystem/utils";
 import { Contracts, Repositories } from "@payvo/profiles";
 import du from "du";
 import parseAuthor from "parse-author";
+import { SerializedPluginConfigurationData } from "plugins/types";
 import semver from "semver";
 import { assertString } from "utils/assertions";
 
@@ -57,7 +58,11 @@ export class PluginConfigurationData {
 		return this.name();
 	}
 
-	author() {
+	archiveUrl(): string | undefined {
+		return this.#config.get("archiveUrl");
+	}
+
+	author(): string {
 		if (this.isOfficial()) {
 			return "Payvo";
 		}
@@ -67,7 +72,11 @@ export class PluginConfigurationData {
 
 		if (author) {
 			if (typeof author === "string") {
-				return parseAuthor(author).name;
+				const name = parseAuthor(author).name;
+
+				assertString(name);
+
+				return name;
 			}
 			return author.name;
 		}
@@ -77,7 +86,7 @@ export class PluginConfigurationData {
 			return parseAuthor(contributors?.[0]?.name || contributors?.[0]).name;
 		}
 
-		return `Unknown`;
+		return "Unknown";
 	}
 
 	keywords(): string[] {
@@ -123,7 +132,7 @@ export class PluginConfigurationData {
 	}
 
 	images() {
-		return this.manifest().get<string[]>("images", []);
+		return this.manifest().get<string[]>("images") || [];
 	}
 
 	permissions() {
@@ -140,7 +149,7 @@ export class PluginConfigurationData {
 		return process.env.REACT_APP_PLUGIN_MINIMUM_VERSION ?? this.manifest().get<string>("minimumVersion");
 	}
 
-	version() {
+	version(): string {
 		let version = this.get("version");
 
 		if (semver.valid(version)) {
@@ -152,7 +161,7 @@ export class PluginConfigurationData {
 		return "0.0.0";
 	}
 
-	logo() {
+	logo(): string | undefined {
 		let logo: string | undefined;
 
 		logo = this.#config.has("logo") ? this.#config.get("logo") : this.manifest().get("logo");
@@ -168,7 +177,7 @@ export class PluginConfigurationData {
 		return prettyBytes(this.#size);
 	}
 
-	title() {
+	title(): string | undefined {
 		const title = this.manifest().get<string>("title");
 
 		if (title) {
@@ -194,7 +203,7 @@ export class PluginConfigurationData {
 		return scopeRegex.test(name);
 	}
 
-	url() {
+	url(): string | undefined {
 		let url = this.#config.get<{ url: string }>("sourceProvider")?.url; // PSDK registry field
 
 		if (!url) {
@@ -232,8 +241,9 @@ export class PluginConfigurationData {
 		return minimumVersion ? semver.gte(appPackage.version, validMinimumVersion) : true;
 	}
 
-	toObject() {
+	toObject(): SerializedPluginConfigurationData {
 		return {
+			archiveUrl: this.archiveUrl(),
 			author: this.author(),
 			categories: this.categories(),
 			category: this.categories()[0],

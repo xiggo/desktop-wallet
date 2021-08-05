@@ -49,12 +49,21 @@ export class PluginLoaderFileSystem {
 		const configPath = path.join(dir, "package.json");
 		const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
 
-		let sourcePath: string | false;
+		let sourcePath: string | false = false;
 
 		try {
 			sourcePath = resolve.sync(dir, ".");
 		} catch {
-			sourcePath = resolve.sync(dir, "./src");
+			//
+		}
+
+		/* istanbul ignore next */
+		if (!sourcePath) {
+			try {
+				sourcePath = resolve.sync(dir, "./src");
+			} catch {
+				//
+			}
 		}
 
 		/* istanbul ignore next */

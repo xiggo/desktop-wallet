@@ -74,6 +74,54 @@ describe("PluginManagerProvider", () => {
 		ipcRendererMock.mockRestore();
 	});
 
+	it("should restore all enabled plugins", () => {
+		const restoreSpy = jest.spyOn(manager.plugins(), "runAllEnabled").mockImplementation();
+
+		const Component = () => {
+			const { restoreEnabledPlugins } = usePluginManagerContext();
+			const onClick = () => restoreEnabledPlugins();
+			return <button onClick={onClick}>Click</button>;
+		};
+
+		render(
+			<EnvironmentProvider env={env}>
+				<PluginManagerProvider manager={manager} services={[]}>
+					<Component />
+				</PluginManagerProvider>
+			</EnvironmentProvider>,
+		);
+
+		fireEvent.click(screen.getByRole("button"));
+
+		expect(restoreSpy).toHaveBeenCalled();
+
+		restoreSpy.mockRestore();
+	});
+
+	it("should reset plugins", () => {
+		const disposeSpy = jest.spyOn(manager.plugins(), "dispose").mockImplementation();
+
+		const Component = () => {
+			const { resetPlugins } = usePluginManagerContext();
+			const onClick = () => resetPlugins();
+			return <button onClick={onClick}>Click</button>;
+		};
+
+		render(
+			<EnvironmentProvider env={env}>
+				<PluginManagerProvider manager={manager} services={[]}>
+					<Component />
+				</PluginManagerProvider>
+			</EnvironmentProvider>,
+		);
+
+		fireEvent.click(screen.getByRole("button"));
+
+		expect(disposeSpy).toHaveBeenCalled();
+
+		disposeSpy.mockRestore();
+	});
+
 	it("should delete plugin", async () => {
 		const invokeMock = jest.spyOn(electron.ipcRenderer, "invoke").mockResolvedValue([]);
 
@@ -219,7 +267,9 @@ describe("PluginManagerProvider", () => {
 			return (
 				<div>
 					<button
-						onClick={() => downloadPlugin("test-plugin", "https://github.com/arkecosystem/test-plugin")}
+						onClick={() =>
+							downloadPlugin({ id: "test-plugin" }, "https://github.com/arkecosystem/test-plugin")
+						}
 					>
 						Fetch
 					</button>
@@ -325,7 +375,48 @@ describe("PluginManagerProvider", () => {
 					<button onClick={onClick}>Click</button>
 					<ul>
 						{pluginDatas.map((package_) => (
-							<li key={package_.id}>{package_.hasUpdateAvailable ? "Update Available" : "No"}</li>
+							<li key={package_.id}>{package_.updateStatus.isAvailable ? "Update Available" : "No"}</li>
+						))}
+					</ul>
+				</div>
+			);
+		};
+
+		render(
+			<EnvironmentProvider env={env}>
+				<PluginManagerProvider manager={manager} services={[]}>
+					<Component />
+				</PluginManagerProvider>
+			</EnvironmentProvider>,
+		);
+
+		fireEvent.click(screen.getByText("Click"));
+
+		await waitFor(() => expect(screen.getByText("Update Available")).toBeInTheDocument());
+	});
+
+	it("should check if plugin update is available for plugin without minimum version", async () => {
+		const plugin = new PluginController(
+			{
+				"desktop-wallet": { minimumVersion: "0.0.0" },
+				name: "@payvo/ark-explorer-wallet-plugin",
+				version: "0.0.1",
+			},
+			() => void 0,
+		);
+		manager.plugins().push(plugin);
+
+		const Component = () => {
+			const { fetchPluginPackages, allPlugins, mapConfigToPluginData } = usePluginManagerContext();
+			const onClick = () => fetchPluginPackages();
+			const pluginDatas = allPlugins.map(mapConfigToPluginData.bind(null, profile));
+
+			return (
+				<div>
+					<button onClick={onClick}>Click</button>
+					<ul>
+						{pluginDatas.map((package_) => (
+							<li key={package_.id}>{package_.updateStatus.isAvailable ? "Update Available" : "No"}</li>
 						))}
 					</ul>
 				</div>
@@ -397,25 +488,30 @@ describe("PluginManagerProvider", () => {
 				fetchPluginPackages,
 				allPlugins,
 				updatePlugin,
-				hasUpdateAvailable,
+				checkUpdateStatus,
 				updatingStats,
 			} = usePluginManagerContext();
 			const onClick = () => fetchPluginPackages();
+
 			return (
 				<div>
 					<button onClick={onClick}>Fetch</button>
 					<ul>
-						{allPlugins.map((package_) => (
-							<li key={package_.name()}>
-								<span>{package_.name()}</span>
-								{updatingStats[package_.name()]?.completed ? (
-									<span>Update Completed</span>
-								) : hasUpdateAvailable(package_.id()) ? (
-									<span>Update Available</span>
-								) : null}
-								<button onClick={() => updatePlugin(package_.name())}>Update</button>
-							</li>
-						))}
+						{allPlugins.map((package_) => {
+							const updateStatus = checkUpdateStatus(package_.id());
+
+							return (
+								<li key={package_.name()}>
+									<span>{package_.name()}</span>
+									{updatingStats[package_.name()]?.completed ? (
+										<span>Update Completed</span>
+									) : updateStatus.isAvailable ? (
+										<span>Update Available</span>
+									) : null}
+									<button onClick={() => updatePlugin({ id: package_.name() })}>Update</button>
+								</li>
+							);
+						})}
 					</ul>
 				</div>
 			);
@@ -490,27 +586,34 @@ describe("PluginManagerProvider", () => {
 				fetchPluginPackages,
 				allPlugins,
 				updatePlugin,
-				hasUpdateAvailable,
+				checkUpdateStatus,
 				updatingStats,
 			} = usePluginManagerContext();
 			const onClick = () => fetchPluginPackages();
+
 			return (
 				<div>
 					<button onClick={onClick}>Fetch</button>
 					<ul>
-						{allPlugins.map((package_) => (
-							<li key={package_.name()}>
-								<span>{package_.name()}</span>
-								{updatingStats[package_.name()]?.failed ? (
-									<span>Updated failed</span>
-								) : (
-									<>
-										{hasUpdateAvailable(package_.id()) ? <span>Update Available</span> : null}
-										<button onClick={() => updatePlugin(package_.name())}>Update</button>
-									</>
-								)}
-							</li>
-						))}
+						{allPlugins.map((package_) => {
+							const updateStatus = checkUpdateStatus(package_.id());
+
+							return (
+								<li key={package_.name()}>
+									<span>{package_.name()}</span>
+									{updatingStats[package_.name()]?.failed ? (
+										<span>Updated failed</span>
+									) : (
+										<>
+											{updateStatus.isAvailable ? <span>Update Available</span> : null}
+											<button onClick={() => updatePlugin({ id: package_.name() })}>
+												Update
+											</button>
+										</>
+									)}
+								</li>
+							);
+						})}
 					</ul>
 				</div>
 			);

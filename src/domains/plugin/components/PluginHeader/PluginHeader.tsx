@@ -1,9 +1,11 @@
+import { Badge } from "app/components/Badge";
 import { Button } from "app/components/Button";
 import { Divider } from "app/components/Divider";
 import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
+import { PluginUpdateStatus } from "plugins/types";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -22,7 +24,7 @@ interface Properties {
 	isInstalled?: boolean;
 	isOfficial?: boolean;
 	isEnabled?: boolean;
-	hasUpdateAvailable?: boolean;
+	updateStatus: PluginUpdateStatus;
 	isCompatible?: boolean;
 	onReport?: () => void;
 	onInstall?: () => void;
@@ -54,9 +56,9 @@ export const PluginHeader = ({
 	const actions = useMemo(() => {
 		const result: DropdownOption[] = [];
 
-		if (properties.hasUpdateAvailable) {
+		if (properties.updateStatus.isAvailable) {
 			result.push({
-				disabled: properties.isCompatible === false,
+				disabled: !properties.updateStatus.isCompatible,
 				label: t("COMMON.UPDATE"),
 				value: "update",
 			});
@@ -91,14 +93,26 @@ export const PluginHeader = ({
 
 					<Dropdown
 						toggleContent={
-							<Button
-								data-testid="PluginHeader__dropdown-toggle"
-								variant="secondary"
-								size="icon"
-								className="text-left"
-							>
-								<Icon name="Settings" size="lg" />
-							</Button>
+							<div className="relative">
+								{properties.updateStatus.isAvailable && (
+									<Tooltip content={t("PLUGINS.NEW_VERSION_AVAILABLE")}>
+										<Badge
+											data-testid="PluginHeader__update-badge"
+											size="sm"
+											className="bg-theme-danger-500"
+											position="top-right"
+										/>
+									</Tooltip>
+								)}
+								<Button
+									data-testid="PluginHeader__dropdown-toggle"
+									variant="secondary"
+									size="icon"
+									className="text-left"
+								>
+									<Icon name="Settings" size="lg" />
+								</Button>
+							</div>
 						}
 						options={actions}
 						onSelect={(option: any) => {

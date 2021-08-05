@@ -27,6 +27,7 @@ jest.mock("electron", () => {
 		},
 		remote: {
 			app: {
+				getVersion: () => "1.0.0",
 				isPackaged: true,
 			},
 			dialog: {

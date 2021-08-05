@@ -90,7 +90,7 @@ exports[`PluginInfo should open and close the plugin permissions modal 1`] = `
         </span>
       </p>
       <button
-        class="link"
+        class="font-semibold link"
         data-testid="plugin-info__view-permissions"
       >
         View All
@@ -174,7 +174,7 @@ exports[`PluginInfo should render properly 1`] = `
         </span>
       </p>
       <button
-        class="link"
+        class="font-semibold link"
         data-testid="plugin-info__view-permissions"
       >
         View All

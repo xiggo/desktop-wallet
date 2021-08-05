@@ -1,14 +1,20 @@
-import { semver, uniqBy } from "@arkecosystem/utils";
+import { uniqBy } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { httpClient, toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import { PluginConfigurationData } from "plugins/core/configuration";
 import { PluginLoaderFileSystem } from "plugins/loader/fs";
-import { PluginService } from "plugins/types";
+import {
+	ExtendedSerializedPluginConfigurationData,
+	PluginService,
+	PluginUpdateStatus,
+	SerializedPluginConfigurationData,
+} from "plugins/types";
 import prettyBytes from "pretty-bytes";
 import React, { useCallback, useMemo, useState } from "react";
-import { openExternal } from "utils/electron-utils";
+import semver from "semver";
+import { appVersion, openExternal } from "utils/electron-utils";
 
 import { PluginController, PluginManager } from "../core";
 
@@ -121,6 +127,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 			.filter((config) => !!config.sourceProvider())
 			.map((config) =>
 				PluginConfigurationData.make({
+					archiveUrl: config.archiveUrl(),
 					author: config.author(),
 					date: config.date(),
 					description: config.description(),
@@ -179,44 +186,63 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 	const searchResults = useMemo(() => filterPackages(allPlugins), [filterPackages, allPlugins]);
 
-	const hasUpdateAvailable = useCallback(
-		(pluginId: string) => {
+	const checkUpdateStatus = useCallback(
+		(pluginId: string): PluginUpdateStatus => {
 			const localPlugin = pluginManager.plugins().findById(pluginId);
 
 			if (!localPlugin) {
-				return false;
+				return {};
 			}
 
 			const remotePackage = pluginPackages.find((remote) => remote.id() === pluginId);
 
 			if (!remotePackage) {
-				return false;
+				return {};
 			}
 
-			return semver.isGreaterThan(remotePackage.version(), localPlugin.config().version());
+			let status: PluginUpdateStatus = {
+				isAvailable: semver.gt(remotePackage.version(), localPlugin.config().version()),
+			};
+
+			if (status.isAvailable) {
+				const validMinimumVersion = semver.valid(remotePackage.minimumVersion())
+					? semver.coerce(remotePackage.minimumVersion())!.version
+					: "0.0.0";
+
+				status = {
+					...status,
+					isCompatible: semver.gte(appVersion(), validMinimumVersion),
+					minimumVersion: validMinimumVersion,
+				};
+			}
+
+			return status;
 		},
 		[pluginManager, pluginPackages],
 	);
 
 	const downloadPlugin = useCallback(
-		async (name: string, repositoryURL?: string) => {
-			let realRepositoryURL = repositoryURL;
+		async (plugin: SerializedPluginConfigurationData, repositoryURL?: string) => {
+			let url = plugin.archiveUrl;
 
 			/* istanbul ignore next */
-			if (!realRepositoryURL) {
-				const config = pluginPackages.find((package_) => package_.name() === name);
-				const source = config?.get<{ url: string }>("sourceProvider");
+			if (!url) {
+				let realRepositoryURL = repositoryURL;
 
-				if (!source?.url) {
-					throw new Error(`The repository of the plugin "${name}" could not be found.`);
+				/* istanbul ignore next */
+				if (!realRepositoryURL) {
+					const config = pluginPackages.find((pkg) => pkg.name() === plugin.id);
+					const source = config?.get<{ url: string }>("sourceProvider");
+					if (!source?.url) {
+						throw new Error(`The repository of the plugin "${plugin.name}" could not be found.`);
+					}
+					realRepositoryURL = source.url;
 				}
 
-				realRepositoryURL = source.url;
+				url = `${realRepositoryURL}/archive/master.zip`;
 			}
 
-			const archiveUrl = `${realRepositoryURL}/archive/master.zip`;
-
-			return await ipcRenderer.invoke("plugin:download", { name, url: archiveUrl });
+			return await ipcRenderer.invoke("plugin:download", { name: plugin.id, url });
 		},
 		[pluginPackages],
 	);
@@ -246,28 +272,29 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 			return { ...previous, configurations: merged };
 		});
 
-		return configData.id();
+		return configData;
 	}, []);
 
 	const mapConfigToPluginData = useCallback(
-		(profile: Contracts.IProfile, config: PluginConfigurationData) => {
+		(profile: Contracts.IProfile, config: PluginConfigurationData): ExtendedSerializedPluginConfigurationData => {
 			const localPlugin = pluginManager.plugins().findById(config.id());
+
 			return {
 				...config.toObject(),
 				hasLaunch: !!localPlugin?.hooks().hasCommand("service:launch.render"),
-				hasUpdateAvailable: hasUpdateAvailable(config.id()),
 				isEnabled: !!localPlugin?.isEnabled(profile),
 				isInstalled: !!localPlugin,
+				updateStatus: checkUpdateStatus(config.id()),
 			};
 		},
-		[hasUpdateAvailable, pluginManager],
+		[checkUpdateStatus, pluginManager],
 	);
 
 	const updatePlugin = useCallback(
-		async (name: string) => {
+		async (pluginData: SerializedPluginConfigurationData) => {
 			// @ts-ignore
-			const listener = (_, value: any) => {
-				if (value.name !== name) {
+			const listener = (_, value: SerializedPluginConfigurationData) => {
+				if (value.name !== pluginData.id) {
 					return;
 				}
 				setUpdatingStats((previous) => ({ ...previous, [value.name]: value }));
@@ -275,17 +302,20 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 			ipcRenderer.on("plugin:download-progress", listener);
 
-			setUpdatingStats((previous) => ({ ...previous, [name]: { percent: 0 } }));
+			setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { percent: 0 } }));
 
 			try {
-				const savedPath = await downloadPlugin(name);
-				await installPlugin(savedPath, name);
+				const savedPath = await downloadPlugin(pluginData);
+				await installPlugin(savedPath, pluginData.id);
 
 				setTimeout(() => {
-					setUpdatingStats((previous) => ({ ...previous, [name]: { completed: true, failed: false } }));
+					setUpdatingStats((previous) => ({
+						...previous,
+						[pluginData.id]: { completed: true, failed: false },
+					}));
 				}, 1500);
 			} catch {
-				setUpdatingStats((previous) => ({ ...previous, [name]: { failed: true } }));
+				setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { failed: true } }));
 			} finally {
 				ipcRenderer.removeListener("plugin:download-progress", listener);
 			}
@@ -311,6 +341,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 	return {
 		allPlugins,
+		checkUpdateStatus,
 		deletePlugin,
 		downloadPlugin,
 		fetchLatestPackageConfiguration,
@@ -321,7 +352,6 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		},
 		filters,
 		hasFilters,
-		hasUpdateAvailable,
 		installPlugin,
 		isFetchingPackages,
 		loadPlugins,

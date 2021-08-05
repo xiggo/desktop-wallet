@@ -15,6 +15,9 @@ const plugins = [
 		isOfficial: true,
 		size: "4.2 MB",
 		title: "ARK Explorer",
+		updateStatus: {
+			isAvailable: false,
+		},
 		version: "1.3.8",
 	},
 	{
@@ -24,6 +27,9 @@ const plugins = [
 		isInstalled: true,
 		size: "163 KB",
 		title: "ARK Avatars",
+		updateStatus: {
+			isAvailable: false,
+		},
 		version: "1.3.8",
 	},
 	{
@@ -34,6 +40,9 @@ const plugins = [
 		isInstalled: true,
 		size: "163 KB",
 		title: "ARK Theme",
+		updateStatus: {
+			isAvailable: false,
+		},
 		version: "1.3.8",
 	},
 ];
@@ -57,6 +66,9 @@ describe("PluginGrid", () => {
 				isInstalled: true,
 				size: "163 KB",
 				title: "Drakula Theme",
+				updateStatus: {
+					isAvailable: false,
+				},
 				version: "1.3.8",
 			},
 			{
@@ -67,6 +79,9 @@ describe("PluginGrid", () => {
 				isInstalled: true,
 				size: "163 KB",
 				title: "Avfc Theme",
+				updateStatus: {
+					isAvailable: false,
+				},
 				version: "1.3.8",
 			},
 			{
@@ -77,6 +92,9 @@ describe("PluginGrid", () => {
 				isInstalled: true,
 				size: "163 KB",
 				title: "Red snow theme",
+				updateStatus: {
+					isAvailable: false,
+				},
 				version: "1.3.8",
 			},
 		];
@@ -166,7 +184,16 @@ describe("PluginGrid", () => {
 
 		render(
 			<PluginGrid
-				plugins={[{ ...plugins[0], hasUpdateAvailable: true, isInstalled: true }]}
+				plugins={[
+					{
+						...plugins[0],
+						isInstalled: true,
+						updateStatus: {
+							isAvailable: true,
+							isCompatible: true,
+						},
+					},
+				]}
 				onSelect={jest.fn()}
 				onUpdate={onUpdate}
 			/>,
@@ -183,7 +210,16 @@ describe("PluginGrid", () => {
 
 		const { container } = render(
 			<PluginGrid
-				plugins={[{ ...plugins[0], hasUpdateAvailable: true, isInstalled: true }]}
+				plugins={[
+					{
+						...plugins[0],
+						isInstalled: true,
+						updateStatus: {
+							isAvailable: true,
+							isCompatible: true,
+						},
+					},
+				]}
 				onSelect={jest.fn()}
 				onUpdate={onUpdate}
 			/>,

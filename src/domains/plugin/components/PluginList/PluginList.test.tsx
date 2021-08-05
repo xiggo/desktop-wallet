@@ -14,6 +14,9 @@ const plugins = [
 		rating: 4.2,
 		size: "4.2 MB",
 		title: "ARK Explorer",
+		updateStatus: {
+			isAvailable: false,
+		},
 		version: "1.3.8",
 	},
 	{
@@ -24,6 +27,9 @@ const plugins = [
 		rating: 3.8,
 		size: "163 KB",
 		title: "ARK Avatars",
+		updateStatus: {
+			isAvailable: false,
+		},
 		version: "1.3.8",
 	},
 ];
@@ -39,6 +45,9 @@ describe("PluginList", () => {
 				isInstalled: true,
 				size: "163 KB",
 				title: "Drakula Theme",
+				updateStatus: {
+					isAvailable: false,
+				},
 				version: "1.3.8",
 			},
 			{
@@ -49,6 +58,9 @@ describe("PluginList", () => {
 				isInstalled: true,
 				size: "163 KB",
 				title: "Avfc Theme",
+				updateStatus: {
+					isAvailable: false,
+				},
 				version: "1.3.8",
 			},
 			{
@@ -59,6 +71,9 @@ describe("PluginList", () => {
 				isInstalled: true,
 				size: "163 KB",
 				title: "Red snow theme",
+				updateStatus: {
+					isAvailable: false,
+				},
 				version: "1.3.8",
 			},
 		];

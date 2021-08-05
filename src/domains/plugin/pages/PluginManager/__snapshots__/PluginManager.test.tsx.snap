@@ -9771,7 +9771,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                           <span
                             class="truncate w-30"
                           >
-                            0.0.0
+                            0.0.1
                           </span>
                         </div>
                       </td>

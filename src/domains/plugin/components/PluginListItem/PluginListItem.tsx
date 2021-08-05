@@ -94,7 +94,7 @@ export const PluginListItem = ({
 
 					{renderPluginIcon({ isOfficial: plugin.isOfficial })}
 
-					{plugin.hasUpdateAvailable && plugin.isCompatible === false && (
+					{plugin.updateStatus.isAvailable && !plugin.updateStatus.isCompatible && (
 						<Tooltip
 							content={t("PLUGINS.MINIMUM_VERSION_NOT_SATISFIED", {
 								minimumVersion: plugin.minimumVersion,

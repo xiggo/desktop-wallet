@@ -4,7 +4,11 @@ import { render } from "testing-library";
 
 import { ExchangeCard } from "./ExchangeCard";
 
-const exchange = { id: "test-exchange", title: "Test Exchange" };
+const exchange = {
+	id: "test-exchange",
+	title: "Test Exchange",
+	updateStatus: {},
+};
 
 describe("ExchangeCard", () => {
 	it("should render", async () => {

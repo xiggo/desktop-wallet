@@ -50,9 +50,9 @@ const PluginMenu = ({ plugin, onDelete, onEnable, onDisable, onUpdate }: any) =>
 	const actions = useMemo(() => {
 		const result: DropdownOption[] = [];
 
-		if (plugin.hasUpdateAvailable) {
+		if (plugin.updateStatus.isAvailable) {
 			result.push({
-				disabled: plugin.isCompatible === false,
+				disabled: !plugin.updateStatus.isCompatible,
 				label: t("COMMON.UPDATE"),
 				value: "update",
 			});
@@ -73,7 +73,7 @@ const PluginMenu = ({ plugin, onDelete, onEnable, onDisable, onUpdate }: any) =>
 		<Dropdown
 			toggleContent={
 				<div className="relative">
-					{plugin.hasUpdateAvailable && (
+					{plugin.updateStatus.isAvailable && (
 						<Tooltip content={t("PLUGINS.NEW_VERSION_AVAILABLE")}>
 							<Badge
 								data-testid="PluginListItem__update-badge"

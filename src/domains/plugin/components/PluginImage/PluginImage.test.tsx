@@ -45,7 +45,7 @@ describe("PluginImage", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.each(["xs", "sm", "md", "lg"])("should render with size '%s'", () => {
+	it.each(["2xs", "xs", "sm", "md", "lg"])("should render with size '%s'", () => {
 		const { container } = render(<PluginImage />);
 
 		expect(screen.getByTestId("PluginImage")).toHaveTextContent("plugin-logo-placeholder.svg");

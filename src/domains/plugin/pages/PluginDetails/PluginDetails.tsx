@@ -121,7 +121,8 @@ export const PluginDetails = () => {
 					onInstall={() => setIsInstallOpen(true)}
 					onEnable={handleEnable}
 					onDisable={handleDisable}
-					onUpdate={() => updatePlugin(pluginData.name)}
+					onUpdate={() => updatePlugin(pluginData)}
+					updateStatus={pluginData.updateStatus || {}}
 					updatingStats={updatingStats?.[pluginData.name]}
 					hasLaunch={hasLaunch}
 					onLaunch={handleLaunch}

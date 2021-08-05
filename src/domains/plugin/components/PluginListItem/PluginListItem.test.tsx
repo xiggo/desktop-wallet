@@ -13,6 +13,9 @@ describe("PluginListItem", () => {
 			isInstalled: false,
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: false,
+			},
 			version: "1.3.8",
 		};
 
@@ -36,6 +39,10 @@ describe("PluginListItem", () => {
 			isInstalled: false,
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: true,
+			},
 			version: "1.3.8",
 		};
 
@@ -59,11 +66,14 @@ describe("PluginListItem", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			hasUpdateAvailable: true,
 			id: "ark-explorer",
 			isInstalled: true,
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: true,
+			},
 			version: "1.3.8",
 		};
 
@@ -93,6 +103,9 @@ describe("PluginListItem", () => {
 			isInstalled: true,
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: false,
+			},
 			version: "1.3.8",
 		};
 
@@ -120,6 +133,9 @@ describe("PluginListItem", () => {
 			isInstalled: true,
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: false,
+			},
 			version: "1.3.8",
 		};
 
@@ -146,6 +162,9 @@ describe("PluginListItem", () => {
 			id: "ark-explorer",
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: false,
+			},
 			version: "1.3.8",
 		};
 
@@ -173,6 +192,9 @@ describe("PluginListItem", () => {
 			isInstalled: true,
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: false,
+			},
 			version: "1.3.8",
 		};
 
@@ -202,6 +224,9 @@ describe("PluginListItem", () => {
 			isInstalled: true,
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: false,
+			},
 			version: "1.3.8",
 		};
 
@@ -223,13 +248,17 @@ describe("PluginListItem", () => {
 	it("should render minimum version warning", () => {
 		const plugin = {
 			category: "utility",
-			hasUpdateAvailable: true,
 			id: "ark-explorer",
-			isCompatible: false,
+			isCompatible: true,
 			isInstalled: true,
 			name: "ARK Explorer",
 			size: "4.2 MB",
 			title: "ARK.io",
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: false,
+				minimumVersion: "100.0.0",
+			},
 			version: "1.3.8",
 		};
 
@@ -253,6 +282,9 @@ describe("PluginListItem", () => {
 			isOfficial: true,
 			size: "4.2 MB",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: false,
+			},
 			version: "1.3.8",
 		};
 

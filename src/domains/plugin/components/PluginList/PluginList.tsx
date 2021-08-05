@@ -29,7 +29,7 @@ export const PluginList = ({
 	itemsPerPage = 10,
 	plugins,
 	showCategory,
-	showPagination,
+	showPagination = true,
 	updatingStats,
 	onClick,
 	onDelete,
@@ -117,8 +117,8 @@ export const PluginList = ({
 						onEnable={onEnable}
 						onDisable={onDisable}
 						onUpdate={onUpdate}
-						isUpdating={updatingStats?.[plugin.name]?.percent !== undefined}
-						updatingProgress={updatingStats?.[plugin.name]?.percent}
+						isUpdating={plugin && updatingStats?.[plugin.id]?.percent !== undefined}
+						updatingProgress={plugin && updatingStats?.[plugin.id]?.percent}
 						showCategory={showCategory}
 					/>
 				)}
@@ -136,8 +136,4 @@ export const PluginList = ({
 			)}
 		</div>
 	);
-};
-
-PluginList.defaultProps = {
-	showPagination: true,
 };

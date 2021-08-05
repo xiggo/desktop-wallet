@@ -1,6 +1,6 @@
 import electron from "electron";
 
-import { isIdle, openExternal, saveFile, setScreenshotProtection, setThemeSource } from "./electron-utils";
+import { appVersion, isIdle, openExternal, saveFile, setScreenshotProtection, setThemeSource } from "./electron-utils";
 
 const defaultFilters = [
 	{ extensions: ["json"], name: "JSON" },
@@ -82,6 +82,22 @@ describe("Electron utils", () => {
 			expect(setContentProtectionMock).toHaveBeenNthCalledWith(1, false);
 
 			setContentProtectionMock.mockRestore();
+
+			process.env.ELECTRON_IS_DEV = undefined;
+		});
+	});
+
+	describe("appVersion", () => {
+		it("should return the current app version", () => {
+			process.env.ELECTRON_IS_DEV = "1";
+
+			expect(appVersion()).toBe("1.0.0");
+
+			process.env.ELECTRON_IS_DEV = undefined;
+		});
+
+		it("should return the current app version in development mode", () => {
+			expect(appVersion()).toBe("1.0.0");
 		});
 	});
 

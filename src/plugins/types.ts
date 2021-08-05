@@ -82,3 +82,38 @@ export interface PluginService {
 	api: (plugin: PluginController) => Record<string, Function>;
 	boot?: (context: { hooks: PluginHooks }) => void;
 }
+
+export interface PluginUpdateStatus {
+	isAvailable?: boolean;
+	isCompatible?: boolean;
+	minimumVersion?: string;
+}
+
+export interface SerializedPluginConfigurationData {
+	archiveUrl?: string;
+	author: string;
+	categories: string[];
+	category: string;
+	date?: string;
+	description?: string;
+	homepage?: string;
+	id: string;
+	images: string[];
+	isCompatible: boolean;
+	isOfficial: boolean;
+	logo?: string;
+	minimumVersion?: string;
+	name: string;
+	permissions: string[];
+	size: string;
+	title?: string;
+	url?: string;
+	version: string;
+}
+
+export type ExtendedSerializedPluginConfigurationData = {
+	hasLaunch: boolean;
+	isEnabled: boolean;
+	isInstalled: boolean;
+	updateStatus: PluginUpdateStatus;
+} & SerializedPluginConfigurationData;

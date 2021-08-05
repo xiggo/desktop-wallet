@@ -29,10 +29,14 @@ describe("PluginLoaderFileSystem", () => {
 		pathSpy.mockRestore();
 	});
 
+	it("should find source directory", () => {
+		expect(subject.find("src/tests/fixtures/plugins/packages/plugin-test-custom-button")).not.toBeUndefined();
+	});
+
 	it("should remove a valid folder", () => {
 		const fsExtra = require("fs-extra");
 		const removeMock = jest.spyOn(fsExtra, "remove").mockImplementation();
-		subject.remove(path.resolve("src/tests/fixtures/plugins/packages/plugin-test-custom-buttom"));
+		subject.remove(path.resolve("src/tests/fixtures/plugins/packages/plugin-test-custom-button"));
 
 		expect(removeMock).toHaveBeenCalled();
 	});
@@ -41,8 +45,8 @@ describe("PluginLoaderFileSystem", () => {
 		const fsExtra = require("fs-extra");
 		jest.spyOn(fsExtra, "remove").mockImplementation();
 
-		await expect(subject.remove(path.resolve("/etc/plugins/plugin-test-custom-buttom"))).rejects.toMatch(
-			"The dir /etc/plugins/plugin-test-custom-buttom cannot be removed.",
+		await expect(subject.remove(path.resolve("/etc/plugins/plugin-test-custom-button"))).rejects.toMatch(
+			"The dir /etc/plugins/plugin-test-custom-button cannot be removed.",
 		);
 	});
 });

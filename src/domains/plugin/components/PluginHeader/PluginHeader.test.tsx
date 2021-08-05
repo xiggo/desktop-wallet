@@ -10,6 +10,9 @@ describe("PluginHeader", () => {
 		category: "Utility",
 		size: "4.2 Mb",
 		title: "Test Plugin",
+		updateStatus: {
+			isAvailable: false,
+		},
 		url: "https://github.com/arkecosystem",
 		version: "1.3.8",
 	};
@@ -37,7 +40,17 @@ describe("PluginHeader", () => {
 	it("should trigger update", () => {
 		const onUpdate = jest.fn();
 
-		render(<PluginHeader {...pluginDataFixture} isInstalled hasUpdateAvailable onUpdate={onUpdate} />);
+		render(
+			<PluginHeader
+				{...pluginDataFixture}
+				updateStatus={{
+					isAvailable: true,
+					isCompatible: true,
+				}}
+				isInstalled
+				onUpdate={onUpdate}
+			/>,
+		);
 
 		fireEvent.click(screen.getByTestId("PluginHeader__dropdown-toggle"));
 		fireEvent.click(screen.getByText(commonTranslations.UPDATE));

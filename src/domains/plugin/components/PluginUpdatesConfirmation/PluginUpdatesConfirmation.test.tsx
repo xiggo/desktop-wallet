@@ -8,12 +8,20 @@ describe("Plugin Updates Confirmation", () => {
 		{
 			isOfficial: true,
 			logo: "https://payvo.com/logo.png",
-			minimumVersion: "3.0.5",
 			title: "ARK Explorer",
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: true,
+				minimumVersion: "3.0.5",
+			},
 		},
 		{
-			minimumVersion: "3.1.0",
 			title: "Animal Avatars",
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: false,
+				minimumVersion: "3.1.0",
+			},
 		},
 	];
 

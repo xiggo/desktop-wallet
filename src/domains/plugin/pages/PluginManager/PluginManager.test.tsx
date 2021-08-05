@@ -41,7 +41,7 @@ const Component = () => {
 };
 
 describe("PluginManager", () => {
-	beforeEach(async () => {
+	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		history.push(pluginsURL);
 	});
@@ -506,7 +506,8 @@ describe("PluginManager", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
 				name: "@dated/delegate-calculator-wallet-plugin",
-				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
+				url:
+					"https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
 			}),
 		);
 
@@ -545,7 +546,8 @@ describe("PluginManager", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
 				name: "@dated/delegate-calculator-wallet-plugin",
-				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
+				url:
+					"https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
 			}),
 		);
 
@@ -575,6 +577,44 @@ describe("PluginManager", () => {
 
 		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/plugins/details`);
 		expect(history.location.search).toEqual("?pluginId=@dated/delegate-calculator-wallet-plugin");
+	});
+
+	it("should open the plugin view page", async () => {
+		const plugin = new PluginController(
+			{ "desktop-wallet": { permissions: ["LAUNCH"] }, name: "test-plugin" },
+			(api) => api.launch().render(<h1>My Plugin View</h1>),
+		);
+
+		pluginManager.services().register([new LaunchPluginService()]);
+		pluginManager.plugins().push(plugin);
+
+		plugin.enable(profile, { autoRun: true });
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/plugins">
+				<Component />
+			</Route>,
+			{
+				history,
+				routes: [pluginsURL],
+			},
+		);
+
+		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
+		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+
+		const historySpy = jest.spyOn(history, "push").mockImplementation();
+
+		fireEvent.click(screen.getByTestId("PluginListItem__launch"));
+
+		const redirectUrl = `/profiles/${profile.id()}/plugins/view?pluginId=test-plugin`;
+		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(redirectUrl));
+
+		plugin.disable(profile);
+
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
+
+		historySpy.mockRestore();
 	});
 
 	it("should enable plugin on my-plugins", async () => {
@@ -689,7 +729,7 @@ describe("PluginManager", () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockRejectedValue("Failed");
 
 		const plugin = new PluginController(
-			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.1" },
+			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
 			() => void 0,
 		);
 		pluginManager.plugins().push(plugin);
@@ -760,12 +800,13 @@ describe("PluginManager", () => {
 
 		expect(() => screen.getByTestId("PluginUninstallConfirmation")).toThrow(/Unable to find an element by/);
 
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
+
 		invokeMock.mockRestore();
 	});
 
 	it("should delete plugin on my-plugins", async () => {
 		const onEnabled = jest.fn();
-		pluginManager.plugins().removeById("test-plugin", profile);
 
 		const plugin = new PluginController({ name: "test-plugin" }, onEnabled);
 		pluginManager.plugins().push(plugin);
@@ -802,44 +843,6 @@ describe("PluginManager", () => {
 		invokeMock.mockRestore();
 	});
 
-	it("should open the plugin view page", async () => {
-		const plugin = new PluginController(
-			{ "desktop-wallet": { permissions: ["LAUNCH"] }, name: "test-plugin" },
-			(api) => api.launch().render(<h1>My Plugin View</h1>),
-		);
-
-		pluginManager.services().register([new LaunchPluginService()]);
-		pluginManager.plugins().push(plugin);
-
-		plugin.enable(profile, { autoRun: true });
-
-		renderWithRouter(
-			<Route path="/profiles/:profileId/plugins">
-				<Component />
-			</Route>,
-			{
-				history,
-				routes: [pluginsURL],
-			},
-		);
-
-		act(() => {
-			fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		});
-		act(() => {
-			fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
-		});
-
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
-
-		fireEvent.click(screen.getByTestId("PluginListItem__launch"));
-
-		const redirectUrl = `/profiles/${profile.id()}/plugins/view?pluginId=test-plugin`;
-		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(redirectUrl));
-
-		historySpy.mockRestore();
-	});
-
 	it("should show update all banner", async () => {
 		const plugin = new PluginController(
 			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
@@ -861,12 +864,13 @@ describe("PluginManager", () => {
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
 		await waitFor(() => expect(screen.getByTestId("PluginManager__update-all")).toBeInTheDocument());
+
+		expect(screen.getByTestId("PluginManager__update-all")).not.toBeDisabled();
+
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should show and close the update confirmation modal", async () => {
-		process.env.REACT_APP_PLUGIN_MINIMUM_VERSION = "100.0.0";
-
 		const plugin = new PluginController(
 			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
 			() => void 0,
@@ -888,23 +892,22 @@ describe("PluginManager", () => {
 
 		await waitFor(() => expect(screen.getByTestId("PluginManager__update-all")).toBeInTheDocument());
 
+		expect(screen.getByTestId("PluginManager__update-all")).not.toBeDisabled();
+
 		fireEvent.click(screen.getByTestId("PluginManager__update-all"));
 
 		await waitFor(() => expect(screen.getByTestId("PluginUpdatesConfirmation")).toBeInTheDocument());
 
-		expect(screen.getByText("100.0.0")).toBeInTheDocument();
+		expect(screen.getByText("1.0.0")).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("PluginUpdates__cancel-button"));
 
 		expect(() => screen.getByTestId("PluginUpdatesConfirmation")).toThrow(/Unable to find an element by/);
 
-		process.env.REACT_APP_PLUGIN_MINIMUM_VERSION = undefined;
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should show and continue the update confirmation modal", async () => {
-		process.env.REACT_APP_PLUGIN_MINIMUM_VERSION = "100.0.0";
-
 		let downloadsCount = 0;
 		let installCount = 0;
 
@@ -952,12 +955,41 @@ describe("PluginManager", () => {
 
 		await waitFor(() => expect(screen.getByTestId("PluginUpdatesConfirmation")).toBeInTheDocument());
 
-		expect(screen.getAllByText("100.0.0").length).toBeGreaterThan(0);
+		expect(screen.getAllByText("1.0.0").length).toBeGreaterThan(0);
 
 		fireEvent.click(screen.getByTestId("PluginUpdates__continue-button"));
 
 		await waitFor(() => expect(downloadsCount).toBe(2));
 		await waitFor(() => expect(installCount).toBe(2));
+	});
+
+	it("should show disabled update all banner if all updates are incompatible", async () => {
+		process.env.REACT_APP_PLUGIN_MINIMUM_VERSION = "100.0.0";
+
+		const plugin = new PluginController(
+			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
+			() => void 0,
+		);
+		pluginManager.plugins().push(plugin);
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/plugins">
+				<Component />
+			</Route>,
+			{
+				history,
+				routes: [pluginsURL],
+			},
+		);
+
+		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
+		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+
+		await waitFor(() => expect(screen.getByTestId("PluginManager__update-all")).toBeInTheDocument());
+
+		expect(screen.getByTestId("PluginManager__update-all")).toBeDisabled();
+
+		pluginManager.plugins().removeById(plugin.config().id(), profile);
 
 		process.env.REACT_APP_PLUGIN_MINIMUM_VERSION = undefined;
 	});

@@ -47,7 +47,7 @@ export const PluginView = () => {
 				<div className="flex justify-between items-center">
 					<div className="flex items-center space-x-3">
 						<PluginImage
-							size="xs"
+							size="2xs"
 							logoURL={plugin.config().logo()}
 							isExchange={plugin.config().category() === "exchange"}
 						/>

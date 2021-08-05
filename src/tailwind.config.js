@@ -153,6 +153,7 @@ module.exports = {
 				"8xl": "85rem",
 				32: "8rem",
 				48: "12rem",
+				60: "15rem",
 				72: "18rem",
 				88: "22rem",
 				128: "32rem",

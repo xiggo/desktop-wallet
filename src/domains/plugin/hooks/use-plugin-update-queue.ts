@@ -3,17 +3,19 @@ import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export const usePluginUpdateQueue = () => {
-	const [queue, setQueue] = useState<string[]>([]);
+	const [queue, setQueue] = useState<any[]>([]);
 	const [isUpdating, setIsUpdating] = useState(false);
 	const [isUpdateCompleted, setIsUpdateCompleted] = useState(false);
 	const { updatePlugin } = usePluginManagerContext();
 	const initialQueueReference = useRef<string[]>([]);
 
-	const currentId = queue[0];
+	const currentPlugin = queue[0];
 
-	const startUpdate = (ids: string[]) => {
+	const startUpdate = (plugins: any[]) => {
+		const ids = plugins.map((plugin) => plugin.id);
 		initialQueueReference.current = ids;
-		setQueue(ids);
+
+		setQueue(plugins);
 		setIsUpdating(true);
 		setIsUpdateCompleted(false);
 	};
@@ -23,16 +25,16 @@ export const usePluginUpdateQueue = () => {
 	};
 
 	const update = useCallback(async () => {
-		await updatePlugin(currentId);
+		await updatePlugin(currentPlugin);
 		setTimeout(() => next(), 0);
-	}, [currentId]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [currentPlugin]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const hasUpdateComplete = (id: string) => {
 		return initialQueueReference.current.includes(id) && !hasInUpdateQueue(id);
 	};
 
 	const hasInUpdateQueue = (id: string) => {
-		return queue.includes(id);
+		return !!queue.find((plugin) => plugin.id === id);
 	};
 
 	useEffect(() => {

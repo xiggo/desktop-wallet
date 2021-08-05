@@ -18,7 +18,8 @@ describe("Plugin Update Queue", () => {
 	});
 
 	it("should work properly", async () => {
-		const ids = ["plugin-1", "plugin-2", "plugin-3"];
+		const ids = [{ id: "plugin-1" }, { id: "plugin-2" }, { id: "plugin-3" }];
+
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
 				<PluginManagerProvider services={[]} manager={new PluginManager()}>

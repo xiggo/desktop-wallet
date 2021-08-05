@@ -84,12 +84,12 @@ export const PluginCard = ({
 				onSelect={onSelect}
 				addonIcons={
 					<div className="flex items-center space-x-2">
-						{plugin.hasUpdateAvailable && (
+						{plugin.updateStatus.isAvailable && (
 							<>
-								{plugin.isCompatible === false ? (
+								{!plugin.updateStatus.isCompatible ? (
 									<Tooltip
 										content={t("PLUGINS.MINIMUM_VERSION_NOT_SATISFIED", {
-											minimumVersion: plugin.minimumVersion,
+											minimumVersion: plugin.updateStatus.minimumVersion,
 										})}
 									>
 										<span

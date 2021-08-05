@@ -29,7 +29,7 @@ export const InstallPlugin = ({ isOpen, onClose, onCancel, plugin, repositoryURL
 	const handleDownload = useCallback(async () => {
 		setActiveStep(2);
 		try {
-			const savedPath = await downloadPlugin(plugin.id, repositoryURL);
+			const savedPath = await downloadPlugin(plugin, repositoryURL);
 			setSavedPath(savedPath);
 			setTimeout(() => setActiveStep(3), 500); // Animation delay
 		} catch {

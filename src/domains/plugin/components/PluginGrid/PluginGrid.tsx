@@ -68,9 +68,9 @@ export const PluginGrid = ({
 					result.push({ label: t("COMMON.LAUNCH"), value: "launch" });
 				}
 
-				if (plugin.hasUpdateAvailable) {
+				if (plugin.updateStatus.isAvailable) {
 					result.push({
-						disabled: plugin.isCompatible === false,
+						disabled: !plugin.updateStatus.isCompatible,
 						label: t("COMMON.UPDATE"),
 						value: "update",
 					});
@@ -155,8 +155,8 @@ export const PluginGrid = ({
 						actions={getActions(plugin)}
 						category={category}
 						plugin={plugin}
-						isUpdating={updatingStats?.[plugin.name]?.percent !== undefined}
-						updatingProgress={updatingStats?.[plugin.name]?.percent}
+						isUpdating={plugin && updatingStats?.[plugin.id]?.percent !== undefined}
+						updatingProgress={plugin && updatingStats?.[plugin.id]?.percent}
 						onClick={() => onSelect(plugin)}
 						onSelect={(action: any) => handlePluginAction(plugin, action)}
 					/>

@@ -11,6 +11,7 @@ const basePlugin = {
 	id: "ark-explorer",
 	size: "4.2 MB",
 	title: "ARK Explorer",
+	updateStatus: {},
 	version: "1.3.8",
 };
 
@@ -71,9 +72,11 @@ describe("PluginCard", () => {
 	it("should render alert icon", () => {
 		const plugin = {
 			...basePlugin,
-			hasUpdateAvailable: true,
-			isCompatible: false,
 			isInstalled: true,
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: false,
+			},
 		};
 
 		const { asFragment, container } = render(<PluginCard plugin={plugin} />);
@@ -85,8 +88,11 @@ describe("PluginCard", () => {
 	it("should render update icon", () => {
 		const plugin = {
 			...basePlugin,
-			hasUpdateAvailable: true,
 			isInstalled: true,
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: true,
+			},
 		};
 
 		const { asFragment, container } = render(<PluginCard plugin={plugin} />);
@@ -100,8 +106,11 @@ describe("PluginCard", () => {
 
 		const plugin = {
 			...basePlugin,
-			hasUpdateAvailable: true,
 			isInstalled: true,
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: true,
+			},
 		};
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
@@ -119,8 +128,11 @@ describe("PluginCard", () => {
 
 		const plugin = {
 			...basePlugin,
-			hasUpdateAvailable: true,
 			isInstalled: true,
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: true,
+			},
 		};
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
@@ -135,8 +147,11 @@ describe("PluginCard", () => {
 
 		const plugin = {
 			...basePlugin,
-			hasUpdateAvailable: true,
 			isInstalled: true,
+			updateStatus: {
+				isAvailable: true,
+				isCompatible: true,
+			},
 		};
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);

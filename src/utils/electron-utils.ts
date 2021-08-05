@@ -45,6 +45,14 @@ const isDevelopment = () => {
 
 const parseFilters = (filters: FileFilter | FileFilter[]) => (Array.isArray(filters) ? filters : [filters]);
 
+const appVersion = () => {
+	if (isDevelopment()) {
+		return require("../../package.json").version;
+	}
+
+	return electron.remote.app.getVersion();
+};
+
 const saveFile = async (raw: any, defaultPath?: string, options?: DialogOptions) => {
 	const filters = options?.filters ? parseFilters(options.filters) : defaultFilters;
 	const encode = options?.encoding || defaultEncode;
@@ -79,6 +87,7 @@ const openExternal = (value: string) => {
 const isIdle = (idleTreshold: number) => electron.remote.powerMonitor.getSystemIdleTime() >= idleTreshold;
 
 export {
+	appVersion,
 	isDevelopment as isDev,
 	isIdle,
 	openExternal,

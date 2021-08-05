@@ -45,7 +45,7 @@ export const PluginInfo = ({ description, permissions, images, minimumVersion }:
 							<button
 								data-testid="plugin-info__view-permissions"
 								onClick={() => setShowPermissionsModal(true)}
-								className="link"
+								className="font-semibold link"
 							>
 								{t("COMMON.VIEW_ALL")}
 							</button>

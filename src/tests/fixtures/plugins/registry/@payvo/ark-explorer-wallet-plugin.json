@@ -23,8 +23,7 @@
 				"title": "ARK Explorer",
 				"logo": "https://raw.githubusercontent.com/PayvoHQ/wallet-plugins/master/ark-explorer/images/logo.png",
 				"categories": ["utility"],
-				"permissions": ["LAUNCH"],
-				"minimumVersion": "1.0.0"
+				"permissions": ["LAUNCH"]
 			},
 			"keywords": ["utility", "explorer", "@payvo", "wallet-plugin"],
 			"homepage": "https://github.com/PayvoHQ/wallet-plugins/tree/master/ark-explorer",

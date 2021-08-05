@@ -22,6 +22,7 @@ import { PluginUpdatesConfirmation } from "domains/plugin/components/PluginUpdat
 import { usePluginUpdateQueue } from "domains/plugin/hooks/use-plugin-update-queue";
 import { PluginController } from "plugins";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
+import { SerializedPluginConfigurationData } from "plugins/types";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -30,29 +31,33 @@ import { assertPluginController } from "utils/assertions";
 const categories = ["gaming", "utility", "exchange", "other"];
 
 interface LatestPluginsProperties {
+	isLoading?: boolean;
 	onCurrentViewChange: (view: string) => void;
 	onDelete: any;
-	onSelect: (pluginId: string) => void;
-	onEnable: (plugin: any) => void;
 	onDisable: (plugin: any) => void;
+	onEnable: (plugin: any) => void;
 	onInstall: any;
 	onLaunch: (plugin: any) => void;
-	viewType: string;
-	isLoading?: boolean;
+	onSelect: (pluginId: string) => void;
+	onUpdate: (plugin: any) => void;
 	pluginsByCategory: Record<string, any[]>;
+	updatingStats?: any;
+	viewType: string;
 }
 
 const LatestPlugins = ({
+	isLoading,
 	onCurrentViewChange,
 	onDelete,
-	onSelect,
+	onDisable,
+	onEnable,
 	onInstall,
 	onLaunch,
-	viewType,
+	onSelect,
+	onUpdate,
 	pluginsByCategory,
-	onEnable,
-	onDisable,
-	isLoading,
+	updatingStats,
+	viewType,
 }: LatestPluginsProperties) => {
 	const { t } = useTranslation();
 
@@ -61,29 +66,33 @@ const LatestPlugins = ({
 			return (
 				<PluginGrid
 					category={category}
-					plugins={plugins}
-					onSelect={onSelect}
-					onEnable={onEnable}
-					onDisable={onDisable}
+					isLoading={isLoading}
 					onDelete={onDelete}
+					onDisable={onDisable}
+					onEnable={onEnable}
 					onInstall={onInstall}
 					onLaunch={onLaunch}
+					onSelect={onSelect}
+					onUpdate={onUpdate}
+					plugins={plugins}
 					showPagination={false}
-					isLoading={isLoading}
+					updatingStats={updatingStats}
 				/>
 			);
 		}
 
 		return (
 			<PluginList
-				plugins={plugins}
 				onClick={onSelect}
-				onLaunch={onLaunch}
-				onInstall={onInstall}
-				onEnable={onEnable}
-				onDisable={onDisable}
 				onDelete={onDelete}
+				onDisable={onDisable}
+				onEnable={onEnable}
+				onInstall={onInstall}
+				onLaunch={onLaunch}
+				onUpdate={onUpdate}
+				plugins={plugins}
 				showPagination={false}
+				updatingStats={updatingStats}
 			/>
 		);
 	};
@@ -129,12 +138,14 @@ const LatestPlugins = ({
 
 const UpdateAllBanner = ({
 	hasUpdateAvailableCount,
+	hasCompatibleUpdateAvailableCount,
 	isUpdatingAll,
-	handleUpdateAll,
+	onUpdateAll,
 }: {
 	hasUpdateAvailableCount: number;
+	hasCompatibleUpdateAvailableCount: number;
 	isUpdatingAll: boolean;
-	handleUpdateAll: () => void;
+	onUpdateAll: () => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -142,15 +153,24 @@ const UpdateAllBanner = ({
 		return null;
 	}
 
+	const renderText = () => {
+		if (!hasCompatibleUpdateAvailableCount) {
+			return <span>{t("PLUGINS.UPDATE_ALL_NOTICE_INCOMPATIBLE", { count: hasUpdateAvailableCount })}</span>;
+		}
+
+		return <span>{t("PLUGINS.UPDATE_ALL_NOTICE", { count: hasUpdateAvailableCount })}</span>;
+	};
+
 	return (
 		<EmptyBlock size="sm" className="mb-6">
 			<div className="flex justify-between items-center w-full">
-				<span>{t("PLUGINS.UPDATE_ALL_NOTICE", { count: hasUpdateAvailableCount })}</span>
+				{renderText()}
+
 				<Button
-					disabled={isUpdatingAll}
+					disabled={!hasCompatibleUpdateAvailableCount || isUpdatingAll}
 					className="-mr-1"
 					data-testid="PluginManager__update-all"
-					onClick={handleUpdateAll}
+					onClick={onUpdateAll}
 				>
 					{isUpdatingAll ? t("COMMON.UPDATING") : t("PLUGINS.UPDATE_ALL")}
 				</Button>
@@ -192,7 +212,7 @@ export const PluginManager = () => {
 
 	const [isOpenDisclaimer, setIsOpenDisclaimer] = useState(false);
 
-	const [updatesConfirmationPlugins, setUpdatesConfirmationPlugins] = useState<any[] | undefined>(undefined);
+	const [updatesConfirmationPlugins, setUpdatesConfirmationPlugins] = useState<any[]>([]);
 	const [isManualInstallModalOpen, setIsManualInstallModalOpen] = useState(false);
 	const [uninstallSelectedPlugin, setUninstallSelectedPlugin] = useState<PluginController | undefined>(undefined);
 	const [installSelectedPlugin, setInstallSelectedPlugin] = useState<PluginController | undefined>(undefined);
@@ -200,7 +220,23 @@ export const PluginManager = () => {
 	const plugins = allPlugins.map(mapConfigToPluginData.bind(null, activeProfile));
 	const searchResultsData = searchResults.map(mapConfigToPluginData.bind(null, activeProfile));
 
-	const hasUpdateAvailableCount = plugins.filter((item) => item.hasUpdateAvailable).length;
+	const { hasUpdateAvailableCount, hasCompatibleUpdateAvailableCount } = plugins.reduce(
+		(counts, item) => {
+			if (item.updateStatus.isAvailable) {
+				counts.hasUpdateAvailableCount++;
+			}
+
+			if (item.updateStatus.isCompatible) {
+				counts.hasCompatibleUpdateAvailableCount++;
+			}
+
+			return counts;
+		},
+		{
+			hasCompatibleUpdateAvailableCount: 0,
+			hasUpdateAvailableCount: 0,
+		},
+	);
 
 	const pluginsByCategory = useMemo(() => {
 		const result: Record<string, any[]> = {};
@@ -256,7 +292,7 @@ export const PluginManager = () => {
 		}
 	};
 
-	const handleDisablePlugin = async (pluginData: any) => {
+	const handleDisablePlugin = async (pluginData: SerializedPluginConfigurationData) => {
 		const pluginController = pluginManager.plugins().findById(pluginData.id);
 
 		assertPluginController(pluginController);
@@ -265,28 +301,26 @@ export const PluginManager = () => {
 		await persist();
 	};
 
-	const handleDeletePlugin = (pluginData: any) => {
+	const handleDeletePlugin = (pluginData: SerializedPluginConfigurationData) => {
 		setUninstallSelectedPlugin(pluginManager.plugins().findById(pluginData.id));
 	};
 
-	const handleLaunchPlugin = (pluginData: any) => {
+	const handleLaunchPlugin = (pluginData: SerializedPluginConfigurationData) => {
 		history.push(`/profiles/${activeProfile.id()}/plugins/view?pluginId=${pluginData.id}`);
 	};
 
-	const handleManualInstall = (result: { pluginId: string; repositoryURL: string }) => {
+	const handleManualInstall = ({ pluginId, repositoryURL }: { pluginId: string; repositoryURL: string }) => {
 		setIsManualInstallModalOpen(false);
 		history.push(
-			`/profiles/${activeProfile.id()}/plugins/details?pluginId=${result.pluginId}&repositoryURL=${
-				result.repositoryURL
-			}`,
+			`/profiles/${activeProfile.id()}/plugins/details?pluginId=${pluginId}&repositoryURL=${repositoryURL}`,
 		);
 	};
 
-	const handleUpdate = (pluginData: any) => {
-		updatePlugin(pluginData.name);
+	const handleUpdate = (pluginData: SerializedPluginConfigurationData) => {
+		updatePlugin(pluginData);
 	};
 
-	const openInstallPluginModal = (pluginData: any) => {
+	const openInstallPluginModal = (pluginData: PluginController) => {
 		setInstallSelectedPlugin(pluginData);
 	};
 
@@ -330,18 +364,17 @@ export const PluginManager = () => {
 		}
 	}, [currentView, installedPlugins, plugins, filteredPackages, searchResultsData]);
 
-	const onUpdateAll = () => {
-		const notSatisfiedPlugins = plugins.filter((item) => item.hasUpdateAvailable && !item.isCompatible);
-
-		setUpdatesConfirmationPlugins(notSatisfiedPlugins);
+	const handleUpdateAll = () => {
+		const pluginsWithAvailableUpdate = plugins.filter((item) => item.updateStatus.isAvailable);
+		setUpdatesConfirmationPlugins(pluginsWithAvailableUpdate);
 	};
 
-	const handleUpdateAll = () => {
-		setUpdatesConfirmationPlugins(undefined);
+	const handleUpdateConfirmation = () => {
+		const pluginsWithCompatibleUpdate = updatesConfirmationPlugins.filter((item) => item.updateStatus.isCompatible);
 
-		const availablePackages = plugins.filter((pluginData) => pluginData.hasUpdateAvailable);
+		setUpdatesConfirmationPlugins([]);
 
-		startUpdate(availablePackages.map((item) => item.id));
+		startUpdate(pluginsWithCompatibleUpdate);
 	};
 
 	const menu = ["latest", "all", ...categories].map((name: string) => {
@@ -405,6 +438,7 @@ export const PluginManager = () => {
 				{currentView === "latest" && (
 					<LatestPlugins
 						isLoading={isFetchingPackages}
+						updatingStats={updatingStats}
 						viewType={viewType}
 						pluginsByCategory={pluginsByCategory}
 						onCurrentViewChange={setCurrentView}
@@ -414,6 +448,7 @@ export const PluginManager = () => {
 						onDelete={handleDeletePlugin}
 						onSelect={handleSelectPlugin}
 						onLaunch={handleLaunchPlugin}
+						onUpdate={handleUpdate}
 					/>
 				)}
 
@@ -427,8 +462,9 @@ export const PluginManager = () => {
 							{currentView === "my-plugins" && (
 								<UpdateAllBanner
 									hasUpdateAvailableCount={hasUpdateAvailableCount}
+									hasCompatibleUpdateAvailableCount={hasCompatibleUpdateAvailableCount}
 									isUpdatingAll={isUpdatingAll}
-									handleUpdateAll={onUpdateAll}
+									onUpdateAll={handleUpdateAll}
 								/>
 							)}
 
@@ -509,10 +545,10 @@ export const PluginManager = () => {
 			/>
 
 			<PluginUpdatesConfirmation
-				isOpen={!!updatesConfirmationPlugins}
-				plugins={updatesConfirmationPlugins!}
-				onClose={() => setUpdatesConfirmationPlugins(undefined)}
-				onContinue={handleUpdateAll}
+				isOpen={updatesConfirmationPlugins.length > 0}
+				plugins={updatesConfirmationPlugins}
+				onClose={() => setUpdatesConfirmationPlugins([])}
+				onContinue={handleUpdateConfirmation}
 			/>
 
 			{uninstallSelectedPlugin && (
