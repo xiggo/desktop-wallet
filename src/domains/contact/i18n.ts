@@ -34,8 +34,9 @@ export const translations: { [key: string]: any } = {
 
 	VALIDATION: {
 		ADDRESS_IS_INVALID: "The address is not valid",
-		CONTACT_NAME_EXISTS: "Contact with name {{name}} already exists.",
+		CONTACT_ADDRESS_EXISTS: "Contact with this address already exists",
+		CONTACT_NAME_EXISTS: "Contact with name {{name}} already exists",
 		CONTACT_NAME_EXISTS_SUFFIX: "already exists",
-		NAME_EXISTS: "A Contact named '{{name}}' already exists on this profile",
+		NAME_EXISTS: "A contact named '{{name}}' already exists on this profile",
 	},
 };

@@ -169,6 +169,51 @@ describe("ContactForm", () => {
 		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
 	});
 
+	it("should not add duplicate address and display error message", async () => {
+		renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+
+		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+
+		fireEvent.input(screen.getByTestId("contact-form__name-input"), {
+			target: { value: "name" },
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("name");
+		});
+
+		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
+
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+
+		await waitFor(() => {
+			expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		});
+
+		const contactAddress = contact.addresses().first().address();
+
+		fireEvent.input(screen.getByTestId("contact-form__address-input"), {
+			target: { value: contactAddress },
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(contactAddress);
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
+		});
+
+		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+		});
+
+		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+	});
+
 	it("should remove network from options", async () => {
 		renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 

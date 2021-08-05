@@ -13,7 +13,8 @@ import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { lowerCaseEquals } from "utils/equals";
+
+import { contactForm } from "../../validations/ContactForm";
 
 interface AddressListItemProperties {
 	address: any;
@@ -109,8 +110,6 @@ export const ContactForm = ({
 	onSave,
 	errors,
 }: ContactFormProperties) => {
-	const nameMaxLength = 42;
-
 	const [addresses, setAddresses] = useState(() =>
 		contact
 			? contact
@@ -132,6 +131,8 @@ export const ContactForm = ({
 	const { isValid } = formState;
 
 	const { name, network, address } = watch();
+
+	const contactFormValidation = contactForm(t, profile);
 
 	useEffect(() => {
 		register({ name: "network" });
@@ -157,6 +158,12 @@ export const ContactForm = ({
 
 		if (!isValidAddress) {
 			return setError("address", { message: t("CONTACTS.VALIDATION.ADDRESS_IS_INVALID"), type: "manual" });
+		}
+
+		const duplicateAddress = profile.contacts().findByAddress(address);
+
+		if (duplicateAddress.length > 0) {
+			return setError("address", { message: t("CONTACTS.VALIDATION.CONTACT_ADDRESS_EXISTS"), type: "manual" });
 		}
 
 		setAddresses(
@@ -197,34 +204,7 @@ export const ContactForm = ({
 				<FormLabel>{t("CONTACTS.CONTACT_FORM.NAME")}</FormLabel>
 				<InputDefault
 					data-testid="contact-form__name-input"
-					ref={register({
-						maxLength: {
-							message: t("COMMON.VALIDATION.MAX_LENGTH", {
-								field: t("CONTACTS.CONTACT_FORM.NAME"),
-								maxLength: nameMaxLength,
-							}),
-							value: nameMaxLength,
-						},
-						validate: {
-							duplicateName: (name) =>
-								profile
-									.contacts()
-									.values()
-									.filter(
-										(item: Contracts.IContact) =>
-											item.id() !== contact?.id() &&
-											lowerCaseEquals(item.name().trim(), name.trim()),
-									).length === 0 ||
-								t("CONTACTS.VALIDATION.NAME_EXISTS", {
-									name: name.trim(),
-								}).toString(),
-							required: (name) =>
-								!!name?.trim() ||
-								t("COMMON.VALIDATION.FIELD_REQUIRED", {
-									field: t("CONTACTS.CONTACT_FORM.NAME"),
-								}).toString(),
-						},
-					})}
+					ref={register(contactFormValidation.name(contact?.id()))}
 					onChange={() => onChange?.("name", name)}
 					defaultValue={contact?.name?.()}
 				/>
