@@ -105,7 +105,7 @@ export const PluginSpecs = ({
 								<Skeleton width={60} height={20} className="mt-0.5" />
 							</span>
 						) : (
-							<span data-testid="PluginSpecs__size">{size || "N/A"}</span>
+							<span data-testid="PluginSpecs__size">{size || t("COMMON.NOT_AVAILABLE")}</span>
 						)}
 					</GridItem>
 				</GridCol>

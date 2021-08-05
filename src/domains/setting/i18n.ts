@@ -10,6 +10,10 @@ export const translations: { [key: string]: any } = {
 				DESCRIPTION: "Choose a color for buttons and other wallet features.",
 				TITLE: "Accent Color",
 			},
+			EXPANDED_TABLES: {
+				DESCRIPTION: "Increases spacing of table items.",
+				TITLE: "Expanded Tables",
+			},
 			TRANSACTION_HISTORY: {
 				DESCRIPTION: "Enables transaction history on Portfolio page.",
 				TITLE: "Portfolio Transaction History",

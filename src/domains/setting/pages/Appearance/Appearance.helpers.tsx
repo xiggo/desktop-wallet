@@ -36,6 +36,12 @@ export const useAppearanceItems = (): Record<string, any>[] => {
 			label: t("SETTINGS.APPEARANCE.OPTIONS.WALLET_NAMING.TITLE"),
 			labelAddon: <AppearanceToggle name="useNetworkWalletNames" />,
 			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.WALLET_NAMING.DESCRIPTION"),
+			wrapperClass: "py-6",
+		},
+		{
+			label: t("SETTINGS.APPEARANCE.OPTIONS.EXPANDED_TABLES.TITLE"),
+			labelAddon: <AppearanceToggle name="useExpandedTables" />,
+			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.EXPANDED_TABLES.DESCRIPTION"),
 			wrapperClass: "pt-6",
 		},
 	];
@@ -45,6 +51,7 @@ export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanc
 	getValues: (): AppearanceSettingsState => ({
 		accentColor: profile.appearance().get("accentColor") as AccentColorType,
 		dashboardTransactionHistory: profile.appearance().get("dashboardTransactionHistory"),
+		useExpandedTables: profile.appearance().get("useExpandedTables"),
 		useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
 		viewingMode: profile.appearance().get("theme") as ViewingModeType,
 	}),
@@ -53,6 +60,7 @@ export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanc
 		profile
 			.settings()
 			.set(Contracts.ProfileSetting.DashboardTransactionHistory, values.dashboardTransactionHistory);
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, values.useExpandedTables);
 		profile.settings().set(Contracts.ProfileSetting.Theme, values.viewingMode);
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, values.useNetworkWalletNames);
 	},

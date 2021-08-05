@@ -1,10 +1,8 @@
 import { DTO } from "@payvo/profiles";
 import { Table } from "app/components/Table";
-import { TableColumn } from "app/components/Table/TableColumn.models";
+import { useColumns } from "domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import React, { memo, useMemo } from "react";
-import { useTranslation } from "react-i18next";
 
-import { TransactionCompactRow } from "./TransactionRow/TransactionCompactRow";
 import { TransactionRow } from "./TransactionRow/TransactionRow";
 
 type Skeleton = object;
@@ -33,7 +31,12 @@ export const TransactionTable = memo(
 		skeletonRowsLimit = 8,
 		onRowClick,
 	}: Properties) => {
-		const { t } = useTranslation();
+		const columns = useColumns({
+			exchangeCurrency,
+			isCompact,
+			showExplorerLinkColumn,
+			showSignColumn,
+		});
 
 		const initialState = {
 			sortBy: [
@@ -43,79 +46,6 @@ export const TransactionTable = memo(
 				},
 			],
 		};
-
-		const columns = useMemo(() => {
-			const commonColumns: TableColumn[] = [
-				{
-					Header: t("COMMON.DATE"),
-					accessor: (transaction: DTO.ExtendedConfirmedTransactionData) =>
-						transaction.timestamp?.()?.toUNIX(),
-					cellWidth: "w-50",
-					id: "date",
-					sortDescFirst: true,
-				},
-				{
-					Header: t("COMMON.RECIPIENT"),
-					cellWidth: "w-96",
-				},
-				{
-					Header: t("COMMON.INFO"),
-					cellWidth: "w-24",
-					className: "justify-center",
-				},
-				{
-					Header: t("COMMON.STATUS"),
-					cellWidth: "w-20",
-					className: "justify-center",
-				},
-				{
-					Header: t("COMMON.AMOUNT"),
-					accessor: (transaction: DTO.ExtendedConfirmedTransactionData) => transaction.total?.(),
-					className: "justify-end",
-					id: "amount",
-					sortDescFirst: true,
-				},
-			];
-
-			if (isCompact) {
-				return [
-					{
-						Header: t("COMMON.RECIPIENT"),
-					},
-					{
-						Header: t("COMMON.AMOUNT"),
-						accessor: (transaction: DTO.ExtendedConfirmedTransactionData) => transaction.total?.(),
-						className: "justify-end",
-						id: "amount",
-					},
-				];
-			}
-
-			if (showExplorerLinkColumn) {
-				commonColumns.unshift({
-					Header: t("COMMON.ID"),
-					minimumWidth: true,
-				});
-			}
-
-			if (exchangeCurrency) {
-				return [
-					...commonColumns,
-					{
-						Header: t("COMMON.CURRENCY"),
-						cellWidth: "w-28",
-						className: "justify-end float-right",
-						responsiveClass: "hidden xl:table-cell",
-					},
-				];
-			}
-
-			if (showSignColumn) {
-				return [...commonColumns, { Header: "Sign", cellWidth: "w-24", className: "invisible" }];
-			}
-
-			return commonColumns;
-		}, [exchangeCurrency, showExplorerLinkColumn, showSignColumn, isCompact, t]);
 
 		const showSkeleton = useMemo(() => isLoading && transactions.length === 0, [transactions, isLoading]);
 
@@ -127,24 +57,17 @@ export const TransactionTable = memo(
 		return (
 			<div data-testid="TransactionTable" className="relative">
 				<Table hideHeader={hideHeader} columns={columns} data={data} initialState={initialState}>
-					{(row: DTO.ExtendedConfirmedTransactionData | Skeleton) =>
-						isCompact ? (
-							<TransactionCompactRow
-								isLoading={showSkeleton}
-								onClick={() => onRowClick?.(row as DTO.ExtendedConfirmedTransactionData)}
-								transaction={row as DTO.ExtendedConfirmedTransactionData}
-							/>
-						) : (
-							<TransactionRow
-								isLoading={showSkeleton}
-								onClick={() => onRowClick?.(row as DTO.ExtendedConfirmedTransactionData)}
-								transaction={row as DTO.ExtendedConfirmedTransactionData}
-								exchangeCurrency={exchangeCurrency}
-								showExplorerLink={showExplorerLinkColumn}
-								showSignColumn={showSignColumn}
-							/>
-						)
-					}
+					{(row: DTO.ExtendedConfirmedTransactionData | Skeleton) => (
+						<TransactionRow
+							isLoading={showSkeleton}
+							onClick={() => onRowClick?.(row as DTO.ExtendedConfirmedTransactionData)}
+							transaction={row as DTO.ExtendedConfirmedTransactionData}
+							exchangeCurrency={exchangeCurrency}
+							showExplorerLink={showExplorerLinkColumn}
+							showSignColumn={showSignColumn}
+							isCompact={isCompact}
+						/>
+					)}
 				</Table>
 			</div>
 		);

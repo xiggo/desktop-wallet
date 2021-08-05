@@ -124,35 +124,36 @@ describe("Appearance Settings", () => {
 		expect(toastSuccess).toHaveBeenCalled();
 	});
 
-	it.each([Contracts.ProfileSetting.DashboardTransactionHistory, Contracts.ProfileSetting.UseNetworkWalletNames])(
-		"should allow to toggle %s setting",
-		async (key) => {
-			const toastSuccess = jest.spyOn(toasts, "success");
+	it.each([
+		Contracts.ProfileSetting.DashboardTransactionHistory,
+		Contracts.ProfileSetting.UseNetworkWalletNames,
+		Contracts.ProfileSetting.UseExpandedTables,
+	])("should allow to toggle %s setting", async (key) => {
+		const toastSuccess = jest.spyOn(toasts, "success");
 
-			profile.settings().set(key, true);
+		profile.settings().set(key, true);
 
-			renderPage();
+		renderPage();
 
-			const toggleTestId = `AppearanceToggle__toggle-${camelCase(key)}`;
+		const toggleTestId = `AppearanceToggle__toggle-${camelCase(key)}`;
 
-			expect(screen.getByTestId(toggleTestId)).toBeChecked();
-			expect(profile.settings().get(key)).toBe(true);
+		expect(screen.getByTestId(toggleTestId)).toBeChecked();
+		expect(profile.settings().get(key)).toBe(true);
 
-			await act(async () => {
-				userEvent.click(screen.getByTestId(toggleTestId));
-			});
+		await act(async () => {
+			userEvent.click(screen.getByTestId(toggleTestId));
+		});
 
-			expect(screen.getByTestId(toggleTestId)).not.toBeChecked();
-			expect(profile.settings().get(key)).toBe(true);
+		expect(screen.getByTestId(toggleTestId)).not.toBeChecked();
+		expect(profile.settings().get(key)).toBe(true);
 
-			expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
+		expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
 
-			await act(async () => {
-				userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
-			});
+		await act(async () => {
+			userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+		});
 
-			expect(profile.settings().get(key)).toBe(false);
-			expect(toastSuccess).toHaveBeenCalled();
-		},
-	);
+		expect(profile.settings().get(key)).toBe(false);
+		expect(toastSuccess).toHaveBeenCalled();
+	});
 });

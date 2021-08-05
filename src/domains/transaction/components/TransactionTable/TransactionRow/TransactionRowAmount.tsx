@@ -5,6 +5,7 @@ import { formatCrypto, formatFiat, getDecimalsByTicker } from "app/components/Am
 import { Label } from "app/components/Label";
 import { Tooltip } from "app/components/Tooltip";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface ExchangeTooltipProperties {
 	value: number;
@@ -19,9 +20,11 @@ const ExchangeTooltip: React.FC<ExchangeTooltipProperties> = ({
 	isTestNetwork,
 	children,
 }: ExchangeTooltipProperties) => {
+	const { t } = useTranslation();
+
 	const exchangeAmount = (): string => {
 		if (isTestNetwork) {
-			return "N/A";
+			return t("COMMON.NOT_AVAILABLE");
 		}
 
 		const isFiat = getDecimalsByTicker(ticker) <= 2;

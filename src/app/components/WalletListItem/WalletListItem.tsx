@@ -8,6 +8,7 @@ import { useActiveProfile, useWalletAlias } from "app/hooks";
 import cn from "classnames";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { shouldUseDarkColors } from "utils/electron-utils";
 
 export interface WalletListItemProperties {
@@ -21,6 +22,8 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 	activeWalletId,
 	onClick,
 }: WalletListItemProperties) => {
+	const { t } = useTranslation();
+
 	const isSelected = useMemo(() => activeWalletId === wallet.id(), [activeWalletId, wallet]);
 
 	const activeProfile = useActiveProfile();
@@ -53,7 +56,7 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 	let lastCellContent: string | JSX.Element;
 
 	if (wallet.network().isTest()) {
-		lastCellContent = "N/A";
+		lastCellContent = t("COMMON.NOT_AVAILABLE");
 	} else {
 		lastCellContent = <Amount ticker={wallet.exchangeCurrency()} value={wallet.convertedBalance()} />;
 	}

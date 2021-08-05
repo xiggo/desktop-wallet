@@ -2,7 +2,7 @@ import { Table } from "app/components/Table";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { TransactionCompactRowSkeleton } from "../TransactionRow/TransactionCompactRowSkeleton";
+import { NotificationTransactionSkeletonRow } from "./NotificationTransactionSkeletonRow";
 
 export const NotificationTransactionsSkeleton = ({ limit = 10 }: { limit?: number }) => {
 	const { t } = useTranslation();
@@ -17,7 +17,7 @@ export const NotificationTransactionsSkeleton = ({ limit = 10 }: { limit?: numbe
 				</div>
 
 				<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={skeletonRows}>
-					{() => <TransactionCompactRowSkeleton />}
+					{() => <NotificationTransactionSkeletonRow />}
 				</Table>
 			</div>
 		</div>

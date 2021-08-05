@@ -39,7 +39,7 @@ const createTableColumns = (
 		className: "justify-end no-border",
 	},
 	{
-		Header: "Sign",
+		Header: t("COMMON.SIGN"),
 		cellWidth: "w-24",
 		className: "hidden",
 	},

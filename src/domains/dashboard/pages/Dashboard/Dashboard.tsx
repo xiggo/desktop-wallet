@@ -64,6 +64,7 @@ export const Dashboard = () => {
 						isVisible={showTransactions}
 						wallets={selectedWallets}
 						isLoading={profileIsSyncing}
+						isCompact={!activeProfile.appearance().get("useExpandedTables")}
 					/>
 				</Section>
 			</Page>

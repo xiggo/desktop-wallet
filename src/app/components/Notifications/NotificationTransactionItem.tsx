@@ -1,4 +1,7 @@
-import { TransactionCompactRow } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionCompactRow";
+import { TableCell, TableRow } from "app/components/Table";
+import { TransactionRowAmount } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
+import { TransactionRowMode } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMode";
+import { TransactionRowRecipientLabel } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientLabel";
 import React, { useEffect, useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -25,11 +28,18 @@ export const NotificationTransactionItem = ({
 			delayedCall
 			containment={containmentRef?.current}
 		>
-			<TransactionCompactRow
-				walletName={walletName}
-				transaction={transaction}
-				onClick={() => onTransactionClick?.(transaction)}
-			/>
+			<TableRow onClick={() => onTransactionClick?.(transaction)}>
+				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
+					<TransactionRowMode transaction={transaction} iconSize="sm" />
+					<div className="w-20 flex-1">
+						<TransactionRowRecipientLabel transaction={transaction} walletName={walletName} />
+					</div>
+				</TableCell>
+
+				<TableCell variant="end" innerClassName="justify-end" isCompact>
+					<TransactionRowAmount transaction={transaction} />
+				</TableCell>
+			</TableRow>
 		</VisibilitySensor>
 	);
 };

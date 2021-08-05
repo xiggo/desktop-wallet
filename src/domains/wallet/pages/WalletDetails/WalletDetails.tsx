@@ -110,6 +110,7 @@ export const WalletDetails = () => {
 					)}
 
 					<Transactions
+						isCompact={!activeProfile.appearance().get("useExpandedTables")}
 						showUnconfirmed={false}
 						profile={activeProfile}
 						wallets={[activeWallet]}
