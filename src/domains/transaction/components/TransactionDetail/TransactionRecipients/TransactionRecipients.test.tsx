@@ -49,4 +49,17 @@ describe("TransactionRecipients", () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it("should render the delegate icon if isDelegate", () => {
+		const address = "test-address";
+
+		const { container } = render(
+			<TransactionRecipients currency="DARK" recipients={[{ address, isDelegate: true }]} />,
+		);
+
+		expect(container).toHaveTextContent(transactionTranslations.RECIPIENT);
+		expect(container).toHaveTextContent(address);
+
+		expect(container).toMatchSnapshot();
+	});
 });

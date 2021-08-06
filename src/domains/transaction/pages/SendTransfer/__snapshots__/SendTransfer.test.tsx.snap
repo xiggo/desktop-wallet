@@ -555,19 +555,6 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex items-center -space-x-2"
                         >
                           <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
-                          >
-                            <div
-                              class="sc-bdnxRM NjstW"
-                              height="20"
-                              width="20"
-                            >
-                              <svg>
-                                delegate.svg
-                              </svg>
-                            </div>
-                          </div>
-                          <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
@@ -9954,19 +9941,6 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="flex items-center -space-x-2"
                         >
                           <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
-                          >
-                            <div
-                              class="sc-bdnxRM NjstW"
-                              height="20"
-                              width="20"
-                            >
-                              <svg>
-                                delegate.svg
-                              </svg>
-                            </div>
-                          </div>
-                          <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
@@ -10631,19 +10605,6 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex items-center -space-x-2"
                         >
                           <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
-                          >
-                            <div
-                              class="sc-bdnxRM NjstW"
-                              height="20"
-                              width="20"
-                            >
-                              <svg>
-                                delegate.svg
-                              </svg>
-                            </div>
-                          </div>
-                          <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
@@ -11307,19 +11268,6 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         <div
                           class="flex items-center -space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
-                          >
-                            <div
-                              class="sc-bdnxRM NjstW"
-                              height="20"
-                              width="20"
-                            >
-                              <svg>
-                                delegate.svg
-                              </svg>
-                            </div>
-                          </div>
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
@@ -12294,19 +12242,6 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex items-center -space-x-2"
                         >
                           <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
-                          >
-                            <div
-                              class="sc-bdnxRM NjstW"
-                              height="20"
-                              width="20"
-                            >
-                              <svg>
-                                delegate.svg
-                              </svg>
-                            </div>
-                          </div>
-                          <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
@@ -12971,19 +12906,6 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex items-center -space-x-2"
                         >
                           <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
-                          >
-                            <div
-                              class="sc-bdnxRM NjstW"
-                              height="20"
-                              width="20"
-                            >
-                              <svg>
-                                delegate.svg
-                              </svg>
-                            </div>
-                          </div>
-                          <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"
                           >
@@ -13647,19 +13569,6 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                         <div
                           class="flex items-center -space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
-                          >
-                            <div
-                              class="sc-bdnxRM NjstW"
-                              height="20"
-                              width="20"
-                            >
-                              <svg>
-                                delegate.svg
-                              </svg>
-                            </div>
-                          </div>
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
                             data-testid="Avatar"

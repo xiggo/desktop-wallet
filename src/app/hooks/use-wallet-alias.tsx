@@ -75,10 +75,12 @@ const useWalletAlias = (): HookResult => {
 				}
 
 				if (network) {
+					const alias = getDelegateUsername(network);
+
 					return {
-						alias: getDelegateUsername(network),
+						alias,
 						isContact: false,
-						isDelegate: true,
+						isDelegate: alias !== undefined,
 						isKnown: false,
 					};
 				}

@@ -28,6 +28,30 @@ describe("useWalletAlias", () => {
 		});
 	});
 
+	it("should return isDelegate = `false` when network is set but no wallet, contact or delegate was found", () => {
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		expect(
+			result.current.getWalletAlias({ address: "wrong-address", network: wallet.network(), profile }).isDelegate,
+		).toBe(false);
+	});
+
+	it("should return isDelegate = `true` when network is set and delegate is found even when no wallet or contact found", () => {
+		const { result } = renderHook(() => useWalletAlias(), { wrapper });
+
+		jest.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
+			username: () => "delegate_username",
+		} as any);
+
+		expect(
+			result.current.getWalletAlias({
+				address: "wrong-address",
+				network: wallet.network(),
+				profile,
+			}).isDelegate,
+		).toBe(true);
+	});
+
 	it("should return contact name and isKnown = true when contact is also known wallet", async () => {
 		const contact = profile.contacts().create("Test");
 		await contact.setAddresses([{ address: wallet.address(), coin: wallet.coinId(), network: wallet.networkId() }]);
