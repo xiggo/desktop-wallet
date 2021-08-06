@@ -35,6 +35,15 @@ export const useWalletSignatory = (
 			}
 
 			if (encryptionPassword) {
+				if (wallet.isSecondSignature()) {
+					return wallet
+						.signatory()
+						.confirmationWIF(
+							await wallet.wif().get(encryptionPassword),
+							await wallet.confirmationWIF().get(encryptionPassword),
+						);
+				}
+
 				return wallet.signatory().wif(await wallet.wif().get(encryptionPassword));
 			}
 

@@ -21,7 +21,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { assertWallet } from "utils/assertions";
+import { assertString, assertWallet } from "utils/assertions";
 
 import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { SecondStep } from "./Step2";
@@ -31,6 +31,7 @@ export const ImportWallet = () => {
 	const [activeTab, setActiveTab] = useState(1);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
+	const [secondMnemonicInput, setSecondMnemonicInput] = useState<string>();
 
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
@@ -54,7 +55,7 @@ export const ImportWallet = () => {
 
 	const { getValues, formState, register, watch } = form;
 	const { isSubmitting, isValid } = formState;
-	const { value, encryptionPassword, confirmEncryptionPassword } = watch();
+	const { value, encryptionPassword, confirmEncryptionPassword, secondMnemonic } = watch();
 
 	useEffect(() => {
 		register("network", { required: true });
@@ -66,6 +67,12 @@ export const ImportWallet = () => {
 			setWalletGenerationInput(value);
 		}
 	}, [value, setWalletGenerationInput]);
+
+	useEffect(() => {
+		if (secondMnemonic !== undefined) {
+			setSecondMnemonicInput(secondMnemonic);
+		}
+	}, [secondMnemonic, setSecondMnemonicInput]);
 
 	const handleNext = async () => {
 		if (activeTab === 2) {
@@ -84,7 +91,7 @@ export const ImportWallet = () => {
 		} else if (activeTab === 3) {
 			setIsEncrypting(true);
 
-			await encryptMnemonic();
+			await encryptMnemonics();
 			setActiveTab(activeTab + 1);
 
 			setIsEncrypting(false);
@@ -131,10 +138,15 @@ export const ImportWallet = () => {
 		return network.importMethods()[type];
 	};
 
-	const encryptMnemonic = async () => {
+	const encryptMnemonics = async () => {
 		assertWallet(importedWallet);
+		assertString(walletGenerationInput);
 
-		await importedWallet.wif().set(walletGenerationInput!, getValues("encryptionPassword"));
+		if (secondMnemonicInput) {
+			await importedWallet.confirmationWIF().set(secondMnemonicInput, encryptionPassword);
+		}
+
+		await importedWallet.wif().set(walletGenerationInput, encryptionPassword);
 
 		if (importedWallet.actsWithMnemonic()) {
 			importedWallet

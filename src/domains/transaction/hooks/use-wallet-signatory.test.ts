@@ -89,6 +89,22 @@ describe("useWalletSignatory", () => {
 		);
 	});
 
+	it("should sign with encryption password on wallet with second signature", async () => {
+		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(true);
+
+		await wallet.wif().set(MNEMONICS[0], "password");
+		await wallet.confirmationWIF().set(MNEMONICS[1], "password");
+
+		const { result } = renderHook(() => useWalletSignatory(wallet));
+
+		const signatory = await result.current.sign({
+			encryptionPassword: "password",
+		});
+
+		expect(signatory).toBeInstanceOf(Signatories.Signatory);
+		expect(signatory.signingKey()).toBe("SDYxDiemdWw57qC5rjEDnNJJsy25XqbbQEhBbndwZ6ssNMbyWP3F");
+	});
+
 	it("should sign with ledger wallet using derivation path", async () => {
 		const publicKey = wallet.publicKey();
 

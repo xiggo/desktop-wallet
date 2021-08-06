@@ -1,13 +1,47 @@
 import { Contracts } from "@payvo/profiles";
-import { Coins, Networks } from "@payvo/sdk";
+import { Coins, Enums } from "@payvo/sdk";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { Input, InputAddress, InputPassword } from "app/components/Input";
 import { Select } from "app/components/SelectDropdown";
 import { OptionsValue, useImportOptions } from "domains/wallet/hooks/use-import-options";
+import { TFunction } from "i18next";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { assertNetwork } from "utils/assertions";
+
+const validateAddress = async ({
+	findAddress,
+	optional,
+	profile,
+	t,
+	value,
+}: {
+	findAddress: (value: string) => Promise<string>;
+	optional: boolean;
+	profile: Contracts.IProfile;
+	t: TFunction;
+	value: string;
+}) => {
+	if (optional && !value) {
+		return true;
+	}
+
+	try {
+		const address = await findAddress(value);
+
+		return (
+			!profile.wallets().findByAddress(address) ||
+			t("COMMON.INPUT_PASSPHRASE.VALIDATION.ADDRESS_ALREADY_EXISTS", {
+				address,
+			}).toString()
+		);
+	} catch (error) {
+		/* istanbul ignore next */
+		return error.message;
+	}
+};
 
 const MnemonicField = ({
 	profile,
@@ -30,21 +64,14 @@ const MnemonicField = ({
 					required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 						field: label,
 					}).toString(),
-					validate: async (value) => {
-						try {
-							const address = await findAddress(value);
-
-							return (
-								!profile.wallets().findByAddress(address) ||
-								t("COMMON.INPUT_PASSPHRASE.VALIDATION.ADDRESS_ALREADY_EXISTS", {
-									address,
-								}).toString()
-							);
-						} catch (error) {
-							/* istanbul ignore next */
-							return error.message;
-						}
-					},
+					validate: (value) =>
+						validateAddress({
+							findAddress,
+							optional: false,
+							profile,
+							t,
+							value,
+						}),
 				})}
 				{...properties}
 			/>
@@ -82,24 +109,54 @@ const AddressField = ({ coin, profile }: { coin: Coins.Coin; profile: Contracts.
 
 const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.Coin; profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
-	const { register } = useFormContext();
+	const { register, getValues, errors } = useFormContext();
+
+	const network = getValues("network");
+	assertNetwork(network);
 
 	if (type.startsWith("bip")) {
+		const findAddress = async (value: string) => {
+			try {
+				const { address } = await coin.address().fromMnemonic(value);
+				return address;
+			} catch {
+				/* istanbul ignore next */
+				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
+			}
+		};
+
+		const allowsSecondSignature = network.allows(Enums.FeatureFlag.TransactionSecondSignature);
+
 		return (
-			<MnemonicField
-				profile={profile}
-				label={t(`COMMON.MNEMONIC_TYPE.${type.toUpperCase()}`)}
-				data-testid="ImportWallet__mnemonic-input"
-				findAddress={async (value) => {
-					try {
-						const { address } = await coin.address().fromMnemonic(value);
-						return address;
-					} catch {
-						/* istanbul ignore next */
-						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
-					}
-				}}
-			/>
+			<>
+				<MnemonicField
+					profile={profile}
+					label={t(`COMMON.MNEMONIC_TYPE.${type.toUpperCase()}`)}
+					data-testid="ImportWallet__mnemonic-input"
+					findAddress={findAddress}
+				/>
+
+				{allowsSecondSignature && (
+					<FormField name="secondMnemonic">
+						<FormLabel label={t("COMMON.SECOND_MNEMONIC")} optional />
+
+						<InputPassword
+							disabled={!getValues("value") || errors.value}
+							data-testid="ImportWallet__secondMnemonic-input"
+							ref={register({
+								validate: (value) =>
+									validateAddress({
+										findAddress,
+										optional: true,
+										profile,
+										t,
+										value,
+									}),
+							})}
+						/>
+					</FormField>
+				)}
+			</>
 		);
 	}
 
@@ -249,7 +306,8 @@ export const SecondStep = ({ profile }: { profile: Contracts.IProfile }) => {
 
 	// getValues does not get the value of `defaultValues` on first render
 	const [defaultNetwork] = useState(() => watch("network"));
-	const network: Networks.Network = getValues("network") || defaultNetwork;
+	const network = getValues("network") || defaultNetwork;
+	assertNetwork(network);
 
 	const [coin] = useState(() => profile.coins().set(network.coin(), network.id()));
 

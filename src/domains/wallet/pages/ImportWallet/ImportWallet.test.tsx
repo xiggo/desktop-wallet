@@ -14,6 +14,7 @@ import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
+import { assertNetwork } from "utils/assertions";
 import {
 	act as utilsAct,
 	env,
@@ -124,22 +125,23 @@ describe("ImportWallet", () => {
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
-			form = useForm({
-				defaultValues: {
-					network: {
-						coin: () => "ARK",
-						id: () => "ark.devnet",
-						importMethods: () => ({
-							bip39: {
-								default: false,
-								permissions: [],
-							},
-						}),
-					},
+			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === "ark.devnet");
+			assertNetwork(network);
+
+			network.importMethods = () => ({
+				bip39: {
+					default: false,
+					permissions: [],
 				},
 			});
+
+			form = useForm({
+				defaultValues: { network },
+			});
+
 			form.register("type");
 			form.register("network");
+
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
@@ -324,6 +326,65 @@ describe("ImportWallet", () => {
 		});
 	});
 
+	it("should import by mnemonic with second signature", async () => {
+		const history = createMemoryHistory();
+		history.push(route);
+
+		const { getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				history,
+				routes: [route],
+			},
+		);
+
+		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+
+		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
+
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+
+		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		const passphraseInput = getByTestId("ImportWallet__mnemonic-input");
+		const secondPassphraseInput = getByTestId("ImportWallet__secondMnemonic-input");
+
+		expect(passphraseInput).toBeTruthy();
+		expect(secondPassphraseInput).toBeDisabled();
+
+		fireEvent.input(passphraseInput, { target: { value: MNEMONICS[1] } });
+
+		await waitFor(() => expect(getByTestId("ImportWallet__secondMnemonic-input")).not.toBeDisabled());
+
+		fireEvent.input(secondPassphraseInput, { target: { value: MNEMONICS[2] } });
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		await waitFor(() => {
+			expect(getByTestId("EncryptPassword")).toBeTruthy();
+		});
+
+		fireEvent.click(getByTestId("ImportWallet__skip-button"));
+
+		await waitFor(() => {
+			expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
+		});
+
+		fireEvent.click(getByTestId("ImportWallet__finish-button"));
+
+		await waitFor(() => {
+			expect(profile.wallets().findByAddress(identityAddress)).toBeTruthy();
+		});
+	});
+
 	it("should import by mnemonic and use encryption password", async () => {
 		const history = createMemoryHistory();
 		history.push(route);
@@ -357,6 +418,72 @@ describe("ImportWallet", () => {
 		expect(passphraseInput).toBeTruthy();
 
 		fireEvent.input(passphraseInput, { target: { value: MNEMONICS[3] } });
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		await waitFor(() => {
+			expect(getByTestId("EncryptPassword")).toBeTruthy();
+		});
+
+		await utilsAct(async () => {
+			fireEvent.input(getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword" } });
+		});
+
+		await utilsAct(async () => {
+			fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
+		});
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		await waitFor(
+			() => {
+				expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
+			},
+			{ timeout: 15_000 },
+		);
+	});
+
+	it("should import by mnemonic with second signature and use password to encrypt both", async () => {
+		const history = createMemoryHistory();
+		history.push(route);
+
+		const { getByTestId, getAllByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				history,
+				routes: [route],
+			},
+		);
+
+		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+
+		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
+
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+
+		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		expect(getByTestId("ImportWallet__second-step")).toBeTruthy();
+
+		const passphraseInput = getByTestId("ImportWallet__mnemonic-input");
+		const secondPassphraseInput = getByTestId("ImportWallet__secondMnemonic-input");
+
+		expect(passphraseInput).toBeTruthy();
+		expect(secondPassphraseInput).toBeTruthy();
+
+		fireEvent.input(passphraseInput, { target: { value: MNEMONICS[4] } });
+
+		await waitFor(() => expect(getByTestId("ImportWallet__secondMnemonic-input")).not.toBeDisabled());
+
+		fireEvent.input(secondPassphraseInput, { target: { value: MNEMONICS[5] } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("ImportWallet__continue-button"));

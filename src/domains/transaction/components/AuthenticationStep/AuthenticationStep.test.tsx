@@ -425,34 +425,4 @@ describe("AuthenticationStep", () => {
 
 		jest.clearAllMocks();
 	});
-
-	it("should render with encryption password input and second mnemonic", async () => {
-		jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		jest.spyOn(wallet.wif(), "get").mockResolvedValue("6PYR8Zq7e84mKXq3kxZyrZ8Zyt6iE89fCngdMgibQ5HjCd7Bt3k7wKc4ZL");
-		jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
-
-		const { result } = renderHook(() => useForm({ mode: "onChange" }));
-
-		const Wrapper = () => (
-			<Form context={result.current} onSubmit={() => void 0}>
-				<AuthenticationStep wallet={wallet} />
-			</Form>
-		);
-
-		const { rerender } = renderWithRouter(<Wrapper />);
-
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toBeInTheDocument());
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toBeDisabled());
-
-		fireEvent.input(screen.getByTestId("AuthenticationStep__encryption-password"), {
-			target: { value: "password" },
-		});
-
-		rerender(<Wrapper />);
-
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toBeEnabled());
-
-		jest.clearAllMocks();
-	});
 });
