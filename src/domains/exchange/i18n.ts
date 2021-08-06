@@ -1,11 +1,13 @@
 export const translations: { [key: string]: any } = {
 	EXCHANGE_NAME: "Exchange Name",
+
 	MODAL_ADD_EXCHANGE: {
 		TITLE: "Exchange",
 	},
-	NO_EXCHANGES_MESSAGE: "You don't have an Exchange yet",
+
 	PAGE_EXCHANGES: {
 		ADD_EXCHANGE: "Add Exchange",
+		EMPTY_MESSAGE: "There are currently no exchange providers available, please try again at a later time.",
 		SUBTITLE: "Choose one of the exchange providers below to swap directly from within the wallet.",
 		TITLE: "Exchange",
 	},

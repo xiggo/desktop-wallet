@@ -6,16 +6,7 @@ import { createMemoryHistory } from "history";
 import { LaunchPluginService, PluginController } from "plugins";
 import React from "react";
 import { Route } from "react-router-dom";
-import {
-	act,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	pluginManager,
-	renderWithRouter,
-	waitFor,
-	within,
-} from "testing-library";
+import { env, fireEvent, getDefaultProfileId, pluginManager, renderWithRouter, waitFor, within } from "testing-library";
 
 import { translations } from "../../i18n";
 import { Exchange } from "./Exchange";
@@ -26,12 +17,17 @@ const history = createMemoryHistory();
 const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange`;
 
 describe("Exchange", () => {
-	beforeAll(() => {
+	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		for (const plugin of pluginManager.plugins().all()) {
+			pluginManager.plugins().removeById(plugin.config().id(), profile);
+		}
+
 		history.push(exchangeURL);
 	});
 
-	it("should render", () => {
+	it("should render empty", () => {
 		const { container, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
 				<Exchange />
@@ -44,6 +40,8 @@ describe("Exchange", () => {
 
 		expect(getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
 		expect(getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
+
+		expect(getByTestId("ExchangeGrid__empty-message")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -75,8 +73,6 @@ describe("Exchange", () => {
 		expect(getByText(plugin.config().title())).toBeTruthy();
 
 		expect(container).toMatchSnapshot();
-
-		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should launch exchange", async () => {
@@ -100,21 +96,17 @@ describe("Exchange", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(3));
+		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(1));
 		await waitFor(() => expect(within(getByTestId("ExchangeGrid")).getByTestId("dropdown__toggle")).toBeTruthy());
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		act(() => {
-			fireEvent.click(within(getByTestId("ExchangeGrid")).getAllByTestId("Card")[0]);
-		});
+		fireEvent.click(within(getByTestId("ExchangeGrid")).getAllByTestId("Card")[0]);
 
 		const redirectUrl = `/profiles/${profile.id()}/exchange/view?pluginId=test-exchange`;
 		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(redirectUrl));
 
 		historySpy.mockRestore();
-
-		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should go to plugin details", async () => {
@@ -139,89 +131,19 @@ describe("Exchange", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(3));
+		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(1));
 		await waitFor(() => expect(within(getByTestId("ExchangeGrid")).getByTestId("dropdown__toggle")).toBeTruthy());
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
 		fireEvent.click(within(getByTestId("ExchangeGrid")).getAllByTestId("dropdown__toggle")[0]);
 
-		act(() => {
-			fireEvent.click(getByText(commonTranslations.DETAILS));
-		});
+		fireEvent.click(getByText(commonTranslations.DETAILS));
 
 		const redirectUrl = `/profiles/${profile.id()}/plugins/details?pluginId=test-exchange`;
 		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(redirectUrl));
 
 		historySpy.mockRestore();
-
-		pluginManager.plugins().removeById(plugin.config().id(), profile);
-	});
-
-	it("should render filler exchange cards", () => {
-		const { container, getByTestId } = renderWithRouter(
-			<Route path="/profiles/:profileId/exchange">
-				<Exchange />
-			</Route>,
-			{
-				history,
-				routes: [exchangeURL],
-			},
-		);
-
-		expect(within(getByTestId("ExchangeGrid")).getAllByText(commonTranslations.AUTHOR)).toHaveLength(3);
-		expect(within(getByTestId("ExchangeGrid")).getAllByText(commonTranslations.EXCHANGE)).toHaveLength(3);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should not render filler exchange cards", () => {
-		const onEnabled = jest.fn();
-
-		const plugin1 = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-exchange-1" },
-			onEnabled,
-		);
-		const plugin2 = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-exchange-2" },
-			onEnabled,
-		);
-		const plugin3 = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-exchange-3" },
-			onEnabled,
-		);
-
-		for (const plugin of [plugin1, plugin2, plugin3]) {
-			pluginManager.plugins().push(plugin);
-			plugin.enable(profile, { autoRun: true });
-		}
-
-		const { container, getByTestId, getByText } = renderWithRouter(
-			<Route path="/profiles/:profileId/exchange">
-				<Exchange />
-			</Route>,
-			{
-				history,
-				routes: [exchangeURL],
-			},
-		);
-
-		expect(getByText(plugin1.config().title())).toBeTruthy();
-		expect(getByText(plugin2.config().title())).toBeTruthy();
-		expect(getByText(plugin3.config().title())).toBeTruthy();
-
-		expect(() => within(getByTestId("ExchangeGrid")).getByText(commonTranslations.AUTHOR)).toThrow(
-			/Unable to find an element with/,
-		);
-		expect(() => within(getByTestId("ExchangeGrid")).getByText(commonTranslations.EXCHANGE)).toThrow(
-			/Unable to find an element with/,
-		);
-
-		expect(container).toMatchSnapshot();
-
-		for (const plugin of [plugin1, plugin2, plugin3]) {
-			pluginManager.plugins().removeById(plugin.config().id(), profile);
-		}
 	});
 
 	it("should delete exchange", async () => {
@@ -237,8 +159,6 @@ describe("Exchange", () => {
 
 		plugin.enable(profile, { autoRun: true });
 
-		const title = plugin.config().title();
-
 		const { getAllByTestId, getByTestId, getByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/exchange">
 				<Exchange />
@@ -249,24 +169,22 @@ describe("Exchange", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(3));
+		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(1));
 		await waitFor(() => expect(within(getByTestId("ExchangeGrid")).getByTestId("dropdown__toggle")).toBeTruthy());
 
 		fireEvent.click(within(getByTestId("ExchangeGrid")).getAllByTestId("dropdown__toggle")[0]);
 
-		act(() => {
-			fireEvent.click(getByText(commonTranslations.DELETE));
-		});
+		fireEvent.click(getByText(commonTranslations.DELETE));
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(pluginTranslations.MODAL_UNINSTALL.TITLE);
+		await waitFor(() =>
+			expect(getByTestId("modal__inner")).toHaveTextContent(pluginTranslations.MODAL_UNINSTALL.TITLE),
+		);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("PluginUninstall__submit-button"));
-		});
+		fireEvent.click(getByTestId("PluginUninstall__submit-button"));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
-		expect(() => within(getByTestId("ExchangeGrid")).getByText(title)).toThrow(/Unable to find an element with/);
+		expect(getByTestId("ExchangeGrid__empty-message")).toBeInTheDocument();
 	});
 
 	it("should open & close uninstall exchange modal", async () => {
@@ -292,21 +210,17 @@ describe("Exchange", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(3));
+		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(1));
 		await waitFor(() => expect(within(getByTestId("ExchangeGrid")).getByTestId("dropdown__toggle")).toBeTruthy());
 
 		fireEvent.click(within(getByTestId("ExchangeGrid")).getAllByTestId("dropdown__toggle")[0]);
 
-		act(() => {
-			fireEvent.click(getByText(commonTranslations.DELETE));
-		});
+		fireEvent.click(getByText(commonTranslations.DELETE));
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(pluginTranslations.MODAL_UNINSTALL.TITLE);
 
 		fireEvent.click(getByTestId("modal__close-btn"));
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
-
-		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 });
