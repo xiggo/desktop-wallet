@@ -309,26 +309,4 @@ describe("Exchange", () => {
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
-
-	it("should open & close add exchange modal", async () => {
-		const { container, findByText, getByTestId } = renderWithRouter(
-			<Route path="/profiles/:profileId/exchange">
-				<Exchange />
-			</Route>,
-			{
-				history,
-				routes: [exchangeURL],
-			},
-		);
-
-		fireEvent.click(await findByText(translations.PAGE_EXCHANGES.ADD_EXCHANGE));
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_ADD_EXCHANGE.TITLE);
-
-		fireEvent.click(getByTestId("modal__close-btn"));
-
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
-
-		expect(container).toMatchSnapshot();
-	});
 });

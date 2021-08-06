@@ -1,8 +1,6 @@
-import { Button } from "app/components/Button";
 import { Header } from "app/components/Header";
 import { Page, Section } from "app/components/Layout";
 import { useActiveProfile } from "app/hooks";
-import { AddExchange } from "domains/exchange/components/AddExchange";
 import { PluginUninstallConfirmation } from "domains/plugin/components/PluginUninstallConfirmation/PluginUninstallConfirmation";
 import { PluginController } from "plugins";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
@@ -12,23 +10,10 @@ import { useHistory } from "react-router-dom";
 
 import { ExchangeGrid } from "../../components/ExchangeGrid";
 
-const ExchangeHeaderExtra = ({ onAddExchange }: { onAddExchange: any }) => {
-	const { t } = useTranslation();
-
-	return (
-		<div className="flex justify-end items-top">
-			<Button data-testid="Exchange__add-exchange-button" className="whitespace-nowrap" onClick={onAddExchange}>
-				{t("EXCHANGE.PAGE_EXCHANGES.ADD_EXCHANGE")}
-			</Button>
-		</div>
-	);
-};
-
 export const Exchange = () => {
 	const activeProfile = useActiveProfile();
 	const history = useHistory();
 
-	const [isAddExchangeOpen, setIsAddExchangeOpen] = useState(false);
 	const [selectedExchange, setSelectedExchange] = useState<PluginController | undefined>(undefined);
 
 	const { mapConfigToPluginData, pluginManager } = usePluginManagerContext();
@@ -66,7 +51,6 @@ export const Exchange = () => {
 					<Header
 						title={t("EXCHANGE.PAGE_EXCHANGES.TITLE")}
 						subtitle={t("EXCHANGE.PAGE_EXCHANGES.SUBTITLE")}
-						extra={<ExchangeHeaderExtra onAddExchange={() => setIsAddExchangeOpen(true)} />}
 					/>
 				</Section>
 
@@ -79,8 +63,6 @@ export const Exchange = () => {
 					/>
 				</Section>
 			</Page>
-
-			<AddExchange isOpen={isAddExchangeOpen} onClose={() => setIsAddExchangeOpen(false)} />
 
 			{selectedExchange && (
 				<PluginUninstallConfirmation

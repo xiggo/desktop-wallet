@@ -6,7 +6,7 @@ export const translations: { [key: string]: any } = {
 	NO_EXCHANGES_MESSAGE: "You don't have an Exchange yet",
 	PAGE_EXCHANGES: {
 		ADD_EXCHANGE: "Add Exchange",
-		SUBTITLE: "Perform swaps directly from within the wallet.",
+		SUBTITLE: "Choose one of the exchange providers below to swap directly from within the wallet.",
 		TITLE: "Exchange",
 	},
 
