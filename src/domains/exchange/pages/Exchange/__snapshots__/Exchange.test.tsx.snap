@@ -616,7 +616,7 @@ exports[`Exchange should render with exchanges 1`] = `
             >
               <div>
                 <button
-                  class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                  class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                   data-testid="Card"
                   type="button"
                 >

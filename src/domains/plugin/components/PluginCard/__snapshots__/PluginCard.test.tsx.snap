@@ -4,7 +4,7 @@ exports[`BlankPluginCard should render 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -42,7 +42,7 @@ exports[`BlankPluginCard should render with category 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -98,7 +98,7 @@ exports[`BlankPluginCard should render with name 1`] = `
 <DocumentFragment>
   <div>
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -139,7 +139,7 @@ exports[`PluginCard should render 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -216,7 +216,7 @@ exports[`PluginCard should render alert icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -308,7 +308,7 @@ exports[`PluginCard should render official icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -394,7 +394,7 @@ exports[`PluginCard should render update icon 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -488,7 +488,7 @@ exports[`PluginCard should render without category 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -547,7 +547,7 @@ exports[`PluginCard should trigger view 1`] = `
   >
     <div>
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
         data-testid="Card"
         type="button"
       >

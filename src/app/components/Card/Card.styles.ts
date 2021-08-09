@@ -1,7 +1,7 @@
 import tw, { css, styled } from "twin.macro";
 
 export const CardButton = styled.button<{ isSelected?: boolean; onClick?: any }>`
-	${tw`bg-theme-background relative w-full h-full text-left transition-all duration-200 p-6 border-2 rounded-lg cursor-default`}
+	${tw`bg-theme-background relative w-full h-full text-left transition-all duration-200 p-5 border-2 rounded-lg cursor-default`}
 	${css`
 		&.focus-visible {
 			${tw`outline-none border-theme-primary-400!`}

@@ -1808,12 +1808,12 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -1889,12 +1889,12 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -1985,12 +1985,12 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -2298,12 +2298,12 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -2379,12 +2379,12 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -2475,12 +2475,12 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -3432,12 +3432,12 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -3528,13 +3528,13 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                       data-testid="Card"
                       tabindex="-1"
                       type="button"
                     >
                       <div
-                        class="flex flex-col justify-between p-4 h-full"
+                        class="flex flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex -space-x-2"
@@ -3576,13 +3576,13 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                       data-testid="Card"
                       tabindex="-1"
                       type="button"
                     >
                       <div
-                        class="flex flex-col justify-between p-4 h-full"
+                        class="flex flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex -space-x-2"
@@ -3841,12 +3841,12 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -3922,12 +3922,12 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"
@@ -4018,12 +4018,12 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
                       <div
-                        class="flex relative flex-col justify-between p-4 h-full"
+                        class="flex relative flex-col justify-between p-5 h-full"
                       >
                         <div
                           class="flex items-center space-x-4"

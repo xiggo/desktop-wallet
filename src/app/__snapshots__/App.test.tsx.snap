@@ -82,7 +82,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -150,7 +150,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -232,7 +232,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -379,7 +379,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -447,7 +447,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -529,7 +529,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -761,7 +761,7 @@ exports[`App should render mock 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -829,7 +829,7 @@ exports[`App should render mock 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -911,7 +911,7 @@ exports[`App should render mock 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -1058,7 +1058,7 @@ exports[`App should render splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -1126,7 +1126,7 @@ exports[`App should render splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -1208,7 +1208,7 @@ exports[`App should render splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -1433,7 +1433,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -1501,7 +1501,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >
@@ -1583,7 +1583,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="w-40 h-40 leading-tight mr-4.5 mb-4.5 group"
                     >
                       <button
-                        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                         data-testid="Card"
                         type="button"
                       >

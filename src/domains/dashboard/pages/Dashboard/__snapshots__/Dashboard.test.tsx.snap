@@ -488,12 +488,12 @@ exports[`Dashboard should render 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"
@@ -569,12 +569,12 @@ exports[`Dashboard should render 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"
@@ -665,12 +665,12 @@ exports[`Dashboard should render 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"
@@ -2058,12 +2058,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"
@@ -2139,12 +2139,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"
@@ -2235,12 +2235,12 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"
@@ -4640,12 +4640,12 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"
@@ -4721,12 +4721,12 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"
@@ -4817,12 +4817,12 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="h-48"
                       >
                         <button
-                          class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                          class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                           data-testid="Card"
                           type="button"
                         >
                           <div
-                            class="flex relative flex-col justify-between p-4 h-full"
+                            class="flex relative flex-col justify-between p-5 h-full"
                           >
                             <div
                               class="flex items-center space-x-4"

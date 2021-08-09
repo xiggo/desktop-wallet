@@ -3488,7 +3488,7 @@ exports[`PluginManager should render 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3539,7 +3539,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3590,7 +3590,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3673,7 +3673,7 @@ exports[`PluginManager should render 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -3767,7 +3767,7 @@ exports[`PluginManager should render 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -3867,7 +3867,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3947,7 +3947,7 @@ exports[`PluginManager should render 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3998,7 +3998,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4049,7 +4049,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4129,7 +4129,7 @@ exports[`PluginManager should render 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4180,7 +4180,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4231,7 +4231,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -5515,7 +5515,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -5607,7 +5607,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -5699,7 +5699,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -5791,7 +5791,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -5883,7 +5883,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -6555,7 +6555,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -6649,7 +6649,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -7332,7 +7332,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -7426,7 +7426,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -8110,7 +8110,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8161,7 +8161,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8212,7 +8212,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8295,7 +8295,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -8389,7 +8389,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
                       data-testid="Card"
                       type="button"
                     >
@@ -8489,7 +8489,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8569,7 +8569,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8620,7 +8620,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8671,7 +8671,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8751,7 +8751,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8802,7 +8802,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8853,7 +8853,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"

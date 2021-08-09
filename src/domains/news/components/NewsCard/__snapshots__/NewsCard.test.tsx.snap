@@ -9,13 +9,13 @@ exports[`NewsCard should render 1`] = `
       class="bg-theme-background"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
       >
         <div
-          class="flex flex-col p-4 space-y-6 bg-theme-background"
+          class="flex flex-col p-5 space-y-6 bg-theme-background"
         >
           <div
             class="flex justify-between w-full"
@@ -145,13 +145,13 @@ exports[`NewsCard should render with cover image 1`] = `
       class="bg-theme-background"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
       >
         <div
-          class="flex flex-col p-4 space-y-6 bg-theme-background"
+          class="flex flex-col p-5 space-y-6 bg-theme-background"
         >
           <div
             class="flex justify-between w-full"

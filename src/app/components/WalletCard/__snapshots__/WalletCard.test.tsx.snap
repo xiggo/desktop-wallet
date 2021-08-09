@@ -10,12 +10,12 @@ exports[`Wallet Card should render 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
         data-testid="Card"
         type="button"
       >
         <div
-          class="flex relative flex-col justify-between p-4 h-full"
+          class="flex relative flex-col justify-between p-5 h-full"
         >
           <div
             class="flex items-center space-x-4"
@@ -134,13 +134,13 @@ exports[`Wallet Card should render blank 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
       >
         <div
-          class="flex flex-col justify-between p-4 h-full"
+          class="flex flex-col justify-between p-5 h-full"
         >
           <div
             class="flex -space-x-2"
@@ -182,13 +182,13 @@ exports[`Wallet Card should render blank with ledger display type 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
       >
         <div
-          class="flex flex-col justify-between p-4 h-full"
+          class="flex flex-col justify-between p-5 h-full"
         >
           <div
             class="flex -space-x-2"
@@ -240,13 +240,13 @@ exports[`Wallet Card should render blank with starred display type 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
       >
         <div
-          class="flex flex-col justify-between p-4 h-full"
+          class="flex flex-col justify-between p-5 h-full"
         >
           <div
             class="flex -space-x-2"
@@ -294,13 +294,13 @@ exports[`Wallet Card should render loading state 1`] = `
     class="bg-theme-background"
   >
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
       data-testid="Card"
       tabindex="-1"
       type="button"
     >
       <div
-        class="flex relative flex-col justify-between p-4 h-full"
+        class="flex relative flex-col justify-between p-5 h-full"
         data-testid="WalletCard__skeleton"
       >
         <div
@@ -424,12 +424,12 @@ exports[`Wallet Card should render with actions 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
         data-testid="Card"
         type="button"
       >
         <div
-          class="flex relative flex-col justify-between p-4 h-full"
+          class="flex relative flex-col justify-between p-5 h-full"
         >
           <div
             class="flex items-center space-x-4"
@@ -569,12 +569,12 @@ exports[`Wallet Card should render with wallet data 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
         data-testid="Card"
         type="button"
       >
         <div
-          class="flex relative flex-col justify-between p-4 h-full"
+          class="flex relative flex-col justify-between p-5 h-full"
         >
           <div
             class="flex items-center space-x-4"
@@ -694,12 +694,12 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
       class="h-48"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 fyqAeZ"
+        class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
         data-testid="Card"
         type="button"
       >
         <div
-          class="flex relative flex-col justify-between p-4 h-full"
+          class="flex relative flex-col justify-between p-5 h-full"
         >
           <div
             class="flex items-center space-x-4"

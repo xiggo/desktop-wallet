@@ -15,7 +15,7 @@ exports[`Card Control should render 1`] = `
       class="CardControl__CustomCard-sc-l56akm-1 dyHEYM"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -44,7 +44,7 @@ exports[`Card Control should render with a control state 1`] = `
       class="CardControl__CustomCard-sc-l56akm-1 dyHEYM"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
         data-testid="Card"
         tabindex="-1"
         type="button"

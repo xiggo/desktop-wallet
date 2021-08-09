@@ -6,7 +6,7 @@ exports[`ProfileCard should hide the settings icon 1`] = `
     class="w-40 h-40 leading-tight"
   >
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -54,7 +54,7 @@ exports[`ProfileCard should render 1`] = `
     class="w-40 h-40 leading-tight"
   >
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -106,7 +106,7 @@ exports[`ProfileCard should render the profile with avatar image 1`] = `
     class="w-40 h-40 leading-tight"
   >
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
       data-testid="Card"
       tabindex="-1"
       type="button"
@@ -154,7 +154,7 @@ exports[`ProfileCard should render the settings icon 1`] = `
     class="w-40 h-40 leading-tight"
   >
     <button
-      class="Cardstyles__CardButton-sc-ajtauu-0 jRgfbO"
+      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
       data-testid="Card"
       tabindex="-1"
       type="button"

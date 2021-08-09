@@ -30,7 +30,7 @@ export const NewsCard = ({ text, category, author, created_at: createdAt, coverI
 	return (
 		<div data-testid="NewsCard">
 			<Card className="bg-theme-background">
-				<div className="flex flex-col p-4 space-y-6 bg-theme-background">
+				<div className="flex flex-col p-5 space-y-6 bg-theme-background">
 					<div className="flex justify-between w-full">
 						<div className="flex items-center space-x-4">
 							<NetworkIcon network={network} size="lg" noShadow />
