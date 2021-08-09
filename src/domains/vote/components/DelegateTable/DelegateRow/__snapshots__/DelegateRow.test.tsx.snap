@@ -71,12 +71,12 @@ exports[`DelegateRow should emit action on select button 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Select
                 </div>
@@ -161,12 +161,12 @@ exports[`DelegateRow should render 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Select
                 </div>
@@ -251,12 +251,12 @@ exports[`DelegateRow should render the selected delegate 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gsxzZm"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 bTFdhy"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Selected
                 </div>
@@ -341,12 +341,12 @@ exports[`DelegateRow should render the selected vote 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Current
                 </div>
@@ -422,12 +422,12 @@ exports[`DelegateRow should render the selected vote 1`] = `
               class="-mr-0.5"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="DelegateRow__toggle-1"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Select
                 </div>
@@ -504,13 +504,13 @@ exports[`DelegateRow should render the selected vote 1`] = `
             >
               <span>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="DelegateRow__toggle-2"
                   disabled=""
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Select
                   </div>

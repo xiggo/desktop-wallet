@@ -18,12 +18,12 @@ exports[`UpdateWalletName should render 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -96,24 +96,24 @@ exports[`UpdateWalletName should render 1`] = `
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="UpdateWalletName__cancel"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Cancel
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Save
                   </div>
@@ -146,12 +146,12 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -242,24 +242,24 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="UpdateWalletName__cancel"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Cancel
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Save
                   </div>
@@ -292,12 +292,12 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -388,24 +388,24 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="UpdateWalletName__cancel"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Cancel
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Save
                   </div>
@@ -438,12 +438,12 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -534,24 +534,24 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="UpdateWalletName__cancel"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Cancel
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Save
                   </div>
@@ -584,12 +584,12 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -680,24 +680,24 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="UpdateWalletName__cancel"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Cancel
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Save
                   </div>
@@ -730,12 +730,12 @@ exports[`UpdateWalletName should show error message when name consists only of w
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -826,24 +826,24 @@ exports[`UpdateWalletName should show error message when name consists only of w
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="UpdateWalletName__cancel"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Cancel
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Save
                   </div>
@@ -876,12 +876,12 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -972,24 +972,24 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
                 class="flex justify-end mt-8 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="UpdateWalletName__cancel"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Cancel
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="UpdateWalletName__submit"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Save
                   </div>

@@ -128,7 +128,7 @@ exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
                 class="relative"
               >
                 <button
-                  class="ClipboardButton__StyledButton-sc-cammp1-0 bdsvAo"
+                  class="ClipboardButton__StyledButton-sc-cammp1-0 gwLnQs"
                   data-testid="SecondSignature__copy"
                   type="button"
                 >
@@ -166,12 +166,12 @@ exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
                 </div>
               </div>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="SecondSignature__download"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM AFVmm"

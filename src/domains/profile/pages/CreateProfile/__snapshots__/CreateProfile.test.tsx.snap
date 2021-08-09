@@ -128,12 +128,12 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -721,23 +721,23 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -899,12 +899,12 @@ exports[`CreateProfile should not be able to create new profile if name already 
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -1489,23 +1489,23 @@ exports[`CreateProfile should not be able to create new profile if name already 
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -1667,12 +1667,12 @@ exports[`CreateProfile should not be able to create new profile if name consists
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -2257,23 +2257,23 @@ exports[`CreateProfile should not be able to create new profile if name consists
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -2435,12 +2435,12 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -3025,23 +3025,23 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -3226,12 +3226,12 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                           </button>
                         </div>
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 fFafLw flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
                           data-testid="SelectProfileImage__remove-button"
                           type="button"
                         >
                           <div
-                            class="flex relative items-center space-x-2"
+                            class="flex items-center space-x-2"
                           >
                             <div
                               class="sc-bdnxRM AkeAK"
@@ -3540,23 +3540,23 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -3699,12 +3699,12 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -4289,22 +4289,22 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -4447,12 +4447,12 @@ exports[`CreateProfile should render 1`] = `
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -4763,23 +4763,23 @@ exports[`CreateProfile should render 1`] = `
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -4945,12 +4945,12 @@ exports[`CreateProfile should store profile 1`] = `
                           </button>
                         </div>
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 fFafLw flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
                           data-testid="SelectProfileImage__remove-button"
                           type="button"
                         >
                           <div
-                            class="flex relative items-center space-x-2"
+                            class="flex items-center space-x-2"
                           >
                             <div
                               class="sc-bdnxRM AkeAK"
@@ -5533,22 +5533,22 @@ exports[`CreateProfile should store profile 1`] = `
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -5691,12 +5691,12 @@ exports[`CreateProfile should store profile with password 1`] = `
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -6269,22 +6269,22 @@ exports[`CreateProfile should store profile with password 1`] = `
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -6750,23 +6750,23 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -6928,12 +6928,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -7244,23 +7244,23 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                   data-testid="CreateProfile__submit-button"
                   disabled=""
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>
@@ -7403,12 +7403,12 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                               data-testid="SelectProfileImage__upload-button"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -7993,22 +7993,22 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                 class="flex justify-end pt-4 space-x-3"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Back
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="CreateProfile__submit-button"
                   type="submit"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Create
                   </div>

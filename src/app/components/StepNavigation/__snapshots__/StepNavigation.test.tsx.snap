@@ -6,31 +6,31 @@ exports[`StepNavigation should disable buttons if loading 1`] = `
     class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
       data-testid="StepNavigation__back-button"
       disabled=""
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Back
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
       data-testid="StepNavigation__send-button"
       disabled=""
       type="submit"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
-          class="flex relative items-center"
+          class="flex items-center"
         >
           <span
-            class="flex invisible items-center space-x-2"
+            class="flex items-center invisible space-x-2"
           >
             <div
               class="sc-bdnxRM AFVmm"
@@ -46,11 +46,10 @@ exports[`StepNavigation should disable buttons if loading 1`] = `
             </span>
           </span>
           <div
-            class="absolute top-0 right-0 bottom-0 left-0"
+            class="absolute top-0 left-0 flex items-center justify-center w-full h-full"
           >
             <div
-              class="Spinner-sc-1rpx65r-0 jrWVRB m-auto"
-              color="info"
+              class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
             />
           </div>
         </div>
@@ -66,12 +65,12 @@ exports[`StepNavigation should not render back button if on last step 1`] = `
     class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="StepNavigation__back-to-wallet-button"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Back to Wallet
       </div>
@@ -86,23 +85,23 @@ exports[`StepNavigation should not render back to wallet button if not on last s
     class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="StepNavigation__back-button"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Back
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
       data-testid="StepNavigation__send-button"
       type="submit"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <span>
           Send
@@ -128,23 +127,23 @@ exports[`StepNavigation should not render continue button if on last two steps 1
     class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="StepNavigation__back-button"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Back
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
       data-testid="StepNavigation__send-button"
       type="submit"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <span>
           Send
@@ -170,12 +169,12 @@ exports[`StepNavigation should not render continue button if on last two steps 2
     class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="StepNavigation__back-to-wallet-button"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Back to Wallet
       </div>
@@ -190,23 +189,23 @@ exports[`StepNavigation should render back button if not on last step 1`] = `
     class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="StepNavigation__back-button"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Back
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
       data-testid="StepNavigation__send-button"
       type="submit"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <span>
           Send
@@ -232,12 +231,12 @@ exports[`StepNavigation should render back to wallet button if on last step 1`] 
     class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="StepNavigation__back-to-wallet-button"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Back to Wallet
       </div>
@@ -252,23 +251,23 @@ exports[`StepNavigation should render continue button if not on last two steps 1
     class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="StepNavigation__back-button"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Back
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
       data-testid="StepNavigation__continue-button"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Continue
       </div>

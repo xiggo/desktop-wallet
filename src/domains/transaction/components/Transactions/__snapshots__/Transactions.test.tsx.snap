@@ -1573,12 +1573,12 @@ exports[`Transactions should fetch more transactions 1`] = `
     </div>
   </div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY mt-10 mb-5 w-full"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA mt-10 mb-5 w-full"
     data-testid="transactions__fetch-more-button"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     >
       View More
     </div>

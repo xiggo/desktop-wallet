@@ -63,7 +63,7 @@ exports[`ErrorStep should display error details 1`] = `
         class="relative"
       >
         <button
-          class="ClipboardButton__StyledButton-sc-cammp1-0 bdsvAo"
+          class="ClipboardButton__StyledButton-sc-cammp1-0 gwLnQs"
           data-testid="clipboard-button__wrapper"
           type="button"
         >
@@ -86,23 +86,23 @@ exports[`ErrorStep should display error details 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-auto mr-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-auto mr-3"
         data-testid="ErrorStep__wallet-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Back to Wallet
         </div>
       </button>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
         data-testid="ErrorStep__repeat-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Retry
         </div>
@@ -150,23 +150,23 @@ exports[`ErrorStep should emit onBack 1`] = `
       class="flex"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-auto mr-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-auto mr-3"
         data-testid="ErrorStep__wallet-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Back to Wallet
         </div>
       </button>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
         data-testid="ErrorStep__repeat-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Retry
         </div>
@@ -214,23 +214,23 @@ exports[`ErrorStep should emit onRepeat 1`] = `
       class="flex"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-auto mr-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-auto mr-3"
         data-testid="ErrorStep__wallet-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Back to Wallet
         </div>
       </button>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
         data-testid="ErrorStep__repeat-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Retry
         </div>
@@ -278,23 +278,23 @@ exports[`ErrorStep should render with custom title 1`] = `
       class="flex"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-auto mr-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-auto mr-3"
         data-testid="ErrorStep__wallet-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Back to Wallet
         </div>
       </button>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
         data-testid="ErrorStep__repeat-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Retry
         </div>
@@ -342,23 +342,23 @@ exports[`ErrorStep should render with default texts 1`] = `
       class="flex"
     >
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-auto mr-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-auto mr-3"
         data-testid="ErrorStep__wallet-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Back to Wallet
         </div>
       </button>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
         data-testid="ErrorStep__repeat-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Retry
         </div>

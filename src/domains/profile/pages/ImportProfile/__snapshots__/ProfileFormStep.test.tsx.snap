@@ -683,23 +683,23 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="CreateProfile__back-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Back
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Create
               </div>
@@ -1145,24 +1145,24 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="CreateProfile__back-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Back
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
               data-testid="CreateProfile__submit-button"
               disabled=""
               type="submit"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Create
               </div>
@@ -1608,24 +1608,24 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="CreateProfile__back-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Back
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
               data-testid="CreateProfile__submit-button"
               disabled=""
               type="submit"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Create
               </div>
@@ -2071,24 +2071,24 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="CreateProfile__back-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Back
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
               data-testid="CreateProfile__submit-button"
               disabled=""
               type="submit"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Create
               </div>
@@ -2198,12 +2198,12 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                           class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                             data-testid="SelectProfileImage__upload-button"
                             type="button"
                           >
                             <div
-                              class="flex relative items-center space-x-2"
+                              class="flex items-center space-x-2"
                             >
                               <div
                                 class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -2777,23 +2777,23 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="CreateProfile__back-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Back
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Create
               </div>
@@ -3501,23 +3501,23 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="CreateProfile__back-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Back
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Create
               </div>
@@ -3961,23 +3961,23 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="CreateProfile__back-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Back
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Create
               </div>
@@ -4421,23 +4421,23 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
             class="flex justify-end pt-4 space-x-3"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="CreateProfile__back-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Back
               </div>
             </button>
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
               data-testid="CreateProfile__submit-button"
               type="submit"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 Create
               </div>

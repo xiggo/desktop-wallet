@@ -179,13 +179,13 @@ exports[`ContactForm should render 1`] = `
         class="mt-4"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy w-full"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
           data-testid="contact-form__add-address-btn"
           disabled=""
           type="button"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             Add Address
           </div>
@@ -199,24 +199,24 @@ exports[`ContactForm should render 1`] = `
         class="space-x-3"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
           data-testid="contact-form__cancel-btn"
           type="button"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             Cancel
           </div>
         </button>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
           data-testid="contact-form__save-btn"
           disabled=""
           type="submit"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             Save
           </div>
@@ -425,13 +425,13 @@ exports[`ContactForm should render with errors 1`] = `
         class="mt-4"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy w-full"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
           data-testid="contact-form__add-address-btn"
           disabled=""
           type="button"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             Add Address
           </div>
@@ -445,24 +445,24 @@ exports[`ContactForm should render with errors 1`] = `
         class="space-x-3"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
           data-testid="contact-form__cancel-btn"
           type="button"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             Cancel
           </div>
         </button>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
           data-testid="contact-form__save-btn"
           disabled=""
           type="submit"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             Save
           </div>

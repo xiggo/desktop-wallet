@@ -80,12 +80,12 @@ exports[`NavigationBar should not render if no active profile 1`] = `
                   class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       <div
                         class="sc-bdnxRM NjstW p-1"
@@ -119,12 +119,12 @@ exports[`NavigationBar should not render if no active profile 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                 data-testid="navbar__buttons--send"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -149,12 +149,12 @@ exports[`NavigationBar should not render if no active profile 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                 data-testid="navbar__buttons--receive"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -288,12 +288,12 @@ exports[`NavigationBar should render 1`] = `
                   class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       <div
                         class="sc-bdnxRM NjstW p-1"
@@ -327,12 +327,12 @@ exports[`NavigationBar should render 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                 data-testid="navbar__buttons--send"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -357,12 +357,12 @@ exports[`NavigationBar should render 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                 data-testid="navbar__buttons--receive"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -583,12 +583,12 @@ exports[`NavigationBar should render with custom menu 1`] = `
                   class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       <div
                         class="sc-bdnxRM NjstW p-1"
@@ -622,12 +622,12 @@ exports[`NavigationBar should render with custom menu 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                 data-testid="navbar__buttons--send"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -652,12 +652,12 @@ exports[`NavigationBar should render with custom menu 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                 data-testid="navbar__buttons--receive"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -790,13 +790,13 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cdWtiX"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
                 data-testid="navbar__buttons--send"
                 disabled=""
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -821,13 +821,13 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cdWtiX"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
                 data-testid="navbar__buttons--receive"
                 disabled=""
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -961,12 +961,12 @@ exports[`NavigationBar should render with title 1`] = `
                   class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                     data-testid="navbar__buttons--notifications"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       <div
                         class="sc-bdnxRM NjstW p-1"
@@ -1000,12 +1000,12 @@ exports[`NavigationBar should render with title 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                 data-testid="navbar__buttons--send"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"
@@ -1030,12 +1030,12 @@ exports[`NavigationBar should render with title 1`] = `
               class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                 data-testid="navbar__buttons--receive"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   <div
                     class="sc-bdnxRM NjstW p-1"

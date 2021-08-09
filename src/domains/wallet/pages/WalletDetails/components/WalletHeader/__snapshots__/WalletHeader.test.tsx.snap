@@ -163,12 +163,12 @@ exports[`WalletHeader should render 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Send
         </div>
@@ -184,11 +184,11 @@ exports[`WalletHeader should render 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -378,12 +378,12 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Send
         </div>
@@ -399,11 +399,11 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -605,12 +605,12 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Send
         </div>
@@ -626,11 +626,11 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -832,12 +832,12 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Send
         </div>
@@ -853,11 +853,11 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -1070,12 +1070,12 @@ exports[`WalletHeader should show modifiers 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Send
         </div>
@@ -1091,11 +1091,11 @@ exports[`WalletHeader should show modifiers 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -1263,12 +1263,12 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ my-auto ml-3"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd my-auto ml-3"
         data-testid="WalletHeader__send-button"
         type="button"
       >
         <div
-          class="flex relative items-center space-x-2"
+          class="flex items-center space-x-2"
         >
           Send
         </div>
@@ -1284,11 +1284,11 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
             data-testid="dropdown__toggle"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM NjstW"

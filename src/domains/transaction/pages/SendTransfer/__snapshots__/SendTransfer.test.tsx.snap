@@ -107,12 +107,12 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -146,12 +146,12 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -176,12 +176,12 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -641,12 +641,12 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -670,12 +670,12 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                     class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
                       data-testid="modal__close-btn"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM AFVmm"
@@ -871,23 +871,23 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         class="flex justify-end mt-8 space-x-3"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                           data-testid="ConfirmSendTransaction__cancel"
                           type="button"
                         >
                           <div
-                            class="flex relative items-center space-x-2"
+                            class="flex items-center space-x-2"
                           >
                             Back
                           </div>
                         </button>
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
                           <div
-                            class="flex relative items-center space-x-2"
+                            class="flex items-center space-x-2"
                           >
                             Continue
                           </div>
@@ -1013,12 +1013,12 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -1052,12 +1052,12 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1082,12 +1082,12 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1299,24 +1299,24 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                     data-testid="StepNavigation__send-button"
                     disabled=""
                     type="submit"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       <span>
                         Send
@@ -2033,12 +2033,12 @@ exports[`SendTransfer should render form and use location state 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -2072,12 +2072,12 @@ exports[`SendTransfer should render form and use location state 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2102,12 +2102,12 @@ exports[`SendTransfer should render form and use location state 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2914,24 +2914,24 @@ exports[`SendTransfer should render form and use location state 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Continue
                     </div>
@@ -3054,12 +3054,12 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -3093,12 +3093,12 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -3123,12 +3123,12 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -3924,24 +3924,24 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Continue
                     </div>
@@ -5911,12 +5911,12 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -5950,12 +5950,12 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -5980,12 +5980,12 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -6235,24 +6235,24 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Continue
                     </div>
@@ -7994,12 +7994,12 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -8033,12 +8033,12 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -8063,12 +8063,12 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -8878,24 +8878,24 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Continue
                     </div>
@@ -9018,12 +9018,12 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -9057,12 +9057,12 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -9087,12 +9087,12 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -9354,23 +9354,23 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                     data-testid="StepNavigation__continue-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Continue
                     </div>
@@ -9493,12 +9493,12 @@ exports[`SendTransfer should send a single transfer 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -9532,12 +9532,12 @@ exports[`SendTransfer should send a single transfer 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -9562,12 +9562,12 @@ exports[`SendTransfer should send a single transfer 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -10027,12 +10027,12 @@ exports[`SendTransfer should send a single transfer 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -10157,12 +10157,12 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -10196,12 +10196,12 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -10226,12 +10226,12 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -10691,12 +10691,12 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -10821,12 +10821,12 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -10860,12 +10860,12 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -10890,12 +10890,12 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -11355,12 +11355,12 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -11384,12 +11384,12 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                     class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
                       data-testid="modal__close-btn"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM AFVmm"
@@ -11650,23 +11650,23 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         class="flex justify-end mt-8 space-x-3"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                           data-testid="ConfirmSendTransaction__cancel"
                           type="button"
                         >
                           <div
-                            class="flex relative items-center space-x-2"
+                            class="flex items-center space-x-2"
                           >
                             Back
                           </div>
                         </button>
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
                           <div
-                            class="flex relative items-center space-x-2"
+                            class="flex items-center space-x-2"
                           >
                             Continue
                           </div>
@@ -11794,12 +11794,12 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -11833,12 +11833,12 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -11863,12 +11863,12 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -12328,12 +12328,12 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -12458,12 +12458,12 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -12497,12 +12497,12 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -12527,12 +12527,12 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -12992,12 +12992,12 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -13122,12 +13122,12 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -13161,12 +13161,12 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -13191,12 +13191,12 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -13656,12 +13656,12 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -13786,12 +13786,12 @@ exports[`SendTransfer should show error step and go back 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -13825,12 +13825,12 @@ exports[`SendTransfer should show error step and go back 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -13855,12 +13855,12 @@ exports[`SendTransfer should show error step and go back 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -14033,7 +14033,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                         class="relative"
                       >
                         <button
-                          class="ClipboardButton__StyledButton-sc-cammp1-0 bdsvAo"
+                          class="ClipboardButton__StyledButton-sc-cammp1-0 gwLnQs"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -14056,23 +14056,23 @@ exports[`SendTransfer should show error step and go back 1`] = `
                         </button>
                       </div>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-auto mr-3"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-auto mr-3"
                         data-testid="ErrorStep__wallet-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Back to Wallet
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                         data-testid="ErrorStep__repeat-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Retry
                         </div>

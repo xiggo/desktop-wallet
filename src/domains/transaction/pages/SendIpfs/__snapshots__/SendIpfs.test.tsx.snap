@@ -107,12 +107,12 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -146,12 +146,12 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -176,12 +176,12 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -393,24 +393,24 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                     data-testid="StepNavigation__send-button"
                     disabled=""
                     type="submit"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       <span>
                         Send
@@ -1131,12 +1131,12 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -1170,12 +1170,12 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1200,12 +1200,12 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1578,12 +1578,12 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -1706,12 +1706,12 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -1745,12 +1745,12 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1775,12 +1775,12 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2153,12 +2153,12 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -2283,12 +2283,12 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -2322,12 +2322,12 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2352,12 +2352,12 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2730,12 +2730,12 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -2858,12 +2858,12 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -2897,12 +2897,12 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2927,12 +2927,12 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -3305,12 +3305,12 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-to-wallet-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back to Wallet
                     </div>
@@ -3433,12 +3433,12 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -3472,12 +3472,12 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -3502,12 +3502,12 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -3918,24 +3918,24 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                   class="StepNavigation__StepNavigationWrapper-sc-1sww2ka-0 bdfMqA"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="StepNavigation__back-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Back
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                     data-testid="StepNavigation__continue-button"
                     disabled=""
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Continue
                     </div>
@@ -4058,12 +4058,12 @@ exports[`SendIpfs should show error step and go back 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -4097,12 +4097,12 @@ exports[`SendIpfs should show error step and go back 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -4127,12 +4127,12 @@ exports[`SendIpfs should show error step and go back 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -4305,7 +4305,7 @@ exports[`SendIpfs should show error step and go back 1`] = `
                         class="relative"
                       >
                         <button
-                          class="ClipboardButton__StyledButton-sc-cammp1-0 bdsvAo"
+                          class="ClipboardButton__StyledButton-sc-cammp1-0 gwLnQs"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -4328,23 +4328,23 @@ exports[`SendIpfs should show error step and go back 1`] = `
                         </button>
                       </div>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-auto mr-3"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-auto mr-3"
                         data-testid="ErrorStep__wallet-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Back to Wallet
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                         data-testid="ErrorStep__repeat-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Retry
                         </div>

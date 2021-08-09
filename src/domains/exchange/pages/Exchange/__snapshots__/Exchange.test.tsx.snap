@@ -109,12 +109,12 @@ exports[`Exchange should render empty 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -148,12 +148,12 @@ exports[`Exchange should render empty 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -178,12 +178,12 @@ exports[`Exchange should render empty 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -420,12 +420,12 @@ exports[`Exchange should render with exchanges 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -459,12 +459,12 @@ exports[`Exchange should render with exchanges 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -489,12 +489,12 @@ exports[`Exchange should render with exchanges 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"

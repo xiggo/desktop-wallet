@@ -109,12 +109,12 @@ exports[`News should filter results based on category query and asset 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -148,12 +148,12 @@ exports[`News should filter results based on category query and asset 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -178,12 +178,12 @@ exports[`News should filter results based on category query and asset 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -860,12 +860,12 @@ exports[`News should filter results based on category query and asset 2`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -899,12 +899,12 @@ exports[`News should filter results based on category query and asset 2`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -929,12 +929,12 @@ exports[`News should filter results based on category query and asset 2`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1383,12 +1383,12 @@ exports[`News should filter results based on category query and asset 2`] = `
                     </button>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="Pagination__next"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Next
                       <div
@@ -1403,12 +1403,12 @@ exports[`News should filter results based on category query and asset 2`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                     data-testid="Pagination__last"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       <div
                         class="sc-bdnxRM AkeAK"

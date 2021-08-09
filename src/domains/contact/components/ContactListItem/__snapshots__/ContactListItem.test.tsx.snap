@@ -139,12 +139,12 @@ exports[`ContactListItem should render 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -159,11 +159,11 @@ exports[`ContactListItem should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -341,12 +341,12 @@ exports[`ContactListItem should render as delegate 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -361,11 +361,11 @@ exports[`ContactListItem should render as delegate 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -522,12 +522,12 @@ exports[`ContactListItem should render using variant 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -542,11 +542,11 @@ exports[`ContactListItem should render using variant 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -710,12 +710,12 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -730,11 +730,11 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -863,12 +863,12 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -883,11 +883,11 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -1030,12 +1030,12 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -1050,11 +1050,11 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -1218,12 +1218,12 @@ exports[`ContactListItem should render with multiple options 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -1238,11 +1238,11 @@ exports[`ContactListItem should render with multiple options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -1371,12 +1371,12 @@ exports[`ContactListItem should render with multiple options 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -1391,11 +1391,11 @@ exports[`ContactListItem should render with multiple options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -1538,12 +1538,12 @@ exports[`ContactListItem should render with multiple options 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -1558,11 +1558,11 @@ exports[`ContactListItem should render with multiple options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -1726,12 +1726,12 @@ exports[`ContactListItem should render with one option 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -1740,12 +1740,12 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="visible"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="ContactListItem__one-option-button-0"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Option 1
                   </div>
@@ -1864,12 +1864,12 @@ exports[`ContactListItem should render with one option 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -1878,12 +1878,12 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="invisible"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="ContactListItem__one-option-button-1"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Option 1
                   </div>
@@ -2016,12 +2016,12 @@ exports[`ContactListItem should render with one option 1`] = `
               class="flex items-center space-x-2"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                 data-testid="ContactListItem__send-button"
                 type="button"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="flex items-center space-x-2"
                 >
                   Send
                 </div>
@@ -2030,12 +2030,12 @@ exports[`ContactListItem should render with one option 1`] = `
                 class="invisible"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="ContactListItem__one-option-button-2"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Option 1
                   </div>

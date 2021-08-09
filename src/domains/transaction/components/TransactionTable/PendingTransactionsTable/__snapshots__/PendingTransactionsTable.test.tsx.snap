@@ -1715,12 +1715,12 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM AFVmm"
@@ -2054,12 +2054,12 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM AFVmm"
@@ -2393,12 +2393,12 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM AFVmm"
@@ -3029,12 +3029,12 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM AFVmm"
@@ -3368,12 +3368,12 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM AFVmm"
@@ -3707,12 +3707,12 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM AFVmm"

@@ -18,12 +18,12 @@ exports[`Modal should closed by the Esc key 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -75,12 +75,12 @@ exports[`Modal should render a 3x large one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -130,12 +130,12 @@ exports[`Modal should render a 4x large one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -185,12 +185,12 @@ exports[`Modal should render a 5x large one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -240,12 +240,12 @@ exports[`Modal should render a 5x large one 2`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -295,12 +295,12 @@ exports[`Modal should render a large one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -350,12 +350,12 @@ exports[`Modal should render a medium one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -405,12 +405,12 @@ exports[`Modal should render a modal with banner 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -470,12 +470,12 @@ exports[`Modal should render a modal with content 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -527,12 +527,12 @@ exports[`Modal should render a modal with description 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -588,12 +588,12 @@ exports[`Modal should render a modal with overlay 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -645,12 +645,12 @@ exports[`Modal should render a small one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -700,12 +700,12 @@ exports[`Modal should render a xlarge one 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"

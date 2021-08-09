@@ -109,12 +109,12 @@ exports[`PluginManager should cancel install plugin 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -148,12 +148,12 @@ exports[`PluginManager should cancel install plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -178,12 +178,12 @@ exports[`PluginManager should cancel install plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -325,12 +325,12 @@ exports[`PluginManager should cancel install plugin 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -849,12 +849,12 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY flex-1"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
                             data-testid="PluginListItem__install"
                             type="button"
                           >
                             <div
-                              class="flex relative items-center space-x-2"
+                              class="flex items-center space-x-2"
                             >
                               Install
                             </div>
@@ -957,12 +957,12 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY flex-1"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
                             data-testid="PluginListItem__install"
                             type="button"
                           >
                             <div
-                              class="flex relative items-center space-x-2"
+                              class="flex items-center space-x-2"
                             >
                               Install
                             </div>
@@ -1156,12 +1156,12 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -1195,12 +1195,12 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1225,12 +1225,12 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1372,12 +1372,12 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -1912,13 +1912,13 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                               class="w-full"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy w-full"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
                               >
                                 <div
-                                  class="flex relative items-center space-x-2"
+                                  class="flex items-center space-x-2"
                                 >
                                   <div
                                     class="sc-bdnxRM NjstW"
@@ -1942,11 +1942,11 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                                   class="relative"
                                 >
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH text-left"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
                                     type="button"
                                   >
                                     <div
-                                      class="flex relative items-center space-x-2"
+                                      class="flex items-center space-x-2"
                                     >
                                       <div
                                         class="sc-bdnxRM NjstW"
@@ -2090,12 +2090,12 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -2129,12 +2129,12 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2159,12 +2159,12 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2306,12 +2306,12 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -2846,13 +2846,13 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                               class="w-full"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy w-full"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
                               >
                                 <div
-                                  class="flex relative items-center space-x-2"
+                                  class="flex items-center space-x-2"
                                 >
                                   <div
                                     class="sc-bdnxRM NjstW"
@@ -2876,11 +2876,11 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                                   class="relative"
                                 >
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH text-left"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
                                     type="button"
                                   >
                                     <div
-                                      class="flex relative items-center space-x-2"
+                                      class="flex items-center space-x-2"
                                     >
                                       <div
                                         class="sc-bdnxRM NjstW"
@@ -3024,12 +3024,12 @@ exports[`PluginManager should render 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -3063,12 +3063,12 @@ exports[`PluginManager should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -3093,12 +3093,12 @@ exports[`PluginManager should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -3240,12 +3240,12 @@ exports[`PluginManager should render 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -4406,12 +4406,12 @@ exports[`PluginManager should search for plugin 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -4445,12 +4445,12 @@ exports[`PluginManager should search for plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -4475,12 +4475,12 @@ exports[`PluginManager should search for plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -4681,12 +4681,12 @@ exports[`PluginManager should search for plugin 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -5046,12 +5046,12 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -5085,12 +5085,12 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -5115,12 +5115,12 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -5262,12 +5262,12 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -6092,12 +6092,12 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -6131,12 +6131,12 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -6161,12 +6161,12 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -6308,12 +6308,12 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -6869,12 +6869,12 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -6908,12 +6908,12 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -6938,12 +6938,12 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -7085,12 +7085,12 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -7646,12 +7646,12 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -7685,12 +7685,12 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -7715,12 +7715,12 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -7862,12 +7862,12 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -9028,12 +9028,12 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -9067,12 +9067,12 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -9097,12 +9097,12 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -9244,12 +9244,12 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="flex items-center space-x-2 whitespace-nowrap"
@@ -9501,12 +9501,12 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   There is 1 update available for your plugins. Would you like to update it?
                 </span>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ -mr-1"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd -mr-1"
                   data-testid="PluginManager__update-all"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Update All
                   </div>
@@ -9815,13 +9815,13 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                               class="w-full"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy w-full"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
                               >
                                 <div
-                                  class="flex relative items-center space-x-2"
+                                  class="flex items-center space-x-2"
                                 >
                                   <div
                                     class="sc-bdnxRM NjstW"
@@ -9851,11 +9851,11 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                                     <span />
                                   </span>
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH text-left"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
                                     type="button"
                                   >
                                     <div
-                                      class="flex relative items-center space-x-2"
+                                      class="flex items-center space-x-2"
                                     >
                                       <div
                                         class="sc-bdnxRM NjstW"

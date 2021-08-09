@@ -13,12 +13,12 @@ exports[`Notifications should open and cancel wallet update notification modal 1
           class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM NjstW p-1"
@@ -414,12 +414,12 @@ exports[`Notifications should open and cancel wallet update notification modal 1
             class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
               data-testid="modal__close-btn"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM AFVmm"
@@ -466,23 +466,23 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                   class="flex flex-col justify-center space-x-0 sm:flex-row sm:space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY mt-2 sm:mt-0"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA mt-2 sm:mt-0"
                     data-testid="WalletUpdate__cancel-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Update Later
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                     data-testid="WalletUpdate__update-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Update Now
                     </div>
@@ -511,12 +511,12 @@ exports[`Notifications should open and cancel wallet update notification modal 2
           class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM NjstW p-1"
@@ -913,12 +913,12 @@ exports[`Notifications should open and close transaction details modal 1`] = `
           class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM NjstW p-1"
@@ -1314,12 +1314,12 @@ exports[`Notifications should open and close transaction details modal 1`] = `
             class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
               data-testid="modal__close-btn"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM AFVmm"
@@ -1691,12 +1691,12 @@ exports[`Notifications should open and close transaction details modal 2`] = `
           class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM NjstW p-1"
@@ -2093,12 +2093,12 @@ exports[`Notifications should open and close wallet update notification modal 1`
           class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM NjstW p-1"
@@ -2494,12 +2494,12 @@ exports[`Notifications should open and close wallet update notification modal 1`
             class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt w-11 h-11"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
               data-testid="modal__close-btn"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM AFVmm"
@@ -2546,23 +2546,23 @@ exports[`Notifications should open and close wallet update notification modal 1`
                   class="flex flex-col justify-center space-x-0 sm:flex-row sm:space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY mt-2 sm:mt-0"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA mt-2 sm:mt-0"
                     data-testid="WalletUpdate__cancel-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Update Later
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                     data-testid="WalletUpdate__update-button"
                     type="button"
                   >
                     <div
-                      class="flex relative items-center space-x-2"
+                      class="flex items-center space-x-2"
                     >
                       Update Now
                     </div>
@@ -2591,12 +2591,12 @@ exports[`Notifications should open and close wallet update notification modal 2`
           class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM NjstW p-1"
@@ -2993,12 +2993,12 @@ exports[`Notifications should render with transactions and plugins 1`] = `
           class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
             data-testid="navbar__buttons--notifications"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM NjstW p-1"

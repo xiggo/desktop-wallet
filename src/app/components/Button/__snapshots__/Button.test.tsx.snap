@@ -3,11 +3,11 @@
 exports[`Button should render 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     />
   </button>
 </div>
@@ -16,11 +16,11 @@ exports[`Button should render 1`] = `
 exports[`Button should render a large one 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 cMELZV"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 gFBNGN"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     />
   </button>
 </div>
@@ -29,11 +29,11 @@ exports[`Button should render a large one 1`] = `
 exports[`Button should render a small one 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 hfHQJK"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 ffZBOC"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     />
   </button>
 </div>
@@ -42,11 +42,11 @@ exports[`Button should render a small one 1`] = `
 exports[`Button should render an icon 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 cwTDtW"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 hIkPKW"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     />
   </button>
 </div>
@@ -55,11 +55,11 @@ exports[`Button should render an icon 1`] = `
 exports[`Button should render as danger button 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 hOLFJX"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     />
   </button>
 </div>
@@ -68,11 +68,11 @@ exports[`Button should render as danger button 1`] = `
 exports[`Button should render as primary button 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     />
   </button>
 </div>
@@ -81,11 +81,11 @@ exports[`Button should render as primary button 1`] = `
 exports[`Button should render as secondary button 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     />
   </button>
 </div>
@@ -94,11 +94,11 @@ exports[`Button should render as secondary button 1`] = `
 exports[`Button should render as transparent button 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jONzci"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 gscufi"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     />
   </button>
 </div>
@@ -107,13 +107,13 @@ exports[`Button should render as transparent button 1`] = `
 exports[`Button should render if disabled 1`] = `
 <DocumentFragment>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
     data-testid="Button"
     disabled=""
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     >
       Click
     </div>
@@ -124,17 +124,17 @@ exports[`Button should render if disabled 1`] = `
 exports[`Button should render loading with icon 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 cwTDtW"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 hIkPKW"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     >
       <div
-        class="flex relative items-center"
+        class="flex items-center"
       >
         <span
-          class="flex invisible items-center space-x-2"
+          class="flex items-center invisible space-x-2"
         >
           <div
             class="sc-bdnxRM AFVmm"
@@ -143,11 +143,10 @@ exports[`Button should render loading with icon 1`] = `
           />
         </span>
         <div
-          class="absolute top-0 right-0 bottom-0 left-0"
+          class="absolute top-0 left-0 flex items-center justify-center w-full h-full"
         >
           <div
-            class="Spinner-sc-1rpx65r-0 jrWVRB m-auto"
-            color="info"
+            class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
           />
         </div>
       </div>
@@ -159,11 +158,11 @@ exports[`Button should render loading with icon 1`] = `
 exports[`Button should render with icon and custom icon size 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     >
       <div
         class="sc-bdnxRM NjstW"
@@ -183,11 +182,11 @@ exports[`Button should render with icon and custom icon size 1`] = `
 exports[`Button should render with icon on the left side 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     >
       <div
         class="sc-bdnxRM AFVmm"
@@ -207,11 +206,11 @@ exports[`Button should render with icon on the left side 1`] = `
 exports[`Button should render with icon on the right side 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     >
       Click Me
       <div
@@ -231,26 +230,25 @@ exports[`Button should render with icon on the right side 1`] = `
 exports[`Button should render with loading state enabled 1`] = `
 <div>
   <button
-    class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
     type="button"
   >
     <div
-      class="flex relative items-center space-x-2"
+      class="flex items-center space-x-2"
     >
       <div
-        class="flex relative items-center"
+        class="flex items-center"
       >
         <span
-          class="flex invisible items-center space-x-2"
+          class="flex items-center invisible space-x-2"
         >
           Click Me
         </span>
         <div
-          class="absolute top-0 right-0 bottom-0 left-0"
+          class="absolute top-0 left-0 flex items-center justify-center w-full h-full"
         >
           <div
-            class="Spinner-sc-1rpx65r-0 jrWVRB m-auto"
-            color="info"
+            class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
           />
         </div>
       </div>

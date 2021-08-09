@@ -1,5 +1,5 @@
+import { ButtonSpinner } from "app/components/ButtonSpinner";
 import { Icon } from "app/components/Icon";
-import { Spinner } from "app/components/Spinner";
 import React from "react";
 import { styled } from "twin.macro";
 import { ButtonVariant, Size } from "types";
@@ -18,18 +18,18 @@ type ButtonProperties = {
 const StyledButton = styled.button<ButtonProperties>(getStyles);
 
 export const OriginalButton = React.forwardRef<HTMLButtonElement, ButtonProperties>(
-	({ children, icon, isLoading, iconSize, iconPosition, ...properties }: ButtonProperties, reference) => {
+	({ variant, children, icon, isLoading, iconSize, iconPosition, ...properties }: ButtonProperties, reference) => {
 		const renderContent = () => {
 			if (isLoading) {
 				return (
-					<div className="flex relative items-center">
-						<span className="flex invisible items-center space-x-2">
+					<div className="flex items-center">
+						<span className="flex items-center invisible space-x-2">
 							{icon && <Icon name={icon} size={iconSize} />}
 							{children}
 						</span>
 
-						<div className="absolute top-0 right-0 bottom-0 left-0">
-							<Spinner size="sm" className="m-auto" />
+						<div className="absolute top-0 left-0 flex items-center justify-center w-full h-full">
+							<ButtonSpinner variant={variant} />
 						</div>
 					</div>
 				);
@@ -45,8 +45,8 @@ export const OriginalButton = React.forwardRef<HTMLButtonElement, ButtonProperti
 		};
 
 		return (
-			<StyledButton {...properties} ref={reference}>
-				<div className="flex relative items-center space-x-2">{renderContent()}</div>
+			<StyledButton {...properties} variant={variant} ref={reference}>
+				<div className="flex items-center space-x-2">{renderContent()}</div>
 			</StyledButton>
 		);
 	},

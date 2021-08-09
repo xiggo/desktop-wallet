@@ -46,12 +46,12 @@ exports[`SelectProfileImage should handle upload file 1`] = `
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 fFafLw flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             <div
               class="sc-bdnxRM AkeAK"
@@ -116,12 +116,12 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 fFafLw flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             <div
               class="sc-bdnxRM AkeAK"
@@ -186,12 +186,12 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 fFafLw flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             <div
               class="sc-bdnxRM AkeAK"
@@ -233,12 +233,12 @@ exports[`SelectProfileImage should render 1`] = `
             class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
           >
             <button
-              class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
               data-testid="SelectProfileImage__upload-button"
               type="button"
             >
               <div
-                class="flex relative items-center space-x-2"
+                class="flex items-center space-x-2"
               >
                 <div
                   class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -359,12 +359,12 @@ exports[`SelectProfileImage should render without value svg 1`] = `
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 fFafLw flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
           data-testid="SelectProfileImage__remove-button"
           type="button"
         >
           <div
-            class="flex relative items-center space-x-2"
+            class="flex items-center space-x-2"
           >
             <div
               class="sc-bdnxRM AkeAK"

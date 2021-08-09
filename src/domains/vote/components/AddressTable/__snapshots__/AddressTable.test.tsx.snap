@@ -309,12 +309,12 @@ exports[`AddressTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="AddressRow__select-0"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Vote
                   </div>
@@ -626,12 +626,12 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                   data-testid="AddressRow__select-0"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     Vote
                   </div>

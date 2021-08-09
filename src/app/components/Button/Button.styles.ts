@@ -2,7 +2,7 @@ import tw, { css } from "twin.macro";
 import { ButtonVariant, Size } from "types";
 
 const baseStyle = [
-	tw`inline-flex items-center justify-center font-semibold text-center transition-all duration-100 ease-linear rounded leading-tight outline-none`,
+	tw`relative inline-flex items-center justify-center font-semibold leading-tight text-center transition-all duration-100 ease-linear rounded outline-none`,
 	tw`focus:(outline-none ring-2 ring-theme-primary-400)`,
 	css`
 		&:disabled {
@@ -20,7 +20,7 @@ const getVariant = (variant: ButtonVariant, disabled: boolean): any => {
 
 	switch (variant) {
 		case "primary":
-			return tw`bg-theme-primary-600 text-white hover:bg-theme-primary-700`;
+			return tw`text-white bg-theme-primary-600 hover:bg-theme-primary-700`;
 		case "secondary":
 			return tw`
 				bg-theme-primary-100 text-theme-primary-600

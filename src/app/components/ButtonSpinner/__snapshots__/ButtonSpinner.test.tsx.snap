@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonSpinner should render 1`] = `
+<div>
+  <div
+    class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
+  />
+</div>
+`;
+
+exports[`ButtonSpinner should render a danger variant 1`] = `
+<div>
+  <div
+    class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
+    color="danger"
+  />
+</div>
+`;
+
+exports[`ButtonSpinner should render a info variant 1`] = `
+<div>
+  <div
+    class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
+    color="info"
+  />
+</div>
+`;
+
+exports[`ButtonSpinner should render a primary variant 1`] = `
+<div>
+  <div
+    class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
+    color="primary"
+  />
+</div>
+`;
+
+exports[`ButtonSpinner should render a reverse variant 1`] = `
+<div>
+  <div
+    class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
+    color="reverse"
+  />
+</div>
+`;
+
+exports[`ButtonSpinner should render a secondary variant 1`] = `
+<div>
+  <div
+    class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
+    color="secondary"
+  />
+</div>
+`;
+
+exports[`ButtonSpinner should render a transparent variant 1`] = `
+<div>
+  <div
+    class="ButtonSpinner-sc-1jf6tdt-0 jgnpkQ"
+    color="transparent"
+  />
+</div>
+`;

@@ -7,12 +7,12 @@ exports[`Pagination should handle first page click properly 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -26,12 +26,12 @@ exports[`Pagination should handle first page click properly 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -140,12 +140,12 @@ exports[`Pagination should handle first page click properly 1`] = `
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -160,12 +160,12 @@ exports[`Pagination should handle first page click properly 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -270,12 +270,12 @@ exports[`Pagination should handle last page click properly 1`] = `
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -290,12 +290,12 @@ exports[`Pagination should handle last page click properly 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -319,12 +319,12 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -338,12 +338,12 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -406,12 +406,12 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
             type="number"
           />
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 cKowsF search-control"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 ZKLCR search-control"
             data-testid="PaginationSearch__submit"
             type="submit"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -425,12 +425,12 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
             </div>
           </button>
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 cKowsF search-control"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 ZKLCR search-control"
             data-testid="PaginationSearch__cancel"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -532,12 +532,12 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -552,12 +552,12 @@ exports[`Pagination should handle left pagination search icon click properly 1`]
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -581,12 +581,12 @@ exports[`Pagination should handle next page click properly 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -627,12 +627,12 @@ exports[`Pagination should handle next page click properly 1`] = `
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -683,12 +683,12 @@ exports[`Pagination should handle page selection properly 1`] = `
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -713,12 +713,12 @@ exports[`Pagination should handle previous page click properly 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -732,12 +732,12 @@ exports[`Pagination should handle previous page click properly 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -833,12 +833,12 @@ exports[`Pagination should handle previous page click properly 1`] = `
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -863,12 +863,12 @@ exports[`Pagination should handle right pagination search icon click properly 1`
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -882,12 +882,12 @@ exports[`Pagination should handle right pagination search icon click properly 1`
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -1035,12 +1035,12 @@ exports[`Pagination should handle right pagination search icon click properly 1`
             type="number"
           />
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 cKowsF search-control"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 ZKLCR search-control"
             data-testid="PaginationSearch__submit"
             type="submit"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -1054,12 +1054,12 @@ exports[`Pagination should handle right pagination search icon click properly 1`
             </div>
           </button>
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 cKowsF search-control"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 ZKLCR search-control"
             data-testid="PaginationSearch__cancel"
             type="button"
           >
             <div
-              class="flex relative items-center space-x-2"
+              class="flex items-center space-x-2"
             >
               <div
                 class="sc-bdnxRM AFVmm"
@@ -1076,12 +1076,12 @@ exports[`Pagination should handle right pagination search icon click properly 1`
       </span>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -1096,12 +1096,12 @@ exports[`Pagination should handle right pagination search icon click properly 1`
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -1208,12 +1208,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -1228,12 +1228,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -1257,12 +1257,12 @@ exports[`Pagination should not render first button if pagination buttons include
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -1358,12 +1358,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -1378,12 +1378,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -1407,12 +1407,12 @@ exports[`Pagination should not render first button if pagination buttons include
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -1508,12 +1508,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -1528,12 +1528,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -1557,12 +1557,12 @@ exports[`Pagination should not render first button if pagination buttons include
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -1576,12 +1576,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -1687,12 +1687,12 @@ exports[`Pagination should not render first button if pagination buttons include
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -1706,12 +1706,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -1807,12 +1807,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -1837,12 +1837,12 @@ exports[`Pagination should not render first button if pagination buttons include
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -1856,12 +1856,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -1957,12 +1957,12 @@ exports[`Pagination should not render first button if pagination buttons include
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -1987,12 +1987,12 @@ exports[`Pagination should not render next button on last page 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -2006,12 +2006,12 @@ exports[`Pagination should not render next button on last page 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -2198,12 +2198,12 @@ exports[`Pagination should not render previous buttons on first page 1`] = `
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -2218,12 +2218,12 @@ exports[`Pagination should not render previous buttons on first page 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -2273,12 +2273,12 @@ exports[`Pagination should render 1`] = `
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -2303,12 +2303,12 @@ exports[`Pagination should render pagination search buttons 1`] = `
     data-testid="Pagination"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__first"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"
@@ -2322,12 +2322,12 @@ exports[`Pagination should render pagination search buttons 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__previous"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK mr-2"
@@ -2450,12 +2450,12 @@ exports[`Pagination should render pagination search buttons 1`] = `
       </button>
     </div>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__next"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         Next
         <div
@@ -2470,12 +2470,12 @@ exports[`Pagination should render pagination search buttons 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
       data-testid="Pagination__last"
       type="button"
     >
       <div
-        class="flex relative items-center space-x-2"
+        class="flex items-center space-x-2"
       >
         <div
           class="sc-bdnxRM AkeAK"

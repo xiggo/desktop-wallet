@@ -111,12 +111,12 @@ exports[`PluginDetails should render properly 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -150,12 +150,12 @@ exports[`PluginDetails should render properly 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -180,12 +180,12 @@ exports[`PluginDetails should render properly 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -314,12 +314,12 @@ exports[`PluginDetails should render properly 1`] = `
                       class="flex items-center space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="PluginHeader__button--report"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -342,12 +342,12 @@ exports[`PluginDetails should render properly 1`] = `
                             class="relative"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH text-left"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
                               data-testid="PluginHeader__dropdown-toggle"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW"
@@ -667,12 +667,12 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -706,12 +706,12 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -736,12 +736,12 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -867,23 +867,23 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                     class="flex"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                       data-testid="PluginHeader__button--install"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         Install
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-3"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-3"
                       data-testid="PluginHeader__button--report"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -1199,12 +1199,12 @@ exports[`PluginDetails should report plugin 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -1238,12 +1238,12 @@ exports[`PluginDetails should report plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1268,12 +1268,12 @@ exports[`PluginDetails should report plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1402,12 +1402,12 @@ exports[`PluginDetails should report plugin 1`] = `
                       class="flex items-center space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="PluginHeader__button--report"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -1430,12 +1430,12 @@ exports[`PluginDetails should report plugin 1`] = `
                             class="relative"
                           >
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH text-left"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
                               data-testid="PluginHeader__dropdown-toggle"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW"
@@ -1755,12 +1755,12 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -1794,12 +1794,12 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1824,12 +1824,12 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1959,23 +1959,23 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                     class="flex"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                       data-testid="PluginHeader__button--install"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         Install
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY ml-3"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA ml-3"
                       data-testid="PluginHeader__button--report"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -2381,12 +2381,12 @@ exports[`PluginDetails should update package 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -2420,12 +2420,12 @@ exports[`PluginDetails should update package 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2450,12 +2450,12 @@ exports[`PluginDetails should update package 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -2584,12 +2584,12 @@ exports[`PluginDetails should update package 1`] = `
                       class="flex items-center space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="PluginHeader__button--report"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -2618,12 +2618,12 @@ exports[`PluginDetails should update package 1`] = `
                               <span />
                             </span>
                             <button
-                              class="OriginalButton__StyledButton-sc-o0fs2j-0 fezzkH text-left"
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
                               data-testid="PluginHeader__dropdown-toggle"
                               type="button"
                             >
                               <div
-                                class="flex relative items-center space-x-2"
+                                class="flex items-center space-x-2"
                               >
                                 <div
                                   class="sc-bdnxRM NjstW"

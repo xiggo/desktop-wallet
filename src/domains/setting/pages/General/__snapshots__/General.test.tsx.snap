@@ -107,12 +107,12 @@ exports[`General Settings should disable submit button when profile is not resto
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -146,12 +146,12 @@ exports[`General Settings should disable submit button when profile is not resto
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -176,12 +176,12 @@ exports[`General Settings should disable submit button when profile is not resto
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1412,11 +1412,11 @@ exports[`General Settings should disable submit button when profile is not resto
                     class="flex justify-between pt-2 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hOLFJX"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM AFVmm"
@@ -1436,24 +1436,24 @@ exports[`General Settings should disable submit button when profile is not resto
                       class="space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="General-settings__cancel-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Cancel
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                         data-testid="General-settings__submit-button"
                         disabled=""
                         type="submit"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Save
                         </div>
@@ -1578,12 +1578,12 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -1617,12 +1617,12 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1647,12 +1647,12 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -1943,12 +1943,12 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                             </button>
                           </div>
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jgEwOg flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 fFafLw flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
                             data-testid="SelectProfileImage__remove-button"
                             type="button"
                           >
                             <div
-                              class="flex relative items-center space-x-2"
+                              class="flex items-center space-x-2"
                             >
                               <div
                                 class="sc-bdnxRM AkeAK"
@@ -2897,11 +2897,11 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     class="flex justify-between pt-2 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hOLFJX"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM AFVmm"
@@ -2921,23 +2921,23 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                       class="space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="General-settings__cancel-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Cancel
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                         data-testid="General-settings__submit-button"
                         type="submit"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Save
                         </div>
@@ -3062,12 +3062,12 @@ exports[`General Settings should render 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -3101,12 +3101,12 @@ exports[`General Settings should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -3131,12 +3131,12 @@ exports[`General Settings should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -4367,11 +4367,11 @@ exports[`General Settings should render 1`] = `
                     class="flex justify-between pt-2 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hOLFJX"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM AFVmm"
@@ -4391,23 +4391,23 @@ exports[`General Settings should render 1`] = `
                       class="space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="General-settings__cancel-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Cancel
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                         data-testid="General-settings__submit-button"
                         type="submit"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Save
                         </div>
@@ -4532,12 +4532,12 @@ exports[`General Settings should update profile 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -4571,12 +4571,12 @@ exports[`General Settings should update profile 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -4601,12 +4601,12 @@ exports[`General Settings should update profile 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -5838,11 +5838,11 @@ exports[`General Settings should update profile 1`] = `
                     class="flex justify-between pt-2 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hOLFJX"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM AFVmm"
@@ -5862,23 +5862,23 @@ exports[`General Settings should update profile 1`] = `
                       class="space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="General-settings__cancel-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Cancel
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                         data-testid="General-settings__submit-button"
                         type="submit"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Save
                         </div>
@@ -6003,12 +6003,12 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -6042,12 +6042,12 @@ exports[`General Settings should update the avatar when removing focus from name
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -6072,12 +6072,12 @@ exports[`General Settings should update the avatar when removing focus from name
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -7308,11 +7308,11 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="flex justify-between pt-2 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hOLFJX"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM AFVmm"
@@ -7332,23 +7332,23 @@ exports[`General Settings should update the avatar when removing focus from name
                       class="space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="General-settings__cancel-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Cancel
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jVYfXJ"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                         data-testid="General-settings__submit-button"
                         type="submit"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Save
                         </div>
@@ -7473,12 +7473,12 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM NjstW p-1"
@@ -7512,12 +7512,12 @@ exports[`General Settings should update the avatar when removing focus from name
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -7542,12 +7542,12 @@ exports[`General Settings should update the avatar when removing focus from name
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jWtMkt"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
                   <div
-                    class="flex relative items-center space-x-2"
+                    class="flex items-center space-x-2"
                   >
                     <div
                       class="sc-bdnxRM NjstW p-1"
@@ -7815,12 +7815,12 @@ exports[`General Settings should update the avatar when removing focus from name
                               class="SelectProfileImage__UploadButtonWrapper-sc-vg16mg-0 kzRfsX"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                                 data-testid="SelectProfileImage__upload-button"
                                 type="button"
                               >
                                 <div
-                                  class="flex relative items-center space-x-2"
+                                  class="flex items-center space-x-2"
                                 >
                                   <div
                                     class="sc-bdnxRM NjstW text-theme-primary-600 dark:text-theme-secondary-200"
@@ -8790,11 +8790,11 @@ exports[`General Settings should update the avatar when removing focus from name
                     class="flex justify-between pt-2 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hOLFJX"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
                       type="button"
                     >
                       <div
-                        class="flex relative items-center space-x-2"
+                        class="flex items-center space-x-2"
                       >
                         <div
                           class="sc-bdnxRM AFVmm"
@@ -8814,24 +8814,24 @@ exports[`General Settings should update the avatar when removing focus from name
                       class="space-x-3"
                     >
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 jfKZOY"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
                         data-testid="General-settings__cancel-button"
                         type="button"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Cancel
                         </div>
                       </button>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 kvIYgy"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
                         data-testid="General-settings__submit-button"
                         disabled=""
                         type="submit"
                       >
                         <div
-                          class="flex relative items-center space-x-2"
+                          class="flex items-center space-x-2"
                         >
                           Save
                         </div>
