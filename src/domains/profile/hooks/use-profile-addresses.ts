@@ -77,6 +77,11 @@ export const useProfileAddresses = (
 					continue;
 				}
 
+				const addressAlreadyExist = allAddresses.some(({ address }) => address === contactAddress.address());
+				if (addressAlreadyExist) {
+					continue;
+				}
+
 				const address = {
 					address: contactAddress.address(),
 					alias: contact.name(),

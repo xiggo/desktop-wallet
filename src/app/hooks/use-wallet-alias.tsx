@@ -14,7 +14,6 @@ interface WalletAliasResult {
 	alias: string | undefined;
 	isContact: boolean;
 	isDelegate: boolean;
-	isKnown: boolean;
 }
 
 interface HookResult {
@@ -44,17 +43,6 @@ const useWalletAlias = (): HookResult => {
 					}
 				};
 
-				const contact = profile.contacts().findByAddress(address)[0];
-
-				if (contact) {
-					return {
-						alias: contact.name(),
-						isContact: true,
-						isDelegate: !!getDelegateUsername(network),
-						isKnown: !!profile.wallets().findByAddress(address),
-					};
-				}
-
 				const wallet = profile.wallets().findByAddress(address);
 
 				if (wallet) {
@@ -70,7 +58,16 @@ const useWalletAlias = (): HookResult => {
 						alias,
 						isContact: false,
 						isDelegate: !!delegateUsername,
-						isKnown: true,
+					};
+				}
+
+				const contact = profile.contacts().findByAddress(address)[0];
+
+				if (contact) {
+					return {
+						alias: contact.name(),
+						isContact: true,
+						isDelegate: !!getDelegateUsername(network),
 					};
 				}
 
@@ -81,7 +78,6 @@ const useWalletAlias = (): HookResult => {
 						alias,
 						isContact: false,
 						isDelegate: alias !== undefined,
-						isKnown: false,
 					};
 				}
 			} catch {
@@ -92,7 +88,6 @@ const useWalletAlias = (): HookResult => {
 				alias: undefined,
 				isContact: false,
 				isDelegate: false,
-				isKnown: false,
 			};
 		},
 		[env],

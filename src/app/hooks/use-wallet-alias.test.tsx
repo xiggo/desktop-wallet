@@ -24,7 +24,6 @@ describe("useWalletAlias", () => {
 			alias: undefined,
 			isContact: false,
 			isDelegate: false,
-			isKnown: false,
 		});
 	});
 
@@ -52,42 +51,17 @@ describe("useWalletAlias", () => {
 		).toBe(true);
 	});
 
-	it("should return contact name and isKnown = true when contact is also known wallet", async () => {
-		const contact = profile.contacts().create("Test");
-		await contact.setAddresses([{ address: wallet.address(), coin: wallet.coinId(), network: wallet.networkId() }]);
+	it("should return contact name", () => {
+		const contact = profile.contacts().first();
+		const contactAddress = contact.addresses().first();
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({ address: wallet.address(), profile })).toEqual({
+		expect(result.current.getWalletAlias({ address: contactAddress.address(), profile })).toEqual({
 			alias: contact.name(),
 			isContact: true,
 			isDelegate: false,
-			isKnown: true,
 		});
-
-		profile.contacts().forget(contact.id());
-	});
-
-	it("should return contact name and isDelegate = true when contact is also delegate", async () => {
-		const contact = profile.contacts().create("Test");
-		await contact.setAddresses([{ address: wallet.address(), coin: wallet.coinId(), network: wallet.networkId() }]);
-
-		jest.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
-			username: () => "delegate username",
-		} as any);
-
-		const { result } = renderHook(() => useWalletAlias(), { wrapper });
-
-		expect(
-			result.current.getWalletAlias({ address: wallet.address(), network: wallet.network(), profile }),
-		).toEqual({
-			alias: contact.name(),
-			isContact: true,
-			isDelegate: true,
-			isKnown: true,
-		});
-
-		profile.contacts().forget(contact.id());
 	});
 
 	it("should return displayName", () => {
@@ -97,7 +71,6 @@ describe("useWalletAlias", () => {
 			alias: wallet.displayName(),
 			isContact: false,
 			isDelegate: false,
-			isKnown: true,
 		});
 	});
 
@@ -112,7 +85,6 @@ describe("useWalletAlias", () => {
 			alias: wallet.displayName(),
 			isContact: false,
 			isDelegate: true,
-			isKnown: true,
 		});
 	});
 
@@ -136,7 +108,6 @@ describe("useWalletAlias", () => {
 			alias: delegate.username(),
 			isContact: false,
 			isDelegate: true,
-			isKnown: false,
 		});
 
 		walletsSpy.mockRestore();
@@ -156,7 +127,6 @@ describe("useWalletAlias", () => {
 			alias: "delegate username",
 			isContact: false,
 			isDelegate: true,
-			isKnown: true,
 		});
 	});
 });

@@ -66,4 +66,29 @@ describe("useProfileAddresses", () => {
 		walletMultiSignatureSpy.mockRestore();
 		contactMultiSignatureSpy.mockRestore();
 	});
+
+	it("should return unique addresses", async () => {
+		const hook = renderHook(() => useProfileAddresses({ profile }));
+
+		expect(hook.result.current.allAddresses).toHaveLength(6);
+
+		expect(profile.contacts().values()).toHaveLength(2);
+
+		const newContact = profile.contacts().create("New name");
+		await profile.contacts().update(newContact.id(), {
+			addresses: [
+				{
+					address: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+					coin: "ARK",
+					network: "ark.devnet",
+				},
+			],
+		});
+
+		expect(profile.contacts().values()).toHaveLength(3);
+
+		hook.rerender();
+
+		expect(hook.result.current.allAddresses).toHaveLength(6);
+	});
 });

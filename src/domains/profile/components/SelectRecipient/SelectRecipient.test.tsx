@@ -118,7 +118,6 @@ describe("SelectRecipient", () => {
 			alias: undefined,
 			isContact: false,
 			isDelegate: false,
-			isKnown: false,
 		});
 
 		contactsSpy.mockRestore();
