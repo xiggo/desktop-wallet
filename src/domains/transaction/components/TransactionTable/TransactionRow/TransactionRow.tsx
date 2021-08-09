@@ -111,7 +111,7 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell innerClassName="flex space-x-4" isCompact={isCompact}>
-					<TransactionRowMode transaction={transaction} iconSize={isCompact ? "sm" : "lg"} />
+					<TransactionRowMode transaction={transaction} iconSize={isCompact ? "xs" : "lg"} />
 					<div className="w-40 flex-1">
 						<TransactionRowRecipientLabel transaction={transaction} walletName={walletName} />
 					</div>

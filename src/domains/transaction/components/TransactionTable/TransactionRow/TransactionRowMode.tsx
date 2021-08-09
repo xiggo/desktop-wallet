@@ -48,11 +48,16 @@ export const BaseTransactionRowMode = ({ type, isSent, isReturn, recipient, icon
 	const shadowClasses =
 		"ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
 
+	const isCompact = iconSize === "xs";
+
 	return (
-		<div data-testid="TransactionRowMode" className="flex items-center -space-x-1">
+		<div
+			data-testid="TransactionRowMode"
+			className={cn("flex items-center", isCompact ? "space-x-2" : "-space-x-1")}
+		>
 			<Tooltip content={tooltipContent}>
-				{iconSize === "sm" ? (
-					<span className={cn("w-8 h-8 flex items-center border-0", modeCircleStyle)}>
+				{isCompact ? (
+					<span className={cn("w-5 h-5 flex items-center border-0", modeCircleStyle)}>
 						<Icon name={modeIconName} size="lg" />
 					</span>
 				) : (

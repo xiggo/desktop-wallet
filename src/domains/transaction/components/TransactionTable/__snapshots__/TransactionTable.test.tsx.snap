@@ -6036,11 +6036,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+                    class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -6052,8 +6052,8 @@ exports[`TransactionTable should render compact 1`] = `
                       </svg>
                     </div>
                   </span>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                  <span
+                    class="w-5 h-5 flex items-center justify-center text-theme-text dark:text-theme-secondary-600"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6065,7 +6065,7 @@ exports[`TransactionTable should render compact 1`] = `
                         vote.svg
                       </svg>
                     </div>
-                  </div>
+                  </span>
                 </div>
                 <div
                   class="w-40 flex-1"
@@ -6166,11 +6166,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+                    class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -6182,8 +6182,8 @@ exports[`TransactionTable should render compact 1`] = `
                       </svg>
                     </div>
                   </span>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                  <span
+                    class="w-5 h-5 flex items-center justify-center text-theme-text dark:text-theme-secondary-600"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6195,7 +6195,7 @@ exports[`TransactionTable should render compact 1`] = `
                         unvote.svg
                       </svg>
                     </div>
-                  </div>
+                  </span>
                 </div>
                 <div
                   class="w-40 flex-1"
@@ -6296,11 +6296,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -6312,8 +6312,8 @@ exports[`TransactionTable should render compact 1`] = `
                       </svg>
                     </div>
                   </span>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                  <span
+                    class="w-5 h-5 flex items-center justify-center text-theme-text dark:text-theme-secondary-600"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -6325,7 +6325,7 @@ exports[`TransactionTable should render compact 1`] = `
                         ipfs.svg
                       </svg>
                     </div>
-                  </div>
+                  </span>
                 </div>
                 <div
                   class="w-40 flex-1"
@@ -6422,11 +6422,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -6439,7 +6439,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6552,11 +6552,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -6569,7 +6569,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6682,11 +6682,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -6699,7 +6699,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6812,11 +6812,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -6829,7 +6829,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -6942,11 +6942,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -6959,7 +6959,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7072,11 +7072,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -7089,7 +7089,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7202,11 +7202,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -7219,7 +7219,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7332,11 +7332,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -7349,7 +7349,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7462,11 +7462,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -7478,8 +7478,8 @@ exports[`TransactionTable should render compact 1`] = `
                       </svg>
                     </div>
                   </span>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                  <span
+                    class="w-5 h-5 flex items-center justify-center text-theme-text dark:text-theme-secondary-600"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -7491,7 +7491,7 @@ exports[`TransactionTable should render compact 1`] = `
                         second-signature.svg
                       </svg>
                     </div>
-                  </div>
+                  </span>
                 </div>
                 <div
                   class="w-40 flex-1"
@@ -7588,11 +7588,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -7605,7 +7605,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div
@@ -7718,11 +7718,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -7734,8 +7734,8 @@ exports[`TransactionTable should render compact 1`] = `
                       </svg>
                     </div>
                   </span>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                  <span
+                    class="w-5 h-5 flex items-center justify-center text-theme-text dark:text-theme-secondary-600"
                     data-testid="TransactionRowRecipientIcon"
                   >
                     <div
@@ -7747,7 +7747,7 @@ exports[`TransactionTable should render compact 1`] = `
                         multipayment.svg
                       </svg>
                     </div>
-                  </div>
+                  </span>
                 </div>
                 <div
                   class="w-40 flex-1"
@@ -7851,11 +7851,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
               >
                 <div
-                  class="flex items-center -space-x-1"
+                  class="flex items-center space-x-2"
                   data-testid="TransactionRowMode"
                 >
                   <span
-                    class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                    class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -7868,7 +7868,7 @@ exports[`TransactionTable should render compact 1`] = `
                     </div>
                   </span>
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                     data-testid="Avatar"
                   >
                     <div

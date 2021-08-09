@@ -1050,11 +1050,11 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
                       >
                         <div
-                          class="flex items-center -space-x-1"
+                          class="flex items-center space-x-2"
                           data-testid="TransactionRowMode"
                         >
                           <span
-                            class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                           >
                             <div
                               class="sc-bdnxRM NjstW"
@@ -1067,7 +1067,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </span>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1191,11 +1191,11 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
                       >
                         <div
-                          class="flex items-center -space-x-1"
+                          class="flex items-center space-x-2"
                           data-testid="TransactionRowMode"
                         >
                           <span
-                            class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                           >
                             <div
                               class="sc-bdnxRM NjstW"
@@ -1208,7 +1208,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </span>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1332,11 +1332,11 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
                       >
                         <div
-                          class="flex items-center -space-x-1"
+                          class="flex items-center space-x-2"
                           data-testid="TransactionRowMode"
                         >
                           <span
-                            class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                           >
                             <div
                               class="sc-bdnxRM NjstW"
@@ -1349,7 +1349,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </span>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1473,11 +1473,11 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
                       >
                         <div
-                          class="flex items-center -space-x-1"
+                          class="flex items-center space-x-2"
                           data-testid="TransactionRowMode"
                         >
                           <span
-                            class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                           >
                             <div
                               class="sc-bdnxRM NjstW"
@@ -1490,7 +1490,7 @@ exports[`Dashboard should render 1`] = `
                             </div>
                           </span>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5202,11 +5202,11 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
                       >
                         <div
-                          class="flex items-center -space-x-1"
+                          class="flex items-center space-x-2"
                           data-testid="TransactionRowMode"
                         >
                           <span
-                            class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                           >
                             <div
                               class="sc-bdnxRM NjstW"
@@ -5219,7 +5219,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </span>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5343,11 +5343,11 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
                       >
                         <div
-                          class="flex items-center -space-x-1"
+                          class="flex items-center space-x-2"
                           data-testid="TransactionRowMode"
                         >
                           <span
-                            class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                           >
                             <div
                               class="sc-bdnxRM NjstW"
@@ -5360,7 +5360,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </span>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5484,11 +5484,11 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
                       >
                         <div
-                          class="flex items-center -space-x-1"
+                          class="flex items-center space-x-2"
                           data-testid="TransactionRowMode"
                         >
                           <span
-                            class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                           >
                             <div
                               class="sc-bdnxRM NjstW"
@@ -5501,7 +5501,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </span>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -5625,11 +5625,11 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI flex space-x-4"
                       >
                         <div
-                          class="flex items-center -space-x-1"
+                          class="flex items-center space-x-2"
                           data-testid="TransactionRowMode"
                         >
                           <span
-                            class="w-8 h-8 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                            class="w-5 h-5 flex items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                           >
                             <div
                               class="sc-bdnxRM NjstW"
@@ -5642,7 +5642,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </div>
                           </span>
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iGXOrP ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div

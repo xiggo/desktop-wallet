@@ -15,11 +15,24 @@ interface Properties {
 export const TransactionRowRecipientIcon = ({ type, recipient, size }: Properties) => {
 	const { getIcon } = useTransactionTypes();
 
+	const isCompact = size === "xs";
+
 	const shadowClasses =
 		"ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
 
 	if (type === "transfer") {
-		return <Avatar size={size} address={recipient} className={shadowClasses} />;
+		return <Avatar size={size} address={recipient} className={shadowClasses} noShadow={isCompact} />;
+	}
+
+	if (isCompact) {
+		return (
+			<span
+				data-testid="TransactionRowRecipientIcon"
+				className="w-5 h-5 flex items-center justify-center text-theme-text dark:text-theme-secondary-600"
+			>
+				<Icon name={getIcon(type)} size="lg" />
+			</span>
+		);
 	}
 
 	return (

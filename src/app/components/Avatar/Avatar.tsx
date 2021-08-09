@@ -19,6 +19,8 @@ const AvatarWrapper = styled.div<Properties>`
 
 	${({ size }) => {
 		switch (size) {
+			case "xs":
+				return tw`w-5 h-5 text-sm`;
 			case "sm":
 				return tw`w-8 h-8 text-sm`;
 			case "lg":
