@@ -56,8 +56,8 @@ interface InputFeeProperties {
 	simpleValue?: InputFeeSimpleValue;
 	value: string | undefined;
 	onChange: (value: string) => void;
-	onChangeViewType: (value: InputFeeViewType) => void;
-	onChangeSimpleValue: (value: InputFeeSimpleValue) => void;
+	onChangeViewType?: (value: InputFeeViewType) => void;
+	onChangeSimpleValue?: (value: InputFeeSimpleValue) => void;
 }
 
 export { DEFAULT_SIMPLE_VALUE, DEFAULT_VIEW_TYPE, InputFeeSimpleValue, InputFeeViewType };

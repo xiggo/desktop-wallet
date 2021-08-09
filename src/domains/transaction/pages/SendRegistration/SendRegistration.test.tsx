@@ -343,13 +343,6 @@ describe("Registration", () => {
 		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
 
-		const fees = within(getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
-		fireEvent.click(fees[1]);
-
-		fireEvent.click(
-			within(getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
-		);
-
 		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
@@ -425,13 +418,6 @@ describe("Registration", () => {
 		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
 
-		const fees = within(getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
-		fireEvent.click(fees[1]);
-
-		fireEvent.click(
-			within(getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
-		);
-
 		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
@@ -505,13 +491,6 @@ describe("Registration", () => {
 		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
 
-		const fees = within(getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
-		fireEvent.click(fees[1]);
-
-		fireEvent.click(
-			within(getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
-		);
-
 		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
@@ -582,13 +561,6 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
-
-		const fees = within(getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
-		fireEvent.click(fees[1]);
-
-		fireEvent.click(
-			within(getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
-		);
 
 		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
 

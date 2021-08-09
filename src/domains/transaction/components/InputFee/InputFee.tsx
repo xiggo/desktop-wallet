@@ -38,6 +38,12 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		const [advancedValue, setAdvancedValue] = useState(value);
 
 		useEffect(() => {
+			if (value && value !== advancedValue) {
+				setAdvancedValue(value.toString());
+			}
+		}, [value]); // eslint-disable-line react-hooks/exhaustive-deps
+
+		useEffect(() => {
 			const setDefaultAdvancedValue = () => {
 				if (avg && isNil(advancedValue)) {
 					setAdvancedValue(avg.toString());
@@ -72,7 +78,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		};
 
 		const onChangeViewType = (newValue: InputFeeViewType) => {
-			properties.onChangeViewType(newValue);
+			properties.onChangeViewType?.(newValue);
 
 			if (newValue === InputFeeViewType.Simple) {
 				const feeValue = options[simpleValue].displayValue;
@@ -86,7 +92,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		};
 
 		const onChangeSimpleValue = (newValue: InputFeeSimpleValue) => {
-			properties.onChangeSimpleValue(newValue);
+			properties.onChangeSimpleValue?.(newValue);
 
 			const feeValue = options[newValue].displayValue;
 			onChange(feeValue.toString());

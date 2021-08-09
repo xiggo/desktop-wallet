@@ -87,4 +87,37 @@ describe("useFees", () => {
 
 		mockFind.mockRestore();
 	});
+
+	it("should calculate and return multisignature fees with one participant", async () => {
+		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+
+		const mockFind = jest.spyOn(env.fees(), "findByType").mockImplementationOnce(() => {
+			throw new Error("test");
+		});
+
+		const profile = env.profiles().create("John Doe");
+		await env.profiles().restore(profile);
+		await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+		await env.wallets().syncByProfile(profile);
+
+		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
+		const {
+			result: { current },
+		} = renderHook(() => useFees(profile), { wrapper });
+
+		await env.fees().sync(profile, "ARK", "ark.devnet");
+
+		await expect(current.findByType("ARK", "ark.devnet", "multiSignature")).resolves.toEqual({
+			avg: 10,
+			isDynamic: false,
+			max: 10,
+			min: 10,
+			static: 10,
+		});
+
+		mockFind.mockRestore();
+	});
 });

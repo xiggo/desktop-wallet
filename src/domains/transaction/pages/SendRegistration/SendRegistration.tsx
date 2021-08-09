@@ -65,7 +65,7 @@ export const SendRegistration = () => {
 	const { formState, register, setValue, trigger, watch, getValues } = form;
 	const { isSubmitting, isValid } = formState;
 
-	const { fee, fees } = watch();
+	const { fee, fees, isLoading } = watch();
 
 	const previousFee = usePrevious(fee);
 
@@ -96,6 +96,7 @@ export const SendRegistration = () => {
 		register("senderAddress", { required: true });
 
 		register("suppressWarning");
+		register("isLoading");
 	}, [register, activeWallet, common]);
 
 	const {
@@ -310,8 +311,8 @@ export const SendRegistration = () => {
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
 									onContinueClick={() => handleNext()}
-									isLoading={isSubmitting}
-									isNextDisabled={!isValid}
+									isLoading={isSubmitting || isLoading}
+									isNextDisabled={!isValid || isLoading}
 									size={stepCount}
 									activeIndex={activeTab}
 								/>

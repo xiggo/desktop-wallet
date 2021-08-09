@@ -2,7 +2,7 @@ import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { Input } from "app/components/Input";
-import { useValidation } from "app/hooks";
+import { useFees, useValidation } from "app/hooks";
 import cn from "classnames";
 import React, { ChangeEvent, useCallback, useEffect } from "react";
 import { useFormContext } from "react-hook-form";
@@ -24,12 +24,12 @@ export const FormStep = ({
 	step?: number;
 }) => {
 	const { t } = useTranslation();
-	const { errors, setValue, getValues, register } = useFormContext();
-	const { participants, fee, minParticipants } = getValues();
-
-	const inputFeeSettings = getValues("inputFeeSettings") ?? {};
+	const { errors, setValue, register, watch } = useFormContext();
+	const { participants, fee, minParticipants, inputFeeSettings = {} } = watch();
 
 	const { common, multiSignatureRegistration } = useValidation();
+
+	const { calculateMultiSignatureFee } = useFees(profile);
 
 	useEffect(() => {
 		register("fee", common.fee(wallet.balance(), wallet.network()));
@@ -42,6 +42,37 @@ export const FormStep = ({
 			setValue("minParticipants", 2, { shouldDirty: true, shouldValidate: true });
 		}
 	}, [setValue, minParticipants]);
+
+	useEffect(() => {
+		const updateFee = async () => {
+			if (!participants) {
+				return;
+			}
+
+			setValue("isLoading", true, { shouldDirty: true });
+
+			const multiSignatureFee = await calculateMultiSignatureFee({
+				coin: wallet.coinId(),
+				network: wallet.networkId(),
+				participants: participants.length,
+			});
+
+			setValue("fee", multiSignatureFee.toHuman(), { shouldDirty: true, shouldValidate: true });
+			setValue(
+				"fees",
+				{
+					avg: multiSignatureFee.toHuman(),
+					max: multiSignatureFee.toHuman(),
+					min: multiSignatureFee.toHuman(),
+					static: multiSignatureFee.toHuman(),
+				},
+				{ shouldDirty: true, shouldValidate: true },
+			);
+			setValue("isLoading", false, { shouldDirty: true });
+		};
+
+		updateFee();
+	}, [setValue, participants, calculateMultiSignatureFee, wallet]);
 
 	const handleParticipants = useCallback(
 		(values: Participant[]) => {
@@ -107,7 +138,7 @@ export const FormStep = ({
 						loading={!fees}
 						value={fee}
 						step={step}
-						disabled={wallet.network().feeType() !== "dynamic"}
+						disabled={wallet.network().feeType() !== "dynamic" || !fees?.isDynamic}
 						onChange={(value) => setValue("fee", value, { shouldDirty: true, shouldValidate: true })}
 						network={wallet.network()}
 						profile={profile}

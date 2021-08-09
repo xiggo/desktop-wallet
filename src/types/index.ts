@@ -15,4 +15,5 @@ export interface TransactionFees {
 	max: number;
 	min: number;
 	avg: number;
+	isDynamic?: boolean;
 }
