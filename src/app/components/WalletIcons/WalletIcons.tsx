@@ -19,7 +19,7 @@ const getIconName = (type: string) => {
 };
 
 const getIconColor = (type: string) =>
-	type === "Starred" ? "text-theme-warning-400" : "text-theme-text dark:text-theme-secondary-600";
+	type === "Starred" ? "text-theme-warning-400" : "text-theme-secondary-700 dark:text-theme-secondary-600";
 
 const WalletIcon = ({
 	type,

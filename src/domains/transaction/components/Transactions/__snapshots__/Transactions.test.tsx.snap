@@ -357,7 +357,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -521,7 +521,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -685,7 +685,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -849,7 +849,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -1013,7 +1013,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -1177,7 +1177,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -1341,7 +1341,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -1505,7 +1505,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -1943,7 +1943,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -2107,7 +2107,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -2271,7 +2271,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -2435,7 +2435,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -2862,7 +2862,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -3026,7 +3026,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -3190,7 +3190,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -3354,7 +3354,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -3781,7 +3781,7 @@ exports[`Transactions should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -3945,7 +3945,7 @@ exports[`Transactions should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4109,7 +4109,7 @@ exports[`Transactions should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4273,7 +4273,7 @@ exports[`Transactions should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4700,7 +4700,7 @@ exports[`Transactions should render with custom title 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -4864,7 +4864,7 @@ exports[`Transactions should render with custom title 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -5028,7 +5028,7 @@ exports[`Transactions should render with custom title 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>
@@ -5192,7 +5192,7 @@ exports[`Transactions should render with custom title 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
               </div>

@@ -298,7 +298,7 @@ exports[`WalletsList should render 1`] = `
                     class="inline-flex items-center space-x-1"
                   >
                     <div
-                      class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                      class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                       data-testid="WalletIcon__Key"
                     >
                       <div
@@ -1113,7 +1113,7 @@ exports[`WalletsList should render with view more button 1`] = `
                     class="inline-flex items-center space-x-1"
                   >
                     <div
-                      class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                      class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                       data-testid="WalletIcon__Key"
                     >
                       <div

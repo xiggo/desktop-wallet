@@ -487,7 +487,7 @@ exports[`Wallets should load more wallets 1`] = `
                         class="inline-flex items-center space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -595,7 +595,7 @@ exports[`Wallets should load more wallets 1`] = `
                         class="inline-flex items-center space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -1131,7 +1131,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                         class="inline-flex items-center space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -1239,7 +1239,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                         class="inline-flex items-center space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -1955,7 +1955,7 @@ exports[`Wallets should render grid 1`] = `
                         class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -2051,7 +2051,7 @@ exports[`Wallets should render grid 1`] = `
                         class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -2445,7 +2445,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                         class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -2541,7 +2541,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                         class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -3055,7 +3055,7 @@ exports[`Wallets should render list 1`] = `
                         class="inline-flex items-center space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -3163,7 +3163,7 @@ exports[`Wallets should render list 1`] = `
                         class="inline-flex items-center space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -3498,7 +3498,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                         class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -3988,7 +3988,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                         class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div
@@ -4084,7 +4084,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                         class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div

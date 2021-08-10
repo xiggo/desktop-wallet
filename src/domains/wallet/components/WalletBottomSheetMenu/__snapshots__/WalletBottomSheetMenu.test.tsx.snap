@@ -354,7 +354,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                         class="inline-flex items-center space-x-1"
                       >
                         <div
-                          class="inline-block p-1 text-theme-text dark:text-theme-secondary-600"
+                          class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
                           data-testid="WalletIcon__Key"
                         >
                           <div

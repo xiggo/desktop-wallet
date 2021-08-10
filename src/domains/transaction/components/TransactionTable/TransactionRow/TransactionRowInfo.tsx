@@ -16,7 +16,7 @@ export const BaseTransactionRowInfo = ({ memo, isMultiSignatureRegistration, isL
 	return (
 		<div
 			data-testid="TransactionRowInfo"
-			className="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
+			className="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
 		>
 			{isLedger && (
 				<Tooltip content={t("COMMON.LEDGER")}>
