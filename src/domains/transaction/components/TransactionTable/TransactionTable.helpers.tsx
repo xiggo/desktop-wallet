@@ -5,17 +5,11 @@ import { useTranslation } from "react-i18next";
 
 interface UseColumnProperties {
 	exchangeCurrency: string | undefined;
-	isCompact: boolean | undefined;
 	showExplorerLinkColumn: boolean | undefined;
 	showSignColumn: boolean | undefined;
 }
 
-export const useColumns = ({
-	exchangeCurrency,
-	isCompact,
-	showExplorerLinkColumn,
-	showSignColumn,
-}: UseColumnProperties) => {
+export const useColumns = ({ exchangeCurrency, showExplorerLinkColumn, showSignColumn }: UseColumnProperties) => {
 	const { t } = useTranslation();
 
 	return useMemo<TableColumn[]>(() => {
@@ -75,10 +69,10 @@ export const useColumns = ({
 			columnDate,
 			columnRecipient,
 			columnInfo,
-			!isCompact && columnStatus,
+			columnStatus,
 			columnAmount,
 			exchangeCurrency && columnCurrency,
 			showSignColumn && columnSign,
 		].filter(Boolean) as TableColumn[];
-	}, [t, isCompact, showExplorerLinkColumn, exchangeCurrency, showSignColumn]);
+	}, [t, showExplorerLinkColumn, exchangeCurrency, showSignColumn]);
 };

@@ -5,7 +5,7 @@ import React, { memo, useMemo } from "react";
 
 import { TransactionRow } from "./TransactionRow/TransactionRow";
 
-type Skeleton = object;
+type Skeleton = Record<string, unknown>;
 
 interface Properties {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -33,7 +33,6 @@ export const TransactionTable = memo(
 	}: Properties) => {
 		const columns = useColumns({
 			exchangeCurrency,
-			isCompact,
 			showExplorerLinkColumn,
 			showSignColumn,
 		});

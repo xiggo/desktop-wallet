@@ -121,11 +121,9 @@ export const TransactionRow = memo(
 					<TransactionRowInfo transaction={transaction} />
 				</TableCell>
 
-				{!isCompact && (
-					<TableCell className="w-16" innerClassName="justify-center">
-						<TransactionRowConfirmation transaction={transaction} />
-					</TableCell>
-				)}
+				<TableCell className="w-16" innerClassName="justify-center" isCompact={isCompact}>
+					<TransactionRowConfirmation transaction={transaction} />
+				</TableCell>
 
 				<TableCell innerClassName="justify-end" isCompact={isCompact}>
 					<TransactionRowAmount

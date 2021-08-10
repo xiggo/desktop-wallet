@@ -5953,9 +5953,23 @@ exports[`TransactionTable should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
               data-testid="table__th--4"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div>
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              colspan="1"
+              data-testid="table__th--5"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -6093,6 +6107,29 @@ exports[`TransactionTable should render compact 1`] = `
                 />
               </div>
             </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
             <td>
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
@@ -6223,6 +6260,29 @@ exports[`TransactionTable should render compact 1`] = `
                 />
               </div>
             </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
             <td>
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
@@ -6347,6 +6407,29 @@ exports[`TransactionTable should render compact 1`] = `
                   class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
               </div>
             </td>
             <td>
@@ -6479,6 +6562,29 @@ exports[`TransactionTable should render compact 1`] = `
                 />
               </div>
             </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
             <td>
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
@@ -6607,6 +6713,29 @@ exports[`TransactionTable should render compact 1`] = `
                   class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
               </div>
             </td>
             <td>
@@ -6739,6 +6868,29 @@ exports[`TransactionTable should render compact 1`] = `
                 />
               </div>
             </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
             <td>
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
@@ -6867,6 +7019,29 @@ exports[`TransactionTable should render compact 1`] = `
                   class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
               </div>
             </td>
             <td>
@@ -6999,6 +7174,29 @@ exports[`TransactionTable should render compact 1`] = `
                 />
               </div>
             </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
             <td>
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
@@ -7127,6 +7325,29 @@ exports[`TransactionTable should render compact 1`] = `
                   class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
               </div>
             </td>
             <td>
@@ -7259,6 +7480,29 @@ exports[`TransactionTable should render compact 1`] = `
                 />
               </div>
             </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
             <td>
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
@@ -7389,6 +7633,29 @@ exports[`TransactionTable should render compact 1`] = `
                 />
               </div>
             </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
             <td>
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
@@ -7513,6 +7780,29 @@ exports[`TransactionTable should render compact 1`] = `
                   class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
               </div>
             </td>
             <td>
@@ -7643,6 +7933,29 @@ exports[`TransactionTable should render compact 1`] = `
                   class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
               </div>
             </td>
             <td>
@@ -7778,6 +8091,29 @@ exports[`TransactionTable should render compact 1`] = `
                 />
               </div>
             </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
             <td>
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
@@ -7906,6 +8242,29 @@ exports[`TransactionTable should render compact 1`] = `
                   class="inline-flex space-x-1 align-middle text-theme-text dark:text-theme-secondary-600"
                   data-testid="TransactionRowInfo"
                 />
+              </div>
+            </td>
+            <td
+              class="w-16"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
+              >
+                <div
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      status-ok.svg
+                    </svg>
+                  </div>
+                </div>
               </div>
             </td>
             <td>

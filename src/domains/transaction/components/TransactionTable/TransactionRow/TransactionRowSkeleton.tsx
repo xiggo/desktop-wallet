@@ -61,11 +61,9 @@ export const TransactionRowSkeleton = ({ showSignColumn, showCurrencyColumn, isC
 				<span className="flex items-center space-x-2">{infoIcons}</span>
 			</TableCell>
 
-			{!isCompact && (
-				<TableCell innerClassName="justify-center">
-					<Skeleton circle width={22} height={22} />
-				</TableCell>
-			)}
+			<TableCell innerClassName="justify-center" isCompact={isCompact}>
+				<Skeleton circle width={22} height={22} />
+			</TableCell>
 
 			<TableCell innerClassName="justify-end" isCompact={isCompact}>
 				<span className="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800">
