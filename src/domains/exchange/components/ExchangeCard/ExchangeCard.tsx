@@ -1,21 +1,23 @@
-import { DropdownOption } from "app/components/Dropdown";
-import { BlankPluginCard, PluginCard } from "domains/plugin/components/PluginCard";
+import { Card } from "app/components/Card";
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 interface ExchangeCardProperties {
-	actions?: DropdownOption[];
 	exchange: any;
 	onClick: any;
-	onSelect: any;
 }
 
-export const ExchangeCard = ({ exchange, ...properties }: ExchangeCardProperties) => {
-	const { t } = useTranslation();
+export const ExchangeCard = ({ exchange, onClick }: ExchangeCardProperties) => (
+	<div data-testid={`ExchangeCard--${exchange.id}`}>
+		<Card onClick={onClick}>
+			<div className="flex items-center space-x-3">
+				<div className="overflow-hidden flex-shrink-0 rounded-lg w-11 h-11">
+					<img src={exchange.logo} alt={`${exchange.name} Logo`} className="object-cover w-full h-full" />
+				</div>
 
-	if (exchange === undefined) {
-		return <BlankPluginCard name={t("PLUGINS.CATEGORIES.EXCHANGE")} />;
-	}
-
-	return <PluginCard plugin={exchange} showCategory={false} {...properties} />;
-};
+				<div className="flex flex-col truncate">
+					<div className="truncate link font-semibold text-lg">{exchange.name}</div>
+				</div>
+			</div>
+		</Card>
+	</div>
+);

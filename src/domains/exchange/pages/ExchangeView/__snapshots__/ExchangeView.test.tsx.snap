@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Exchange should render empty 1`] = `
+exports[`ExchangeView should render 1`] = `
 <div>
   <div
     class="flex relative flex-col min-h-screen"
@@ -13,8 +13,7 @@ exports[`Exchange should render empty 1`] = `
         class="flex relative h-21"
       >
         <button
-          class="BackButton__StyledBackButton-sc-18ta3r7-0 iNqwXn flex w-12"
-          disabled=""
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 tELEj flex w-12"
         >
           <div
             class="sc-bdnxRM AkeAK mx-auto"
@@ -263,49 +262,8 @@ exports[`Exchange should render empty 1`] = `
       class="flex flex-col flex-1"
     >
       <div
-        class="Section__SectionWrapper-sc-plnv9l-0 eFeTGz border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
-      >
-        <div
-          class="container px-10 mx-auto"
-        >
-          <div
-            class="flex justify-between items-end bg-theme-background"
-          >
-            <div
-              class="space-y-4"
-            >
-              <h1
-                class="mb-0 text-2xl"
-                data-testid="header__title"
-              >
-                Exchange
-              </h1>
-              <div
-                class="text-theme-secondary-text"
-                data-testid="header__subtitle"
-              >
-                Choose one of the exchange providers below to swap directly from within the wallet.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="Section__SectionWrapper-sc-plnv9l-0 efrBqv"
-      >
-        <div
-          class="container px-10 mx-auto"
-        >
-          <div
-            class="border border-solid border-theme-secondary-300 dark:border-theme-secondary-800 rounded-lg text-theme-secondary-text text-center leading-5 p-6"
-            data-testid="ExchangeGrid__empty-message"
-          >
-            <div>
-              There are currently no exchange providers available, please try again at a later time.
-            </div>
-          </div>
-        </div>
-      </div>
+        class="flex relative flex-1 w-full h-full"
+      />
     </div>
   </div>
 </div>

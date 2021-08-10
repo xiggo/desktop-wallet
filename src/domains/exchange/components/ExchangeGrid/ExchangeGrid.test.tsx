@@ -1,11 +1,11 @@
 import React from "react";
-import { render, screen } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { ExchangeGrid } from "./ExchangeGrid";
 
 describe("ExchangeGrid", () => {
 	it("should render", () => {
-		const { asFragment } = render(<ExchangeGrid exchanges={[{ id: "exchange", updateStatus: {} }]} />);
+		const { asFragment } = render(<ExchangeGrid exchanges={[{ id: "exchange" }]} />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -16,5 +16,15 @@ describe("ExchangeGrid", () => {
 		expect(screen.getByTestId("ExchangeGrid__empty-message")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should execute onClick callback", () => {
+		const onClick = jest.fn();
+
+		render(<ExchangeGrid exchanges={[{ id: "exchange" }]} onClick={onClick} />);
+
+		fireEvent.click(screen.getByTestId("Card"));
+
+		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ id: "exchange" }));
 	});
 });

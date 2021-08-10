@@ -1,10 +1,10 @@
-import { PluginView } from "domains/plugin/pages";
+import { ExchangeView } from "domains/exchange/pages/ExchangeView";
 
 import { Exchange } from "./pages";
 
 export const ExchangeRoutes = [
 	{
-		component: PluginView,
+		component: ExchangeView,
 		exact: true,
 		path: "/profiles/:profileId/exchange/view",
 	},

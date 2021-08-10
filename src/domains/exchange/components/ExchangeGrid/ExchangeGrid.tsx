@@ -6,29 +6,11 @@ import { ExchangeCard } from "../ExchangeCard";
 
 interface ExchangeGridProperties {
 	exchanges: any[];
-	onClick: any;
-	onDelete: any;
-	onOpenDetails: any;
+	onClick: (exchange: any) => void;
 }
 
-export const ExchangeGrid = ({ exchanges, onClick, onDelete, onOpenDetails }: ExchangeGridProperties) => {
+export const ExchangeGrid = ({ exchanges, onClick }: ExchangeGridProperties) => {
 	const { t } = useTranslation();
-
-	const actions = [
-		{ label: t("COMMON.DETAILS"), value: "open-details" },
-		{ label: t("COMMON.DELETE"), value: "delete" },
-	];
-
-	const handleExchangeAction = (exchange: any, action: any) => {
-		switch (action?.value) {
-			case "delete":
-				onDelete(exchange);
-				break;
-			case "open-details":
-				onOpenDetails(exchange);
-				break;
-		}
-	};
 
 	if (exchanges.length === 0) {
 		return (
@@ -41,13 +23,7 @@ export const ExchangeGrid = ({ exchanges, onClick, onDelete, onOpenDetails }: Ex
 	return (
 		<div data-testid="ExchangeGrid" className="grid grid-cols-3 w-full gap-4.5">
 			{exchanges.map((exchange: any) => (
-				<ExchangeCard
-					key={exchange.id}
-					actions={actions}
-					exchange={exchange}
-					onClick={() => onClick(exchange)}
-					onSelect={(action: any) => handleExchangeAction(exchange, action)}
-				/>
+				<ExchangeCard key={exchange.id} exchange={exchange} onClick={() => onClick(exchange)} />
 			))}
 		</div>
 	);
