@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { env, getDefaultProfileId, MNEMONICS } from "utils/testing-library";
@@ -18,7 +17,6 @@ describe("useProfileAddresses", () => {
 				{
 					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 					coin: "ARK",
-					name: MNEMONICS[0],
 					network: "ark.devnet",
 				},
 			]);
@@ -27,7 +25,7 @@ describe("useProfileAddresses", () => {
 		await profile.sync();
 	});
 
-	it("should return all available addresses", async () => {
+	it("should return all available addresses", () => {
 		const { result } = renderHook(() => useProfileAddresses({ profile }));
 
 		expect(result.current.allAddresses).toHaveLength(6);
@@ -49,46 +47,39 @@ describe("useProfileAddresses", () => {
 		expect(result.current.profileAddresses).toHaveLength(0);
 	});
 
-	it("should return all available addresses except MultiSignature", async () => {
+	it("should return all available addresses except MultiSignature", () => {
 		const walletMultiSignatureSpy = jest
 			.spyOn(profile.wallets().first(), "isMultiSignature")
-			.mockImplementation(() => true);
-		const contactMultiSignatureSpy = jest
-			.spyOn(profile.contacts().first().addresses().values()[0], "isMultiSignature")
 			.mockImplementation(() => true);
 
 		const { result } = renderHook(() => useProfileAddresses({ profile }, true));
 
-		expect(result.current.allAddresses).toHaveLength(4);
-		expect(result.current.contactAddresses).toHaveLength(3);
+		expect(result.current.allAddresses).toHaveLength(1);
+		expect(result.current.contactAddresses).toHaveLength(0);
 		expect(result.current.profileAddresses).toHaveLength(1);
 
 		walletMultiSignatureSpy.mockRestore();
-		contactMultiSignatureSpy.mockRestore();
 	});
 
-	it("should return unique addresses", async () => {
-		const hook = renderHook(() => useProfileAddresses({ profile }));
+	it("should return unique addresses", () => {
+		const { result, rerender } = renderHook(() => useProfileAddresses({ profile }));
 
-		expect(hook.result.current.allAddresses).toHaveLength(6);
+		expect(result.current.allAddresses).toHaveLength(6);
 
 		expect(profile.contacts().values()).toHaveLength(2);
 
-		const newContact = profile.contacts().create("New name");
-		await profile.contacts().update(newContact.id(), {
-			addresses: [
-				{
-					address: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-					coin: "ARK",
-					network: "ark.devnet",
-				},
-			],
-		});
+		profile.contacts().create("New name", [
+			{
+				address: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+				coin: "ARK",
+				network: "ark.devnet",
+			},
+		]);
 
 		expect(profile.contacts().values()).toHaveLength(3);
 
-		hook.rerender();
+		rerender();
 
-		expect(hook.result.current.allAddresses).toHaveLength(6);
+		expect(result.current.allAddresses).toHaveLength(6);
 	});
 });

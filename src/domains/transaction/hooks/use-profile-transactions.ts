@@ -151,7 +151,14 @@ export const useProfileTransactions = ({
 				profile.transactionAggregate().flush(mode);
 			}
 
-			const defaultQuery = { addresses: wallets.map((wallet) => wallet.address()), limit: LIMIT };
+			const defaultQuery = {
+				identifiers: wallets.map((wallet) => ({
+					type: "address",
+					value: wallet.address(),
+				})),
+				limit: LIMIT,
+			};
+
 			const queryParameters = transactionType ? { ...defaultQuery, ...transactionType } : defaultQuery;
 
 			// @ts-ignore

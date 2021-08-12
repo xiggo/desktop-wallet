@@ -32,7 +32,7 @@ export const UpdateContact = ({
 	useEffect(() => setErrors({}), [isOpen]);
 
 	const handleSave = async ({ name, addresses }: any) => {
-		await profile.contacts().update(contact.id(), {
+		profile.contacts().update(contact.id(), {
 			addresses,
 			name,
 		});

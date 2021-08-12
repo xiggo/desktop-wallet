@@ -236,7 +236,7 @@ describe("SelectRecipient", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeTruthy();
-			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 		});
 
 		isMultiSignatureSpy.mockRestore();

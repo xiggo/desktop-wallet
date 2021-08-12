@@ -30,6 +30,16 @@ describe("TransactionRowMode", () => {
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
 	});
 
+	it("should show return icon", () => {
+		render(
+			<TransactionRowMode
+				transaction={{ ...TransactionFixture, isReturn: () => true, type: () => "multiPayment" }}
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
+	});
+
 	it("should use default icon size", () => {
 		render(<BaseTransactionRowMode transaction={{ ...TransactionFixture }} />);
 

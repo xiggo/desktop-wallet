@@ -134,17 +134,13 @@ describe("Contacts", () => {
 	});
 
 	it("should successfully delete contact", async () => {
-		const newContact = profile.contacts().create("New Contact");
-		await profile.contacts().update(newContact.id(), {
-			addresses: [
-				{
-					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-					coin: "ARK",
-					name: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-					network: "ark.devnet",
-				},
-			],
-		});
+		const newContact = profile.contacts().create("New Contact", [
+			{
+				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				coin: "ARK",
+				network: "ark.devnet",
+			},
+		]);
 
 		const contactsSpy = jest
 			.spyOn(profile.contacts(), "values")
@@ -215,17 +211,13 @@ describe("Contacts", () => {
 	});
 
 	it("should successfully delete contact from update modal", async () => {
-		const newContact = profile.contacts().create("New Contact");
-		await profile.contacts().update(newContact.id(), {
-			addresses: [
-				{
-					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-					coin: "ARK",
-					name: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-					network: "ark.devnet",
-				},
-			],
-		});
+		const newContact = profile.contacts().create("New Contact", [
+			{
+				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				coin: "ARK",
+				network: "ark.devnet",
+			},
+		]);
 
 		const contactsSpy = jest
 			.spyOn(profile.contacts(), "values")
@@ -267,17 +259,13 @@ describe("Contacts", () => {
 	});
 
 	it("should redirect contact address to send transfer page", async () => {
-		const newContact = profile.contacts().create("New Contact");
-		await profile.contacts().update(newContact.id(), {
-			addresses: [
-				{
-					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-					coin: "ARK",
-					name: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-					network: "ark.devnet",
-				},
-			],
-		});
+		const newContact = profile.contacts().create("New Contact", [
+			{
+				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				coin: "ARK",
+				network: "ark.devnet",
+			},
+		]);
 
 		const contactsSpy = jest
 			.spyOn(profile.contacts(), "values")

@@ -5037,17 +5037,17 @@
     "@payvo/sdk-http" "^1.1.0"
     rss-parser "^3.9.0"
 
-"@payvo/profiles@^1.3.26":
-  version "1.3.26"
-  resolved "https://registry.yarnpkg.com/@payvo/profiles/-/profiles-1.3.26.tgz#73586672fe4cafe9a3f14d38c1d82b8b6e485f36"
-  integrity sha512-IZ2OTe/XvakZxrZqLeDh9AOY2w7XxOupaLVk/O+fTpiGgnvUk3TtpACR7OkdkI4jlPpwyfPUh307mV1GKJqRVg==
+"@payvo/profiles@^1.3.31":
+  version "1.3.31"
+  resolved "https://registry.yarnpkg.com/@payvo/profiles/-/profiles-1.3.31.tgz#30603dddf1e9a95230acebc46d5aeb5e40d2dfdb"
+  integrity sha512-kCoY35s1/xS7yHZ6wuvn+PPy98edDDDHpis5F5ge5gSzse53mVIQe8gnPKkpl3C8LBC7z6Rh9TA+RfNtjE94ig==
   dependencies:
     "@arkecosystem/utils" "^1.3.0"
     "@payvo/cryptography" "^1.0.1"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.1"
     "@payvo/markets" "^1.0.0"
-    "@payvo/sdk" "^1.5.16"
+    "@payvo/sdk" "^1.6.4"
     "@payvo/sdk-http" "^1.1.20"
     "@sindresorhus/slugify" "^1.1.0"
     "@vechain/picasso" "^2.1.1"
@@ -5070,22 +5070,22 @@
     uuid "^8.3.2"
     wif "^2.0.6"
 
-"@payvo/sdk-ada@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-ada/-/sdk-ada-1.5.16.tgz#5d4503d28999856ad40d28fabee3141d7694aa6d"
-  integrity sha512-8ZNdsjjgndxyRqPqDjQfu6i0kASB70dkbhFJyEdo64wDwKa9g/uxoauizEjbnAP8oEE0Jauh8Cn41R1mHo/wqA==
+"@payvo/sdk-ada@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-ada/-/sdk-ada-1.6.4.tgz#5e3afb6124826957630794a9274c64847faabe3f"
+  integrity sha512-aSGaf7sbBOPopcjrlJVRmsGKuzqfTPzeqvBRD0k9u+hgdOaP/FI6Tn7c9uiwY8psan0NAKhXnu9p7+F4gbYL8Q==
   dependencies:
     "@emurgo/cardano-serialization-lib-nodejs" "^7.0.0"
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     bech32 "^2.0.0"
 
-"@payvo/sdk-ark@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-ark/-/sdk-ark-1.5.16.tgz#db7e3428e4fa6d94291caff37b50fee86632c206"
-  integrity sha512-Dn5ZJ4REgNQKgQ1yxL1uHAGuJmSnlnJATvrb2Q8ydkTyABulNUbtbEwJ+sUJzBFHyMEaswdZDg++RpcCmRCGlw==
+"@payvo/sdk-ark@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-ark/-/sdk-ark-1.6.4.tgz#6759e9d7a951278245658f8e7334ec6e63da22f9"
+  integrity sha512-0jDxdc1M/RQIzNGMjdMEMBt0oVCq2K6QXkQQ8Jbrgz5FeEYkPZzlqN92rlw7TjMhcQFH2OzEuAnk3ta+ZaHU7A==
   dependencies:
     "@arkecosystem/crypto" "^3.0.0-next.23"
     "@arkecosystem/crypto-identities" "^1.1.1"
@@ -5094,7 +5094,7 @@
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     dot-prop "^6.0.0"
     is-url-superb "^4.0.0"
     lodash.orderby "^4.6.0"
@@ -5102,60 +5102,60 @@
     semver "^7.3.5"
     uuid "^8.3.2"
 
-"@payvo/sdk-atom@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-atom/-/sdk-atom-1.5.16.tgz#0b61d2d016703fe81fd8d7e56513df7a91b5461b"
-  integrity sha512-PY2/vaCd8XCgW768sts8QaHiFLW+20di6phkKv6nX5siU9bcQnBKZ7ag1GpiCjM7WZIyYtA97wtho7qqyse91A==
+"@payvo/sdk-atom@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-atom/-/sdk-atom-1.6.4.tgz#2d8a52c80c33be372b654cd502e38b7d080de6bb"
+  integrity sha512-qF9oud/m5abjxOzoBs6SdGikI++wBHlBl4RHPIrM/sUc5MoT0h9ewZKajB9SDpyABvyaPiytGEVU2NBF+uCKpw==
   dependencies:
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     bcrypto "^5.4.0"
     bech32 "^2.0.0"
     ledger-cosmos-js "^2.1.8"
     uuid "^8.3.2"
 
-"@payvo/sdk-avax@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-avax/-/sdk-avax-1.5.16.tgz#e69e7dfd9f0385e89144fdc0e629936f0d396fae"
-  integrity sha512-D28U9JCElpj/Jbl+o7GBTUPHnkwDrssdlFUaL0MyEIzxXXYbNgC6t7PB042dNVR1l0895sBfCGttzhWivlwMrQ==
+"@payvo/sdk-avax@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-avax/-/sdk-avax-1.6.4.tgz#9ea78d4ba34a55c26dc6d6c87c74b12081a4bf2a"
+  integrity sha512-Bb4jWwLXG4MKOG0Zt0hjSC9U6ulz8Qk3cCwpI09gPtCO22YxixK9ZnlyxOAuRIxM1ryOtPhja1xA8qjQl5vuzw==
   dependencies:
     "@arkecosystem/utils" "^1.3.0"
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     avalanche "^3.3.0"
     hdkey "^2.0.1"
     url-parse-lax "^4.0.0"
     uuid "^8.3.2"
 
-"@payvo/sdk-btc@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-btc/-/sdk-btc-1.5.16.tgz#6b8314316f4c35c9339acb56519ff884b37e2a6d"
-  integrity sha512-TWiQpeGp4h5PFhOaIDL0HFrsJBhmk9nymB5ycvtswE1GSliZZ/NzP5/ArJN+k71hncQ6rFWZALq2KaPFQe1++w==
+"@payvo/sdk-btc@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-btc/-/sdk-btc-1.6.4.tgz#0698b99e0c7449a1b93bfbb9df9d603620ccb6b8"
+  integrity sha512-SK6P4ciuAm8jjG7HoqPQGEhwaZWfA0CbBxAwBpZuzGP8iW4IKpnt2S7AwrvyBmUaN25Deo6mZreShg++FI5vaA==
   dependencies:
     "@ledgerhq/hw-app-btc" "^5.50.0"
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     bignumber.js "^9.0.1"
     bip32 "^2.0.6"
     bitcoinjs-lib "^5.2.0"
     bitcoinjs-message "~2.2.0"
     bitcore-lib "^8.25.8"
 
-"@payvo/sdk-dot@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-dot/-/sdk-dot-1.5.16.tgz#11d3fe62c5ee504da0033f095f286b91a20c803f"
-  integrity sha512-syulUNwMW17bNs0mlqkFRQQHhUv74opBZz4CwhKKlnVDDkW/S7KZ5pBiOi+i31FVYfokmtLxE8Bdb5OIMgeO/A==
+"@payvo/sdk-dot@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-dot/-/sdk-dot-1.6.4.tgz#6b3deb75c060f71ca3785bdaa0d98b810292808f"
+  integrity sha512-2TxKK/1QxMXTOxbmUbWjMsBLYmpX+ONTrzvdX/CvpbX++6UbeZ81Ist1nHo77oK7e5wCYC0vYaqfqZJZfa5lDA==
   dependencies:
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     "@polkadot/api" "^3.6.4"
     "@polkadot/keyring" "^5.5.1"
     "@polkadot/rpc-provider" "^3.7.3"
@@ -5167,38 +5167,38 @@
     "@zondax/ledger-polkadot" "^0.13.0"
     uuid "^8.3.2"
 
-"@payvo/sdk-egld@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-egld/-/sdk-egld-1.5.16.tgz#6cc733db773ee2abfe11b48a5550fd3492220700"
-  integrity sha512-Etl5WcDC2vPqqqEDhdaVkdIddCUcSNC3zq5PiHkx/ANylxb16mwqLPx+HnTGwSWLR4sqE3oGlKdkD6xf2gFBnw==
+"@payvo/sdk-egld@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-egld/-/sdk-egld-1.6.4.tgz#2430abbfb1fb8de74a3f12bf03a02237329c6de3"
+  integrity sha512-C24OeDJuJ1CNqfeWE0ENeQAvvKaB224ncnprdUQsrP6F7Syq5FxTBvY2ZybDtiUUQUGHIfCzbjBDn/uM4rXiEg==
   dependencies:
     "@elrondnetwork/elrond-core-js" "^2.1.0"
     "@elrondnetwork/erdjs" "^4.1.0"
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     bech32 "^2.0.0"
     noble-ed25519 "~1.2.1"
 
-"@payvo/sdk-eos@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-eos/-/sdk-eos-1.5.16.tgz#095f24df90266c6172a46515033aec3e6d79f143"
-  integrity sha512-7Qcs5BFnEItgY8g/TH1Q3QLQeFvHuCi9WrOKCRXOWChmqiNeYeZm9Qbi+1zZDowdI9MIXLTmuLFMnk0jSDxcrg==
+"@payvo/sdk-eos@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-eos/-/sdk-eos-1.6.4.tgz#bc0d293f2083fc39655cf41d357c199fed7250bf"
+  integrity sha512-AFXC++B4AIte2+aAJagvXnk1MbHakgInu0Oz3UAYk1gjSW7AbIVz70es73ytjiw2tv9TFOP5nOHNwf+GJZaNuw==
   dependencies:
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     bn.js "5.1.3"
     elliptic "^6.5.3"
     eosjs "^21.0.3"
     node-fetch "^2.6.1"
 
-"@payvo/sdk-eth@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-eth/-/sdk-eth-1.5.16.tgz#1fa45d77dd3d9a3b3ca3da6ca4ab40ad04ca3a36"
-  integrity sha512-WV6YTn32tNFH8gbJRHsdLnQOf67DZQHF1gOVe65Bl8Ufyy/gq7c0oOlirzF3wkid3xAuawf/erAWIRXptM2ZZA==
+"@payvo/sdk-eth@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-eth/-/sdk-eth-1.6.4.tgz#658ec029732e45c5e4589ed4f7b36d4d6de3f1b1"
+  integrity sha512-v/gkmfzHYg8Eosl+hJbdwSbEJOWkmC2bnIgMZHOCtbKO/GytomIJsGZ3eqgVu5LoS1klrOco4iZi6j0hqlraXg==
   dependencies:
     "@ethereumjs/common" "^2.2.0"
     "@ethereumjs/tx" "^3.1.4"
@@ -5206,7 +5206,7 @@
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     bip39 "^3.0.4"
     ethereumjs-wallet "^1.0.1"
     web3 "^1.3.4"
@@ -5221,10 +5221,10 @@
   resolved "https://registry.yarnpkg.com/@payvo/sdk-http/-/sdk-http-1.1.20.tgz#29ba510887e91f5fd33ee8920da1e35f48c30f2e"
   integrity sha512-+KbsZMd97P+C1t4b0b0ug1F/X8l67Wp1a0oOzuK7cb0G2NYymnKT4JzQw55GdIFsM/lo2RsyGTxdL1DSX9KGzw==
 
-"@payvo/sdk-lsk@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-lsk/-/sdk-lsk-1.5.16.tgz#4d958c9e4068f0e65de4f85dbc453900008cca78"
-  integrity sha512-AYhWo9yJorbRAG3t5PVqzLbrXjXpJ7SqzuKyd89i0il48RP+50EpslKpsv+lgC1veZvIR4KQ3KxiABsuM36ODw==
+"@payvo/sdk-lsk@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-lsk/-/sdk-lsk-1.6.4.tgz#147548a4ee3e4695d2c12615dd13273a563f787f"
+  integrity sha512-nQBgvSkPPUIR3rLuzNxIjXNWiZnQrlKSP+3dH5eG9GUFTA1QB4Js5zPka3qC2cZSft+StZzTFB5F27XFV2+TwQ==
   dependencies:
     "@ledgerhq/hw-transport-node-hid-singleton" "~5.50.0"
     "@liskhq/lisk-cryptography" "^3.0"
@@ -5233,101 +5233,101 @@
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     dpos-ledger-api "^3.0.1"
 
-"@payvo/sdk-luna@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-luna/-/sdk-luna-1.5.16.tgz#208550a140bb9871057cf863d5674ff3afbb81a9"
-  integrity sha512-aZKC8K+tBPfy6GIKUjXfh0dXdzrkA+tAPyi1/a4f8r4ihDOwdc5HK80i2z3XfG0/KztvzWHUpc9xItGK4qWjkw==
+"@payvo/sdk-luna@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-luna/-/sdk-luna-1.6.4.tgz#13aa5532f3537850b3b131a1118291ef73907bb5"
+  integrity sha512-VaBZ1i8B8biPJFI+2N7JVcPkV3R+IUxk2su1WroZz12vng3dDOiNg7i1UME4OyE+Dn3K/0SHMJSKxltQGXyiag==
   dependencies:
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     "@terra-money/terra.js" "~1.7.0"
 
-"@payvo/sdk-nano@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-nano/-/sdk-nano-1.5.16.tgz#8751568fc1567959263adeae3c2ad827de42b9bc"
-  integrity sha512-KZ0s1v+2GPPeWCkpSq30YiWmEIpErsXGyaqN631J3/g3WXxg0zeQ2wvQR70w2r4sy0e/dx5FaQSF2a6g5e7Gsg==
+"@payvo/sdk-nano@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-nano/-/sdk-nano-1.6.4.tgz#e5673964b20ef17fd0902909dbd542b211caa526"
+  integrity sha512-8z2F8T8Lspc6r44/oBLGn+WG18hnL5UmOR5tlL5dkW9ysmhBu7fdCVhD479CmwjGINvn1BFkK7zouDBmtBNyNg==
   dependencies:
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     nanocurrency "~2.5.0"
     nanocurrency-web "~1.3.2"
     noble-ed25519 "~1.2.1"
 
-"@payvo/sdk-neo@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-neo/-/sdk-neo-1.5.16.tgz#54c5e8f6d1b1bcd51966d09dc353e57af4de9dfb"
-  integrity sha512-NCMBKuSWSYPCPN4J5l7RJqrh6yuz8DC5GQ2AyT2lGckrwA+MP8NpvdkmdC4cMwyCEd3JcLAG4xMsIrN/M7dBbw==
+"@payvo/sdk-neo@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-neo/-/sdk-neo-1.6.4.tgz#f672e1fd8e921568f46799dd1d6bf0a47d3a06b6"
+  integrity sha512-2sX1zfG76JLN4v2ZcbhP1yVXI3z6USNTBGzsI72hf2I2xVNbgOJZhNoXuc1zRTgrcI+EfwQ0z8PGqr/o6IMOeQ==
   dependencies:
     "@cityofzion/neon-js" "^4.8.2"
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     uuid "^8.3.2"
 
-"@payvo/sdk-trx@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-trx/-/sdk-trx-1.5.16.tgz#fad70d7eeb4cfea3c95f1cb7d0ce2f4c29c1ddf3"
-  integrity sha512-nsp2Ymn2fQlqVx0+fjQOBdYOo9+HYsEY98gz6BwKkb80IHFOpPSrvpl0hwqOuvzlnbDZad5GCV2mov/7iTm+LA==
+"@payvo/sdk-trx@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-trx/-/sdk-trx-1.6.4.tgz#f1cd672fcc30309d84ebe8dea63d3fe72c854d4d"
+  integrity sha512-4uLM9zXt/i/gYT3j5tnupbBdEfWb891w04HFqfV3BLb5fec6EIpYB4TT9TUGlIZM6UkztAacuI08qCmCYXq5Vw==
   dependencies:
     "@ledgerhq/hw-app-trx" "^5.50.0"
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     tronweb "^3.2.6"
 
-"@payvo/sdk-xlm@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-xlm/-/sdk-xlm-1.5.16.tgz#0e5dad66a51eab0ade2116eea9e7f5b94a47f1b8"
-  integrity sha512-UYO9l4GtNpcfOURcyOcYgMPeF8RhKAXQIaiHDECoNFRbyVsqndGuG7ljS7PLoL2LP4ZeM3OZsZmkLFrhrMBkJw==
+"@payvo/sdk-xlm@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-xlm/-/sdk-xlm-1.6.4.tgz#34f44dd6bb99d4fd1f672e7bfafb74f08e6fde3a"
+  integrity sha512-y2IXw4aSDwT5Nw3OzTa5nacChz/Q/ZuxXgVhOpAoavPURWgqahpRpExENjQYyjnujvJtrEzvusxXIvx018SKGQ==
   dependencies:
     "@ledgerhq/hw-app-str" "^5.50.0"
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     ed25519-hd-key "^1.2.0"
     stellar-sdk "^8.1.1"
     uuid "^8.3.2"
 
-"@payvo/sdk-xrp@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-xrp/-/sdk-xrp-1.5.16.tgz#9bcf8e7918061b922be8290877a11ca847570067"
-  integrity sha512-lfjsx4qqQBOlbUVK0k7VzQcGujIsrfkhei0kpPLBYpXAkYjVo/1Qv6KxVIRMA0Yrw3TfEQ9jTfQo/oAvCFaIRQ==
+"@payvo/sdk-xrp@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-xrp/-/sdk-xrp-1.6.4.tgz#75420576a78cd1c740edf35fe0f360ad040659ed"
+  integrity sha512-paK3EuXK/QBIOB6/zUwANS45OuoG3ksi69m8q++OprYtEfgG8bSyqwVKBbUSXjj9b9imZAbMfIvbJyMRJYX46Q==
   dependencies:
     "@ledgerhq/hw-app-xrp" "^5.50.0"
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     bignumber.js "^9.0.1"
     ripple-keypairs "^1.0.3"
     ripple-lib "^1.9.4"
 
-"@payvo/sdk-zil@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk-zil/-/sdk-zil-1.5.16.tgz#61ad3b27e8aaa71945485583fb833cbb40b5f3a6"
-  integrity sha512-MQnS2nYaRkRDyVA+U/jxhDBQ8saYuJUGdNhbjDhZiA3lvcGtIk+DoSbitVEEHWSdDsjFn+fXq2r2IyztkxfXXw==
+"@payvo/sdk-zil@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk-zil/-/sdk-zil-1.6.4.tgz#fa5201fe3cd4b113195586907e86704e2bc893e0"
+  integrity sha512-PmQEQB2WidLen4fv7MfKf0PosO0GMINidOcPvzDrbZOy10+nV5KQX4qSKUDo1DykaQ/uQqiaxYgxSTTQ5noXDA==
   dependencies:
     "@payvo/cryptography" "^1.0.0"
     "@payvo/helpers" "^1.1.1"
     "@payvo/intl" "^1.0.0"
-    "@payvo/sdk" "1.5.16"
+    "@payvo/sdk" "1.6.4"
     "@zilliqa-js/account" "^2.2.1"
     "@zilliqa-js/zilliqa" "^2.2.1"
 
-"@payvo/sdk@1.5.16", "@payvo/sdk@^1.5.16":
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/@payvo/sdk/-/sdk-1.5.16.tgz#ccaf6d7c8a990e9ea59b5f3651ba8f07a677e76d"
-  integrity sha512-0PaNu2RwpGQCot6Eo+UNGbmJR/X/WFo6IBgUQNaUV+duoPIzUQHzFeIwiqm7SZnPy8phoN80Dml8Mz+uIVlPKA==
+"@payvo/sdk@1.6.4", "@payvo/sdk@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@payvo/sdk/-/sdk-1.6.4.tgz#ff52c3bd342aaf70d3f4572bbdd8753cf15e304e"
+  integrity sha512-dfoyoENTahpqDiqaJx9dQaOADZEodFNOdDDnv25stIHB2lVveiB5yFrG2SK14oMm8fhIc1Ayu8L0lImKLz64jA==
   dependencies:
     "@arkecosystem/utils" "^1.3.0"
     "@payvo/helpers" "^1.1.1"

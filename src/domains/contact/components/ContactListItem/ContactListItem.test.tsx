@@ -10,7 +10,6 @@ const singleOption = [{ label: "Option 1", value: "option_1" }];
 const multiOptions = [...singleOption, { label: "Option 2", value: "option_2" }];
 
 let contact: Contracts.IContact;
-``;
 
 describe("ContactListItem", () => {
 	beforeAll(() => {
@@ -60,30 +59,16 @@ describe("ContactListItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render using variant", () => {
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<ContactListItem item={contact} variant="condensed" />
-				</tbody>
-			</table>,
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render with multiple addresses", async () => {
-		await contact.addresses().create({
+	it("should render with multiple addresses", () => {
+		contact.addresses().create({
 			address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
 			coin: "ARK",
-			name: "test",
 			network: "ark.devnet",
 		});
 
-		await contact.addresses().create({
+		contact.addresses().create({
 			address: "DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
 			coin: "ARK",
-			name: "test2",
 			network: "ark.devnet",
 		});
 

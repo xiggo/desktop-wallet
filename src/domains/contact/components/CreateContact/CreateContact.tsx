@@ -22,8 +22,7 @@ export const CreateContact = ({ isOpen, profile, onClose, onCancel, onSave }: Cr
 	useEffect(() => setErrors({}), [isOpen]);
 
 	const handleOnSave = async ({ name, addresses }: any) => {
-		const contact = profile.contacts().create(name);
-		await profile.contacts().update(contact.id(), { addresses });
+		const contact = profile.contacts().create(name, addresses);
 		await persist();
 		onSave?.(contact.id());
 		setErrors({});

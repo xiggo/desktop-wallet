@@ -3,12 +3,10 @@ import { Networks } from "@payvo/sdk";
 import { Address } from "app/components/Address";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
-import { Circle } from "app/components/Circle";
 import { Clipboard } from "app/components/Clipboard";
 import { Dropdown } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
-import { Tooltip } from "app/components/Tooltip";
 import { useEnvironmentContext } from "app/contexts";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React from "react";
@@ -16,13 +14,9 @@ import { useTranslation } from "react-i18next";
 
 import { ContactListItemProperties, Option } from "./ContactListItem.models";
 
-export const ContactListItem = ({ item, variant, onAction, onSend, options }: ContactListItemProperties) => {
+export const ContactListItem = ({ item, onAction, onSend, options }: ContactListItemProperties) => {
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
-
-	const contactTypes: string[] = ["Delegate"];
-
-	const isCondensed = () => variant === "condensed";
 
 	return (
 		<>
@@ -85,25 +79,6 @@ export const ContactListItem = ({ item, variant, onAction, onSend, options }: Co
 									</div>
 								</Clipboard>
 							</TableCell>
-
-							{!isCondensed() && (
-								<TableCell
-									className={borderClasses()}
-									innerClassName="space-x-2 text-sm font-bold justify-center"
-								>
-									{address.hasSyncedWithNetwork() &&
-										contactTypes.map((type: string) =>
-											// @ts-ignore
-											address[`is${type}`]() ? (
-												<Tooltip key={type} content={t(`COMMON.${type.toUpperCase()}`)}>
-													<Circle className="border-black" noShadow>
-														<Icon name={type} size="lg" />
-													</Circle>
-												</Tooltip>
-											) : null,
-										)}
-								</TableCell>
-							)}
 
 							<TableCell variant="end" className={borderClasses()} innerClassName="justify-end">
 								<div className="flex items-center space-x-2">

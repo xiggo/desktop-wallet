@@ -16,7 +16,7 @@ interface ProfileAddressesProperties {
 	network?: Networks.Network;
 }
 
-const isMultiSignature = (wallet: Contracts.IReadWriteWallet | Contracts.IContactAddress) => {
+const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
 	try {
 		return wallet.isMultiSignature();
 	} catch {
@@ -73,7 +73,7 @@ export const useProfileAddresses = (
 					continue;
 				}
 
-				if (exceptMultiSignature && isMultiSignature(contactAddress)) {
+				if (exceptMultiSignature) {
 					continue;
 				}
 

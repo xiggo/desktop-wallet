@@ -48,14 +48,13 @@ describe("UpdateContact", () => {
 	it("should not update contact if provided name already exists", async () => {
 		const onSave = jest.fn();
 
-		const newAddress = {
-			address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			coin: "ARK",
-			name: "Test name",
-			network: "ark.devnet",
-		};
-
-		const newContact = profile.contacts().create("New name");
+		const newContact = profile.contacts().create("New name", [
+			{
+				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				coin: "ARK",
+				network: "ark.mainnet",
+			},
+		]);
 
 		renderWithRouter(<UpdateContact isOpen={true} onSave={onSave} profile={profile} contact={newContact} />);
 
@@ -73,11 +72,11 @@ describe("UpdateContact", () => {
 		});
 
 		fireEvent.change(screen.getByTestId("contact-form__address-input"), {
-			target: { value: newAddress.address },
+			target: { value: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax" },
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(newAddress.address);
+			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
 		});
 
 		await waitFor(() => {
@@ -128,7 +127,7 @@ describe("UpdateContact", () => {
 
 		const newName = "Updated name";
 		const newAddress = {
-			address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			address: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			coin: "ARK",
 			name: "Test Address",
 			network: "ark.devnet",

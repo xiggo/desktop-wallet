@@ -89,7 +89,15 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 				let participantWallet: unknown = profile.wallets().findByAddress(address);
 
 				if (!participantWallet) {
-					const response = await wallet.client().wallets({ address });
+					const response = await wallet.client().wallets({
+						identifiers: [
+							{
+								type: "address",
+								value: address,
+							},
+						],
+					});
+
 					const remote = response.findByAddress(address);
 
 					if (!remote) {
