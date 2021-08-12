@@ -210,7 +210,7 @@ exports[`IpfsDetail should render a modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -507,7 +507,7 @@ exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -815,7 +815,7 @@ exports[`IpfsDetail should render as confirmed 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Well confirmed

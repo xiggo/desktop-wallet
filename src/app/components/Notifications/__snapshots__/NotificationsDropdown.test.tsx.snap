@@ -1571,7 +1571,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     class="font-semibold"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="flex items-center space-x-3"
                     >
                       <span>
                         Well confirmed

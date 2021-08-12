@@ -163,7 +163,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed

@@ -197,7 +197,7 @@ exports[`DelegateResignationDetail should render a modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -492,7 +492,7 @@ exports[`DelegateResignationDetail should render as confirmed 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Well confirmed

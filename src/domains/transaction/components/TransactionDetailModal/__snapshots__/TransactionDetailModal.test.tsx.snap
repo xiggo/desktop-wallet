@@ -197,7 +197,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -493,7 +493,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -802,7 +802,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -1079,7 +1079,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -1582,7 +1582,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -1846,7 +1846,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -2203,7 +2203,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -2579,7 +2579,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -2986,7 +2986,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -3393,7 +3393,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed

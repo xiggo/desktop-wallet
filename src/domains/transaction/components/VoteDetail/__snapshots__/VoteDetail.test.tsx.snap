@@ -243,7 +243,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -584,7 +584,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -990,7 +990,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed

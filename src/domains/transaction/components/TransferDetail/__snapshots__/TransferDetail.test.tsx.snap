@@ -277,7 +277,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -652,7 +652,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Well confirmed
@@ -1029,7 +1029,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
@@ -1404,7 +1404,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex space-x-3"
+                    class="flex items-center space-x-3"
                   >
                     <span>
                       Not confirmed
