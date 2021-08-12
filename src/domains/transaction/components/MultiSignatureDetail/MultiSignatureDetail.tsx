@@ -96,9 +96,18 @@ export const MultiSignatureDetail = ({
 	const { sign } = useWalletSignatory(wallet);
 	const { addSignature } = useMultiSignatureRegistration();
 
+	const isMultiSignatureReady = useMemo(() => {
+		try {
+			return wallet.coin().multiSignature().isMultiSignatureReady(transaction.data());
+		} catch {
+			return false;
+		}
+	}, [wallet, transaction]);
+
 	const canBeBroadcasted =
 		wallet.transaction().canBeBroadcasted(transaction.id()) &&
-		!wallet.transaction().isAwaitingConfirmation(transaction.id());
+		!wallet.transaction().isAwaitingConfirmation(transaction.id()) &&
+		isMultiSignatureReady;
 
 	const canBeSigned = useMemo(() => {
 		try {
@@ -110,12 +119,15 @@ export const MultiSignatureDetail = ({
 
 	const broadcast = useCallback(async () => {
 		try {
-			if (wallet.transaction().canBeBroadcasted(transaction.id())) {
-				const response = await wallet.transaction().broadcast(transaction.id());
-				handleBroadcastError(response);
-
-				await wallet.transaction().sync();
+			if (!wallet.transaction().canBeBroadcasted(transaction.id())) {
+				return;
 			}
+
+			const response = await wallet.transaction().broadcast(transaction.id());
+			handleBroadcastError(response);
+
+			await wallet.transaction().sync();
+			wallet.transaction().restore();
 
 			await persist();
 			setActiveStep(3);
@@ -144,6 +156,7 @@ export const MultiSignatureDetail = ({
 
 				await addSignature({ signatory, transactionId: transaction.id(), wallet });
 				await wallet.transaction().sync();
+				wallet.transaction().restore();
 
 				setActiveStep(3);
 				await persist();

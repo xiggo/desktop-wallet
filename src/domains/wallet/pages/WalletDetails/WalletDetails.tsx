@@ -31,11 +31,20 @@ export const WalletDetails = () => {
 	const { profileIsSyncing } = useConfiguration();
 
 	const networkAllowsVoting = useMemo(() => activeWallet.network().allowsVoting(), [activeWallet]);
-	const { pendingSigned, pendingTransfers, syncPending } = useWalletTransactions(activeWallet);
+	const {
+		pendingTransactions,
+		syncPending,
+		startSyncingPendingTransactions,
+		stopSyncingPendingTransactions,
+	} = useWalletTransactions(activeWallet);
 
 	useEffect(() => {
 		syncPending();
-	}, [syncPending]);
+		startSyncingPendingTransactions();
+		return () => {
+			stopSyncingPendingTransactions();
+		};
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {
 		if (activeWallet.hasBeenPartiallyRestored()) {
@@ -99,9 +108,10 @@ export const WalletDetails = () => {
 				)}
 
 				<Section className="flex-1">
-					{[...pendingSigned, ...pendingTransfers].length > 0 && (
+					{pendingTransactions.length > 0 && (
 						<div className="mb-8">
 							<PendingTransactions
+								pendingTransactions={pendingTransactions}
 								wallet={activeWallet}
 								onPendingTransactionClick={setTransactionModalItem}
 								onClick={setSignedTransactionModalItem}
@@ -127,7 +137,10 @@ export const WalletDetails = () => {
 					wallet={activeWallet}
 					isOpen={!!signedTransactionModalItem}
 					transaction={signedTransactionModalItem}
-					onClose={() => setSignedTransactionModalItem(undefined)}
+					onClose={async () => {
+						syncPending();
+						setSignedTransactionModalItem(undefined);
+					}}
 				/>
 			)}
 
