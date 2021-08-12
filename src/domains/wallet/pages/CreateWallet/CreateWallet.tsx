@@ -33,8 +33,10 @@ export const CreateWallet = () => {
 	const { selectedNetworkIds, setValue: setConfiguration } = useWalletConfig({ profile: activeProfile });
 
 	const form = useForm({ mode: "onChange" });
-	const { getValues, formState, register, setValue } = form;
-	const { isSubmitting, isValid } = formState;
+	const { getValues, formState, register, setValue, watch } = form;
+	const { isDirty, isSubmitting, isValid } = formState;
+
+	const { encryptionPassword, confirmEncryptionPassword } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(false);
 	const [generationError, setGenerationError] = useState("");
@@ -161,7 +163,6 @@ export const CreateWallet = () => {
 	};
 
 	const handlePasswordSubmit = () => {
-		const encryptionPassword = form.getValues("encryptionPassword");
 		assertString(encryptionPassword);
 
 		handleNext({ encryptionPassword });
@@ -227,7 +228,11 @@ export const CreateWallet = () => {
 							<div className="flex justify-between mt-8">
 								<div>
 									{activeTab === 4 && (
-										<Button data-testid="CreateWallet__skip-button" onClick={() => handleNext()}>
+										<Button
+											data-testid="CreateWallet__skip-button"
+											disabled={isGeneratingWallet}
+											onClick={() => handleNext()}
+										>
 											{t("COMMON.SKIP")}
 										</Button>
 									)}
@@ -236,8 +241,8 @@ export const CreateWallet = () => {
 								<div className="flex justify-end space-x-3">
 									{activeTab < 5 && (
 										<Button
-											disabled={isSubmitting}
 											data-testid="CreateWallet__back-button"
+											disabled={isGeneratingWallet}
 											variant="secondary"
 											onClick={handleBack}
 										>
@@ -248,7 +253,7 @@ export const CreateWallet = () => {
 									{activeTab < 4 && (
 										<Button
 											data-testid="CreateWallet__continue-button"
-											disabled={!isValid}
+											disabled={!isDirty ? true : !isValid || isGeneratingWallet}
 											isLoading={isGeneratingWallet}
 											onClick={() => handleNext()}
 										>
@@ -262,8 +267,8 @@ export const CreateWallet = () => {
 											disabled={
 												!isValid ||
 												isGeneratingWallet ||
-												!form.watch("encryptionPassword") ||
-												!form.watch("confirmEncryptionPassword")
+												!encryptionPassword ||
+												!confirmEncryptionPassword
 											}
 											isLoading={isGeneratingWallet}
 											onClick={handlePasswordSubmit}
@@ -273,7 +278,11 @@ export const CreateWallet = () => {
 									)}
 
 									{activeTab === 5 && (
-										<Button type="submit" data-testid="CreateWallet__finish-button">
+										<Button
+											disabled={isSubmitting}
+											type="submit"
+											data-testid="CreateWallet__finish-button"
+										>
 											{t("COMMON.GO_TO_WALLET")}
 										</Button>
 									)}

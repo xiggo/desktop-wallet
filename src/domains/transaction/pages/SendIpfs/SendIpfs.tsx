@@ -38,7 +38,7 @@ export const SendIpfs = () => {
 
 	const { hasDeviceAvailable, isConnected, connect, transport } = useLedgerContext();
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
-	const { isValid, isSubmitting } = formState;
+	const { isDirty, isValid, isSubmitting } = formState;
 
 	const { fee, fees } = watch();
 
@@ -207,7 +207,7 @@ export const SendIpfs = () => {
 									}
 									onContinueClick={async () => await handleNext()}
 									isLoading={isSubmitting}
-									isNextDisabled={!isValid}
+									isNextDisabled={!isDirty ? true : !isValid}
 									size={4}
 									activeIndex={activeTab}
 								/>

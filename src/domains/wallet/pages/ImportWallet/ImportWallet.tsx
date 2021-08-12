@@ -54,7 +54,7 @@ export const ImportWallet = () => {
 	const form = useForm<any>({ mode: "onChange" });
 
 	const { getValues, formState, register, watch } = form;
-	const { isSubmitting, isValid } = formState;
+	const { isDirty, isSubmitting, isValid } = formState;
 	const { value, encryptionPassword, confirmEncryptionPassword, secondMnemonic } = watch();
 
 	useEffect(() => {
@@ -217,6 +217,7 @@ export const ImportWallet = () => {
 										{activeTab === 3 && (
 											<Button
 												onClick={() => setActiveTab(4)}
+												disabled={isEncrypting}
 												data-testid="ImportWallet__skip-button"
 											>
 												{t("COMMON.SKIP")}
@@ -227,7 +228,7 @@ export const ImportWallet = () => {
 									<div className="flex justify-end space-x-3">
 										{activeTab < 3 && (
 											<Button
-												disabled={isSubmitting}
+												disabled={isImporting}
 												variant="secondary"
 												onClick={handleBack}
 												data-testid="ImportWallet__back-button"
@@ -238,7 +239,7 @@ export const ImportWallet = () => {
 
 										{activeTab < 3 && (
 											<Button
-												disabled={!isValid || isImporting}
+												disabled={!isDirty ? true : !isValid || isImporting}
 												isLoading={isImporting}
 												onClick={handleNext}
 												data-testid="ImportWallet__continue-button"
@@ -265,7 +266,7 @@ export const ImportWallet = () => {
 
 										{activeTab === 4 && (
 											<Button
-												disabled={!isValid || isSubmitting}
+												disabled={isSubmitting}
 												type="submit"
 												data-testid="ImportWallet__finish-button"
 											>

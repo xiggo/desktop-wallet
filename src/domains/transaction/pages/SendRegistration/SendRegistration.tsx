@@ -63,7 +63,7 @@ export const SendRegistration = () => {
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, register, setValue, trigger, watch, getValues } = form;
-	const { isSubmitting, isValid } = formState;
+	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fee, fees, isLoading } = watch();
 
@@ -312,7 +312,7 @@ export const SendRegistration = () => {
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
-									isNextDisabled={!isValid || isLoading}
+									isNextDisabled={!isDirty ? true : !isValid || isLoading}
 									size={stepCount}
 									activeIndex={activeTab}
 								/>

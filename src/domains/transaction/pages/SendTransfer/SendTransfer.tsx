@@ -88,7 +88,7 @@ export const SendTransfer = () => {
 	});
 
 	const { clearErrors, formState, getValues, register, setValue, handleSubmit, watch, reset } = form;
-	const { isValid, isSubmitting } = formState;
+	const { isDirty, isValid, isSubmitting } = formState;
 
 	const { senderAddress, fees, fee, remainingBalance, amount, isSendAllSelected, network } = watch();
 	const { sendTransfer, common } = useValidation();
@@ -426,7 +426,7 @@ export const SendTransfer = () => {
 									}
 									onContinueClick={async () => await handleNext()}
 									isLoading={isSubmitting}
-									isNextDisabled={activeTab === 0 && network ? false : !isValid}
+									isNextDisabled={activeTab === 0 && network ? false : !isDirty ? true : !isValid}
 									size={4}
 									activeIndex={activeTab}
 								/>
