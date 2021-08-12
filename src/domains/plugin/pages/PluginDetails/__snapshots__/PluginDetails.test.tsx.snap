@@ -2069,20 +2069,16 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                                 View
                               </span>
                             </span>
-                            <span
-                              class="align-middle"
+                            <div
+                              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
                             >
-                              <div
-                                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                data-testid="Link__external"
-                                height="16"
-                                width="16"
-                              >
-                                <svg>
-                                  redirect.svg
-                                </svg>
-                              </div>
-                            </span>
+                              <svg>
+                                redirect.svg
+                              </svg>
+                            </div>
                           </a>
                         </span>
                       </div>

@@ -19,7 +19,7 @@ export const TransactionExplorerLink = ({ transaction, ...properties }: Transact
 
 	return (
 		<TransactionDetail label={t("TRANSACTION.ID")} {...properties}>
-			<div className="flex overflow-hidden items-center space-x-3">
+			<div className="flex overflow-hidden items-baseline space-x-3">
 				<span ref={reference} className="overflow-hidden">
 					<Link to={transaction.explorerLink()} isExternal>
 						<TruncateMiddleDynamic value={transaction.id()} offset={22} parentRef={reference} />

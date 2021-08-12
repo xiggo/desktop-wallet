@@ -344,7 +344,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -366,20 +366,16 @@ exports[`SendVote should send a unvote transaction 1`] = `
                                       32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span
@@ -997,7 +993,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -1019,20 +1015,16 @@ exports[`SendVote should send a vote transaction 1`] = `
                                       d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span

@@ -13,20 +13,16 @@ exports[`Link should open an external link 1`] = `
     <span
       class="Link__Content-sc-ec014t-1 hUiuRR"
     />
-    <span
-      class="align-middle"
+    <div
+      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
+      data-testid="Link__external"
+      height="16"
+      width="16"
     >
-      <div
-        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
-        data-testid="Link__external"
-        height="16"
-        width="16"
-      >
-        <svg>
-          redirect.svg
-        </svg>
-      </div>
-    </span>
+      <svg>
+        redirect.svg
+      </svg>
+    </div>
   </a>
 </DocumentFragment>
 `;
@@ -61,20 +57,16 @@ exports[`Link should render external without children 1`] = `
     <span
       class="Link__Content-sc-ec014t-1 hUiuRR"
     />
-    <span
-      class="align-middle"
+    <div
+      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
+      data-testid="Link__external"
+      height="16"
+      width="16"
     >
-      <div
-        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
-        data-testid="Link__external"
-        height="16"
-        width="16"
-      >
-        <svg>
-          redirect.svg
-        </svg>
-      </div>
-    </span>
+      <svg>
+        redirect.svg
+      </svg>
+    </div>
   </a>
 </DocumentFragment>
 `;
@@ -109,20 +101,16 @@ exports[`Link should show a toast when trying to open an invalid external link 1
     <span
       class="Link__Content-sc-ec014t-1 hUiuRR"
     />
-    <span
-      class="align-middle"
+    <div
+      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
+      data-testid="Link__external"
+      height="16"
+      width="16"
     >
-      <div
-        class="sc-bdnxRM AFVmm flex-shrink-0 duration-200"
-        data-testid="Link__external"
-        height="16"
-        width="16"
-      >
-        <svg>
-          redirect.svg
-        </svg>
-      </div>
-    </span>
+      <svg>
+        redirect.svg
+      </svg>
+    </div>
   </a>
 </DocumentFragment>
 `;

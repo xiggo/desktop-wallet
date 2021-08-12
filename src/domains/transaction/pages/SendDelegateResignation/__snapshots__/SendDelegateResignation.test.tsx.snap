@@ -3464,7 +3464,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -3486,20 +3486,16 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span
@@ -4047,7 +4043,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -4069,20 +4065,16 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span

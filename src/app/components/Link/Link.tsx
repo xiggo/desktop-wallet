@@ -49,13 +49,11 @@ const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProperties>(
 		>
 			<Content>{children}</Content>
 			{isExternal && showExternalIcon && (
-				<span className="align-middle">
-					<Icon
-						data-testid="Link__external"
-						name="Redirect"
-						className={cn("flex-shrink-0 duration-200", { "inline-block pb-px text-sm": children })}
-					/>
-				</span>
+				<Icon
+					data-testid="Link__external"
+					name="Redirect"
+					className={cn("flex-shrink-0 duration-200", { "inline-block text-sm": children })}
+				/>
 			)}
 		</AnchorStyled>
 	),

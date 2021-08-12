@@ -338,7 +338,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -360,20 +360,16 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span
@@ -7575,7 +7571,7 @@ exports[`SendTransfer should render summary step 1`] = `
             class="font-semibold"
           >
             <div
-              class="flex overflow-hidden items-center space-x-3"
+              class="flex overflow-hidden items-baseline space-x-3"
             >
               <span
                 class="overflow-hidden"
@@ -7597,20 +7593,16 @@ exports[`SendTransfer should render summary step 1`] = `
                       d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
                     </span>
                   </span>
-                  <span
-                    class="align-middle"
+                  <div
+                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                    data-testid="Link__external"
+                    height="16"
+                    width="16"
                   >
-                    <div
-                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                      data-testid="Link__external"
-                      height="16"
-                      width="16"
-                    >
-                      <svg>
-                        redirect.svg
-                      </svg>
-                    </div>
-                  </span>
+                    <svg>
+                      redirect.svg
+                    </svg>
+                  </div>
                 </a>
               </span>
               <span
@@ -9724,7 +9716,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -9746,20 +9738,16 @@ exports[`SendTransfer should send a single transfer 1`] = `
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span
@@ -10388,7 +10376,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -10410,20 +10398,16 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span
@@ -11052,7 +11036,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -11074,20 +11058,16 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span
@@ -12025,7 +12005,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -12047,20 +12027,16 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span
@@ -12689,7 +12665,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -12711,20 +12687,16 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span
@@ -13353,7 +13325,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             class="font-semibold"
                           >
                             <div
-                              class="flex overflow-hidden items-center space-x-3"
+                              class="flex overflow-hidden items-baseline space-x-3"
                             >
                               <span
                                 class="overflow-hidden"
@@ -13375,20 +13347,16 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
                                   </span>
-                                  <span
-                                    class="align-middle"
+                                  <div
+                                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                                    data-testid="Link__external"
+                                    height="16"
+                                    width="16"
                                   >
-                                    <div
-                                      class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                      data-testid="Link__external"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        redirect.svg
-                                      </svg>
-                                    </div>
-                                  </span>
+                                    <svg>
+                                      redirect.svg
+                                    </svg>
+                                  </div>
                                 </a>
                               </span>
                               <span

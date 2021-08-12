@@ -415,20 +415,16 @@ exports[`News should filter results based on category query and asset 1`] = `
                             >
                               https://organize.mlh.io/participants/events/3858-build-a-blockchain-taco-shop-with-ark-io
                             </span>
-                            <span
-                              class="align-middle"
+                            <div
+                              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
                             >
-                              <div
-                                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                data-testid="Link__external"
-                                height="16"
-                                width="16"
-                              >
-                                <svg>
-                                  redirect.svg
-                                </svg>
-                              </div>
-                            </span>
+                              <svg>
+                                redirect.svg
+                              </svg>
+                            </div>
                           </a>
                         </div>
                       </div>
@@ -1179,20 +1175,16 @@ exports[`News should filter results based on category query and asset 2`] = `
                             >
                               https://blog.ark.io/ark-platform-sdk-modernization-of-blockchain-network-interactions-b5a7d70c2461
                             </span>
-                            <span
-                              class="align-middle"
+                            <div
+                              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
                             >
-                              <div
-                                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                                data-testid="Link__external"
-                                height="16"
-                                width="16"
-                              >
-                                <svg>
-                                  redirect.svg
-                                </svg>
-                              </div>
-                            </span>
+                              <svg>
+                                redirect.svg
+                              </svg>
+                            </div>
                           </a>
                         </div>
                       </div>

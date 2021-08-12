@@ -732,20 +732,16 @@ exports[`WalletVote should handle delegate sync error 1`] = `
                 Learn more
               </span>
             </span>
-            <span
-              class="align-middle"
+            <div
+              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              data-testid="Link__external"
+              height="16"
+              width="16"
             >
-              <div
-                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                data-testid="Link__external"
-                height="16"
-                width="16"
-              >
-                <svg>
-                  redirect.svg
-                </svg>
-              </div>
-            </span>
+              <svg>
+                redirect.svg
+              </svg>
+            </div>
           </a>
         </span>
       </div>
@@ -836,20 +832,16 @@ exports[`WalletVote should handle wallet votes error 1`] = `
                 Learn more
               </span>
             </span>
-            <span
-              class="align-middle"
+            <div
+              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              data-testid="Link__external"
+              height="16"
+              width="16"
             >
-              <div
-                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                data-testid="Link__external"
-                height="16"
-                width="16"
-              >
-                <svg>
-                  redirect.svg
-                </svg>
-              </div>
-            </span>
+              <svg>
+                redirect.svg
+              </svg>
+            </div>
           </a>
         </span>
       </div>
@@ -1145,20 +1137,16 @@ exports[`WalletVote should render the maximum votes 1`] = `
                 Learn more
               </span>
             </span>
-            <span
-              class="align-middle"
+            <div
+              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              data-testid="Link__external"
+              height="16"
+              width="16"
             >
-              <div
-                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                data-testid="Link__external"
-                height="16"
-                width="16"
-              >
-                <svg>
-                  redirect.svg
-                </svg>
-              </div>
-            </span>
+              <svg>
+                redirect.svg
+              </svg>
+            </div>
           </a>
         </span>
       </div>
@@ -1249,20 +1237,16 @@ exports[`WalletVote should render without votes 1`] = `
                 Learn more
               </span>
             </span>
-            <span
-              class="align-middle"
+            <div
+              class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+              data-testid="Link__external"
+              height="16"
+              width="16"
             >
-              <div
-                class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                data-testid="Link__external"
-                height="16"
-                width="16"
-              >
-                <svg>
-                  redirect.svg
-                </svg>
-              </div>
-            </span>
+              <svg>
+                redirect.svg
+              </svg>
+            </div>
           </a>
         </span>
       </div>

@@ -231,7 +231,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -253,20 +253,16 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -531,7 +527,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -553,20 +549,16 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -844,7 +836,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -866,20 +858,16 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -1125,7 +1113,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -1147,20 +1135,16 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -1632,7 +1616,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -1654,20 +1638,16 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -1980,7 +1960,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -2002,20 +1982,16 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -2261,7 +2237,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -2283,20 +2259,16 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -2641,7 +2613,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -2663,20 +2635,16 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -3052,7 +3020,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -3074,20 +3042,16 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
@@ -3463,7 +3427,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex overflow-hidden items-center space-x-3"
+                    class="flex overflow-hidden items-baseline space-x-3"
                   >
                     <span
                       class="overflow-hidden"
@@ -3485,20 +3449,16 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
                         </span>
-                        <span
-                          class="align-middle"
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
                         >
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block pb-px text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              redirect.svg
-                            </svg>
-                          </div>
-                        </span>
+                          <svg>
+                            redirect.svg
+                          </svg>
+                        </div>
                       </a>
                     </span>
                     <span
