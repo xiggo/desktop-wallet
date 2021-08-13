@@ -216,6 +216,7 @@ exports[`General Settings should disable submit button when profile is not resto
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1687,6 +1688,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -3171,6 +3173,7 @@ exports[`General Settings should render 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -4641,6 +4644,7 @@ exports[`General Settings should update profile 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -6112,6 +6116,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -7582,6 +7587,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC

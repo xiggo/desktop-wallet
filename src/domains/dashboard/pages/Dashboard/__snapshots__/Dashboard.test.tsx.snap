@@ -224,6 +224,7 @@ exports[`Dashboard should render 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   50.11421128 BTC
@@ -539,7 +540,7 @@ exports[`Dashboard should render 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               33.75089801 DARK
@@ -620,7 +621,7 @@ exports[`Dashboard should render 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               57.68 DARK
@@ -716,7 +717,7 @@ exports[`Dashboard should render 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               50,114.21127898 ARK
@@ -1156,6 +1157,7 @@ exports[`Dashboard should render 1`] = `
                             color="success"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               + 400,000 DARK
@@ -1320,6 +1322,7 @@ exports[`Dashboard should render 1`] = `
                             color="success"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               + 400,000 DARK
@@ -1484,6 +1487,7 @@ exports[`Dashboard should render 1`] = `
                             color="success"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               + 50,000 DARK
@@ -1648,6 +1652,7 @@ exports[`Dashboard should render 1`] = `
                             color="success"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               + 50,000 DARK
@@ -1900,6 +1905,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   50.11421128 BTC
@@ -2215,7 +2221,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               33.75089801 DARK
@@ -2296,7 +2302,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               57.68 DARK
@@ -2392,7 +2398,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               50,114.21127898 ARK
@@ -4648,6 +4654,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   50.11421128 BTC
@@ -4963,7 +4970,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               33.75089801 DARK
@@ -5044,7 +5051,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               57.68 DARK
@@ -5140,7 +5147,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                               </span>
                             </div>
                             <span
-                              class="mt-auto text-lg font-bold text-theme-text"
+                              class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                               data-testid="AmountCrypto"
                             >
                               50,114.21127898 ARK
@@ -5580,6 +5587,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             color="success"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               + 400,000 DARK
@@ -5744,6 +5752,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             color="success"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               + 400,000 DARK
@@ -5908,6 +5917,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             color="success"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               + 50,000 DARK
@@ -6072,6 +6082,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             color="success"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               + 50,000 DARK

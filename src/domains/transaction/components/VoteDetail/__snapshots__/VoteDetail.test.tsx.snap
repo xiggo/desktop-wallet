@@ -201,6 +201,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -542,6 +543,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -948,6 +950,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK

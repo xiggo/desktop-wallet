@@ -222,6 +222,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -620,6 +621,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                             class="font-semibold"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               0.20716584 DARK
@@ -871,6 +873,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1269,6 +1272,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                             class="font-semibold"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               0.20716584 DARK
@@ -1520,6 +1524,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1957,6 +1962,7 @@ exports[`SendVote should show error step and go back 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC

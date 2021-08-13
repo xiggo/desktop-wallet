@@ -160,6 +160,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                 color="danger"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   - 121 BTC
@@ -348,6 +349,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
                 color="danger"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   - 121 BTC
@@ -367,7 +369,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
               data-testid="TransactionRow__currency"
             >
               <span
-                class="text-theme-secondary-text"
+                class="whitespace-nowrap text-theme-secondary-text"
                 data-testid="AmountCrypto"
               >
                 0 BTC

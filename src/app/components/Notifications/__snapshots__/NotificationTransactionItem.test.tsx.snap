@@ -71,6 +71,7 @@ exports[`Notifications should render notification item 1`] = `
               color="success"
             >
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 + 20 DARK

@@ -134,6 +134,7 @@ exports[`Page should render 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -326,6 +327,7 @@ exports[`Page should render without sidebar 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC

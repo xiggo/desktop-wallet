@@ -118,6 +118,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
                     class="flex-1 flex-shrink-0 pl-3 text-right"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       1 DARK
@@ -162,6 +163,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
                     class="flex-1 flex-shrink-0 pl-3 text-right"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       1 DARK

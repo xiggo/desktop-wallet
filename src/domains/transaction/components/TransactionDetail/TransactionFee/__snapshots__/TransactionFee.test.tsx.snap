@@ -18,6 +18,7 @@ exports[`TransactionFee should render 1`] = `
         class="font-semibold"
       >
         <span
+          class="whitespace-nowrap"
           data-testid="AmountCrypto"
         >
           1 DARK

@@ -3702,6 +3702,7 @@ exports[`TransactionTable should render 1`] = `
                   color="danger"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     - 0.20716584 DARK
@@ -3855,6 +3856,7 @@ exports[`TransactionTable should render 1`] = `
                   color="danger"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     - 0.20716584 DARK
@@ -4004,6 +4006,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 0 DARK
@@ -4157,6 +4160,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 400,000 DARK
@@ -4310,6 +4314,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 50,000 DARK
@@ -4463,6 +4468,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -4616,6 +4622,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -4769,6 +4776,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10,000 DARK
@@ -4922,6 +4930,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 270,000 DARK
@@ -5075,6 +5084,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 1 DARK
@@ -5228,6 +5238,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10,000 DARK
@@ -5377,6 +5388,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 0 DARK
@@ -5530,6 +5542,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -5686,6 +5699,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 40,000 DARK
@@ -5839,6 +5853,7 @@ exports[`TransactionTable should render 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10 DARK
@@ -6139,6 +6154,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="danger"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     - 0.20716584 DARK
@@ -6292,6 +6308,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="danger"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     - 0.20716584 DARK
@@ -6441,6 +6458,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 0 DARK
@@ -6594,6 +6612,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 400,000 DARK
@@ -6747,6 +6766,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 50,000 DARK
@@ -6900,6 +6920,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -7053,6 +7074,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -7206,6 +7228,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10,000 DARK
@@ -7359,6 +7382,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 270,000 DARK
@@ -7512,6 +7536,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 1 DARK
@@ -7665,6 +7690,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10,000 DARK
@@ -7814,6 +7840,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 0 DARK
@@ -7967,6 +7994,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -8123,6 +8151,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 40,000 DARK
@@ -8276,6 +8305,7 @@ exports[`TransactionTable should render compact 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10 DARK
@@ -8590,6 +8620,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="danger"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     - 0.20716584 DARK
@@ -8743,6 +8774,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="danger"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     - 0.20716584 DARK
@@ -8892,6 +8924,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 0 DARK
@@ -9060,6 +9093,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 400,000 DARK
@@ -9236,6 +9270,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 50,000 DARK
@@ -9389,6 +9424,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -9542,6 +9578,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -9695,6 +9732,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10,000 DARK
@@ -9848,6 +9886,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 270,000 DARK
@@ -10001,6 +10040,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 1 DARK
@@ -10154,6 +10194,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10,000 DARK
@@ -10303,6 +10344,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 0 DARK
@@ -10456,6 +10498,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -10612,6 +10655,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 40,000 DARK
@@ -10765,6 +10809,7 @@ exports[`TransactionTable should render with sign 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10 DARK
@@ -11023,6 +11068,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="danger"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     - 0.20716584 DARK
@@ -11148,6 +11194,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="danger"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     - 0.20716584 DARK
@@ -11269,6 +11316,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 0 DARK
@@ -11394,6 +11442,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 400,000 DARK
@@ -11519,6 +11568,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 50,000 DARK
@@ -11644,6 +11694,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -11769,6 +11820,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -11894,6 +11946,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10,000 DARK
@@ -12019,6 +12072,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 270,000 DARK
@@ -12144,6 +12198,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 1 DARK
@@ -12269,6 +12324,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10,000 DARK
@@ -12390,6 +12446,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 0 DARK
@@ -12515,6 +12572,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 100,000 DARK
@@ -12643,6 +12701,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 40,000 DARK
@@ -12768,6 +12827,7 @@ exports[`TransactionTable should render without explorer link column 1`] = `
                   color="success"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     + 10 DARK

@@ -220,6 +220,7 @@ exports[`PluginDetails should render properly 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -776,6 +777,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1308,6 +1310,7 @@ exports[`PluginDetails should report plugin 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1864,6 +1867,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -2486,6 +2490,7 @@ exports[`PluginDetails should update package 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC

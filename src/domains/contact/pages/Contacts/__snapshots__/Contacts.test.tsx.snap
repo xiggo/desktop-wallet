@@ -216,6 +216,7 @@ exports[`Contacts should render with contacts 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1333,6 +1334,7 @@ exports[`Contacts should render without contacts 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC

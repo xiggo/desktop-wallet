@@ -155,6 +155,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -451,6 +452,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -728,6 +730,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -1037,6 +1040,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -1390,6 +1394,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                               class="flex-1 flex-shrink-0 pl-3 text-right"
                             >
                               <span
+                                class="whitespace-nowrap"
                                 data-testid="AmountCrypto"
                               >
                                 1 DARK
@@ -1434,6 +1439,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                               class="flex-1 flex-shrink-0 pl-3 text-right"
                             >
                               <span
+                                class="whitespace-nowrap"
                                 data-testid="AmountCrypto"
                               >
                                 1 DARK
@@ -1467,6 +1473,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                     color="danger"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       - 100 DARK
@@ -1504,6 +1511,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 DARK
@@ -1804,6 +1812,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 DARK
@@ -2161,6 +2170,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -2464,6 +2474,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                     color="danger"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       - 100 ARK
@@ -2501,6 +2512,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -2944,6 +2956,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -3351,6 +3364,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK

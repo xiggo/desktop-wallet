@@ -189,6 +189,7 @@ exports[`NavigationBar should not render if no active profile 1`] = `
               data-testid="Balance__value"
             >
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 0 BTC
@@ -397,6 +398,7 @@ exports[`NavigationBar should render 1`] = `
               data-testid="Balance__value"
             >
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 0 BTC
@@ -692,6 +694,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
               data-testid="Balance__value"
             >
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 0 BTC
@@ -862,6 +865,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
               data-testid="Balance__value"
             >
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 0 BTC
@@ -1070,6 +1074,7 @@ exports[`NavigationBar should render with title 1`] = `
               data-testid="Balance__value"
             >
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 0 BTC

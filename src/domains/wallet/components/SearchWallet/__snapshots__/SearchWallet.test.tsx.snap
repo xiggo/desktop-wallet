@@ -247,6 +247,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             33.75089801 DARK
@@ -341,6 +342,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             57.68 DARK
@@ -624,6 +626,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             33.75089801 DARK
@@ -718,6 +721,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             57.68 DARK
@@ -1001,6 +1005,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             33.75089801 DARK
@@ -1095,6 +1100,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             57.68 DARK
@@ -1408,6 +1414,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             33.75089801 DARK
@@ -1419,6 +1426,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-400 justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             0 BTC
@@ -1513,6 +1521,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             57.68 DARK
@@ -1524,6 +1533,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-400 justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             0 BTC
@@ -1837,6 +1847,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             33.75089801 DARK
@@ -1848,6 +1859,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-400 justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             0 BTC
@@ -1942,6 +1954,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             57.68 DARK
@@ -1953,6 +1966,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-400 justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             0 BTC
@@ -2266,6 +2280,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             33.75089801 DARK
@@ -2277,6 +2292,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-400 justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             0 BTC
@@ -2371,6 +2387,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             57.68 DARK
@@ -2382,6 +2399,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-400 justify-end"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             0 BTC

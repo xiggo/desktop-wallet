@@ -250,6 +250,7 @@ exports[`AddressTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   33.75089801 DARK
@@ -565,6 +566,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   33.75089801 DARK

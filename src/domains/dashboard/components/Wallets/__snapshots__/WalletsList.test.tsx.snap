@@ -211,6 +211,7 @@ exports[`WalletsList should render 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     33.75089801 DARK
@@ -319,6 +320,7 @@ exports[`WalletsList should render 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     57.68 DARK
@@ -1026,6 +1028,7 @@ exports[`WalletsList should render with view more button 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     33.75089801 DARK
@@ -1134,6 +1137,7 @@ exports[`WalletsList should render with view more button 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     57.68 DARK

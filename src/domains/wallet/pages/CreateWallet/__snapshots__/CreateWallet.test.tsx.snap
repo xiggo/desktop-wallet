@@ -218,6 +218,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -779,6 +780,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1247,6 +1249,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1808,6 +1811,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -2278,6 +2282,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -2841,6 +2846,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -3404,6 +3410,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC

@@ -116,6 +116,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                     color="danger"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       - 100 ARK
@@ -153,6 +154,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -541,6 +543,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                               class="flex-1 flex-shrink-0 pl-3 text-right"
                             >
                               <span
+                                class="whitespace-nowrap"
                                 data-testid="AmountCrypto"
                               >
                                 200 ARK
@@ -585,6 +588,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                               class="flex-1 flex-shrink-0 pl-3 text-right"
                             >
                               <span
+                                class="whitespace-nowrap"
                                 data-testid="AmountCrypto"
                               >
                                 1,990 ARK
@@ -629,6 +633,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                               class="flex-1 flex-shrink-0 pl-3 text-right"
                             >
                               <span
+                                class="whitespace-nowrap"
                                 data-testid="AmountCrypto"
                               >
                                 1,990 ARK
@@ -662,6 +667,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                     color="danger"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       - 100 ARK
@@ -699,6 +705,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK

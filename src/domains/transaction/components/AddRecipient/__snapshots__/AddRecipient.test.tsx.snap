@@ -203,6 +203,7 @@ exports[`AddRecipient should render 1`] = `
               Available
                
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 33.75089801
@@ -465,6 +466,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
               Available
                
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 33.75089801
@@ -738,6 +740,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
               Available
                
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 33.75089801
@@ -1000,6 +1003,7 @@ exports[`AddRecipient should render without recipients 1`] = `
               Available
                
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 33.75089801
@@ -1212,6 +1216,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
               Available
                
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 33.75089801
@@ -1474,6 +1479,7 @@ exports[`AddRecipient should set available amount 1`] = `
               Available
                
               <span
+                class="whitespace-nowrap"
                 data-testid="AmountCrypto"
               >
                 33.75089801
@@ -1767,7 +1773,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                       class=""
                     >
                       <span
-                        class="text-sm font-semibold whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700"
+                        class="whitespace-nowrap text-sm font-semibold whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700"
                         data-testid="AmountCrypto"
                       >
                         0 BTC

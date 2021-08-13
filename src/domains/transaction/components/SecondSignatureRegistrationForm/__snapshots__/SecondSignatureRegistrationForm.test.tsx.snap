@@ -392,7 +392,7 @@ exports[`SecondSignatureRegistrationForm should not generate mnemonic if already
                         Slow
                       </div>
                       <span
-                        class="text-sm"
+                        class="whitespace-nowrap text-sm"
                         data-testid="AmountCrypto"
                       >
                         0 DARK
@@ -414,7 +414,7 @@ exports[`SecondSignatureRegistrationForm should not generate mnemonic if already
                         Average
                       </div>
                       <span
-                        class="text-sm"
+                        class="whitespace-nowrap text-sm"
                         data-testid="AmountCrypto"
                       >
                         1.354 DARK
@@ -436,7 +436,7 @@ exports[`SecondSignatureRegistrationForm should not generate mnemonic if already
                         Fast
                       </div>
                       <span
-                        class="text-sm"
+                        class="whitespace-nowrap text-sm"
                         data-testid="AmountCrypto"
                       >
                         10 DARK
@@ -642,7 +642,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                         Slow
                       </div>
                       <span
-                        class="text-sm"
+                        class="whitespace-nowrap text-sm"
                         data-testid="AmountCrypto"
                       >
                         0 DARK
@@ -664,7 +664,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                         Average
                       </div>
                       <span
-                        class="text-sm"
+                        class="whitespace-nowrap text-sm"
                         data-testid="AmountCrypto"
                       >
                         1.354 DARK
@@ -686,7 +686,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                         Fast
                       </div>
                       <span
-                        class="text-sm"
+                        class="whitespace-nowrap text-sm"
                         data-testid="AmountCrypto"
                       >
                         10 DARK
@@ -722,6 +722,7 @@ exports[`SecondSignatureRegistrationForm should render transaction details 1`] =
         class="font-semibold"
       >
         <span
+          class="whitespace-nowrap"
           data-testid="AmountCrypto"
         >
           0.1 DARK

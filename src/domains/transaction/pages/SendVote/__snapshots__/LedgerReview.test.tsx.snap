@@ -153,7 +153,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
               Transaction Amount
             </span>
             <span
-              class="mt-1 text-lg font-semibold"
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
               data-testid="AmountCrypto"
             >
               0 DARK
@@ -168,7 +168,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
               Transaction Fee
             </span>
             <span
-              class="mt-1 text-lg font-semibold"
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
               data-testid="AmountCrypto"
             >
               0 DARK
@@ -202,7 +202,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
           Total Amount
         </span>
         <span
-          class="text-2xl font-bold"
+          class="whitespace-nowrap text-2xl font-bold"
           data-testid="AmountCrypto"
         >
           0 DARK
@@ -301,7 +301,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
               Transaction Amount
             </span>
             <span
-              class="mt-1 text-lg font-semibold"
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
               data-testid="AmountCrypto"
             >
               0 DARK
@@ -316,7 +316,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
               Transaction Fee
             </span>
             <span
-              class="mt-1 text-lg font-semibold"
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
               data-testid="AmountCrypto"
             >
               0 DARK
@@ -350,7 +350,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
           Total Amount
         </span>
         <span
-          class="text-2xl font-bold"
+          class="whitespace-nowrap text-2xl font-bold"
           data-testid="AmountCrypto"
         >
           0 DARK
@@ -449,7 +449,7 @@ exports[`LedgerReview should render for vote transaction 1`] = `
               Transaction Amount
             </span>
             <span
-              class="mt-1 text-lg font-semibold"
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
               data-testid="AmountCrypto"
             >
               0 DARK
@@ -464,7 +464,7 @@ exports[`LedgerReview should render for vote transaction 1`] = `
               Transaction Fee
             </span>
             <span
-              class="mt-1 text-lg font-semibold"
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
               data-testid="AmountCrypto"
             >
               0 DARK
@@ -498,7 +498,7 @@ exports[`LedgerReview should render for vote transaction 1`] = `
           Total Amount
         </span>
         <span
-          class="text-2xl font-bold"
+          class="whitespace-nowrap text-2xl font-bold"
           data-testid="AmountCrypto"
         >
           0 DARK

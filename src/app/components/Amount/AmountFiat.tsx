@@ -1,3 +1,4 @@
+import cn from "classnames";
 import React from "react";
 
 import { AmountProperties } from "./Amount.contracts";
@@ -19,7 +20,7 @@ const AmountFiat: React.FC<AmountProperties> = ({
 	}
 
 	return (
-		<span data-testid="AmountFiat" className={className}>
+		<span data-testid="AmountFiat" className={cn("whitespace-nowrap", className)}>
 			{formattedAmount}
 		</span>
 	);

@@ -400,6 +400,7 @@ exports[`Wallets should load more wallets 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         33.75089801 DARK
@@ -508,6 +509,7 @@ exports[`Wallets should load more wallets 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         57.68 DARK
@@ -616,6 +618,7 @@ exports[`Wallets should load more wallets 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         50,114.21127898 ARK
@@ -627,6 +630,7 @@ exports[`Wallets should load more wallets 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         0 BTC
@@ -1044,6 +1048,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         33.75089801 DARK
@@ -1152,6 +1157,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         57.68 DARK
@@ -1260,6 +1266,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         50,114.21127898 ARK
@@ -1271,6 +1278,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         0 BTC
@@ -1859,7 +1867,7 @@ exports[`Wallets should render grid 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           33.75089801 DARK
@@ -1940,7 +1948,7 @@ exports[`Wallets should render grid 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           57.68 DARK
@@ -2036,7 +2044,7 @@ exports[`Wallets should render grid 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           50,114.21127898 ARK
@@ -2349,7 +2357,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           33.75089801 DARK
@@ -2430,7 +2438,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           57.68 DARK
@@ -2526,7 +2534,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           50,114.21127898 ARK
@@ -2968,6 +2976,7 @@ exports[`Wallets should render list 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         33.75089801 DARK
@@ -3076,6 +3085,7 @@ exports[`Wallets should render list 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         57.68 DARK
@@ -3184,6 +3194,7 @@ exports[`Wallets should render list 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         50,114.21127898 ARK
@@ -3195,6 +3206,7 @@ exports[`Wallets should render list 1`] = `
                       class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         0 BTC
@@ -3483,7 +3495,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           50,114.21127898 ARK
@@ -3892,7 +3904,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           33.75089801 DARK
@@ -3973,7 +3985,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           57.68 DARK
@@ -4069,7 +4081,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           </span>
                         </div>
                         <span
-                          class="mt-auto text-lg font-bold text-theme-text"
+                          class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
                           data-testid="AmountCrypto"
                         >
                           50,114.21127898 ARK

@@ -117,6 +117,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                       class="mt-1 text-sm font-medium text-theme-secondary-500"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         0 DARK
@@ -201,6 +202,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                       class="mt-1 text-sm font-medium text-theme-secondary-500"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         0 DARK
@@ -356,6 +358,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
           class="font-semibold"
         >
           <span
+            class="whitespace-nowrap"
             data-testid="AmountCrypto"
           >
             0 DARK

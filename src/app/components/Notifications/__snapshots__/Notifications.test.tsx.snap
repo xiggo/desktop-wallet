@@ -183,6 +183,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 1 DARK
@@ -258,6 +259,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 20 DARK
@@ -333,6 +335,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 0.0000001 DARK
@@ -559,6 +562,7 @@ exports[`Notifications should render with plugins 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 1 DARK
@@ -634,6 +638,7 @@ exports[`Notifications should render with plugins 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 20 DARK
@@ -709,6 +714,7 @@ exports[`Notifications should render with plugins 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 0.0000001 DARK
@@ -909,6 +915,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 1 DARK
@@ -984,6 +991,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 20 DARK
@@ -1059,6 +1067,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                       color="success"
                     >
                       <span
+                        class="whitespace-nowrap"
                         data-testid="AmountCrypto"
                       >
                         + 0.0000001 DARK

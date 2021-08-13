@@ -112,6 +112,7 @@ exports[`WalletListItem should render 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
           >
             <span
+              class="whitespace-nowrap"
               data-testid="AmountCrypto"
             >
               33.75089801 DARK
@@ -243,6 +244,7 @@ exports[`WalletListItem should render for selected wallet 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
           >
             <span
+              class="whitespace-nowrap"
               data-testid="AmountCrypto"
             >
               33.75089801 DARK
@@ -254,6 +256,7 @@ exports[`WalletListItem should render for selected wallet 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
           >
             <span
+              class="whitespace-nowrap"
               data-testid="AmountCrypto"
             >
               0 BTC
@@ -378,6 +381,7 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
           >
             <span
+              class="whitespace-nowrap"
               data-testid="AmountCrypto"
             >
               33.75089801 DARK
@@ -509,6 +513,7 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
           >
             <span
+              class="whitespace-nowrap"
               data-testid="AmountCrypto"
             >
               33.75089801 DARK

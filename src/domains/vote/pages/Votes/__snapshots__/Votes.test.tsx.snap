@@ -220,6 +220,7 @@ exports[`Votes should filter current delegates 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -979,6 +980,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1852,6 +1854,7 @@ exports[`Votes should render 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -2721,6 +2724,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -3585,6 +3589,7 @@ exports[`Votes should render with no wallets 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -3962,6 +3967,7 @@ exports[`Votes should select a delegate 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -4832,6 +4838,7 @@ exports[`Votes should select an address without vote 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -5701,6 +5708,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -6230,6 +6238,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -6759,6 +6768,7 @@ exports[`Votes should show network warning 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -7627,6 +7637,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -8532,6 +8543,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -9059,6 +9071,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
                       >
                         <span
+                          class="whitespace-nowrap"
                           data-testid="AmountCrypto"
                         >
                           33.75089801 DARK
@@ -9170,6 +9183,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
                       >
                         <span
+                          class="whitespace-nowrap"
                           data-testid="AmountCrypto"
                         >
                           57.68 DARK
@@ -9270,6 +9284,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
                       >
                         <span
+                          class="whitespace-nowrap"
                           data-testid="AmountCrypto"
                         >
                           0 DARK

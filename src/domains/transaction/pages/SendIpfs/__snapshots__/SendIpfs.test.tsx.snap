@@ -216,6 +216,7 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -904,7 +905,7 @@ exports[`SendIpfs should render review step 1`] = `
                 Transaction Amount
               </span>
               <span
-                class="mt-1 text-lg font-semibold"
+                class="whitespace-nowrap mt-1 text-lg font-semibold"
                 data-testid="AmountCrypto"
               >
                 0 DARK
@@ -919,7 +920,7 @@ exports[`SendIpfs should render review step 1`] = `
                 Transaction Fee
               </span>
               <span
-                class="mt-1 text-lg font-semibold"
+                class="whitespace-nowrap mt-1 text-lg font-semibold"
                 data-testid="AmountCrypto"
               >
                 0.1 DARK
@@ -953,7 +954,7 @@ exports[`SendIpfs should render review step 1`] = `
             Total Amount
           </span>
           <span
-            class="text-2xl font-bold"
+            class="whitespace-nowrap text-2xl font-bold"
             data-testid="AmountCrypto"
           >
             0.1 DARK
@@ -1240,6 +1241,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -1811,6 +1813,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -2384,6 +2387,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -2955,6 +2959,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -3526,6 +3531,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC
@@ -3841,7 +3847,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                                   Slow
                                 </div>
                                 <span
-                                  class="text-sm"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="AmountCrypto"
                                 >
                                   5 DARK
@@ -3863,7 +3869,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                                   Average
                                 </div>
                                 <span
-                                  class="text-sm"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="AmountCrypto"
                                 >
                                   5 DARK
@@ -3885,7 +3891,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                                   Fast
                                 </div>
                                 <span
-                                  class="text-sm"
+                                  class="whitespace-nowrap text-sm"
                                   data-testid="AmountCrypto"
                                 >
                                   5 DARK
@@ -4151,6 +4157,7 @@ exports[`SendIpfs should show error step and go back 1`] = `
                 data-testid="Balance__value"
               >
                 <span
+                  class="whitespace-nowrap"
                   data-testid="AmountCrypto"
                 >
                   0 BTC

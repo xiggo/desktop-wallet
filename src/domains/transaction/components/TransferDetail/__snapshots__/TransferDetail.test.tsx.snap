@@ -162,6 +162,7 @@ exports[`TransferDetail should render a modal 1`] = `
                     color="danger"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       - 100 ARK
@@ -199,6 +200,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -537,6 +539,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                     color="danger"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       - 100 ARK
@@ -574,6 +577,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -914,6 +918,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                     color="success"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       + 100 ARK
@@ -951,6 +956,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK
@@ -1289,6 +1295,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                     color="success"
                   >
                     <span
+                      class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
                       + 100 ARK
@@ -1326,6 +1333,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   class="font-semibold"
                 >
                   <span
+                    class="whitespace-nowrap"
                     data-testid="AmountCrypto"
                   >
                     21 ARK

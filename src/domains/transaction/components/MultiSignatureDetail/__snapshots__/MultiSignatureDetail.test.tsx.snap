@@ -190,6 +190,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                             color="danger"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               - 1 DARK
@@ -227,6 +228,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -649,6 +651,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                             color="danger"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               - 1 DARK
@@ -686,6 +689,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -1108,6 +1112,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                             color="danger"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               - 1 DARK
@@ -1145,6 +1150,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -1567,6 +1573,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                             color="danger"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               - 1 DARK
@@ -1604,6 +1611,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -1991,6 +1999,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -2448,6 +2457,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                       class="flex-1 flex-shrink-0 pl-3 text-right"
                                     >
                                       <span
+                                        class="whitespace-nowrap"
                                         data-testid="AmountCrypto"
                                       >
                                         1 DARK
@@ -2492,6 +2502,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                       class="flex-1 flex-shrink-0 pl-3 text-right"
                                     >
                                       <span
+                                        class="whitespace-nowrap"
                                         data-testid="AmountCrypto"
                                       >
                                         2 DARK
@@ -2525,6 +2536,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                             color="danger"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               - 3 DARK
@@ -2562,6 +2574,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -2919,6 +2932,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             15 DARK
@@ -3326,6 +3340,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                             color="danger"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               - 1 DARK
@@ -3363,6 +3378,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -3785,6 +3801,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -4207,6 +4224,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -4815,6 +4833,7 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                             color="danger"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               - 1 DARK
@@ -4852,6 +4871,7 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK
@@ -5285,6 +5305,7 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                             color="danger"
                           >
                             <span
+                              class="whitespace-nowrap"
                               data-testid="AmountCrypto"
                             >
                               - 1 DARK
@@ -5322,6 +5343,7 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                           class="font-semibold"
                         >
                           <span
+                            class="whitespace-nowrap"
                             data-testid="AmountCrypto"
                           >
                             1 DARK

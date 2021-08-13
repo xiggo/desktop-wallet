@@ -120,7 +120,7 @@ exports[`WalletHeader should render 1`] = `
           </span>
         </div>
         <span
-          class="text-lg font-semibold text-white"
+          class="whitespace-nowrap text-lg font-semibold text-white"
           data-testid="AmountCrypto"
         >
           33.75089801 DARK
@@ -328,14 +328,14 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
             Balance:
           </span>
           <span
-            class="ml-1"
+            class="whitespace-nowrap ml-1"
             data-testid="AmountCrypto"
           >
             0 BTC
           </span>
         </div>
         <span
-          class="text-lg font-semibold text-white"
+          class="whitespace-nowrap text-lg font-semibold text-white"
           data-testid="AmountCrypto"
         >
           33.75089801 DARK
@@ -562,7 +562,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
           </span>
         </div>
         <span
-          class="text-lg font-semibold text-white"
+          class="whitespace-nowrap text-lg font-semibold text-white"
           data-testid="AmountCrypto"
         >
           33.75089801 DARK
@@ -789,7 +789,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
           </span>
         </div>
         <span
-          class="text-lg font-semibold text-white"
+          class="whitespace-nowrap text-lg font-semibold text-white"
           data-testid="AmountCrypto"
         >
           33.75089801 DARK
@@ -1027,7 +1027,7 @@ exports[`WalletHeader should show modifiers 1`] = `
           </span>
         </div>
         <span
-          class="text-lg font-semibold text-white"
+          class="whitespace-nowrap text-lg font-semibold text-white"
           data-testid="AmountCrypto"
         >
           33.75089801 DARK
@@ -1220,7 +1220,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
           </span>
         </div>
         <span
-          class="text-lg font-semibold text-white"
+          class="whitespace-nowrap text-lg font-semibold text-white"
           data-testid="AmountCrypto"
         >
           33.75089801 DARK

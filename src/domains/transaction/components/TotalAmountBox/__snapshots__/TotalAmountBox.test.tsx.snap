@@ -20,7 +20,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
             Transaction Amount
           </span>
           <span
-            class="mt-1 text-lg font-semibold"
+            class="whitespace-nowrap mt-1 text-lg font-semibold"
             data-testid="AmountCrypto"
           >
             0.1 ARK
@@ -35,7 +35,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
             Transaction Fee
           </span>
           <span
-            class="mt-1 text-lg font-semibold"
+            class="whitespace-nowrap mt-1 text-lg font-semibold"
             data-testid="AmountCrypto"
           >
             0.01 ARK
@@ -69,7 +69,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
         Total Amount
       </span>
       <span
-        class="text-2xl font-bold"
+        class="whitespace-nowrap text-2xl font-bold"
         data-testid="AmountCrypto"
       >
         0.11 ARK
@@ -99,7 +99,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
             Transaction Amount
           </span>
           <span
-            class="mt-1 text-lg font-semibold"
+            class="whitespace-nowrap mt-1 text-lg font-semibold"
             data-testid="AmountCrypto"
           >
             0.1 ARK
@@ -114,7 +114,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
             Transaction Fee
           </span>
           <span
-            class="mt-1 text-lg font-semibold"
+            class="whitespace-nowrap mt-1 text-lg font-semibold"
             data-testid="AmountCrypto"
           >
             0.01 ARK
@@ -148,7 +148,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
         Total Amount
       </span>
       <span
-        class="text-2xl font-bold"
+        class="whitespace-nowrap text-2xl font-bold"
         data-testid="AmountCrypto"
       >
         0.11 ARK
@@ -178,7 +178,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
             Transaction Amount
           </span>
           <span
-            class="mt-1 text-lg font-semibold"
+            class="whitespace-nowrap mt-1 text-lg font-semibold"
             data-testid="AmountCrypto"
           >
             0.1 ARK
@@ -193,7 +193,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
             Transaction Fee
           </span>
           <span
-            class="mt-1 text-lg font-semibold"
+            class="whitespace-nowrap mt-1 text-lg font-semibold"
             data-testid="AmountCrypto"
           >
             0.01 ARK
@@ -227,7 +227,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
         Total Amount
       </span>
       <span
-        class="text-2xl font-bold"
+        class="whitespace-nowrap text-2xl font-bold"
         data-testid="AmountCrypto"
       >
         0.11 ARK
@@ -257,7 +257,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
             Transaction Amount
           </span>
           <span
-            class="mt-1 text-lg font-semibold"
+            class="whitespace-nowrap mt-1 text-lg font-semibold"
             data-testid="AmountCrypto"
           >
             0.1 ARK
@@ -272,7 +272,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
             Transaction Fee
           </span>
           <span
-            class="mt-1 text-lg font-semibold"
+            class="whitespace-nowrap mt-1 text-lg font-semibold"
             data-testid="AmountCrypto"
           >
             0.01 ARK
@@ -306,7 +306,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
         Total Amount
       </span>
       <span
-        class="text-2xl font-bold"
+        class="whitespace-nowrap text-2xl font-bold"
         data-testid="AmountCrypto"
       >
         0.11 ARK
