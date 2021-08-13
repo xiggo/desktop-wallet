@@ -88,59 +88,6 @@ describe("Use Ledger Connection", () => {
 		listenSpy.mockReset();
 	});
 
-	it("should display toasts when device connects and disconnects", () => {
-		const Component = () => {
-			useLedgerConnection(transport);
-			return <></>;
-		};
-
-		const unsubscribe = jest.fn();
-		let observer: Observer<any>;
-
-		let toastSpy = jest.SpyInstance;
-
-		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
-			observer = obv;
-			return { unsubscribe };
-		});
-
-		render(<Component />);
-
-		toastSpy = jest.spyOn(toasts, "success").mockImplementationOnce();
-
-		act(() => {
-			observer!.next({ descriptor: "", type: "add" });
-		});
-
-		expect(toastSpy).toHaveBeenCalledWith("Ledger connected");
-
-		toastSpy = jest.spyOn(toasts, "warning").mockImplementationOnce();
-
-		act(() => {
-			observer!.next({ descriptor: "", type: "remove" });
-		});
-
-		expect(toastSpy).toHaveBeenCalledWith("Ledger disconnected");
-
-		toastSpy = jest.spyOn(toasts, "success").mockImplementationOnce();
-
-		act(() => {
-			observer!.next({ descriptor: "", deviceModel: { productName: "Ledger Nano S" }, type: "add" });
-		});
-
-		expect(toastSpy).toHaveBeenCalledWith("Ledger Nano S connected");
-
-		toastSpy = jest.spyOn(toasts, "warning").mockImplementationOnce();
-
-		act(() => {
-			observer!.next({ descriptor: "", deviceModel: { productName: "Ledger Nano S" }, type: "remove" });
-		});
-
-		expect(toastSpy).toHaveBeenCalledWith("Ledger Nano S disconnected");
-
-		listenSpy.mockReset();
-	});
-
 	it("should import ledger wallets", async () => {
 		const Component = () => {
 			const { importLedgerWallets } = useLedgerConnection(transport);
@@ -371,24 +318,47 @@ describe("Use Ledger Connection", () => {
 		};
 
 		it("should succeed in connecting with options by default", async () => {
+			let toastSpy = jest.SpyInstance;
+
 			const getPublicKeySpy = jest
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
+			const unsubscribe = jest.fn();
+			let observer: Observer<any>;
+
+			const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+				observer = obv;
+				return { unsubscribe };
+			});
+
 			render(<Component />);
 
 			act(() => {
-				fireEvent.click(screen.getByText("Connect"));
+				observer!.next({ descriptor: "", deviceModel: { productName: "Nano S" }, type: "add" });
 			});
+
+			toastSpy = jest.spyOn(toasts, "success").mockImplementationOnce();
+			fireEvent.click(screen.getByText("Connect"));
 
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 			await waitFor(() => expect(screen.queryByText("Connected")).toBeInTheDocument());
 
+			expect(toastSpy).toHaveBeenCalledWith("Nano S connected");
+
+			toastSpy = jest.spyOn(toasts, "warning").mockImplementationOnce();
+			fireEvent.click(screen.getByText("Disconnect"));
+
+			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith("Nano S disconnected"));
+
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
 			getPublicKeySpy.mockReset();
+
+			listenSpy.mockReset();
+			toastSpy.mockRestore();
 		});
 	});
 });

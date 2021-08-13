@@ -5,7 +5,7 @@ import { Coins } from "@payvo/sdk";
 import { toasts } from "app/services";
 import retry from "async-retry";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
-import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useEnvironmentContext } from "../../Environment";
@@ -19,7 +19,19 @@ export const useLedgerConnection = (transport: typeof Transport) => {
 	const [state, dispatch] = useReducer(connectionReducer, defaultConnectionState);
 	const abortRetryReference = useRef<boolean>(false);
 
+	const [deviceName, setDeviceName] = useState<string | undefined>();
+
 	const { isBusy, isConnected, error } = state;
+
+	useEffect(() => {
+		if (deviceName) {
+			if (isConnected) {
+				toasts.success(t("COMMON.LEDGER_CONNECTED", { device: deviceName }));
+			} else {
+				toasts.warning(t("COMMON.LEDGER_DISCONNECTED", { device: deviceName }));
+			}
+		}
+	}, [isConnected, t]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const listenDevice = useCallback(
 		() =>
@@ -29,17 +41,17 @@ export const useLedgerConnection = (transport: typeof Transport) => {
 				error: (e) => dispatch({ message: e.message, type: "failed" }),
 				// @ts-ignore
 				next: ({ type, descriptor, deviceModel }) => {
+					setDeviceName(deviceModel?.productName);
+
 					if (type === "add") {
-						toasts.success(t("COMMON.LEDGER_CONNECTED", { device: deviceModel?.productName || "Ledger" }));
 						dispatch({ id: deviceModel?.id || "nanoS", path: descriptor, type: "add" });
 						return;
 					}
 
-					toasts.warning(t("COMMON.LEDGER_DISCONNECTED", { device: deviceModel?.productName || "Ledger" }));
 					dispatch({ type: "remove" });
 				},
 			}),
-		[t, transport],
+		[transport],
 	);
 
 	const importLedgerWallets = useCallback(
