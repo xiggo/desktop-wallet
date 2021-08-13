@@ -175,7 +175,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-theme-secondary-text"
               data-testid="TransactionRow__currency"
             >
               N/A

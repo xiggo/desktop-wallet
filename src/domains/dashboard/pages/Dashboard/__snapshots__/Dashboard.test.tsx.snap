@@ -1171,7 +1171,7 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-theme-secondary-text"
                           data-testid="TransactionRow__currency"
                         >
                           N/A
@@ -1335,7 +1335,7 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-theme-secondary-text"
                           data-testid="TransactionRow__currency"
                         >
                           N/A
@@ -1499,7 +1499,7 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-theme-secondary-text"
                           data-testid="TransactionRow__currency"
                         >
                           N/A
@@ -1663,7 +1663,7 @@ exports[`Dashboard should render 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-theme-secondary-text"
                           data-testid="TransactionRow__currency"
                         >
                           N/A
@@ -5595,7 +5595,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-theme-secondary-text"
                           data-testid="TransactionRow__currency"
                         >
                           N/A
@@ -5759,7 +5759,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-theme-secondary-text"
                           data-testid="TransactionRow__currency"
                         >
                           N/A
@@ -5923,7 +5923,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-theme-secondary-text"
                           data-testid="TransactionRow__currency"
                         >
                           N/A
@@ -6087,7 +6087,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-theme-secondary-text"
                           data-testid="TransactionRow__currency"
                         >
                           N/A

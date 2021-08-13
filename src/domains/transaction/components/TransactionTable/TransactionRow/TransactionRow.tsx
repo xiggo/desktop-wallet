@@ -71,7 +71,10 @@ export const TransactionRow = memo(
 		if (exchangeCurrency && !lastCellContent) {
 			if (transaction.wallet().network().isTest()) {
 				lastCellContent = (
-					<span data-testid="TransactionRow__currency" className="whitespace-nowrap">
+					<span
+						data-testid="TransactionRow__currency"
+						className="whitespace-nowrap text-theme-secondary-text"
+					>
 						{t("COMMON.NOT_AVAILABLE")}
 					</span>
 				);
