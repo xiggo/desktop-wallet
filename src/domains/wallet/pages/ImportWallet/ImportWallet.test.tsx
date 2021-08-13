@@ -210,7 +210,7 @@ describe("ImportWallet", () => {
 		expect(onClickEditAlias).toHaveBeenCalled();
 	});
 
-	it("should go back to dashboard", async () => {
+	it("should go back to portfolio", async () => {
 		const history = createMemoryHistory();
 		history.push(route);
 

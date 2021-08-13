@@ -74,7 +74,7 @@ const Paginator = ({
 
 				{activeIndex === size && (
 					<Button disabled={isNextDisabled} data-testid="Paginator__finish-button" onClick={onFinish}>
-						{isMultiple ? t("COMMON.BACK_TO_DASHBOARD") : t("COMMON.GO_TO_WALLET")}
+						{isMultiple ? t("COMMON.GO_TO_PORTFOLIO") : t("COMMON.GO_TO_WALLET")}
 					</Button>
 				)}
 			</div>
