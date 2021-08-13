@@ -46,7 +46,7 @@ export const ResetProfile = ({ isOpen, profile, onClose, onCancel, onReset }: Re
 				</Button>
 
 				<Button type="submit" onClick={handleReset} data-testid="ResetProfile__submit-button" variant="danger">
-					<Icon name="Reset" />
+					<Icon name="ArrowRotateRight" />
 					<span>{t("COMMON.RESET")}</span>
 				</Button>
 			</div>

@@ -130,7 +130,7 @@ describe("WalletHeader", () => {
 		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
 
 		expect(getByTestId("WalletIcon__Ledger")).toBeTruthy();
-		expect(getByTestId("WalletIcon__Multisig")).toBeTruthy();
+		expect(getByTestId("WalletIcon__Multisignature")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 
 		ledgerSpy.mockRestore();
@@ -153,7 +153,12 @@ describe("WalletHeader", () => {
 			<WalletHeader profile={profile} wallet={wallet} currencyDelta={delta} />,
 		);
 
-		expect(getByText("chevron-up.svg")).toBeTruthy();
+		if (delta < 0) {
+			expect(getByText("chevron-down-small.svg")).toBeTruthy();
+		} else {
+			expect(getByText("chevron-up-small.svg")).toBeTruthy();
+		}
+
 		expect(getByText(`${delta}%`)).toBeTruthy();
 
 		expect(asFragment()).toMatchSnapshot();
@@ -404,7 +409,7 @@ describe("WalletHeader", () => {
 		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
 		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
 
-		expect(() => getByTestId("WalletIcon__Multisig")).toThrow();
+		expect(() => getByTestId("WalletIcon__Multisignature")).toThrow();
 
 		multisigSpy.mockRestore();
 	});

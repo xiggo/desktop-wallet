@@ -18,7 +18,7 @@ export const SearchBarOptions = (properties: SearchBarOptionsProperties) => {
 				toggleContent={
 					<span className="flex font-semibold cursor-pointer select-none">
 						{properties.selectedOption ? properties.selectedOption.label : t("COMMON.TYPE")}
-						<SvgCollection.ChevronDown className="inline-block ml-2 w-2 text-black" />
+						<SvgCollection.ChevronDownSmall className="inline-block ml-2 w-2 text-black" />
 					</span>
 				}
 				options={properties.options}

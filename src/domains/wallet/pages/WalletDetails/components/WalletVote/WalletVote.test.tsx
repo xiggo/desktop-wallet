@@ -203,7 +203,7 @@ describe("WalletVote", () => {
 			expect(getByText(commonTranslations.NOT_AVAILABLE)).toBeTruthy();
 			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.STANDBY)).toBeTruthy();
 
-			expect(getByText("information-circle.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeTruthy();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -324,7 +324,7 @@ describe("WalletVote", () => {
 			expect(getByText("Active 1")).toBeTruthy();
 			expect(getByText("/ Standby 1")).toBeTruthy();
 
-			expect(getByText("information-circle.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeTruthy();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -367,7 +367,7 @@ describe("WalletVote", () => {
 			expect(getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("information-circle.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeTruthy();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -409,7 +409,7 @@ describe("WalletVote", () => {
 			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("information-circle.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeTruthy();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -463,7 +463,7 @@ describe("WalletVote", () => {
 			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("information-circle.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeTruthy();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();

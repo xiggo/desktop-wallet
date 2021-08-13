@@ -29,7 +29,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                   width="16"
                 >
                   <svg>
-                    id.svg
+                    magnifying-glass-id.svg
                   </svg>
                 </div>
               </span>
@@ -118,7 +118,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                   width="20"
                 >
                   <svg>
-                    memo.svg
+                    file-lines.svg
                   </svg>
                 </div>
               </span>
@@ -142,7 +142,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                 width="20"
               >
                 <svg>
-                  status-pending.svg
+                  clock.svg
                 </svg>
               </div>
             </div>
@@ -217,7 +217,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
                   width="16"
                 >
                   <svg>
-                    id.svg
+                    magnifying-glass-id.svg
                   </svg>
                 </div>
               </span>
@@ -306,7 +306,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
                   width="20"
                 >
                   <svg>
-                    memo.svg
+                    file-lines.svg
                   </svg>
                 </div>
               </span>
@@ -330,7 +330,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
                 width="20"
               >
                 <svg>
-                  status-pending.svg
+                  clock.svg
                 </svg>
               </div>
             </div>

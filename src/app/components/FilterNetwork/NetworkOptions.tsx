@@ -12,7 +12,7 @@ export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) =>
 			return (
 				<Circle size="lg" className="relative border-theme-success-500 text-theme-success-500">
 					<Icon name={network.ticker()} size="lg" />
-					<Badge className="bg-theme-success-500 text-theme-success-100" icon="Checkmark" />
+					<Badge className="bg-theme-success-500 text-theme-success-100" icon="CheckmarkSmall" />
 				</Circle>
 			);
 		}

@@ -33,7 +33,7 @@ exports[`ProfileCreated should render a modal 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>

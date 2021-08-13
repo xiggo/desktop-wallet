@@ -41,7 +41,7 @@ exports[`TransactionSender should not render delegate icon 1`] = `
           width="20"
         >
           <svg>
-            delegate.svg
+            delegate-registration.svg
           </svg>
         </div>
       </div>

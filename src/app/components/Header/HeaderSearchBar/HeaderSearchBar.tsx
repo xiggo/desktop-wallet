@@ -68,7 +68,7 @@ export const HeaderSearchBar = ({
 			>
 				<div className="flex items-center space-x-3 h-5">
 					<span>{label}</span>
-					<Icon name="Search" size="lg" />
+					<Icon name="MagnifyingGlass" size="lg" />
 				</div>
 			</ControlButton>
 
@@ -100,7 +100,7 @@ export const HeaderSearchBar = ({
 					>
 						<Icon
 							className="p-1 -ml-1 text-theme-secondary dark:text-theme-secondary-600 hover:text-theme-primary-600"
-							name="CrossSlim"
+							name="Cross"
 							size="sm"
 						/>
 					</button>
@@ -118,7 +118,11 @@ export const HeaderSearchBar = ({
 						/>
 					</div>
 
-					<Icon className="text-color-primary-300 dark:text-theme-secondary-600" name="Search" size="lg" />
+					<Icon
+						className="text-color-primary-300 dark:text-theme-secondary-600"
+						name="MagnifyingGlass"
+						size="lg"
+					/>
 				</SearchBarInputWrapper>
 			)}
 		</div>

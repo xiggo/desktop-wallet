@@ -19,7 +19,7 @@ exports[`MnemonicVerificationProgress should render tabs 1`] = `
           width="20"
         >
           <svg>
-            status-ok.svg
+            circle-check-mark.svg
           </svg>
         </div>
       </span>

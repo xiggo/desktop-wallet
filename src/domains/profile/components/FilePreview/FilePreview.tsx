@@ -14,8 +14,8 @@ interface FilePreviewProperties {
 
 export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; variant?: FilePreviewVariant }) => {
 	const fileTypeIcon: Record<string, string> = {
-		".dwe": "DweFile",
-		".json": "JsonFile",
+		".dwe": "ExtensionDwe",
+		".json": "ExtensionJson",
 	};
 
 	return (
@@ -31,13 +31,13 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 
 			{variant === "danger" && (
 				<div className="flex justify-center items-center w-6 h-6 rounded-full text-theme-danger-500 bg-theme-danger-200">
-					<Icon name="Close" size="sm" />
+					<Icon name="CrossSmall" size="sm" />
 				</div>
 			)}
 
 			{variant === "success" && (
 				<div className="flex justify-center items-center w-6 h-6 rounded-full text-theme-success-500 bg-theme-success-200">
-					<Icon name="Checkmark" />
+					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
 			)}
 		</div>

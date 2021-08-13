@@ -21,7 +21,7 @@ exports[`General Settings should disable submit button when profile is not resto
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -120,7 +120,7 @@ exports[`General Settings should disable submit button when profile is not resto
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -159,7 +159,7 @@ exports[`General Settings should disable submit button when profile is not resto
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -292,7 +292,7 @@ exports[`General Settings should disable submit button when profile is not resto
                         width="20"
                       >
                         <svg>
-                          settings-horizontal.svg
+                          sliders.svg
                         </svg>
                       </div>
                     </div>
@@ -346,7 +346,7 @@ exports[`General Settings should disable submit button when profile is not resto
                         width="20"
                       >
                         <svg>
-                          export.svg
+                          arrow-up-turn-bracket.svg
                         </svg>
                       </div>
                     </div>
@@ -373,7 +373,7 @@ exports[`General Settings should disable submit button when profile is not resto
                         width="20"
                       >
                         <svg>
-                          appearance.svg
+                          pencil-ruler.svg
                         </svg>
                       </div>
                     </div>
@@ -470,7 +470,7 @@ exports[`General Settings should disable submit button when profile is not resto
                                   width="20"
                                 >
                                   <svg>
-                                    upload.svg
+                                    arrow-up-bracket.svg
                                   </svg>
                                 </div>
                               </div>
@@ -1424,7 +1424,7 @@ exports[`General Settings should disable submit button when profile is not resto
                           width="16"
                         >
                           <svg>
-                            reset.svg
+                            arrow-rotate-right.svg
                           </svg>
                         </div>
                         <span>
@@ -1492,7 +1492,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -1591,7 +1591,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -1630,7 +1630,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -1763,7 +1763,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         width="20"
                       >
                         <svg>
-                          settings-horizontal.svg
+                          sliders.svg
                         </svg>
                       </div>
                     </div>
@@ -1817,7 +1817,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         width="20"
                       >
                         <svg>
-                          export.svg
+                          arrow-up-turn-bracket.svg
                         </svg>
                       </div>
                     </div>
@@ -1844,7 +1844,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         width="20"
                       >
                         <svg>
-                          appearance.svg
+                          pencil-ruler.svg
                         </svg>
                       </div>
                     </div>
@@ -1936,7 +1936,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                   width="20"
                                 >
                                   <svg>
-                                    upload.svg
+                                    arrow-up-bracket.svg
                                   </svg>
                                 </div>
                               </div>
@@ -1956,7 +1956,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                 width="10"
                               >
                                 <svg>
-                                  close.svg
+                                  cross.svg
                                 </svg>
                               </div>
                             </div>
@@ -2909,7 +2909,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                           width="16"
                         >
                           <svg>
-                            reset.svg
+                            arrow-rotate-right.svg
                           </svg>
                         </div>
                         <span>
@@ -2976,7 +2976,7 @@ exports[`General Settings should render 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -3075,7 +3075,7 @@ exports[`General Settings should render 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -3114,7 +3114,7 @@ exports[`General Settings should render 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -3247,7 +3247,7 @@ exports[`General Settings should render 1`] = `
                         width="20"
                       >
                         <svg>
-                          settings-horizontal.svg
+                          sliders.svg
                         </svg>
                       </div>
                     </div>
@@ -3301,7 +3301,7 @@ exports[`General Settings should render 1`] = `
                         width="20"
                       >
                         <svg>
-                          export.svg
+                          arrow-up-turn-bracket.svg
                         </svg>
                       </div>
                     </div>
@@ -3328,7 +3328,7 @@ exports[`General Settings should render 1`] = `
                         width="20"
                       >
                         <svg>
-                          appearance.svg
+                          pencil-ruler.svg
                         </svg>
                       </div>
                     </div>
@@ -3425,7 +3425,7 @@ exports[`General Settings should render 1`] = `
                                   width="20"
                                 >
                                   <svg>
-                                    upload.svg
+                                    arrow-up-bracket.svg
                                   </svg>
                                 </div>
                               </div>
@@ -4379,7 +4379,7 @@ exports[`General Settings should render 1`] = `
                           width="16"
                         >
                           <svg>
-                            reset.svg
+                            arrow-rotate-right.svg
                           </svg>
                         </div>
                         <span>
@@ -4446,7 +4446,7 @@ exports[`General Settings should update profile 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -4545,7 +4545,7 @@ exports[`General Settings should update profile 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -4584,7 +4584,7 @@ exports[`General Settings should update profile 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -4717,7 +4717,7 @@ exports[`General Settings should update profile 1`] = `
                         width="20"
                       >
                         <svg>
-                          settings-horizontal.svg
+                          sliders.svg
                         </svg>
                       </div>
                     </div>
@@ -4771,7 +4771,7 @@ exports[`General Settings should update profile 1`] = `
                         width="20"
                       >
                         <svg>
-                          export.svg
+                          arrow-up-turn-bracket.svg
                         </svg>
                       </div>
                     </div>
@@ -4798,7 +4798,7 @@ exports[`General Settings should update profile 1`] = `
                         width="20"
                       >
                         <svg>
-                          appearance.svg
+                          pencil-ruler.svg
                         </svg>
                       </div>
                     </div>
@@ -4895,7 +4895,7 @@ exports[`General Settings should update profile 1`] = `
                                   width="20"
                                 >
                                   <svg>
-                                    upload.svg
+                                    arrow-up-bracket.svg
                                   </svg>
                                 </div>
                               </div>
@@ -5850,7 +5850,7 @@ exports[`General Settings should update profile 1`] = `
                           width="16"
                         >
                           <svg>
-                            reset.svg
+                            arrow-rotate-right.svg
                           </svg>
                         </div>
                         <span>
@@ -5917,7 +5917,7 @@ exports[`General Settings should update the avatar when removing focus from name
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -6016,7 +6016,7 @@ exports[`General Settings should update the avatar when removing focus from name
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -6055,7 +6055,7 @@ exports[`General Settings should update the avatar when removing focus from name
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -6188,7 +6188,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         width="20"
                       >
                         <svg>
-                          settings-horizontal.svg
+                          sliders.svg
                         </svg>
                       </div>
                     </div>
@@ -6242,7 +6242,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         width="20"
                       >
                         <svg>
-                          export.svg
+                          arrow-up-turn-bracket.svg
                         </svg>
                       </div>
                     </div>
@@ -6269,7 +6269,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         width="20"
                       >
                         <svg>
-                          appearance.svg
+                          pencil-ruler.svg
                         </svg>
                       </div>
                     </div>
@@ -6366,7 +6366,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                   width="20"
                                 >
                                   <svg>
-                                    upload.svg
+                                    arrow-up-bracket.svg
                                   </svg>
                                 </div>
                               </div>
@@ -7320,7 +7320,7 @@ exports[`General Settings should update the avatar when removing focus from name
                           width="16"
                         >
                           <svg>
-                            reset.svg
+                            arrow-rotate-right.svg
                           </svg>
                         </div>
                         <span>
@@ -7387,7 +7387,7 @@ exports[`General Settings should update the avatar when removing focus from name
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -7486,7 +7486,7 @@ exports[`General Settings should update the avatar when removing focus from name
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -7525,7 +7525,7 @@ exports[`General Settings should update the avatar when removing focus from name
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -7658,7 +7658,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         width="20"
                       >
                         <svg>
-                          settings-horizontal.svg
+                          sliders.svg
                         </svg>
                       </div>
                     </div>
@@ -7712,7 +7712,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         width="20"
                       >
                         <svg>
-                          export.svg
+                          arrow-up-turn-bracket.svg
                         </svg>
                       </div>
                     </div>
@@ -7739,7 +7739,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         width="20"
                       >
                         <svg>
-                          appearance.svg
+                          pencil-ruler.svg
                         </svg>
                       </div>
                     </div>
@@ -7828,7 +7828,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                     width="20"
                                   >
                                     <svg>
-                                      upload.svg
+                                      arrow-up-bracket.svg
                                     </svg>
                                   </div>
                                 </div>
@@ -7886,7 +7886,7 @@ exports[`General Settings should update the avatar when removing focus from name
                                   width="20"
                                 >
                                   <svg>
-                                    alert-warning.svg
+                                    circle-exclamation-mark.svg
                                   </svg>
                                 </div>
                               </span>
@@ -8802,7 +8802,7 @@ exports[`General Settings should update the avatar when removing focus from name
                           width="16"
                         >
                           <svg>
-                            reset.svg
+                            arrow-rotate-right.svg
                           </svg>
                         </div>
                         <span>

@@ -52,7 +52,7 @@ export const Page = ({ navbarVariant, title, isBackDisabled, profile, sidebar, c
 			value: "settings",
 		},
 		{
-			icon: "Redirect",
+			icon: "ArrowExternal",
 			isExternal: true,
 			label: t("COMMON.SUPPORT"),
 			mountPath: () => "https://payvo.com/contact",

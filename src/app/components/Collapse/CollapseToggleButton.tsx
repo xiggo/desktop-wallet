@@ -32,7 +32,7 @@ export const CollapseToggleButton = ({ isOpen, className, label, alternativeLabe
 		>
 			<span>{isOpen ? label || t("COMMON.HIDE") : alternativeLabel || label || t("COMMON.SHOW")}</span>
 			<ToggleIcon isOpen={isOpen!} isDisabled={properties.disabled}>
-				<Icon name="ChevronDown" size="sm" className="p-1" />
+				<Icon name="ChevronDownSmall" size="sm" className="p-1" />
 			</ToggleIcon>
 		</button>
 	);

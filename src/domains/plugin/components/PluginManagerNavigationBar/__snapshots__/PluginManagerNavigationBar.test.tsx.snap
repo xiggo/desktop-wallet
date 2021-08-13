@@ -125,7 +125,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
                   width="20"
                 >
                   <svg>
-                    list-view.svg
+                    list.svg
                   </svg>
                 </div>
               </button>
@@ -147,7 +147,7 @@ exports[`PluginManagerNavigationBar should render 1`] = `
                   width="20"
                 >
                   <svg>
-                    grid-view.svg
+                    grid.svg
                   </svg>
                 </div>
               </button>
@@ -285,7 +285,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
                   width="20"
                 >
                   <svg>
-                    list-view.svg
+                    list.svg
                   </svg>
                 </div>
               </button>
@@ -307,7 +307,7 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
                   width="20"
                 >
                   <svg>
-                    grid-view.svg
+                    grid.svg
                   </svg>
                 </div>
               </button>

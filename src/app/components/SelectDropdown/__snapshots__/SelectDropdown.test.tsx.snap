@@ -238,7 +238,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
             width="20"
           >
             <svg>
-              alert-warning.svg
+              circle-exclamation-mark.svg
             </svg>
           </div>
         </span>
@@ -294,7 +294,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
                 width="20"
               >
                 <svg>
-                  alert-warning.svg
+                  circle-exclamation-mark.svg
                 </svg>
               </div>
             </span>
@@ -368,7 +368,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
             width="20"
           >
             <svg>
-              alert-warning.svg
+              circle-exclamation-mark.svg
             </svg>
           </div>
         </span>
@@ -424,7 +424,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
                 width="20"
               >
                 <svg>
-                  alert-warning.svg
+                  circle-exclamation-mark.svg
                 </svg>
               </div>
             </span>

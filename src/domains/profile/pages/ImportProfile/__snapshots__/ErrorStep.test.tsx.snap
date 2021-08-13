@@ -44,7 +44,7 @@ exports[`Import Profile - Error Step should render 1`] = `
               width="40"
             >
               <svg>
-                dwe-file.svg
+                extension-dwe.svg
               </svg>
             </div>
             <div
@@ -67,7 +67,7 @@ exports[`Import Profile - Error Step should render 1`] = `
               width="10"
             >
               <svg>
-                close.svg
+                cross-small.svg
               </svg>
             </div>
           </div>

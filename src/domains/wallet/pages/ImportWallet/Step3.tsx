@@ -53,7 +53,7 @@ export const ThirdStep = ({
 						variant="secondary"
 						onClick={onClickEditAlias}
 					>
-						<Icon name="Edit" />
+						<Icon name="Pencil" />
 					</Button>
 				}
 			>

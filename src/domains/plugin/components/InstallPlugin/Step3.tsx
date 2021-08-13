@@ -40,7 +40,7 @@ export const ThirdStep = ({ plugin }: Properties) => {
 									className="relative z-10 bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800"
 								>
 									<span className="text-theme-success-600">
-										<Icon name="Checkmark" size="lg" />
+										<Icon name="Checkmark" />
 									</span>
 								</Circle>
 								<Circle size="lg" className="relative z-0 bg-theme-background border-theme-success-600">

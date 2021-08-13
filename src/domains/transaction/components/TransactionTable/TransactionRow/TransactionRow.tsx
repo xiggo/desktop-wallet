@@ -62,7 +62,7 @@ export const TransactionRow = memo(
 		if (isSignaturePending) {
 			lastCellContent = (
 				<Button data-testid="TransactionRow__sign" variant="secondary" onClick={onSign}>
-					<Icon name="Edit" />
+					<Icon name="Pencil" />
 					<span>{t("COMMON.SIGN")}</span>
 				</Button>
 			);
@@ -98,7 +98,7 @@ export const TransactionRow = memo(
 							showExternalIcon={false}
 							isExternal
 						>
-							<Icon name="Id" />
+							<Icon name="MagnifyingGlassId" />
 						</Link>
 					</TableCell>
 				)}

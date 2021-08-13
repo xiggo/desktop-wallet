@@ -2,7 +2,7 @@ import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
-import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
+import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -37,8 +37,6 @@ export const PluginListItem = ({
 	showCategory,
 }: PluginListItemProperties) => {
 	const { t } = useTranslation();
-
-	const { renderPluginIcon } = usePluginIcon();
 
 	const handleInstall = () => {
 		onInstall?.(plugin);
@@ -92,7 +90,7 @@ export const PluginListItem = ({
 						{plugin.title}
 					</span>
 
-					{renderPluginIcon({ isOfficial: plugin.isOfficial })}
+					{plugin.isOfficial && <OfficialPluginIcon />}
 
 					{plugin.updateStatus.isAvailable && !plugin.updateStatus.isCompatible && (
 						<Tooltip
@@ -101,7 +99,7 @@ export const PluginListItem = ({
 							})}
 						>
 							<span data-testid="PluginListItem__minimum-version-warning" className="ml-3 text-xl">
-								<Icon name="AlertWarning" className="text-theme-warning-500" />
+								<Icon name="CircleExclamationMark" className="text-theme-warning-500" />
 							</span>
 						</Tooltip>
 					)}
@@ -135,7 +133,7 @@ export const PluginListItem = ({
 									data-testid="PluginListItem__enabled"
 									className="mx-auto text-2xl text-theme-success-500"
 								>
-									<Icon name="StatusOk" size="lg" />
+									<Icon name="CircleCheckMark" size="lg" />
 								</div>
 							</Tooltip>
 						) : (
@@ -144,7 +142,7 @@ export const PluginListItem = ({
 									data-testid="PluginListItem__disabled"
 									className="mx-auto text-2xl text-theme-danger-400"
 								>
-									<Icon name="StatusFailed" size="lg" />
+									<Icon name="CircleCross" size="lg" />
 								</div>
 							</Tooltip>
 						)}

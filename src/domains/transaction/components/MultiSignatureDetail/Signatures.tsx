@@ -13,7 +13,7 @@ const WaitingBadge = () => {
 			<Badge
 				data-testid="Signatures__waiting-badge"
 				className="dark:text-white bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400"
-				icon="SignatureStatusPending"
+				icon="CircleCheckMark"
 			/>
 		</Tooltip>
 	);
@@ -27,7 +27,7 @@ const SignedBadge = () => {
 			<Badge
 				data-testid="Signatures__signed-badge"
 				className="dark:text-white bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600"
-				icon="SignatureStatusOk"
+				icon="Clock"
 			/>
 		</Tooltip>
 	);

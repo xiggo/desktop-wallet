@@ -332,7 +332,7 @@ exports[`TransactionRecipients should render the delegate icon if isDelegate 1`]
           width="20"
         >
           <svg>
-            delegate.svg
+            delegate-registration.svg
           </svg>
         </div>
       </div>

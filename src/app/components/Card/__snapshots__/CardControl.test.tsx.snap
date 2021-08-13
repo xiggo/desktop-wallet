@@ -65,7 +65,7 @@ exports[`Card Control should render with a control state 1`] = `
               width="16"
             >
               <svg>
-                checkmark.svg
+                check-mark.svg
               </svg>
             </div>
           </div>

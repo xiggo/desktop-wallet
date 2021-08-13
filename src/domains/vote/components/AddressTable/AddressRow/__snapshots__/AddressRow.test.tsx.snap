@@ -82,7 +82,7 @@ exports[`AddressRow should emit action on select button 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -143,7 +143,7 @@ exports[`AddressRow should emit action on select button 1`] = `
               width="20"
             >
               <svg>
-                status-ok.svg
+                circle-check-mark.svg
               </svg>
             </div>
           </div>
@@ -253,7 +253,7 @@ exports[`AddressRow should render 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -314,7 +314,7 @@ exports[`AddressRow should render 1`] = `
               width="20"
             >
               <svg>
-                status-ok.svg
+                circle-check-mark.svg
               </svg>
             </div>
           </div>
@@ -424,7 +424,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -498,7 +498,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
               width="20"
             >
               <svg>
-                status-ok.svg
+                circle-check-mark.svg
               </svg>
             </div>
           </div>
@@ -608,7 +608,7 @@ exports[`AddressRow should render when the maximum votes is greater than 1 1`] =
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -835,7 +835,7 @@ exports[`AddressRow should render when the wallet has many votes 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -1053,7 +1053,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -1114,7 +1114,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
               width="20"
             >
               <svg>
-                status-ok.svg
+                circle-check-mark.svg
               </svg>
             </div>
           </div>
@@ -1324,7 +1324,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -1385,7 +1385,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
               width="20"
             >
               <svg>
-                status-ok.svg
+                circle-check-mark.svg
               </svg>
             </div>
           </div>

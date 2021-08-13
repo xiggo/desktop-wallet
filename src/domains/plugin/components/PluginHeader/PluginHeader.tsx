@@ -4,7 +4,7 @@ import { Divider } from "app/components/Divider";
 import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
-import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
+import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
 import { PluginUpdateStatus } from "plugins/types";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
@@ -51,8 +51,6 @@ export const PluginHeader = ({
 }: Properties) => {
 	const { t } = useTranslation();
 
-	const { renderPluginIcon } = usePluginIcon();
-
 	const actions = useMemo(() => {
 		const result: DropdownOption[] = [];
 
@@ -87,7 +85,7 @@ export const PluginHeader = ({
 
 					<Tooltip content={t("PLUGINS.PLUGIN_INFO.REPORT")}>
 						<Button data-testid="PluginHeader__button--report" variant="secondary" onClick={onReport}>
-							<Icon name="Report" size="lg" />
+							<Icon name="CircleExclamationMark" size="lg" />
 						</Button>
 					</Tooltip>
 
@@ -110,7 +108,7 @@ export const PluginHeader = ({
 									size="icon"
 									className="text-left"
 								>
-									<Icon name="Settings" size="lg" />
+									<Icon name="EllipsisVertical" size="lg" />
 								</Button>
 							</div>
 						}
@@ -151,7 +149,7 @@ export const PluginHeader = ({
 						data-testid="PluginHeader__button--report"
 						variant="secondary"
 					>
-						<Icon name="Report" size="lg" />
+						<Icon name="CircleExclamationMark" size="lg" />
 					</Button>
 				</Tooltip>
 			</>
@@ -175,7 +173,7 @@ export const PluginHeader = ({
 						<div className="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight">
 							<div className="flex items-center space-x-2">
 								<span className="text-2xl font-bold truncate">{properties.title}</span>
-								{renderPluginIcon({ isOfficial: !!properties.isOfficial })}
+								{properties.isOfficial && <OfficialPluginIcon size="lg" />}
 							</div>
 							<span className="text-medium text-theme-secondary-500 truncate">
 								{properties.description}

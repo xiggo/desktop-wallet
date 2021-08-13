@@ -48,7 +48,7 @@ const Paginator = ({
 			<div>
 				{showRetry && (
 					<Button variant="secondary" onClick={onRetry} data-testid="Paginator__retry-button">
-						<Icon name="Reset" />
+						<Icon name="ArrowRotateRight" />
 						<span>{t("COMMON.RETRY")}</span>
 					</Button>
 				)}

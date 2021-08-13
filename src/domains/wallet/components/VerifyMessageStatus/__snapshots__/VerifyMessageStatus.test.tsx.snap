@@ -31,7 +31,7 @@ exports[`VerifyMessageStatus should render verify message error 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -97,7 +97,7 @@ exports[`VerifyMessageStatus should render verify message success 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>

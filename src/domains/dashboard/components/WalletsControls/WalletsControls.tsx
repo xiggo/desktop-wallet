@@ -73,7 +73,7 @@ export const WalletsControls = memo(
 										disabled={filterProperties.disabled}
 									>
 										<div className="flex justify-center items-center w-5 h-5">
-											<Icon name="Filters" size="lg" />
+											<Icon name="SlidersVertical" size="lg" />
 										</div>
 									</ControlButton>
 								</span>
@@ -101,7 +101,7 @@ export const WalletsControls = memo(
 
 					<Button onClick={onImportWallet} variant="secondary" data-testid="WalletControls__import-wallet">
 						<div className="flex items-center space-x-2">
-							<Icon name="Import" />
+							<Icon name="ArrowTurnDownBracket" />
 							<span>{t("DASHBOARD.WALLET_CONTROLS.IMPORT")}</span>
 						</div>
 					</Button>

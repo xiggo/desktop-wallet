@@ -174,7 +174,7 @@ export const WalletHeader = ({
 									data={wallet.address()}
 									tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_ADDRESS")}
 								>
-									<Icon name="CopyAddress" className="hover:text-theme-secondary-500" size="lg" />
+									<Icon name="Copy" className="hover:text-theme-secondary-500" />
 								</Clipboard>
 
 								{!!wallet.publicKey() && (
@@ -183,7 +183,7 @@ export const WalletHeader = ({
 										data={wallet.publicKey() || ""}
 										tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
 									>
-										<Icon name="CopyKey" className="hover:text-theme-secondary-500" size="lg" />
+										<Icon name="CopyKey" className="hover:text-theme-secondary-500" />
 									</Clipboard>
 								)}
 							</div>
@@ -211,11 +211,7 @@ export const WalletHeader = ({
 										currencyDelta > 0 ? "text-theme-success-600" : "text-theme-danger-500"
 									}`}
 								>
-									<Icon
-										name="ChevronUp"
-										className={currencyDelta < 0 ? "rotate-180" : ""}
-										size="sm"
-									/>
+									<Icon name={currencyDelta > 0 ? "ChevronUpSmall" : "ChevronDownSmall"} size="sm" />
 									<span className="ml-1">{currencyDelta}%</span>
 								</span>
 							)}
@@ -243,7 +239,7 @@ export const WalletHeader = ({
 								disabled={isSyncing}
 							>
 								<Icon
-									name="Reload"
+									name="ArrowRotateLeft"
 									className={cn({ "animate-spin": isSyncing })}
 									style={{ animationDirection: "reverse" }}
 								/>
@@ -265,7 +261,7 @@ export const WalletHeader = ({
 							>
 								<Icon
 									className={cn({ "text-theme-warning-400": wallet.isStarred() })}
-									name={wallet.isStarred() ? "Star" : "StarOutline"}
+									name={wallet.isStarred() ? "StarFilled" : "Star"}
 								/>
 							</WalletHeaderButton>
 						</Tooltip>
@@ -290,7 +286,7 @@ export const WalletHeader = ({
 									size="icon"
 									className="text-white bg-theme-secondary-800 hover:bg-theme-primary-700"
 								>
-									<Icon name="Settings" size="lg" />
+									<Icon name="EllipsisVertical" size="lg" />
 								</Button>
 							}
 							onSelect={handleSelect}

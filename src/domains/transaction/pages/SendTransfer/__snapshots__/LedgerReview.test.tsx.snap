@@ -28,7 +28,7 @@ exports[`TransferLedgerReview should render 1`] = `
               width="10"
             >
               <svg>
-                questionmark.svg
+                question-mark-small.svg
               </svg>
             </div>
           </div>
@@ -150,7 +150,7 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
               width="10"
             >
               <svg>
-                questionmark.svg
+                question-mark-small.svg
               </svg>
             </div>
           </div>

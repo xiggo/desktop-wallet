@@ -21,7 +21,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -120,7 +120,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -159,7 +159,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -289,7 +289,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                         width="20"
                       >
                         <svg>
-                          settings-horizontal.svg
+                          sliders.svg
                         </svg>
                       </div>
                     </div>
@@ -343,7 +343,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                         width="20"
                       >
                         <svg>
-                          export.svg
+                          arrow-up-turn-bracket.svg
                         </svg>
                       </div>
                     </div>
@@ -373,7 +373,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                         width="20"
                       >
                         <svg>
-                          appearance.svg
+                          pencil-ruler.svg
                         </svg>
                       </div>
                     </div>
@@ -548,7 +548,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                                     width="20"
                                   >
                                     <svg>
-                                      light.svg
+                                      underline-sun.svg
                                     </svg>
                                   </div>
                                   <span>
@@ -573,7 +573,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                                     width="20"
                                   >
                                     <svg>
-                                      dark.svg
+                                      underline-moon.svg
                                     </svg>
                                   </div>
                                   <span>

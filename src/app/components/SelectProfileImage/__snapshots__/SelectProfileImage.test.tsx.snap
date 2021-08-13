@@ -39,7 +39,7 @@ exports[`SelectProfileImage should handle upload file 1`] = `
                 width="20"
               >
                 <svg>
-                  upload.svg
+                  arrow-up-bracket.svg
                 </svg>
               </div>
             </div>
@@ -59,7 +59,7 @@ exports[`SelectProfileImage should handle upload file 1`] = `
               width="10"
             >
               <svg>
-                close.svg
+                cross.svg
               </svg>
             </div>
           </div>
@@ -109,7 +109,7 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
                 width="20"
               >
                 <svg>
-                  upload.svg
+                  arrow-up-bracket.svg
                 </svg>
               </div>
             </div>
@@ -129,7 +129,7 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
               width="10"
             >
               <svg>
-                close.svg
+                cross.svg
               </svg>
             </div>
           </div>
@@ -179,7 +179,7 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
                 width="20"
               >
                 <svg>
-                  upload.svg
+                  arrow-up-bracket.svg
                 </svg>
               </div>
             </div>
@@ -199,7 +199,7 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
               width="10"
             >
               <svg>
-                close.svg
+                cross.svg
               </svg>
             </div>
           </div>
@@ -246,7 +246,7 @@ exports[`SelectProfileImage should render 1`] = `
                   width="20"
                 >
                   <svg>
-                    upload.svg
+                    arrow-up-bracket.svg
                   </svg>
                 </div>
               </div>
@@ -301,7 +301,7 @@ exports[`SelectProfileImage should render with value svg 1`] = `
                 width="20"
               >
                 <svg>
-                  upload.svg
+                  arrow-up-bracket.svg
                 </svg>
               </div>
             </div>
@@ -352,7 +352,7 @@ exports[`SelectProfileImage should render without value svg 1`] = `
                 width="20"
               >
                 <svg>
-                  upload.svg
+                  arrow-up-bracket.svg
                 </svg>
               </div>
             </div>
@@ -372,7 +372,7 @@ exports[`SelectProfileImage should render without value svg 1`] = `
               width="10"
             >
               <svg>
-                close.svg
+                cross.svg
               </svg>
             </div>
           </div>

@@ -35,7 +35,7 @@ export const VotesEmpty = ({ onCreateWallet, onImportWallet }: VotesEmptyPropert
 
 					<Button onClick={onImportWallet} variant="secondary">
 						<div className="flex items-center space-x-2">
-							<Icon name="Import" />
+							<Icon name="ArrowTurnDownBracket" />
 							<span>{t("DASHBOARD.WALLET_CONTROLS.IMPORT")}</span>
 						</div>
 					</Button>

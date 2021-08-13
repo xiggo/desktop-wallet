@@ -41,7 +41,7 @@ exports[`PluginInfo should not show the view permissions button with text less t
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </div>
@@ -112,7 +112,7 @@ exports[`PluginInfo should open and close the plugin permissions modal 1`] = `
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </div>
@@ -238,7 +238,7 @@ exports[`PluginInfo should render properly 1`] = `
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </div>
@@ -299,7 +299,7 @@ exports[`PluginInfo should render with minimum version 1`] = `
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </div>
@@ -353,7 +353,7 @@ exports[`PluginInfo should render without permissions 1`] = `
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </div>

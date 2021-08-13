@@ -62,7 +62,7 @@ exports[`Signed Transaction Table should render pending transfers 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ exports[`Signed Transaction Table should render pending transfers 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -176,7 +176,7 @@ exports[`Signed Transaction Table should render pending transfers 1`] = `
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -266,7 +266,7 @@ exports[`Signed Transaction Table should render pending transfers 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-pending.svg
+                      clock.svg
                     </svg>
                   </div>
                 </span>
@@ -367,7 +367,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -439,7 +439,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -481,7 +481,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -582,7 +582,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     width="20"
                   >
                     <svg>
-                      awaiting-our-signature.svg
+                      pencil.svg
                     </svg>
                   </div>
                 </span>
@@ -679,7 +679,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -751,7 +751,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -793,7 +793,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -894,7 +894,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-pending.svg
+                      clock.svg
                     </svg>
                   </div>
                 </span>
@@ -934,7 +934,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                       width="16"
                     >
                       <svg>
-                        edit.svg
+                        pencil.svg
                       </svg>
                     </div>
                     <span>
@@ -1014,7 +1014,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -1086,7 +1086,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -1128,7 +1128,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -1229,7 +1229,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                     width="20"
                   >
                     <svg>
-                      awaiting-other-signature.svg
+                      clock-pencil.svg
                     </svg>
                   </div>
                 </span>
@@ -1326,7 +1326,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -1398,7 +1398,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -1440,7 +1440,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -1541,7 +1541,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                     width="20"
                   >
                     <svg>
-                      awaiting-our-signature.svg
+                      pencil.svg
                     </svg>
                   </div>
                 </span>
@@ -1581,7 +1581,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                       width="16"
                     >
                       <svg>
-                        edit.svg
+                        pencil.svg
                       </svg>
                     </div>
                     <span>
@@ -1661,7 +1661,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -1733,7 +1733,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -1775,7 +1775,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -1876,7 +1876,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                     width="20"
                   >
                     <svg>
-                      awaiting-final-signature.svg
+                      circle-check-mark-pencil.svg
                     </svg>
                   </div>
                 </span>
@@ -1916,7 +1916,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                       width="16"
                     >
                       <svg>
-                        edit.svg
+                        pencil.svg
                       </svg>
                     </div>
                     <span>
@@ -1996,7 +1996,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -2068,7 +2068,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -2110,7 +2110,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -2211,7 +2211,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                     width="16"
                   >
                     <svg>
-                      send.svg
+                      double-arrow-right.svg
                     </svg>
                   </div>
                 </span>
@@ -2251,7 +2251,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                       width="16"
                     >
                       <svg>
-                        edit.svg
+                        pencil.svg
                       </svg>
                     </div>
                     <span>
@@ -2331,7 +2331,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -2403,7 +2403,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -2445,7 +2445,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -2531,7 +2531,7 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-pending.svg
+                      clock.svg
                     </svg>
                   </div>
                 </span>
@@ -2632,7 +2632,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -2704,7 +2704,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -2746,7 +2746,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -2832,7 +2832,7 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-pending.svg
+                      clock.svg
                     </svg>
                   </div>
                 </span>
@@ -2933,7 +2933,7 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -3005,7 +3005,7 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -3047,7 +3047,7 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -3148,7 +3148,7 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
                     width="20"
                   >
                     <svg>
-                      awaiting-final-signature.svg
+                      circle-check-mark-pencil.svg
                     </svg>
                   </div>
                 </span>
@@ -3188,7 +3188,7 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
                       width="16"
                     >
                       <svg>
-                        edit.svg
+                        pencil.svg
                       </svg>
                     </div>
                     <span>
@@ -3268,7 +3268,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -3340,7 +3340,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -3382,7 +3382,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                     width="16"
                   >
                     <svg>
-                      id.svg
+                      magnifying-glass-id.svg
                     </svg>
                   </div>
                 </span>
@@ -3483,7 +3483,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                     width="20"
                   >
                     <svg>
-                      status-pending.svg
+                      clock.svg
                     </svg>
                   </div>
                 </span>
@@ -3523,7 +3523,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                       width="16"
                     >
                       <svg>
-                        edit.svg
+                        pencil.svg
                       </svg>
                     </div>
                     <span>

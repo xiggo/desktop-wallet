@@ -58,7 +58,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                       width="20"
                     >
                       <svg>
-                        alert-warning.svg
+                        circle-exclamation-mark.svg
                       </svg>
                     </div>
                   </span>
@@ -133,7 +133,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -400,7 +400,7 @@ exports[`Add Participant should fail to find 1`] = `
                       width="20"
                     >
                       <svg>
-                        alert-warning.svg
+                        circle-exclamation-mark.svg
                       </svg>
                     </div>
                   </span>
@@ -475,7 +475,7 @@ exports[`Add Participant should fail to find 1`] = `
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -742,7 +742,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                       width="20"
                     >
                       <svg>
-                        alert-warning.svg
+                        circle-exclamation-mark.svg
                       </svg>
                     </div>
                   </span>
@@ -833,7 +833,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -1141,7 +1141,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                       width="20"
                     >
                       <svg>
-                        alert-warning.svg
+                        circle-exclamation-mark.svg
                       </svg>
                     </div>
                   </span>
@@ -1216,7 +1216,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>

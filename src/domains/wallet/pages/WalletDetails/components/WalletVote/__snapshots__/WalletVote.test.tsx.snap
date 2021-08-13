@@ -65,14 +65,16 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>
@@ -179,14 +181,16 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>
@@ -391,14 +395,16 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>
@@ -500,14 +506,16 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>
@@ -619,14 +627,16 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>
@@ -739,7 +749,7 @@ exports[`WalletVote should handle delegate sync error 1`] = `
               width="16"
             >
               <svg>
-                redirect.svg
+                arrow-external.svg
               </svg>
             </div>
           </a>
@@ -839,7 +849,7 @@ exports[`WalletVote should handle wallet votes error 1`] = `
               width="16"
             >
               <svg>
-                redirect.svg
+                arrow-external.svg
               </svg>
             </div>
           </a>
@@ -930,14 +940,16 @@ exports[`WalletVote should render 1`] = `
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>
@@ -1032,14 +1044,16 @@ exports[`WalletVote should render disabled vote button 1`] = `
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>
@@ -1144,7 +1158,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
               width="16"
             >
               <svg>
-                redirect.svg
+                arrow-external.svg
               </svg>
             </div>
           </a>
@@ -1244,7 +1258,7 @@ exports[`WalletVote should render without votes 1`] = `
               width="16"
             >
               <svg>
-                redirect.svg
+                arrow-external.svg
               </svg>
             </div>
           </a>
@@ -1335,14 +1349,16 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>
@@ -1437,14 +1453,16 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
       <div
         class="flex justify-end items-center space-x-2"
       >
-        <span>
+        <span
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+        >
           <div
-            class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
-            height="20"
-            width="20"
+            class="sc-bdnxRM AkeAK text-theme-primary-200 dark:text-theme-secondary-200"
+            height="10"
+            width="10"
           >
             <svg>
-              information-circle.svg
+              hint-small.svg
             </svg>
           </div>
         </span>

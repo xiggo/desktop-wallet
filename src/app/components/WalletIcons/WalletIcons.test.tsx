@@ -18,7 +18,7 @@ describe("WalletIcons", () => {
 		render(<WalletIcons wallet={wallet} />);
 
 		expect(screen.getByTestId("WalletIcon__Verified")).toBeTruthy();
-		expect(screen.getByTestId("WalletIcon__Verified")).toHaveTextContent("verified.svg");
+		expect(screen.getByTestId("WalletIcon__Verified")).toHaveTextContent("user-check-mark.svg");
 
 		walletSpy.mockRestore();
 	});
@@ -40,7 +40,7 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__Key")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__SecondSignature")).toBeTruthy();
 
 		walletSpy.mockRestore();
 		hasSyncedWithNetworkSpy.mockRestore();
@@ -51,8 +51,8 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__Star")).toBeTruthy();
-		expect(screen.getByTestId("WalletIcon__Star")).toHaveTextContent("star.svg");
+		expect(screen.getByTestId("WalletIcon__Starred")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__Starred")).toHaveTextContent("star-filled.svg");
 
 		walletSpy.mockRestore();
 	});
@@ -63,8 +63,8 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__Multisig")).toBeTruthy();
-		expect(screen.getByTestId("WalletIcon__Multisig")).toHaveTextContent("multisignature.svg");
+		expect(screen.getByTestId("WalletIcon__Multisignature")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__Multisignature")).toHaveTextContent("multisignature.svg");
 
 		hasSyncedWithNetworkSpy.mockRestore();
 		isMultiSignatureSpy.mockRestore();
@@ -75,8 +75,8 @@ describe("WalletIcons", () => {
 
 		const { container } = render(<WalletIcons wallet={wallet} exclude={["isStarred"]} />);
 
-		expect(screen.queryByTestId("WalletIcon__Star")).not.toBeInTheDocument();
-		expect(container).not.toHaveTextContent("star.svg");
+		expect(screen.queryByTestId("WalletIcon__Starred")).not.toBeInTheDocument();
+		expect(container).not.toHaveTextContent("star-filled.svg");
 
 		walletSpy.mockRestore();
 	});

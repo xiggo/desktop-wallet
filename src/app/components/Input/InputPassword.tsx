@@ -24,7 +24,7 @@ export const InputPassword = React.forwardRef<HTMLInputElement, InputPasswordPro
 							className="flex relative justify-center items-center w-full h-full text-2xl focus:outline-none ring-focus"
 							data-ring-focus-margin="-m-1"
 						>
-							<Icon name={show ? "EyeOff" : "Eye"} />
+							<Icon name={show ? "EyeSlash" : "Eye"} size="lg" />
 						</button>
 					),
 				},

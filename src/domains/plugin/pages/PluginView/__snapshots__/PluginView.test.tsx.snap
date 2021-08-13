@@ -21,7 +21,7 @@ exports[`Plugin View should render error boundary with error message 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -121,7 +121,7 @@ exports[`Plugin View should render error boundary with error message 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -160,7 +160,7 @@ exports[`Plugin View should render error boundary with error message 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -357,7 +357,7 @@ exports[`Plugin View should render error boundary with error stack 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -457,7 +457,7 @@ exports[`Plugin View should render error boundary with error stack 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -496,7 +496,7 @@ exports[`Plugin View should render error boundary with error stack 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -693,7 +693,7 @@ exports[`Plugin View should render plugin content 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -793,7 +793,7 @@ exports[`Plugin View should render plugin content 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -832,7 +832,7 @@ exports[`Plugin View should render plugin content 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>

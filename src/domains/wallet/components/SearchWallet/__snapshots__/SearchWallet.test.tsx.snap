@@ -31,7 +31,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -93,7 +93,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -123,7 +123,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -162,7 +162,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>
@@ -408,7 +408,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -470,7 +470,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -500,7 +500,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -539,7 +539,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>
@@ -785,7 +785,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -847,7 +847,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -877,7 +877,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -916,7 +916,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>
@@ -1162,7 +1162,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -1224,7 +1224,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -1254,7 +1254,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -1284,7 +1284,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -1323,7 +1323,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>
@@ -1591,7 +1591,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -1653,7 +1653,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -1683,7 +1683,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -1713,7 +1713,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -1752,7 +1752,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>
@@ -2020,7 +2020,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -2082,7 +2082,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -2112,7 +2112,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -2142,7 +2142,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -2181,7 +2181,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>

@@ -210,6 +210,10 @@ describe("Add Participant", () => {
 			},
 		});
 
+		await waitFor(() =>
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(walletFixture.data.address),
+		);
+
 		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));

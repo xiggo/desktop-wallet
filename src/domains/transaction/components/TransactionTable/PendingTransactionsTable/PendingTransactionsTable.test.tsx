@@ -330,7 +330,7 @@ describe("Signed Transaction Table", () => {
 		const { asFragment } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(screen.getAllByText("awaiting-our-signature.svg").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByText("pencil.svg").length).toBeGreaterThan(0));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -343,7 +343,7 @@ describe("Signed Transaction Table", () => {
 		const { asFragment } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(screen.getByText("status-pending.svg")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText("clock.svg")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -357,7 +357,7 @@ describe("Signed Transaction Table", () => {
 		const { asFragment } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(screen.getByText("awaiting-our-signature.svg")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getAllByText("pencil.svg")).toHaveLength(2));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -410,7 +410,7 @@ describe("Signed Transaction Table", () => {
 		const { asFragment } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(screen.getByText("awaiting-other-signature.svg")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText("clock-pencil.svg")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -432,7 +432,7 @@ describe("Signed Transaction Table", () => {
 		const { asFragment } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(screen.getByText("awaiting-final-signature.svg")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText("circle-check-mark-pencil.svg")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 

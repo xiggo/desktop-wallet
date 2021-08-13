@@ -19,7 +19,7 @@ describe("TransactionConfirmations", () => {
 
 		expect(container).toHaveTextContent(transactionTranslations.WELL_CONFIRMED);
 		expect(container).not.toHaveTextContent(transactionTranslations.NOT_CONFIRMED);
-		expect(container).toHaveTextContent("status-ok.svg");
+		expect(container).toHaveTextContent("circle-check-mark.svg");
 
 		expect(container).toMatchSnapshot();
 	});
@@ -37,7 +37,7 @@ describe("TransactionConfirmations", () => {
 
 		expect(container).not.toHaveTextContent(transactionTranslations.WELL_CONFIRMED);
 		expect(container).toHaveTextContent(transactionTranslations.NOT_CONFIRMED);
-		expect(container).toHaveTextContent("status-pending.svg");
+		expect(container).toHaveTextContent("clock.svg");
 
 		expect(container).toMatchSnapshot();
 	});

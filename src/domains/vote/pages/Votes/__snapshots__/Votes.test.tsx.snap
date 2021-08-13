@@ -25,7 +25,7 @@ exports[`Votes should filter current delegates 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -124,7 +124,7 @@ exports[`Votes should filter current delegates 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -163,7 +163,7 @@ exports[`Votes should filter current delegates 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -316,7 +316,7 @@ exports[`Votes should filter current delegates 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -357,7 +357,7 @@ exports[`Votes should filter current delegates 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -467,7 +467,7 @@ exports[`Votes should filter current delegates 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -556,7 +556,7 @@ exports[`Votes should filter current delegates 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -784,7 +784,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -883,7 +883,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -922,7 +922,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -1075,7 +1075,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -1109,7 +1109,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -1174,7 +1174,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -1263,7 +1263,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -1344,7 +1344,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -1425,7 +1425,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -1657,7 +1657,7 @@ exports[`Votes should render 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -1756,7 +1756,7 @@ exports[`Votes should render 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -1795,7 +1795,7 @@ exports[`Votes should render 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -1948,7 +1948,7 @@ exports[`Votes should render 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -1982,7 +1982,7 @@ exports[`Votes should render 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -2047,7 +2047,7 @@ exports[`Votes should render 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -2136,7 +2136,7 @@ exports[`Votes should render 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -2217,7 +2217,7 @@ exports[`Votes should render 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -2298,7 +2298,7 @@ exports[`Votes should render 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -2526,7 +2526,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -2625,7 +2625,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -2664,7 +2664,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -2817,7 +2817,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -2851,7 +2851,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -2916,7 +2916,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -3005,7 +3005,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -3086,7 +3086,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -3167,7 +3167,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -3395,7 +3395,7 @@ exports[`Votes should render with no wallets 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -3494,7 +3494,7 @@ exports[`Votes should render with no wallets 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                       </div>
@@ -3527,7 +3527,7 @@ exports[`Votes should render with no wallets 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -3726,7 +3726,7 @@ exports[`Votes should render with no wallets 1`] = `
                           width="16"
                         >
                           <svg>
-                            import.svg
+                            arrow-turn-down-bracket.svg
                           </svg>
                         </div>
                         <span>
@@ -3767,7 +3767,7 @@ exports[`Votes should select a delegate 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -3866,7 +3866,7 @@ exports[`Votes should select a delegate 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -3905,7 +3905,7 @@ exports[`Votes should select a delegate 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -4058,7 +4058,7 @@ exports[`Votes should select a delegate 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -4092,7 +4092,7 @@ exports[`Votes should select a delegate 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -4157,7 +4157,7 @@ exports[`Votes should select a delegate 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -4246,7 +4246,7 @@ exports[`Votes should select a delegate 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -4327,7 +4327,7 @@ exports[`Votes should select a delegate 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -4408,7 +4408,7 @@ exports[`Votes should select a delegate 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -4637,7 +4637,7 @@ exports[`Votes should select an address without vote 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -4736,7 +4736,7 @@ exports[`Votes should select an address without vote 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -4775,7 +4775,7 @@ exports[`Votes should select an address without vote 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -4928,7 +4928,7 @@ exports[`Votes should select an address without vote 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -4962,7 +4962,7 @@ exports[`Votes should select an address without vote 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -5027,7 +5027,7 @@ exports[`Votes should select an address without vote 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -5116,7 +5116,7 @@ exports[`Votes should select an address without vote 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -5197,7 +5197,7 @@ exports[`Votes should select an address without vote 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -5278,7 +5278,7 @@ exports[`Votes should select an address without vote 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -5506,7 +5506,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -5605,7 +5605,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -5644,7 +5644,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -5797,7 +5797,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -5838,7 +5838,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -5912,7 +5912,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                                           width="10"
                                         >
                                           <svg>
-                                            checkmark.svg
+                                            check-mark-small.svg
                                           </svg>
                                         </div>
                                         <span />
@@ -5957,7 +5957,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                                         width="10"
                                       >
                                         <svg>
-                                          chevron-down.svg
+                                          chevron-down-small.svg
                                         </svg>
                                       </div>
                                     </div>
@@ -6035,7 +6035,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -6134,7 +6134,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -6173,7 +6173,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -6326,7 +6326,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -6367,7 +6367,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -6441,7 +6441,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                                           width="10"
                                         >
                                           <svg>
-                                            checkmark.svg
+                                            check-mark-small.svg
                                           </svg>
                                         </div>
                                         <span />
@@ -6486,7 +6486,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                                         width="10"
                                       >
                                         <svg>
-                                          chevron-down.svg
+                                          chevron-down-small.svg
                                         </svg>
                                       </div>
                                     </div>
@@ -6564,7 +6564,7 @@ exports[`Votes should show network warning 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -6663,7 +6663,7 @@ exports[`Votes should show network warning 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -6702,7 +6702,7 @@ exports[`Votes should show network warning 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -6855,7 +6855,7 @@ exports[`Votes should show network warning 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -6889,7 +6889,7 @@ exports[`Votes should show network warning 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -6954,7 +6954,7 @@ exports[`Votes should show network warning 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -7043,7 +7043,7 @@ exports[`Votes should show network warning 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -7124,7 +7124,7 @@ exports[`Votes should show network warning 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -7205,7 +7205,7 @@ exports[`Votes should show network warning 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -7432,7 +7432,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -7531,7 +7531,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -7570,7 +7570,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -7723,7 +7723,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -7757,7 +7757,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -7797,7 +7797,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                   width="20"
                 >
                   <svg>
-                    alert-warning.svg
+                    circle-exclamation-mark.svg
                   </svg>
                 </div>
               </div>
@@ -7856,7 +7856,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -7945,7 +7945,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -8026,7 +8026,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -8107,7 +8107,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </span>
@@ -8337,7 +8337,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -8436,7 +8436,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -8475,7 +8475,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -8628,7 +8628,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                           width="20"
                         >
                           <svg>
-                            search.svg
+                            magnifying-glass.svg
                           </svg>
                         </div>
                       </div>
@@ -8662,7 +8662,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                               width="20"
                             >
                               <svg>
-                                filters.svg
+                                sliders-vertical.svg
                               </svg>
                             </div>
                           </div>
@@ -8736,7 +8736,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                                           width="10"
                                         >
                                           <svg>
-                                            checkmark.svg
+                                            check-mark-small.svg
                                           </svg>
                                         </div>
                                         <span />
@@ -8781,7 +8781,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                                         width="10"
                                       >
                                         <svg>
-                                          chevron-down.svg
+                                          chevron-down-small.svg
                                         </svg>
                                       </div>
                                     </div>
@@ -8885,7 +8885,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>
@@ -8929,7 +8929,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                             width="10"
                           >
                             <svg>
-                              chevron-down.svg
+                              chevron-down-small.svg
                             </svg>
                           </div>
                         </div>

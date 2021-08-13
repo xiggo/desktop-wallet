@@ -115,7 +115,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 		key: "secondary",
 		options: [
 			{
-				icon: "OpenExplorer",
+				icon: "GlobePointer",
 				iconPosition: "start",
 				label: t("COMMON.OPEN_IN_EXPLORER"),
 				value: "open-explorer",

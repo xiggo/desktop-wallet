@@ -14,11 +14,11 @@ interface AlertProperties {
 
 const AlertIcon = ({ variant }: { variant: string }) => {
 	const iconVariant: Record<string, string> = {
-		danger: "AlertDanger",
-		hint: "AlertHint",
-		info: "AlertInfo",
-		success: "AlertSuccess",
-		warning: "AlertWarning",
+		danger: "CircleCross",
+		hint: "CircleQuestionMark",
+		info: "CircleInfo",
+		success: "CircleCheckMark",
+		warning: "CircleExclamationMark",
 	};
 
 	return <Icon name={iconVariant[variant]} size="lg" />;

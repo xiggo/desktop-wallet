@@ -39,7 +39,7 @@ exports[`Import Profile Select File Step should change back from json to dwe 1`]
           width="40"
         >
           <svg>
-            json-file.svg
+            extension-json.svg
           </svg>
         </div>
         <div
@@ -83,7 +83,7 @@ exports[`Import Profile Select File Step should change back from json to dwe 1`]
             width="20"
           >
             <svg>
-              alert-warning.svg
+              circle-exclamation-mark.svg
             </svg>
           </div>
         </div>
@@ -156,7 +156,7 @@ exports[`Import Profile Select File Step should handle back event 1`] = `
           width="40"
         >
           <svg>
-            dwe-file.svg
+            extension-dwe.svg
           </svg>
         </div>
         <div
@@ -260,7 +260,7 @@ exports[`Import Profile Select File Step should render file selection for dwe an
           width="40"
         >
           <svg>
-            dwe-file.svg
+            extension-dwe.svg
           </svg>
         </div>
         <div
@@ -364,7 +364,7 @@ exports[`Import Profile Select File Step should render with dwe fileFormat selec
           width="40"
         >
           <svg>
-            dwe-file.svg
+            extension-dwe.svg
           </svg>
         </div>
         <div
@@ -468,7 +468,7 @@ exports[`Import Profile Select File Step should render with json fileFormat sele
           width="40"
         >
           <svg>
-            json-file.svg
+            extension-json.svg
           </svg>
         </div>
         <div
@@ -512,7 +512,7 @@ exports[`Import Profile Select File Step should render with json fileFormat sele
             width="20"
           >
             <svg>
-              alert-warning.svg
+              circle-exclamation-mark.svg
             </svg>
           </div>
         </div>

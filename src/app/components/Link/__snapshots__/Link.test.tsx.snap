@@ -20,7 +20,7 @@ exports[`Link should open an external link 1`] = `
       width="16"
     >
       <svg>
-        redirect.svg
+        arrow-external.svg
       </svg>
     </div>
   </a>
@@ -64,7 +64,7 @@ exports[`Link should render external without children 1`] = `
       width="16"
     >
       <svg>
-        redirect.svg
+        arrow-external.svg
       </svg>
     </div>
   </a>
@@ -108,7 +108,7 @@ exports[`Link should show a toast when trying to open an invalid external link 1
       width="16"
     >
       <svg>
-        redirect.svg
+        arrow-external.svg
       </svg>
     </div>
   </a>

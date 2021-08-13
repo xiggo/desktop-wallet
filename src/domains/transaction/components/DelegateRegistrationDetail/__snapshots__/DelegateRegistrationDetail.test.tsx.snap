@@ -33,7 +33,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -134,7 +134,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                   width="20"
                 >
                   <svg>
-                    delegate.svg
+                    delegate-registration.svg
                   </svg>
                 </div>
               </div>
@@ -208,7 +208,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                       width="20"
                     >
                       <svg>
-                        status-pending.svg
+                        clock.svg
                       </svg>
                     </div>
                   </div>
@@ -260,7 +260,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                           width="16"
                         >
                           <svg>
-                            redirect.svg
+                            arrow-external.svg
                           </svg>
                         </div>
                       </a>
@@ -328,7 +328,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -429,7 +429,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                   width="20"
                 >
                   <svg>
-                    delegate.svg
+                    delegate-registration.svg
                   </svg>
                 </div>
               </div>
@@ -504,7 +504,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                         width="20"
                       >
                         <svg>
-                          status-ok.svg
+                          circle-check-mark.svg
                         </svg>
                       </div>
                     </span>
@@ -557,7 +557,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                           width="16"
                         >
                           <svg>
-                            redirect.svg
+                            arrow-external.svg
                           </svg>
                         </div>
                       </a>

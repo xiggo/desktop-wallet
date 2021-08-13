@@ -33,7 +33,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -100,7 +100,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                     width="20"
                   >
                     <svg>
-                      delegate.svg
+                      delegate-registration.svg
                     </svg>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                       width="20"
                     >
                       <svg>
-                        status-pending.svg
+                        clock.svg
                       </svg>
                     </div>
                   </div>
@@ -241,7 +241,7 @@ exports[`LegacyMagistrateDetail should render a legacy magistrate modal 1`] = `
                           width="16"
                         >
                           <svg>
-                            redirect.svg
+                            arrow-external.svg
                           </svg>
                         </div>
                       </a>

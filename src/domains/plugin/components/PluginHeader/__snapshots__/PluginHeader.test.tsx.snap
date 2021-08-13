@@ -67,7 +67,7 @@ exports[`PluginHeader should render properly 1`] = `
                   width="20"
                 >
                   <svg>
-                    report.svg
+                    circle-exclamation-mark.svg
                   </svg>
                 </div>
               </div>
@@ -160,7 +160,7 @@ exports[`PluginHeader should render properly 1`] = `
                       width="16"
                     >
                       <svg>
-                        redirect.svg
+                        arrow-external.svg
                       </svg>
                     </div>
                   </a>
@@ -357,7 +357,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
                   width="20"
                 >
                   <svg>
-                    report.svg
+                    circle-exclamation-mark.svg
                   </svg>
                 </div>
               </div>
@@ -450,7 +450,7 @@ exports[`PluginHeader should render updating plugin 1`] = `
                       width="16"
                     >
                       <svg>
-                        redirect.svg
+                        arrow-external.svg
                       </svg>
                     </div>
                   </a>

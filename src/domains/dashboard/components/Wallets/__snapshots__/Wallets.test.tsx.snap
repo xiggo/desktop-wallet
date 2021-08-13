@@ -43,7 +43,7 @@ exports[`Wallets should load more wallets 1`] = `
                         width="20"
                       >
                         <svg>
-                          list-view.svg
+                          list.svg
                         </svg>
                       </div>
                     </button>
@@ -65,7 +65,7 @@ exports[`Wallets should load more wallets 1`] = `
                         width="20"
                       >
                         <svg>
-                          grid-view.svg
+                          grid.svg
                         </svg>
                       </div>
                     </button>
@@ -98,7 +98,7 @@ exports[`Wallets should load more wallets 1`] = `
                             width="20"
                           >
                             <svg>
-                              filters.svg
+                              sliders-vertical.svg
                             </svg>
                           </div>
                         </div>
@@ -154,7 +154,7 @@ exports[`Wallets should load more wallets 1`] = `
                       width="16"
                     >
                       <svg>
-                        import.svg
+                        arrow-turn-down-bracket.svg
                       </svg>
                     </div>
                     <span>
@@ -236,7 +236,7 @@ exports[`Wallets should load more wallets 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -280,7 +280,7 @@ exports[`Wallets should load more wallets 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -310,7 +310,7 @@ exports[`Wallets should load more wallets 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -488,7 +488,7 @@ exports[`Wallets should load more wallets 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -496,7 +496,7 @@ exports[`Wallets should load more wallets 1`] = `
                             width="20"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -596,7 +596,7 @@ exports[`Wallets should load more wallets 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -604,7 +604,7 @@ exports[`Wallets should load more wallets 1`] = `
                             width="20"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -687,7 +687,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                         width="20"
                       >
                         <svg>
-                          list-view.svg
+                          list.svg
                         </svg>
                       </div>
                     </button>
@@ -709,7 +709,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                         width="20"
                       >
                         <svg>
-                          grid-view.svg
+                          grid.svg
                         </svg>
                       </div>
                     </button>
@@ -742,7 +742,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                             width="20"
                           >
                             <svg>
-                              filters.svg
+                              sliders-vertical.svg
                             </svg>
                           </div>
                         </div>
@@ -798,7 +798,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       width="16"
                     >
                       <svg>
-                        import.svg
+                        arrow-turn-down-bracket.svg
                       </svg>
                     </div>
                     <span>
@@ -880,7 +880,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -924,7 +924,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -954,7 +954,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -1132,7 +1132,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -1140,7 +1140,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                             width="20"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -1240,7 +1240,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -1248,7 +1248,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                             width="20"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -1312,7 +1312,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                     width="16"
                   >
                     <svg>
-                      cross-slim.svg
+                      cross.svg
                     </svg>
                   </div>
                 </div>
@@ -1420,7 +1420,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                         width="20"
                       >
                         <svg>
-                          list-view.svg
+                          list.svg
                         </svg>
                       </div>
                     </button>
@@ -1442,7 +1442,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                         width="20"
                       >
                         <svg>
-                          grid-view.svg
+                          grid.svg
                         </svg>
                       </div>
                     </button>
@@ -1476,7 +1476,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                             width="20"
                           >
                             <svg>
-                              filters.svg
+                              sliders-vertical.svg
                             </svg>
                           </div>
                         </div>
@@ -1532,7 +1532,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                       width="16"
                     >
                       <svg>
-                        import.svg
+                        arrow-turn-down-bracket.svg
                       </svg>
                     </div>
                     <span>
@@ -1631,7 +1631,7 @@ exports[`Wallets should render grid 1`] = `
                         width="20"
                       >
                         <svg>
-                          list-view.svg
+                          list.svg
                         </svg>
                       </div>
                     </button>
@@ -1653,7 +1653,7 @@ exports[`Wallets should render grid 1`] = `
                         width="20"
                       >
                         <svg>
-                          grid-view.svg
+                          grid.svg
                         </svg>
                       </div>
                     </button>
@@ -1686,7 +1686,7 @@ exports[`Wallets should render grid 1`] = `
                             width="20"
                           >
                             <svg>
-                              filters.svg
+                              sliders-vertical.svg
                             </svg>
                           </div>
                         </div>
@@ -1742,7 +1742,7 @@ exports[`Wallets should render grid 1`] = `
                       width="16"
                     >
                       <svg>
-                        import.svg
+                        arrow-turn-down-bracket.svg
                       </svg>
                     </div>
                     <span>
@@ -1956,7 +1956,7 @@ exports[`Wallets should render grid 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM AFVmm"
@@ -1964,7 +1964,7 @@ exports[`Wallets should render grid 1`] = `
                             width="16"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -2052,7 +2052,7 @@ exports[`Wallets should render grid 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM AFVmm"
@@ -2060,7 +2060,7 @@ exports[`Wallets should render grid 1`] = `
                             width="16"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -2121,7 +2121,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                         width="20"
                       >
                         <svg>
-                          list-view.svg
+                          list.svg
                         </svg>
                       </div>
                     </button>
@@ -2143,7 +2143,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                         width="20"
                       >
                         <svg>
-                          grid-view.svg
+                          grid.svg
                         </svg>
                       </div>
                     </button>
@@ -2176,7 +2176,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                             width="20"
                           >
                             <svg>
-                              filters.svg
+                              sliders-vertical.svg
                             </svg>
                           </div>
                         </div>
@@ -2232,7 +2232,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                       width="16"
                     >
                       <svg>
-                        import.svg
+                        arrow-turn-down-bracket.svg
                       </svg>
                     </div>
                     <span>
@@ -2446,7 +2446,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM AFVmm"
@@ -2454,7 +2454,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                             width="16"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -2542,7 +2542,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM AFVmm"
@@ -2550,7 +2550,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                             width="16"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -2611,7 +2611,7 @@ exports[`Wallets should render list 1`] = `
                         width="20"
                       >
                         <svg>
-                          list-view.svg
+                          list.svg
                         </svg>
                       </div>
                     </button>
@@ -2633,7 +2633,7 @@ exports[`Wallets should render list 1`] = `
                         width="20"
                       >
                         <svg>
-                          grid-view.svg
+                          grid.svg
                         </svg>
                       </div>
                     </button>
@@ -2666,7 +2666,7 @@ exports[`Wallets should render list 1`] = `
                             width="20"
                           >
                             <svg>
-                              filters.svg
+                              sliders-vertical.svg
                             </svg>
                           </div>
                         </div>
@@ -2722,7 +2722,7 @@ exports[`Wallets should render list 1`] = `
                       width="16"
                     >
                       <svg>
-                        import.svg
+                        arrow-turn-down-bracket.svg
                       </svg>
                     </div>
                     <span>
@@ -2804,7 +2804,7 @@ exports[`Wallets should render list 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -2848,7 +2848,7 @@ exports[`Wallets should render list 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -2878,7 +2878,7 @@ exports[`Wallets should render list 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -3056,7 +3056,7 @@ exports[`Wallets should render list 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -3064,7 +3064,7 @@ exports[`Wallets should render list 1`] = `
                             width="20"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -3164,7 +3164,7 @@ exports[`Wallets should render list 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -3172,7 +3172,7 @@ exports[`Wallets should render list 1`] = `
                             width="20"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -3255,7 +3255,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                         width="20"
                       >
                         <svg>
-                          list-view.svg
+                          list.svg
                         </svg>
                       </div>
                     </button>
@@ -3277,7 +3277,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                         width="20"
                       >
                         <svg>
-                          grid-view.svg
+                          grid.svg
                         </svg>
                       </div>
                     </button>
@@ -3310,7 +3310,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                             width="20"
                           >
                             <svg>
-                              filters.svg
+                              sliders-vertical.svg
                             </svg>
                           </div>
                         </div>
@@ -3366,7 +3366,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                       width="16"
                     >
                       <svg>
-                        import.svg
+                        arrow-turn-down-bracket.svg
                       </svg>
                     </div>
                     <span>
@@ -3499,7 +3499,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM AFVmm"
@@ -3507,7 +3507,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                             width="16"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -3664,7 +3664,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                         width="20"
                       >
                         <svg>
-                          list-view.svg
+                          list.svg
                         </svg>
                       </div>
                     </button>
@@ -3686,7 +3686,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                         width="20"
                       >
                         <svg>
-                          grid-view.svg
+                          grid.svg
                         </svg>
                       </div>
                     </button>
@@ -3719,7 +3719,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                             width="20"
                           >
                             <svg>
-                              filters.svg
+                              sliders-vertical.svg
                             </svg>
                           </div>
                         </div>
@@ -3775,7 +3775,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                       width="16"
                     >
                       <svg>
-                        import.svg
+                        arrow-turn-down-bracket.svg
                       </svg>
                     </div>
                     <span>
@@ -3989,7 +3989,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM AFVmm"
@@ -3997,7 +3997,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                             width="16"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>
@@ -4085,7 +4085,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM AFVmm"
@@ -4093,7 +4093,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                             width="16"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>

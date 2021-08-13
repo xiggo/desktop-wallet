@@ -33,7 +33,7 @@ exports[`TransactionMemo should render 1`] = `
         width="20"
       >
         <svg>
-          memo.svg
+          file-lines.svg
         </svg>
       </div>
     </div>

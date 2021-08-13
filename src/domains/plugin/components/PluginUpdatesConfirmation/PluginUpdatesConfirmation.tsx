@@ -4,7 +4,7 @@ import { Image } from "app/components/Image";
 import { Modal } from "app/components/Modal";
 import { Table, TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
-import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
+import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
 import { ExtendedSerializedPluginConfigurationData } from "plugins/types";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -20,8 +20,6 @@ interface Properties {
 
 export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue }: Properties) => {
 	const { t } = useTranslation();
-
-	const { renderPluginIcon } = usePluginIcon();
 
 	const columns = [
 		{
@@ -56,7 +54,7 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 			return (
 				<Tooltip content={t("PLUGINS.STATUS.COMPATIBLE")}>
 					<div data-testid="PluginUpdates__compatible" className="mx-auto text-2xl text-theme-success-500">
-						<Icon name="StatusOk" size="lg" />
+						<Icon name="CircleCheckMark" size="lg" />
 					</div>
 				</Tooltip>
 			);
@@ -65,7 +63,7 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 		return (
 			<Tooltip content={t("PLUGINS.STATUS.INCOMPATIBLE")}>
 				<div data-testid="PluginUpdates__incompatible" className="mx-auto text-2xl text-theme-danger-400">
-					<Icon name="StatusFailed" size="lg" />
+					<Icon name="CircleCross" size="lg" />
 				</div>
 			</Tooltip>
 		);
@@ -98,7 +96,7 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 										{pluginData.title}
 									</span>
 
-									{renderPluginIcon({ isOfficial: pluginData.isOfficial })}
+									{pluginData.isOfficial && <OfficialPluginIcon />}
 								</div>
 							</TableCell>
 

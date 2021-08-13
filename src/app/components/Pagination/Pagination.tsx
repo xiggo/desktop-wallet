@@ -78,7 +78,7 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage = 1))}
 				>
-					<Icon name="PaginationFirst" size="sm" />
+					<Icon name="DoubleChevronLeftSmall" size="sm" />
 				</Button>
 			)}
 
@@ -88,7 +88,7 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage -= 1))}
 				>
-					<Icon name="Back" className="mr-2" size="sm" />
+					<Icon name="ChevronLeftSmall" className="mr-2" size="sm" />
 					{t("COMMON.PREVIOUS")}
 				</Button>
 			)}
@@ -138,7 +138,7 @@ const Pagination = ({
 					onClick={() => onSelectPage((currentPage += 1))}
 				>
 					{t("COMMON.NEXT")}
-					<Icon name="Forward" className="ml-2" size="sm" />
+					<Icon name="ChevronRightSmall" className="ml-2" size="sm" />
 				</Button>
 			)}
 
@@ -148,7 +148,7 @@ const Pagination = ({
 					variant="secondary"
 					onClick={() => onSelectPage((currentPage = totalPages))}
 				>
-					<Icon name="PaginationLast" size="sm" />
+					<Icon name="DoubleChevronRightSmall" size="sm" />
 				</Button>
 			)}
 		</Wrapper>

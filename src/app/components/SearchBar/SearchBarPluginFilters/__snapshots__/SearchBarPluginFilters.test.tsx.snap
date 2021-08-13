@@ -21,7 +21,7 @@ exports[`SearchBarPluginFilters should render 1`] = `
             width="20"
           >
             <svg>
-              filters.svg
+              sliders-vertical.svg
             </svg>
           </div>
         </div>
@@ -52,7 +52,7 @@ exports[`SearchBarPluginFilters should render categories 1`] = `
             width="20"
           >
             <svg>
-              filters.svg
+              sliders-vertical.svg
             </svg>
           </div>
         </div>
@@ -104,7 +104,7 @@ exports[`SearchBarPluginFilters should render categories 1`] = `
                 width="16"
               >
                 <svg>
-                  reset.svg
+                  arrow-rotate-right.svg
                 </svg>
               </div>
               <span
@@ -142,7 +142,7 @@ exports[`SearchBarPluginFilters should render default categories 1`] = `
             width="20"
           >
             <svg>
-              filters.svg
+              sliders-vertical.svg
             </svg>
           </div>
         </div>
@@ -248,7 +248,7 @@ exports[`SearchBarPluginFilters should render default categories 1`] = `
                 width="16"
               >
                 <svg>
-                  reset.svg
+                  arrow-rotate-right.svg
                 </svg>
               </div>
               <span
@@ -286,7 +286,7 @@ exports[`SearchBarPluginFilters should render with null initialValues 1`] = `
             width="20"
           >
             <svg>
-              filters.svg
+              sliders-vertical.svg
             </svg>
           </div>
         </div>
@@ -356,7 +356,7 @@ exports[`SearchBarPluginFilters should render with null initialValues 1`] = `
                 width="16"
               >
                 <svg>
-                  reset.svg
+                  arrow-rotate-right.svg
                 </svg>
               </div>
               <span
@@ -394,7 +394,7 @@ exports[`SearchBarPluginFilters should render with selected values 1`] = `
             width="20"
           >
             <svg>
-              filters.svg
+              sliders-vertical.svg
             </svg>
           </div>
         </div>
@@ -447,7 +447,7 @@ exports[`SearchBarPluginFilters should render with selected values 1`] = `
                 width="16"
               >
                 <svg>
-                  reset.svg
+                  arrow-rotate-right.svg
                 </svg>
               </div>
               <span

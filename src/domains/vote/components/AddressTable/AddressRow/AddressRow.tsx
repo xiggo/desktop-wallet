@@ -25,14 +25,11 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 
 	const getIconName = (type: string) => {
-		switch (type) {
-			case "Starred":
-				return "Star";
-			case "MultiSignature":
-				return "Multisig";
-			default:
-				return type;
+		if (type === "Starred") {
+			return "StarFilled";
 		}
+
+		return type;
 	};
 
 	const getIconColor = (type: string) => (type === "Starred" ? "text-theme-warning-400" : "text-theme-secondary-600");
@@ -87,7 +84,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 						wallet.isLedger() && <WalletIcon key="ledger" type="Ledger" />,
 						wallet.isStarred() && <WalletIcon key="star" type="Starred" />,
 						wallet.hasSyncedWithNetwork() && wallet.isMultiSignature() && (
-							<WalletIcon key="multisig" type="MultiSignature" />
+							<WalletIcon key="multisignature" type="Multisignature" />
 						),
 					]}
 				</div>
@@ -146,7 +143,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 					<TableCell innerClassName="justify-center">
 						{hasVotes && (
 							<Icon
-								name="StatusOk"
+								name="CircleCheckMark"
 								className="text-theme-success-600"
 								size="lg"
 								data-testid="AddressRow__status"

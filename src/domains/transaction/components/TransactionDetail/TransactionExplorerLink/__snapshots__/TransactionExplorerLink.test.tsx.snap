@@ -47,7 +47,7 @@ exports[`TransactionExplorerLink should render a transaction link 1`] = `
                 width="16"
               >
                 <svg>
-                  redirect.svg
+                  arrow-external.svg
                 </svg>
               </div>
             </a>

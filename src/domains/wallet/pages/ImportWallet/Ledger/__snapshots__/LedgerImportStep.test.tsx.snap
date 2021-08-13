@@ -140,7 +140,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                   width="16"
                 >
                   <svg>
-                    edit.svg
+                    pencil.svg
                   </svg>
                 </div>
               </div>
@@ -224,7 +224,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                   width="16"
                 >
                   <svg>
-                    edit.svg
+                    pencil.svg
                   </svg>
                 </div>
               </div>
@@ -395,7 +395,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
             width="16"
           >
             <svg>
-              edit.svg
+              pencil.svg
             </svg>
           </div>
         </div>

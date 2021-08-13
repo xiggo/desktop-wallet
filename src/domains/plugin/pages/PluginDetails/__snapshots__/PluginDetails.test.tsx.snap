@@ -24,7 +24,7 @@ exports[`PluginDetails should render properly 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -124,7 +124,7 @@ exports[`PluginDetails should render properly 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -163,7 +163,7 @@ exports[`PluginDetails should render properly 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -327,7 +327,7 @@ exports[`PluginDetails should render properly 1`] = `
                             width="20"
                           >
                             <svg>
-                              report.svg
+                              circle-exclamation-mark.svg
                             </svg>
                           </div>
                         </div>
@@ -355,7 +355,7 @@ exports[`PluginDetails should render properly 1`] = `
                                   width="20"
                                 >
                                   <svg>
-                                    settings.svg
+                                    ellipsis-vertical.svg
                                   </svg>
                                 </div>
                               </div>
@@ -528,7 +528,7 @@ exports[`PluginDetails should render properly 1`] = `
                   width="20"
                 >
                   <svg>
-                    alert-warning.svg
+                    circle-exclamation-mark.svg
                   </svg>
                 </div>
               </div>
@@ -580,7 +580,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -680,7 +680,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -719,7 +719,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -891,7 +891,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                           width="20"
                         >
                           <svg>
-                            report.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </div>
@@ -1060,7 +1060,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
                   width="20"
                 >
                   <svg>
-                    alert-warning.svg
+                    circle-exclamation-mark.svg
                   </svg>
                 </div>
               </div>
@@ -1112,7 +1112,7 @@ exports[`PluginDetails should report plugin 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -1212,7 +1212,7 @@ exports[`PluginDetails should report plugin 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -1251,7 +1251,7 @@ exports[`PluginDetails should report plugin 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -1415,7 +1415,7 @@ exports[`PluginDetails should report plugin 1`] = `
                             width="20"
                           >
                             <svg>
-                              report.svg
+                              circle-exclamation-mark.svg
                             </svg>
                           </div>
                         </div>
@@ -1443,7 +1443,7 @@ exports[`PluginDetails should report plugin 1`] = `
                                   width="20"
                                 >
                                   <svg>
-                                    settings.svg
+                                    ellipsis-vertical.svg
                                   </svg>
                                 </div>
                               </div>
@@ -1616,7 +1616,7 @@ exports[`PluginDetails should report plugin 1`] = `
                   width="20"
                 >
                   <svg>
-                    alert-warning.svg
+                    circle-exclamation-mark.svg
                   </svg>
                 </div>
               </div>
@@ -1668,7 +1668,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -1768,7 +1768,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -1807,7 +1807,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -1983,7 +1983,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                           width="20"
                         >
                           <svg>
-                            report.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </div>
@@ -2076,7 +2076,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                               width="16"
                             >
                               <svg>
-                                redirect.svg
+                                arrow-external.svg
                               </svg>
                             </div>
                           </a>
@@ -2238,7 +2238,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                   width="20"
                 >
                   <svg>
-                    alert-warning.svg
+                    circle-exclamation-mark.svg
                   </svg>
                 </div>
               </div>
@@ -2290,7 +2290,7 @@ exports[`PluginDetails should update package 1`] = `
             width="10"
           >
             <svg>
-              arrow-left.svg
+              chevron-left-small.svg
             </svg>
           </div>
         </button>
@@ -2390,7 +2390,7 @@ exports[`PluginDetails should update package 1`] = `
                           width="20"
                         >
                           <svg>
-                            notification.svg
+                            bell.svg
                           </svg>
                         </div>
                         <div
@@ -2429,7 +2429,7 @@ exports[`PluginDetails should update package 1`] = `
                       width="20"
                     >
                       <svg>
-                        send.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
                   </div>
@@ -2593,7 +2593,7 @@ exports[`PluginDetails should update package 1`] = `
                             width="20"
                           >
                             <svg>
-                              report.svg
+                              circle-exclamation-mark.svg
                             </svg>
                           </div>
                         </div>
@@ -2627,7 +2627,7 @@ exports[`PluginDetails should update package 1`] = `
                                   width="20"
                                 >
                                   <svg>
-                                    settings.svg
+                                    ellipsis-vertical.svg
                                   </svg>
                                 </div>
                               </div>
@@ -2800,7 +2800,7 @@ exports[`PluginDetails should update package 1`] = `
                   width="20"
                 >
                   <svg>
-                    alert-warning.svg
+                    circle-exclamation-mark.svg
                   </svg>
                 </div>
               </div>

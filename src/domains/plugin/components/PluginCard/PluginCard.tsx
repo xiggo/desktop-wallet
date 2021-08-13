@@ -3,7 +3,7 @@ import { DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
-import { usePluginIcon } from "domains/plugin/hooks/use-plugin-icon";
+import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -38,7 +38,7 @@ export const BlankPluginCard = ({ name, category }: { name?: string; category?: 
 
 					{category && (
 						<div className="flex items-center mt-4 space-x-2 text-theme-primary-100 dark:text-theme-secondary-800">
-							<Icon name="Category" size="lg" />
+							<Icon name="Categories" size="lg" />
 
 							<span className="text-sm font-semibold">
 								{t(`PLUGINS.CATEGORIES.${category.toUpperCase()}`)}
@@ -62,8 +62,6 @@ export const PluginCard = ({
 	showCategory,
 }: PluginCardProperties) => {
 	const { t } = useTranslation();
-
-	const { renderPluginIcon } = usePluginIcon();
 
 	if (plugin === undefined) {
 		return <BlankPluginCard category={category} />;
@@ -96,7 +94,7 @@ export const PluginCard = ({
 											data-testid="PluginCard__minimum-version-warning"
 											className="ml-3 text-xl"
 										>
-											<Icon name="AlertWarning" className="text-theme-warning-500" />
+											<Icon name="CircleExclamationMark" className="text-theme-warning-500" />
 										</span>
 									</Tooltip>
 								) : (
@@ -118,11 +116,7 @@ export const PluginCard = ({
 												handleUpdate();
 											}}
 										>
-											<Icon
-												className={cn({ "animate-spin": isUpdating })}
-												name="Update"
-												size="lg"
-											/>
+											<Icon className={cn({ "animate-spin": isUpdating })} name="ArrowsRotate" />
 										</span>
 									</Tooltip>
 								)}
@@ -149,12 +143,12 @@ export const PluginCard = ({
 						<div className="flex items-center mt-1 space-x-2 text-lg font-bold truncate text-theme-primary-600 dark:text-theme-secondary-200">
 							<div className="truncate">{plugin.title}</div>
 
-							{renderPluginIcon({ isOfficial: plugin.isOfficial })}
+							{plugin.isOfficial && <OfficialPluginIcon />}
 						</div>
 
 						{showCategory && (
 							<div className="flex items-center mt-4 space-x-2 dark:text-theme-secondary-600">
-								<Icon name="Category" size="lg" />
+								<Icon name="Categories" size="lg" />
 
 								<span className="text-sm font-semibold">
 									{t(`PLUGINS.CATEGORIES.${plugin.category.toUpperCase()}`)}

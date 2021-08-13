@@ -134,7 +134,7 @@ exports[`SuccessStep should render 4th step 1`] = `
             width="16"
           >
             <svg>
-              edit.svg
+              pencil.svg
             </svg>
           </div>
         </div>

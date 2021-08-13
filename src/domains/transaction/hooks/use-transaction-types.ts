@@ -88,15 +88,15 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 	const { t } = useTranslation();
 
 	const transactionTypeIcons: Record<string, string> = {
-		delegateRegistration: "Delegate",
-		delegateResignation: "DelegateResigned",
+		delegateRegistration: "DelegateRegistration",
+		delegateResignation: "DelegateResignation",
 		htlcClaim: "Timelock",
 		htlcLock: "Timelock",
 		htlcRefund: "Timelock",
 		ipfs: "Ipfs",
 		magistrate: "Magistrate",
 		multiPayment: "Multipayment",
-		multiSignature: "Multisig",
+		multiSignature: "Multisignature",
 		secondSignature: "SecondSignature",
 		transfer: "Transfer",
 		unvote: "Unvote",

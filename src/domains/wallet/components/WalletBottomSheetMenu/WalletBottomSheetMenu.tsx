@@ -129,7 +129,7 @@ export const WalletBottomSheetMenu = ({ wallets, defaultIsOpen }: WalletBottomSh
 									data-testid="WalletBottomSheetMenu__filters"
 									className="flex items-center py-1 px-5 font-medium border-r focus:outline-none text-theme-secondary-400 border-theme-secondary-800 dark:text-theme-secondary-200 dark:border-theme-secondary-600"
 								>
-									<Icon name="Filters" size="lg" />
+									<Icon name="SlidersVertical" size="lg" />
 								</button>
 							)}
 							<CollapseToggleButton

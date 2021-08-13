@@ -19,7 +19,7 @@ exports[`SearchBarOptions should render 1`] = `
           <svg
             class="inline-block ml-2 w-2 text-black"
           >
-            chevron-down.svg
+            chevron-down-small.svg
           </svg>
         </span>
       </span>
@@ -47,7 +47,7 @@ exports[`SearchBarOptions should render with selected option 1`] = `
           <svg
             class="inline-block ml-2 w-2 text-black"
           >
-            chevron-down.svg
+            chevron-down-small.svg
           </svg>
         </span>
       </span>

@@ -95,7 +95,7 @@ export const ContactListItem = ({ item, onAction, onSend, options }: ContactList
 											<Dropdown
 												toggleContent={
 													<Button variant="secondary" size="icon">
-														<Icon name="Settings" size="lg" />
+														<Icon name="EllipsisVertical" size="lg" />
 													</Button>
 												}
 												options={options}

@@ -164,7 +164,7 @@ exports[`ContactListItem should render 1`] = `
                           width="20"
                         >
                           <svg>
-                            settings.svg
+                            ellipsis-vertical.svg
                           </svg>
                         </div>
                       </div>
@@ -345,7 +345,7 @@ exports[`ContactListItem should render as delegate 1`] = `
                           width="20"
                         >
                           <svg>
-                            settings.svg
+                            ellipsis-vertical.svg
                           </svg>
                         </div>
                       </div>
@@ -526,7 +526,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                           width="20"
                         >
                           <svg>
-                            settings.svg
+                            ellipsis-vertical.svg
                           </svg>
                         </div>
                       </div>
@@ -672,7 +672,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                           width="20"
                         >
                           <svg>
-                            settings.svg
+                            ellipsis-vertical.svg
                           </svg>
                         </div>
                       </div>
@@ -818,7 +818,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
                           width="20"
                         >
                           <svg>
-                            settings.svg
+                            ellipsis-vertical.svg
                           </svg>
                         </div>
                       </div>
@@ -999,7 +999,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
                           width="20"
                         >
                           <svg>
-                            settings.svg
+                            ellipsis-vertical.svg
                           </svg>
                         </div>
                       </div>
@@ -1145,7 +1145,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
                           width="20"
                         >
                           <svg>
-                            settings.svg
+                            ellipsis-vertical.svg
                           </svg>
                         </div>
                       </div>
@@ -1291,7 +1291,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
                           width="20"
                         >
                           <svg>
-                            settings.svg
+                            ellipsis-vertical.svg
                           </svg>
                         </div>
                       </div>

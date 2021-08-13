@@ -30,6 +30,17 @@ describe("PluginHeader", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render official icon", () => {
+		const plugin = {
+			...pluginDataFixture,
+			isOfficial: true,
+		};
+
+		const { container } = render(<PluginHeader {...plugin} />);
+
+		expect(container).toHaveTextContent("shield-check-mark.svg");
+	});
+
 	it("should render updating plugin", () => {
 		const { container } = render(<PluginHeader {...pluginDataFixture} updatingStats={{ percent: 0.2 }} />);
 

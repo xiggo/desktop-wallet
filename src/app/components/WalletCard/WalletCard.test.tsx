@@ -104,7 +104,7 @@ describe("Wallet Card", () => {
 			},
 		);
 
-		expect(container).toHaveTextContent("star.svg");
+		expect(container).toHaveTextContent("star-filled.svg");
 		expect(container).toMatchSnapshot();
 	});
 

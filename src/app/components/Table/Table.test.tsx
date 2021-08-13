@@ -62,7 +62,7 @@ describe("Table", () => {
 			fireEvent.click(th);
 		});
 
-		expect(th).toHaveTextContent("chevron-down.svg");
+		expect(th).toHaveTextContent("chevron-down-small.svg");
 
 		expect(within(th).getByRole("img")).toHaveClass("rotate-180");
 

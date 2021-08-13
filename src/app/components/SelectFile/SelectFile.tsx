@@ -49,8 +49,8 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileStepProperties) =
 	};
 
 	const fileFormatIcon: Record<string, string> = {
-		".dwe": "DweFile",
-		".json": "JsonFile",
+		".dwe": "ExtensionDwe",
+		".json": "ExtensionJson",
 	};
 
 	return (

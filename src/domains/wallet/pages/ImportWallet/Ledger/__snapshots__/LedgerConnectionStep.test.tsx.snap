@@ -132,7 +132,7 @@ exports[`LedgerConnectionStep should emit event on connect 1`] = `
           width="20"
         >
           <svg>
-            alert-success.svg
+            circle-check-mark.svg
           </svg>
         </div>
       </div>
@@ -282,7 +282,7 @@ exports[`LedgerConnectionStep should emit event on fail 1`] = `
           width="20"
         >
           <svg>
-            alert-danger.svg
+            circle-cross.svg
           </svg>
         </div>
       </div>

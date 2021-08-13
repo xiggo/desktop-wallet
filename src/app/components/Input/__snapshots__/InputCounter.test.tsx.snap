@@ -72,7 +72,7 @@ exports[`InputCounter should render with invalid state 1`] = `
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </span>

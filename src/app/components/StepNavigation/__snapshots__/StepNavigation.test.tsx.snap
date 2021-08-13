@@ -38,7 +38,7 @@ exports[`StepNavigation should disable buttons if loading 1`] = `
               width="16"
             >
               <svg>
-                send.svg
+                double-arrow-right.svg
               </svg>
             </div>
             <span>
@@ -112,7 +112,7 @@ exports[`StepNavigation should not render back to wallet button if not on last s
           width="16"
         >
           <svg>
-            send.svg
+            double-arrow-right.svg
           </svg>
         </div>
       </div>
@@ -154,7 +154,7 @@ exports[`StepNavigation should not render continue button if on last two steps 1
           width="16"
         >
           <svg>
-            send.svg
+            double-arrow-right.svg
           </svg>
         </div>
       </div>
@@ -216,7 +216,7 @@ exports[`StepNavigation should render back button if not on last step 1`] = `
           width="16"
         >
           <svg>
-            send.svg
+            double-arrow-right.svg
           </svg>
         </div>
       </div>

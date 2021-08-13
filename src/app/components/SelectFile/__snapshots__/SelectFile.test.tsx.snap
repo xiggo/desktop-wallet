@@ -55,7 +55,7 @@ exports[`SelectFile should render with dwe file format 1`] = `
         width="40"
       >
         <svg>
-          dwe-file.svg
+          extension-dwe.svg
         </svg>
       </div>
       <div
@@ -103,7 +103,7 @@ exports[`SelectFile should render with json file format 1`] = `
         width="40"
       >
         <svg>
-          json-file.svg
+          extension-json.svg
         </svg>
       </div>
       <div

@@ -51,7 +51,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 						variant="secondary"
 						onClick={onClickEditAlias}
 					>
-						<Icon name="Edit" />
+						<Icon name="Pencil" />
 					</Button>
 				}
 			>

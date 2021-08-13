@@ -45,7 +45,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                 width="10"
               >
                 <svg>
-                  chevron-down.svg
+                  chevron-down-small.svg
                 </svg>
               </div>
             </span>
@@ -103,7 +103,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -147,7 +147,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -177,7 +177,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                           width="10"
                         >
                           <svg>
-                            chevron-down.svg
+                            chevron-down-small.svg
                           </svg>
                         </div>
                       </div>
@@ -355,7 +355,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                       >
                         <div
                           class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="WalletIcon__Key"
+                          data-testid="WalletIcon__SecondSignature"
                         >
                           <div
                             class="sc-bdnxRM NjstW"
@@ -363,7 +363,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                             width="20"
                           >
                             <svg>
-                              key.svg
+                              second-signature.svg
                             </svg>
                           </div>
                         </div>

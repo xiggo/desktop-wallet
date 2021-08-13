@@ -61,7 +61,7 @@ export const WalletCard = ({
 
 			return (
 				<Icon
-					name={displayType === "starred" ? "Star" : "Ledger"}
+					name={displayType === "starred" ? "StarFilled" : "Ledger"}
 					className="text-theme-primary-100 dark:text-theme-secondary-800"
 				/>
 			);

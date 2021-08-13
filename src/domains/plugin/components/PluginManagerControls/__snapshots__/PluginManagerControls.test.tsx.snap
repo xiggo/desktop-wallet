@@ -25,7 +25,7 @@ exports[`PluginManagerControls should render 1`] = `
               width="20"
             >
               <svg>
-                list-view.svg
+                list.svg
               </svg>
             </div>
           </button>
@@ -47,7 +47,7 @@ exports[`PluginManagerControls should render 1`] = `
               width="20"
             >
               <svg>
-                grid-view.svg
+                grid.svg
               </svg>
             </div>
           </button>
@@ -83,7 +83,7 @@ exports[`PluginManagerControls should toggle between list and grid 1`] = `
               width="20"
             >
               <svg>
-                list-view.svg
+                list.svg
               </svg>
             </div>
           </button>
@@ -105,7 +105,7 @@ exports[`PluginManagerControls should toggle between list and grid 1`] = `
               width="20"
             >
               <svg>
-                grid-view.svg
+                grid.svg
               </svg>
             </div>
           </button>

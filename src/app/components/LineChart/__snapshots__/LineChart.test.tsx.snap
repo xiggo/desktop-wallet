@@ -74,12 +74,12 @@ exports[`LineChart should render with data 1`] = `
                 class="my-auto ml-1"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM AkeAK"
+                  height="10"
+                  width="10"
                 >
                   <svg>
-                    chevron-down.svg
+                    chevron-down-small.svg
                   </svg>
                 </div>
               </div>

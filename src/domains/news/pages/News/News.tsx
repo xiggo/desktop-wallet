@@ -114,7 +114,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 							<span className="font-semibold text-theme-secondary-text">
 								{t("NEWS.PAGE_NEWS.POWERED_BY")}
 							</span>
-							<SvgCollection.FTX width={65} height={20} className="text-black" />
+							<SvgCollection.FTX width={65} height={20} className="text-theme-text" />
 						</div>
 					}
 				/>

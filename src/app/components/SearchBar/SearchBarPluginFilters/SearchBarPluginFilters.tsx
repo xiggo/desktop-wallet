@@ -99,7 +99,7 @@ export const SearchBarPluginFilters = ({ categories, initialValues, onReset, onC
 				position="right"
 				toggleContent={
 					<div className="mr-8 cursor-pointer">
-						<Icon name="Filters" size="lg" />
+						<Icon name="SlidersVertical" size="lg" />
 					</div>
 				}
 			>
@@ -118,7 +118,7 @@ export const SearchBarPluginFilters = ({ categories, initialValues, onReset, onC
 						onClick={onResetFilters}
 						className="flex items-center pl-2 cursor-pointer hover:underline text-theme-primary-500 hover:text-theme-primary-600"
 					>
-						<Icon name="Reset" />
+						<Icon name="ArrowRotateRight" />
 						<span className="pl-2">{t("COMMON.RESET_FILTERS")}</span>
 					</div>
 				</div>

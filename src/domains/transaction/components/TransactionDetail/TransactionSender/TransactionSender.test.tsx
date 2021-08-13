@@ -27,7 +27,7 @@ describe("TransactionSender", () => {
 		const { container } = render(<TransactionSender address={address} isDelegate={true} />);
 
 		expect(container).toHaveTextContent(address);
-		expect(container).toHaveTextContent("delegate.svg");
+		expect(container).toHaveTextContent("delegate-registration.svg");
 		expect(container).toMatchSnapshot();
 	});
 });

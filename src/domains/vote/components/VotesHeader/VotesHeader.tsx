@@ -63,7 +63,7 @@ export const VotesHeader = ({
 									toggleContent={
 										<ControlButton isChanged={isFilterChanged}>
 											<div className="flex justify-center items-center w-5 h-5">
-												<Icon name="Filters" size="lg" />
+												<Icon name="SlidersVertical" size="lg" />
 											</div>
 										</ControlButton>
 									}

@@ -71,7 +71,7 @@ export const BackupStep = () => {
 						</p>
 					</div>
 
-					<Icon name="FilePassword" size="xl" />
+					<Icon name="FrameKey" size="xl" />
 				</div>
 
 				<div className="flex justify-end space-x-3">
@@ -81,7 +81,7 @@ export const BackupStep = () => {
 					</Clipboard>
 
 					<Button data-testid="SecondSignature__download" variant="secondary" onClick={handleDownload}>
-						<Icon name="Download" />
+						<Icon name="ArrowDownBracket" />
 						<span>{t("COMMON.DOWNLOAD")}</span>
 					</Button>
 				</div>

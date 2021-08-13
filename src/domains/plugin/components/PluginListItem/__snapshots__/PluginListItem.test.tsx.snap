@@ -141,7 +141,7 @@ exports[`PluginListItem should render official icon 1`] = `
                 width="16"
               >
                 <svg>
-                  official-plugin.svg
+                  shield-check-mark.svg
                 </svg>
               </div>
             </div>

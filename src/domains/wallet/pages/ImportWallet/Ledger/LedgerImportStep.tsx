@@ -48,7 +48,7 @@ const MultipleImport = ({
 											variant="secondary"
 											onClick={() => onClickEditWalletName(importedWallet)}
 										>
-											<Icon name="Edit" />
+											<Icon name="Pencil" />
 										</Button>
 									</Tooltip>
 								}
@@ -119,7 +119,7 @@ const SingleImport = ({
 						variant="secondary"
 						onClick={() => onClickEditWalletName(wallet)}
 					>
-						<Icon name="Edit" />
+						<Icon name="Pencil" />
 					</Button>
 				}
 			>

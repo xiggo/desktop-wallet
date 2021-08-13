@@ -31,7 +31,7 @@ exports[`ResetProfile should render 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -86,7 +86,7 @@ exports[`ResetProfile should render 1`] = `
                     width="16"
                   >
                     <svg>
-                      reset.svg
+                      arrow-rotate-right.svg
                     </svg>
                   </div>
                   <span>

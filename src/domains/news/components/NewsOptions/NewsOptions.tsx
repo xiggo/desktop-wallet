@@ -141,7 +141,7 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 						/>
 						<Icon
 							className="mr-4 text-theme-primary-300 dark:text-theme-secondary-600"
-							name="Search"
+							name="MagnifyingGlass"
 							size="lg"
 						/>
 					</div>

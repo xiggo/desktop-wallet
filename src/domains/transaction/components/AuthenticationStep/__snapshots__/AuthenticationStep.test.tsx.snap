@@ -72,9 +72,9 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     eye.svg
@@ -162,9 +162,9 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     eye.svg
@@ -219,9 +219,9 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     eye.svg
@@ -309,9 +309,9 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     eye.svg
@@ -399,9 +399,9 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     eye.svg
@@ -489,9 +489,9 @@ exports[`AuthenticationStep should request private key if wallet was imported us
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     eye.svg
@@ -579,9 +579,9 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     eye.svg
@@ -926,7 +926,7 @@ exports[`AuthenticationStep should specify ledger supported model 1`] = `
               width="20"
             >
               <svg>
-                alert-danger.svg
+                circle-cross.svg
               </svg>
             </div>
           </div>

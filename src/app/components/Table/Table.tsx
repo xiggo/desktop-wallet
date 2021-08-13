@@ -89,7 +89,7 @@ export const Table = ({ children, data, columns, hideHeader, className, initialS
 												>
 													<Icon
 														role="img"
-														name="ChevronDown"
+														name="ChevronDownSmall"
 														className={cn("transition-transform", {
 															"transform rotate-180":
 																(column.isSorted && !column.isSortedDesc) ||

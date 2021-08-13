@@ -5,7 +5,7 @@ export const useSettingsMenu = () => {
 
 	const menuItems = [
 		{
-			icon: "SettingsHorizontal",
+			icon: "Sliders",
 			itemKey: "general",
 			label: t("SETTINGS.GENERAL.MENU_ITEM"),
 		},
@@ -15,12 +15,12 @@ export const useSettingsMenu = () => {
 			label: t("SETTINGS.PASSWORD.MENU_ITEM"),
 		},
 		{
-			icon: "Export",
+			icon: "ArrowUpTurnBracket",
 			itemKey: "export",
 			label: t("SETTINGS.EXPORT.MENU_ITEM"),
 		},
 		{
-			icon: "Appearance",
+			icon: "PencilRuler",
 			itemKey: "appearance",
 			label: t("SETTINGS.APPEARANCE.MENU_ITEM"),
 		},

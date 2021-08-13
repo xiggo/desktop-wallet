@@ -20,12 +20,12 @@ export const AppearanceViewingMode: React.FC = () => {
 
 	const viewingModes: ViewingModeItem[] = [
 		{
-			icon: "Light",
+			icon: "UnderlineSun",
 			name: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.LIGHT"),
 			value: "light",
 		},
 		{
-			icon: "Dark",
+			icon: "UnderlineMoon",
 			name: t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.DARK"),
 			value: "dark",
 		},

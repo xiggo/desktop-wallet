@@ -43,7 +43,7 @@ exports[`Unconfirmed transaction table should render 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ exports[`Unconfirmed transaction table should render 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>

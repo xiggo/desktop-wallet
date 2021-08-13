@@ -9,14 +9,14 @@ describe("BackButton", () => {
 	it("should render", () => {
 		const { container } = renderWithRouter(<BackButton />, { history });
 
-		expect(container).toHaveTextContent("arrow-left.svg");
+		expect(container).toHaveTextContent("chevron-left-small.svg");
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render when disabled", () => {
 		const { container } = renderWithRouter(<BackButton disabled />, { history });
 
-		expect(container).toHaveTextContent("arrow-left.svg");
+		expect(container).toHaveTextContent("chevron-left-small.svg");
 		expect(container).toMatchSnapshot();
 	});
 
@@ -31,7 +31,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(-1);
 
-		expect(container).toHaveTextContent("arrow-left.svg");
+		expect(container).toHaveTextContent("chevron-left-small.svg");
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -48,7 +48,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).toHaveBeenCalledWith("new-url");
 
-		expect(container).toHaveTextContent("arrow-left.svg");
+		expect(container).toHaveTextContent("chevron-left-small.svg");
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -65,7 +65,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).not.toHaveBeenCalled();
 
-		expect(container).toHaveTextContent("arrow-left.svg");
+		expect(container).toHaveTextContent("chevron-left-small.svg");
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -82,7 +82,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).not.toHaveBeenCalled();
 
-		expect(container).toHaveTextContent("arrow-left.svg");
+		expect(container).toHaveTextContent("chevron-left-small.svg");
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();

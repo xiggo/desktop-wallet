@@ -61,7 +61,7 @@ const ChartLegend = ({ legend = {}, lines, period, onPeriodClick }: any) => {
 								{t("COMMON.PERIOD")}: {period}
 							</div>
 							<div className="my-auto ml-1">
-								<Icon name="ChevronDown" />
+								<Icon name="ChevronDownSmall" size="sm" />
 							</div>
 						</div>
 					</div>

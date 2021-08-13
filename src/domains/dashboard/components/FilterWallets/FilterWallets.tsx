@@ -46,7 +46,8 @@ export const FilterWallets = ({ networks, walletsDisplayType, useTestNetworks, o
 					</div>
 
 					<Dropdown
-						toggleIcon="ChevronDown"
+						toggleIcon="ChevronDownSmall"
+						toggleSize="sm"
 						options={walletDisplayOptions}
 						onSelect={({ value }: { value: string }) => onChange?.("walletsDisplayType", value)}
 						toggleContent={(isOpen: boolean) => (
@@ -58,7 +59,7 @@ export const FilterWallets = ({ networks, walletsDisplayType, useTestNetworks, o
 									{walletDisplayOptions.find((option) => option.value === walletsDisplayType)?.label}
 								</span>
 								<Icon
-									name="ChevronDown"
+									name="ChevronDownSmall"
 									className={`transition-transform ${isOpen ? "transform rotate-180" : ""}`}
 									size="sm"
 								/>

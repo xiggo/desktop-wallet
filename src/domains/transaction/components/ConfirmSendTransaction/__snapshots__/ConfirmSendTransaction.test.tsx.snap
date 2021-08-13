@@ -33,7 +33,7 @@ exports[`ConfirmSendTransaction should render modal 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -96,7 +96,7 @@ exports[`ConfirmSendTransaction should render modal 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -140,7 +140,7 @@ exports[`ConfirmSendTransaction should render modal 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>

@@ -56,7 +56,7 @@ exports[`FilterWallets should render 1`] = `
                 width="10"
               >
                 <svg>
-                  chevron-down.svg
+                  chevron-down-small.svg
                 </svg>
               </div>
             </div>
@@ -167,7 +167,7 @@ exports[`FilterWallets should render with networks selection 1`] = `
                 width="10"
               >
                 <svg>
-                  chevron-down.svg
+                  chevron-down-small.svg
                 </svg>
               </div>
             </div>

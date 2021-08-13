@@ -174,7 +174,7 @@ exports[`SelectAddress should render invalid 1`] = `
             width="20"
           >
             <svg>
-              alert-warning.svg
+              circle-exclamation-mark.svg
             </svg>
           </div>
         </span>
@@ -264,81 +264,6 @@ exports[`SelectAddress should render with preselected address 1`] = `
           <div
             class="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600"
           >
-            <div
-              class="sc-bdnxRM NjstW"
-              height="20"
-              width="20"
-            >
-              <svg>
-                user.svg
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </button>
-</div>
-`;
-
-exports[`SelectAddress should render with preselected verified address 1`] = `
-<div>
-  <button
-    class="relative w-full rounded focus:ring-2 focus:outline-none focus:ring-theme-primary-400"
-    data-testid="SelectAddress__wrapper"
-    type="button"
-  >
-    <span
-      class="flex absolute inset-0 items-center px-14 w-full border border-transparent"
-    >
-      <div
-        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-      />
-    </span>
-    <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
-      class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
-    >
-      <div
-        class="Circle__CircleWrapper-sc-d5u41q-0 cPUFYC bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
-      />
-      <div
-        class="relative flex flex-1 h-full invisible"
-      >
-        <input
-          class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
-          data-testid="SelectAddress__input"
-          readonly=""
-          value=""
-        />
-      </div>
-      <div
-        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-      >
-        <div
-          class=""
-        >
-          <div
-            class="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600"
-          >
-            <div
-              class="rounded-full text-theme-success-400 bg-theme-success-100"
-            >
-              <div
-                class="sc-bdnxRM NjstW"
-                height="20"
-                width="20"
-              >
-                <svg>
-                  checkmark.svg
-                </svg>
-              </div>
-            </div>
             <div
               class="sc-bdnxRM NjstW"
               height="20"

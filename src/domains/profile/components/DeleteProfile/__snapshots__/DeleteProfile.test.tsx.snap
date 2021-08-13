@@ -31,7 +31,7 @@ exports[`DeleteProfile should render 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>

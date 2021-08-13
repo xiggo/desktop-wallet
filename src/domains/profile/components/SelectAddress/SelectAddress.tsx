@@ -17,7 +17,6 @@ type SelectAddressProperties = {
 	profile: Contracts.IProfile;
 	disabled?: boolean;
 	isInvalid?: boolean;
-	isVerified?: boolean;
 	onChange?: (address: string) => void;
 } & React.InputHTMLAttributes<any>;
 
@@ -35,7 +34,7 @@ const WalletAvatar = ({ address }: any) => {
 };
 
 export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressProperties>(
-	({ address, wallets, profile, disabled, isInvalid, isVerified, onChange }: SelectAddressProperties, reference) => {
+	({ address, wallets, profile, disabled, isInvalid, onChange }: SelectAddressProperties, reference) => {
 		const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);
 		const [selectedAddress, setSelectedAddress] = useState(address);
 
@@ -87,11 +86,6 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 							end: {
 								content: (
 									<div className="flex items-center space-x-3 text-theme-primary-300 dark:text-theme-secondary-600">
-										{isVerified && (
-											<div className="rounded-full text-theme-success-400 bg-theme-success-100">
-												<Icon name="Checkmark" size="lg" />
-											</div>
-										)}
 										<Icon name="User" size="lg" />
 									</div>
 								),

@@ -58,7 +58,7 @@ exports[`AddRecipient should render 1`] = `
             width="10"
           >
             <svg>
-              questionmark.svg
+              question-mark-small.svg
             </svg>
           </div>
         </div>
@@ -320,7 +320,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
             width="10"
           >
             <svg>
-              questionmark.svg
+              question-mark-small.svg
             </svg>
           </div>
         </div>
@@ -582,7 +582,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
             width="10"
           >
             <svg>
-              questionmark.svg
+              question-mark-small.svg
             </svg>
           </div>
         </div>
@@ -855,7 +855,7 @@ exports[`AddRecipient should render without recipients 1`] = `
             width="10"
           >
             <svg>
-              questionmark.svg
+              question-mark-small.svg
             </svg>
           </div>
         </div>
@@ -1329,7 +1329,7 @@ exports[`AddRecipient should set available amount 1`] = `
             width="10"
           >
             <svg>
-              questionmark.svg
+              question-mark-small.svg
             </svg>
           </div>
         </div>
@@ -1591,7 +1591,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
             width="10"
           >
             <svg>
-              questionmark.svg
+              question-mark-small.svg
             </svg>
           </div>
         </div>

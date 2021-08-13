@@ -317,12 +317,12 @@ exports[`InstallPlugin should render 3st step 1`] = `
                   class="text-theme-success-600"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
-                    height="20"
-                    width="20"
+                    class="sc-bdnxRM AFVmm"
+                    height="16"
+                    width="16"
                   >
                     <svg>
-                      checkmark.svg
+                      check-mark.svg
                     </svg>
                   </div>
                 </span>
@@ -406,12 +406,12 @@ exports[`InstallPlugin should render 3st step with plugin logo 1`] = `
                   class="text-theme-success-600"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
-                    height="20"
-                    width="20"
+                    class="sc-bdnxRM AFVmm"
+                    height="16"
+                    width="16"
                   >
                     <svg>
-                      checkmark.svg
+                      check-mark.svg
                     </svg>
                   </div>
                 </span>

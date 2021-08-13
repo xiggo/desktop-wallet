@@ -224,7 +224,7 @@ const NavigationBar = ({
 													history.push(`${sendTransferPath}?reset=${reset}`);
 												}}
 											>
-												<Icon name="Send" size="lg" className="p-1" />
+												<Icon name="DoubleArrowRight" size="lg" className="p-1" />
 											</Button>
 										</NavigationButtonWrapper>
 									</Tooltip>

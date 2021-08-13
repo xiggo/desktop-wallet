@@ -92,7 +92,7 @@ exports[`WalletListItem should render 1`] = `
               </div>
               <div
                 class="inline-block p-1 text-theme-warning-400"
-                data-testid="WalletIcon__Star"
+                data-testid="WalletIcon__Starred"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -100,7 +100,7 @@ exports[`WalletListItem should render 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -223,7 +223,7 @@ exports[`WalletListItem should render for selected wallet 1`] = `
               </div>
               <div
                 class="inline-block p-1 text-theme-warning-400"
-                data-testid="WalletIcon__Star"
+                data-testid="WalletIcon__Starred"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -231,7 +231,7 @@ exports[`WalletListItem should render for selected wallet 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -358,7 +358,7 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
               </div>
               <div
                 class="inline-block p-1 text-theme-warning-400"
-                data-testid="WalletIcon__Star"
+                data-testid="WalletIcon__Starred"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -366,7 +366,7 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>
@@ -489,7 +489,7 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
               </div>
               <div
                 class="inline-block p-1 text-theme-warning-400"
-                data-testid="WalletIcon__Star"
+                data-testid="WalletIcon__Starred"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -497,7 +497,7 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
                   width="20"
                 >
                   <svg>
-                    star.svg
+                    star-filled.svg
                   </svg>
                 </div>
               </div>

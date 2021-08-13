@@ -33,7 +33,7 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Dele
 						className="text-theme-text border-theme-text dark:text-theme-secondary-600 dark:border-theme-secondary-600"
 						size="lg"
 					>
-						<Icon name="DelegateResigned" size="lg" />
+						<Icon name="DelegateResignation" size="lg" />
 					</Circle>
 				}
 			>

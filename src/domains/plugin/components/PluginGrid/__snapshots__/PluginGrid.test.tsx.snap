@@ -54,7 +54,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-plugin.svg
+                      shield-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -94,12 +94,12 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -159,7 +159,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -186,12 +186,12 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -251,7 +251,7 @@ exports[`PluginGrid should not render pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -278,12 +278,12 @@ exports[`PluginGrid should not render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -683,7 +683,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-plugin.svg
+                      shield-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -696,7 +696,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -723,12 +723,12 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -788,7 +788,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -815,12 +815,12 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -880,7 +880,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -907,12 +907,12 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -972,7 +972,7 @@ exports[`PluginGrid should render pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -999,12 +999,12 @@ exports[`PluginGrid should render pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -1056,7 +1056,7 @@ exports[`PluginGrid should render pagination 1`] = `
               width="10"
             >
               <svg>
-                forward.svg
+                chevron-right-small.svg
               </svg>
             </div>
           </div>
@@ -1449,7 +1449,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-plugin.svg
+                      shield-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -1462,7 +1462,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -1489,12 +1489,12 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -1554,7 +1554,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -1581,12 +1581,12 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -1646,7 +1646,7 @@ exports[`PluginGrid should render without pagination 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -1673,12 +1673,12 @@ exports[`PluginGrid should render without pagination 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -1764,7 +1764,7 @@ exports[`PluginGrid should split by page 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -1791,12 +1791,12 @@ exports[`PluginGrid should split by page 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>
@@ -1828,7 +1828,7 @@ exports[`PluginGrid should split by page 1`] = `
               width="10"
             >
               <svg>
-                back.svg
+                chevron-left-small.svg
               </svg>
             </div>
             Previous
@@ -1875,7 +1875,7 @@ exports[`PluginGrid should split by page 1`] = `
               width="10"
             >
               <svg>
-                forward.svg
+                chevron-right-small.svg
               </svg>
             </div>
           </div>
@@ -1940,7 +1940,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                     width="16"
                   >
                     <svg>
-                      official-plugin.svg
+                      shield-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -1953,7 +1953,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                     width="20"
                   >
                     <svg>
-                      category.svg
+                      categories.svg
                     </svg>
                   </div>
                   <span
@@ -1977,12 +1977,12 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                   tabindex="0"
                 >
                   <div
-                    class="sc-bdnxRM NjstW"
-                    height="20"
-                    width="20"
+                    class="sc-bdnxRM AFVmm"
+                    height="16"
+                    width="16"
                   >
                     <svg>
-                      update.svg
+                      arrows-rotate.svg
                     </svg>
                   </div>
                 </span>
@@ -1997,12 +1997,12 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
                     class="flex overflow-hidden justify-center w-4"
                   >
                     <div
-                      class="sc-bdnxRM AFVmm p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
-                      height="16"
-                      width="16"
+                      class="sc-bdnxRM NjstW p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+                      height="20"
+                      width="20"
                     >
                       <svg>
-                        settings.svg
+                        ellipsis-vertical.svg
                       </svg>
                     </div>
                   </div>

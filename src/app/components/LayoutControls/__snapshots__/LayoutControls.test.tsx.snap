@@ -21,7 +21,7 @@ exports[`LayoutControls should render 1`] = `
             width="20"
           >
             <svg>
-              list-view.svg
+              list.svg
             </svg>
           </div>
         </button>
@@ -43,7 +43,7 @@ exports[`LayoutControls should render 1`] = `
             width="20"
           >
             <svg>
-              grid-view.svg
+              grid.svg
             </svg>
           </div>
         </button>

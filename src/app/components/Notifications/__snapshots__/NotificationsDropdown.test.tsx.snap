@@ -26,7 +26,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                 width="20"
               >
                 <svg>
-                  notification.svg
+                  bell.svg
                 </svg>
               </div>
               <div
@@ -427,7 +427,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                   width="16"
                 >
                   <svg>
-                    cross-slim.svg
+                    cross.svg
                   </svg>
                 </div>
               </div>
@@ -524,7 +524,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                 width="20"
               >
                 <svg>
-                  notification.svg
+                  bell.svg
                 </svg>
               </div>
               <div
@@ -926,7 +926,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                 width="20"
               >
                 <svg>
-                  notification.svg
+                  bell.svg
                 </svg>
               </div>
               <div
@@ -1327,7 +1327,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   width="16"
                 >
                   <svg>
-                    cross-slim.svg
+                    cross.svg
                   </svg>
                 </div>
               </div>
@@ -1531,7 +1531,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     width="20"
                   >
                     <svg>
-                      memo.svg
+                      file-lines.svg
                     </svg>
                   </div>
                 </div>
@@ -1583,7 +1583,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                           width="20"
                         >
                           <svg>
-                            status-ok.svg
+                            circle-check-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -1636,7 +1636,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                             width="16"
                           >
                             <svg>
-                              redirect.svg
+                              arrow-external.svg
                             </svg>
                           </div>
                         </a>
@@ -1700,7 +1700,7 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                 width="20"
               >
                 <svg>
-                  notification.svg
+                  bell.svg
                 </svg>
               </div>
               <div
@@ -2102,7 +2102,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                 width="20"
               >
                 <svg>
-                  notification.svg
+                  bell.svg
                 </svg>
               </div>
               <div
@@ -2503,7 +2503,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                   width="16"
                 >
                   <svg>
-                    cross-slim.svg
+                    cross.svg
                   </svg>
                 </div>
               </div>
@@ -2600,7 +2600,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                 width="20"
               >
                 <svg>
-                  notification.svg
+                  bell.svg
                 </svg>
               </div>
               <div
@@ -3002,7 +3002,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                 width="20"
               >
                 <svg>
-                  notification.svg
+                  bell.svg
                 </svg>
               </div>
               <div

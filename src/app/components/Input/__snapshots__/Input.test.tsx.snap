@@ -138,7 +138,7 @@ exports[`Input should render with invalid 1`] = `
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </span>

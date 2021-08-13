@@ -83,7 +83,7 @@ export const PaginationSearchForm = ({
 					className="search-control"
 					data-testid="PaginationSearch__submit"
 				>
-					<Icon name="Search" />
+					<Icon name="MagnifyingGlass" />
 				</Button>
 
 				<Button
@@ -94,7 +94,7 @@ export const PaginationSearchForm = ({
 					className="search-control"
 					data-testid="PaginationSearch__cancel"
 				>
-					<Icon name="Close" />
+					<Icon name="Cross" />
 				</Button>
 			</Form>
 		</PaginationSearchWrapperStyled>
@@ -129,7 +129,7 @@ export const PaginationSearch = ({
 					data-testid="PaginationSearchButton__search"
 					className="flex absolute top-0 right-0 bottom-0 left-0 invisible justify-center items-center group-hover:visible"
 				>
-					<Icon name="Search" />
+					<Icon name="MagnifyingGlass" />
 				</span>
 			</PaginationSearchButtonStyled>
 

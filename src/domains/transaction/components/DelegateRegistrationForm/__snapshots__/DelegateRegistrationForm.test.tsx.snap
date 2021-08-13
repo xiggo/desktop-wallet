@@ -41,7 +41,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
               width="20"
             >
               <svg>
-                alert-warning.svg
+                circle-exclamation-mark.svg
               </svg>
             </div>
           </div>
@@ -192,7 +192,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
                     width="20"
                   >
                     <svg>
-                      alert-warning.svg
+                      circle-exclamation-mark.svg
                     </svg>
                   </div>
                 </span>
@@ -391,7 +391,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
               width="20"
             >
               <svg>
-                alert-warning.svg
+                circle-exclamation-mark.svg
               </svg>
             </div>
           </div>
@@ -944,7 +944,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
               width="20"
             >
               <svg>
-                alert-warning.svg
+                circle-exclamation-mark.svg
               </svg>
             </div>
           </div>
@@ -1172,12 +1172,12 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
                             type="button"
                           >
                             <div
-                              class="sc-bdnxRM AkeAK transform rotate-90"
+                              class="sc-bdnxRM AkeAK"
                               height="10"
                               width="10"
                             >
                               <svg>
-                                arrow-left.svg
+                                chevron-up-small.svg
                               </svg>
                             </div>
                           </button>
@@ -1187,12 +1187,12 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
                             type="button"
                           >
                             <div
-                              class="sc-bdnxRM AkeAK transform -rotate-90"
+                              class="sc-bdnxRM AkeAK"
                               height="10"
                               width="10"
                             >
                               <svg>
-                                arrow-left.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </button>
@@ -1252,7 +1252,7 @@ exports[`DelegateRegistrationForm should set username 1`] = `
               width="20"
             >
               <svg>
-                alert-warning.svg
+                circle-exclamation-mark.svg
               </svg>
             </div>
           </div>
@@ -1583,7 +1583,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
               width="20"
             >
               <svg>
-                alert-warning.svg
+                circle-exclamation-mark.svg
               </svg>
             </div>
           </div>
@@ -1734,7 +1734,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
                     width="20"
                   >
                     <svg>
-                      alert-warning.svg
+                      circle-exclamation-mark.svg
                     </svg>
                   </div>
                 </span>
@@ -1933,7 +1933,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
               width="20"
             >
               <svg>
-                alert-warning.svg
+                circle-exclamation-mark.svg
               </svg>
             </div>
           </div>
@@ -2084,7 +2084,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
                     width="20"
                   >
                     <svg>
-                      alert-warning.svg
+                      circle-exclamation-mark.svg
                     </svg>
                   </div>
                 </span>

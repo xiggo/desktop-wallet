@@ -6,16 +6,15 @@ import { useTranslation } from "react-i18next";
 import { Size } from "types";
 
 const getIconName = (type: string) => {
-	switch (type) {
-		case "Starred":
-			return "Star";
-		case "MultiSignature":
-			return "Multisig";
-		case "SecondSignature":
-			return "Key";
-		default:
-			return type;
+	if (type === "Starred") {
+		return "StarFilled";
 	}
+
+	if (type === "Verified") {
+		return "UserCheckMark";
+	}
+
+	return type;
 };
 
 const getIconColor = (type: string) =>
@@ -36,10 +35,7 @@ const WalletIcon = ({
 
 	return (
 		<Tooltip content={label || t(`COMMON.${type.toUpperCase()}`)}>
-			<div
-				data-testid={`WalletIcon__${getIconName(type)}`}
-				className={`inline-block p-1 ${iconColor || getIconColor(type)}`}
-			>
+			<div data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>
 				<Icon name={getIconName(type)} size={iconSize} />
 			</div>
 		</Tooltip>
@@ -73,7 +69,7 @@ export const WalletIcons = ({
 			{!exclude?.includes("isLedger") && wallet.isLedger() && <WalletIcon type="Ledger" {...iconProperties} />}
 			{!exclude?.includes("isStarred") && wallet.isStarred() && <WalletIcon type="Starred" {...iconProperties} />}
 			{!exclude?.includes("isMultiSignature") && wallet.hasSyncedWithNetwork() && wallet.isMultiSignature() && (
-				<WalletIcon type="MultiSignature" {...iconProperties} />
+				<WalletIcon type="Multisignature" {...iconProperties} />
 			)}
 		</>
 	);

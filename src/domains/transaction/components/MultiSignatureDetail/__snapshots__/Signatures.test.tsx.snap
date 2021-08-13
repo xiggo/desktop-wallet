@@ -50,7 +50,7 @@ exports[`Signatures should render 1`] = `
                 width="10"
               >
                 <svg>
-                  signature-status-pending.svg
+                  circle-check-mark.svg
                 </svg>
               </div>
               <span />
@@ -97,7 +97,7 @@ exports[`Signatures should render 1`] = `
                 width="10"
               >
                 <svg>
-                  signature-status-ok.svg
+                  clock.svg
                 </svg>
               </div>
               <span />
@@ -160,7 +160,7 @@ exports[`Signatures should render with final signature 1`] = `
                 width="10"
               >
                 <svg>
-                  signature-status-ok.svg
+                  clock.svg
                 </svg>
               </div>
               <span />
@@ -207,7 +207,7 @@ exports[`Signatures should render with final signature 1`] = `
                 width="10"
               >
                 <svg>
-                  signature-status-ok.svg
+                  clock.svg
                 </svg>
               </div>
               <span />

@@ -32,7 +32,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </div>
@@ -437,7 +437,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         width="40"
       >
         <svg>
-          file-password.svg
+          frame-key.svg
         </svg>
       </div>
     </div>
@@ -484,7 +484,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
             width="16"
           >
             <svg>
-              download.svg
+              arrow-down-bracket.svg
             </svg>
           </div>
           <span>

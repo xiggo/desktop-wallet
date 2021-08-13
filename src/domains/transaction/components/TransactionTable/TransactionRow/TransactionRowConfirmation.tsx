@@ -29,8 +29,8 @@ export const TransactionRowConfirmation = ({ transaction, isSignaturePending }: 
 
 	const iconName = {
 		actionRequired: "Edit",
-		confirmed: "StatusOk",
-		pending: "StatusPending",
+		confirmed: "CircleCheckMark",
+		pending: "Clock",
 	};
 
 	const iconStyle = {

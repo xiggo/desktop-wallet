@@ -49,7 +49,7 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
               width="40"
             >
               <svg>
-                dwe-file.svg
+                extension-dwe.svg
               </svg>
             </div>
             <div
@@ -102,7 +102,7 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
                     width="16"
                   >
                     <svg>
-                      cross-slim.svg
+                      cross.svg
                     </svg>
                   </div>
                 </div>
@@ -170,9 +170,9 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
                             type="button"
                           >
                             <div
-                              class="sc-bdnxRM AFVmm"
-                              height="16"
-                              width="16"
+                              class="sc-bdnxRM NjstW"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 eye.svg
@@ -258,7 +258,7 @@ exports[`Import Profile - Processing import should handle import error 1`] = `
               width="40"
             >
               <svg>
-                dwe-file.svg
+                extension-dwe.svg
               </svg>
             </div>
             <div
@@ -335,7 +335,7 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
               width="40"
             >
               <svg>
-                dwe-file.svg
+                extension-dwe.svg
               </svg>
             </div>
             <div
@@ -388,7 +388,7 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
                     width="16"
                   >
                     <svg>
-                      cross-slim.svg
+                      cross.svg
                     </svg>
                   </div>
                 </div>
@@ -456,9 +456,9 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
                             type="button"
                           >
                             <div
-                              class="sc-bdnxRM AFVmm"
-                              height="16"
-                              width="16"
+                              class="sc-bdnxRM NjstW"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 eye.svg
@@ -585,7 +585,7 @@ exports[`Import Profile - Processing import should require password for password
               width="40"
             >
               <svg>
-                dwe-file.svg
+                extension-dwe.svg
               </svg>
             </div>
             <div
@@ -638,7 +638,7 @@ exports[`Import Profile - Processing import should require password for password
                     width="16"
                   >
                     <svg>
-                      cross-slim.svg
+                      cross.svg
                     </svg>
                   </div>
                 </div>
@@ -706,9 +706,9 @@ exports[`Import Profile - Processing import should require password for password
                             type="button"
                           >
                             <div
-                              class="sc-bdnxRM AFVmm"
-                              height="16"
-                              width="16"
+                              class="sc-bdnxRM NjstW"
+                              height="20"
+                              width="20"
                             >
                               <svg>
                                 eye.svg
@@ -794,7 +794,7 @@ exports[`Import Profile - Processing import should show error if json import has
               width="40"
             >
               <svg>
-                json-file.svg
+                extension-json.svg
               </svg>
             </div>
             <div
@@ -871,7 +871,7 @@ exports[`Import Profile - Processing import should succesfully import dwe profil
               width="40"
             >
               <svg>
-                dwe-file.svg
+                extension-dwe.svg
               </svg>
             </div>
             <div
@@ -948,7 +948,7 @@ exports[`Import Profile - Processing import should succesfully import json profi
               width="40"
             >
               <svg>
-                json-file.svg
+                extension-json.svg
               </svg>
             </div>
             <div

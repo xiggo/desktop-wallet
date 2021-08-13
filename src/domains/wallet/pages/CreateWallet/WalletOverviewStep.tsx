@@ -70,7 +70,7 @@ export const WalletOverviewStep = () => {
 					</p>
 				</div>
 
-				<Icon name="FilePassword" className="text-black dark:text-theme-secondary-600" size="xl" />
+				<Icon name="FrameKey" className="text-black dark:text-theme-secondary-600" size="xl" />
 			</div>
 
 			<div className="flex justify-end space-x-3 w-full">
@@ -85,7 +85,7 @@ export const WalletOverviewStep = () => {
 					className="flex items-center space-x-2"
 					onClick={handleDownload}
 				>
-					<Icon name="Download" />
+					<Icon name="ArrowDownBracket" />
 					<span>{t("COMMON.DOWNLOAD")}</span>
 				</Button>
 			</div>

@@ -28,7 +28,7 @@ exports[`WalletsControls should render 1`] = `
                 width="20"
               >
                 <svg>
-                  list-view.svg
+                  list.svg
                 </svg>
               </div>
             </button>
@@ -50,7 +50,7 @@ exports[`WalletsControls should render 1`] = `
                 width="20"
               >
                 <svg>
-                  grid-view.svg
+                  grid.svg
                 </svg>
               </div>
             </button>
@@ -83,7 +83,7 @@ exports[`WalletsControls should render 1`] = `
                     width="20"
                   >
                     <svg>
-                      filters.svg
+                      sliders-vertical.svg
                     </svg>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ exports[`WalletsControls should render 1`] = `
               width="16"
             >
               <svg>
-                import.svg
+                arrow-turn-down-bracket.svg
               </svg>
             </div>
             <span>
@@ -207,7 +207,7 @@ exports[`WalletsControls should render with networks selection 1`] = `
                 width="20"
               >
                 <svg>
-                  list-view.svg
+                  list.svg
                 </svg>
               </div>
             </button>
@@ -229,7 +229,7 @@ exports[`WalletsControls should render with networks selection 1`] = `
                 width="20"
               >
                 <svg>
-                  grid-view.svg
+                  grid.svg
                 </svg>
               </div>
             </button>
@@ -262,7 +262,7 @@ exports[`WalletsControls should render with networks selection 1`] = `
                     width="20"
                   >
                     <svg>
-                      filters.svg
+                      sliders-vertical.svg
                     </svg>
                   </div>
                 </div>
@@ -318,7 +318,7 @@ exports[`WalletsControls should render with networks selection 1`] = `
               width="16"
             >
               <svg>
-                import.svg
+                arrow-turn-down-bracket.svg
               </svg>
             </div>
             <span>

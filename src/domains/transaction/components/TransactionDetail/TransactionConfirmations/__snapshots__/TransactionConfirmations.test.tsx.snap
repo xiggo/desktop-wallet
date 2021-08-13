@@ -30,7 +30,7 @@ exports[`TransactionConfirmations should render when confirmed 1`] = `
               width="20"
             >
               <svg>
-                status-ok.svg
+                circle-check-mark.svg
               </svg>
             </div>
           </span>
@@ -70,7 +70,7 @@ exports[`TransactionConfirmations should render when not confirmed 1`] = `
             width="20"
           >
             <svg>
-              status-pending.svg
+              clock.svg
             </svg>
           </div>
         </div>

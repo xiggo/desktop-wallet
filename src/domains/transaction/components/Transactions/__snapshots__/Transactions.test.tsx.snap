@@ -94,7 +94,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                   width="10"
                 >
                   <svg>
-                    chevron-down.svg
+                    chevron-down-small.svg
                   </svg>
                 </div>
               </span>
@@ -159,7 +159,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -231,7 +231,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -281,7 +281,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -379,7 +379,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -445,7 +445,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -543,7 +543,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -609,7 +609,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -707,7 +707,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -773,7 +773,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -871,7 +871,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -937,7 +937,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -1035,7 +1035,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -1101,7 +1101,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -1199,7 +1199,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -1265,7 +1265,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -1363,7 +1363,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -1429,7 +1429,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -1527,7 +1527,7 @@ exports[`Transactions should fetch more transactions 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -1680,7 +1680,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                   width="10"
                 >
                   <svg>
-                    chevron-down.svg
+                    chevron-down-small.svg
                   </svg>
                 </div>
               </span>
@@ -1745,7 +1745,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -1817,7 +1817,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -1867,7 +1867,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -1965,7 +1965,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -2031,7 +2031,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -2129,7 +2129,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -2195,7 +2195,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -2293,7 +2293,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -2359,7 +2359,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -2457,7 +2457,7 @@ exports[`Transactions should hide view more button when there are no next pages 
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -2599,7 +2599,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   width="10"
                 >
                   <svg>
-                    chevron-down.svg
+                    chevron-down-small.svg
                   </svg>
                 </div>
               </span>
@@ -2664,7 +2664,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -2736,7 +2736,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -2786,7 +2786,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -2884,7 +2884,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -2950,7 +2950,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -3048,7 +3048,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -3114,7 +3114,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -3212,7 +3212,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -3278,7 +3278,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -3376,7 +3376,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -3518,7 +3518,7 @@ exports[`Transactions should render 1`] = `
                   width="10"
                 >
                   <svg>
-                    chevron-down.svg
+                    chevron-down-small.svg
                   </svg>
                 </div>
               </span>
@@ -3583,7 +3583,7 @@ exports[`Transactions should render 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -3655,7 +3655,7 @@ exports[`Transactions should render 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -3705,7 +3705,7 @@ exports[`Transactions should render 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -3803,7 +3803,7 @@ exports[`Transactions should render 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -3869,7 +3869,7 @@ exports[`Transactions should render 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -3967,7 +3967,7 @@ exports[`Transactions should render 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -4033,7 +4033,7 @@ exports[`Transactions should render 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -4131,7 +4131,7 @@ exports[`Transactions should render 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -4197,7 +4197,7 @@ exports[`Transactions should render 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -4295,7 +4295,7 @@ exports[`Transactions should render 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -4437,7 +4437,7 @@ exports[`Transactions should render with custom title 1`] = `
                   width="10"
                 >
                   <svg>
-                    chevron-down.svg
+                    chevron-down-small.svg
                   </svg>
                 </div>
               </span>
@@ -4502,7 +4502,7 @@ exports[`Transactions should render with custom title 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -4574,7 +4574,7 @@ exports[`Transactions should render with custom title 1`] = `
                     width="10"
                   >
                     <svg>
-                      chevron-down.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </div>
@@ -4624,7 +4624,7 @@ exports[`Transactions should render with custom title 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -4722,7 +4722,7 @@ exports[`Transactions should render with custom title 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -4788,7 +4788,7 @@ exports[`Transactions should render with custom title 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -4886,7 +4886,7 @@ exports[`Transactions should render with custom title 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -4952,7 +4952,7 @@ exports[`Transactions should render with custom title 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -5050,7 +5050,7 @@ exports[`Transactions should render with custom title 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -5116,7 +5116,7 @@ exports[`Transactions should render with custom title 1`] = `
                       width="16"
                     >
                       <svg>
-                        id.svg
+                        magnifying-glass-id.svg
                       </svg>
                     </div>
                   </span>
@@ -5214,7 +5214,7 @@ exports[`Transactions should render with custom title 1`] = `
                     width="20"
                   >
                     <svg>
-                      status-ok.svg
+                      circle-check-mark.svg
                     </svg>
                   </div>
                 </div>
@@ -5357,7 +5357,7 @@ exports[`Transactions should update wallet filters 1`] = `
                   width="10"
                 >
                   <svg>
-                    chevron-down.svg
+                    chevron-down-small.svg
                   </svg>
                 </div>
               </span>

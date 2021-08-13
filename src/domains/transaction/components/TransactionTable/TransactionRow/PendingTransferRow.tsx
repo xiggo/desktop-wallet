@@ -28,7 +28,7 @@ export const PendingTransferRow = ({
 			<TableCell variant="start">
 				<Tooltip content={transaction.id()}>
 					<span className="text-theme-secondary-300 dark:text-theme-secondary-800">
-						<Icon name="Id" />
+						<Icon name="MagnifyingGlassId" />
 					</span>
 				</Tooltip>
 			</TableCell>
@@ -55,7 +55,7 @@ export const PendingTransferRow = ({
 			<TableCell className="w-16" innerClassName="justify-center truncate">
 				<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>
 					<span className="p-1 text-theme-warning-300">
-						<Icon name="StatusPending" size="lg" />
+						<Icon name="Clock" size="lg" />
 					</span>
 				</Tooltip>
 			</TableCell>

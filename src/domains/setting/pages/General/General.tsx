@@ -402,7 +402,7 @@ export const GeneralSettings: React.FC = () => {
 
 				<div className="flex justify-between pt-2 w-full">
 					<Button onClick={() => setIsResetProfileOpen(true)} variant="danger">
-						<Icon name="Reset" />
+						<Icon name="ArrowRotateRight" />
 						<span>{t("COMMON.RESET_SETTINGS")}</span>
 					</Button>
 

@@ -1,236 +1,113 @@
+import { ArrowIcons } from "app/assets/svg/arrows";
 import { Currencies } from "app/assets/svg/currencies";
+import { TransactionIcons } from "app/assets/svg/transactions";
 
-import { ReactComponent as AlertDanger } from "./alert-danger.svg";
-import { ReactComponent as AlertDefault } from "./alert-default.svg";
-import { ReactComponent as AlertHint } from "./alert-hint.svg";
-import { ReactComponent as AlertInfo } from "./alert-info.svg";
-import { ReactComponent as AlertSuccess } from "./alert-success.svg";
-import { ReactComponent as AlertWarning } from "./alert-warning.svg";
-import { ReactComponent as Appearance } from "./appearance.svg";
-import { ReactComponent as ArrowLeft } from "./arrow-left.svg";
-import { ReactComponent as ArrowRight } from "./arrow-right.svg";
-import { ReactComponent as Article } from "./article.svg";
-import { ReactComponent as AwaitingFinalSignature } from "./awaiting-final-signature.svg";
-import { ReactComponent as AwaitingOtherSignature } from "./awaiting-other-signature.svg";
-import { ReactComponent as AwaitingOurSignature } from "./awaiting-our-signature.svg";
-import { ReactComponent as Back } from "./back.svg";
-import { ReactComponent as CaretDown } from "./caret-down.svg";
-import { ReactComponent as CaretUp } from "./caret-up.svg";
-import { ReactComponent as Category } from "./category.svg";
+import { ReactComponent as Bell } from "./bell.svg";
+import { ReactComponent as Categories } from "./categories.svg";
 import { ReactComponent as ChartActiveDot } from "./chart-active-dot.svg";
-import { ReactComponent as Checkmark } from "./checkmark.svg";
-import { ReactComponent as CheckmarkBig } from "./checkmark-big.svg";
-import { ReactComponent as ChevronDown } from "./chevron-down.svg";
-import { ReactComponent as ChevronLeft } from "./chevron-left.svg";
-import { ReactComponent as ChevronLeftDouble } from "./chevron-left-double.svg";
-import { ReactComponent as ChevronRight } from "./chevron-right.svg";
-import { ReactComponent as ChevronRightDouble } from "./chevron-right-double.svg";
-import { ReactComponent as ChevronUp } from "./chevron-up.svg";
-import { ReactComponent as Close } from "./close.svg";
+import { ReactComponent as Checkmark } from "./check-mark.svg";
+import { ReactComponent as CheckmarkSmall } from "./check-mark-small.svg";
+import { ReactComponent as CircleCheckMark } from "./circle-check-mark.svg";
+import { ReactComponent as CircleCheckMarkPencil } from "./circle-check-mark-pencil.svg";
+import { ReactComponent as CircleCross } from "./circle-cross.svg";
+import { ReactComponent as CircleExclamationMark } from "./circle-exclamation-mark.svg";
+import { ReactComponent as CircleInfo } from "./circle-info.svg";
+import { ReactComponent as CircleQuestionMark } from "./circle-question-mark.svg";
+import { ReactComponent as Clock } from "./clock.svg";
+import { ReactComponent as ClockPencil } from "./clock-pencil.svg";
 import { ReactComponent as Copy } from "./copy.svg";
-import { ReactComponent as CopyAddress } from "./copy-address.svg";
 import { ReactComponent as CopyKey } from "./copy-key.svg";
-import { ReactComponent as CrossSlim } from "./cross-slim.svg";
-import { ReactComponent as Dark } from "./dark.svg";
+import { ReactComponent as Cross } from "./cross.svg";
+import { ReactComponent as CrossSmall } from "./cross-small.svg";
 import { ReactComponent as Dash } from "./dash.svg";
-import { ReactComponent as Delegate } from "./delegate.svg";
-import { ReactComponent as DelegateResigned } from "./delegate-resigned.svg";
-import { ReactComponent as Download } from "./download.svg";
-import { ReactComponent as DweFile } from "./dwe-file.svg";
-import { ReactComponent as Edit } from "./edit.svg";
-import { ReactComponent as Entity } from "./entity.svg";
-import { ReactComponent as Exchange } from "./exchange.svg";
-import { ReactComponent as Explorer } from "./explorer.svg";
-import { ReactComponent as Export } from "./export.svg";
+import { ReactComponent as EllipsisVertical } from "./ellipsis-vertical.svg";
+import { ReactComponent as ExtensionDwe } from "./extension-dwe.svg";
+import { ReactComponent as ExtensionJson } from "./extension-json.svg";
 import { ReactComponent as Eye } from "./eye.svg";
-import { ReactComponent as EyeOff } from "./eye-off.svg";
-import { ReactComponent as EyeTag } from "./eye-tag.svg";
+import { ReactComponent as EyeSlash } from "./eye-slash.svg";
 import { ReactComponent as File } from "./file.svg";
-import { ReactComponent as FilePassword } from "./file-password.svg";
-import { ReactComponent as Filters } from "./filters.svg";
-import { ReactComponent as Forward } from "./forward.svg";
+import { ReactComponent as FileLines } from "./file-lines.svg";
+import { ReactComponent as FrameKey } from "./frame-key.svg";
 import { ReactComponent as FTX } from "./ftx.svg";
-import { ReactComponent as General } from "./general.svg";
-import { ReactComponent as GridView } from "./grid-view.svg";
-import { ReactComponent as Id } from "./id.svg";
-import { ReactComponent as Import } from "./import.svg";
-import { ReactComponent as InformationCircle } from "./information-circle.svg";
-import { ReactComponent as Ipfs } from "./ipfs.svg";
-import { ReactComponent as JsonFile } from "./json-file.svg";
-import { ReactComponent as Key } from "./key.svg";
+import { ReactComponent as GlobePointer } from "./globe-pointer.svg";
+import { ReactComponent as Grid } from "./grid.svg";
+import { ReactComponent as HintSmall } from "./hint-small.svg";
 import { ReactComponent as Ledger } from "./ledger.svg";
-import { ReactComponent as Light } from "./light.svg";
-import { ReactComponent as Link } from "./link.svg";
-import { ReactComponent as ListView } from "./list-view.svg";
+import { ReactComponent as List } from "./list.svg";
 import { ReactComponent as LoaderLogo } from "./loader-logo.svg";
 import { ReactComponent as Lock } from "./lock.svg";
-import { ReactComponent as Magistrate } from "./magistrate.svg";
-import { ReactComponent as Memo } from "./memo.svg";
-import { ReactComponent as Msq } from "./msq.svg";
-import { ReactComponent as Multipayment } from "./multipayment.svg";
-import { ReactComponent as Multisig } from "./multisignature.svg";
-import { ReactComponent as Notification } from "./notification.svg";
-import { ReactComponent as OfficialPlugin } from "./official-plugin.svg";
-import { ReactComponent as OpenExplorer } from "./open-explorer.svg";
-import { ReactComponent as PaginationFirst } from "./pagination-first.svg";
-import { ReactComponent as PaginationLast } from "./pagination-last.svg";
-import { ReactComponent as Peer } from "./peer.svg";
-import { ReactComponent as Placeholder } from "./placeholder.svg";
+import { ReactComponent as MagnifyingGlass } from "./magnifying-glass.svg";
+import { ReactComponent as MagnifyingGlassId } from "./magnifying-glass-id.svg";
+import { ReactComponent as Pencil } from "./pencil.svg";
+import { ReactComponent as PencilRuler } from "./pencil-ruler.svg";
 import { ReactComponent as Plus } from "./plus.svg";
-import { ReactComponent as Portfolio } from "./portfolio.svg";
-import { ReactComponent as PortfolioTag } from "./portfolio-tag.svg";
-import { ReactComponent as Profile } from "./profile.svg";
 import { ReactComponent as QrCode } from "./qr-code.svg";
-import { ReactComponent as QuestionMark } from "./questionmark.svg";
-import { ReactComponent as Received } from "./received.svg";
-import { ReactComponent as Redirect } from "./redirect.svg";
-import { ReactComponent as Reload } from "./reload.svg";
-import { ReactComponent as ReplyArrow } from "./reply-arrow.svg";
-import { ReactComponent as Report } from "./report.svg";
-import { ReactComponent as Reset } from "./reset.svg";
-import { ReactComponent as Return } from "./return.svg";
-import { ReactComponent as Search } from "./search.svg";
-import { ReactComponent as SecondSignature } from "./second-signature.svg";
-import { ReactComponent as Send } from "./send.svg";
-import { ReactComponent as Sent } from "./sent.svg";
-import { ReactComponent as Settings } from "./settings.svg";
-import { ReactComponent as SettingsHorizontal } from "./settings-horizontal.svg";
-import { ReactComponent as SignatureStatusOk } from "./signature-status-ok.svg";
-import { ReactComponent as SignatureStatusPending } from "./signature-status-pending.svg";
-import { ReactComponent as Sort } from "./sort.svg";
+import { ReactComponent as QuestionMarkSmall } from "./question-mark-small.svg";
+import { ReactComponent as ShieldCheckMark } from "./shield-check-mark.svg";
+import { ReactComponent as Sliders } from "./sliders.svg";
+import { ReactComponent as SlidersVertical } from "./sliders-vertical.svg";
 import { ReactComponent as Star } from "./star.svg";
-import { ReactComponent as StarOutline } from "./star-outline.svg";
-import { ReactComponent as StarsOutline } from "./stars-outline.svg";
-import { ReactComponent as StatusFailed } from "./status-failed.svg";
-import { ReactComponent as StatusOk } from "./status-ok.svg";
-import { ReactComponent as StatusPending } from "./status-pending.svg";
-import { ReactComponent as Timelock } from "./timelock.svg";
-import { ReactComponent as Transfer } from "./transfer.svg";
+import { ReactComponent as StarFilled } from "./star-filled.svg";
 import { ReactComponent as Trash } from "./trash.svg";
-import { ReactComponent as Unvote } from "./unvote.svg";
-import { ReactComponent as Update } from "./update.svg";
-import { ReactComponent as Upload } from "./upload.svg";
+import { ReactComponent as UnderlineMoon } from "./underline-moon.svg";
+import { ReactComponent as UnderlineSun } from "./underline-sun.svg";
 import { ReactComponent as User } from "./user.svg";
-import { ReactComponent as Verified } from "./verified.svg";
-import { ReactComponent as Vote } from "./vote.svg";
-import { ReactComponent as VoteCombination } from "./vote-combination.svg";
-import { ReactComponent as Voted } from "./voted.svg";
+import { ReactComponent as UserCheckMark } from "./user-check-mark.svg";
 
 export const SvgCollection: any = {
+	...ArrowIcons,
 	...Currencies,
-	AlertDanger,
-	AlertDefault,
-	AlertHint,
-	AlertInfo,
-	AlertSuccess,
-	AlertWarning,
-	Appearance,
-	ArrowLeft,
-	ArrowRight,
-	Article,
-	AwaitingFinalSignature,
-	AwaitingOtherSignature,
-	AwaitingOurSignature,
-	Back,
-	CaretDown,
-	CaretUp,
-	Category,
+	...TransactionIcons,
+	Bell,
+	Categories,
 	ChartActiveDot,
 	Checkmark,
-	CheckmarkBig,
-	ChevronDown,
-	ChevronLeft,
-	ChevronLeftDouble,
-	ChevronRight,
-	ChevronRightDouble,
-	ChevronUp,
-	Close,
+	CheckmarkSmall,
+	CircleCheckMark,
+	CircleCheckMarkPencil,
+	CircleCross,
+	CircleExclamationMark,
+	CircleInfo,
+	CircleQuestionMark,
+	Clock,
+	ClockPencil,
 	Copy,
-	CopyAddress,
 	CopyKey,
-	CrossSlim,
-	Dark,
+	Cross,
+	CrossSmall,
 	Dash,
-	Delegate,
-	DelegateResigned,
-	Download,
-	DweFile,
-	Edit,
-	Entity,
-	Exchange,
-	Explorer,
-	Export,
+	Delegate: TransactionIcons.DelegateRegistration,
+	EllipsisVertical,
+	ExtensionDwe,
+	ExtensionJson,
 	Eye,
-	EyeOff,
-	EyeTag,
+	EyeSlash,
 	FTX,
 	File,
-	FilePassword,
-	Filters,
-	Forward,
-	General,
-	GridView,
-	Id,
-	Import,
-	InformationCircle,
-	Ipfs,
-	JsonFile,
-	Key,
+	FileLines,
+	FrameKey,
+	GlobePointer,
+	Grid,
+	HintSmall,
 	Ledger,
-	Light,
-	Link,
-	ListView,
+	List,
 	LoaderLogo,
 	Lock,
-	Magistrate,
-	Memo,
-	Msq,
-	Multipayment,
-	Multisig,
-	Notification,
-	OfficialPlugin,
-	OpenExplorer,
-	PaginationFirst,
-	PaginationLast,
-	Peer,
-	Placeholder,
+	MagnifyingGlass,
+	MagnifyingGlassId,
+	Pencil,
+	PencilRuler,
 	Plus,
-	Portfolio,
-	PortfolioTag,
-	Profile,
 	QrCode,
-	QuestionMark,
-	Received,
-	Redirect,
-	Reload,
-	ReplyArrow,
-	Report,
-	Reset,
-	Return,
-	Search,
-	SecondSignature,
-	Send,
-	Sent,
-	Settings,
-	SettingsHorizontal,
-	SignatureStatusOk,
-	SignatureStatusPending,
-	Sort,
+	QuestionMarkSmall,
+	ShieldCheckMark,
+	Sliders,
+	SlidersVertical,
 	Star,
-	StarOutline,
-	StarsOutline,
-	StatusFailed,
-	StatusOk,
-	StatusPending,
-	Timelock,
-	Transfer,
+	StarFilled,
 	Trash,
-	Unvote,
-	Update,
-	Upload,
+	UnderlineMoon,
+	UnderlineSun,
 	User,
-	Verified,
-	Vote,
-	VoteCombination,
-	Voted,
+	UserCheckMark,
 };

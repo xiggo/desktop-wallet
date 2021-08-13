@@ -17,7 +17,7 @@ export const LayoutControls = ({ onSelectGridView, onSelectListView, selectedVie
 				className={cn({ active: selectedViewType === "list" })}
 				onClick={onSelectListView}
 			>
-				<Icon name="ListView" size="lg" />
+				<Icon name="List" size="lg" />
 			</ControlButton>
 		</div>
 
@@ -27,7 +27,7 @@ export const LayoutControls = ({ onSelectGridView, onSelectListView, selectedVie
 				className={cn({ active: selectedViewType === "grid" })}
 				onClick={onSelectGridView}
 			>
-				<Icon name="GridView" size="lg" />
+				<Icon name="Grid" size="lg" />
 			</ControlButton>
 		</div>
 	</div>

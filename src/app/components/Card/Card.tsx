@@ -35,8 +35,9 @@ export const Card = ({ children, addonIcons, actions, onClick, onSelect, isSelec
 						toggleContent={
 							<div className="flex overflow-hidden justify-center w-4">
 								<Icon
-									name="Settings"
+									name="EllipsisVertical"
 									className="p-1 transition-colors duration-200 cursor-pointer text-theme-primary-300 dark:text-theme-secondary-600 hover:text-theme-danger-400"
+									size="lg"
 								/>
 							</div>
 						}

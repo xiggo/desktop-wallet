@@ -21,8 +21,8 @@ interface VotesProperties {
 
 const HintIcon = ({ tooltipContent }: { tooltipContent: string }) => (
 	<Tooltip content={tooltipContent} className="mb-1">
-		<span>
-			<Icon name="InformationCircle" size="lg" className="text-theme-primary-300 dark:text-theme-secondary-600" />
+		<span className="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800">
+			<Icon name="HintSmall" size="sm" className="text-theme-primary-200 dark:text-theme-secondary-200" />
 		</span>
 	</Tooltip>
 );

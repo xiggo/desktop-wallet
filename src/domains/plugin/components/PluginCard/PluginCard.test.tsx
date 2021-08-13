@@ -65,7 +65,7 @@ describe("PluginCard", () => {
 
 		const { asFragment, container } = render(<PluginCard plugin={plugin} />);
 
-		expect(container).toHaveTextContent("official-plugin.svg");
+		expect(container).toHaveTextContent("shield-check-mark.svg");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -81,7 +81,7 @@ describe("PluginCard", () => {
 
 		const { asFragment, container } = render(<PluginCard plugin={plugin} />);
 
-		expect(container).toHaveTextContent("alert-warning.svg");
+		expect(container).toHaveTextContent("circle-exclamation-mark.svg");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -97,7 +97,7 @@ describe("PluginCard", () => {
 
 		const { asFragment, container } = render(<PluginCard plugin={plugin} />);
 
-		expect(container).toHaveTextContent("update.svg");
+		expect(container).toHaveTextContent("arrows-rotate.svg");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -115,7 +115,7 @@ describe("PluginCard", () => {
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
 
-		fireEvent.click(screen.getByText("update.svg"));
+		fireEvent.click(screen.getByText("arrows-rotate.svg"));
 
 		expect(onSelect).toHaveBeenCalledWith({ value: "update" });
 	});
@@ -137,7 +137,7 @@ describe("PluginCard", () => {
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
 
-		fireEvent.keyDown(screen.getByText("update.svg"), key);
+		fireEvent.keyDown(screen.getByText("arrows-rotate.svg"), key);
 
 		expect(onSelect).toHaveBeenCalledWith({ value: "update" });
 	});
@@ -156,7 +156,7 @@ describe("PluginCard", () => {
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
 
-		fireEvent.keyDown(screen.getByText("update.svg"), { key: "Escape", keyCode: 27 });
+		fireEvent.keyDown(screen.getByText("arrows-rotate.svg"), { key: "Escape", keyCode: 27 });
 
 		expect(onSelect).not.toHaveBeenCalled();
 	});

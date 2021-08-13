@@ -367,7 +367,7 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
                 width="10"
               >
                 <svg>
-                  checkmark.svg
+                  check-mark-small.svg
                 </svg>
               </div>
               <span />
@@ -494,7 +494,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
             width="10"
           >
             <svg>
-              chevron-down.svg
+              chevron-down-small.svg
             </svg>
           </div>
           <span />
@@ -591,7 +591,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
             width="10"
           >
             <svg>
-              chevron-down.svg
+              chevron-down-small.svg
             </svg>
           </div>
           <span />
@@ -684,7 +684,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
             width="10"
           >
             <svg>
-              chevron-down.svg
+              chevron-down-small.svg
             </svg>
           </div>
           <span />
@@ -768,7 +768,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
             width="10"
           >
             <svg>
-              chevron-down.svg
+              chevron-down-small.svg
             </svg>
           </div>
           <span />
@@ -961,7 +961,7 @@ exports[`ToggleAllOption should render 1`] = `
         width="10"
       >
         <svg>
-          chevron-down.svg
+          chevron-down-small.svg
         </svg>
       </div>
       <span />
@@ -992,7 +992,7 @@ exports[`ToggleAllOption should render selected 1`] = `
         width="10"
       >
         <svg>
-          chevron-down.svg
+          chevron-down-small.svg
         </svg>
       </div>
       <span />

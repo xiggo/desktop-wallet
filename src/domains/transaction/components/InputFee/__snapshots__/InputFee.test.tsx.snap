@@ -81,12 +81,12 @@ exports[`should allow to input a value 1`] = `
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transform rotate-90"
+                    class="sc-bdnxRM AkeAK"
                     height="10"
                     width="10"
                   >
                     <svg>
-                      arrow-left.svg
+                      chevron-up-small.svg
                     </svg>
                   </div>
                 </button>
@@ -96,12 +96,12 @@ exports[`should allow to input a value 1`] = `
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transform -rotate-90"
+                    class="sc-bdnxRM AkeAK"
                     height="10"
                     width="10"
                   >
                     <svg>
-                      arrow-left.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </button>
@@ -205,12 +205,12 @@ exports[`should display converted value when on live net 1`] = `
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transform rotate-90"
+                    class="sc-bdnxRM AkeAK"
                     height="10"
                     width="10"
                   >
                     <svg>
-                      arrow-left.svg
+                      chevron-up-small.svg
                     </svg>
                   </div>
                 </button>
@@ -220,12 +220,12 @@ exports[`should display converted value when on live net 1`] = `
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transform -rotate-90"
+                    class="sc-bdnxRM AkeAK"
                     height="10"
                     width="10"
                   >
                     <svg>
-                      arrow-left.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </button>
@@ -454,12 +454,12 @@ exports[`should keep different values for simple and advanced view types 1`] = `
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transform rotate-90"
+                    class="sc-bdnxRM AkeAK"
                     height="10"
                     width="10"
                   >
                     <svg>
-                      arrow-left.svg
+                      chevron-up-small.svg
                     </svg>
                   </div>
                 </button>
@@ -469,12 +469,12 @@ exports[`should keep different values for simple and advanced view types 1`] = `
                   type="button"
                 >
                   <div
-                    class="sc-bdnxRM AkeAK transform -rotate-90"
+                    class="sc-bdnxRM AkeAK"
                     height="10"
                     width="10"
                   >
                     <svg>
-                      arrow-left.svg
+                      chevron-down-small.svg
                     </svg>
                   </div>
                 </button>
@@ -766,12 +766,12 @@ exports[`should render disabled 1`] = `
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transform rotate-90"
+                  class="sc-bdnxRM AkeAK"
                   height="10"
                   width="10"
                 >
                   <svg>
-                    arrow-left.svg
+                    chevron-up-small.svg
                   </svg>
                 </div>
               </button>
@@ -782,12 +782,12 @@ exports[`should render disabled 1`] = `
                 type="button"
               >
                 <div
-                  class="sc-bdnxRM AkeAK transform -rotate-90"
+                  class="sc-bdnxRM AkeAK"
                   height="10"
                   width="10"
                 >
                   <svg>
-                    arrow-left.svg
+                    chevron-down-small.svg
                   </svg>
                 </div>
               </button>

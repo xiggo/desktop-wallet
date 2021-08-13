@@ -47,7 +47,7 @@ exports[`WalletsList should render 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ exports[`WalletsList should render 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -121,7 +121,7 @@ exports[`WalletsList should render 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ exports[`WalletsList should render 1`] = `
                   >
                     <div
                       class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                      data-testid="WalletIcon__Key"
+                      data-testid="WalletIcon__SecondSignature"
                     >
                       <div
                         class="sc-bdnxRM NjstW"
@@ -307,7 +307,7 @@ exports[`WalletsList should render 1`] = `
                         width="20"
                       >
                         <svg>
-                          key.svg
+                          second-signature.svg
                         </svg>
                       </div>
                     </div>
@@ -445,7 +445,7 @@ exports[`WalletsList should render loading state 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -489,7 +489,7 @@ exports[`WalletsList should render loading state 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -519,7 +519,7 @@ exports[`WalletsList should render loading state 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -862,7 +862,7 @@ exports[`WalletsList should render with view more button 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -906,7 +906,7 @@ exports[`WalletsList should render with view more button 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -936,7 +936,7 @@ exports[`WalletsList should render with view more button 1`] = `
                       width="10"
                     >
                       <svg>
-                        chevron-down.svg
+                        chevron-down-small.svg
                       </svg>
                     </div>
                   </div>
@@ -1114,7 +1114,7 @@ exports[`WalletsList should render with view more button 1`] = `
                   >
                     <div
                       class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
-                      data-testid="WalletIcon__Key"
+                      data-testid="WalletIcon__SecondSignature"
                     >
                       <div
                         class="sc-bdnxRM NjstW"
@@ -1122,7 +1122,7 @@ exports[`WalletsList should render with view more button 1`] = `
                         width="20"
                       >
                         <svg>
-                          key.svg
+                          second-signature.svg
                         </svg>
                       </div>
                     </div>

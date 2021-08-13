@@ -430,12 +430,12 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                             type="button"
                           >
                             <div
-                              class="sc-bdnxRM AkeAK transform rotate-90"
+                              class="sc-bdnxRM AkeAK"
                               height="10"
                               width="10"
                             >
                               <svg>
-                                arrow-left.svg
+                                chevron-up-small.svg
                               </svg>
                             </div>
                           </button>
@@ -446,12 +446,12 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                             type="button"
                           >
                             <div
-                              class="sc-bdnxRM AkeAK transform -rotate-90"
+                              class="sc-bdnxRM AkeAK"
                               height="10"
                               width="10"
                             >
                               <svg>
-                                arrow-left.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </button>

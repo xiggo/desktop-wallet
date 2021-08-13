@@ -84,7 +84,7 @@ const PluginMenu = ({ plugin, onDelete, onEnable, onDisable, onUpdate }: any) =>
 						</Tooltip>
 					)}
 					<Button variant="secondary" size="icon" className="text-left">
-						<Icon name="Settings" size="lg" />
+						<Icon name="EllipsisVertical" size="lg" />
 					</Button>
 				</div>
 			}

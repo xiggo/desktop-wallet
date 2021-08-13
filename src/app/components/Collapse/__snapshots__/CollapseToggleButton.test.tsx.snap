@@ -19,7 +19,7 @@ exports[`CollapseToggleButton should render disabled 1`] = `
         width="10"
       >
         <svg>
-          chevron-down.svg
+          chevron-down-small.svg
         </svg>
       </div>
     </span>

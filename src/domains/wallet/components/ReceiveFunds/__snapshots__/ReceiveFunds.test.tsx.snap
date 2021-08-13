@@ -31,7 +31,7 @@ exports[`ReceiveFunds should not render qrcode without an address 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -180,7 +180,7 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -372,7 +372,7 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>

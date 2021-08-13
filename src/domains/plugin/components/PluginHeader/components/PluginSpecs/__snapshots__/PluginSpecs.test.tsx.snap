@@ -84,7 +84,7 @@ exports[`PluginSpecs should render properly 1`] = `
                 width="16"
               >
                 <svg>
-                  redirect.svg
+                  arrow-external.svg
                 </svg>
               </div>
             </a>

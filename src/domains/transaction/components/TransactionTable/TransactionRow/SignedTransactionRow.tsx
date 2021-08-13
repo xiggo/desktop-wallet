@@ -33,7 +33,7 @@ const StatusLabel = ({
 		return (
 			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_OUR_SIGNATURE")}>
 				<span className="p-1 text-theme-danger-400">
-					<Icon name="AwaitingOurSignature" size="lg" />
+					<Icon name="Pencil" size="lg" />
 				</span>
 			</Tooltip>
 		);
@@ -47,7 +47,7 @@ const StatusLabel = ({
 				})}
 			>
 				<span className="p-1 text-theme-warning-300">
-					<Icon name="AwaitingOtherSignature" size="lg" />
+					<Icon name="ClockPencil" size="lg" />
 				</span>
 			</Tooltip>
 		);
@@ -57,7 +57,7 @@ const StatusLabel = ({
 		return (
 			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>
 				<span className="p-1 text-theme-warning-300">
-					<Icon name="StatusPending" size="lg" />
+					<Icon name="Clock" size="lg" />
 				</span>
 			</Tooltip>
 		);
@@ -67,7 +67,7 @@ const StatusLabel = ({
 		return (
 			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.READY")}>
 				<span className="p-1 text-theme-success-500">
-					<Icon name="Send" />
+					<Icon name="DoubleArrowRight" />
 				</span>
 			</Tooltip>
 		);
@@ -76,7 +76,7 @@ const StatusLabel = ({
 	return (
 		<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_FINAL_SIGNATURE")}>
 			<span className="p-1 text-theme-success-500">
-				<Icon name="AwaitingFinalSignature" size="lg" />
+				<Icon name="CircleCheckMarkPencil" size="lg" />
 			</span>
 		</Tooltip>
 	);
@@ -112,7 +112,7 @@ export const SignedTransactionRow = ({
 			<TableCell variant="start">
 				<Tooltip content={transaction.id()}>
 					<span className="text-theme-secondary-300 dark:text-theme-secondary-800">
-						<Icon name="Id" />
+						<Icon name="MagnifyingGlassId" />
 					</span>
 				</Tooltip>
 			</TableCell>
@@ -150,7 +150,7 @@ export const SignedTransactionRow = ({
 						variant="secondary"
 						onClick={() => onSign?.(transaction)}
 					>
-						<Icon name="Edit" />
+						<Icon name="Pencil" />
 						<span>{t("COMMON.SIGN")}</span>
 					</Button>
 				) : null}

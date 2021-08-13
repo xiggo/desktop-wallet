@@ -280,5 +280,5 @@ export const Dropdown = ({
 
 Dropdown.defaultProps = {
 	position: "right",
-	toggleIcon: "Settings",
+	toggleIcon: "Gear",
 };

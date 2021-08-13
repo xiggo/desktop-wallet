@@ -14,7 +14,7 @@ exports[`Alert should render 1`] = `
         width="20"
       >
         <svg>
-          alert-warning.svg
+          circle-exclamation-mark.svg
         </svg>
       </div>
     </div>
@@ -39,7 +39,7 @@ exports[`Alert should render as danger alert 1`] = `
         width="20"
       >
         <svg>
-          alert-danger.svg
+          circle-cross.svg
         </svg>
       </div>
     </div>
@@ -64,7 +64,7 @@ exports[`Alert should render as hint alert 1`] = `
         width="20"
       >
         <svg>
-          alert-hint.svg
+          circle-question-mark.svg
         </svg>
       </div>
     </div>
@@ -89,7 +89,7 @@ exports[`Alert should render as info alert 1`] = `
         width="20"
       >
         <svg>
-          alert-info.svg
+          circle-info.svg
         </svg>
       </div>
     </div>
@@ -114,7 +114,7 @@ exports[`Alert should render as success alert 1`] = `
         width="20"
       >
         <svg>
-          alert-success.svg
+          circle-check-mark.svg
         </svg>
       </div>
     </div>
@@ -139,7 +139,7 @@ exports[`Alert should render as warning alert 1`] = `
         width="20"
       >
         <svg>
-          alert-warning.svg
+          circle-exclamation-mark.svg
         </svg>
       </div>
     </div>

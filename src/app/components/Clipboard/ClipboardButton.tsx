@@ -46,11 +46,7 @@ export const ClipboardButton = ({ data, variant, options, children, ...propertie
 						className="flex absolute inset-0 justify-center items-center rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
 						data-testid="clipboard-button__checkmark"
 					>
-						<Icon
-							name="Checkmark"
-							className="text-theme-primary-600 dark:text-theme-secondary-200"
-							size="lg"
-						/>
+						<Icon name="Checkmark" className="text-theme-primary-600 dark:text-theme-secondary-200" />
 					</motion.div>
 				)}
 			</AnimatePresence>

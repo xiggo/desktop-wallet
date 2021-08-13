@@ -73,7 +73,7 @@ export const StepNavigation: React.FC<StepNavigationProperties> = ({
 					data-testid="StepNavigation__send-button"
 					disabled={isNextDisabled || isLoading}
 					isLoading={isLoading}
-					icon="Send"
+					icon="DoubleArrowRight"
 					iconPosition="right"
 				>
 					<span>{t("COMMON.SEND")}</span>

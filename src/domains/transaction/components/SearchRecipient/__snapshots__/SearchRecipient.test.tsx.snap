@@ -33,7 +33,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -95,7 +95,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -125,7 +125,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -164,7 +164,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>
@@ -370,7 +370,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -432,7 +432,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -462,7 +462,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -501,7 +501,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>
@@ -707,7 +707,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -769,7 +769,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -799,7 +799,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                               width="10"
                             >
                               <svg>
-                                chevron-down.svg
+                                chevron-down-small.svg
                               </svg>
                             </div>
                           </div>
@@ -838,7 +838,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                                       width="20"
                                     >
                                       <svg>
-                                        search.svg
+                                        magnifying-glass.svg
                                       </svg>
                                     </div>
                                   </div>

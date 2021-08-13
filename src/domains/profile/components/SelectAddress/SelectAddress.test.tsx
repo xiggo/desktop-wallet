@@ -49,12 +49,6 @@ describe("SelectAddress", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render with preselected verified address", () => {
-		const { container } = render(<SelectAddress isVerified wallets={wallets} profile={profile} />);
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should open and close wallets modal", async () => {
 		const { getByTestId } = render(
 			<SelectAddress wallets={wallets} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" profile={profile} />,

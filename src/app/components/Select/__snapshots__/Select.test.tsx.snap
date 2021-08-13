@@ -42,12 +42,12 @@ exports[`Select should render a select input with options 1`] = `
           class="w-12 text-lg pointer-events-none text-theme-secondary-text"
         >
           <div
-            class="sc-bdnxRM AFVmm"
-            height="16"
-            width="16"
+            class="sc-bdnxRM AkeAK"
+            height="10"
+            width="10"
           >
             <svg>
-              chevron-down.svg
+              chevron-down-small.svg
             </svg>
           </div>
         </span>
@@ -93,12 +93,12 @@ exports[`Select should render a select input with placeholder 1`] = `
           class="w-12 text-lg pointer-events-none text-theme-secondary-text"
         >
           <div
-            class="sc-bdnxRM AFVmm"
-            height="16"
-            width="16"
+            class="sc-bdnxRM AkeAK"
+            height="10"
+            width="10"
           >
             <svg>
-              chevron-down.svg
+              chevron-down-small.svg
             </svg>
           </div>
         </span>

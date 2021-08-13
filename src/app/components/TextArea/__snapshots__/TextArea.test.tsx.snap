@@ -78,7 +78,7 @@ exports[`TextArea should render as invalid 1`] = `
           width="20"
         >
           <svg>
-            alert-warning.svg
+            circle-exclamation-mark.svg
           </svg>
         </div>
       </span>

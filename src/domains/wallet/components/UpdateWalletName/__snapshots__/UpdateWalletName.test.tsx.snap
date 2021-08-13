@@ -31,7 +31,7 @@ exports[`UpdateWalletName should render 1`] = `
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -159,7 +159,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -230,7 +230,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -305,7 +305,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -376,7 +376,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -451,7 +451,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -522,7 +522,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -597,7 +597,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -668,7 +668,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -743,7 +743,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -814,7 +814,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>
@@ -889,7 +889,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
                 width="16"
               >
                 <svg>
-                  cross-slim.svg
+                  cross.svg
                 </svg>
               </div>
             </div>
@@ -960,7 +960,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
                           width="20"
                         >
                           <svg>
-                            alert-warning.svg
+                            circle-exclamation-mark.svg
                           </svg>
                         </div>
                       </span>

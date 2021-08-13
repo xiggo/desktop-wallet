@@ -24,7 +24,7 @@ exports[`AppearanceViewingMode should render 1`] = `
           width="20"
         >
           <svg>
-            light.svg
+            underline-sun.svg
           </svg>
         </div>
         <span>
@@ -49,7 +49,7 @@ exports[`AppearanceViewingMode should render 1`] = `
           width="20"
         >
           <svg>
-            dark.svg
+            underline-moon.svg
           </svg>
         </div>
         <span>

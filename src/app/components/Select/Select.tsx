@@ -14,7 +14,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProperties>(
 				end: {
 					content: (
 						<span className="w-12 text-lg pointer-events-none text-theme-secondary-text">
-							<Icon name="ChevronDown" />
+							<Icon name="ChevronDownSmall" size="sm" />
 						</span>
 					),
 				},
