@@ -1,11 +1,13 @@
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
+import { renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
 
@@ -40,6 +42,9 @@ describe("LedgerConnectionStep", () => {
 	});
 
 	it("should emit event on fail", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		jest.setTimeout(10_000);
 
 		const getPublicKeySpy = jest
@@ -77,7 +82,9 @@ describe("LedgerConnectionStep", () => {
 		await waitFor(() => expect(screen.queryByText("Open the ARK app on your device ...")).toBeInTheDocument());
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalled(), { timeout: 10_000 });
-		await waitFor(() => expect(screen.queryByText("Failed")).toBeInTheDocument());
+		await waitFor(() =>
+			expect(screen.queryByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR"))).toBeInTheDocument(),
+		);
 
 		expect(container).toMatchSnapshot();
 

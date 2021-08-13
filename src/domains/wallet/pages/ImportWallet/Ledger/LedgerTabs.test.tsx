@@ -1,10 +1,12 @@
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
+import { renderHook } from "@testing-library/react-hooks";
 import { LedgerProvider } from "app/contexts";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
 
@@ -100,6 +102,9 @@ describe("LedgerTabs", () => {
 	const backSelector = () => screen.getByTestId("Paginator__back-button");
 
 	it("should render connection step", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockRejectedValue(new Error("Failed"));
@@ -149,7 +154,13 @@ describe("LedgerTabs", () => {
 		});
 
 		await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument());
-		await waitFor(() => expect(screen.queryByText("Failed")).toBeInTheDocument(), { timeout: 10_000 });
+		await waitFor(
+			() =>
+				expect(
+					screen.queryByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")),
+				).toBeInTheDocument(),
+			{ timeout: 10_000 },
+		);
 
 		act(() => {
 			fireEvent.click(backSelector());

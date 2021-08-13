@@ -292,7 +292,7 @@ exports[`LedgerConnectionStep should emit event on fail 1`] = `
         <div
           class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
         >
-          Failed
+          Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.
         </div>
       </div>
     </div>

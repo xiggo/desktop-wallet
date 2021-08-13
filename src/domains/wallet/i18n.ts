@@ -15,6 +15,8 @@ export const translations: { [key: string]: any } = {
 		CONNECT_SUCCESS: "Successfully connected",
 		DEVICE_NOT_SUPPORTED:
 			"A <bold>{{connectedModel}}</bold> is connected, but his operation requires a <bold>{{supportedModel}}</bold>. Connect the appropriate device to continue.",
+		GENERIC_CONNECTION_ERROR:
+			"Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.",
 		LEDGER_NANO_S: "Ledger Nano S",
 		LEDGER_NANO_X: "Ledger Nano X",
 		NO_DEVICE_FOUND: "Ledger device was not found in time",
