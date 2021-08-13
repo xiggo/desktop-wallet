@@ -105,12 +105,17 @@ const CreateProfileForm = ({
 	];
 
 	const handleSubmit = async ({ name, password: enteredPassword, currency, isDarkMode }: any) => {
+		if (profile && !profile.name()) {
+			profile.settings().set(Contracts.ProfileSetting.Name, name.trim());
+			env.profiles().persist(profile);
+		}
+
 		profile = profile || env.profiles().create(name.trim());
 
 		env.profiles().push(profile);
 		await env.profiles().restore(profile, password);
 
-		profile.settings().set(Contracts.ProfileSetting.Name, name);
+		profile.settings().set(Contracts.ProfileSetting.Name, name.trim());
 		profile.settings().set(Contracts.ProfileSetting.Theme, isDarkMode ? "dark" : "light");
 		profile.settings().set(Contracts.ProfileSetting.Avatar, avatarImage);
 		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, currency);

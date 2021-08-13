@@ -9,6 +9,7 @@ import { act, env, fireEvent, renderWithRouter, waitFor } from "utils/testing-li
 
 const passwordProtectedDwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.dwe");
 const corruptedDwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupted-profile.dwe");
+const legacyJson = fs.readFileSync("src/tests/fixtures/profile/import/legacy-profile.json");
 const darkThemeDwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-dark-theme.dwe");
 const lightThemeDwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-light-theme.dwe");
 const history = createMemoryHistory();
@@ -29,7 +30,7 @@ describe("ImportProfile", () => {
 
 	it("should render first step", async () => {
 		const history = createMemoryHistory();
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 
 		const { container, getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
@@ -43,7 +44,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should go back", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
 		const { getByTestId } = renderWithRouter(
@@ -65,7 +66,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should change file format", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 
 		const { getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
@@ -84,7 +85,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should select file and go to step 2", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 
 		const { getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
@@ -108,7 +109,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should request and set password for importing password protected profile", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 
 		const { getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
@@ -146,7 +147,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should close password modal and go back to select file", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 
 		const { getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
@@ -177,7 +178,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should successfully import profile and return to home screen", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		jest.spyOn(fs, "readFileSync").mockReturnValue(passwordProtectedDwe);
 
@@ -215,11 +216,45 @@ describe("ImportProfile", () => {
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
 
+	it("should successfully import legacy profile and return to home screen", async () => {
+		history.push("/profiles/import");
+		const historyMock = jest.spyOn(history, "push").mockReturnValue();
+		jest.spyOn(fs, "readFileSync").mockReturnValueOnce(legacyJson);
+
+		const { getAllByTestId, getByTestId } = renderWithRouter(
+			<EnvironmentProvider env={env}>
+				<ImportProfile />
+			</EnvironmentProvider>,
+			{ history },
+		);
+
+		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
+
+		fireEvent.click(getByTestId("SelectFileStep__change-file"));
+
+		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "legacy-profile.json", path: "path/to/legacy-profile.json" }],
+			},
+		});
+
+		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
+		await waitFor(() => expect(getByTestId("CreateProfile__form")).toBeInTheDocument());
+
+		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "legacy profile" } });
+		await waitFor(() => expect(getAllByTestId("Input")[0]).toHaveValue("legacy profile"));
+
+		fireEvent.click(getByTestId("CreateProfile__submit-button"));
+
+		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
+	});
+
 	it.each([
 		["dark", darkThemeDwe],
 		["light", lightThemeDwe],
 	])("should apply theme setting of imported profile regardless of OS preferences", async (theme, dweFile) => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 
 		jest.spyOn(fs, "readFileSync").mockReturnValueOnce(dweFile);
 
@@ -253,7 +288,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should go to step 3 and back", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 
 		const { getByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
@@ -295,7 +330,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and show error step", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 
 		const { getByTestId } = renderWithRouter(
@@ -333,7 +368,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and retry", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 
 		const { getByTestId } = renderWithRouter(
@@ -376,7 +411,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and go back to home screen", async () => {
-		history.push(`/profiles/import`);
+		history.push("/profiles/import");
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
