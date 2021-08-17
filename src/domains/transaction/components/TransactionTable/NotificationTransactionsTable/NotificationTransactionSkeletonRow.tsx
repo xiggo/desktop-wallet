@@ -1,4 +1,3 @@
-import { Circle } from "app/components/Circle";
 import { Skeleton } from "app/components/Skeleton";
 import { TableCell, TableRow } from "app/components/Table";
 import { useRandomNumber } from "app/hooks";
@@ -11,13 +10,9 @@ export const NotificationTransactionSkeletonRow: React.FC = () => {
 	return (
 		<TableRow>
 			<TableCell variant="start" innerClassName="space-x-3" isCompact>
-				<div className="flex items-center -space-x-1">
-					<Circle className="leading-none border-transparent" size="sm">
-						<Skeleton circle height={32} width={32} />
-					</Circle>
-					<Circle className="leading-none border-transparent" size="sm">
-						<Skeleton circle height={32} width={32} />
-					</Circle>
+				<div className="flex items-center space-x-2">
+					<Skeleton circle height={20} width={20} />
+					<Skeleton circle height={20} width={20} />
 				</div>
 
 				<Skeleton height={16} width={recipientWidth} />

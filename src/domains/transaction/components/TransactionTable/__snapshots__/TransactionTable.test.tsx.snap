@@ -2166,7 +2166,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
               >
                 <span>
                   <span
@@ -2185,7 +2185,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <span>
                   <span
@@ -2204,45 +2204,37 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <div
-                  class="flex items-center mr-4 -space-x-1"
+                  class="flex items-center mr-4 space-x-2"
                 >
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  </span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
+                  </span>
                 </div>
                 <span>
                   <span
@@ -2261,7 +2253,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2280,7 +2272,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2299,7 +2291,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
                   class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -2340,7 +2332,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
               >
                 <span>
                   <span
@@ -2359,7 +2351,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <span>
                   <span
@@ -2378,45 +2370,37 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <div
-                  class="flex items-center mr-4 -space-x-1"
+                  class="flex items-center mr-4 space-x-2"
                 >
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  </span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
+                  </span>
                 </div>
                 <span>
                   <span
@@ -2435,7 +2419,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2454,7 +2438,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2473,7 +2457,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
                   class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -2514,7 +2498,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
               >
                 <span>
                   <span
@@ -2533,7 +2517,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <span>
                   <span
@@ -2552,45 +2536,37 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <div
-                  class="flex items-center mr-4 -space-x-1"
+                  class="flex items-center mr-4 space-x-2"
                 >
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  </span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
+                  </span>
                 </div>
                 <span>
                   <span
@@ -2609,7 +2585,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2628,7 +2604,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2647,7 +2623,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
                   class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -2688,7 +2664,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
               >
                 <span>
                   <span
@@ -2707,7 +2683,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <span>
                   <span
@@ -2726,45 +2702,37 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <div
-                  class="flex items-center mr-4 -space-x-1"
+                  class="flex items-center mr-4 space-x-2"
                 >
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  </span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
+                  </span>
                 </div>
                 <span>
                   <span
@@ -2783,7 +2751,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2802,7 +2770,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2821,7 +2789,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
                   class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -2862,7 +2830,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
           >
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
               >
                 <span>
                   <span
@@ -2881,7 +2849,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <span>
                   <span
@@ -2900,45 +2868,37 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
               >
                 <div
-                  class="flex items-center mr-4 -space-x-1"
+                  class="flex items-center mr-4 space-x-2"
                 >
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                  >
-                    <span>
+                  </span>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
                       <span
-                        class="flex items-center leading-none"
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 44px; height: 44px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      ‌
                     </span>
-                  </div>
+                  </span>
                 </div>
                 <span>
                   <span
@@ -2957,7 +2917,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2976,7 +2936,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
               >
                 <span>
                   <span
@@ -2995,7 +2955,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
                   class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"

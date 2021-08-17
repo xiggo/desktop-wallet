@@ -2676,42 +2676,34 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
                       >
                         <div
-                          class="flex items-center mr-4 -space-x-1"
+                          class="flex items-center mr-4 space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
+                          </span>
                         </div>
                         <span>
                           <span
@@ -2869,42 +2861,34 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
                       >
                         <div
-                          class="flex items-center mr-4 -space-x-1"
+                          class="flex items-center mr-4 space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
+                          </span>
                         </div>
                         <span>
                           <span
@@ -3062,42 +3046,34 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
                       >
                         <div
-                          class="flex items-center mr-4 -space-x-1"
+                          class="flex items-center mr-4 space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
+                          </span>
                         </div>
                         <span>
                           <span
@@ -3255,42 +3231,34 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
                       >
                         <div
-                          class="flex items-center mr-4 -space-x-1"
+                          class="flex items-center mr-4 space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
+                          </span>
                         </div>
                         <span>
                           <span
@@ -3448,42 +3416,34 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
                       >
                         <div
-                          class="flex items-center mr-4 -space-x-1"
+                          class="flex items-center mr-4 space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
+                          </span>
                         </div>
                         <span>
                           <span
@@ -3641,42 +3601,34 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
                       >
                         <div
-                          class="flex items-center mr-4 -space-x-1"
+                          class="flex items-center mr-4 space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
+                          </span>
                         </div>
                         <span>
                           <span
@@ -3834,42 +3786,34 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
                       >
                         <div
-                          class="flex items-center mr-4 -space-x-1"
+                          class="flex items-center mr-4 space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
+                          </span>
                         </div>
                         <span>
                           <span
@@ -4027,42 +3971,34 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
                       >
                         <div
-                          class="flex items-center mr-4 -space-x-1"
+                          class="flex items-center mr-4 space-x-2"
                         >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
                               <span
-                                class="flex items-center leading-none"
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 20px; height: 20px; border-radius: 50%;"
                               >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
                                 ‌
                               </span>
+                              ‌
                             </span>
-                          </div>
+                          </span>
                         </div>
                         <span>
                           <span

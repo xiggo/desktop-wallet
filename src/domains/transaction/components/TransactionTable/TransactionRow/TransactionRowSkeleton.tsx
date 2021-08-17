@@ -3,7 +3,6 @@ import { Skeleton } from "app/components/Skeleton";
 import { TableCell, TableRow } from "app/components/Table";
 import { useRandomNumber } from "app/hooks";
 import React from "react";
-import { Size } from "types";
 
 type Properties = {
 	showSignColumn?: boolean;
@@ -22,15 +21,6 @@ export const TransactionRowSkeleton = ({
 	const amountWidth = useRandomNumber(100, 130);
 	const currencyWidth = Math.floor(amountWidth * 0.75);
 
-	let circleSize: Size = "lg";
-	let circleSizeSkeleton = 44;
-
-	/* istanbul ignore next */
-	if (isCompact) {
-		circleSize = "sm";
-		circleSizeSkeleton = 32;
-	}
-
 	return (
 		<TableRow>
 			<TableCell variant="start" isCompact={isCompact}>
@@ -42,14 +32,21 @@ export const TransactionRowSkeleton = ({
 			</TableCell>
 
 			<TableCell isCompact={isCompact}>
-				<div className="flex items-center mr-4 -space-x-1">
-					<Circle className="border-transparent" size={circleSize}>
-						<Skeleton circle height={circleSizeSkeleton} width={circleSizeSkeleton} />
-					</Circle>
-					<Circle className="border-transparent" size={circleSize}>
-						<Skeleton circle height={circleSizeSkeleton} width={circleSizeSkeleton} />
-					</Circle>
-				</div>
+				{isCompact ? (
+					<div className="flex items-center mr-4 space-x-2">
+						<Skeleton circle height={20} width={20} />
+						<Skeleton circle height={20} width={20} />
+					</div>
+				) : (
+					<div className="flex items-center mr-4 -space-x-1">
+						<Circle className="border-transparent" size="lg">
+							<Skeleton circle height={44} width={44} />
+						</Circle>
+						<Circle className="border-transparent" size="lg">
+							<Skeleton circle height={44} width={44} />
+						</Circle>
+					</div>
+				)}
 
 				<Skeleton height={16} width={recipientWidth} />
 			</TableCell>

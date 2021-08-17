@@ -134,7 +134,7 @@ describe("TransactionTable", () => {
 
 		it("should render with memo column", () => {
 			const { getAllByTestId, asFragment } = renderWithRouter(
-				<TransactionTable transactions={[]} isLoading showMemoColumn={true} skeletonRowsLimit={5} />,
+				<TransactionTable transactions={[]} isCompact isLoading showMemoColumn={true} skeletonRowsLimit={5} />,
 			);
 
 			expect(getAllByTestId("TableRow")).toHaveLength(5);
