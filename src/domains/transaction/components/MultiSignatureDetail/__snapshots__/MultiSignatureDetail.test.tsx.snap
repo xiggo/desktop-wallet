@@ -265,6 +265,27 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
                           Confirmations
                         </div>
                         <div
@@ -713,6 +734,27 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                           class="font-semibold"
                         >
                           01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
                         </div>
                       </div>
                     </div>
@@ -1187,6 +1229,27 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
                           Confirmations
                         </div>
                         <div
@@ -1648,6 +1711,27 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
                           Confirmations
                         </div>
                         <div
@@ -2023,6 +2107,27 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                           class="font-semibold"
                         >
                           01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
                         </div>
                       </div>
                     </div>
@@ -2611,6 +2716,27 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
                           Confirmations
                         </div>
                         <div
@@ -2956,6 +3082,27 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                           class="font-semibold"
                         >
                           01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
                         </div>
                       </div>
                     </div>
@@ -3415,6 +3562,27 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
                           Confirmations
                         </div>
                         <div
@@ -3838,6 +4006,27 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
                           Confirmations
                         </div>
                         <div
@@ -4248,6 +4437,27 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                           class="font-semibold"
                         >
                           01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
                         </div>
                       </div>
                     </div>
@@ -4908,6 +5118,27 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
                           Confirmations
                         </div>
                         <div
@@ -5367,6 +5598,27 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                           class="font-semibold"
                         >
                           01.07.2020 12:00 AM
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+                      data-testid="TransactionDetail"
+                    >
+                      <div
+                        class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                      >
+                        <div
+                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        >
+                          Minimum Required Signatures
+                        </div>
+                        <div
+                          class="font-semibold"
+                        >
+                          2
+                           / 
+                          2
                         </div>
                       </div>
                     </div>

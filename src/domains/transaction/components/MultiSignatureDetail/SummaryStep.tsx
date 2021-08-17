@@ -82,6 +82,8 @@ export const SummaryStep = ({
 		findVoteDelegates();
 	}, [env, wallet, transaction, type]);
 
+	const { publicKeys, min } = transaction.get<{ publicKeys: string[]; min: number }>("multiSignature");
+
 	return (
 		<section>
 			<Header title={getLabel(type)} />
@@ -120,6 +122,10 @@ export const SummaryStep = ({
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
+
+			<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.MIN_SIGNATURES")}>
+				{min} / {publicKeys.length}
+			</TransactionDetail>
 
 			<TransactionDetail label={t("TRANSACTION.CONFIRMATIONS")}>
 				{t("TRANSACTION.MODAL_MULTISIGNATURE_DETAIL.WAITING_FOR_SIGNATURES")}
