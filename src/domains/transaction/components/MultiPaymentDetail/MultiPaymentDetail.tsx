@@ -5,13 +5,14 @@ import {
 	TransactionExplorerLink,
 	TransactionFee,
 	TransactionMemo,
-	TransactionRecipients,
 	TransactionSender,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
 import { TransactionAliases } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+
+import { MultiPaymentRecipients } from "./components/MultiPaymentRecipients";
 
 interface MultiPaymentDetailProperties {
 	isOpen: boolean;
@@ -44,7 +45,7 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Mu
 				border={false}
 			/>
 
-			<TransactionRecipients currency={wallet.currency()} recipients={recipients} />
+			<MultiPaymentRecipients transaction={transaction} recipients={recipients} />
 
 			<TransactionAmount
 				amount={transaction.amount()}

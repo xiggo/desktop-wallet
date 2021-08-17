@@ -16,6 +16,8 @@ const getSize = (type: string, size: string): any => {
 		switch (size) {
 			case "sm":
 				return tw`h-2`;
+			case "md":
+				return tw`h-5`;
 			case "lg":
 				return tw`h-8`;
 			default:

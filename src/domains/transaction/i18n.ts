@@ -305,6 +305,7 @@ export const translations: { [key: string]: any } = {
 		LOW_BALANCE: "The balance is too low",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
 	},
+	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
 	VOTES: "Votes",
 	VOTES_COUNT: "Votes ({{count}})",
