@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 import { TransactionRowAmount } from "./TransactionRowAmount";
 import { TransactionRowConfirmation } from "./TransactionRowConfirmation";
-import { TransactionRowInfo } from "./TransactionRowInfo";
+import { TransactionRowMemo } from "./TransactionRowMemo";
 import { TransactionRowMode } from "./TransactionRowMode";
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { TransactionRowSkeleton } from "./TransactionRowSkeleton";
@@ -23,6 +23,7 @@ type Properties = {
 	walletName?: string;
 	isLoading?: boolean;
 	showExplorerLink?: boolean;
+	showMemoColumn?: boolean;
 	showSignColumn?: boolean;
 	isCompact?: boolean;
 } & React.HTMLProps<any>;
@@ -37,6 +38,7 @@ export const TransactionRow = memo(
 		walletName,
 		isLoading = false,
 		showExplorerLink = true,
+		showMemoColumn = false,
 		showSignColumn = false,
 		isCompact = false,
 		...properties
@@ -50,6 +52,7 @@ export const TransactionRow = memo(
 					data-testid="TransactionRow__skeleton"
 					showCurrencyColumn={!!exchangeCurrency}
 					showSignColumn={showSignColumn}
+					showMemoColumn={showMemoColumn}
 					isCompact={isCompact}
 				/>
 			);
@@ -120,9 +123,11 @@ export const TransactionRow = memo(
 					</div>
 				</TableCell>
 
-				<TableCell innerClassName="justify-center" isCompact={isCompact}>
-					<TransactionRowInfo transaction={transaction} />
-				</TableCell>
+				{showMemoColumn && (
+					<TableCell innerClassName="justify-center" isCompact={isCompact}>
+						<TransactionRowMemo memo={transaction.memo()} />
+					</TableCell>
+				)}
 
 				<TableCell className="w-16" innerClassName="justify-center" isCompact={isCompact}>
 					<TransactionRowConfirmation transaction={transaction} />

@@ -180,23 +180,9 @@ exports[`Transactions should fetch more transactions 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
-              colspan="1"
-              data-testid="table__th--3"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div>
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
-              data-testid="table__th--4"
+              data-testid="table__th--3"
               role="columnheader"
             >
               <div
@@ -210,7 +196,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -240,7 +226,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
-              data-testid="table__th--6"
+              data-testid="table__th--5"
               role="columnheader"
             >
               <div
@@ -352,14 +338,159 @@ exports[`Transactions should fetch more transactions 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="w-16"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      circle-check-mark.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+              >
+                <div
+                  data-testid="TransactionAmount__tooltip"
+                >
+                  <div
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                    color="success"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 400,000 DARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="hidden xl:block"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+              >
+                <span
+                  class="whitespace-nowrap text-theme-secondary-text"
+                  data-testid="TransactionRow__currency"
+                >
+                  N/A
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+              >
+                <a
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="TransactionRow__ID"
+                  href="#"
+                  rel="noopener noreferrer"
+                  to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                >
+                  <span
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                  >
+                    <div
+                      class="sc-bdnxRM AFVmm"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        magnifying-glass-id.svg
+                      </svg>
+                    </div>
+                  </span>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="TransactionRow__timestamp"
+                >
+                  23.07.2020 8:03 AM
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
+              >
+                <div
+                  class="flex items-center -space-x-1"
+                  data-testid="TransactionRowMode"
+                >
+                  <div
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                        title="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-40 flex-1"
+                >
+                  <div
+                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                  >
+                    <span
+                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                    </span>
+                  </div>
+                </div>
               </div>
             </td>
             <td
@@ -517,16 +648,6 @@ exports[`Transactions should fetch more transactions 1`] = `
                 </div>
               </div>
             </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
-              </div>
-            </td>
             <td
               class="w-16"
             >
@@ -682,181 +803,6 @@ exports[`Transactions should fetch more transactions 1`] = `
                 </div>
               </div>
             </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
-              </div>
-            </td>
-            <td
-              class="w-16"
-            >
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex p-1 align-middle"
-                  data-testid="TransactionRowConfirmation"
-                >
-                  <div
-                    class="sc-bdnxRM NjstW text-theme-success-600"
-                    data-testid="TransactionRowConfirmation__confirmed"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      circle-check-mark.svg
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
-              >
-                <div
-                  data-testid="TransactionAmount__tooltip"
-                >
-                  <div
-                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
-                    color="success"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
-                    >
-                      + 400,000 DARK
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td
-              class="hidden xl:block"
-            >
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
-              >
-                <span
-                  class="whitespace-nowrap text-theme-secondary-text"
-                  data-testid="TransactionRow__currency"
-                >
-                  N/A
-                </span>
-              </div>
-            </td>
-          </tr>
-          <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
-            data-testid="TableRow"
-          >
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
-              >
-                <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="TransactionRow__ID"
-                  href="#"
-                  rel="noopener noreferrer"
-                  to="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
-                >
-                  <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
-                  >
-                    <div
-                      class="sc-bdnxRM AFVmm"
-                      height="16"
-                      width="16"
-                    >
-                      <svg>
-                        magnifying-glass-id.svg
-                      </svg>
-                    </div>
-                  </span>
-                </a>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
-              >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="TransactionRow__timestamp"
-                >
-                  23.07.2020 8:03 AM
-                </span>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
-              >
-                <div
-                  class="flex items-center -space-x-1"
-                  data-testid="TransactionRowMode"
-                >
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
-                  >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        received.svg
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
-                        title="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="w-40 flex-1"
-                >
-                  <div
-                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                  >
-                    <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
-              </div>
-            </td>
             <td
               class="w-16"
             >
@@ -1012,14 +958,159 @@ exports[`Transactions should fetch more transactions 1`] = `
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="w-16"
+            >
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
+                  class="inline-flex p-1 align-middle"
+                  data-testid="TransactionRowConfirmation"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW text-theme-success-600"
+                    data-testid="TransactionRowConfirmation__confirmed"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      circle-check-mark.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+              >
+                <div
+                  data-testid="TransactionAmount__tooltip"
+                >
+                  <div
+                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                    color="success"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 50,000 DARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="hidden xl:block"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+              >
+                <span
+                  class="whitespace-nowrap text-theme-secondary-text"
+                  data-testid="TransactionRow__currency"
+                >
+                  N/A
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+              >
+                <a
+                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="TransactionRow__ID"
+                  href="#"
+                  rel="noopener noreferrer"
+                  to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
+                >
+                  <span
+                    class="Link__Content-sc-ec014t-1 hUiuRR"
+                  >
+                    <div
+                      class="sc-bdnxRM AFVmm"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        magnifying-glass-id.svg
+                      </svg>
+                    </div>
+                  </span>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="TransactionRow__timestamp"
+                >
+                  23.07.2020 8:01 AM
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
+              >
+                <div
+                  class="flex items-center -space-x-1"
+                  data-testid="TransactionRowMode"
+                >
+                  <div
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"60\\" cx=\\"40\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                        title="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-40 flex-1"
+                >
+                  <div
+                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                  >
+                    <span
+                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
+                    </span>
+                  </div>
+                </div>
               </div>
             </td>
             <td
@@ -1177,16 +1268,6 @@ exports[`Transactions should fetch more transactions 1`] = `
                 </div>
               </div>
             </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
-              </div>
-            </td>
             <td
               class="w-16"
             >
@@ -1340,181 +1421,6 @@ exports[`Transactions should fetch more transactions 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
-              </div>
-            </td>
-            <td
-              class="w-16"
-            >
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex p-1 align-middle"
-                  data-testid="TransactionRowConfirmation"
-                >
-                  <div
-                    class="sc-bdnxRM NjstW text-theme-success-600"
-                    data-testid="TransactionRowConfirmation__confirmed"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      circle-check-mark.svg
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
-              >
-                <div
-                  data-testid="TransactionAmount__tooltip"
-                >
-                  <div
-                    class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
-                    color="success"
-                  >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
-                    >
-                      + 50,000 DARK
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td
-              class="hidden xl:block"
-            >
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
-              >
-                <span
-                  class="whitespace-nowrap text-theme-secondary-text"
-                  data-testid="TransactionRow__currency"
-                >
-                  N/A
-                </span>
-              </div>
-            </td>
-          </tr>
-          <tr
-            class="TableRow__TableRowStyled-sc-y9j4av-0 gwDXhN group"
-            data-testid="TableRow"
-          >
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
-              >
-                <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="TransactionRow__ID"
-                  href="#"
-                  rel="noopener noreferrer"
-                  to="https://dexplorer.ark.io/transaction/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
-                >
-                  <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
-                  >
-                    <div
-                      class="sc-bdnxRM AFVmm"
-                      height="16"
-                      width="16"
-                    >
-                      <svg>
-                        magnifying-glass-id.svg
-                      </svg>
-                    </div>
-                  </span>
-                </a>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
-              >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="TransactionRow__timestamp"
-                >
-                  23.07.2020 8:01 AM
-                </span>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
-              >
-                <div
-                  class="flex items-center -space-x-1"
-                  data-testid="TransactionRowMode"
-                >
-                  <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
-                  >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        received.svg
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"60\\" cx=\\"40\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
-                        title="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="w-40 flex-1"
-                >
-                  <div
-                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                  >
-                    <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -1774,23 +1680,9 @@ exports[`Transactions should hide view more button when there are no next pages 
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
-              colspan="1"
-              data-testid="table__th--3"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div>
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
-              data-testid="table__th--4"
+              data-testid="table__th--3"
               role="columnheader"
             >
               <div
@@ -1804,7 +1696,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -1834,7 +1726,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
-              data-testid="table__th--6"
+              data-testid="table__th--5"
               role="columnheader"
             >
               <div
@@ -1944,16 +1836,6 @@ exports[`Transactions should hide view more button when there are no next pages 
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -2109,16 +1991,6 @@ exports[`Transactions should hide view more button when there are no next pages 
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -2274,16 +2146,6 @@ exports[`Transactions should hide view more button when there are no next pages 
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -2439,16 +2301,6 @@ exports[`Transactions should hide view more button when there are no next pages 
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -2697,23 +2549,9 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
-              colspan="1"
-              data-testid="table__th--3"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div>
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
-              data-testid="table__th--4"
+              data-testid="table__th--3"
               role="columnheader"
             >
               <div
@@ -2727,7 +2565,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -2757,7 +2595,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
-              data-testid="table__th--6"
+              data-testid="table__th--5"
               role="columnheader"
             >
               <div
@@ -2867,16 +2705,6 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -3032,16 +2860,6 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -3197,16 +3015,6 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -3362,16 +3170,6 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -3620,23 +3418,9 @@ exports[`Transactions should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
-              colspan="1"
-              data-testid="table__th--3"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div>
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
-              data-testid="table__th--4"
+              data-testid="table__th--3"
               role="columnheader"
             >
               <div
@@ -3650,7 +3434,7 @@ exports[`Transactions should render 1`] = `
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -3680,7 +3464,7 @@ exports[`Transactions should render 1`] = `
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
-              data-testid="table__th--6"
+              data-testid="table__th--5"
               role="columnheader"
             >
               <div
@@ -3790,16 +3574,6 @@ exports[`Transactions should render 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -3955,16 +3729,6 @@ exports[`Transactions should render 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -4120,16 +3884,6 @@ exports[`Transactions should render 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -4285,16 +4039,6 @@ exports[`Transactions should render 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -4543,23 +4287,9 @@ exports[`Transactions should render with custom title 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
-              colspan="1"
-              data-testid="table__th--3"
-              role="columnheader"
-            >
-              <div
-                class="flex flex-inline align-top justify-center"
-              >
-                <div>
-                  Info
-                </div>
-              </div>
-            </th>
-            <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
-              data-testid="table__th--4"
+              data-testid="table__th--3"
               role="columnheader"
             >
               <div
@@ -4573,7 +4303,7 @@ exports[`Transactions should render with custom title 1`] = `
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
               colspan="1"
-              data-testid="table__th--5"
+              data-testid="table__th--4"
               role="columnheader"
               style="cursor: pointer;"
               title="Toggle SortBy"
@@ -4603,7 +4333,7 @@ exports[`Transactions should render with custom title 1`] = `
             <th
               class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
               colspan="1"
-              data-testid="table__th--6"
+              data-testid="table__th--5"
               role="columnheader"
             >
               <div
@@ -4713,16 +4443,6 @@ exports[`Transactions should render with custom title 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -4878,16 +4598,6 @@ exports[`Transactions should render with custom title 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -5043,16 +4753,6 @@ exports[`Transactions should render with custom title 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td
@@ -5208,16 +4908,6 @@ exports[`Transactions should render with custom title 1`] = `
                     </span>
                   </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-              >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
               </div>
             </td>
             <td

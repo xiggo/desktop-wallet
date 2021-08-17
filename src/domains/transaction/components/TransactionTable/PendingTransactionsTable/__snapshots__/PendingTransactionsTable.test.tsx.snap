@@ -245,10 +245,20 @@ exports[`Signed Transaction Table should render pending transfers 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
+                <span
+                  class="p-1"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -547,25 +557,20 @@ exports[`Signed Transaction Table should render signed transactions and handle e
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
+                <span
+                  class="p-1"
                 >
-                  <span
-                    class="p-1"
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      data-testid="TransactionRowInfo__multiSignature"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        multisignature.svg
-                      </svg>
-                    </div>
-                  </span>
-                </div>
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -860,25 +865,20 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
+                <span
+                  class="p-1"
                 >
-                  <span
-                    class="p-1"
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      data-testid="TransactionRowInfo__multiSignature"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        multisignature.svg
-                      </svg>
-                    </div>
-                  </span>
-                </div>
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -1196,25 +1196,20 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
+                <span
+                  class="p-1"
                 >
-                  <span
-                    class="p-1"
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      data-testid="TransactionRowInfo__multiSignature"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        multisignature.svg
-                      </svg>
-                    </div>
-                  </span>
-                </div>
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -1509,25 +1504,20 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
+                <span
+                  class="p-1"
                 >
-                  <span
-                    class="p-1"
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      data-testid="TransactionRowInfo__multiSignature"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        multisignature.svg
-                      </svg>
-                    </div>
-                  </span>
-                </div>
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -1845,25 +1835,20 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
+                <span
+                  class="p-1"
                 >
-                  <span
-                    class="p-1"
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      data-testid="TransactionRowInfo__multiSignature"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        multisignature.svg
-                      </svg>
-                    </div>
-                  </span>
-                </div>
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -2181,25 +2166,20 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
+                <span
+                  class="p-1"
                 >
-                  <span
-                    class="p-1"
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      data-testid="TransactionRowInfo__multiSignature"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        multisignature.svg
-                      </svg>
-                    </div>
-                  </span>
-                </div>
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -2517,10 +2497,20 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
+                <span
+                  class="p-1"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -2819,10 +2809,20 @@ exports[`Signed Transaction Table should show as vote 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
-                />
+                <span
+                  class="p-1"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -3121,25 +3121,20 @@ exports[`Signed Transaction Table should show the sign button 1`] = `
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
+                <span
+                  class="p-1"
                 >
-                  <span
-                    class="p-1"
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      data-testid="TransactionRowInfo__multiSignature"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        multisignature.svg
-                      </svg>
-                    </div>
-                  </span>
-                </div>
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td
@@ -3457,25 +3452,20 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
               <div
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
-                <div
-                  class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                  data-testid="TransactionRowInfo"
+                <span
+                  class="p-1"
                 >
-                  <span
-                    class="p-1"
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="PendingTransactions__multiSignature"
+                    height="20"
+                    width="20"
                   >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      data-testid="TransactionRowInfo__multiSignature"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        multisignature.svg
-                      </svg>
-                    </div>
-                  </span>
-                </div>
+                    <svg>
+                      multisignature.svg
+                    </svg>
+                  </div>
+                </span>
               </div>
             </td>
             <td

@@ -8,7 +8,6 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
-import { BaseTransactionRowInfo } from "./TransactionRowInfo";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 
@@ -128,7 +127,13 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="justify-center">
-				<BaseTransactionRowInfo isMultiSignatureRegistration={transaction.usesMultiSignature()} />
+				{transaction.usesMultiSignature() && (
+					<Tooltip content={t("COMMON.MULTISIGNATURE")}>
+						<span className="p-1">
+							<Icon data-testid="PendingTransactions__multiSignature" name="Multisignature" size="lg" />
+						</span>
+					</Tooltip>
+				)}
 			</TableCell>
 
 			<TableCell className="w-16" innerClassName="justify-center truncate">

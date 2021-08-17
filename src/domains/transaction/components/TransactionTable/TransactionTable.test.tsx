@@ -65,6 +65,18 @@ describe("TransactionTable", () => {
 		mockIsMultiSignatureRegistration.mockRestore();
 	});
 
+	it("should render with memo", () => {
+		const mockMemo = jest.spyOn(transactions[0], "memo").mockReturnValue("memo");
+
+		const { getAllByTestId } = renderWithRouter(
+			<TransactionTable transactions={transactions} showMemoColumn={true} />,
+		);
+
+		expect(getAllByTestId("TransactionRowMemo__vendorField")).toHaveLength(1);
+
+		mockMemo.mockRestore();
+	});
+
 	it("should render without explorer link column", () => {
 		const { getAllByTestId, asFragment } = renderWithRouter(
 			// @ts-ignore - TODO: brittle fixtures
@@ -114,6 +126,15 @@ describe("TransactionTable", () => {
 		it("should render with currency column", () => {
 			const { getAllByTestId, asFragment } = renderWithRouter(
 				<TransactionTable transactions={[]} isLoading exchangeCurrency="BTC" skeletonRowsLimit={5} />,
+			);
+
+			expect(getAllByTestId("TableRow")).toHaveLength(5);
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should render with memo column", () => {
+			const { getAllByTestId, asFragment } = renderWithRouter(
+				<TransactionTable transactions={[]} isLoading showMemoColumn={true} skeletonRowsLimit={5} />,
 			);
 
 			expect(getAllByTestId("TableRow")).toHaveLength(5);

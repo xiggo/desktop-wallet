@@ -10,6 +10,7 @@ type Skeleton = Record<string, unknown>;
 interface Properties {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
 	exchangeCurrency?: string;
+	showMemoColumn?: boolean;
 	showSignColumn?: boolean;
 	showExplorerLinkColumn?: boolean;
 	hideHeader?: boolean;
@@ -23,6 +24,7 @@ export const TransactionTable = memo(
 	({
 		transactions,
 		exchangeCurrency,
+		showMemoColumn = false,
 		showSignColumn = false,
 		showExplorerLinkColumn = true,
 		isCompact = false,
@@ -34,6 +36,7 @@ export const TransactionTable = memo(
 		const columns = useColumns({
 			exchangeCurrency,
 			showExplorerLinkColumn,
+			showMemoColumn,
 			showSignColumn,
 		});
 
@@ -63,6 +66,7 @@ export const TransactionTable = memo(
 							transaction={row as DTO.ExtendedConfirmedTransactionData}
 							exchangeCurrency={exchangeCurrency}
 							showExplorerLink={showExplorerLinkColumn}
+							showMemoColumn={showMemoColumn}
 							showSignColumn={showSignColumn}
 							isCompact={isCompact}
 						/>

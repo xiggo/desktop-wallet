@@ -310,10 +310,10 @@ describe("Signed Transaction Table", () => {
 		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
 
 		const { getAllByTestId } = render(
-			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} />,
+			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
 
-		await waitFor(() => expect(getAllByTestId("TransactionRowInfo")).toHaveLength(1));
+		await waitFor(() => expect(getAllByTestId("PendingTransactions__multiSignature")).toHaveLength(1));
 
 		canBeSignedMock.mockReset();
 		isMultiSignatureReadyMock.mockRestore();
@@ -373,7 +373,7 @@ describe("Signed Transaction Table", () => {
 		const { asFragment, getByTestId } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(getByTestId("TransactionRowInfo__multiSignature")).toBeInTheDocument());
+		await waitFor(() => expect(getByTestId("PendingTransactions__multiSignature")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -390,7 +390,7 @@ describe("Signed Transaction Table", () => {
 		const { asFragment, getByTestId } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(getByTestId("TransactionRowInfo__multiSignature")).toBeInTheDocument());
+		await waitFor(() => expect(getByTestId("PendingTransactions__multiSignature")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 

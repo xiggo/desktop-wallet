@@ -940,23 +940,9 @@ exports[`Dashboard should render 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
-                      colspan="1"
-                      data-testid="table__th--3"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-center"
-                      >
-                        <div>
-                          Info
-                        </div>
-                      </div>
-                    </th>
-                    <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
                       colspan="1"
-                      data-testid="table__th--4"
+                      data-testid="table__th--3"
                       role="columnheader"
                     >
                       <div
@@ -970,7 +956,7 @@ exports[`Dashboard should render 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
                       colspan="1"
-                      data-testid="table__th--5"
+                      data-testid="table__th--4"
                       role="columnheader"
                       style="cursor: pointer;"
                       title="Toggle SortBy"
@@ -1000,7 +986,7 @@ exports[`Dashboard should render 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
                       colspan="1"
-                      data-testid="table__th--6"
+                      data-testid="table__th--5"
                       role="columnheader"
                     >
                       <div
@@ -1110,16 +1096,6 @@ exports[`Dashboard should render 1`] = `
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <div
-                          class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="TransactionRowInfo"
-                        />
                       </div>
                     </td>
                     <td
@@ -1275,16 +1251,6 @@ exports[`Dashboard should render 1`] = `
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <div
-                          class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="TransactionRowInfo"
-                        />
                       </div>
                     </td>
                     <td
@@ -1440,16 +1406,6 @@ exports[`Dashboard should render 1`] = `
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <div
-                          class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="TransactionRowInfo"
-                        />
                       </div>
                     </td>
                     <td
@@ -1605,16 +1561,6 @@ exports[`Dashboard should render 1`] = `
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <div
-                          class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="TransactionRowInfo"
-                        />
                       </div>
                     </td>
                     <td
@@ -2621,23 +2567,9 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
-                      colspan="1"
-                      data-testid="table__th--3"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-center"
-                      >
-                        <div>
-                          Info
-                        </div>
-                      </div>
-                    </th>
-                    <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
                       colspan="1"
-                      data-testid="table__th--4"
+                      data-testid="table__th--3"
                       role="columnheader"
                     >
                       <div
@@ -2651,7 +2583,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
                       colspan="1"
-                      data-testid="table__th--5"
+                      data-testid="table__th--4"
                       role="columnheader"
                       style="cursor: pointer;"
                       title="Toggle SortBy"
@@ -2681,7 +2613,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
                       colspan="1"
-                      data-testid="table__th--6"
+                      data-testid="table__th--5"
                       role="columnheader"
                     >
                       <div
@@ -2800,8 +2732,27 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                       <div
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
                       >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 22px; height: 22px; border-radius: 50%;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                      >
                         <span
-                          class="flex items-center space-x-2"
+                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                         >
                           <span>
                             <span
@@ -2809,12 +2760,163 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             >
                               <span
                                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 16px; height: 16px;"
+                                style="width: 1px; height: 16px;"
                               >
                                 ‌
                               </span>
                               ‌
                             </span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 35px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden xl:block"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                      >
+                        <span
+                          class="flex items-center space-x-1"
+                        >
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 0px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 35px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                      >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 16px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                      >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 150px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                      >
+                        <div
+                          class="flex items-center mr-4 -space-x-1"
+                        >
+                          <div
+                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
+                          >
+                            <span>
+                              <span
+                                class="flex items-center leading-none"
+                              >
+                                <span
+                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                  style="width: 32px; height: 32px; border-radius: 50%;"
+                                >
+                                  ‌
+                                </span>
+                                ‌
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
+                          >
+                            <span>
+                              <span
+                                class="flex items-center leading-none"
+                              >
+                                <span
+                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                  style="width: 32px; height: 32px; border-radius: 50%;"
+                                >
+                                  ‌
+                                </span>
+                                ‌
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
                           </span>
                         </span>
                       </div>
@@ -3016,8 +3118,27 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                       <div
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
                       >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 22px; height: 22px; border-radius: 50%;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                      >
                         <span
-                          class="flex items-center space-x-2"
+                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                         >
                           <span>
                             <span
@@ -3025,12 +3146,163 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             >
                               <span
                                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 16px; height: 16px;"
+                                style="width: 1px; height: 16px;"
                               >
                                 ‌
                               </span>
                               ‌
                             </span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 35px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden xl:block"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                      >
+                        <span
+                          class="flex items-center space-x-1"
+                        >
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 0px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 35px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                      >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 16px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                      >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 150px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                      >
+                        <div
+                          class="flex items-center mr-4 -space-x-1"
+                        >
+                          <div
+                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
+                          >
+                            <span>
+                              <span
+                                class="flex items-center leading-none"
+                              >
+                                <span
+                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                  style="width: 32px; height: 32px; border-radius: 50%;"
+                                >
+                                  ‌
+                                </span>
+                                ‌
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
+                          >
+                            <span>
+                              <span
+                                class="flex items-center leading-none"
+                              >
+                                <span
+                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                  style="width: 32px; height: 32px; border-radius: 50%;"
+                                >
+                                  ‌
+                                </span>
+                                ‌
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
                           </span>
                         </span>
                       </div>
@@ -3232,8 +3504,27 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                       <div
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
                       >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 22px; height: 22px; border-radius: 50%;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+                      >
                         <span
-                          class="flex items-center space-x-2"
+                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
                         >
                           <span>
                             <span
@@ -3241,12 +3532,163 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                             >
                               <span
                                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 16px; height: 16px;"
+                                style="width: 1px; height: 16px;"
                               >
                                 ‌
                               </span>
                               ‌
                             </span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 35px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden xl:block"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                      >
+                        <span
+                          class="flex items-center space-x-1"
+                        >
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 0px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                          <span>
+                            <span
+                              class="flex items-center leading-none"
+                            >
+                              <span
+                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                style="width: 35px; height: 16px;"
+                              >
+                                ‌
+                              </span>
+                              ‌
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+                      >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 16px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                      >
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 150px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
+                          </span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+                      >
+                        <div
+                          class="flex items-center mr-4 -space-x-1"
+                        >
+                          <div
+                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
+                          >
+                            <span>
+                              <span
+                                class="flex items-center leading-none"
+                              >
+                                <span
+                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                  style="width: 32px; height: 32px; border-radius: 50%;"
+                                >
+                                  ‌
+                                </span>
+                                ‌
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
+                          >
+                            <span>
+                              <span
+                                class="flex items-center leading-none"
+                              >
+                                <span
+                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                                  style="width: 32px; height: 32px; border-radius: 50%;"
+                                >
+                                  ‌
+                                </span>
+                                ‌
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <span>
+                          <span
+                            class="flex items-center leading-none"
+                          >
+                            <span
+                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                              style="width: 1px; height: 16px;"
+                            >
+                              ‌
+                            </span>
+                            ‌
                           </span>
                         </span>
                       </div>
@@ -3448,29 +3890,6 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                       <div
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
                       >
-                        <span
-                          class="flex items-center space-x-2"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 16px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
                         <span>
                           <span
                             class="flex items-center leading-none"
@@ -3656,677 +4075,6 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                               ‌
                             </span>
                             ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <span
-                          class="flex items-center space-x-2"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 16px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 22px; height: 22px; border-radius: 50%;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
-                      >
-                        <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 1px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 35px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden xl:block"
-                    >
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
-                      >
-                        <span
-                          class="flex items-center space-x-1"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 0px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 35px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
-                    data-testid="TableRow"
-                  >
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 16px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 150px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
-                      >
-                        <div
-                          class="flex items-center mr-4 -space-x-1"
-                        >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
-                              <span
-                                class="flex items-center leading-none"
-                              >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
-                                ‌
-                              </span>
-                            </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
-                              <span
-                                class="flex items-center leading-none"
-                              >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
-                                ‌
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 1px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <span
-                          class="flex items-center space-x-2"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 16px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 22px; height: 22px; border-radius: 50%;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
-                      >
-                        <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 1px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 35px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden xl:block"
-                    >
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
-                      >
-                        <span
-                          class="flex items-center space-x-1"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 0px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 35px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
-                    data-testid="TableRow"
-                  >
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 16px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 150px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
-                      >
-                        <div
-                          class="flex items-center mr-4 -space-x-1"
-                        >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
-                              <span
-                                class="flex items-center leading-none"
-                              >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
-                                ‌
-                              </span>
-                            </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
-                              <span
-                                class="flex items-center leading-none"
-                              >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
-                                ‌
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 1px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <span
-                          class="flex items-center space-x-2"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 16px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 22px; height: 22px; border-radius: 50%;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
-                      >
-                        <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 1px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 35px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden xl:block"
-                    >
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
-                      >
-                        <span
-                          class="flex items-center space-x-1"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 0px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 35px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
-                    data-testid="TableRow"
-                  >
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 16px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
-                      >
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 150px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
-                      >
-                        <div
-                          class="flex items-center mr-4 -space-x-1"
-                        >
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
-                              <span
-                                class="flex items-center leading-none"
-                              >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
-                                ‌
-                              </span>
-                            </span>
-                          </div>
-                          <div
-                            class="Circle__CircleWrapper-sc-d5u41q-0 hvLSoA border-transparent ring-theme-background"
-                          >
-                            <span>
-                              <span
-                                class="flex items-center leading-none"
-                              >
-                                <span
-                                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                  style="width: 32px; height: 32px; border-radius: 50%;"
-                                >
-                                  ‌
-                                </span>
-                                ‌
-                              </span>
-                            </span>
-                          </div>
-                        </div>
-                        <span>
-                          <span
-                            class="flex items-center leading-none"
-                          >
-                            <span
-                              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 1px; height: 16px;"
-                            >
-                              ‌
-                            </span>
-                            ‌
-                          </span>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <span
-                          class="flex items-center space-x-2"
-                        >
-                          <span>
-                            <span
-                              class="flex items-center leading-none"
-                            >
-                              <span
-                                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                                style="width: 16px; height: 16px;"
-                              >
-                                ‌
-                              </span>
-                              ‌
-                            </span>
                           </span>
                         </span>
                       </div>
@@ -5370,23 +5118,9 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-24 min-w-24"
-                      colspan="1"
-                      data-testid="table__th--3"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-center"
-                      >
-                        <div>
-                          Info
-                        </div>
-                      </div>
-                    </th>
-                    <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
                       colspan="1"
-                      data-testid="table__th--4"
+                      data-testid="table__th--3"
                       role="columnheader"
                     >
                       <div
@@ -5400,7 +5134,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
                       colspan="1"
-                      data-testid="table__th--5"
+                      data-testid="table__th--4"
                       role="columnheader"
                       style="cursor: pointer;"
                       title="Toggle SortBy"
@@ -5430,7 +5164,7 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                     <th
                       class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder hidden xl:table-cell w-28 min-w-28"
                       colspan="1"
-                      data-testid="table__th--6"
+                      data-testid="table__th--5"
                       role="columnheader"
                     >
                       <div
@@ -5540,16 +5274,6 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <div
-                          class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="TransactionRowInfo"
-                        />
                       </div>
                     </td>
                     <td
@@ -5705,16 +5429,6 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <div
-                          class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="TransactionRowInfo"
-                        />
                       </div>
                     </td>
                     <td
@@ -5870,16 +5584,6 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <div
-                          class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="TransactionRowInfo"
-                        />
                       </div>
                     </td>
                     <td
@@ -6035,16 +5739,6 @@ exports[`Dashboard should show warning for errored networks 1`] = `
                             </span>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
-                      >
-                        <div
-                          class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-                          data-testid="TransactionRowInfo"
-                        />
                       </div>
                     </td>
                     <td

@@ -6,10 +6,16 @@ import { useTranslation } from "react-i18next";
 interface UseColumnProperties {
 	exchangeCurrency: string | undefined;
 	showExplorerLinkColumn: boolean | undefined;
+	showMemoColumn: boolean | undefined;
 	showSignColumn: boolean | undefined;
 }
 
-export const useColumns = ({ exchangeCurrency, showExplorerLinkColumn, showSignColumn }: UseColumnProperties) => {
+export const useColumns = ({
+	exchangeCurrency,
+	showExplorerLinkColumn,
+	showMemoColumn,
+	showSignColumn,
+}: UseColumnProperties) => {
 	const { t } = useTranslation();
 
 	return useMemo<TableColumn[]>(() => {
@@ -31,8 +37,8 @@ export const useColumns = ({ exchangeCurrency, showExplorerLinkColumn, showSignC
 			cellWidth: "w-96",
 		};
 
-		const columnInfo: TableColumn = {
-			Header: t("COMMON.INFO"),
+		const columnMemo: TableColumn = {
+			Header: t("COMMON.MEMO"),
 			cellWidth: "w-24",
 			className: "justify-center",
 		};
@@ -68,11 +74,11 @@ export const useColumns = ({ exchangeCurrency, showExplorerLinkColumn, showSignC
 			showExplorerLinkColumn && columnId,
 			columnDate,
 			columnRecipient,
-			columnInfo,
+			showMemoColumn && columnMemo,
 			columnStatus,
 			columnAmount,
 			exchangeCurrency && columnCurrency,
 			showSignColumn && columnSign,
 		].filter(Boolean) as TableColumn[];
-	}, [t, showExplorerLinkColumn, exchangeCurrency, showSignColumn]);
+	}, [t, showExplorerLinkColumn, showMemoColumn, exchangeCurrency, showSignColumn]);
 };

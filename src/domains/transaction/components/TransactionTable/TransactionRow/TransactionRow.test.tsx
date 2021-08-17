@@ -29,7 +29,6 @@ describe("TransactionRow", () => {
 		expect(getByTestId("TransactionRow__timestamp")).toBeTruthy();
 		expect(getByTestId("TransactionRowMode")).toBeTruthy();
 		expect(getByTestId("Address__address")).toBeTruthy();
-		expect(getByTestId("TransactionRowInfo")).toBeTruthy();
 		expect(getByTestId("TransactionRowConfirmation")).toBeTruthy();
 		expect(getByTestId("AmountCrypto")).toBeTruthy();
 	});
@@ -46,9 +45,7 @@ describe("TransactionRow", () => {
 							wallet: () => ({
 								currency: () => "BTC",
 								isLedger: () => false,
-								network: () => ({
-									isTest: () => false,
-								}),
+								network: () => ({ isTest: () => false } as any),
 							}),
 						}}
 						exchangeCurrency="BTC"

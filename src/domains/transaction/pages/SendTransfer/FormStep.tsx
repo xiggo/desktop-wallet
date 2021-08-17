@@ -153,7 +153,7 @@ export const FormStep = ({
 				</div>
 
 				<FormField name="memo" className="relative">
-					<FormLabel label="Memo" optional />
+					<FormLabel label={t("COMMON.MEMO")} optional />
 					<InputCounter
 						data-testid="Input__memo"
 						type="text"

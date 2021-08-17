@@ -127,6 +127,7 @@ export const WalletDetails = () => {
 						isLoading={profileIsSyncing}
 						isUpdatingWallet={isUpdatingWallet}
 						onLoading={setIsUpdatingTransactions}
+						showMemoColumn={activeWallet.network().usesMemo()}
 					/>
 				</Section>
 			</Page>

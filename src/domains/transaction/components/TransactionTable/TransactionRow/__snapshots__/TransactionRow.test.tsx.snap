@@ -100,31 +100,6 @@ exports[`TransactionRow should omit the currency for transactions from test netw
             </div>
           </div>
         </td>
-        <td>
-          <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-          >
-            <div
-              class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="TransactionRowInfo"
-            >
-              <span
-                class="p-1"
-              >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  data-testid="TransactionRowInfo__vendorField"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    file-lines.svg
-                  </svg>
-                </div>
-              </span>
-            </div>
-          </div>
-        </td>
         <td
           class="w-16"
         >
@@ -286,31 +261,6 @@ exports[`TransactionRow should show transaction with currency 1`] = `
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
               </div>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
-          >
-            <div
-              class="inline-flex space-x-1 align-middle text-theme-secondary-700 dark:text-theme-secondary-600"
-              data-testid="TransactionRowInfo"
-            >
-              <span
-                class="p-1"
-              >
-                <div
-                  class="sc-bdnxRM NjstW"
-                  data-testid="TransactionRowInfo__vendorField"
-                  height="20"
-                  width="20"
-                >
-                  <svg>
-                    file-lines.svg
-                  </svg>
-                </div>
-              </span>
             </div>
           </div>
         </td>

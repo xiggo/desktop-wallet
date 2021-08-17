@@ -2,18 +2,23 @@ import { Circle } from "app/components/Circle";
 import { Skeleton } from "app/components/Skeleton";
 import { TableCell, TableRow } from "app/components/Table";
 import { useRandomNumber } from "app/hooks";
-import React, { useMemo } from "react";
+import React from "react";
 import { Size } from "types";
 
 type Properties = {
 	showSignColumn?: boolean;
+	showMemoColumn?: boolean;
 	showCurrencyColumn?: boolean | "";
 	isCompact: boolean;
 } & React.HTMLProps<any>;
 
-export const TransactionRowSkeleton = ({ showSignColumn, showCurrencyColumn, isCompact }: Properties) => {
+export const TransactionRowSkeleton = ({
+	showSignColumn,
+	showCurrencyColumn,
+	isCompact,
+	showMemoColumn,
+}: Properties) => {
 	const recipientWidth = useRandomNumber(120, 150);
-	const infoIconCount = useRandomNumber(0, 3);
 	const amountWidth = useRandomNumber(100, 130);
 	const currencyWidth = Math.floor(amountWidth * 0.75);
 
@@ -25,14 +30,6 @@ export const TransactionRowSkeleton = ({ showSignColumn, showCurrencyColumn, isC
 		circleSize = "sm";
 		circleSizeSkeleton = 32;
 	}
-
-	const infoIcons = useMemo(
-		() =>
-			new Array(infoIconCount)
-				.fill(undefined)
-				.map((_: any, index: number) => <Skeleton key={index} width={16} height={16} />),
-		[infoIconCount],
-	);
 
 	return (
 		<TableRow>
@@ -57,9 +54,11 @@ export const TransactionRowSkeleton = ({ showSignColumn, showCurrencyColumn, isC
 				<Skeleton height={16} width={recipientWidth} />
 			</TableCell>
 
-			<TableCell innerClassName="justify-center" isCompact={isCompact}>
-				<span className="flex items-center space-x-2">{infoIcons}</span>
-			</TableCell>
+			{showMemoColumn && (
+				<TableCell innerClassName="justify-center" isCompact={isCompact}>
+					<Skeleton width={16} height={16} />
+				</TableCell>
+			)}
 
 			<TableCell innerClassName="justify-center" isCompact={isCompact}>
 				<Skeleton circle width={22} height={22} />
