@@ -1,23 +1,12 @@
 import { Contracts } from "@payvo/profiles";
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { Circle } from "app/components/Circle";
 import { EmptyResults } from "app/components/EmptyResults";
-import { Icon } from "app/components/Icon";
 import { Pagination } from "app/components/Pagination";
 import { Table } from "app/components/Table";
-import { Tooltip } from "app/components/Tooltip";
-import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import tw, { styled } from "twin.macro";
 
+import { DelegateFooter } from "./DelegateFooter";
 import { DelegateRow } from "./DelegateRow";
-
-const Footer = styled.div`
-	${tw`fixed bottom-0 inset-x-0 py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background`}
-`;
 
 interface DelegateTableProperties {
 	delegates: Contracts.IReadOnlyWallet[];
@@ -75,14 +64,6 @@ export const DelegateTable = ({
 
 	const totalDelegates = delegates.length;
 	const hasVotes = votes!.length > 0;
-
-	const getTotalVotes = () => {
-		if (maxVotes === 1) {
-			return selectedVotes.length || selectedUnvotes.length;
-		}
-
-		return selectedVotes.length + selectedUnvotes.length;
-	};
 
 	useEffect(() => {
 		if (hasVotes && selectedVotes.length === maxVotes) {
@@ -202,109 +183,13 @@ export const DelegateTable = ({
 				)}
 			</div>
 
-			<Footer data-testid="DelegateTable__footer">
-				<div className="container px-10 mx-auto">
-					<div className="flex h-11 font-semibold">
-						<div className="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
-							<Avatar className="mr-2" size="lg" address={selectedWallet} noShadow />
-							<div className="flex flex-col space-y-2">
-								<div className="text-sm leading-tight text-theme-secondary-500">
-									{t("COMMON.ADDRESS")}
-								</div>
-								<Address address={selectedWallet} addressClass="leading-tight" size="lg" />
-							</div>
-						</div>
-
-						<div className="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
-							<Circle
-								className={cn(
-									"mr-2 bg-theme-background",
-									selectedVotes.length === 0
-										? "border-theme-secondary-500 text-theme-secondary-500"
-										: "border-theme-text text-theme-text",
-								)}
-								size="lg"
-							>
-								<Icon name="Vote" size="lg" />
-							</Circle>
-							<div className="flex flex-col space-y-2">
-								<div className="text-sm leading-tight text-theme-secondary-500">
-									{t("VOTE.DELEGATE_TABLE.VOTES")}
-								</div>
-								<div
-									className={cn(
-										"text-lg leading-tight",
-										selectedVotes.length > 0 ? "text-theme-text" : "text-theme-secondary-500",
-									)}
-									data-testid="DelegateTable__footer--votes"
-								>
-									{selectedVotes.length}
-								</div>
-							</div>
-						</div>
-
-						<div className="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
-							<Circle
-								className={cn(
-									"mr-2 bg-theme-background",
-									selectedUnvotes.length === 0
-										? "border-theme-secondary-500 text-theme-secondary-500"
-										: "border-theme-text text-theme-text",
-								)}
-								size="lg"
-							>
-								<Icon name="Unvote" size="lg" />
-							</Circle>
-							<div className="flex flex-col space-y-2">
-								<div className="text-sm leading-tight text-theme-secondary-500">
-									{t("VOTE.DELEGATE_TABLE.UNVOTES")}
-								</div>
-								<div
-									className={cn(
-										"text-lg leading-tight",
-										selectedUnvotes.length > 0 ? "text-theme-text" : "text-theme-secondary-500",
-									)}
-									data-testid="DelegateTable__footer--unvotes"
-								>
-									{selectedUnvotes.length}
-								</div>
-							</div>
-						</div>
-
-						<div className="flex px-8">
-							<Circle className="mr-2 bg-theme-background border-theme-text text-theme-text" size="lg">
-								<Icon name="VoteCombination" size="lg" />
-							</Circle>
-							<div className="flex flex-col space-y-2">
-								<div className="text-sm leading-tight text-theme-secondary-500">
-									{t("VOTE.DELEGATE_TABLE.TOTAL")}
-								</div>
-								<div
-									className="text-lg leading-tight text-theme-text"
-									data-testid="DelegateTable__footer--total"
-								>
-									{getTotalVotes()}/{maxVotes}
-								</div>
-							</div>
-						</div>
-
-						<Tooltip
-							content={t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE")}
-							disabled={!!getTotalVotes()}
-						>
-							<span className="ml-auto">
-								<Button
-									disabled={!getTotalVotes()}
-									onClick={() => onContinue?.(selectedUnvotes, selectedVotes)}
-									data-testid="DelegateTable__continue-button"
-								>
-									{t("COMMON.CONTINUE")}
-								</Button>
-							</span>
-						</Tooltip>
-					</div>
-				</div>
-			</Footer>
+			<DelegateFooter
+				selectedWallet={selectedWallet}
+				selectedVotes={selectedVotes}
+				selectedUnvotes={selectedUnvotes}
+				maxVotes={maxVotes}
+				onContinue={onContinue}
+			/>
 		</div>
 	);
 };

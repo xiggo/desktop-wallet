@@ -384,7 +384,7 @@ describe("Votes", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
+		expect(getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -410,7 +410,7 @@ describe("Votes", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
+		expect(getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
 
 		walletVoteMock.mockRestore();
 	});
@@ -438,7 +438,7 @@ describe("Votes", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
+		expect(getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
 		expect(asFragment()).toMatchSnapshot();
 
 		walletRestoreMock.mockRestore();

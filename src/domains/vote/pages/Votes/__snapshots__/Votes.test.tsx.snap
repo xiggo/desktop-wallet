@@ -595,7 +595,7 @@ exports[`Votes should filter current delegates 1`] = `
               class="flex justify-center mt-8 w-full"
             />
             <div
-              class="DelegateTable__Footer-sc-h9leik-0 hayFlA"
+              class="fixed inset-x-0 bottom-0 w-screen py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background"
               data-testid="DelegateTable__footer"
             >
               <div
@@ -605,10 +605,10 @@ exports[`Votes should filter current delegates 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex space-x-3 mr-auto"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL mr-2 flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -625,7 +625,7 @@ exports[`Votes should filter current delegates 1`] = `
                       class="flex flex-col space-y-2"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
                       >
                         Address
                       </div>
@@ -642,117 +642,121 @@ exports[`Votes should filter current delegates 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
+                        class="flex flex-col space-y-2"
                       >
-                        <svg>
-                          vote.svg
-                        </svg>
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Votes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--vote"
+                          disabled=""
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="flex flex-col space-y-2"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="flex flex-col space-y-2"
                       >
-                        Votes
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Unvotes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--unvote"
+                          disabled=""
+                        >
+                          0
+                        </div>
                       </div>
                       <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--votes"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
                       >
-                        0
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            unvote.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex space-x-3 px-6"
+                    >
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--votecombination"
+                        >
+                          0/1
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote-combination.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    data-testid="DelegateTable__continue-button"
+                    disabled=""
+                    type="button"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex items-center space-x-2"
                     >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          unvote.svg
-                        </svg>
-                      </div>
+                      Continue
                     </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Unvotes
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--unvotes"
-                      >
-                        0
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex px-8"
-                  >
-                    <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
-                    >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          vote-combination.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Total
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--total"
-                      >
-                        0/1
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="ml-auto"
-                  >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
-                      data-testid="DelegateTable__continue-button"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Continue
-                      </div>
-                    </button>
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -1465,7 +1469,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
               class="flex justify-center mt-8 w-full"
             />
             <div
-              class="DelegateTable__Footer-sc-h9leik-0 hayFlA"
+              class="fixed inset-x-0 bottom-0 w-screen py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background"
               data-testid="DelegateTable__footer"
             >
               <div
@@ -1475,10 +1479,10 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex space-x-3 mr-auto"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL mr-2 flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -1495,7 +1499,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="flex flex-col space-y-2"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
                       >
                         Address
                       </div>
@@ -1512,117 +1516,121 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                     </div>
                   </div>
                   <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
+                        class="flex flex-col space-y-2"
                       >
-                        <svg>
-                          vote.svg
-                        </svg>
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Votes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--vote"
+                          disabled=""
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="flex flex-col space-y-2"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="flex flex-col space-y-2"
                       >
-                        Votes
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Unvotes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--unvote"
+                          disabled=""
+                        >
+                          0
+                        </div>
                       </div>
                       <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--votes"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
                       >
-                        0
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            unvote.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex space-x-3 px-6"
+                    >
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--votecombination"
+                        >
+                          0/1
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote-combination.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    data-testid="DelegateTable__continue-button"
+                    disabled=""
+                    type="button"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex items-center space-x-2"
                     >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          unvote.svg
-                        </svg>
-                      </div>
+                      Continue
                     </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Unvotes
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--unvotes"
-                      >
-                        0
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex px-8"
-                  >
-                    <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
-                    >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          vote-combination.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Total
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--total"
-                      >
-                        0/1
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="ml-auto"
-                  >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
-                      data-testid="DelegateTable__continue-button"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Continue
-                      </div>
-                    </button>
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -2339,7 +2347,7 @@ exports[`Votes should render 1`] = `
               class="flex justify-center mt-8 w-full"
             />
             <div
-              class="DelegateTable__Footer-sc-h9leik-0 hayFlA"
+              class="fixed inset-x-0 bottom-0 w-screen py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background"
               data-testid="DelegateTable__footer"
             >
               <div
@@ -2349,10 +2357,10 @@ exports[`Votes should render 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex space-x-3 mr-auto"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL mr-2 flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -2369,7 +2377,7 @@ exports[`Votes should render 1`] = `
                       class="flex flex-col space-y-2"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
                       >
                         Address
                       </div>
@@ -2386,117 +2394,121 @@ exports[`Votes should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
+                        class="flex flex-col space-y-2"
                       >
-                        <svg>
-                          vote.svg
-                        </svg>
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Votes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--vote"
+                          disabled=""
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="flex flex-col space-y-2"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="flex flex-col space-y-2"
                       >
-                        Votes
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Unvotes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--unvote"
+                          disabled=""
+                        >
+                          0
+                        </div>
                       </div>
                       <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--votes"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
                       >
-                        0
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            unvote.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex space-x-3 px-6"
+                    >
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--votecombination"
+                        >
+                          0/1
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote-combination.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    data-testid="DelegateTable__continue-button"
+                    disabled=""
+                    type="button"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex items-center space-x-2"
                     >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          unvote.svg
-                        </svg>
-                      </div>
+                      Continue
                     </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Unvotes
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--unvotes"
-                      >
-                        0
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex px-8"
-                  >
-                    <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
-                    >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          vote-combination.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Total
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--total"
-                      >
-                        0/1
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="ml-auto"
-                  >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
-                      data-testid="DelegateTable__continue-button"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Continue
-                      </div>
-                    </button>
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -3209,7 +3221,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
               class="flex justify-center mt-8 w-full"
             />
             <div
-              class="DelegateTable__Footer-sc-h9leik-0 hayFlA"
+              class="fixed inset-x-0 bottom-0 w-screen py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background"
               data-testid="DelegateTable__footer"
             >
               <div
@@ -3219,10 +3231,10 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex space-x-3 mr-auto"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL mr-2 flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -3239,7 +3251,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="flex flex-col space-y-2"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
                       >
                         Address
                       </div>
@@ -3256,117 +3268,121 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
+                        class="flex flex-col space-y-2"
                       >
-                        <svg>
-                          vote.svg
-                        </svg>
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Votes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--vote"
+                          disabled=""
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="flex flex-col space-y-2"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="flex flex-col space-y-2"
                       >
-                        Votes
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Unvotes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--unvote"
+                          disabled=""
+                        >
+                          0
+                        </div>
                       </div>
                       <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--votes"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
                       >
-                        0
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            unvote.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex space-x-3 px-6"
+                    >
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--votecombination"
+                        >
+                          0/1
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote-combination.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    data-testid="DelegateTable__continue-button"
+                    disabled=""
+                    type="button"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex items-center space-x-2"
                     >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          unvote.svg
-                        </svg>
-                      </div>
+                      Continue
                     </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Unvotes
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--unvotes"
-                      >
-                        0
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex px-8"
-                  >
-                    <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
-                    >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          vote-combination.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Total
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--total"
-                      >
-                        0/1
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="ml-auto"
-                  >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
-                      data-testid="DelegateTable__continue-button"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Continue
-                      </div>
-                    </button>
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -4452,7 +4468,7 @@ exports[`Votes should select a delegate 1`] = `
               class="flex justify-center mt-8 w-full"
             />
             <div
-              class="DelegateTable__Footer-sc-h9leik-0 hayFlA"
+              class="fixed inset-x-0 bottom-0 w-screen py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background"
               data-testid="DelegateTable__footer"
             >
               <div
@@ -4462,10 +4478,10 @@ exports[`Votes should select a delegate 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex space-x-3 mr-auto"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL mr-2 flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -4482,7 +4498,7 @@ exports[`Votes should select a delegate 1`] = `
                       class="flex flex-col space-y-2"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
                       >
                         Address
                       </div>
@@ -4499,116 +4515,118 @@ exports[`Votes should select a delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
+                        class="flex flex-col space-y-2"
                       >
-                        <svg>
-                          vote.svg
-                        </svg>
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Votes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--vote"
+                          disabled=""
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="flex flex-col space-y-2"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="flex flex-col space-y-2"
                       >
-                        Votes
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Unvotes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--unvote"
+                        >
+                          1
+                        </div>
                       </div>
                       <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--votes"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
                       >
-                        0
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            unvote.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex space-x-3 px-6"
+                    >
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--votecombination"
+                        >
+                          1/1
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote-combination.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    data-testid="DelegateTable__continue-button"
+                    type="button"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
+                      class="flex items-center space-x-2"
                     >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          unvote.svg
-                        </svg>
-                      </div>
+                      Continue
                     </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Unvotes
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--unvotes"
-                      >
-                        1
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex px-8"
-                  >
-                    <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
-                    >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          vote-combination.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Total
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--total"
-                      >
-                        1/1
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="ml-auto"
-                  >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
-                      data-testid="DelegateTable__continue-button"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Continue
-                      </div>
-                    </button>
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -5323,7 +5341,7 @@ exports[`Votes should select an address without vote 1`] = `
               class="flex justify-center mt-8 w-full"
             />
             <div
-              class="DelegateTable__Footer-sc-h9leik-0 hayFlA"
+              class="fixed inset-x-0 bottom-0 w-screen py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background"
               data-testid="DelegateTable__footer"
             >
               <div
@@ -5333,10 +5351,10 @@ exports[`Votes should select an address without vote 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex space-x-3 mr-auto"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL mr-2 flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -5353,7 +5371,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="flex flex-col space-y-2"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
                       >
                         Address
                       </div>
@@ -5370,117 +5388,121 @@ exports[`Votes should select an address without vote 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
+                        class="flex flex-col space-y-2"
                       >
-                        <svg>
-                          vote.svg
-                        </svg>
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Votes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--vote"
+                          disabled=""
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="flex flex-col space-y-2"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="flex flex-col space-y-2"
                       >
-                        Votes
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Unvotes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--unvote"
+                          disabled=""
+                        >
+                          0
+                        </div>
                       </div>
                       <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--votes"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
                       >
-                        0
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            unvote.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex space-x-3 px-6"
+                    >
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--votecombination"
+                        >
+                          0/1
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote-combination.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    data-testid="DelegateTable__continue-button"
+                    disabled=""
+                    type="button"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex items-center space-x-2"
                     >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          unvote.svg
-                        </svg>
-                      </div>
+                      Continue
                     </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Unvotes
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--unvotes"
-                      >
-                        0
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex px-8"
-                  >
-                    <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
-                    >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          vote-combination.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Total
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--total"
-                      >
-                        0/1
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="ml-auto"
-                  >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
-                      data-testid="DelegateTable__continue-button"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Continue
-                      </div>
-                    </button>
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -7253,7 +7275,7 @@ exports[`Votes should show network warning 1`] = `
               class="flex justify-center mt-8 w-full"
             />
             <div
-              class="DelegateTable__Footer-sc-h9leik-0 hayFlA"
+              class="fixed inset-x-0 bottom-0 w-screen py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background"
               data-testid="DelegateTable__footer"
             >
               <div
@@ -7263,10 +7285,10 @@ exports[`Votes should show network warning 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex space-x-3 mr-auto"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL mr-2 flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -7283,7 +7305,7 @@ exports[`Votes should show network warning 1`] = `
                       class="flex flex-col space-y-2"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
                       >
                         Address
                       </div>
@@ -7300,116 +7322,118 @@ exports[`Votes should show network warning 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
+                        class="flex flex-col space-y-2"
                       >
-                        <svg>
-                          vote.svg
-                        </svg>
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Votes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--vote"
+                          disabled=""
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="flex flex-col space-y-2"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="flex flex-col space-y-2"
                       >
-                        Votes
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Unvotes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--unvote"
+                        >
+                          1
+                        </div>
                       </div>
                       <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--votes"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
                       >
-                        0
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            unvote.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex space-x-3 px-6"
+                    >
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--votecombination"
+                        >
+                          1/1
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote-combination.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    data-testid="DelegateTable__continue-button"
+                    type="button"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
+                      class="flex items-center space-x-2"
                     >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          unvote.svg
-                        </svg>
-                      </div>
+                      Continue
                     </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Unvotes
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--unvotes"
-                      >
-                        1
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex px-8"
-                  >
-                    <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
-                    >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          vote-combination.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Total
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--total"
-                      >
-                        1/1
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="ml-auto"
-                  >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
-                      data-testid="DelegateTable__continue-button"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Continue
-                      </div>
-                    </button>
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -8156,7 +8180,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
               class="flex justify-center mt-8 w-full"
             />
             <div
-              class="DelegateTable__Footer-sc-h9leik-0 hayFlA"
+              class="fixed inset-x-0 bottom-0 w-screen py-8 shadow-footer-smooth dark:shadow-footer-smooth-dark bg-theme-background"
               data-testid="DelegateTable__footer"
             >
               <div
@@ -8166,10 +8190,10 @@ exports[`Votes should show resigned delegate notice 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex pr-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex space-x-3 mr-auto"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL mr-2 flex-shrink-0"
+                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
                       data-testid="Avatar"
                     >
                       <div
@@ -8186,7 +8210,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="flex flex-col space-y-2"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
                       >
                         Address
                       </div>
@@ -8203,119 +8227,121 @@ exports[`Votes should show resigned delegate notice 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
+                        class="flex flex-col space-y-2"
                       >
-                        <svg>
-                          vote.svg
-                        </svg>
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Votes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--vote"
+                          disabled=""
+                        >
+                          0
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="flex flex-col space-y-2"
+                      class="flex space-x-3 px-6"
                     >
                       <div
-                        class="text-sm leading-tight text-theme-secondary-500"
+                        class="flex flex-col space-y-2"
                       >
-                        Votes
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Unvotes
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          data-testid="DelegateTable__footer--unvote"
+                          disabled=""
+                        >
+                          0
+                        </div>
                       </div>
                       <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--votes"
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
+                        disabled=""
                       >
-                        0
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            unvote.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex space-x-3 px-6"
+                    >
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Total
+                        </div>
+                        <div
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          data-testid="DelegateTable__footer--votecombination"
+                        >
+                          0/1
+                        </div>
+                      </div>
+                      <div
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
+                      >
+                        <div
+                          class="sc-bdnxRM NjstW"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            vote-combination.svg
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="flex px-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    data-testid="DelegateTable__continue-button"
+                    disabled=""
+                    type="button"
                   >
                     <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-secondary-500 text-theme-secondary-500 ring-theme-background"
+                      class="flex items-center space-x-2"
                     >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          unvote.svg
-                        </svg>
-                      </div>
+                      Continue
                     </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Unvotes
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-secondary-500"
-                        data-testid="DelegateTable__footer--unvotes"
-                      >
-                        0
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex px-8"
-                  >
-                    <div
-                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb mr-2 bg-theme-background border-theme-text text-theme-text ring-theme-background"
-                    >
-                      <div
-                        class="sc-bdnxRM NjstW"
-                        height="20"
-                        width="20"
-                      >
-                        <svg>
-                          vote-combination.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="text-sm leading-tight text-theme-secondary-500"
-                      >
-                        Total
-                      </div>
-                      <div
-                        class="text-lg leading-tight text-theme-text"
-                        data-testid="DelegateTable__footer--total"
-                      >
-                        0
-                        /
-                        1
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="ml-auto"
-                  >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
-                      data-testid="DelegateTable__continue-button"
-                      disabled=""
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        Continue
-                      </div>
-                    </button>
-                  </span>
+                  </button>
                 </div>
               </div>
             </div>

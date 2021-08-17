@@ -237,8 +237,8 @@ module.exports = {
 				"header-smooth": "0px 2px 10px 0px rgba(192, 200, 207, 0.22)",
 				"header-smooth-dark": "0px 2px 10px 0px rgba(18, 18, 19, .6)",
 				"votes-filter": "0 15px 35px 0 rgba(var(--theme-color-secondary-900-rgb), 0.1)",
-				"footer-smooth": "0px -2px 10px 0px rgba(192, 200, 207, 0.22)",
-				"footer-smooth-dark": "0px -2px 10px 0px rgba(18, 18, 19, .6)",
+				"footer-smooth": "0px -7px 35px 0px rgba(33, 34, 37, 0.08)",
+				"footer-smooth-dark": "0px -7px 35px 0px rgba(18, 18, 19, 0.4)",
 			},
 			listStyleType: {
 				circle: "circle",
@@ -258,6 +258,7 @@ module.exports = {
 			backgroundOpacity: ["dark"],
 			backgroundColor: ["active"],
 			borderStyle: ["focus-within"],
+			boxShadow: ["dark"],
 			margin: ["first"],
 			opacity: ["group-hover"],
 			padding: ["first", "last"],

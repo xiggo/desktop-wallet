@@ -102,7 +102,7 @@ describe("DelegateTable", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--votes")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(selectButton);
@@ -123,7 +123,7 @@ describe("DelegateTable", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--votes")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(selectButton);
@@ -144,7 +144,7 @@ describe("DelegateTable", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--unvotes")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(selectButton);
@@ -170,8 +170,8 @@ describe("DelegateTable", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--unvotes")).toHaveTextContent("1");
-		expect(getByTestId("DelegateTable__footer--votes")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(selectUnvoteButton);
@@ -198,8 +198,8 @@ describe("DelegateTable", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--unvotes")).toHaveTextContent("1");
-		expect(getByTestId("DelegateTable__footer--votes")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		expect(selectUnvoteButton).toHaveTextContent(translations.UNSELECTED);
 		expect(selectVoteButton).toHaveTextContent(translations.SELECTED);
@@ -225,8 +225,8 @@ describe("DelegateTable", () => {
 		});
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--votes")).toHaveTextContent("2");
-		expect(getByTestId("DelegateTable__footer--unvotes")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("2");
+		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -327,8 +327,8 @@ describe("DelegateTable", () => {
 		);
 
 		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--unvotes")).toHaveTextContent("1");
-		expect(getByTestId("DelegateTable__footer--votes")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(getByTestId("DelegateTable__continue-button"));
