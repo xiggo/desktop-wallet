@@ -458,8 +458,19 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                   </section>
                 </div>
                 <div
-                  class="flex justify-center mt-8 space-x-2"
+                  class="flex justify-end mt-8 space-x-3"
                 >
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    data-testid="Paginator__cancel"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Cancel
+                    </div>
+                  </button>
                   <button
                     class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                     data-testid="MultiSignatureDetail__broadcast"
@@ -940,8 +951,19 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                   </section>
                 </div>
                 <div
-                  class="flex justify-center mt-8 space-x-2"
+                  class="flex justify-end mt-8 space-x-3"
                 >
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    data-testid="Paginator__cancel"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Cancel
+                    </div>
+                  </button>
                   <button
                     class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                     data-testid="MultiSignatureDetail__broadcast"
@@ -1422,8 +1444,19 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                   </section>
                 </div>
                 <div
-                  class="flex justify-center mt-8 space-x-2"
+                  class="flex justify-end mt-8 space-x-3"
                 >
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    data-testid="Paginator__cancel"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Cancel
+                    </div>
+                  </button>
                   <button
                     class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                     data-testid="MultiSignatureDetail__broadcast"
@@ -4840,9 +4873,6 @@ exports[`MultiSignatureDetail should show error screen for Nano S  and continue 
                     </div>
                   </section>
                 </div>
-                <div
-                  class="flex justify-end mt-8 space-x-3"
-                />
               </div>
             </form>
           </div>
@@ -5804,8 +5834,19 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                   </section>
                 </div>
                 <div
-                  class="flex justify-center mt-8 space-x-2"
+                  class="flex justify-end mt-8 space-x-3"
                 >
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    data-testid="Paginator__cancel"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Cancel
+                    </div>
+                  </button>
                   <button
                     class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
                     data-testid="MultiSignatureDetail__broadcast"
@@ -6016,9 +6057,6 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                     </div>
                   </section>
                 </div>
-                <div
-                  class="flex justify-end mt-8 space-x-3"
-                />
               </div>
             </form>
           </div>
@@ -6217,9 +6255,6 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                     </div>
                   </section>
                 </div>
-                <div
-                  class="flex justify-end mt-8 space-x-3"
-                />
               </div>
             </form>
           </div>

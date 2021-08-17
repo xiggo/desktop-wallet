@@ -1,5 +1,4 @@
 import { Contracts, DTO } from "@payvo/profiles";
-import { Button } from "app/components/Button";
 import { Form } from "app/components/Form";
 import { Modal } from "app/components/Modal";
 import { TabPanel, Tabs } from "app/components/Tabs";
@@ -14,6 +13,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { AuthenticationStep } from "../AuthenticationStep";
+import { Paginator } from "./MultiSignatureDetail.helpers";
 import { SentStep } from "./SentStep";
 import { SummaryStep } from "./SummaryStep";
 
@@ -24,50 +24,6 @@ interface MultiSignatureDetailProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	onClose?: () => void;
 }
-
-const Paginator = (properties: {
-	onCancel?: () => void;
-	onSign?: () => void;
-	onBack?: () => void;
-	onContinue?: () => void;
-	isEnabled?: boolean;
-	isLoading?: boolean;
-	activeStep: number;
-}) => {
-	const { t } = useTranslation();
-	return (
-		<div className="flex justify-end mt-8 space-x-3">
-			{properties.activeStep === 1 && (
-				<>
-					<Button data-testid="Paginator__cancel" variant="secondary" onClick={properties.onCancel}>
-						{t("COMMON.CANCEL")}
-					</Button>
-
-					<Button data-testid="Paginator__sign" onClick={properties.onSign}>
-						{t("COMMON.SIGN")}
-					</Button>
-				</>
-			)}
-
-			{properties.activeStep === 2 && (
-				<>
-					<Button data-testid="Paginator__back" variant="secondary" onClick={properties.onBack}>
-						{t("COMMON.BACK")}
-					</Button>
-
-					<Button
-						disabled={!properties.isEnabled || properties.isLoading}
-						data-testid="Paginator__continue"
-						isLoading={properties.isLoading}
-						onClick={properties.onContinue}
-					>
-						{t("COMMON.CONTINUE")}
-					</Button>
-				</>
-			)}
-		</div>
-	);
-};
 
 export const MultiSignatureDetail = ({
 	isOpen,
@@ -215,32 +171,18 @@ export const MultiSignatureDetail = ({
 						/>
 					</TabPanel>
 
-					{canBeBroadcasted && !canBeSigned && activeStep === 1 && (
-						<div className="flex justify-center mt-8 space-x-2">
-							<Button
-								disabled={isSubmitting}
-								type="submit"
-								isLoading={isSubmitting}
-								data-testid="MultiSignatureDetail__broadcast"
-							>
-								{t("COMMON.SEND")}
-							</Button>
-						</div>
-					)}
-
-					{canBeSigned && (
-						<Paginator
-							activeStep={activeStep}
-							onCancel={onClose}
-							onSign={handleSign}
-							onBack={() => setActiveStep(1)}
-							onContinue={handleSubmit((data: any) => sendSignature(data))}
-							isLoading={
-								isSubmitting || (wallet.isLedger() && activeStep === 2 && !isLedgerModelSupported)
-							}
-							isEnabled={isValid}
-						/>
-					)}
+					<Paginator
+						activeStep={activeStep}
+						canBeSigned={canBeSigned}
+						canBeBroadcasted={canBeBroadcasted}
+						onCancel={onClose}
+						onSign={handleSign}
+						onBack={() => setActiveStep(1)}
+						onContinue={handleSubmit((data: any) => sendSignature(data))}
+						isLoading={isSubmitting || (wallet.isLedger() && activeStep === 2 && !isLedgerModelSupported)}
+						isEnabled={isValid}
+						isSubmitting={isSubmitting}
+					/>
 				</Tabs>
 			</Form>
 		</Modal>
