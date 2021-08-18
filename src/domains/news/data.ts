@@ -1,1 +1,1 @@
-export const AVAILABLE_CATEGORIES = ["Technical", "Marketing", "Community", "Emergency"];
+export const AVAILABLE_CATEGORIES = ["Community", "Emergency", "Marketing", "Technical"];

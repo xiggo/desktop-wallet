@@ -15,10 +15,10 @@ createFixture(`News filtering`, [
 		"news/filtered",
 	),
 	mockRequest(
-		"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency",
+		"https://news.payvo.com/api?coins=ARK&page=1&categories=Community%2CEmergency%2CTechnical",
 		"news/filtered",
 	),
-	mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CEmergency", "news/filtered"),
+	mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Emergency%2CTechnical", "news/filtered"),
 	mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical", "news/filtered"),
 	mockRequest(
 		"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical&query=major+league+hacking",

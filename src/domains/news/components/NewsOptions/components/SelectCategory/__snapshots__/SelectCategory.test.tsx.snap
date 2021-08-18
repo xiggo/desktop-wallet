@@ -12,7 +12,7 @@ exports[`SelectCategory should render 1`] = `
       value=""
     />
     <div
-      class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
+      class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
     >
       #All
     </div>

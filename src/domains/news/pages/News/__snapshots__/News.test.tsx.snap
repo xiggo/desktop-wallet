@@ -608,40 +608,6 @@ exports[`News should filter results based on category query and asset 1`] = `
                       >
                         <label
                           class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
-                          data-testid="NewsOptions__category-Technical"
-                        >
-                          <input
-                            checked=""
-                            class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-                            data-testid="SelectCategory__undefined"
-                            type="checkbox"
-                            value=""
-                          />
-                          <div
-                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
-                          >
-                            #Technical
-                          </div>
-                        </label>
-                        <label
-                          class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
-                          data-testid="NewsOptions__category-Marketing"
-                        >
-                          <input
-                            checked=""
-                            class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-                            data-testid="SelectCategory__undefined"
-                            type="checkbox"
-                            value=""
-                          />
-                          <div
-                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
-                          >
-                            #Marketing
-                          </div>
-                        </label>
-                        <label
-                          class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
                           data-testid="NewsOptions__category-Community"
                         >
                           <input
@@ -652,7 +618,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                             value=""
                           />
                           <div
-                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
+                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
                           >
                             #Community
                           </div>
@@ -669,9 +635,43 @@ exports[`News should filter results based on category query and asset 1`] = `
                             value=""
                           />
                           <div
-                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
+                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
                           >
                             #Emergency
+                          </div>
+                        </label>
+                        <label
+                          class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
+                          data-testid="NewsOptions__category-Marketing"
+                        >
+                          <input
+                            checked=""
+                            class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
+                            data-testid="SelectCategory__undefined"
+                            type="checkbox"
+                            value=""
+                          />
+                          <div
+                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
+                          >
+                            #Marketing
+                          </div>
+                        </label>
+                        <label
+                          class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
+                          data-testid="NewsOptions__category-Technical"
+                        >
+                          <input
+                            checked=""
+                            class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
+                            data-testid="SelectCategory__undefined"
+                            type="checkbox"
+                            value=""
+                          />
+                          <div
+                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
+                          >
+                            #Technical
                           </div>
                         </label>
                       </div>
@@ -1490,40 +1490,6 @@ exports[`News should filter results based on category query and asset 2`] = `
                       >
                         <label
                           class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
-                          data-testid="NewsOptions__category-Technical"
-                        >
-                          <input
-                            checked=""
-                            class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-                            data-testid="SelectCategory__undefined"
-                            type="checkbox"
-                            value=""
-                          />
-                          <div
-                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
-                          >
-                            #Technical
-                          </div>
-                        </label>
-                        <label
-                          class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
-                          data-testid="NewsOptions__category-Marketing"
-                        >
-                          <input
-                            checked=""
-                            class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-                            data-testid="SelectCategory__undefined"
-                            type="checkbox"
-                            value=""
-                          />
-                          <div
-                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
-                          >
-                            #Marketing
-                          </div>
-                        </label>
-                        <label
-                          class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
                           data-testid="NewsOptions__category-Community"
                         >
                           <input
@@ -1534,7 +1500,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                             value=""
                           />
                           <div
-                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
+                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
                           >
                             #Community
                           </div>
@@ -1551,9 +1517,43 @@ exports[`News should filter results based on category query and asset 2`] = `
                             value=""
                           />
                           <div
-                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 hlzJPm"
+                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
                           >
                             #Emergency
+                          </div>
+                        </label>
+                        <label
+                          class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
+                          data-testid="NewsOptions__category-Marketing"
+                        >
+                          <input
+                            checked=""
+                            class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
+                            data-testid="SelectCategory__undefined"
+                            type="checkbox"
+                            value=""
+                          />
+                          <div
+                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
+                          >
+                            #Marketing
+                          </div>
+                        </label>
+                        <label
+                          class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK p-1"
+                          data-testid="NewsOptions__category-Technical"
+                        >
+                          <input
+                            checked=""
+                            class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
+                            data-testid="SelectCategory__undefined"
+                            type="checkbox"
+                            value=""
+                          />
+                          <div
+                            class="SelectCategory__CustomButton-sc-1dgc7bb-1 fjVhRK"
+                          >
+                            #Technical
                           </div>
                         </label>
                       </div>
