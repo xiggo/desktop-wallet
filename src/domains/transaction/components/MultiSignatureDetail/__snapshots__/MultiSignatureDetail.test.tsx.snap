@@ -401,7 +401,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -448,7 +448,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -898,7 +898,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -945,7 +945,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -1395,7 +1395,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -1442,7 +1442,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -1892,7 +1892,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -1939,7 +1939,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -2301,7 +2301,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -2348,7 +2348,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -2901,7 +2901,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -2948,7 +2948,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -3280,7 +3280,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -3327,7 +3327,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -3751,7 +3751,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -3798,7 +3798,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -4195,7 +4195,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -4242,7 +4242,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -4639,7 +4639,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -4686,7 +4686,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -4837,7 +4837,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S  and continue 
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -4884,7 +4884,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S  and continue 
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -5308,7 +5308,7 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -5355,7 +5355,7 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -5805,7 +5805,7 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -5852,7 +5852,7 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -6029,7 +6029,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -6076,7 +6076,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -6227,7 +6227,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
@@ -6274,7 +6274,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                                     width="10"
                                   >
                                     <svg>
-                                      clock.svg
+                                      circle-check-mark.svg
                                     </svg>
                                   </div>
                                   <span />
