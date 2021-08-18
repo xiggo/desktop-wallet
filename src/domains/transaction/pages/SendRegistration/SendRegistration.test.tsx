@@ -434,7 +434,7 @@ describe("Registration", () => {
 		// Step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
-		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("44'/1'/1'/0/0");
+		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
@@ -507,7 +507,7 @@ describe("Registration", () => {
 		// Step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
-		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("44'/1'/1'/0/0");
+		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
@@ -578,7 +578,7 @@ describe("Registration", () => {
 		// Step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
-		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("44'/1'/1'/0/0");
+		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 

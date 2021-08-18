@@ -1,19 +1,18 @@
-import Transport from "@ledgerhq/hw-transport";
+import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import React, { createContext, useContext } from "react";
 
 import { useLedgerConnection } from "./hooks/connection";
 
 interface Properties {
-	transport: typeof Transport;
+	transport: typeof LedgerTransportNodeHID;
 	children: React.ReactNode;
 }
 
 const LedgerContext = createContext<any>(undefined);
 
-export const LedgerProvider = ({ transport, children }: Properties) => {
-	const ledger = useLedgerConnection(transport);
-	return <LedgerContext.Provider value={ledger}>{children}</LedgerContext.Provider>;
-};
+export const LedgerProvider = ({ transport, children }: Properties) => (
+	<LedgerContext.Provider value={useLedgerConnection(transport)}>{children}</LedgerContext.Provider>
+);
 
 /* istanbul ignore next */
 export const useLedgerContext = (): ReturnType<typeof useLedgerConnection> => useContext(LedgerContext);

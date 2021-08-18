@@ -7600,7 +7600,7 @@ exports[`SendTransfer should render summary step 1`] = `
                   data-testid="Link"
                   href="#"
                   rel="noopener noreferrer"
-                  to="https://dexplorer.ark.io/transaction/d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a"
+                  to="https://dexplorer.ark.io/transaction/6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4"
                 >
                   <span
                     class="Link__Content-sc-ec014t-1 hUiuRR"
@@ -7608,7 +7608,7 @@ exports[`SendTransfer should render summary step 1`] = `
                     <span
                       class="inline-flex overflow-hidden"
                     >
-                      d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                      6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                     </span>
                   </span>
                   <div

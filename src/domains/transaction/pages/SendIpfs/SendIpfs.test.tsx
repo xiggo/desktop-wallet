@@ -743,7 +743,7 @@ describe("SendIpfs", () => {
 
 		const address = wallet.address();
 		const balance = wallet.balance();
-		const derivationPath = "44'/1'/1'/0/0";
+		const derivationPath = "m/44'/1'/1'/0/0";
 		const votes = wallet.voting().current();
 		const publicKey = wallet.publicKey();
 

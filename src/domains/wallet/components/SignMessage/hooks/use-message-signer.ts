@@ -1,11 +1,11 @@
-import Transport from "@ledgerhq/hw-transport";
+import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import { Contracts as ProfileContracts } from "@payvo/profiles";
 import { Services } from "@payvo/sdk";
 
 const signWithLedger = async (
 	message: string,
 	wallet: ProfileContracts.IReadWriteWallet,
-	transport: typeof Transport,
+	transport: typeof LedgerTransportNodeHID,
 ) => {
 	await wallet.ledger().connect(transport);
 
@@ -35,7 +35,7 @@ const withAbortPromise = (signal?: AbortSignal) => <T>(promise: Promise<T>) =>
 		return promise.then(resolve).catch(reject);
 	});
 
-export const useMessageSigner = (transport: typeof Transport) => {
+export const useMessageSigner = (transport: typeof LedgerTransportNodeHID) => {
 	const sign = async (
 		wallet: ProfileContracts.IReadWriteWallet,
 		message: string,

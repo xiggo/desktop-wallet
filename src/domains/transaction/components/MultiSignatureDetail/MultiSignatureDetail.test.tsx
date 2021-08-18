@@ -21,182 +21,184 @@ import { MultiSignatureDetail } from "./MultiSignatureDetail";
 
 const passphrase = getDefaultWalletMnemonic();
 
-describe("MultiSignatureDetail", () => {
-	let profile: Contracts.IProfile;
-	let wallet: Contracts.IReadWriteWallet;
+let profile: Contracts.IProfile;
+let wallet: Contracts.IReadWriteWallet;
 
-	const fixtures: Record<string, any> = {
-		ipfs: undefined,
-		multiPayment: undefined,
-		multiSignature: undefined,
-		transfer: undefined,
-		unvote: undefined,
-		vote: undefined,
-	};
+const fixtures: Record<string, any> = {
+	ipfs: undefined,
+	multiPayment: undefined,
+	multiSignature: undefined,
+	transfer: undefined,
+	unvote: undefined,
+	vote: undefined,
+};
 
-	beforeEach(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
+jest.setTimeout(15_000);
 
-		await env.profiles().restore(profile);
-		await profile.sync();
+beforeEach(async () => {
+	profile = env.profiles().findById(getDefaultProfileId());
 
-		await syncDelegates(profile);
+	await env.profiles().restore(profile);
+	await profile.sync();
 
-		wallet = profile.wallets().first();
+	await syncDelegates(profile);
 
-		await wallet.synchroniser().identity();
+	wallet = profile.wallets().first();
 
-		fixtures.transfer = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.transfer({
-					data: {
-						amount: 1,
-						to: wallet.address(),
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
+	await wallet.synchroniser().identity();
 
-		fixtures.multiSignature = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.multiSignature({
-					data: {
+	fixtures.transfer = new DTO.ExtendedSignedTransactionData(
+		await wallet
+			.coin()
+			.transaction()
+			.transfer({
+				data: {
+					amount: 1,
+					to: wallet.address(),
+				},
+				fee: 1,
+				nonce: "1",
+				signatory: await wallet
+					.coin()
+					.signatory()
+					.multiSignature({
 						min: 2,
 						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						senderPublicKey: wallet.publicKey()!,
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
+					}),
+			}),
+		wallet,
+	);
 
-		fixtures.multiPayment = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.multiPayment({
-					data: {
-						payments: [
-							{
-								amount: 1,
-								to: wallet.address(),
-							},
-							{
-								amount: 2,
-								to: wallet.address(),
-							},
-						],
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
+	fixtures.multiSignature = new DTO.ExtendedSignedTransactionData(
+		await wallet
+			.coin()
+			.transaction()
+			.multiSignature({
+				data: {
+					min: 2,
+					publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+					senderPublicKey: wallet.publicKey()!,
+				},
+				fee: 1,
+				nonce: "1",
+				signatory: await wallet
+					.coin()
+					.signatory()
+					.multiSignature({
+						min: 2,
+						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+					}),
+			}),
+		wallet,
+	);
 
-		fixtures.vote = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.vote({
-					data: {
-						unvotes: [],
-						votes: [
-							{
-								amount: 0,
-								id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-							},
-						],
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
+	fixtures.multiPayment = new DTO.ExtendedSignedTransactionData(
+		await wallet
+			.coin()
+			.transaction()
+			.multiPayment({
+				data: {
+					payments: [
+						{
+							amount: 1,
+							to: wallet.address(),
+						},
+						{
+							amount: 2,
+							to: wallet.address(),
+						},
+					],
+				},
+				fee: 1,
+				nonce: "1",
+				signatory: await wallet
+					.coin()
+					.signatory()
+					.multiSignature({
+						min: 2,
+						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+					}),
+			}),
+		wallet,
+	);
 
-		fixtures.unvote = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.vote({
-					data: {
-						unvotes: [
-							{
-								amount: 0,
-								id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-							},
-						],
-						votes: [],
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
+	fixtures.vote = new DTO.ExtendedSignedTransactionData(
+		await wallet
+			.coin()
+			.transaction()
+			.vote({
+				data: {
+					unvotes: [],
+					votes: [
+						{
+							amount: 0,
+							id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+						},
+					],
+				},
+				fee: 1,
+				nonce: "1",
+				signatory: await wallet
+					.coin()
+					.signatory()
+					.multiSignature({
+						min: 2,
+						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+					}),
+			}),
+		wallet,
+	);
 
-		fixtures.ipfs = new DTO.ExtendedSignedTransactionData(
-			await wallet
-				.coin()
-				.transaction()
-				.ipfs({
-					data: {
-						hash: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco",
-					},
-					fee: 1,
-					nonce: "1",
-					signatory: await wallet
-						.coin()
-						.signatory()
-						.multiSignature({
-							min: 2,
-							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						}),
-				}),
-			wallet,
-		);
-	});
+	fixtures.unvote = new DTO.ExtendedSignedTransactionData(
+		await wallet
+			.coin()
+			.transaction()
+			.vote({
+				data: {
+					unvotes: [
+						{
+							amount: 0,
+							id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+						},
+					],
+					votes: [],
+				},
+				fee: 1,
+				nonce: "1",
+				signatory: await wallet
+					.coin()
+					.signatory()
+					.multiSignature({
+						min: 2,
+						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+					}),
+			}),
+		wallet,
+	);
 
+	fixtures.ipfs = new DTO.ExtendedSignedTransactionData(
+		await wallet
+			.coin()
+			.transaction()
+			.ipfs({
+				data: {
+					hash: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco",
+				},
+				fee: 1,
+				nonce: "1",
+				signatory: await wallet
+					.coin()
+					.signatory()
+					.multiSignature({
+						min: 2,
+						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+					}),
+			}),
+		wallet,
+	);
+});
+
+describe("MultiSignatureDetail", () => {
 	it("should render summary step for transfer", async () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
@@ -676,14 +678,11 @@ describe("MultiSignatureDetail", () => {
 
 		const address = wallet.address();
 		const balance = wallet.balance();
-		const derivationPath = "44'/1'/1'/0/0";
+		const derivationPath = "m/44'/1'/1'/0/0";
 		const votes = wallet.voting().current();
 		const publicKey = wallet.publicKey();
 
 		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
-			if (key == Contracts.WalletData.Address) {
-				return address;
-			}
 			if (key == Contracts.WalletData.Address) {
 				return address;
 			}
@@ -698,6 +697,10 @@ describe("MultiSignatureDetail", () => {
 
 			if (key == Contracts.WalletData.Votes) {
 				return votes;
+			}
+
+			if (key === Contracts.WalletData.ImportMethod) {
+				return "BIP44.DERIVATION_PATH";
 			}
 
 			if (key == Contracts.WalletData.DerivationPath) {
@@ -726,12 +729,13 @@ describe("MultiSignatureDetail", () => {
 		listenSpy.mockRestore();
 	});
 
-	it("should show error screen for Nano S  and continue when NanoX is connected", async () => {
+	it("should show error screen for Nano S and continue when NanoX is connected", async () => {
 		jest.spyOn(wallet, "actsWithMnemonic").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
+
 		// Ledger mocks
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
@@ -772,31 +776,32 @@ describe("MultiSignatureDetail", () => {
 
 		const address = wallet.address();
 		const balance = wallet.balance();
-		const derivationPath = "44'/1'/1'/0/0";
+		const derivationPath = "m/44'/1'/1'/0/0";
 		const votes = wallet.voting().current();
 		const publicKey = wallet.publicKey();
 
 		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
-			if (key == Contracts.WalletData.Address) {
-				return address;
-			}
-			if (key == Contracts.WalletData.Address) {
+			if (key === Contracts.WalletData.Address) {
 				return address;
 			}
 
-			if (key == Contracts.WalletData.Balance) {
+			if (key === Contracts.WalletData.Balance) {
 				return balance;
 			}
 
-			if (key == Contracts.WalletData.PublicKey) {
+			if (key === Contracts.WalletData.PublicKey) {
 				return publicKey;
 			}
 
-			if (key == Contracts.WalletData.Votes) {
+			if (key === Contracts.WalletData.Votes) {
 				return votes;
 			}
 
-			if (key == Contracts.WalletData.DerivationPath) {
+			if (key === Contracts.WalletData.ImportMethod) {
+				return "BIP44.DERIVATION_PATH";
+			}
+
+			if (key === Contracts.WalletData.DerivationPath) {
 				return derivationPath;
 			}
 		});

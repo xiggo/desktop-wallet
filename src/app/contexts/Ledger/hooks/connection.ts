@@ -1,4 +1,4 @@
-import Transport from "@ledgerhq/hw-transport";
+import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import { Contracts } from "@payvo/profiles";
 import { WalletData } from "@payvo/profiles/distribution/contracts";
 import { Coins } from "@payvo/sdk";
@@ -12,7 +12,7 @@ import { useEnvironmentContext } from "../../Environment";
 import { formatLedgerDerivationPath, LedgerData } from "../utils";
 import { connectionReducer, defaultConnectionState } from "./connection.state";
 
-export const useLedgerConnection = (transport: typeof Transport) => {
+export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) => {
 	const { t } = useTranslation();
 
 	const { persist } = useEnvironmentContext();

@@ -4,7 +4,6 @@ import "focus-visible";
 // import { XLM } from "@payvo/sdk-xlm";
 // import { XRP } from "@payvo/sdk-xrp";
 // import { ZIL } from "@payvo/sdk-zil";
-// @ts-ignore
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 // import { LUNA } from "@payvo/sdk-luna";
 // import { NANO } from "@payvo/sdk-nano";

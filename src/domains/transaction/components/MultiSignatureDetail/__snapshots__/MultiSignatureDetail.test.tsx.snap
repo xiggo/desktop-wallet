@@ -323,7 +323,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                               <span
                                 class="inline-flex overflow-hidden"
                               >
-                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                                6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
                             </span>
                             <span
@@ -820,7 +820,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                               <span
                                 class="inline-flex overflow-hidden"
                               >
-                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                                6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
                             </span>
                             <span
@@ -1317,7 +1317,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                               <span
                                 class="inline-flex overflow-hidden"
                               >
-                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                                6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
                             </span>
                             <span
@@ -1814,7 +1814,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                               <span
                                 class="inline-flex overflow-hidden"
                               >
-                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                                6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
                             </span>
                             <span
@@ -3673,7 +3673,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                               <span
                                 class="inline-flex overflow-hidden"
                               >
-                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                                6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
                             </span>
                             <span
@@ -4709,7 +4709,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
 </div>
 `;
 
-exports[`MultiSignatureDetail should show error screen for Nano S  and continue when NanoX is connected 1`] = `
+exports[`MultiSignatureDetail should show error screen for Nano S and continue when NanoX is connected 1`] = `
 <div>
   <div
     class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
@@ -5230,7 +5230,7 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                               <span
                                 class="inline-flex overflow-hidden"
                               >
-                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                                6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
                             </span>
                             <span
@@ -5727,7 +5727,7 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                               <span
                                 class="inline-flex overflow-hidden"
                               >
-                                d41e4a07ddc5da1a52df04f2d428a43524bb621da811bead821e111094929e5a
+                                6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
                             </span>
                             <span

@@ -1375,7 +1375,7 @@ describe("SendTransfer", () => {
 
 		const address = wallet.address();
 		const balance = wallet.balance();
-		const derivationPath = "44'/1'/1'/0/0";
+		const derivationPath = "m/44'/1'/1'/0/0";
 
 		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
 			if (key == Contracts.WalletData.Address) {
