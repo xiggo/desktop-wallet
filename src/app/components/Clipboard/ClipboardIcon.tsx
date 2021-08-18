@@ -8,9 +8,10 @@ import { ClipboardCommonProperties } from "./Clipboard";
 export type ClipboardIconProperties = ClipboardCommonProperties & {
 	variant: "icon";
 	tooltip?: string;
+	tooltipDarkTheme?: boolean;
 };
 
-export const ClipboardIcon = ({ data, tooltip, options, children }: ClipboardIconProperties) => {
+export const ClipboardIcon = ({ data, tooltip, tooltipDarkTheme, options, children }: ClipboardIconProperties) => {
 	const { t } = useTranslation();
 
 	const [hasCopied, copy] = useClipboard({
@@ -22,6 +23,7 @@ export const ClipboardIcon = ({ data, tooltip, options, children }: ClipboardIco
 		<Tooltip
 			content={hasCopied ? t("COMMON.CLIPBOARD.SUCCESS") : tooltip || t("COMMON.CLIPBOARD.TOOLTIP_TEXT")}
 			hideOnClick={false}
+			theme={tooltipDarkTheme ? "dark" : undefined}
 		>
 			<button
 				type="button"

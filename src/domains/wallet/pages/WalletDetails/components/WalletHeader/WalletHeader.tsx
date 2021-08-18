@@ -141,6 +141,7 @@ export const WalletHeader = ({
 							size="lg"
 							className="border-theme-secondary-700 text-theme-secondary-text"
 							noShadow
+							tooltipDarkTheme
 						/>
 						<Avatar size="lg" address={wallet.address()} shadowClassName="ring-theme-secondary-900" />
 					</div>
@@ -158,6 +159,7 @@ export const WalletHeader = ({
 									wallet={wallet}
 									iconColor="text-theme-secondary-text"
 									exclude={["isStarred"]}
+									tooltipDarkTheme
 								/>
 							</div>
 						</div>
@@ -166,6 +168,7 @@ export const WalletHeader = ({
 							<TruncateMiddleDynamic
 								value={wallet.address()}
 								className="flex-1 text-lg font-semibold text-white whitespace-nowrap no-ligatures"
+								tooltipDarkTheme
 							/>
 
 							<div className="flex items-end mb-1 space-x-3 text-theme-secondary-text">
@@ -173,6 +176,7 @@ export const WalletHeader = ({
 									variant="icon"
 									data={wallet.address()}
 									tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_ADDRESS")}
+									tooltipDarkTheme
 								>
 									<Icon name="Copy" className="hover:text-theme-secondary-500" />
 								</Clipboard>
@@ -182,6 +186,7 @@ export const WalletHeader = ({
 										variant="icon"
 										data={wallet.publicKey() || ""}
 										tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
+										tooltipDarkTheme
 									>
 										<Icon name="CopyKey" className="hover:text-theme-secondary-500" />
 									</Clipboard>

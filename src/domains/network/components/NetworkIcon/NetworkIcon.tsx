@@ -13,6 +13,7 @@ interface Properties {
 	shadowClassName?: string;
 	iconSize?: Size;
 	showTooltip?: boolean;
+	tooltipDarkTheme?: boolean;
 	noShadow?: boolean;
 }
 
@@ -24,7 +25,14 @@ const Placeholder = (properties: CircleProps) => (
 	/>
 );
 
-export const NetworkIcon = ({ network, iconSize, className, showTooltip, ...properties }: Properties) => {
+export const NetworkIcon = ({
+	network,
+	iconSize,
+	className,
+	showTooltip,
+	tooltipDarkTheme,
+	...properties
+}: Properties) => {
 	if (!network) {
 		return <Placeholder className={className} {...properties} />;
 	}
@@ -42,7 +50,7 @@ export const NetworkIcon = ({ network, iconSize, className, showTooltip, ...prop
 	};
 
 	return (
-		<Tooltip content={network.displayName()} disabled={!showTooltip}>
+		<Tooltip content={network.displayName()} disabled={!showTooltip} theme={tooltipDarkTheme ? "dark" : undefined}>
 			<Circle
 				aria-label={network.displayName()}
 				data-testid={`NetworkIcon-${network.coin()}-${network.id()}`}

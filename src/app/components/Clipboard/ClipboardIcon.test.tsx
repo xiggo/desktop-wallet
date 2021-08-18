@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import React from "react";
-import { act, fireEvent, render } from "utils/testing-library";
+import { act, fireEvent, render, screen } from "utils/testing-library";
 
 import { translations } from "../../i18n/common/i18n";
 import { Clipboard } from "./Clipboard";
@@ -14,6 +14,20 @@ describe("ClipboardIcon", () => {
 
 	afterAll(() => {
 		(navigator as any).clipboard.writeText.mockRestore();
+	});
+
+	it("should render with tooltip in the dark mode", async () => {
+		render(
+			<Clipboard variant="icon" data="" tooltipDarkTheme>
+				<span>Hello!</span>
+			</Clipboard>,
+		);
+
+		act(() => {
+			fireEvent.mouseEnter(screen.getByTestId("clipboard-icon__wrapper"));
+		});
+
+		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});
 
 	it("should change the tooltip content when clicked", async () => {

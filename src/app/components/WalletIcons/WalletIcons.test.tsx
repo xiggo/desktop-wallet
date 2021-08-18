@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { WalletIcons } from "./WalletIcons";
 
@@ -10,6 +10,20 @@ describe("WalletIcons", () => {
 	beforeEach(async () => {
 		wallet = env.profiles().findById(getDefaultProfileId()).wallets().first();
 		await wallet.synchroniser().identity();
+	});
+
+	it("should render with tooltip in the dark mode", () => {
+		const walletSpy = jest.spyOn(wallet, "isKnown").mockReturnValue(true);
+
+		render(<WalletIcons wallet={wallet} tooltipDarkTheme />);
+
+		act(() => {
+			fireEvent.mouseEnter(screen.getByTestId("WalletIcon__Verified"));
+		});
+
+		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
+
+		walletSpy.mockRestore();
 	});
 
 	it("should render the verified icon", () => {

@@ -5,6 +5,22 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Size } from "types";
 
+interface WalletIconsProperties {
+	exclude?: string[];
+	iconColor?: string;
+	iconSize?: Size;
+	wallet: Contracts.IReadWriteWallet;
+	tooltipDarkTheme?: boolean;
+}
+
+interface WalletIconProperties {
+	type: string;
+	label?: string;
+	iconColor?: string;
+	iconSize?: Size;
+	tooltipDarkTheme?: boolean;
+}
+
 const getIconName = (type: string) => {
 	if (type === "Starred") {
 		return "StarFilled";
@@ -20,21 +36,11 @@ const getIconName = (type: string) => {
 const getIconColor = (type: string) =>
 	type === "Starred" ? "text-theme-warning-400" : "text-theme-secondary-700 dark:text-theme-secondary-600";
 
-const WalletIcon = ({
-	type,
-	label,
-	iconColor,
-	iconSize,
-}: {
-	type: string;
-	label?: string;
-	iconColor?: string;
-	iconSize?: Size;
-}) => {
+const WalletIcon = ({ type, label, iconColor, iconSize, tooltipDarkTheme }: WalletIconProperties) => {
 	const { t } = useTranslation();
 
 	return (
-		<Tooltip content={label || t(`COMMON.${type.toUpperCase()}`)}>
+		<Tooltip content={label || t(`COMMON.${type.toUpperCase()}`)} theme={tooltipDarkTheme ? "dark" : undefined}>
 			<div data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>
 				<Icon name={getIconName(type)} size={iconSize} />
 			</div>
@@ -42,16 +48,7 @@ const WalletIcon = ({
 	);
 };
 
-export const WalletIcons = ({
-	exclude,
-	wallet,
-	...iconProperties
-}: {
-	exclude?: string[];
-	iconColor?: string;
-	iconSize?: Size;
-	wallet: Contracts.IReadWriteWallet;
-}) => {
+export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsProperties) => {
 	const { t } = useTranslation();
 
 	return (

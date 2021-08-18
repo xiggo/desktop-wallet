@@ -50,7 +50,7 @@ exports[`Signatures should handle exception when checking if participant is awai
                 width="10"
               >
                 <svg>
-                  clock.svg
+                  circle-check-mark.svg
                 </svg>
               </div>
               <span />
@@ -97,7 +97,7 @@ exports[`Signatures should handle exception when checking if participant is awai
                 width="10"
               >
                 <svg>
-                  clock.svg
+                  circle-check-mark.svg
                 </svg>
               </div>
               <span />
