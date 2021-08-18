@@ -14,10 +14,6 @@ export const SentStep = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => {
 	const { t } = useTranslation();
-	const participants = transaction
-		.get<{ publicKeys: string[] }>("multiSignature")
-		.publicKeys.filter((pubKey) => pubKey !== wallet.publicKey());
-
 	return (
 		<section>
 			<Header title={t("TRANSACTION.SUCCESS.TITLE")} />
@@ -29,7 +25,7 @@ export const SentStep = ({
 			</p>
 
 			<div className="mt-4">
-				<Signatures publicKeys={participants} transactionId={transaction.id()} wallet={wallet} />
+				<Signatures transaction={transaction} wallet={wallet} />
 			</div>
 		</section>
 	);

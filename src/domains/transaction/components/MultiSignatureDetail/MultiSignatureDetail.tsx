@@ -33,6 +33,7 @@ export const MultiSignatureDetail = ({
 	onClose,
 }: MultiSignatureDetailProperties) => {
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [activeTransaction, setActiveTransaction] = useState<DTO.ExtendedSignedTransactionData>(transaction);
 
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
@@ -85,6 +86,9 @@ export const MultiSignatureDetail = ({
 			await wallet.transaction().sync();
 			wallet.transaction().restore();
 
+			const broadcastedTransaction = wallet.transaction().transaction(transaction.id());
+			setActiveTransaction(broadcastedTransaction);
+
 			await persist();
 			setActiveStep(3);
 		} catch (error) {
@@ -113,6 +117,9 @@ export const MultiSignatureDetail = ({
 				await addSignature({ signatory, transactionId: transaction.id(), wallet });
 				await wallet.transaction().sync();
 				wallet.transaction().restore();
+
+				const signedTransaction = wallet.transaction().transaction(transaction.id());
+				setActiveTransaction(signedTransaction);
 
 				setActiveStep(3);
 				await persist();
@@ -145,7 +152,7 @@ export const MultiSignatureDetail = ({
 			<Form context={form} onSubmit={broadcast}>
 				<Tabs activeId={activeStep}>
 					<TabPanel tabId={1}>
-						<SummaryStep wallet={wallet} transaction={transaction} />
+						<SummaryStep wallet={wallet} transaction={activeTransaction} />
 					</TabPanel>
 
 					<TabPanel tabId={2}>
@@ -159,7 +166,7 @@ export const MultiSignatureDetail = ({
 					</TabPanel>
 
 					<TabPanel tabId={3}>
-						<SentStep transaction={transaction} wallet={wallet} />
+						<SentStep transaction={activeTransaction} wallet={wallet} />
 					</TabPanel>
 
 					<TabPanel tabId={10}>

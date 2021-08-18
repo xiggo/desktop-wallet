@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { Avatar } from "app/components/Avatar";
 import { Badge } from "app/components/Badge";
 import { Tooltip } from "app/components/Tooltip";
@@ -34,21 +34,28 @@ const SignedBadge = () => {
 };
 
 const ParticipantStatus = ({
-	transactionId,
+	transaction,
 	publicKey,
 	wallet,
 }: {
-	transactionId: string;
+	transaction: DTO.ExtendedSignedTransactionData;
 	publicKey: string;
 	wallet: Contracts.IReadWriteWallet;
 }) => {
 	const isAwaitingSignature = useMemo(() => {
 		try {
-			return wallet.transaction().isAwaitingSignatureByPublicKey(transactionId, publicKey);
+			if (
+				!wallet.transaction().isAwaitingOurSignature(transaction.id()) &&
+				!wallet.transaction().isAwaitingOtherSignatures(transaction.id())
+			) {
+				return false;
+			}
+
+			return wallet.transaction().isAwaitingSignatureByPublicKey(transaction.id(), publicKey);
 		} catch {
 			return false;
 		}
-	}, [wallet, transactionId, publicKey]);
+	}, [wallet, transaction, publicKey]);
 
 	const [address, setAddress] = useState("");
 
@@ -74,15 +81,17 @@ const ParticipantStatus = ({
 };
 
 export const Signatures = ({
-	transactionId,
+	transaction,
 	wallet,
-	publicKeys,
 }: {
-	transactionId: string;
+	transaction: DTO.ExtendedSignedTransactionData;
 	wallet: Contracts.IReadWriteWallet;
-	publicKeys: string[];
 }) => {
 	const { t } = useTranslation();
+
+	const publicKeys = transaction
+		.get<{ publicKeys: string[] }>("multiSignature")
+		.publicKeys.filter((pubKey) => pubKey !== wallet.publicKey());
 
 	return (
 		<div data-testid="Signatures">
@@ -93,11 +102,7 @@ export const Signatures = ({
 					<div className="mb-2 text-sm font-semibold text-theme-secondary-500">{t("COMMON.YOU")}</div>
 
 					<div className="pr-6 mr-2 border-r border-theme-secondary-300 dark:border-theme-secondary-800">
-						<ParticipantStatus
-							transactionId={transactionId}
-							publicKey={wallet.publicKey()!}
-							wallet={wallet}
-						/>
+						<ParticipantStatus transaction={transaction} publicKey={wallet.publicKey()!} wallet={wallet} />
 					</div>
 				</div>
 
@@ -107,7 +112,7 @@ export const Signatures = ({
 						{publicKeys.map((publicKey) => (
 							<ParticipantStatus
 								key={publicKey}
-								transactionId={transactionId}
+								transaction={transaction}
 								publicKey={publicKey}
 								wallet={wallet}
 							/>

@@ -38,11 +38,6 @@ export const SummaryStep = ({
 
 	const type = transaction.type();
 
-	// TODO: Move this helpers to SignedData on platform-sdk
-	const participants = transaction
-		.get<{ publicKeys: string[] }>("multiSignature")
-		.publicKeys.filter((pubKey) => pubKey !== wallet.publicKey());
-
 	let recipients: any;
 	let transactionAmount: number;
 
@@ -146,7 +141,7 @@ export const SummaryStep = ({
 			</TransactionDetail>
 
 			<div className="px-10 pt-6 -mx-10 mt-4 border-t border-theme-secondary-300 dark:border-theme-secondary-800">
-				<Signatures transactionId={transaction.id()} publicKeys={participants} wallet={wallet} />
+				<Signatures transaction={transaction} wallet={wallet} />
 			</div>
 		</section>
 	);

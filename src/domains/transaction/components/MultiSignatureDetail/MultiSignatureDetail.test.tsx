@@ -323,6 +323,8 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
 		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
+		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
+
 		// @ts-ignore
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(void 0);
 
@@ -513,6 +515,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast");
 		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
@@ -631,6 +634,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 		const isNanoXMock = jest.spyOn(wallet, "isLedgerNanoX").mockReturnValue(true);
 		// Ledger mocks
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
@@ -727,6 +731,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 		// Ledger mocks
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
