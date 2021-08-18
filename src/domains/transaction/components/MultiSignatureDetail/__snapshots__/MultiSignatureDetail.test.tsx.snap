@@ -189,12 +189,16 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                             class="Label-sc-4akkzw-0 cuqVRO"
                             color="danger"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-0.5 -mx-1"
                             >
-                              - 1 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -682,12 +686,16 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                             class="Label-sc-4akkzw-0 cuqVRO"
                             color="danger"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-0.5 -mx-1"
                             >
-                              - 1 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1175,12 +1183,16 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                             class="Label-sc-4akkzw-0 cuqVRO"
                             color="danger"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-0.5 -mx-1"
                             >
-                              - 1 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1668,12 +1680,16 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                             class="Label-sc-4akkzw-0 cuqVRO"
                             color="danger"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-0.5 -mx-1"
                             >
-                              - 1 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2673,12 +2689,16 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                             class="Label-sc-4akkzw-0 cuqVRO"
                             color="danger"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-0.5 -mx-1"
                             >
-                              - 3 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                - 3 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -3519,12 +3539,16 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                             class="Label-sc-4akkzw-0 cuqVRO"
                             color="danger"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-0.5 -mx-1"
                             >
-                              - 1 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5072,12 +5096,16 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                             class="Label-sc-4akkzw-0 cuqVRO"
                             color="danger"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-0.5 -mx-1"
                             >
-                              - 1 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -5565,12 +5593,16 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                             class="Label-sc-4akkzw-0 cuqVRO"
                             color="danger"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-0.5 -mx-1"
                             >
-                              - 1 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                - 1 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>

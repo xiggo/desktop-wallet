@@ -43,6 +43,7 @@ export const translations: { [key: string]: any } = {
 		FAST: "Fast",
 		SLOW: "Slow",
 	},
+	HINT_AMOUNT: "Excluding {{amount}} {{currency}} sent to itself",
 	ID: "ID",
 	INCOMING: "Incoming",
 	INPUT_FEE_VIEW_TYPE: {

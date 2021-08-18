@@ -161,12 +161,16 @@ exports[`TransferDetail should render a modal 1`] = `
                     class="Label-sc-4akkzw-0 cuqVRO"
                     color="danger"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-0.5 -mx-1"
                     >
-                      - 100 ARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        - 100 ARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -538,12 +542,16 @@ exports[`TransferDetail should render as confirmed 1`] = `
                     class="Label-sc-4akkzw-0 cuqVRO"
                     color="danger"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-0.5 -mx-1"
                     >
-                      - 100 ARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        - 100 ARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -917,12 +925,16 @@ exports[`TransferDetail should render as not is sent 1`] = `
                     class="Label-sc-4akkzw-0 iTKkeF"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-0.5 -mx-1"
                     >
-                      + 100 ARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 100 ARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1294,12 +1306,16 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                     class="Label-sc-4akkzw-0 iTKkeF"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-0.5 -mx-1"
                     >
-                      + 100 ARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 100 ARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

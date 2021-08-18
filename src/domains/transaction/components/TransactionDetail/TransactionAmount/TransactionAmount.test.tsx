@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "testing-library";
+import { act, fireEvent, render, screen } from "utils/testing-library";
 
 import { translations as transactionTranslations } from "../../../i18n";
 import { TransactionAmount } from "./TransactionAmount";
@@ -40,5 +40,20 @@ describe("TransactionAmount", () => {
 		const { container } = render(<TransactionAmount amount={1} currency="DARK" isSent={type === "Sent"} />);
 
 		expect(container).toHaveTextContent(`${type.toLowerCase()}.svg`);
+	});
+
+	it.each(["Sent", "Received"])("should render info indicator for '%s'", (type) => {
+		render(
+			<TransactionAmount amount={2} returnedAmount={1} isMultiPayment currency="DARK" isSent={type === "Sent"} />,
+		);
+
+		expect(screen.getByTestId("TransactionAmount__Hint_Amount")).toBeInTheDocument();
+		expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
+
+		act(() => {
+			fireEvent.mouseEnter(screen.getByTestId("TransactionAmount__Hint_Amount"));
+		});
+
+		expect(screen.getByText("Excluding 1 DARK sent to itself")).toBeInTheDocument();
 	});
 });

@@ -21,12 +21,16 @@ exports[`TransactionAmount should render 1`] = `
           class="Label-sc-4akkzw-0 iTKkeF"
           color="success"
         >
-          <span
-            class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+          <div
+            class="flex space-x-0.5 -mx-1"
           >
-            + 1 DARK
-          </span>
+            <span
+              class="whitespace-nowrap"
+              data-testid="AmountCrypto"
+            >
+              + 1 DARK
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -68,12 +72,16 @@ exports[`TransactionAmount should render currency amount 1`] = `
           class="Label-sc-4akkzw-0 iTKkeF"
           color="success"
         >
-          <span
-            class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+          <div
+            class="flex space-x-0.5 -mx-1"
           >
-            + 1 DARK
-          </span>
+            <span
+              class="whitespace-nowrap"
+              data-testid="AmountCrypto"
+            >
+              + 1 DARK
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -115,12 +123,16 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
           class="Label-sc-4akkzw-0 iTKkeF"
           color="success"
         >
-          <span
-            class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+          <div
+            class="flex space-x-0.5 -mx-1"
           >
-            + 1 DARK
-          </span>
+            <span
+              class="whitespace-nowrap"
+              data-testid="AmountCrypto"
+            >
+              + 1 DARK
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -162,12 +174,16 @@ exports[`TransactionAmount should render label for multiple recipients 2`] = `
           class="Label-sc-4akkzw-0 iTKkeF"
           color="success"
         >
-          <span
-            class="whitespace-nowrap"
-            data-testid="AmountCrypto"
+          <div
+            class="flex space-x-0.5 -mx-1"
           >
-            + 1 DARK
-          </span>
+            <span
+              class="whitespace-nowrap"
+              data-testid="AmountCrypto"
+            >
+              + 1 DARK
+            </span>
+          </div>
         </div>
       </div>
     </div>

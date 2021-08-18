@@ -1,6 +1,6 @@
 import React from "react";
-import { render, waitFor } from "testing-library";
 import { TransactionFixture } from "tests/fixtures/transactions";
+import { act, fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { MultiPaymentDetail } from "./MultiPaymentDetail";
@@ -65,6 +65,46 @@ describe("MultiPaymentDetail", () => {
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
 
 		await waitFor(() => expect(getByText(translations.WELL_CONFIRMED)).toBeTruthy());
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render hint icon with tooltip when it's a returned transaction", () => {
+		const { asFragment } = render(
+			<MultiPaymentDetail
+				isOpen={true}
+				transaction={{
+					...TransactionFixture,
+					blockId: () => "adsad12312xsd1w312e1s13203e12",
+					isConfirmed: () => true,
+					isReturn: () => true,
+					recipients: () => [
+						{
+							address: "adsad12312xsd1w312e1s13203e12",
+							amount: 200,
+						},
+						{
+							address: TransactionFixture.sender(),
+							amount: 99,
+						},
+						{
+							address: "adsad12312xsd1w312e1s13203e14",
+							amount: 1990,
+						},
+					],
+				}}
+			/>,
+		);
+
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+
+		expect(screen.getByTestId("TransactionAmount__Hint_Amount")).toBeInTheDocument();
+
+		act(() => {
+			fireEvent.mouseEnter(screen.getByTestId("TransactionAmount__Hint_Amount"));
+		});
+
+		expect(screen.getByText("Excluding 99 ARK sent to itself")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

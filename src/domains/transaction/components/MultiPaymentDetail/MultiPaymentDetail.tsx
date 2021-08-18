@@ -26,15 +26,24 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Mu
 
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
 
-	const recipients = [];
+	const { recipients, returnedAmount } = useMemo(() => {
+		const recipients = [];
+		let returnedAmount = 0;
 
-	for (const [index, recipient] of transaction.recipients().entries()) {
-		recipients.push({
-			...recipient,
-			alias: aliases?.recipients[index].alias,
-			isDelegate: aliases?.recipients[index].isDelegate,
-		});
-	}
+		for (const [index, recipient] of transaction.recipients().entries()) {
+			if (transaction.isReturn() && transaction.sender() === recipient.address) {
+				returnedAmount += recipient.amount;
+			}
+
+			recipients.push({
+				...recipient,
+				alias: aliases?.recipients[index].alias,
+				isDelegate: aliases?.recipients[index].isDelegate,
+			});
+		}
+
+		return { recipients, returnedAmount };
+	}, [aliases, transaction]);
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
@@ -50,6 +59,7 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Mu
 			<TransactionAmount
 				amount={transaction.amount()}
 				convertedAmount={transaction.convertedAmount()}
+				returnedAmount={returnedAmount}
 				currency={wallet.currency()}
 				exchangeCurrency={wallet.exchangeCurrency()}
 				isMultiPayment={true}

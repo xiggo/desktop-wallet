@@ -3,6 +3,7 @@ import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { Label } from "app/components/Label";
 import { Tooltip } from "app/components/Tooltip";
+import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -11,6 +12,7 @@ import { TransactionDetail, TransactionDetailProperties } from "../TransactionDe
 type TransactionAmountProperties = {
 	amount: number;
 	convertedAmount?: number;
+	returnedAmount?: number;
 	currency: string;
 	exchangeCurrency?: string;
 	isMultiPayment?: boolean;
@@ -20,6 +22,7 @@ type TransactionAmountProperties = {
 export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 	amount,
 	convertedAmount,
+	returnedAmount,
 	currency,
 	exchangeCurrency,
 	isMultiPayment,
@@ -28,7 +31,7 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 }: TransactionAmountProperties) => {
 	const { t } = useTranslation();
 
-	const renderModeIcon = (isSent: boolean) => {
+	const renderModeIcon = () => {
 		const modeIconName = isSent ? "Sent" : "Received";
 		const tooltipContent = t(`TRANSACTION.${modeIconName.toUpperCase()}`);
 
@@ -45,15 +48,39 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 		);
 	};
 
+	const renderHintIcon = () => {
+		if (!returnedAmount) {
+			return;
+		}
+
+		const hintStyle = isSent
+			? "bg-theme-danger-100 dark:bg-theme-danger-400"
+			: "bg-theme-success-200 dark:bg-theme-success-600";
+
+		return (
+			<Tooltip content={t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency })}>
+				<div
+					data-testid="TransactionAmount__Hint_Amount"
+					className={cn("flex items-center -ml-1 px-2", hintStyle)}
+				>
+					<Icon name="HintSmall" size="sm" className="dark:text-white" />
+				</div>
+			</Tooltip>
+		);
+	};
+
 	return (
 		<TransactionDetail
 			data-testid="TransactionAmount"
 			label={isMultiPayment ? t("TRANSACTION.TOTAL_AMOUNT") : t("TRANSACTION.AMOUNT")}
-			extra={renderModeIcon(isSent)}
+			extra={renderModeIcon()}
 			{...properties}
 		>
 			<Label color={isSent ? "danger" : "success"}>
-				<AmountCrypto showSign ticker={currency} value={amount} isNegative={isSent} />
+				<div className="flex space-x-0.5 -mx-1">
+					{renderHintIcon()}
+					<AmountCrypto showSign ticker={currency} value={amount} isNegative={isSent} />
+				</div>
 			</Label>
 
 			{!!exchangeCurrency && !!convertedAmount && (

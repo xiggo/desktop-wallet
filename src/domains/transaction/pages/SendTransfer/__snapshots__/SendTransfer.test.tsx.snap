@@ -586,12 +586,16 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                               class="Label-sc-4akkzw-0 cuqVRO"
                               color="danger"
                             >
-                              <span
-                                class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex space-x-0.5 -mx-1"
                               >
-                                - 400,000 DARK
-                              </span>
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="AmountCrypto"
+                                >
+                                  - 400,000 DARK
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -7843,12 +7847,16 @@ exports[`SendTransfer should render summary step 1`] = `
               class="Label-sc-4akkzw-0 cuqVRO"
               color="danger"
             >
-              <span
-                class="whitespace-nowrap"
-                data-testid="AmountCrypto"
+              <div
+                class="flex space-x-0.5 -mx-1"
               >
-                - 1 DARK
-              </span>
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="AmountCrypto"
+                >
+                  - 1 DARK
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -9983,12 +9991,16 @@ exports[`SendTransfer should send a single transfer 1`] = `
                               class="Label-sc-4akkzw-0 cuqVRO"
                               color="danger"
                             >
-                              <span
-                                class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex space-x-0.5 -mx-1"
                               >
-                                - 400,000 DARK
-                              </span>
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="AmountCrypto"
+                                >
+                                  - 400,000 DARK
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -10646,12 +10658,16 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                               class="Label-sc-4akkzw-0 cuqVRO"
                               color="danger"
                             >
-                              <span
-                                class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex space-x-0.5 -mx-1"
                               >
-                                - 400,000 DARK
-                              </span>
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="AmountCrypto"
+                                >
+                                  - 400,000 DARK
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -11309,12 +11325,16 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                               class="Label-sc-4akkzw-0 cuqVRO"
                               color="danger"
                             >
-                              <span
-                                class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex space-x-0.5 -mx-1"
                               >
-                                - 400,000 DARK
-                              </span>
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="AmountCrypto"
+                                >
+                                  - 400,000 DARK
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -12283,12 +12303,16 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                               class="Label-sc-4akkzw-0 cuqVRO"
                               color="danger"
                             >
-                              <span
-                                class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex space-x-0.5 -mx-1"
                               >
-                                - 400,000 DARK
-                              </span>
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="AmountCrypto"
+                                >
+                                  - 400,000 DARK
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -12946,12 +12970,16 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                               class="Label-sc-4akkzw-0 cuqVRO"
                               color="danger"
                             >
-                              <span
-                                class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex space-x-0.5 -mx-1"
                               >
-                                - 400,000 DARK
-                              </span>
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="AmountCrypto"
+                                >
+                                  - 400,000 DARK
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -13609,12 +13637,16 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                               class="Label-sc-4akkzw-0 cuqVRO"
                               color="danger"
                             >
-                              <span
-                                class="whitespace-nowrap"
-                                data-testid="AmountCrypto"
+                              <div
+                                class="flex space-x-0.5 -mx-1"
                               >
-                                - 400,000 DARK
-                              </span>
+                                <span
+                                  class="whitespace-nowrap"
+                                  data-testid="AmountCrypto"
+                                >
+                                  - 400,000 DARK
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>

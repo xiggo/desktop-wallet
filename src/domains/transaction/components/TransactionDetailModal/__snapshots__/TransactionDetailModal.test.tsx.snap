@@ -1377,12 +1377,16 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                     class="Label-sc-4akkzw-0 cuqVRO"
                     color="danger"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-0.5 -mx-1"
                     >
-                      - 100 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        - 100 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2378,12 +2382,16 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                     class="Label-sc-4akkzw-0 cuqVRO"
                     color="danger"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-0.5 -mx-1"
                     >
-                      - 100 ARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        - 100 ARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
