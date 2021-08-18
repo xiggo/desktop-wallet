@@ -121,7 +121,7 @@ exports[`WalletListItem should render 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
           >
             N/A
           </div>
@@ -253,7 +253,7 @@ exports[`WalletListItem should render for selected wallet 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
           >
             <span
               class="whitespace-nowrap"
@@ -390,7 +390,7 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
           >
             N/A
           </div>
@@ -522,7 +522,7 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
           >
             N/A
           </div>

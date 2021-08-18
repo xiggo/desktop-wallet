@@ -409,7 +409,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -518,7 +518,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -627,7 +627,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1057,7 +1057,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -1166,7 +1166,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -1275,7 +1275,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2985,7 +2985,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -3094,7 +3094,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -3203,7 +3203,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       <span
                         class="whitespace-nowrap"

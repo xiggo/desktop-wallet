@@ -276,7 +276,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -385,7 +385,7 @@ exports[`WalletBottomSheetMenu should render 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>

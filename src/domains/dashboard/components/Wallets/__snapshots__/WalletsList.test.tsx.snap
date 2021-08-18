@@ -220,7 +220,7 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                 >
                   N/A
                 </div>
@@ -329,7 +329,7 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                 >
                   N/A
                 </div>
@@ -1037,7 +1037,7 @@ exports[`WalletsList should render with view more button 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                 >
                   N/A
                 </div>
@@ -1146,7 +1146,7 @@ exports[`WalletsList should render with view more button 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
                 >
                   N/A
                 </div>

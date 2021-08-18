@@ -81,7 +81,7 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 				<AmountCrypto value={wallet.balance()} ticker={wallet.network().ticker()} />
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-400">
+			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text">
 				{lastCellContent}
 			</TableCell>
 		</TableRow>
