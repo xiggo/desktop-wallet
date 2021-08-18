@@ -2,7 +2,6 @@ import { Contracts, DTO } from "@payvo/profiles";
 import { Header } from "app/components/Header";
 import { Image } from "app/components/Image";
 import {
-	TransactionExplorerLink,
 	TransactionNetwork,
 	TransactionSender,
 	TransactionType,
@@ -10,38 +9,26 @@ import {
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { MultiSignatureSuccessful } from ".";
-
 interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
 	transaction?: DTO.ExtendedSignedTransactionData;
 	senderWallet?: Contracts.IReadWriteWallet;
 }
 
-export const TransactionSuccessful = ({ children, transaction, senderWallet }: TransactionSuccessfulProperties) => {
+export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
-
-	if (transaction?.isMultiSignatureRegistration() || transaction?.usesMultiSignature()) {
-		return (
-			<MultiSignatureSuccessful transaction={transaction} senderWallet={senderWallet}>
-				{children}
-			</MultiSignatureSuccessful>
-		);
-	}
 
 	return (
 		<section data-testid="TransactionSuccessful" className="space-y-8">
-			<Header title={t("TRANSACTION.SUCCESS.TITLE")} />
+			<Header title={t("TRANSACTION.SUCCESS.CREATED")} />
 
-			<Image name="TransactionSuccessBanner" domain="transaction" className="w-full" />
+			<Image name="TransactionSignedBanner" domain="transaction" className="w-full" />
 
-			<p className="text-theme-secondary-text">{t("TRANSACTION.SUCCESS.DESCRIPTION")}</p>
+			<p className="text-theme-secondary-text">{t("TRANSACTION.SUCCESS.MUSIG_DESCRIPTION")}</p>
 
 			<div>
 				{senderWallet && transaction && (
 					<>
-						<TransactionExplorerLink transaction={transaction} border={false} paddingPosition="bottom" />
-
 						<TransactionType type={transaction.type()} />
 
 						<TransactionNetwork network={senderWallet.network()} />

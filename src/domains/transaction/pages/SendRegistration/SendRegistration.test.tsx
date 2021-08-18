@@ -71,10 +71,12 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://dexplorer.ark.io/transaction/${DelegateRegistrationFixture.data.id}`,
 		fee: () => +DelegateRegistrationFixture.data.fee / 1e8,
 		id: () => DelegateRegistrationFixture.data.id,
+		isMultiSignatureRegistration: () => false,
 		recipient: () => DelegateRegistrationFixture.data.recipient,
 		sender: () => DelegateRegistrationFixture.data.sender,
 		type: () => "delegateRegistration",
 		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
+		usesMultiSignature: () => false,
 	});
 
 const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -85,9 +87,11 @@ const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWalle
 		explorerLink: () => `https://dexplorer.ark.io/transaction/${SecondSignatureRegistrationFixture.data.id}`,
 		fee: () => +SecondSignatureRegistrationFixture.data.fee / 1e8,
 		id: () => SecondSignatureRegistrationFixture.data.id,
+		isMultiSignatureRegistration: () => false,
 		recipient: () => SecondSignatureRegistrationFixture.data.recipient,
 		sender: () => SecondSignatureRegistrationFixture.data.sender,
 		type: () => "secondSignature",
+		usesMultiSignature: () => false,
 	});
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -102,6 +106,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "secondSignature",
+		usesMultiSignature: () => false,
 	});
 
 describe("Registration", () => {

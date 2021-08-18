@@ -87,5 +87,5 @@ test("should successfully send a vote transaction with a multisig wallet", async
 	await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 
 	// Transaction successful
-	await t.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.TITLE).exists).ok({ timeout: 60_000 });
+	await t.expect(Selector("[data-testid=TransactionSuccessful]").exists).ok();
 });

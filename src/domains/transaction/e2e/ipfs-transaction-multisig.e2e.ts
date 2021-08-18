@@ -56,5 +56,5 @@ test("should send IPFS successfully with a multisig wallet", async (t) => {
 
 	await t.wait(2000);
 	// Transaction successful
-	await t.expect(Selector("h1").withText(translations.TRANSACTION.SUCCESS.TITLE).exists).ok({ timeout: 60_000 });
+	await t.expect(Selector("[data-testid=TransactionSuccessful]").exists).ok();
 });

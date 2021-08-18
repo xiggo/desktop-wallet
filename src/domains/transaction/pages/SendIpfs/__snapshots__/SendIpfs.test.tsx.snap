@@ -982,19 +982,19 @@ exports[`SendIpfs should render summary step 1`] = `
           class="mb-0 text-2xl"
           data-testid="header__title"
         >
-          Transaction Sent
+          Transaction Created
         </h1>
       </div>
     </div>
     <svg
       class="w-full"
     >
-      transaction-success-banner-dark-green.svg
+      transaction-signed-banner-dark-green.svg
     </svg>
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
       <div

@@ -271,8 +271,11 @@ export const translations: { [key: string]: any } = {
 		TITLE: "Social Media",
 	},
 	SUCCESS: {
+		CREATED: "Transaction Created",
 		DESCRIPTION:
 			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:",
+		MUSIG_DESCRIPTION:
+			"Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:",
 		TITLE: "Transaction Sent",
 	},
 	TIMESTAMP: "Timestamp",

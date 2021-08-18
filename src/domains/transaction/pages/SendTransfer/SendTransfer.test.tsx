@@ -47,6 +47,7 @@ const createTransactionMultipleMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
 		fee: () => +transactionMultipleFixture.data.fee / 1e8,
 		id: () => transactionMultipleFixture.data.id,
+		isMultiSignatureRegistration: () => false,
 		recipient: () => transactionMultipleFixture.data.recipient,
 		recipients: () => [
 			{
@@ -56,6 +57,7 @@ const createTransactionMultipleMock = (wallet: Contracts.IReadWriteWallet) =>
 		],
 		sender: () => transactionMultipleFixture.data.sender,
 		type: () => "multiPayment",
+		usesMultiSignature: () => false,
 	});
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -66,6 +68,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
+		isMultiSignatureRegistration: () => false,
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{
@@ -75,6 +78,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		],
 		sender: () => transactionFixture.data.sender,
 		type: () => "transfer",
+		usesMultiSignature: () => false,
 	});
 
 let profile: Contracts.IProfile;

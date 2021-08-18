@@ -40,9 +40,11 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://dexplorer.ark.io/transaction/${voteFixture.data.id}`,
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
+		isMultiSignatureRegistration: () => false,
 		recipient: () => voteFixture.data.recipient,
 		sender: () => voteFixture.data.sender,
 		type: () => "vote",
+		usesMultiSignature: () => false,
 	});
 
 const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -53,9 +55,11 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://dexplorer.ark.io/transaction/${unvoteFixture.data.id}`,
 		fee: () => unvoteFixture.data.fee / 1e8,
 		id: () => unvoteFixture.data.id,
+		isMultiSignatureRegistration: () => false,
 		recipient: () => unvoteFixture.data.recipient,
 		sender: () => unvoteFixture.data.sender,
 		type: () => "unvote",
+		usesMultiSignature: () => false,
 	});
 
 const passphrase = getDefaultWalletMnemonic();

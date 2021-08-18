@@ -47,9 +47,11 @@ const transactionResponse = {
 	explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
 	fee: () => transactionFixture.data.fee / 1e8,
 	id: () => transactionFixture.data.id,
+	isMultiSignatureRegistration: () => false,
 	recipient: () => transactionFixture.data.recipient,
 	sender: () => transactionFixture.data.sender,
 	type: () => "delegateResignation",
+	usesMultiSignature: () => false,
 };
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>

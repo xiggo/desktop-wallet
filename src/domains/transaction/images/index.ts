@@ -10,6 +10,10 @@ import { ReactComponent as TransactionErrorBannerDarkBlue } from "./transaction-
 import { ReactComponent as TransactionErrorBannerDarkGreen } from "./transaction-error-banner-dark-green.svg";
 import { ReactComponent as TransactionErrorBannerLightBlue } from "./transaction-error-banner-light-blue.svg";
 import { ReactComponent as TransactionErrorBannerLightGreen } from "./transaction-error-banner-light-green.svg";
+import { ReactComponent as TransactionSignedBannerDarkBlue } from "./transaction-signed-banner-dark-blue.svg";
+import { ReactComponent as TransactionSignedBannerDarkGreen } from "./transaction-signed-banner-dark-green.svg";
+import { ReactComponent as TransactionSignedBannerLightBlue } from "./transaction-signed-banner-light-blue.svg";
+import { ReactComponent as TransactionSignedBannerLightGreen } from "./transaction-signed-banner-light-green.svg";
 import { ReactComponent as TransactionSuccessBannerDarkBlue } from "./transaction-success-banner-dark-blue.svg";
 import { ReactComponent as TransactionSuccessBannerDarkGreen } from "./transaction-success-banner-dark-green.svg";
 import { ReactComponent as TransactionSuccessBannerLightBlue } from "./transaction-success-banner-light-blue.svg";
@@ -28,6 +32,10 @@ export const transaction = {
 	TransactionErrorBannerDarkGreen,
 	TransactionErrorBannerLightBlue,
 	TransactionErrorBannerLightGreen,
+	TransactionSignedBannerDarkBlue,
+	TransactionSignedBannerDarkGreen,
+	TransactionSignedBannerLightBlue,
+	TransactionSignedBannerLightGreen,
 	TransactionSuccessBannerDarkBlue,
 	TransactionSuccessBannerDarkGreen,
 	TransactionSuccessBannerLightBlue,

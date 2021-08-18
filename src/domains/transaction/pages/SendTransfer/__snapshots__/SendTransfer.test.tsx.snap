@@ -7558,95 +7558,21 @@ exports[`SendTransfer should render summary step 1`] = `
           class="mb-0 text-2xl"
           data-testid="header__title"
         >
-          Transaction Sent
+          Transaction Created
         </h1>
       </div>
     </div>
     <svg
       class="w-full"
     >
-      transaction-success-banner-dark-green.svg
+      transaction-signed-banner-dark-green.svg
     </svg>
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
-      <div
-        class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 iMRWgr no-ligatures"
-        data-testid="TransactionDetail"
-      >
-        <div
-          class="flex-1 space-y-2 w-40 whitespace-nowrap"
-        >
-          <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
-          >
-            ID
-          </div>
-          <div
-            class="font-semibold"
-          >
-            <div
-              class="flex overflow-hidden items-baseline space-x-3"
-            >
-              <span
-                class="overflow-hidden"
-              >
-                <a
-                  class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="Link"
-                  href="#"
-                  rel="noopener noreferrer"
-                  to="https://dexplorer.ark.io/transaction/6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4"
-                >
-                  <span
-                    class="Link__Content-sc-ec014t-1 hUiuRR"
-                  >
-                    <span
-                      class="inline-flex overflow-hidden"
-                    >
-                      6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
-                    </span>
-                  </span>
-                  <div
-                    class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
-                    data-testid="Link__external"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      arrow-external.svg
-                    </svg>
-                  </div>
-                </a>
-              </span>
-              <span
-                class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-              >
-                <button
-                  class="relative focus:outline-none ring-focus"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="clipboard-icon__wrapper"
-                  type="button"
-                >
-                  <div
-                    class="sc-bdnxRM AFVmm"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      copy.svg
-                    </svg>
-                  </div>
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
       <div
         class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
         data-testid="TransactionType"
