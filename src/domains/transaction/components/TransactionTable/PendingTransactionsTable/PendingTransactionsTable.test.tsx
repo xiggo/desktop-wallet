@@ -1,4 +1,5 @@
 import { Contracts, DTO } from "@payvo/profiles";
+import { buildTranslations } from "app/i18n/helpers";
 import { PendingTransactions } from "domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import nock from "nock";
 import React from "react";
@@ -6,6 +7,8 @@ import * as utils from "utils/electron-utils";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { PendingTransaction } from "./PendingTransactionsTable.contracts";
+
+const translations = buildTranslations();
 
 describe("Signed Transaction Table", () => {
 	let profile: Contracts.IProfile;
@@ -27,7 +30,7 @@ describe("Signed Transaction Table", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({ get: () => undefined }));
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({ get: () => undefined } as any));
 	};
 
 	const mockMultisignatures = (wallet: Contracts.IReadWriteWallet) => {
@@ -37,7 +40,7 @@ describe("Signed Transaction Table", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({ get: () => "data" }));
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({ get: () => "data" } as any));
 	};
 
 	let pendingTransactions: PendingTransaction[] = [];
@@ -270,11 +273,11 @@ describe("Signed Transaction Table", () => {
 		jest.restoreAllMocks();
 	});
 
-	it("should render pending transfers", () => {
+	it.each([true, false])("should render pending transfers when isCompact = %s", (isCompact: boolean) => {
 		mockPendingTransfers(wallet);
 
 		const { asFragment } = render(
-			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} />,
+			<PendingTransactions wallet={wallet} pendingTransactions={pendingTransactions} isCompact={isCompact} />,
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -313,7 +316,11 @@ describe("Signed Transaction Table", () => {
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
 
-		await waitFor(() => expect(getAllByTestId("PendingTransactions__multiSignature")).toHaveLength(1));
+		await waitFor(() => expect(getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+
+		expect(getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
+			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
+		);
 
 		canBeSignedMock.mockReset();
 		isMultiSignatureReadyMock.mockRestore();
@@ -373,7 +380,11 @@ describe("Signed Transaction Table", () => {
 		const { asFragment, getByTestId } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(getByTestId("PendingTransactions__multiSignature")).toBeInTheDocument());
+		await waitFor(() =>
+			expect(getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
+				translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
+			),
+		);
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -390,7 +401,11 @@ describe("Signed Transaction Table", () => {
 		const { asFragment, getByTestId } = render(
 			<PendingTransactions wallet={wallet} pendingTransactions={pendingMultisignatureTransactions} />,
 		);
-		await waitFor(() => expect(getByTestId("PendingTransactions__multiSignature")).toBeInTheDocument());
+		await waitFor(() =>
+			expect(getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
+				translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
+			),
+		);
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -441,7 +456,7 @@ describe("Signed Transaction Table", () => {
 		jest.restoreAllMocks();
 	});
 
-	it("should show the sign button", () => {
+	it.each([true, false])("should show the sign button with isCompact = %s", (isCompact: boolean) => {
 		mockMultisignatures(wallet);
 		const onClick = jest.fn();
 		const awaitingMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
@@ -451,6 +466,7 @@ describe("Signed Transaction Table", () => {
 				wallet={wallet}
 				onClick={onClick}
 				pendingTransactions={pendingMultisignatureTransactions}
+				isCompact={isCompact}
 			/>,
 		);
 

@@ -3,6 +3,7 @@ import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import { useTimeFormat } from "app/hooks/use-time-format";
+import { TransactionRowMemo } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMemo";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -14,17 +15,21 @@ export const PendingTransferRow = ({
 	transaction,
 	onRowClick,
 	wallet,
+	isCompact,
+	showMemoColumn,
 }: {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	onRowClick?: (transaction: DTO.ExtendedConfirmedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
+	isCompact?: boolean;
+	showMemoColumn: boolean;
 }) => {
 	const { t } = useTranslation();
 	const timeFormat = useTimeFormat();
 
 	return (
 		<TableRow onClick={() => onRowClick?.(transaction)}>
-			<TableCell variant="start">
+			<TableCell variant="start" isCompact={isCompact}>
 				<Tooltip content={transaction.id()}>
 					<span className="text-theme-secondary-300 dark:text-theme-secondary-800">
 						<Icon name="MagnifyingGlassId" />
@@ -32,12 +37,13 @@ export const PendingTransferRow = ({
 				</Tooltip>
 			</TableCell>
 
-			<TableCell innerClassName="text-theme-secondary-text">
+			<TableCell innerClassName="text-theme-secondary-text" isCompact={isCompact}>
 				<span data-testid="TransactionRow__timestamp">{transaction?.timestamp()?.format(timeFormat)}</span>
 			</TableCell>
 
-			<TableCell innerClassName="space-x-4">
+			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
 				<BaseTransactionRowMode
+					iconSize={isCompact ? "xs" : "lg"}
 					isSent={transaction.isSent()}
 					isReturn={transaction.isReturn()}
 					type={transaction.type()}
@@ -47,15 +53,13 @@ export const PendingTransferRow = ({
 				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={transaction.recipient()} />
 			</TableCell>
 
-			<TableCell innerClassName="justify-center">
-				<Tooltip content={t("COMMON.MULTISIGNATURE")}>
-					<span className="p-1">
-						<Icon data-testid="PendingTransactions__multiSignature" name="Multisignature" size="lg" />
-					</span>
-				</Tooltip>
-			</TableCell>
+			{showMemoColumn && (
+				<TableCell innerClassName="justify-center" isCompact={isCompact}>
+					<TransactionRowMemo memo={transaction.memo()} />
+				</TableCell>
+			)}
 
-			<TableCell className="w-16" innerClassName="justify-center truncate">
+			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>
 				<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>
 					<span className="p-1 text-theme-warning-300">
 						<Icon name="Clock" size="lg" />
@@ -63,7 +67,7 @@ export const PendingTransferRow = ({
 				</Tooltip>
 			</TableCell>
 
-			<TableCell innerClassName="justify-end">
+			<TableCell innerClassName="justify-end" isCompact={isCompact}>
 				<BaseTransactionRowAmount
 					isSent={transaction?.isSent?.()}
 					total={transaction.amount() + transaction.fee()}
@@ -71,7 +75,12 @@ export const PendingTransferRow = ({
 				/>
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end" className="text-theme-secondary-500">
+			<TableCell
+				variant="end"
+				innerClassName="justify-end"
+				className="text-theme-secondary-500"
+				isCompact={isCompact}
+			>
 				{t("TRANSACTION.WAITING")}...
 			</TableCell>
 		</TableRow>

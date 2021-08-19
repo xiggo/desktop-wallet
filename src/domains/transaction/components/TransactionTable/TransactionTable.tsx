@@ -11,8 +11,6 @@ interface Properties {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
 	exchangeCurrency?: string;
 	showMemoColumn?: boolean;
-	showSignColumn?: boolean;
-	showExplorerLinkColumn?: boolean;
 	hideHeader?: boolean;
 	isCompact?: boolean;
 	onRowClick?: (row: DTO.ExtendedConfirmedTransactionData) => void;
@@ -25,20 +23,13 @@ export const TransactionTable = memo(
 		transactions,
 		exchangeCurrency,
 		showMemoColumn = false,
-		showSignColumn = false,
-		showExplorerLinkColumn = true,
 		isCompact = false,
 		hideHeader = false,
 		isLoading = false,
 		skeletonRowsLimit = 8,
 		onRowClick,
 	}: Properties) => {
-		const columns = useColumns({
-			exchangeCurrency,
-			showExplorerLinkColumn,
-			showMemoColumn,
-			showSignColumn,
-		});
+		const columns = useColumns({ exchangeCurrency, showMemoColumn });
 
 		const initialState = {
 			sortBy: [
@@ -65,9 +56,7 @@ export const TransactionTable = memo(
 							onClick={() => onRowClick?.(row as DTO.ExtendedConfirmedTransactionData)}
 							transaction={row as DTO.ExtendedConfirmedTransactionData}
 							exchangeCurrency={exchangeCurrency}
-							showExplorerLink={showExplorerLinkColumn}
 							showMemoColumn={showMemoColumn}
-							showSignColumn={showSignColumn}
 							isCompact={isCompact}
 						/>
 					)}

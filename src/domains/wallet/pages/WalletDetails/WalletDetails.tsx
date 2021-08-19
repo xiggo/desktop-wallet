@@ -70,6 +70,8 @@ export const WalletDetails = () => {
 		history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}/votes`);
 	};
 
+	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
+
 	/* istanbul ignore next */
 	return (
 		<>
@@ -111,6 +113,7 @@ export const WalletDetails = () => {
 					{pendingTransactions.length > 0 && (
 						<div className="mb-8">
 							<PendingTransactions
+								isCompact={useCompactTables}
 								pendingTransactions={pendingTransactions}
 								wallet={activeWallet}
 								onPendingTransactionClick={setTransactionModalItem}
@@ -120,7 +123,7 @@ export const WalletDetails = () => {
 					)}
 
 					<Transactions
-						isCompact={!activeProfile.appearance().get("useExpandedTables")}
+						isCompact={useCompactTables}
 						showUnconfirmed={false}
 						profile={activeProfile}
 						wallets={[activeWallet]}

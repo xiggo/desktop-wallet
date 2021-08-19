@@ -1,17 +1,11 @@
 import { sortByDesc } from "@arkecosystem/utils";
 import { Contracts, DTO } from "@payvo/profiles";
+import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import nock from "nock";
 import React from "react";
-import {
-	act,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	getDefaultWalletId,
-	renderWithRouter,
-	waitFor,
-} from "utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletId, renderWithRouter, waitFor } from "utils/testing-library";
 
 import { TransactionTable } from "./TransactionTable";
 
@@ -36,108 +30,79 @@ describe("TransactionTable", () => {
 	});
 
 	it("should render", () => {
-		const { getAllByTestId, asFragment } = renderWithRouter(<TransactionTable transactions={transactions} />);
+		const { asFragment } = renderWithRouter(<TransactionTable transactions={transactions} />);
 
-		expect(getAllByTestId("TableRow")).toHaveLength(transactions.length);
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with currency", () => {
-		const { getAllByTestId } = renderWithRouter(
-			<TransactionTable transactions={transactions} exchangeCurrency="BTC" />,
-		);
+		renderWithRouter(<TransactionTable transactions={transactions} exchangeCurrency="BTC" />);
 
-		expect(getAllByTestId("TransactionRow__currency")).toHaveLength(transactions.length);
-	});
-
-	it("should render with sign", () => {
-		const mockIsMultiSignatureRegistration = jest
-			.spyOn(transactions[0], "isMultiSignatureRegistration")
-			.mockReturnValue(true);
-
-		const { getAllByTestId, asFragment } = renderWithRouter(
-			<TransactionTable transactions={transactions} showSignColumn />,
-		);
-
-		expect(getAllByTestId("TransactionRow__sign")).toHaveLength(1);
-		expect(asFragment()).toMatchSnapshot();
-
-		mockIsMultiSignatureRegistration.mockRestore();
+		expect(screen.getAllByTestId("TransactionRow__currency")).toHaveLength(transactions.length);
 	});
 
 	it("should render with memo", () => {
 		const mockMemo = jest.spyOn(transactions[0], "memo").mockReturnValue("memo");
 
-		const { getAllByTestId } = renderWithRouter(
-			<TransactionTable transactions={transactions} showMemoColumn={true} />,
-		);
+		renderWithRouter(<TransactionTable transactions={transactions} showMemoColumn />);
 
-		expect(getAllByTestId("TransactionRowMemo__vendorField")).toHaveLength(1);
+		expect(screen.getAllByTestId("TransactionRowMemo__vendorField")).toHaveLength(1);
 
 		mockMemo.mockRestore();
 	});
 
-	it("should render without explorer link column", () => {
-		const { getAllByTestId, asFragment } = renderWithRouter(
-			// @ts-ignore - TODO: brittle fixtures
-			<TransactionTable transactions={transactions} showExplorerLinkColumn={false} />,
-		);
-
-		expect(() => getAllByTestId("TransactionRow__ID")).toThrow(/Unable to find an element by/);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should render compact", () => {
-		const { getAllByTestId, asFragment } = renderWithRouter(
-			<TransactionTable transactions={transactions} isCompact />,
-		);
+		const { asFragment } = renderWithRouter(<TransactionTable transactions={transactions} isCompact />);
 
-		expect(getAllByTestId("TableRow")).toHaveLength(transactions.length);
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	describe("loading state", () => {
+		let useRandomNumberSpy: jest.SpyInstance;
+
 		beforeAll(() => {
-			jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+			useRandomNumberSpy = jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 		});
 
 		afterAll(() => {
-			useRandomNumberHook.useRandomNumber.mockRestore();
+			useRandomNumberSpy.mockRestore();
 		});
 
 		it("should render", () => {
-			const { getAllByTestId, asFragment } = renderWithRouter(
+			const { asFragment } = renderWithRouter(
 				<TransactionTable transactions={[]} isLoading skeletonRowsLimit={5} />,
 			);
 
-			expect(getAllByTestId("TableRow")).toHaveLength(5);
-			expect(asFragment()).toMatchSnapshot();
-		});
-
-		it("should render with sign column", () => {
-			const { getAllByTestId, asFragment } = renderWithRouter(
-				<TransactionTable transactions={[]} isLoading showSignColumn skeletonRowsLimit={5} />,
-			);
-
-			expect(getAllByTestId("TableRow")).toHaveLength(5);
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
 			expect(asFragment()).toMatchSnapshot();
 		});
 
 		it("should render with currency column", () => {
-			const { getAllByTestId, asFragment } = renderWithRouter(
+			const { asFragment } = renderWithRouter(
 				<TransactionTable transactions={[]} isLoading exchangeCurrency="BTC" skeletonRowsLimit={5} />,
 			);
 
-			expect(getAllByTestId("TableRow")).toHaveLength(5);
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
 			expect(asFragment()).toMatchSnapshot();
 		});
 
 		it("should render with memo column", () => {
-			const { getAllByTestId, asFragment } = renderWithRouter(
-				<TransactionTable transactions={[]} isCompact isLoading showMemoColumn={true} skeletonRowsLimit={5} />,
+			const { asFragment } = renderWithRouter(
+				<TransactionTable transactions={[]} isLoading showMemoColumn skeletonRowsLimit={5} />,
 			);
 
-			expect(getAllByTestId("TableRow")).toHaveLength(5);
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
+			expect(asFragment()).toMatchSnapshot();
+		});
+
+		it("should render compact", () => {
+			const { asFragment } = renderWithRouter(
+				<TransactionTable transactions={[]} isLoading isCompact skeletonRowsLimit={5} />,
+			);
+
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
@@ -145,26 +110,21 @@ describe("TransactionTable", () => {
 	it("should emit action on the row click", () => {
 		const onClick = jest.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
-		const { getAllByTestId } = renderWithRouter(
-			<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} />,
-		);
-		const rows = getAllByTestId("TableRow");
-		act(() => {
-			fireEvent.click(rows[0]);
-		});
+
+		renderWithRouter(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} />);
+
+		userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(sortedByDateDesc[0]);
 	});
 
 	it("should emit action on the compact row click", async () => {
 		const onClick = jest.fn();
-		const { getAllByTestId } = renderWithRouter(
-			<TransactionTable transactions={transactions} onRowClick={onClick} isCompact />,
-		);
-		const rows = getAllByTestId("TableRow");
-		act(() => {
-			fireEvent.click(rows[0]);
-		});
+
+		renderWithRouter(<TransactionTable transactions={transactions} onRowClick={onClick} isCompact />);
+
+		userEvent.click(screen.getAllByTestId("TableRow")[0]);
+
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(transactions[1]));
 	});
 });

@@ -5,18 +5,11 @@ import { useRandomNumber } from "app/hooks";
 import React from "react";
 
 type Properties = {
-	showSignColumn?: boolean;
 	showMemoColumn?: boolean;
-	showCurrencyColumn?: boolean | "";
 	isCompact: boolean;
 } & React.HTMLProps<any>;
 
-export const TransactionRowSkeleton = ({
-	showSignColumn,
-	showCurrencyColumn,
-	isCompact,
-	showMemoColumn,
-}: Properties) => {
+export const TransactionRowSkeleton = ({ isCompact, showMemoColumn }: Properties) => {
 	const recipientWidth = useRandomNumber(120, 150);
 	const amountWidth = useRandomNumber(100, 130);
 	const currencyWidth = Math.floor(amountWidth * 0.75);
@@ -68,25 +61,12 @@ export const TransactionRowSkeleton = ({
 				</span>
 			</TableCell>
 
-			{showSignColumn && (
-				<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
-					<Skeleton height={44} width={100} />
-				</TableCell>
-			)}
-
-			{showCurrencyColumn && (
-				<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end" isCompact={isCompact}>
-					<span className="flex items-center space-x-1">
-						<Skeleton height={16} width={currencyWidth} />
-						<Skeleton height={16} width={35} />
-					</span>
-				</TableCell>
-			)}
+			<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end" isCompact={isCompact}>
+				<span className="flex items-center space-x-1">
+					<Skeleton height={16} width={currencyWidth} />
+					<Skeleton height={16} width={35} />
+				</span>
+			</TableCell>
 		</TableRow>
 	);
-};
-
-TransactionRowSkeleton.defaultProps = {
-	showCurrencyColumn: false,
-	showSignColumn: false,
 };

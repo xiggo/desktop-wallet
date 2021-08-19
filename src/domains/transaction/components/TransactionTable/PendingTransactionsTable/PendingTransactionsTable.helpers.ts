@@ -1,14 +1,8 @@
-import { DTO } from "@payvo/profiles";
 import { TableColumn } from "app/components/Table/TableColumn.models";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-interface UseColumnProperties {
-	exchangeCurrency: string | undefined;
-	showMemoColumn: boolean | undefined;
-}
-
-export const useColumns = ({ exchangeCurrency, showMemoColumn }: UseColumnProperties) => {
+const usePendingTransactionTableColumns = ({ showMemoColumn }: { showMemoColumn: boolean }): TableColumn[] => {
 	const { t } = useTranslation();
 
 	return useMemo<TableColumn[]>(() => {
@@ -19,9 +13,8 @@ export const useColumns = ({ exchangeCurrency, showMemoColumn }: UseColumnProper
 
 		const columnDate: TableColumn = {
 			Header: t("COMMON.DATE"),
-			accessor: (transaction: DTO.ExtendedConfirmedTransactionData) => transaction.timestamp?.()?.toUNIX(),
+			accessor: "timestamp",
 			cellWidth: "w-50",
-			id: "date",
 			sortDescFirst: true,
 		};
 
@@ -44,17 +37,14 @@ export const useColumns = ({ exchangeCurrency, showMemoColumn }: UseColumnProper
 
 		const columnAmount: TableColumn = {
 			Header: t("COMMON.AMOUNT"),
-			accessor: (transaction: DTO.ExtendedConfirmedTransactionData) => transaction.total?.(),
+			accessor: "amount",
 			className: "justify-end",
-			id: "amount",
-			sortDescFirst: true,
 		};
 
-		const columnCurrency: TableColumn = {
-			Header: t("COMMON.CURRENCY"),
-			cellWidth: "w-28",
-			className: "justify-end float-right",
-			responsiveClass: "hidden xl:table-cell",
+		const columnSign: TableColumn = {
+			Header: t("COMMON.SIGN"),
+			cellWidth: "w-24",
+			className: "hidden",
 		};
 
 		return [
@@ -64,7 +54,9 @@ export const useColumns = ({ exchangeCurrency, showMemoColumn }: UseColumnProper
 			showMemoColumn && columnMemo,
 			columnStatus,
 			columnAmount,
-			exchangeCurrency && columnCurrency,
+			columnSign,
 		].filter(Boolean) as TableColumn[];
-	}, [t, showMemoColumn, exchangeCurrency]);
+	}, [t, showMemoColumn]);
 };
+
+export { usePendingTransactionTableColumns };

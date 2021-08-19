@@ -1,6 +1,6 @@
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { fireEvent, renderWithRouter } from "utils/testing-library";
+import { renderWithRouter } from "utils/testing-library";
 
 import { TransactionRow } from "./TransactionRow";
 
@@ -17,10 +17,7 @@ describe("TransactionRow", () => {
 		const { getByTestId } = renderWithRouter(
 			<table>
 				<tbody>
-					<TransactionRow
-						// @ts-ignore
-						transaction={fixture}
-					/>
+					<TransactionRow transaction={fixture as any} />
 				</tbody>
 			</table>,
 		);
@@ -37,17 +34,17 @@ describe("TransactionRow", () => {
 		const { asFragment, queryAllByTestId, queryByText } = renderWithRouter(
 			<table>
 				<tbody>
-					{/* @ts-ignore */}
 					<TransactionRow
-						transaction={{
-							...fixture,
-							// @ts-ignore
-							wallet: () => ({
-								currency: () => "BTC",
-								isLedger: () => false,
-								network: () => ({ isTest: () => false } as any),
-							}),
-						}}
+						transaction={
+							{
+								...fixture,
+								wallet: () => ({
+									currency: () => "BTC",
+									isLedger: () => false,
+									network: () => ({ isTest: () => false }),
+								}),
+							} as any
+						}
 						exchangeCurrency="BTC"
 					/>
 				</tbody>
@@ -63,19 +60,17 @@ describe("TransactionRow", () => {
 		const { asFragment, queryAllByTestId, getByText } = renderWithRouter(
 			<table>
 				<tbody>
-					{/* @ts-ignore */}
 					<TransactionRow
-						transaction={{
-							...fixture,
-							// @ts-ignore
-							wallet: () => ({
-								currency: () => "BTC",
-								isLedger: () => false,
-								network: () => ({
-									isTest: () => true,
+						transaction={
+							{
+								...fixture,
+								wallet: () => ({
+									currency: () => "BTC",
+									isLedger: () => false,
+									network: () => ({ isTest: () => true }),
 								}),
-							}),
-						}}
+							} as any
+						}
 						exchangeCurrency="BTC"
 					/>
 				</tbody>
@@ -85,31 +80,5 @@ describe("TransactionRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 		expect(queryAllByTestId("AmountCrypto")).toHaveLength(1);
 		expect(getByText("N/A")).toBeInTheDocument();
-	});
-
-	it("should show transaction with signature pending", () => {
-		const onSign = jest.fn();
-
-		const isMultiSignatureRegistrationMock = jest
-			.spyOn(fixture, "isMultiSignatureRegistration")
-			.mockReturnValue(true);
-		const { getByTestId } = renderWithRouter(
-			<table>
-				<tbody>
-					<TransactionRow
-						// @ts-ignore
-						transaction={fixture}
-						exchangeCurrency="BTC"
-						onSign={onSign}
-						showSignColumn
-					/>
-				</tbody>
-			</table>,
-		);
-		fireEvent.click(getByTestId("TransactionRow__sign"));
-
-		expect(onSign).toHaveBeenCalled();
-
-		isMultiSignatureRegistrationMock.mockRestore();
 	});
 });

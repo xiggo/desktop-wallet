@@ -4,6 +4,7 @@ import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import { useTimeFormat } from "app/hooks/use-time-format";
+import { TransactionRowMemo } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMemo";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -31,7 +32,7 @@ const StatusLabel = ({
 	if (wallet.transaction().isAwaitingOurSignature(transaction.id())) {
 		return (
 			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_OUR_SIGNATURE")}>
-				<span className="p-1 text-theme-danger-400">
+				<span className="p-1 text-theme-secondary-700">
 					<Icon name="Pencil" size="lg" />
 				</span>
 			</Tooltip>
@@ -86,11 +87,15 @@ export const SignedTransactionRow = ({
 	onSign,
 	onRowClick,
 	wallet,
+	isCompact,
+	showMemoColumn,
 }: {
 	transaction: DTO.ExtendedSignedTransactionData;
 	onSign?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
+	isCompact?: boolean;
+	showMemoColumn: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -106,9 +111,37 @@ export const SignedTransactionRow = ({
 		}
 	}, [wallet, transaction]);
 
+	const renderSignButton = () => {
+		if (!canBeSigned) {
+			return;
+		}
+
+		if (isCompact) {
+			return (
+				<Button
+					size="sm"
+					data-testid="TransactionRow__sign"
+					variant="transparent"
+					className="text-theme-primary-600 hover:text-theme-primary-700"
+					onClick={() => onSign?.(transaction)}
+				>
+					<Icon name="Pencil" />
+					<span>{t("COMMON.SIGN")}</span>
+				</Button>
+			);
+		}
+
+		return (
+			<Button data-testid="TransactionRow__sign" variant="secondary" onClick={() => onSign?.(transaction)}>
+				<Icon name="Pencil" />
+				<span>{t("COMMON.SIGN")}</span>
+			</Button>
+		);
+	};
+
 	return (
 		<TableRow onClick={() => onRowClick?.(transaction)}>
-			<TableCell variant="start">
+			<TableCell variant="start" isCompact={isCompact}>
 				<Tooltip content={transaction.id()}>
 					<span className="text-theme-secondary-300 dark:text-theme-secondary-800">
 						<Icon name="MagnifyingGlassId" />
@@ -116,31 +149,32 @@ export const SignedTransactionRow = ({
 				</Tooltip>
 			</TableCell>
 
-			<TableCell innerClassName="text-theme-secondary-text">
+			<TableCell innerClassName="text-theme-secondary-text" isCompact={isCompact}>
 				<span data-testid="TransactionRow__timestamp">{transaction.timestamp().format(timeFormat)}</span>
 			</TableCell>
 
-			<TableCell innerClassName="space-x-4">
-				<BaseTransactionRowMode isSent={true} type={transaction.type()} recipient={recipient} />
+			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
+				<BaseTransactionRowMode
+					isSent={true}
+					type={transaction.type()}
+					recipient={recipient}
+					iconSize={isCompact ? "xs" : "lg"}
+				/>
 
 				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
 			</TableCell>
 
-			<TableCell innerClassName="justify-center">
-				{transaction.usesMultiSignature() && (
-					<Tooltip content={t("COMMON.MULTISIGNATURE")}>
-						<span className="p-1">
-							<Icon data-testid="PendingTransactions__multiSignature" name="Multisignature" size="lg" />
-						</span>
-					</Tooltip>
-				)}
-			</TableCell>
+			{showMemoColumn && (
+				<TableCell innerClassName="justify-center" isCompact={isCompact}>
+					<TransactionRowMemo memo={transaction.memo()} />
+				</TableCell>
+			)}
 
-			<TableCell className="w-16" innerClassName="justify-center truncate">
+			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>
 				<StatusLabel wallet={wallet} transaction={transaction} />
 			</TableCell>
 
-			<TableCell innerClassName="justify-end">
+			<TableCell innerClassName="justify-end" isCompact={isCompact}>
 				<BaseTransactionRowAmount
 					isSent={true}
 					total={transaction.amount() + transaction.fee()}
@@ -148,17 +182,8 @@ export const SignedTransactionRow = ({
 				/>
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end">
-				{canBeSigned ? (
-					<Button
-						data-testid="TransactionRow__sign"
-						variant="secondary"
-						onClick={() => onSign?.(transaction)}
-					>
-						<Icon name="Pencil" />
-						<span>{t("COMMON.SIGN")}</span>
-					</Button>
-				) : null}
+			<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
+				{renderSignButton()}
 			</TableCell>
 		</TableRow>
 	);
