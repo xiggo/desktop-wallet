@@ -31,6 +31,6 @@ export const translations: { [key: string]: any } = {
 			NETWORK_ERROR: "Failed to retrieve news items. Please retry in a few minutes",
 		},
 		POWERED_BY: "Powered by",
-		TITLE: "Blockchain News",
+		TITLE: "Cryptoasset News",
 	},
 };

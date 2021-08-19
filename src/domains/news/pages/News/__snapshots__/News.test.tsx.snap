@@ -279,7 +279,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                 class="mb-0 text-2xl"
                 data-testid="header__title"
               >
-                Blockchain News
+                Cryptoasset News
               </h1>
               <div
                 class="text-theme-secondary-text"
@@ -1027,7 +1027,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                 class="mb-0 text-2xl"
                 data-testid="header__title"
               >
-                Blockchain News
+                Cryptoasset News
               </h1>
               <div
                 class="text-theme-secondary-text"
