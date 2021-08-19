@@ -17,11 +17,11 @@ export const translations: { [key: string]: any } = {
 		},
 	},
 
-	TRANSACTION_HISTORY: {
+	LATEST_TRANSACTIONS: {
 		EMPTY_MESSAGE:
 			"You don't have any transactions yet. Once transactions have been made they will show up in your history.",
 		NO_RESULTS: "No <bold>{{type}}</bold> transactions could be found.",
-		TITLE: "Transaction History",
+		TITLE: "Latest Transactions",
 	},
 
 	WALLET_CONTROLS: {

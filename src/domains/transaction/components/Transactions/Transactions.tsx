@@ -10,10 +10,7 @@ import React, { memo, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 interface TransactionsProperties {
-	fetchMoreAction?: Function;
-	onRowClick?: (row: DTO.ExtendedConfirmedTransactionData) => void;
 	emptyText?: string;
-	hideHeader?: boolean;
 	isCompact?: boolean;
 	profile: Contracts.IProfile;
 	isVisible?: boolean;
@@ -86,11 +83,11 @@ export const Transactions = memo(
 
 		return (
 			<>
-				<div className="flex relative justify-between">
-					{title && title}
-
-					{!title && <h2 className="mb-6 text-2xl font-bold">{t("DASHBOARD.TRANSACTION_HISTORY.TITLE")}</h2>}
-				</div>
+				{title && (
+					<div className="flex relative justify-between">
+						<h2 className="mb-6 text-2xl font-bold">{title}</h2>
+					</div>
+				)}
 
 				<Tabs
 					className="mb-8"
@@ -157,14 +154,14 @@ export const Transactions = memo(
 
 				{transactions.length === 0 && !activeTransactionType && !isLoadingTransactions && (
 					<EmptyBlock className="-mt-5">
-						{emptyText || t("DASHBOARD.TRANSACTION_HISTORY.EMPTY_MESSAGE")}
+						{emptyText || t("DASHBOARD.LATEST_TRANSACTIONS.EMPTY_MESSAGE")}
 					</EmptyBlock>
 				)}
 
 				{transactions.length === 0 && !!activeTransactionType && !isLoadingTransactions && (
 					<EmptyBlock className="-mt-5">
 						<Trans
-							i18nKey="DASHBOARD.TRANSACTION_HISTORY.NO_RESULTS"
+							i18nKey="DASHBOARD.LATEST_TRANSACTIONS.NO_RESULTS"
 							values={{
 								type: activeTransactionTypeLabel,
 							}}

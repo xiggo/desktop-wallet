@@ -14,7 +14,7 @@ describe("Appearance.helpers", () => {
 
 			expect(result.current[0].label).toBe(translations.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE);
 			expect(result.current[1].label).toBe(translations.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE);
-			expect(result.current[2].label).toBe(translations.APPEARANCE.OPTIONS.TRANSACTION_HISTORY.TITLE);
+			expect(result.current[2].label).toBe(translations.APPEARANCE.OPTIONS.LATEST_TRANSACTIONS.TITLE);
 			expect(result.current[3].label).toBe(translations.APPEARANCE.OPTIONS.WALLET_NAMING.TITLE);
 			expect(result.current[4].label).toBe(translations.APPEARANCE.OPTIONS.EXPANDED_TABLES.TITLE);
 		});

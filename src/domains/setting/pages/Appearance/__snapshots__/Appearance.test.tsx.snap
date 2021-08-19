@@ -605,7 +605,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                               class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
                               data-testid="list-divided-item__label"
                             >
-                              Portfolio Transaction History
+                              Portfolio Latest Transactions
                             </span>
                             <span>
                               <label
@@ -632,7 +632,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                             class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="list-divided-item__label--description"
                           >
-                            Enables transaction history on Portfolio page.
+                            Enables latest transactions on Portfolio page.
                           </span>
                         </div>
                       </div>

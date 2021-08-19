@@ -286,6 +286,7 @@ export const translations: { [key: string]: any } = {
 	TITLE: "Title",
 	TOTAL_BALANCE: "Total balance",
 	TRANSACTION: "Transaction",
+	TRANSACTION_HISTORY: "Transaction History",
 	TRANSFER: "Transfer",
 	TYPE: "Type",
 	UNSELECT: "Unselect",

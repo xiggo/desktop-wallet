@@ -123,7 +123,8 @@ export const WalletDetails = () => {
 					)}
 
 					<Transactions
-						isCompact={useCompactTables}
+						title={t("COMMON.TRANSACTION_HISTORY")}
+						isCompact={!activeProfile.appearance().get("useExpandedTables")}
 						showUnconfirmed={false}
 						profile={activeProfile}
 						wallets={[activeWallet]}

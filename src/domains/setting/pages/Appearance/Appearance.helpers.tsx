@@ -27,9 +27,9 @@ export const useAppearanceItems = (): Record<string, any>[] => {
 			wrapperClass: "py-6",
 		},
 		{
-			label: t("SETTINGS.APPEARANCE.OPTIONS.TRANSACTION_HISTORY.TITLE"),
+			label: t("SETTINGS.APPEARANCE.OPTIONS.LATEST_TRANSACTIONS.TITLE"),
 			labelAddon: <AppearanceToggle name="dashboardTransactionHistory" />,
-			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.TRANSACTION_HISTORY.DESCRIPTION"),
+			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.LATEST_TRANSACTIONS.DESCRIPTION"),
 			wrapperClass: "py-6",
 		},
 		{

@@ -14,9 +14,9 @@ export const translations: { [key: string]: any } = {
 				DESCRIPTION: "Increases spacing of table items.",
 				TITLE: "Expanded Tables",
 			},
-			TRANSACTION_HISTORY: {
-				DESCRIPTION: "Enables transaction history on Portfolio page.",
-				TITLE: "Portfolio Transaction History",
+			LATEST_TRANSACTIONS: {
+				DESCRIPTION: "Enables latest transactions on Portfolio page.",
+				TITLE: "Portfolio Latest Transactions",
 			},
 			VIEWING_MODE: {
 				DESCRIPTION: "Choose a light or dark viewing mode.",
