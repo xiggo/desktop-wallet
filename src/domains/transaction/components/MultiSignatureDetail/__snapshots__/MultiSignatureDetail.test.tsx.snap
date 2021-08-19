@@ -290,12 +290,12 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Ready to broadcast
                         </div>
                       </div>
                     </div>
@@ -787,12 +787,12 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Ready to broadcast
                         </div>
                       </div>
                     </div>
@@ -1284,12 +1284,12 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Ready to broadcast
                         </div>
                       </div>
                     </div>
@@ -1781,12 +1781,12 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Awaiting final signature
                         </div>
                       </div>
                     </div>
@@ -2190,12 +2190,12 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Awaiting final signature
                         </div>
                       </div>
                     </div>
@@ -2790,12 +2790,12 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Awaiting final signature
                         </div>
                       </div>
                     </div>
@@ -3169,12 +3169,12 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Awaiting final signature
                         </div>
                       </div>
                     </div>
@@ -3640,12 +3640,12 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Awaiting final signature
                         </div>
                       </div>
                     </div>
@@ -4084,12 +4084,12 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Awaiting final signature
                         </div>
                       </div>
                     </div>
@@ -4528,12 +4528,12 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Awaiting final signature
                         </div>
                       </div>
                     </div>
@@ -5197,12 +5197,12 @@ exports[`MultiSignatureDetail should show paginator when able to sign 1`] = `
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Ready to broadcast
                         </div>
                       </div>
                     </div>
@@ -5694,12 +5694,12 @@ exports[`MultiSignatureDetail should show send button when able to broadcast 1`]
                         <div
                           class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                         >
-                          Confirmations
+                          Status
                         </div>
                         <div
                           class="font-semibold"
                         >
-                          Waiting for Signatures
+                          Ready to broadcast
                         </div>
                       </div>
                     </div>

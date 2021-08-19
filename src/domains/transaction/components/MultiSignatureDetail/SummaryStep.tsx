@@ -18,6 +18,7 @@ import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-t
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { MultiSignatureStatus } from "./MultiSignatureStatus";
 import { Signatures } from "./Signatures";
 
 export const SummaryStep = ({
@@ -122,8 +123,8 @@ export const SummaryStep = ({
 				{min} / {publicKeys.length}
 			</TransactionDetail>
 
-			<TransactionDetail label={t("TRANSACTION.CONFIRMATIONS")}>
-				{t("TRANSACTION.MODAL_MULTISIGNATURE_DETAIL.WAITING_FOR_SIGNATURES")}
+			<TransactionDetail label={t("TRANSACTION.STATUS")}>
+				<MultiSignatureStatus wallet={wallet} transaction={transaction} />
 			</TransactionDetail>
 
 			<TransactionDetail label={t("TRANSACTION.ID")}>

@@ -270,6 +270,7 @@ export const translations: { [key: string]: any } = {
 		DESCRIPTION: "Tell people more about yourself through social media",
 		TITLE: "Social Media",
 	},
+	STATUS: "Status",
 	SUCCESS: {
 		CREATED: "Transaction Created",
 		DESCRIPTION:
