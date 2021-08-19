@@ -1,7 +1,16 @@
+/* eslint-disable unicorn/prevent-abbreviations */
+/* eslint-disable max-lines */
+
+import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";
+import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_builder/types";
 import { resolve } from "path";
 import { ClientFunction, RequestMock } from "testcafe";
 
+import { buildTranslations } from "../app/i18n/helpers";
+
 export const getPageURL = () => resolve("build/index.html");
+
+export const visitWelcomeScreen = (t: TestController) => t.navigateTo(`file://${getPageURL()}`);
 
 export const getLocation = ClientFunction(() => document.location.href);
 
@@ -368,37 +377,39 @@ export const requestMocks = {
 	],
 };
 
+const combineRequestMocks = (preHooks: RequestMock[] = [], postHooks: RequestMock[] = []): RequestMock[] => [
+	...preHooks,
+	...requestMocks.configuration,
+	...requestMocks.delegates,
+	...requestMocks.multisignature,
+	...requestMocks.transactions,
+	...requestMocks.wallets,
+	...requestMocks.plugins,
+	...requestMocks.other,
+	...requestMocks.exchange,
+	...postHooks,
+	mockRequest(/^https?:\/\//, (request: any) => {
+		const mock: { url: string; method: string; body?: string } = {
+			method: request.method,
+			url: request.url,
+		};
+
+		if (request.method === "OPTIONS") {
+			return request;
+		}
+
+		if (request.method === "POST") {
+			mock.body = request.body.toString();
+		}
+
+		throw new Error(`\n-- Missing mock:\n${JSON.stringify(mock, undefined, 4)}`);
+	}),
+];
+
 export const createFixture = (name: string, preHooks: RequestMock[] = [], postHooks: RequestMock[] = []) =>
 	fixture(name)
 		.page(getPageURL())
-		.requestHooks(
-			...preHooks,
-			...requestMocks.configuration,
-			...requestMocks.delegates,
-			...requestMocks.multisignature,
-			...requestMocks.transactions,
-			...requestMocks.wallets,
-			...requestMocks.plugins,
-			...requestMocks.other,
-			...requestMocks.exchange,
-			...postHooks,
-			mockRequest(/^https?:\/\//, (request: any) => {
-				const mock: { url: string; method: string; body?: string } = {
-					method: request.method,
-					url: request.url,
-				};
-
-				if (request.method === "OPTIONS") {
-					return request;
-				}
-
-				if (request.method === "POST") {
-					mock.body = request.body.toString();
-				}
-
-				throw new Error(`\n-- Missing mock:\n${JSON.stringify(mock, undefined, 4)}`);
-			}),
-		);
+		.requestHooks(...combineRequestMocks(preHooks, postHooks));
 
 export const MNEMONICS = [
 	"skin fortune security mom coin hurdle click emotion heart brisk exact rather code feature era leopard grocery tide gift power lawsuit sight vehicle coin",
@@ -412,3 +423,53 @@ export const MNEMONICS = [
 	"cool path congress harbor position ready embody hunt face field boil brown rubber toss arrange later convince anxiety foam urban monster endless essay melt",
 	"subway cradle salad cake toddler sausage neglect eight cruel fault mammal cannon south interest theory sadness pass move outside segment curtain toddler save banner",
 ];
+
+// https://cucumber.io/docs/gherkin/reference/
+export const cucumber = (
+	tag: string,
+	scenario: Record<string, TestStepFunction<IWorld>>,
+	preHooks: RequestMock[] = [],
+	postHooks: RequestMock[] = [],
+): void => {
+	Before(tag, async (t) => {
+		// @ts-ignore
+		await t.addRequestHooks(...combineRequestMocks(preHooks, postHooks));
+	});
+
+	for (const [pattern, code] of Object.entries(scenario)) {
+		if (pattern.startsWith("Given")) {
+			Given(pattern.replace("Given ", ""), code);
+		}
+
+		if (pattern.startsWith("When")) {
+			When(pattern.replace("When ", ""), code);
+		}
+
+		if (pattern.startsWith("Then")) {
+			Then(pattern.replace("Then ", ""), code);
+		}
+
+		if (pattern.startsWith("And")) {
+			When(pattern.replace("And ", ""), code);
+		}
+
+		if (pattern.startsWith("But")) {
+			When(pattern.replace("But ", ""), code);
+		}
+	}
+};
+
+export const lang = (translation: string, values: Record<string, string> = {}): string => {
+	let result: string = buildTranslations() as string;
+
+	for (const segment of translation.split(".")) {
+		// @ts-ignore
+		result = result[segment] as string;
+	}
+
+	for (const [key, value] of Object.entries(values)) {
+		result = result.replace(`{{${key}}}`, value);
+	}
+
+	return result;
+};

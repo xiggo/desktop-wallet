@@ -1,9 +1,10 @@
 {
 	"browsers": "electron:",
-	"src": "./src/domains/**/e2e/*.e2e.ts",
+	"src": ["./src/domains/**/cucumber/*.ts", "./src/domains/**/cucumber/*.feature"],
 	"screenshots": {
 		"takeOnFails": true,
-		"path": "./screenshots"
+		"path": "./screenshots",
+		"pathPattern": "${DATE}_${TIME}/test-${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.png"
 	},
 	"selectorTimeout": 20000,
 	"assertionTimeout": 15000

@@ -18,116 +18,168 @@ const workflow = {
 
 const directories = {
 	app: {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: 4,
 	},
 	"domains/contact": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/dashboard": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/error": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/exchange": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/network": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/news": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/plugin": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/profile": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/setting": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/splash": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/transaction": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/vote": {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	"domains/wallet": {
-		branches: 98.09,
-		functions: 83.27,
-		lines: 70.49,
-		statements: 71.03,
+		coverageThreshold: {
+			branches: 95,
+			functions: 80,
+			lines: 60,
+			statements: 60,
+		},
+		maxWorkers: "50%",
 	},
 	plugins: {
-		branches: 100,
-		functions: 96.34,
-		lines: 97.78,
-		statements: 97.97,
+		coverageThreshold: {
+			branches: 100,
+			functions: 96.34,
+			lines: 97.78,
+			statements: 97.97,
+		},
+		maxWorkers: "50%",
 	},
 	router: {
-		branches: 100,
-		functions: 100,
-		lines: 100,
-		statements: 100,
+		coverageThreshold: {
+			branches: 100,
+			functions: 100,
+			lines: 100,
+			statements: 100,
+		},
+		maxWorkers: "50%",
 	},
 	utils: {
-		branches: 55.71,
-		functions: 23.4,
-		lines: 50,
-		statements: 46.94,
+		coverageThreshold: {
+			branches: 55.71,
+			functions: 23.4,
+			lines: 50,
+			statements: 46.94,
+		},
+		maxWorkers: "50%",
 	},
 };
 
-for (const [directory, threshold] of Object.entries(directories)) {
+for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(directories)) {
 	const collectCoverageFrom = [
 		`src/${directory}/**/*.{js,jsx,ts,tsx}`,
 		"!<rootDir>/build/*",
 		"!<rootDir>/dist/*",
 		"!jest.setup.js",
 		"!src/**/e2e/*.ts",
+		"!src/**/cucumber/*.ts",
 		"!src/**/*.e2e.ts",
 		"!src/**/*.models.{js,jsx,ts,tsx}",
 		"!src/**/*.stories.{js,jsx,ts,tsx}",
@@ -139,10 +191,6 @@ for (const [directory, threshold] of Object.entries(directories)) {
 		"!src/utils/e2e-utils.ts",
 		"!src/polyfill/**/*",
 	];
-
-	const coverageThreshold = {
-		[`./src/${directory}/`]: threshold,
-	};
 
 	const job = {
 		"runs-on": "ubuntu-latest",
@@ -202,9 +250,11 @@ for (const [directory, threshold] of Object.entries(directories)) {
 			},
 			{
 				name: "Test",
-				run: `./node_modules/react-app-rewired/bin/index.js --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=50% --logHeapUsage--watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
+				run: `./node_modules/react-app-rewired/bin/index.js --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=${maxWorkers} --logHeapUsage--watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
 					collectCoverageFrom,
-				)}' --coverageThreshold='${JSON.stringify(coverageThreshold)}'`,
+				)}' --coverageThreshold='${JSON.stringify({
+					[`./src/${directory}/`]: coverageThreshold,
+				})}'`,
 			},
 		],
 	};

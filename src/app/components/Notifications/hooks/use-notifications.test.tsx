@@ -49,7 +49,7 @@ describe("useNotifications", () => {
 	it("#count", async () => {
 		const { result } = renderHook(() => useNotifications({ profile }));
 
-		expect(result.current.count).toBe(6);
+		expect(result.current.count).toBe(5);
 	});
 
 	it("#markAsRead", async () => {
