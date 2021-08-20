@@ -43,6 +43,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 				return profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP44({
 						...defaultOptions,
+						levels: { account: 0 },
 						mnemonic: value,
 					}),
 				);
@@ -51,6 +52,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 				return profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP49({
 						...defaultOptions,
+						levels: { account: 0 },
 						mnemonic: value,
 					}),
 				);
@@ -59,6 +61,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 				return profile.wallets().push(
 					await profile.walletFactory().fromMnemonicWithBIP84({
 						...defaultOptions,
+						levels: { account: 0 },
 						mnemonic: value,
 					}),
 				);

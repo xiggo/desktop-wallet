@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
+import { Wallet } from "@payvo/profiles/distribution/wallet";
 import { Networks } from "@payvo/sdk";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import { env, MNEMONICS } from "utils/testing-library";
 
 import { OptionsValue } from "./use-import-options";
@@ -25,20 +26,14 @@ describe("useWalletImport", () => {
 			result: { current },
 		} = renderHook(() => useWalletImport({ profile }));
 
-		const mockMnemonicBIP39 = jest.spyOn(profile.walletFactory(), `fromMnemonicWithBIP39`).mockImplementation();
-
-		await act(async () => {
-			await expect(
-				current.importWalletByType({
-					encryptedWif: "",
-					network,
-					type: OptionsValue.BIP39,
-					value: MNEMONICS[0],
-				}),
-			).resolves.toMatchObject({});
+		const wallet = await current.importWalletByType({
+			encryptedWif: "",
+			network,
+			type: OptionsValue.BIP39,
+			value: MNEMONICS[0],
 		});
 
-		mockMnemonicBIP39.mockRestore();
+		expect(wallet).toBeInstanceOf(Wallet);
 	});
 
 	it.each([OptionsValue.BIP44, OptionsValue.BIP49, OptionsValue.BIP84])(
@@ -54,16 +49,14 @@ describe("useWalletImport", () => {
 					throw new Error("error");
 				});
 
-			await act(async () => {
-				await expect(
-					current.importWalletByType({
-						encryptedWif: "",
-						network,
-						type: mnemonicType,
-						value: "mnemonic",
-					}),
-				).rejects.toBeTruthy();
-			});
+			await expect(
+				current.importWalletByType({
+					encryptedWif: "",
+					network,
+					type: mnemonicType,
+					value: "mnemonic",
+				}),
+			).rejects.toThrow("error");
 
 			mockMnemonicMethod.mockRestore();
 		},
@@ -81,16 +74,14 @@ describe("useWalletImport", () => {
 				throw new Error("error");
 			});
 
-			await act(async () => {
-				await expect(
-					current.importWalletByType({
-						encryptedWif: "",
-						network,
-						type: importType,
-						value: importType,
-					}),
-				).rejects.toBeTruthy();
-			});
+			await expect(
+				current.importWalletByType({
+					encryptedWif: "",
+					network,
+					type: importType,
+					value: importType,
+				}),
+			).rejects.toThrow("error");
 
 			mockEncryptedWif.mockRestore();
 		},
@@ -105,16 +96,14 @@ describe("useWalletImport", () => {
 			throw new Error("error");
 		});
 
-		await act(async () => {
-			await expect(
-				current.importWalletByType({
-					encryptedWif: "",
-					network,
-					type: OptionsValue.WIF,
-					value: "WIF",
-				}),
-			).rejects.toBeTruthy();
-		});
+		await expect(
+			current.importWalletByType({
+				encryptedWif: "",
+				network,
+				type: OptionsValue.WIF,
+				value: "WIF",
+			}),
+		).rejects.toThrow("error");
 
 		mockEncryptedWif.mockRestore();
 	});
@@ -124,20 +113,18 @@ describe("useWalletImport", () => {
 			result: { current },
 		} = renderHook(() => useWalletImport({ profile }));
 
-		const mockEncryptedWif = jest.spyOn(profile.walletFactory(), "fromWIF").mockImplementation(() => {
-			throw new Error("error");
-		});
+		const mockEncryptedWif = jest
+			.spyOn(profile.walletFactory(), "fromWIF")
+			.mockImplementation(() => Promise.reject(new Error("error")));
 
-		await act(async () => {
-			await expect(
-				current.importWalletByType({
-					encryptedWif: "wif",
-					network,
-					type: OptionsValue.ENCRYPTED_WIF,
-					value: "password",
-				}),
-			).rejects.toBeTruthy();
-		});
+		await expect(
+			current.importWalletByType({
+				encryptedWif: "wif",
+				network,
+				type: OptionsValue.ENCRYPTED_WIF,
+				value: "password",
+			}),
+		).rejects.toThrow("error");
 
 		mockEncryptedWif.mockRestore();
 	});
@@ -147,10 +134,8 @@ describe("useWalletImport", () => {
 			result: { current },
 		} = renderHook(() => useWalletImport({ profile }));
 
-		await act(async () => {
-			await expect(
-				current.importWalletByType({ encryptedWif: "", network, type: "unknown", value: "value" }),
-			).resolves.toBeUndefined();
-		});
+		await expect(
+			current.importWalletByType({ encryptedWif: "", network, type: "unknown", value: "value" }),
+		).resolves.toBeUndefined();
 	});
 });
