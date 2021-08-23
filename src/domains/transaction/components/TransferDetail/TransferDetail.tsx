@@ -35,6 +35,8 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: Transf
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender
 				address={transaction.sender()}
 				alias={aliases?.sender.alias}
@@ -59,8 +61,6 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: Transf
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionConfirmations transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };

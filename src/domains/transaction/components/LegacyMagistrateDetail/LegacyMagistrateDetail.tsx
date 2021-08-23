@@ -22,6 +22,8 @@ export const LegacyMagistrateDetail = ({ isOpen, transaction, onClose }: LegacyM
 
 	return (
 		<Modal title={t("TRANSACTION.TRANSACTION_TYPES.MAGISTRATE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender
 				address={transaction.sender()}
 				alias={wallet.alias()}
@@ -34,8 +36,6 @@ export const LegacyMagistrateDetail = ({ isOpen, transaction, onClose }: LegacyM
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionConfirmations transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };

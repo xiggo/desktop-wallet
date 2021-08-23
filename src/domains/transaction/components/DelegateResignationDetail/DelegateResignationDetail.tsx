@@ -24,6 +24,8 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Dele
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender address={transaction.sender()} alias={wallet.alias()} border={false} />
 
 			<TransactionDetail
@@ -45,8 +47,6 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Dele
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionConfirmations transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };

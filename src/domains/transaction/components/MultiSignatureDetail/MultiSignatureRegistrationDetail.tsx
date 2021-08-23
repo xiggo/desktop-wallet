@@ -57,6 +57,8 @@ export const MultiSignatureRegistrationDetail = ({
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender address={transaction.sender()} alias={wallet.alias()} border={false} />
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
@@ -80,8 +82,6 @@ export const MultiSignatureRegistrationDetail = ({
 			<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.GENERATED_ADDRESS")}>
 				{generatedAddress}
 			</TransactionDetail>
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };

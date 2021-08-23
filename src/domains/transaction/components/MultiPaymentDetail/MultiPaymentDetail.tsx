@@ -47,6 +47,8 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Mu
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender
 				address={transaction.sender()}
 				alias={aliases?.sender.alias}
@@ -73,8 +75,6 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Mu
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionConfirmations transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };

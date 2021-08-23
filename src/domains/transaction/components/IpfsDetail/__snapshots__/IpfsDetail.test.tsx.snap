@@ -51,6 +51,80 @@ exports[`IpfsDetail should render a modal 1`] = `
             class="flex-1"
           >
             <div
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
+              data-testid="TransactionDetail"
+            >
+              <div
+                class="flex-1 space-y-2 w-40 whitespace-nowrap"
+              >
+                <div
+                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                >
+                  ID
+                </div>
+                <div
+                  class="font-semibold"
+                >
+                  <div
+                    class="flex overflow-hidden items-baseline space-x-3"
+                  >
+                    <span
+                      class="overflow-hidden"
+                    >
+                      <a
+                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="Link"
+                        href="#"
+                        rel="noopener noreferrer"
+                        to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                      >
+                        <span
+                          class="Link__Content-sc-ec014t-1 hUiuRR"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden"
+                          >
+                            ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
+                          </span>
+                        </span>
+                        <div
+                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                          data-testid="Link__external"
+                          height="16"
+                          width="16"
+                        >
+                          <svg>
+                            arrow-external.svg
+                          </svg>
+                        </div>
+                      </a>
+                    </span>
+                    <span
+                      class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                    >
+                      <button
+                        class="relative focus:outline-none ring-focus"
+                        data-ring-focus-margin="-m-1"
+                        data-testid="clipboard-icon__wrapper"
+                        type="button"
+                      >
+                        <div
+                          class="sc-bdnxRM AFVmm"
+                          height="16"
+                          width="16"
+                        >
+                          <svg>
+                            copy.svg
+                          </svg>
+                        </div>
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
               class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
               data-testid="TransactionSender"
             >
@@ -229,8 +303,64 @@ exports[`IpfsDetail should render a modal 1`] = `
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdnxRM AFVmm"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-3xl font-bold"
+          >
+            Transaction IPFS Hash
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <div
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -303,62 +433,6 @@ exports[`IpfsDetail should render a modal 1`] = `
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
-<DocumentFragment>
-  <div
-    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
-    data-testid="modal__overlay"
-  >
-    <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
-      tabindex="-1"
-    >
-      <div
-        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
-        data-testid="modal__inner"
-      >
-        <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
-        >
-          <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
-            data-testid="modal__close-btn"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="sc-bdnxRM AFVmm"
-                height="16"
-                width="16"
-              >
-                <svg>
-                  cross.svg
-                </svg>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div
-          class="relative space-y-4"
-        >
-          <h2
-            class="mb-0 text-3xl font-bold"
-          >
-            Transaction IPFS Hash
-          </h2>
-          <div
-            class="flex-1"
-          >
             <div
               class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
               data-testid="TransactionSender"
@@ -527,8 +601,64 @@ exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`IpfsDetail should render as confirmed 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdnxRM AFVmm"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-3xl font-bold"
+          >
+            Transaction IPFS Hash
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <div
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -601,62 +731,6 @@ exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`IpfsDetail should render as confirmed 1`] = `
-<DocumentFragment>
-  <div
-    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
-    data-testid="modal__overlay"
-  >
-    <div
-      class="Modal__ModalContainer-sc-5lu2mc-0 wWqtC"
-      tabindex="-1"
-    >
-      <div
-        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
-        data-testid="modal__inner"
-      >
-        <div
-          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
-        >
-          <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
-            data-testid="modal__close-btn"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="sc-bdnxRM AFVmm"
-                height="16"
-                width="16"
-              >
-                <svg>
-                  cross.svg
-                </svg>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div
-          class="relative space-y-4"
-        >
-          <h2
-            class="mb-0 text-3xl font-bold"
-          >
-            Transaction IPFS Hash
-          </h2>
-          <div
-            class="flex-1"
-          >
             <div
               class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
               data-testid="TransactionSender"
@@ -833,80 +907,6 @@ exports[`IpfsDetail should render as confirmed 1`] = `
                           circle-check-mark.svg
                         </svg>
                       </div>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
-              data-testid="TransactionDetail"
-            >
-              <div
-                class="flex-1 space-y-2 w-40 whitespace-nowrap"
-              >
-                <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
-                >
-                  ID
-                </div>
-                <div
-                  class="font-semibold"
-                >
-                  <div
-                    class="flex overflow-hidden items-baseline space-x-3"
-                  >
-                    <span
-                      class="overflow-hidden"
-                    >
-                      <a
-                        class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
-                        data-ring-focus-margin="-m-1"
-                        data-testid="Link"
-                        href="#"
-                        rel="noopener noreferrer"
-                        to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-                      >
-                        <span
-                          class="Link__Content-sc-ec014t-1 hUiuRR"
-                        >
-                          <span
-                            class="inline-flex overflow-hidden"
-                          >
-                            ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
-                          </span>
-                        </span>
-                        <div
-                          class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
-                          data-testid="Link__external"
-                          height="16"
-                          width="16"
-                        >
-                          <svg>
-                            arrow-external.svg
-                          </svg>
-                        </div>
-                      </a>
-                    </span>
-                    <span
-                      class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-                    >
-                      <button
-                        class="relative focus:outline-none ring-focus"
-                        data-ring-focus-margin="-m-1"
-                        data-testid="clipboard-icon__wrapper"
-                        type="button"
-                      >
-                        <div
-                          class="sc-bdnxRM AFVmm"
-                          height="16"
-                          width="16"
-                        >
-                          <svg>
-                            copy.svg
-                          </svg>
-                        </div>
-                      </button>
                     </span>
                   </div>
                 </div>

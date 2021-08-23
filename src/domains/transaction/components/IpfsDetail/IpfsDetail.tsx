@@ -25,6 +25,8 @@ export const IpfsDetail = ({ isOpen, transaction, onClose }: IpfsDetailPropertie
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_IPFS_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender
 				address={transaction.sender()}
 				alias={wallet.alias()}
@@ -55,8 +57,6 @@ export const IpfsDetail = ({ isOpen, transaction, onClose }: IpfsDetailPropertie
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionConfirmations transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };

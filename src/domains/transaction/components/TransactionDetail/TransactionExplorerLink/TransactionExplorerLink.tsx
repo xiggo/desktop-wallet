@@ -37,6 +37,6 @@ export const TransactionExplorerLink = ({ transaction, ...properties }: Transact
 };
 
 TransactionExplorerLink.defaultProps = {
-	borderPosition: "top",
+	borderPosition: "bottom",
 	variant: "transaction",
 };

@@ -25,6 +25,8 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Del
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender address={transaction.sender()} alias={wallet.alias()} border={false} />
 
 			<TransactionDetail
@@ -46,8 +48,6 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Del
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionConfirmations transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };

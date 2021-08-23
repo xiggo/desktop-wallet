@@ -1354,6 +1354,80 @@ exports[`Notifications should open and close transaction details modal 1`] = `
               class="flex-1"
             >
               <div
+                class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
+                data-testid="TransactionDetail"
+              >
+                <div
+                  class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                >
+                  <div
+                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  >
+                    ID
+                  </div>
+                  <div
+                    class="font-semibold"
+                  >
+                    <div
+                      class="flex overflow-hidden items-baseline space-x-3"
+                    >
+                      <span
+                        class="overflow-hidden"
+                      >
+                        <a
+                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          href="#"
+                          rel="noopener noreferrer"
+                          to="https://dexplorer.ark.io/transaction/127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd"
+                        >
+                          <span
+                            class="Link__Content-sc-ec014t-1 hUiuRR"
+                          >
+                            <span
+                              class="inline-flex overflow-hidden"
+                            >
+                              127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd
+                            </span>
+                          </span>
+                          <div
+                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
+                            data-testid="Link__external"
+                            height="16"
+                            width="16"
+                          >
+                            <svg>
+                              arrow-external.svg
+                            </svg>
+                          </div>
+                        </a>
+                      </span>
+                      <span
+                        class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="sc-bdnxRM AFVmm"
+                            height="16"
+                            width="16"
+                          >
+                            <svg>
+                              copy.svg
+                            </svg>
+                          </div>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
                 class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
                 data-testid="TransactionSender"
               >
@@ -1601,80 +1675,6 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                             circle-check-mark.svg
                           </svg>
                         </div>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
-                data-testid="TransactionDetail"
-              >
-                <div
-                  class="flex-1 space-y-2 w-40 whitespace-nowrap"
-                >
-                  <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
-                  >
-                    ID
-                  </div>
-                  <div
-                    class="font-semibold"
-                  >
-                    <div
-                      class="flex overflow-hidden items-baseline space-x-3"
-                    >
-                      <span
-                        class="overflow-hidden"
-                      >
-                        <a
-                          class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="Link"
-                          href="#"
-                          rel="noopener noreferrer"
-                          to="https://dexplorer.ark.io/transaction/127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd"
-                        >
-                          <span
-                            class="Link__Content-sc-ec014t-1 hUiuRR"
-                          >
-                            <span
-                              class="inline-flex overflow-hidden"
-                            >
-                              127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd
-                            </span>
-                          </span>
-                          <div
-                            class="sc-bdnxRM AFVmm flex-shrink-0 duration-200 inline-block text-sm"
-                            data-testid="Link__external"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              arrow-external.svg
-                            </svg>
-                          </div>
-                        </a>
-                      </span>
-                      <span
-                        class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-                      >
-                        <button
-                          class="relative focus:outline-none ring-focus"
-                          data-ring-focus-margin="-m-1"
-                          data-testid="clipboard-icon__wrapper"
-                          type="button"
-                        >
-                          <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
-                          >
-                            <svg>
-                              copy.svg
-                            </svg>
-                          </div>
-                        </button>
                       </span>
                     </div>
                   </div>

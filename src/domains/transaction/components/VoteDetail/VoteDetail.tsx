@@ -55,6 +55,8 @@ export const VoteDetail = ({ transaction, isOpen, onClose }: VoteDetailPropertie
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_VOTE_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
+			<TransactionExplorerLink transaction={transaction} />
+
 			<TransactionSender
 				address={transaction.sender()}
 				alias={wallet.alias()}
@@ -69,8 +71,6 @@ export const VoteDetail = ({ transaction, isOpen, onClose }: VoteDetailPropertie
 			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionConfirmations transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
 		</Modal>
 	);
 };
