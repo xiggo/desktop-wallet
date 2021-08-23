@@ -1853,7 +1853,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
                 >
-                  Generated Address
+                  Multisignature Address
                 </div>
                 <div
                   class="font-semibold"

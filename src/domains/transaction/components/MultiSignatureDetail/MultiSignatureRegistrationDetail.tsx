@@ -1,4 +1,5 @@
 import { DTO } from "@payvo/profiles";
+import { Enums } from "@payvo/sdk";
 import { Address } from "app/components/Address";
 import { Modal } from "app/components/Modal";
 import {
@@ -36,13 +37,19 @@ export const MultiSignatureRegistrationDetail = ({
 				addresses.push((await wallet.coin().address().fromPublicKey(publicKey)).address);
 			}
 
+			setParticipants(addresses);
+
+			if (!wallet.network().allows(Enums.FeatureFlag.AddressMultiSignature)) {
+				setGeneratedAddress(transaction.sender());
+				return;
+			}
+
 			const { address } = await wallet
 				.coin()
 				.address()
 				.fromMultiSignature(transaction.min(), transaction.publicKeys());
 
 			setGeneratedAddress(address);
-			setParticipants(addresses);
 		};
 
 		fetchData();

@@ -157,7 +157,7 @@ export const translations: { [key: string]: any } = {
 			FAILED_TO_SIGN: "Failed to sign the transaction",
 			PUBLIC_KEY_NOT_FOUND: "The public key could not be found",
 		},
-		GENERATED_ADDRESS: "Generated Address",
+		GENERATED_ADDRESS: "Multisignature Address",
 		MIN_SIGNATURES: "Minimum Required Signatures",
 		OUT_OF_LENGTH: "out of {{ length }}",
 		PARTICIPANT: "Multisignature Participant",

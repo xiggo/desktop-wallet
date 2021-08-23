@@ -37,4 +37,30 @@ describe("MultiSignatureRegistrationDetail", () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it("should render sender's address as generated address when musig address derivation is not supported", async () => {
+		jest.spyOn(wallet.network(), "allows").mockReturnValue(false);
+
+		const { container } = render(
+			<MultiSignatureRegistrationDetail
+				transaction={{
+					...TransactionFixture,
+					min: () => 2,
+					publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()],
+					wallet: () => wallet,
+				}}
+				isOpen
+			/>,
+		);
+
+		await waitFor(() =>
+			expect(screen.getByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE)).toBeInTheDocument(),
+		);
+
+		await waitFor(() => expect(screen.getAllByText(wallet.address())).toHaveLength(3));
+
+		expect(container).toMatchSnapshot();
+
+		jest.restoreAllMocks();
+	});
 });
