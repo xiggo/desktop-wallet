@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
 
+import { Contracts } from "@payvo/profiles";
 import { ipcRenderer } from "electron";
 import { PluginManager } from "plugins";
 import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
-import { fireEvent, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { InstallPlugin } from "./InstallPlugin";
 import { FirstStep } from "./Step1";
@@ -12,10 +13,16 @@ import { SecondStep } from "./Step2";
 import { ThirdStep } from "./Step3";
 
 describe("InstallPlugin", () => {
+	let profile: Contracts.IProfile;
+
+	beforeEach(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
+
 	it("should not render if not open", () => {
 		const { asFragment, getByTestId } = render(
 			<PluginManagerProvider manager={new PluginManager()} services={[]}>
-				<InstallPlugin isOpen={false} />
+				<InstallPlugin profile={profile} isOpen={false} />
 			</PluginManagerProvider>,
 		);
 
@@ -70,35 +77,44 @@ describe("InstallPlugin", () => {
 	});
 
 	it("should download and install plugin", async () => {
-		jest.spyOn(ipcRenderer, "on").mockImplementation((channel, listener) => {
+		const cancelInstall = jest.fn();
+
+		jest.spyOn(ipcRenderer, "on").mockImplementation(((channel: string, listener: (...args: any[]) => void) => {
 			if (channel === "plugin:download-progress") {
 				return listener(undefined, { totalBytes: 200 });
 			}
-		});
+		}) as any);
 
-		const invokeSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+		const invokeSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel, ...args) => {
 			if (channel === "plugin:loader-fs.find") {
-				return {
+				return Promise.resolve({
 					config: { keywords: ["@payvo", "wallet-plugin"], name: "remote-plugin", version: "0.0.1" },
 					dir: "/plugins/remote-plugin",
 					source: () => void 0,
 					sourcePath: "/plugins/remote-plugin/index.js",
-				};
+				});
 			}
 
 			if (channel === "plugin:install") {
-				return "/Users/plugins/remote-plugin";
+				return Promise.resolve("/Users/plugins/remote-plugin");
 			}
 
 			if (channel === "plugin:download") {
-				return "/Users/plugins/temp/remote-plugin";
+				return Promise.resolve("/Users/plugins/temp/remote-plugin");
 			}
+
+			if (channel === "plugin:cancel-install") {
+				cancelInstall(...args);
+			}
+
+			return Promise.resolve();
 		});
 		const onClose = jest.fn();
 
 		const { getByTestId } = render(
 			<PluginManagerProvider manager={new PluginManager()} services={[]}>
 				<InstallPlugin
+					profile={profile}
 					repositoryURL="https://github.com/my-plugin"
 					isOpen={true}
 					plugin={{ id: "remote-plugin", permissions: ["PROFILE"], title: "Remote Plugin" }}
@@ -107,21 +123,60 @@ describe("InstallPlugin", () => {
 			</PluginManagerProvider>,
 		);
 
-		fireEvent.click(getByTestId("InstallPlugin__download-button"));
+		fireEvent.click(getByTestId("modal__close-btn"));
 
-		await waitFor(() => expect(getByTestId("InstallPlugin__step--second")).toBeInTheDocument());
+		expect(onClose).toHaveBeenCalled();
 
-		expect(invokeSpy).toHaveBeenLastCalledWith("plugin:download", {
-			name: "remote-plugin",
-			url: "https://github.com/my-plugin/archive/master.zip",
-		});
+		const downloadPlugin = async () => {
+			fireEvent.click(getByTestId("InstallPlugin__download-button"));
 
-		await waitFor(() => expect(getByTestId("InstallPlugin__step--third")).toBeInTheDocument());
+			await waitFor(() => expect(getByTestId("InstallPlugin__step--second")).toBeInTheDocument());
+
+			expect(invokeSpy).toHaveBeenLastCalledWith("plugin:download", {
+				name: "remote-plugin",
+				url: "https://github.com/my-plugin/archive/master.zip",
+			});
+
+			await waitFor(() => expect(getByTestId("InstallPlugin__step--third")).toBeInTheDocument());
+		};
+
+		await downloadPlugin();
+
+		// Cancel: do not go ahead with installation
+
+		fireEvent.click(getByTestId("InstallPlugin__cancel-button"));
+
+		await waitFor(() =>
+			expect(cancelInstall).toHaveBeenCalledWith({
+				savedPath: "/Users/plugins/temp/remote-plugin",
+			}),
+		);
+
+		expect(cancelInstall).toHaveBeenCalledTimes(1);
+
+		await downloadPlugin();
+
+		// Close: do not go ahead with installation
+
+		fireEvent.click(getByTestId("modal__close-btn"));
+
+		await waitFor(() =>
+			expect(cancelInstall).toHaveBeenCalledWith({
+				savedPath: "/Users/plugins/temp/remote-plugin",
+			}),
+		);
+
+		expect(cancelInstall).toHaveBeenCalledTimes(2);
+
+		// Happy path: proceed with installation
+
+		await downloadPlugin();
 
 		fireEvent.click(getByTestId("InstallPlugin__install-button"));
 
 		expect(invokeSpy).toHaveBeenLastCalledWith("plugin:install", {
 			name: "remote-plugin",
+			profileId: profile.id(),
 			savedPath: "/Users/plugins/temp/remote-plugin",
 		});
 

@@ -24,19 +24,20 @@ export class PluginControllerRepository {
 	#plugins: PluginController[] = [];
 	#currentProfile: Contracts.IProfile | undefined;
 
-	all() {
+	all(): PluginController[] {
 		return this.#plugins;
 	}
 
-	enabled(profile: Contracts.IProfile) {
+	enabled(profile: Contracts.IProfile): PluginController[] {
 		return profile
 			.plugins()
 			.values()
 			.filter((item) => item.isEnabled)
-			.map((item) => this.findById(item.name));
+			.map((item) => this.findById(item.name))
+			.filter(Boolean) as PluginController[];
 	}
 
-	removeById(id: string, profile: Contracts.IProfile) {
+	removeById(id: string, profile: Contracts.IProfile): void {
 		const plugin = this.findById(id);
 
 		if (plugin) {
@@ -45,15 +46,15 @@ export class PluginControllerRepository {
 		}
 	}
 
-	findById(id: string) {
+	findById(id: string): PluginController | undefined {
 		return this.#plugins.find((item) => item.config().id() === id);
 	}
 
-	filterByCategory(category: string) {
+	filterByCategory(category: string): PluginController[] {
 		return this.#plugins.filter((item) => item.config().categories().includes(category));
 	}
 
-	currentProfile() {
+	currentProfile(): Contracts.IProfile | undefined {
 		return this.#currentProfile;
 	}
 
@@ -64,11 +65,11 @@ export class PluginControllerRepository {
 			);
 		}
 
-		container.services().hooks().emit("profile", profile);
+		container.services().hooks().setProfile(profile);
 
 		for (const plugin of this.enabled(profile)) {
 			try {
-				plugin?.run(profile);
+				plugin.run(profile);
 			} catch {
 				//
 			}
@@ -82,26 +83,22 @@ export class PluginControllerRepository {
 			throw new Error(`No plugins running, call #boot to run them.`);
 		}
 
-		container.services().hooks().emit("profile", undefined);
+		container.services().hooks().flushProfile();
 
-		const enabledPlugins = this.#currentProfile
-			.plugins()
-			.values()
-			.filter((item) => item.isEnabled);
-
-		for (const plugin of enabledPlugins) {
+		for (const plugin of this.#currentProfile.plugins().values()) {
 			const ctrl = this.findById(plugin.id);
 			ctrl?.dispose();
 		}
 
+		this.#plugins = [];
 		this.#currentProfile = undefined;
 	}
 
-	push(instance: PluginController) {
+	push(instance: PluginController): void {
 		this.#plugins.push(instance);
 	}
 
-	fill(instances: PluginRawInstance[]) {
+	fill(instances: PluginRawInstance[]): void {
 		const plugins: Record<string, PluginController> = {};
 
 		for (const entry of instances) {
@@ -133,12 +130,8 @@ export class PluginControllerRepository {
 						Intl: PayvoIntl,
 					},
 				});
-				const plugin = new PluginController(
-					entry.config,
-					// @ts-ignore
-					callback,
-					entry.dir,
-				);
+
+				const plugin = new PluginController(entry.config, callback, entry.dir);
 
 				plugin.config().validate();
 
@@ -162,7 +155,7 @@ export class PluginControllerRepository {
 
 	// Helpers
 
-	hasFilters(namespace: string, hookName: string) {
+	hasFilters(namespace: string, hookName: string): boolean {
 		return this.#plugins.some((plugin) => plugin.hooks().hasFilter(namespace, hookName));
 	}
 

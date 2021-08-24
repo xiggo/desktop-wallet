@@ -20,7 +20,6 @@ import { ARK } from "@payvo/sdk-ark";
 import { LSK } from "@payvo/sdk-lsk";
 import { Offline } from "domains/error/pages";
 import { Splash } from "domains/splash/pages";
-import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useLayoutEffect, useState } from "react";
 import { useErrorHandler } from "react-error-boundary";
 import { I18nextProvider } from "react-i18next";
@@ -46,7 +45,6 @@ const RouteWrappers = ({ children }: { children: React.ReactNode }) => (
 const Main = () => {
 	const [showSplash, setShowSplash] = useState(true);
 	const { env } = useEnvironmentContext();
-	const { loadPlugins } = usePluginManagerContext();
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
 
@@ -72,7 +70,6 @@ const Main = () => {
 				if (isE2E() || isUnit()) {
 					await bootEnvWithProfileFixtures({ env, shouldRestoreDefaultProfile: isUnit() });
 
-					loadPlugins();
 					setShowSplash(false);
 					return;
 				}
@@ -81,8 +78,6 @@ const Main = () => {
 				await env.verify();
 				/* istanbul ignore next */
 				await env.boot();
-				/* istanbul ignore next */
-				await loadPlugins();
 			} catch (error) {
 				handleError(error);
 			}
@@ -91,7 +86,7 @@ const Main = () => {
 		};
 
 		boot();
-	}, [env, handleError, loadPlugins]);
+	}, [env, handleError]);
 
 	const renderContent = () => {
 		if (showSplash) {

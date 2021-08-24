@@ -41,7 +41,7 @@ describe("App", () => {
 			.reply(200, require("tests/fixtures/coins/ark/devnet/notification-transactions.json"))
 			.persist();
 
-		jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((event: string) => {
+		jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation(async (event: string) => {
 			let isUpdateCalled = false;
 			if (event === "updater:check-for-updates") {
 				const response = {
@@ -51,19 +51,9 @@ describe("App", () => {
 				isUpdateCalled = true;
 				return response;
 			}
-			if (event === "plugin:loader-fs.search") {
-				return [];
-			}
+
 			return true;
 		});
-
-		jest.spyOn(electron.ipcRenderer, "on").mockImplementation(
-			(event_: any, callback: (event__: any, progress: any) => void) => {
-				if (event_ === "updater:download-progress") {
-					callback(event_, { percent: 30, total: 10, transferred: 3 });
-				}
-			},
-		);
 
 		jest.spyOn(toasts, "success").mockImplementation();
 	});

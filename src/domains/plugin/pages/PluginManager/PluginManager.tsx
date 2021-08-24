@@ -1,4 +1,4 @@
-import { snakeCase, sortByDesc } from "@arkecosystem/utils";
+import { snakeCase } from "@arkecosystem/utils";
 import { Button } from "app/components/Button";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Header } from "app/components/Header";
@@ -100,10 +100,10 @@ const LatestPlugins = ({
 	return (
 		<>
 			{categories.map((category: string) => {
-				let plugins: any[] = pluginsByCategory[category] || [];
+				let plugins: any[] = pluginsByCategory[category] ?? [];
 				const categoryCount = plugins.length;
 
-				plugins = sortByDesc(plugins, "date").slice(0, 3);
+				plugins = plugins.slice(0, 3);
 
 				if (plugins.length < 3 && viewType === "grid") {
 					plugins.push(...new Array(3 - plugins.length).fill(undefined));
@@ -198,7 +198,7 @@ export const PluginManager = () => {
 	const history = useHistory();
 	const { pluginManager, mapConfigToPluginData, updatePlugin } = usePluginManagerContext();
 	const { persist } = useEnvironmentContext();
-	const { startUpdate, isUpdating: isUpdatingAll } = usePluginUpdateQueue();
+	const { startUpdate, isUpdating: isUpdatingAll } = usePluginUpdateQueue(activeProfile);
 
 	const [currentViewValue, setCurrentViewValue] = useState("latest");
 	const [viewType, setViewType] = useState("grid");
@@ -317,7 +317,7 @@ export const PluginManager = () => {
 	};
 
 	const handleUpdate = (pluginData: SerializedPluginConfigurationData) => {
-		updatePlugin(pluginData);
+		updatePlugin(pluginData, activeProfile.id());
 	};
 
 	const openInstallPluginModal = (pluginData: PluginController) => {
@@ -531,6 +531,7 @@ export const PluginManager = () => {
 
 			{installSelectedPlugin && (
 				<InstallPlugin
+					profile={activeProfile}
 					plugin={installSelectedPlugin}
 					isOpen={true}
 					onClose={() => setInstallSelectedPlugin(undefined)}

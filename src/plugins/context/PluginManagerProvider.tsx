@@ -1,4 +1,4 @@
-import { uniqBy } from "@arkecosystem/utils";
+import { sortBy, uniqBy } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { useEnvironmentContext } from "app/contexts";
 import { httpClient, toasts } from "app/services";
@@ -46,15 +46,18 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		return manager;
 	});
 
-	const loadPlugins = useCallback(async () => {
-		try {
-			const results = await PluginLoaderFileSystem.ipc().search();
-			pluginManager.plugins().fill(results);
-		} catch (error) {
-			/* istanbul ignore next */
-			toasts.error(error.message);
-		}
-	}, [pluginManager]);
+	const loadPlugins = useCallback(
+		async (profile: Contracts.IProfile) => {
+			try {
+				const results = await PluginLoaderFileSystem.ipc().search(profile.id());
+				pluginManager.plugins().fill(results);
+			} catch (error) {
+				/* istanbul ignore next */
+				toasts.error(error.message);
+			}
+		},
+		[pluginManager],
+	);
 
 	const loadPlugin = useCallback(
 		async (dir: string) => {
@@ -81,11 +84,12 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	}, []);
 
 	const restoreEnabledPlugins = useCallback(
-		(profile: Contracts.IProfile) => {
+		async (profile: Contracts.IProfile) => {
+			await loadPlugins(profile);
 			pluginManager.plugins().runAllEnabled(profile);
 			trigger();
 		},
-		[pluginManager, trigger],
+		[pluginManager, trigger, loadPlugins],
 	);
 
 	const resetPlugins = useCallback(() => {
@@ -180,7 +184,11 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	);
 
 	const allPlugins: PluginConfigurationData[] = useMemo(
-		() => uniqBy([...localConfigurations, ...pluginPackages], (item) => item.id()),
+		() =>
+			sortBy(
+				uniqBy([...localConfigurations, ...pluginPackages], (item) => item.id()),
+				(item) => item.id(),
+			),
 		[localConfigurations, pluginPackages],
 	);
 
@@ -248,8 +256,8 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	);
 
 	const installPlugin = useCallback(
-		async (savedPath, name) => {
-			const pluginPath = await ipcRenderer.invoke("plugin:install", { name, savedPath });
+		async (savedPath, name, profileId) => {
+			const pluginPath = await ipcRenderer.invoke("plugin:install", { name, profileId, savedPath });
 
 			await loadPlugin(pluginPath);
 
@@ -291,7 +299,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	);
 
 	const updatePlugin = useCallback(
-		async (pluginData: SerializedPluginConfigurationData) => {
+		async (pluginData: SerializedPluginConfigurationData, profileId: string) => {
 			// @ts-ignore
 			const listener = (_, value: SerializedPluginConfigurationData) => {
 				if (value.name !== pluginData.id) {
@@ -306,7 +314,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 			try {
 				const savedPath = await downloadPlugin(pluginData);
-				await installPlugin(savedPath, pluginData.id);
+				await installPlugin(savedPath, pluginData.id, profileId);
 
 				setTimeout(() => {
 					setUpdatingStats((previous) => ({

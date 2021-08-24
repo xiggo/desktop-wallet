@@ -1,14 +1,20 @@
+import { Contracts } from "@payvo/profiles";
 import path from "path";
+import { env, getDefaultProfileId } from "utils/testing-library";
 
 import { PluginLoaderFileSystem } from "./loader-fs";
+
+jest.mock("electron-is-dev", () => true);
 
 describe("PluginLoaderFileSystem", () => {
 	let subject: PluginLoaderFileSystem;
 	let root: string;
+	let profile: Contracts.IProfile;
 
 	beforeEach(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
 		root = path.resolve("src/tests/fixtures/plugins/packages");
-		subject = new PluginLoaderFileSystem([root]);
+		subject = new PluginLoaderFileSystem(root);
 	});
 
 	afterAll(() => {
@@ -16,7 +22,7 @@ describe("PluginLoaderFileSystem", () => {
 	});
 
 	it("should find manifests file in the folder", () => {
-		expect(subject.search()).toHaveLength(2);
+		expect(subject.search(profile.id())).toHaveLength(2);
 	});
 
 	it("should not fail on search", () => {
@@ -24,7 +30,7 @@ describe("PluginLoaderFileSystem", () => {
 			throw new Error();
 		});
 
-		expect(subject.search()).toHaveLength(1);
+		expect(subject.search(profile.id())).toHaveLength(1);
 
 		pathSpy.mockRestore();
 	});

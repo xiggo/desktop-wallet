@@ -5,7 +5,7 @@ import { PluginService, PluginServiceIdentifier } from "plugins/types";
 
 export class StorePluginService implements PluginService {
 	#profile: Contracts.IProfile | undefined;
-	#stores: Map<string, Contracts.IDataRepository> = new Map();
+	#stores = new Map<string, Contracts.IDataRepository>();
 
 	config() {
 		return {
@@ -15,7 +15,7 @@ export class StorePluginService implements PluginService {
 	}
 
 	boot(context: { hooks: PluginHooks }) {
-		context.hooks.on("profile", (profile) => (this.#profile = profile));
+		context.hooks.onProfileChange((profile) => (this.#profile = profile));
 	}
 
 	api(plugin: PluginController) {

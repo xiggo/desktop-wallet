@@ -1,3 +1,4 @@
+import { Contracts } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import { Modal } from "app/components/Modal";
 import { TabPanel, Tabs } from "app/components/Tabs";
@@ -13,18 +14,27 @@ import { ThirdStep } from "./Step3";
 
 interface InstallPluginProperties {
 	isOpen: boolean;
-	onClose?: any;
-	onCancel?: any;
+	onClose?: () => void;
+	onCancel?: () => void;
 	plugin?: any;
 	repositoryURL?: string;
+	profile: Contracts.IProfile;
 }
 
-export const InstallPlugin = ({ isOpen, onClose, onCancel, plugin, repositoryURL }: InstallPluginProperties) => {
+export const InstallPlugin = ({
+	isOpen,
+	onClose,
+	onCancel,
+	plugin,
+	profile,
+	repositoryURL,
+}: InstallPluginProperties) => {
 	const { t } = useTranslation();
 	const { downloadPlugin, installPlugin } = usePluginManagerContext();
 	const [activeStep, setActiveStep] = useState(1);
 	const [downloadProgress, setDownloadProgress] = useState<any>({ totalBytes: 0 });
 	const [savedPath, setSavedPath] = useState<string>();
+	const profileId = profile.id();
 
 	const handleDownload = useCallback(async () => {
 		setActiveStep(2);
@@ -40,7 +50,7 @@ export const InstallPlugin = ({ isOpen, onClose, onCancel, plugin, repositoryURL
 
 	const handleInstall = useCallback(async () => {
 		try {
-			await installPlugin(savedPath, plugin.id);
+			await installPlugin(savedPath, plugin.id, profileId);
 			toasts.success(t("PLUGINS.MODAL_INSTALL_PLUGIN.SUCCESS", { name: plugin.title }));
 		} catch (error) {
 			/* istanbul ignore next */
@@ -48,7 +58,17 @@ export const InstallPlugin = ({ isOpen, onClose, onCancel, plugin, repositoryURL
 		} finally {
 			onClose?.();
 		}
-	}, [installPlugin, plugin, onClose, savedPath, t]);
+	}, [installPlugin, plugin, onClose, savedPath, t, profileId]);
+
+	const onModalClose = () => {
+		if (activeStep === 3) {
+			ipcRenderer.invoke("plugin:cancel-install", { savedPath });
+			setActiveStep(1);
+			setSavedPath(undefined);
+		}
+
+		onClose?.();
+	};
 
 	useEffect(() => {
 		// @ts-ignore
@@ -65,7 +85,7 @@ export const InstallPlugin = ({ isOpen, onClose, onCancel, plugin, repositoryURL
 			title={t(activeStep === 1 ? "COMMON.ATTENTION" : "COMMON.DOWNLOADING")}
 			size="lg"
 			isOpen={isOpen}
-			onClose={onClose}
+			onClose={onModalClose}
 		>
 			<Tabs activeId={activeStep}>
 				<TabPanel tabId={1}>
@@ -94,7 +114,17 @@ export const InstallPlugin = ({ isOpen, onClose, onCancel, plugin, repositoryURL
 
 					{activeStep === 3 && (
 						<>
-							<Button variant="secondary" onClick={onCancel} data-testid="InstallPlugin__cancel-button">
+							<Button
+								variant="secondary"
+								onClick={() => {
+									ipcRenderer.invoke("plugin:cancel-install", { savedPath });
+									setActiveStep(1);
+									setSavedPath(undefined);
+
+									onCancel?.();
+								}}
+								data-testid="InstallPlugin__cancel-button"
+							>
 								{t("COMMON.CANCEL")}
 							</Button>
 

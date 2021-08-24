@@ -13,7 +13,7 @@ export class ProfilePluginService implements PluginService {
 	}
 
 	boot(context: { hooks: PluginHooks }) {
-		context.hooks.on("profile", (profile) => (this.#profile = profile));
+		context.hooks.onProfileChange((profile) => (this.#profile = profile));
 	}
 
 	api() {

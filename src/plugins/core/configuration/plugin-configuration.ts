@@ -11,8 +11,8 @@ import { allPermissions } from "./permissions";
 import { schema } from "./schema";
 
 export class PluginConfigurationData {
-	#config: Contracts.IDataRepository;
-	#manifest: Contracts.IDataRepository;
+	readonly #config: Contracts.IDataRepository;
+	readonly #manifest: Contracts.IDataRepository;
 	#size = 0;
 
 	constructor(config: Contracts.IDataRepository, manifest: Contracts.IDataRepository) {
@@ -146,7 +146,7 @@ export class PluginConfigurationData {
 	}
 
 	minimumVersion(): string | undefined {
-		return process.env.REACT_APP_PLUGIN_MINIMUM_VERSION ?? this.manifest().get<string>("minimumVersion");
+		return process.env.REACT_APP_PLUGIN_MINIMUM_VERSION || this.manifest().get<string>("minimumVersion");
 	}
 
 	version(): string {
@@ -217,7 +217,7 @@ export class PluginConfigurationData {
 		return url?.replace(/^git\+/, "").replace(/\.git$/, "");
 	}
 
-	async syncSize(dir?: string) {
+	private async syncSize(dir?: string) {
 		const dist = this.get<{ unpackedSize: number }>("dist");
 
 		let size = 0;

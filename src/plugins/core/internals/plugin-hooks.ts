@@ -1,3 +1,4 @@
+import { Contracts } from "@payvo/profiles";
 import { EventEmitter } from "events";
 
 type HandlerFunction = (...arguments_: any[]) => any;
@@ -5,8 +6,8 @@ type HandlerFunction = (...arguments_: any[]) => any;
 const formatKey = (...arguments_: string[]) => arguments_.join(".");
 
 export class PluginHooks extends EventEmitter {
-	#filters: Map<string, HandlerFunction[]> = new Map();
-	#commands: Map<string, HandlerFunction> = new Map();
+	#filters = new Map<string, HandlerFunction[]>();
+	#commands = new Map<string, HandlerFunction>();
 
 	hasCommand(commandName: string) {
 		return this.#commands.has(commandName);
@@ -67,5 +68,17 @@ export class PluginHooks extends EventEmitter {
 	clearAll() {
 		this.#filters.clear();
 		this.#commands.clear();
+	}
+
+	setProfile(profile: Contracts.IProfile): void {
+		this.emit("profile", profile);
+	}
+
+	flushProfile(): void {
+		this.emit("profile", undefined);
+	}
+
+	onProfileChange(callback: (profile: Contracts.IProfile | undefined) => void): void {
+		this.on("profile", callback);
 	}
 }

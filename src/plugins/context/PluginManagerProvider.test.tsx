@@ -23,12 +23,12 @@ describe("PluginManagerProvider", () => {
 		jest.clearAllMocks();
 	});
 
-	it("should load plugins", () => {
+	it("should load plugins", async () => {
 		const invokeMock = jest.spyOn(electron.ipcRenderer, "invoke").mockResolvedValue([]);
 
 		const Component = () => {
 			const { loadPlugins } = usePluginManagerContext();
-			const onClick = () => loadPlugins();
+			const onClick = async () => await loadPlugins(profile);
 			return <button onClick={onClick}>Click</button>;
 		};
 
@@ -42,7 +42,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		expect(invokeMock).toHaveBeenCalledWith("plugin:loader-fs.search");
+		await waitFor(() => expect(invokeMock).toHaveBeenCalledWith("plugin:loader-fs.search", profile.id()));
 	});
 
 	it("should report plugin", () => {
@@ -74,12 +74,12 @@ describe("PluginManagerProvider", () => {
 		ipcRendererMock.mockRestore();
 	});
 
-	it("should restore all enabled plugins", () => {
+	it("should restore all enabled plugins", async () => {
 		const restoreSpy = jest.spyOn(manager.plugins(), "runAllEnabled").mockImplementation();
 
 		const Component = () => {
 			const { restoreEnabledPlugins } = usePluginManagerContext();
-			const onClick = () => restoreEnabledPlugins();
+			const onClick = async () => await restoreEnabledPlugins(profile);
 			return <button onClick={onClick}>Click</button>;
 		};
 
@@ -93,7 +93,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		expect(restoreSpy).toHaveBeenCalled();
+		await waitFor(() => expect(restoreSpy).toHaveBeenCalled());
 
 		restoreSpy.mockRestore();
 	});
@@ -210,7 +210,11 @@ describe("PluginManagerProvider", () => {
 						{allPlugins.map((package_) => (
 							<li key={package_.name()}>
 								<span>{package_.name()}</span>
-								<button onClick={() => installPlugin("/plugins/temp/test-plugin", package_.name())}>
+								<button
+									onClick={() =>
+										installPlugin("/plugins/temp/test-plugin", package_.name(), profile.id())
+									}
+								>
 									Install
 								</button>
 							</li>
@@ -237,6 +241,7 @@ describe("PluginManagerProvider", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:install", {
 				name: "@dated/delegate-calculator-wallet-plugin",
+				profileId: profile.id(),
 				savedPath: "/plugins/temp/test-plugin",
 			}),
 		);
@@ -268,7 +273,7 @@ describe("PluginManagerProvider", () => {
 				<div>
 					<button
 						onClick={() =>
-							downloadPlugin({ id: "test-plugin" }, "https://github.com/arkecosystem/test-plugin")
+							downloadPlugin({ id: "test-plugin" } as any, "https://github.com/arkecosystem/test-plugin")
 						}
 					>
 						Fetch
@@ -462,11 +467,11 @@ describe("PluginManagerProvider", () => {
 
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:install") {
-				return "/plugins/test-plugin";
+				return Promise.resolve("/plugins/test-plugin");
 			}
 
 			if (channel === "plugin:loader-fs.find") {
-				return {
+				return Promise.resolve({
 					config: {
 						keywords: ["@payvo", "wallet-plugin"],
 						name: "@dated/delegate-calculator-wallet-plugin",
@@ -475,12 +480,14 @@ describe("PluginManagerProvider", () => {
 					dir: "/plugins/test-plugin",
 					source: () => void 0,
 					sourcePath: "/plugins/test-plugin/index.js",
-				};
+				});
 			}
 
 			if (channel === "plugin:download") {
-				return "/plugins/temp/test-plugin";
+				return Promise.resolve("/plugins/temp/test-plugin");
 			}
+
+			return Promise.resolve();
 		});
 
 		const Component = () => {
@@ -508,7 +515,9 @@ describe("PluginManagerProvider", () => {
 									) : updateStatus.isAvailable ? (
 										<span>Update Available</span>
 									) : null}
-									<button onClick={() => updatePlugin({ id: package_.name() })}>Update</button>
+									<button onClick={() => updatePlugin({ id: package_.name() }, profile.id())}>
+										Update
+									</button>
 								</li>
 							);
 						})}
@@ -541,6 +550,7 @@ describe("PluginManagerProvider", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:install", {
 				name: "@dated/delegate-calculator-wallet-plugin",
+				profileId: profile.id(),
 				savedPath: "/plugins/temp/test-plugin",
 			}),
 		);
@@ -606,7 +616,7 @@ describe("PluginManagerProvider", () => {
 									) : (
 										<>
 											{updateStatus.isAvailable ? <span>Update Available</span> : null}
-											<button onClick={() => updatePlugin({ id: package_.name() })}>
+											<button onClick={() => updatePlugin({ id: package_.name() }, profile.id())}>
 												Update
 											</button>
 										</>

@@ -1,6 +1,6 @@
 import resolve from "enhanced-resolve";
 import fs from "fs";
-import { glob } from "glob";
+import { glob, IOptions } from "glob";
 import path from "path";
 
 import { validatePath } from "../../../utils/validate-path";
@@ -8,10 +8,10 @@ import { PluginRawInstance } from "../../types";
 import * as loaderIpc from "./loader-fs-ipc";
 
 export class PluginLoaderFileSystem {
-	#roots: string[];
+	readonly #root: string;
 
-	constructor(paths: string[]) {
-		this.#roots = paths;
+	constructor(root: string) {
+		this.#root = root;
 	}
 
 	static ipc() {
@@ -20,7 +20,7 @@ export class PluginLoaderFileSystem {
 
 	remove(dir: string) {
 		const fsExtra = require("fs-extra");
-		const isValid = this.#roots.some((root) => validatePath(root, dir));
+		const isValid = validatePath(this.#root, dir);
 
 		if (!isValid) {
 			return Promise.reject(`The dir ${dir} cannot be removed.`);
@@ -29,8 +29,8 @@ export class PluginLoaderFileSystem {
 		return fsExtra.remove(dir);
 	}
 
-	search(): PluginRawInstance[] {
-		const paths = this.findPathsByConfigFiles();
+	search(profileId: string): PluginRawInstance[] {
+		const paths = this.findPaths(profileId);
 		const entries: PluginRawInstance[] = [];
 
 		for (const dir of paths) {
@@ -79,17 +79,28 @@ export class PluginLoaderFileSystem {
 		}
 	}
 
-	private findPathsByConfigFiles() {
+	private findPaths(profileId: string) {
+		const isDev = require("electron-is-dev");
+		const isE2E = process.env.ELECTRON_IS_E2E;
+
 		const files: string[] = [];
 
-		for (const cwd of this.#roots) {
-			const match = glob.sync("**/package.json", {
-				absolute: true,
-				cwd,
-				ignore: "**/node_modules/**/*",
-				matchBase: true,
-				nodir: true,
-			});
+		const options: IOptions = {
+			absolute: true,
+			ignore: "**/node_modules/**/*",
+			matchBase: true,
+			nodir: true,
+		};
+
+		const match = glob.sync(`**/${profileId}/**/package.json`, { ...options, cwd: this.#root });
+
+		files.push(...match);
+
+		/* istanbul ignore next */
+		if (isDev || isE2E) {
+			const cwd = path.resolve("src/tests/fixtures/plugins/packages");
+
+			const match = glob.sync("**/package.json", { ...options, cwd });
 
 			files.push(...match);
 		}

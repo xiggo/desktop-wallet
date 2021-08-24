@@ -121,7 +121,7 @@ export const PluginDetails = () => {
 					onInstall={() => setIsInstallOpen(true)}
 					onEnable={handleEnable}
 					onDisable={handleDisable}
-					onUpdate={() => updatePlugin(pluginData)}
+					onUpdate={() => updatePlugin(pluginData, activeProfile.id())}
 					updateStatus={pluginData.updateStatus || {}}
 					updatingStats={updatingStats?.[pluginData.name]}
 					hasLaunch={hasLaunch}
@@ -135,6 +135,7 @@ export const PluginDetails = () => {
 
 			{plugin && (
 				<InstallPlugin
+					profile={activeProfile}
 					plugin={plugin.toObject()}
 					repositoryURL={repositoryURL!}
 					isOpen={isInstallOpen}

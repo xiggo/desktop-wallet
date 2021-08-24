@@ -32,8 +32,8 @@ export const setupPlugins = () => {
 		return savedPath!;
 	});
 
-	ipcMain.handle("plugin:install", async (_, { savedPath, name }) => {
-		const pluginPath = path.join(installPath, name);
+	ipcMain.handle("plugin:install", async (_, { savedPath, profileId, name }) => {
+		const pluginPath = path.join(installPath, profileId, name);
 
 		await decompress(savedPath, pluginPath, {
 			map: (file: any) => {
@@ -45,6 +45,10 @@ export const setupPlugins = () => {
 		await trash(savedPath);
 
 		return pluginPath;
+	});
+
+	ipcMain.handle("plugin:cancel-install", (_, { savedPath }) => {
+		trash(savedPath);
 	});
 
 	injectHandler();

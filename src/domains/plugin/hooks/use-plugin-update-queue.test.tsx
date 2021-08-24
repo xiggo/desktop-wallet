@@ -1,16 +1,20 @@
+import { Contracts } from "@payvo/profiles";
 import { waitFor } from "@testing-library/react";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";
 import { PluginManager } from "plugins";
 import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
-import { env } from "utils/testing-library";
+import { env, getDefaultProfileId } from "utils/testing-library";
 
 import { usePluginUpdateQueue } from "./use-plugin-update-queue";
 
 describe("Plugin Update Queue", () => {
+	let profile: Contracts.IProfile;
+
 	beforeEach(() => {
 		jest.useFakeTimers();
+		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
 	beforeAll(() => {
@@ -28,7 +32,7 @@ describe("Plugin Update Queue", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => usePluginUpdateQueue(), { wrapper });
+		const { result } = renderHook(() => usePluginUpdateQueue(profile), { wrapper });
 
 		await actHook(async () => {
 			result.current.startUpdate(ids);
