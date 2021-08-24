@@ -821,7 +821,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
-                            0 B
+                            123 kB
                           </span>
                         </div>
                       </td>
@@ -929,7 +929,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
                         >
                           <span>
-                            0 B
+                            22 kB
                           </span>
                         </div>
                       </td>

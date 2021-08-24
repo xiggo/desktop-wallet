@@ -85,7 +85,7 @@ exports[`InstallPlugin should render 2st step with full download progress 1`] = 
                 class="font-bold text-theme-secondary-text"
                 data-testid="InstallPlugin__step--second__progress"
               >
-                100 B / 100 B
+                84.3 B / 100 B
               </p>
             </span>
             <div
@@ -111,7 +111,7 @@ exports[`InstallPlugin should render 2st step with full download progress 1`] = 
                   r="23.5"
                   stroke="var(--theme-color-success-600)"
                   stroke-dasharray="147.6548547187203"
-                  stroke-dashoffset="0"
+                  stroke-dashoffset="23.624776754995253"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="3"
@@ -128,7 +128,7 @@ exports[`InstallPlugin should render 2st step with full download progress 1`] = 
                   y="50%"
                 >
                   <tspan>
-                    100
+                    84
                     <tspan
                       dy="-0.6em"
                       font-size="0.4rem"

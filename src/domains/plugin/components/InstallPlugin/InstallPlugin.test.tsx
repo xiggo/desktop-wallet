@@ -52,11 +52,11 @@ describe("InstallPlugin", () => {
 		const { getByTestId, asFragment } = render(
 			<SecondStep
 				plugin={{ logo: "https://payvo.com/logo.png", size: "100 B", title: "My Plugin" }}
-				downloadProgress={{ percent: 1, totalBytes: 100, transferredBytes: 100 }}
+				downloadProgress={{ percent: 0.843_471_432_579, totalBytes: 100, transferredBytes: 84.347_143_257_9 }}
 			/>,
 		);
 
-		expect(getByTestId("InstallPlugin__step--second__progress")).toHaveTextContent("100 B / 100 B");
+		expect(getByTestId("CircularProgressBar__percentage")).toHaveTextContent("84%");
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -14,6 +14,8 @@ export const SecondStep = ({ plugin, downloadProgress }: Properties) => {
 
 	const hasSize = plugin.size && plugin.size !== "0 B";
 
+	const percent = Math.floor((downloadProgress.percent || 0) * 100);
+
 	return (
 		<section data-testid="InstallPlugin__step--second">
 			<div className="flex mt-4">
@@ -44,12 +46,7 @@ export const SecondStep = ({ plugin, downloadProgress }: Properties) => {
 								</p>
 							</span>
 							<div className="mr-2">
-								<CircularProgressBar
-									value={(downloadProgress.percent ?? 0) * 100}
-									size={50}
-									strokeWidth={3}
-									fontSize={0.8}
-								/>
+								<CircularProgressBar value={percent} size={50} strokeWidth={3} fontSize={0.8} />
 							</div>
 						</div>
 					</div>

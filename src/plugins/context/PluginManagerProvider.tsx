@@ -145,6 +145,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 					},
 					id: config.id(),
 					name: config.name(),
+					size: config.size(),
 					sourceProvider: config.sourceProvider(),
 					version: process.env.REACT_APP_PLUGIN_VERSION ?? config.version(),
 				}),

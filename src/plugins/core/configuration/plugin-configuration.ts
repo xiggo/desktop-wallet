@@ -13,14 +13,15 @@ import { schema } from "./schema";
 export class PluginConfigurationData {
 	readonly #config: Contracts.IDataRepository;
 	readonly #manifest: Contracts.IDataRepository;
-	#size = 0;
+
+	#localSize = 0;
 
 	constructor(config: Contracts.IDataRepository, manifest: Contracts.IDataRepository) {
 		this.#config = config;
 		this.#manifest = manifest;
 	}
 
-	static make(config: Record<string, any>, dir?: string) {
+	static make(config: Record<string, any>, dir?: string): PluginConfigurationData {
 		const data = new Repositories.DataRepository();
 		data.fill(config);
 
@@ -33,7 +34,9 @@ export class PluginConfigurationData {
 
 		const plugin = new PluginConfigurationData(data, manifest);
 
-		plugin.syncSize(dir);
+		if (dir) {
+			void plugin.syncSize(dir);
+		}
 
 		return plugin;
 	}
@@ -42,11 +45,11 @@ export class PluginConfigurationData {
 		return schema.validateSync(this.#config.toJSON());
 	}
 
-	get<T = string>(key: string, defaultValue?: T) {
+	get<T = string>(key: string, defaultValue?: T): T | undefined {
 		return this.#config.get<T>(key, defaultValue);
 	}
 
-	manifest() {
+	manifest(): Contracts.IDataRepository {
 		return this.#manifest;
 	}
 
@@ -111,38 +114,38 @@ export class PluginConfigurationData {
 		return result.length > 0 ? result : ["other"];
 	}
 
-	category() {
+	category(): string {
 		return this.categories()[0];
 	}
 
-	hasCategory(categoryName: string) {
+	hasCategory(categoryName: string): boolean {
 		return this.categories().includes(categoryName);
 	}
 
-	date() {
+	date(): string | undefined {
 		return this.get("date");
 	}
 
-	description() {
+	description(): string | undefined {
 		return this.get("description");
 	}
 
-	homepage() {
+	homepage(): string | undefined {
 		return this.get("homepage");
 	}
 
-	images() {
-		return this.manifest().get<string[]>("images") || [];
+	images(): string[] {
+		return this.manifest().get<string[]>("images") ?? [];
 	}
 
-	permissions() {
+	permissions(): string[] {
 		const permissions = this.manifest().get<string[]>("permissions") || [];
 		const validPermissions = permissions.filter((permission) => allPermissions.includes(permission.toUpperCase()));
 		return uniq(validPermissions.map((permission: string) => permission.toUpperCase()));
 	}
 
-	urls() {
-		return this.manifest().get<string[]>("urls") || [];
+	urls(): string[] {
+		return this.manifest().get<string[]>("urls") ?? [];
 	}
 
 	minimumVersion(): string | undefined {
@@ -173,8 +176,18 @@ export class PluginConfigurationData {
 		}
 	}
 
-	size() {
-		return prettyBytes(this.#size);
+	size(): string {
+		let size = 0;
+
+		if (this.#localSize) {
+			size = this.#localSize;
+		}
+
+		if (this.#config.has("size")) {
+			size = this.get("size", 0) as number;
+		}
+
+		return prettyBytes(size);
 	}
 
 	title(): string | undefined {
@@ -192,7 +205,7 @@ export class PluginConfigurationData {
 		return startCase(temporary);
 	}
 
-	isOfficial() {
+	isOfficial(): boolean {
 		const name = this.name();
 
 		if (!name) {
@@ -217,25 +230,25 @@ export class PluginConfigurationData {
 		return url?.replace(/^git\+/, "").replace(/\.git$/, "");
 	}
 
-	private async syncSize(dir?: string) {
+	private async syncSize(directory: string) {
 		const dist = this.get<{ unpackedSize: number }>("dist");
 
-		let size = 0;
+		let size: number;
 
 		if (dist) {
 			size = dist.unpackedSize;
-		} else if (dir) {
+		} else {
 			try {
-				size = await du(dir);
+				size = await du(directory);
 			} catch {
 				size = 0;
 			}
 		}
 
-		this.#size = size;
+		this.#localSize = size;
 	}
 
-	isCompatible() {
+	isCompatible(): boolean {
 		const minimumVersion = this.minimumVersion();
 		const validMinimumVersion = semver.valid(minimumVersion) ? semver.coerce(minimumVersion)!.version : "0.0.0";
 		return minimumVersion ? semver.gte(appPackage.version, validMinimumVersion) : true;
