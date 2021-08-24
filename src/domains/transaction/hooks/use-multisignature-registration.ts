@@ -3,7 +3,7 @@ import { Services, Signatories } from "@payvo/sdk";
 import { useLedgerContext } from "app/contexts";
 import { Participant } from "domains/transaction/components/MultiSignatureRegistrationForm/components/AddParticipant/AddParticipant";
 import { ExtendedSignedTransactionData } from "domains/transaction/pages/SendRegistration/SendRegistration.models";
-import { withAbortPromise } from "domains/transaction/utils";
+import { handleBroadcastError, withAbortPromise } from "domains/transaction/utils";
 import { useRef } from "react";
 import { assertString } from "utils/assertions";
 
@@ -97,5 +97,27 @@ export const useMultiSignatureRegistration = () => {
 		return transaction;
 	};
 
-	return { abortReference, addSignature, sendMultiSignature };
+	const broadcast = async ({
+		wallet,
+		transactionId,
+	}: {
+		wallet: ProfileContracts.IReadWriteWallet;
+		transactionId: string;
+	}) => {
+		if (!wallet.transaction().canBeBroadcasted(transactionId)) {
+			throw new Error("Transaction cannot be broadcasted");
+		}
+
+		await wallet.transaction().sync();
+
+		const response = await wallet.transaction().broadcast(transactionId);
+		handleBroadcastError(response);
+
+		await wallet.transaction().sync();
+		wallet.transaction().restore();
+
+		return wallet.transaction().transaction(transactionId);
+	};
+
+	return { abortReference, addSignature, broadcast, sendMultiSignature };
 };

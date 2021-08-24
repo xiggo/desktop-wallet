@@ -14,11 +14,11 @@ import {
 	TransactionTimestamp,
 	TransactionVotes,
 } from "domains/transaction/components/TransactionDetail";
+import { useMultiSignatureStatus } from "domains/transaction/hooks";
 import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-types";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { MultiSignatureStatus } from "./MultiSignatureStatus";
 import { Signatures } from "./Signatures";
 
 export const SummaryStep = ({
@@ -32,6 +32,7 @@ export const SummaryStep = ({
 	const { t } = useTranslation();
 
 	const { getLabel } = useTransactionTypes();
+	const { status } = useMultiSignatureStatus({ transaction, wallet });
 
 	const [senderAddress, setSenderAddress] = useState("");
 
@@ -123,9 +124,7 @@ export const SummaryStep = ({
 				{min} / {publicKeys.length}
 			</TransactionDetail>
 
-			<TransactionDetail label={t("TRANSACTION.STATUS")}>
-				<MultiSignatureStatus wallet={wallet} transaction={transaction} />
-			</TransactionDetail>
+			<TransactionDetail label={t("TRANSACTION.STATUS")}>{status.label}</TransactionDetail>
 
 			<TransactionDetail label={t("TRANSACTION.ID")}>
 				<div className="flex items-center space-x-3">

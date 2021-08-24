@@ -321,9 +321,9 @@ describe("MultiSignatureDetail", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should show send button when able to broadcast", async () => {
+	it("should show send button when able to add final signature and broadcast", async () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 
@@ -350,29 +350,9 @@ describe("MultiSignatureDetail", () => {
 		broadcastMock.mockRestore();
 	});
 
-	it("should not show send button when multisignature is not ready", async () => {
-		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
-		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockImplementation(() => {
-			throw new Error("error");
-		});
-		// @ts-ignore
-		jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(void 0);
-
-		render(
-			<LedgerProvider transport={getDefaultLedgerTransport()}>
-				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
-			</LedgerProvider>,
-		);
-
-		await waitFor(() => expect(() => screen.getByTestId("MultiSignatureDetail__broadcast")).toThrow());
-
-		jest.restoreAllMocks();
-	});
-
 	it("should not broadcast if wallet is not ready to do so", async () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
 		// @ts-ignore
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(void 0);
@@ -400,7 +380,7 @@ describe("MultiSignatureDetail", () => {
 
 	it("should not show send button when waiting for confirmations", async () => {
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockImplementationOnce(() => true);
-		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
+		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
 		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
 
@@ -417,7 +397,7 @@ describe("MultiSignatureDetail", () => {
 
 	it("should fail to broadcast transaction and show error step", async () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
 
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockRejectedValue(new Error("Failed"));
@@ -441,8 +421,8 @@ describe("MultiSignatureDetail", () => {
 		broadcastMock.mockRestore();
 	});
 
-	it("should show paginator when able to sign", async () => {
-		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
+	it("should show sign button when able to sign", async () => {
+		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 
 		const { container } = render(
@@ -631,12 +611,85 @@ describe("MultiSignatureDetail", () => {
 		jest.restoreAllMocks();
 	});
 
+	it("should add final signature and broadcast transaction", async () => {
+		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(false);
+		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
+
+		jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
+		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
+
+		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [fixtures.transfer.id()],
+			errors: {},
+			rejected: [],
+		});
+		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
+
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const transport = getDefaultLedgerTransport();
+		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
+		const { container } = render(
+			<LedgerProvider transport={transport}>
+				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
+			</LedgerProvider>,
+		);
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		});
+
+		await waitFor(() => expect(screen.getByTestId("MultiSignatureDetail__broadcast")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+				target: {
+					value: passphrase,
+				},
+			});
+		});
+
+		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("Paginator__continue"));
+		});
+
+		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+		await waitFor(() => expect(screen.getByText(translations.SUCCESS.TITLE)).toBeInTheDocument());
+
+		expect(container).toMatchSnapshot();
+
+		listenSpy.mockRestore();
+		jest.restoreAllMocks();
+	});
+
 	it("should sign transaction with a ledger wallet", async () => {
+		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+
 		jest.spyOn(wallet, "actsWithMnemonic").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
+
 		const isNanoXMock = jest.spyOn(wallet, "isLedgerNanoX").mockReturnValue(true);
 		// Ledger mocks
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
@@ -674,7 +727,7 @@ describe("MultiSignatureDetail", () => {
 			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
-		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
+		await waitFor(() => expect(screen.getByTestId("Paginator__sign")).toBeInTheDocument());
 
 		const address = wallet.address();
 		const balance = wallet.balance();
@@ -716,7 +769,6 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
-		await waitFor(() => expect(screen.getByText(translations.SUCCESS.TITLE)).toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 
@@ -730,6 +782,7 @@ describe("MultiSignatureDetail", () => {
 	});
 
 	it("should show error screen for Nano S and continue when NanoX is connected", async () => {
+		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
 		jest.spyOn(wallet, "actsWithMnemonic").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);

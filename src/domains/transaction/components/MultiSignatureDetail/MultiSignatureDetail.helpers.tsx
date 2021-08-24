@@ -8,11 +8,13 @@ interface PaginatorProperties {
 	canBeBroadcasted: boolean;
 	onCancel?: () => void;
 	onSign?: () => void;
+	onSend?: () => void;
 	onBack?: () => void;
 	onContinue?: () => void;
 	isEnabled?: boolean;
 	isLoading?: boolean;
 	isSubmitting?: boolean;
+	isCreator?: boolean;
 }
 
 export const Paginator = ({
@@ -21,60 +23,70 @@ export const Paginator = ({
 	canBeBroadcasted,
 	onCancel,
 	onSign,
+	onSend,
 	onBack,
 	onContinue,
 	isEnabled,
 	isLoading,
 	isSubmitting,
+	isCreator,
 }: PaginatorProperties) => {
 	const { t } = useTranslation();
-	const canBeSend = canBeBroadcasted && !canBeSigned && activeStep === 1;
+	const canAddFinalSignatureAndSend = canBeBroadcasted && canBeSigned && activeStep === 1;
+	const canSign = canBeSigned && !canBeBroadcasted && activeStep === 1;
+	const canAuthenticate = canBeSigned && activeStep === 2;
+	const canBroadCastOnly = canBeBroadcasted && !canBeSigned && isCreator && activeStep === 1;
 
-	if (![1, 2].includes(activeStep) || (!canBeSend && !canBeSigned)) {
-		return null;
+	if (canAuthenticate) {
+		return (
+			<div className="flex justify-end mt-8 space-x-3">
+				<Button data-testid="Paginator__back" variant="secondary" onClick={onBack}>
+					{t("COMMON.BACK")}
+				</Button>
+
+				<Button
+					disabled={!isEnabled || isLoading}
+					data-testid="Paginator__continue"
+					isLoading={isLoading}
+					onClick={onContinue}
+				>
+					{t("COMMON.CONTINUE")}
+				</Button>
+			</div>
+		);
 	}
 
-	return (
-		<div className="flex justify-end mt-8 space-x-3">
-			{(canBeSend || activeStep === 1) && (
+	if (canSign) {
+		return (
+			<div className="flex justify-end mt-8 space-x-3">
 				<Button data-testid="Paginator__cancel" variant="secondary" onClick={onCancel}>
 					{t("COMMON.CANCEL")}
 				</Button>
-			)}
-
-			{canBeSigned && activeStep === 1 && (
 				<Button data-testid="Paginator__sign" onClick={onSign}>
 					{t("COMMON.SIGN")}
 				</Button>
-			)}
+			</div>
+		);
+	}
 
-			{canBeSend && (
+	if (canAddFinalSignatureAndSend || canBroadCastOnly) {
+		return (
+			<div className="flex justify-end mt-8 space-x-3">
+				<Button data-testid="Paginator__cancel" variant="secondary" onClick={onCancel}>
+					{t("COMMON.CANCEL")}
+				</Button>
+
 				<Button
+					onClick={onSend}
 					disabled={isSubmitting}
-					type="submit"
 					isLoading={isSubmitting}
 					data-testid="MultiSignatureDetail__broadcast"
 				>
 					{t("COMMON.SEND")}
 				</Button>
-			)}
+			</div>
+		);
+	}
 
-			{activeStep === 2 && (
-				<>
-					<Button data-testid="Paginator__back" variant="secondary" onClick={onBack}>
-						{t("COMMON.BACK")}
-					</Button>
-
-					<Button
-						disabled={!isEnabled || isLoading}
-						data-testid="Paginator__continue"
-						isLoading={isLoading}
-						onClick={onContinue}
-					>
-						{t("COMMON.CONTINUE")}
-					</Button>
-				</>
-			)}
-		</div>
-	);
+	return null;
 };

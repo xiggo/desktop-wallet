@@ -5,80 +5,71 @@ import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import { useTimeFormat } from "app/hooks/use-time-format";
 import { TransactionRowMemo } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMemo";
-import React, { useMemo } from "react";
+import { useMultiSignatureStatus } from "domains/transaction/hooks";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 
-const StatusLabel = ({
-	wallet,
-	transaction,
+const SignButton = ({
+	isCompact,
+	isAwaitingFinalSignature,
+	canBeSigned,
+	onClick,
 }: {
-	wallet: Contracts.IReadWriteWallet;
-	transaction: DTO.ExtendedSignedTransactionData;
+	isCompact?: boolean;
+	isAwaitingFinalSignature: boolean;
+	canBeSigned: boolean;
+	onClick?: () => void;
 }) => {
 	const { t } = useTranslation();
 
-	const isMultiSignatureReady = useMemo(() => {
-		try {
-			return wallet.coin().multiSignature().isMultiSignatureReady(transaction.data());
-		} catch {
-			return false;
-		}
-	}, [wallet, transaction]);
-
-	if (wallet.transaction().isAwaitingOurSignature(transaction.id())) {
-		return (
-			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_OUR_SIGNATURE")}>
-				<span className="p-1 text-theme-secondary-700">
-					<Icon name="Pencil" size="lg" />
-				</span>
-			</Tooltip>
-		);
+	if (!canBeSigned) {
+		return null;
 	}
 
-	if (wallet.transaction().isAwaitingOtherSignatures(transaction.id())) {
-		return (
-			<Tooltip
-				content={t("TRANSACTION.MULTISIGNATURE.AWAITING_OTHER_SIGNATURE_COUNT", {
-					count: wallet.coin().multiSignature().remainingSignatureCount(transaction.data()),
-				})}
-			>
-				<span className="p-1 text-theme-warning-300">
-					<Icon name="ClockPencil" size="lg" />
-				</span>
-			</Tooltip>
-		);
-	}
-
-	if (wallet.transaction().isAwaitingConfirmation(transaction.id())) {
-		return (
-			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>
-				<span className="p-1 text-theme-warning-300">
-					<Icon name="Clock" size="lg" />
-				</span>
-			</Tooltip>
-		);
-	}
-
-	if (isMultiSignatureReady) {
-		return (
-			<Tooltip content={t("TRANSACTION.MULTISIGNATURE.READY")}>
-				<span className="p-1 text-theme-success-500">
+	const ButtonContent = () => {
+		if (isAwaitingFinalSignature) {
+			return (
+				<>
+					<span>{t("COMMON.SEND")}</span>
 					<Icon name="DoubleArrowRight" />
-				</span>
-			</Tooltip>
+				</>
+			);
+		}
+
+		return (
+			<>
+				<Icon name="Pencil" />
+				<span>{t("COMMON.SIGN")}</span>
+			</>
+		);
+	};
+
+	if (isCompact) {
+		return (
+			<Button
+				size="sm"
+				data-testid="TransactionRow__sign"
+				variant="transparent"
+				className="text-theme-primary-600 hover:text-theme-primary-700"
+				onClick={onClick}
+			>
+				<ButtonContent />
+			</Button>
 		);
 	}
 
 	return (
-		<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_FINAL_SIGNATURE")}>
-			<span className="p-1 text-theme-success-500">
-				<Icon name="CircleCheckMarkPencil" size="lg" />
-			</span>
-		</Tooltip>
+		<Button
+			data-testid="TransactionRow__sign"
+			variant={isAwaitingFinalSignature ? "primary" : "secondary"}
+			onClick={onClick}
+		>
+			<ButtonContent />
+		</Button>
 	);
 };
 
@@ -97,47 +88,9 @@ export const SignedTransactionRow = ({
 	isCompact?: boolean;
 	showMemoColumn: boolean;
 }) => {
-	const { t } = useTranslation();
-
 	const timeFormat = useTimeFormat();
-
 	const recipient = transaction.get<string>("recipientId");
-
-	const canBeSigned = useMemo(() => {
-		try {
-			return wallet.transaction().canBeSigned(transaction.id());
-		} catch {
-			return false;
-		}
-	}, [wallet, transaction]);
-
-	const renderSignButton = () => {
-		if (!canBeSigned) {
-			return;
-		}
-
-		if (isCompact) {
-			return (
-				<Button
-					size="sm"
-					data-testid="TransactionRow__sign"
-					variant="transparent"
-					className="text-theme-primary-600 hover:text-theme-primary-700"
-					onClick={() => onSign?.(transaction)}
-				>
-					<Icon name="Pencil" />
-					<span>{t("COMMON.SIGN")}</span>
-				</Button>
-			);
-		}
-
-		return (
-			<Button data-testid="TransactionRow__sign" variant="secondary" onClick={() => onSign?.(transaction)}>
-				<Icon name="Pencil" />
-				<span>{t("COMMON.SIGN")}</span>
-			</Button>
-		);
-	};
+	const { canBeSigned, isAwaitingFinalSignature, status } = useMultiSignatureStatus({ transaction, wallet });
 
 	return (
 		<TableRow onClick={() => onRowClick?.(transaction)}>
@@ -171,7 +124,11 @@ export const SignedTransactionRow = ({
 			)}
 
 			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>
-				<StatusLabel wallet={wallet} transaction={transaction} />
+				<Tooltip content={status.label}>
+					<span className={`p-1 ${status.className}`}>
+						<Icon name={status.icon} size="lg" />
+					</span>
+				</Tooltip>
 			</TableCell>
 
 			<TableCell innerClassName="justify-end" isCompact={isCompact}>
@@ -183,7 +140,12 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
-				{renderSignButton()}
+				<SignButton
+					isCompact={isCompact}
+					canBeSigned={canBeSigned}
+					isAwaitingFinalSignature={isAwaitingFinalSignature}
+					onClick={() => onSign?.(transaction)}
+				/>
 			</TableCell>
 		</TableRow>
 	);
