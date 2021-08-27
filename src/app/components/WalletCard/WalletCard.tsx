@@ -2,12 +2,13 @@ import { Contracts } from "@payvo/profiles";
 import { Avatar } from "app/components/Avatar";
 import { Card } from "app/components/Card";
 import { Circle } from "app/components/Circle";
-import { DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import { WalletIcons } from "app/components/WalletIcons";
 import { useActiveProfile, useWalletAlias } from "app/hooks";
+import cn from "classnames";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
+import { isFullySynced } from "domains/wallet/utils/is-fully-synced";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -16,22 +17,13 @@ import { AmountCrypto } from "../Amount";
 import { WalletCardSkeleton } from "./WalletCardSkeleton";
 
 interface WalletCardProperties {
-	isLoading: boolean;
+	isLoading?: boolean;
 	className?: string;
 	wallet?: Contracts.IReadWriteWallet;
-	actions?: DropdownOption[];
 	displayType?: string;
-	onSelect?: any;
 }
 
-export const WalletCard = ({
-	isLoading,
-	className,
-	wallet,
-	actions,
-	displayType = "all",
-	onSelect,
-}: WalletCardProperties) => {
+export const WalletCard = ({ isLoading = false, className, wallet, displayType = "all" }: WalletCardProperties) => {
 	const activeProfile = useActiveProfile();
 
 	const history = useHistory();
@@ -48,6 +40,8 @@ export const WalletCard = ({
 			}),
 		[activeProfile, getWalletAlias, wallet],
 	);
+
+	const canDisplayBalance = !wallet ? false : isFullySynced(wallet);
 
 	if (isLoading) {
 		return <WalletCardSkeleton />;
@@ -68,7 +62,7 @@ export const WalletCard = ({
 		};
 
 		return (
-			<div data-testid="WalletCard__blank" className={`w-64 inline-block ${className}`}>
+			<div data-testid="WalletCard__blank" className={cn("w-64 inline-block", className)}>
 				<Card addonIcons={walletIcon()} className="h-48">
 					<div className="flex flex-col justify-between p-5 h-full">
 						<div className="flex -space-x-2">
@@ -96,13 +90,13 @@ export const WalletCard = ({
 	}
 
 	return (
-		<div className={`w-64 inline-block ${className}`} data-testid={`WalletCard__${wallet.address()}`}>
+		<div className={cn("w-64 inline-block", className)} data-testid={`WalletCard__${wallet.address()}`}>
 			<Card
 				addonIcons={<WalletIcons wallet={wallet} />}
 				className="h-48"
-				actions={actions}
-				onClick={() => history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`)}
-				onSelect={onSelect}
+				onClick={
+					canDisplayBalance ? () => history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`) : undefined
+				}
 			>
 				<div className="flex relative flex-col justify-between p-5 h-full">
 					<div className="flex items-center space-x-4">
@@ -114,11 +108,15 @@ export const WalletCard = ({
 						<span className="font-semibold truncate text-theme-secondary-text">{alias}</span>
 					</div>
 
-					<AmountCrypto
-						value={wallet.balance()}
-						ticker={wallet.network().ticker()}
-						className="mt-auto text-lg font-bold text-theme-text"
-					/>
+					{canDisplayBalance ? (
+						<AmountCrypto
+							value={wallet.balance()}
+							ticker={wallet.network().ticker()}
+							className="mt-auto text-lg font-bold text-theme-text"
+						/>
+					) : (
+						<div className="w-44 mt-4 h-3 rounded-full bg-theme-secondary-200 dark:bg-theme-secondary-800" />
+					)}
 
 					<TruncateMiddleDynamic
 						value={wallet?.address()}
@@ -128,8 +126,4 @@ export const WalletCard = ({
 			</Card>
 		</div>
 	);
-};
-
-WalletCard.defaultProps = {
-	address: "",
 };

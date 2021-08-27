@@ -10,7 +10,7 @@ const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();
 
 let profile: Contracts.IProfile;
-let wallet: Contracts.ReadWriteWallet;
+let wallet: Contracts.IReadWriteWallet;
 
 describe("WalletListItem", () => {
 	beforeAll(() => {
@@ -117,15 +117,14 @@ describe("WalletListItem", () => {
 		mockExchangeCurrency.mockRestore();
 	});
 
-	it("should click a wallet and redirect to it", () => {
+	it("should call onClick when clicked and fully restored", () => {
+		const onClick = jest.fn();
+
 		const { getByText } = renderWithRouter(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem
-							wallet={wallet}
-							onClick={() => history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}`)}
-						/>
+						<WalletListItem wallet={wallet} onClick={onClick} />
 					</Route>
 				</tbody>
 			</table>,
@@ -135,12 +134,38 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
+		act(() => {
+			fireEvent.click(getByText(wallet.alias()));
+		});
+
+		expect(onClick).toHaveBeenCalledWith(wallet.id());
+	});
+
+	it("should not call onClick when clicked but not fully restored", () => {
+		const hasBeenFullyRestored = jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+
+		const onClick = jest.fn();
+
+		const { getByText } = renderWithRouter(
+			<table>
+				<tbody>
+					<Route path="/profiles/:profileId/dashboard">
+						<WalletListItem wallet={wallet} onClick={onClick} />
+					</Route>
+				</tbody>
+			</table>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
 
 		act(() => {
 			fireEvent.click(getByText(wallet.alias()));
 		});
 
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(onClick).not.toHaveBeenCalled();
+
+		hasBeenFullyRestored.mockRestore();
 	});
 });

@@ -17,7 +17,6 @@ interface WalletsProperties {
 	onImportWallet?: any;
 	onImportLedgerWallet?: () => void;
 	onSelectViewType?: any;
-	onWalletAction?: any;
 	listPagerLimit?: number;
 	walletsCount?: number;
 	isLoading?: boolean;
@@ -28,7 +27,6 @@ export const Wallets = ({
 	onCreateWallet,
 	onImportWallet,
 	onImportLedgerWallet,
-	onWalletAction,
 	walletsCount,
 	listPagerLimit = 10,
 	isLoading,
@@ -93,7 +91,6 @@ export const Wallets = ({
 				isLoading={isLoading && walletsCount === 0}
 				wallets={gridWallets}
 				sliderOptions={sliderOptions}
-				onWalletAction={onWalletAction}
 			/>
 
 			<WalletsList

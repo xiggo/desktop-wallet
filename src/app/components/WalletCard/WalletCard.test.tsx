@@ -16,8 +16,6 @@ let wallet: Contracts.IReadWriteWallet;
 describe("Wallet Card", () => {
 	beforeAll(() => {
 		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
-
-		history.push(dashboardURL);
 	});
 
 	beforeEach(async () => {
@@ -28,6 +26,8 @@ describe("Wallet Card", () => {
 
 		await wallet.synchroniser().identity();
 		jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+
+		history.push(dashboardURL);
 	});
 
 	afterAll(() => {
@@ -60,22 +60,6 @@ describe("Wallet Card", () => {
 		);
 
 		expect(getByTestId("WalletCard__skeleton")).toBeTruthy();
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should render with actions", () => {
-		const actions = [{ label: "show", value: "show" }];
-
-		const { container } = renderWithRouter(
-			<Route path="/profiles/:profileId/dashboard">
-				<WalletCard wallet={wallet} actions={actions} />
-			</Route>,
-			{
-				history,
-				routes: [dashboardURL],
-			},
-		);
-
 		expect(container).toMatchSnapshot();
 	});
 
@@ -155,7 +139,7 @@ describe("Wallet Card", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should click a wallet and redirect to it", () => {
+	it("should click a wallet and redirect to it when fully restored", () => {
 		const { getByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} />
@@ -173,5 +157,29 @@ describe("Wallet Card", () => {
 		});
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+	});
+
+	it("should not redirect to wallet when not fully restored", () => {
+		const hasBeenFullyRestored = jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+
+		const { getByText } = renderWithRouter(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletCard wallet={wallet} />
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
+
+		act(() => {
+			fireEvent.click(getByText(wallet.alias()));
+		});
+
+		expect(history.location.pathname).not.toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+
+		hasBeenFullyRestored.mockRestore();
 	});
 });

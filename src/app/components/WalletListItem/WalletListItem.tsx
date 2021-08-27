@@ -7,6 +7,7 @@ import { WalletIcons } from "app/components/WalletIcons";
 import { useActiveProfile, useWalletAlias } from "app/hooks";
 import cn from "classnames";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
+import { isFullySynced } from "domains/wallet/utils/is-fully-synced";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { shouldUseDarkColors } from "utils/electron-utils";
@@ -27,6 +28,8 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 	const isSelected = useMemo(() => activeWalletId === wallet.id(), [activeWalletId, wallet]);
 
 	const activeProfile = useActiveProfile();
+
+	const canDisplayBalance = isFullySynced(wallet);
 
 	const shadowClasses = useMemo(
 		() =>
@@ -55,14 +58,14 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 
 	let lastCellContent: string | JSX.Element;
 
-	if (wallet.network().isTest()) {
+	if (wallet.network().isTest() || !canDisplayBalance) {
 		lastCellContent = t("COMMON.NOT_AVAILABLE");
 	} else {
 		lastCellContent = <Amount ticker={wallet.exchangeCurrency()} value={wallet.convertedBalance()} />;
 	}
 
 	return (
-		<TableRow isSelected={isSelected} onClick={() => onClick?.(wallet.id())}>
+		<TableRow isSelected={isSelected} onClick={canDisplayBalance ? () => onClick?.(wallet.id()) : undefined}>
 			<TableCell variant="start" innerClassName="space-x-4">
 				<div className="flex-shrink-0 -space-x-2">
 					<NetworkIcon size="lg" network={wallet.network()} shadowClassName={shadowClasses} />
@@ -78,7 +81,11 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 			</TableCell>
 
 			<TableCell innerClassName="font-semibold justify-end">
-				<AmountCrypto value={wallet.balance()} ticker={wallet.network().ticker()} />
+				{canDisplayBalance ? (
+					<AmountCrypto value={wallet.balance()} ticker={wallet.network().ticker()} />
+				) : (
+					<span className="text-theme-secondary-text font-normal">{t("COMMON.NOT_AVAILABLE")}</span>
+				)}
 			</TableCell>
 
 			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text">
