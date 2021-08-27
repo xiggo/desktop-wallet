@@ -12,6 +12,7 @@ export interface SignInput {
 	privateKey?: string;
 }
 
+// @TODO: extract this into the SDK/Profiles
 export const useWalletSignatory = (
 	wallet: ProfileContracts.IReadWriteWallet,
 ): {
@@ -35,16 +36,20 @@ export const useWalletSignatory = (
 			}
 
 			if (encryptionPassword) {
+				if (wallet.actsWithSecretWithEncryption()) {
+					return wallet.signatory().secret(wallet.signingKey().get(encryptionPassword));
+				}
+
 				if (wallet.isSecondSignature()) {
 					return wallet
 						.signatory()
-						.confirmationWIF(
-							await wallet.wif().get(encryptionPassword),
-							await wallet.confirmationWIF().get(encryptionPassword),
+						.confirmationMnemonic(
+							wallet.signingKey().get(encryptionPassword),
+							wallet.confirmKey().get(encryptionPassword),
 						);
 				}
 
-				return wallet.signatory().wif(await wallet.wif().get(encryptionPassword));
+				return wallet.signatory().mnemonic(wallet.signingKey().get(encryptionPassword));
 			}
 
 			if (wallet.isMultiSignature()) {

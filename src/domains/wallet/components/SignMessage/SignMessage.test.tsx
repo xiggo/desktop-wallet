@@ -229,11 +229,8 @@ describe("SignMessage", () => {
 				"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6",
 		};
 
-		const walletUsesWIFMock = jest.spyOn(wallet.wif(), "exists").mockReturnValue(true);
-		const walletWifMock = jest.spyOn(wallet.wif(), "get").mockImplementation(() => {
-			const wif = "SDYxDiemdWw57qC5rjEDnNJJsy25XqbbQEhBbndwZ6ssNMbyWP3F";
-			return Promise.resolve(wif);
-		});
+		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(mnemonic);
 
 		const onSign = jest.fn();
 

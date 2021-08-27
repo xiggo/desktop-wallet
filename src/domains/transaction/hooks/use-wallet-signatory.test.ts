@@ -92,8 +92,8 @@ describe("useWalletSignatory", () => {
 	it("should sign with encryption password on wallet with second signature", async () => {
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(true);
 
-		await wallet.wif().set(MNEMONICS[0], "password");
-		await wallet.confirmationWIF().set(MNEMONICS[1], "password");
+		wallet.signingKey().set(MNEMONICS[0], "password");
+		wallet.confirmKey().set(MNEMONICS[1], "password");
 
 		const { result } = renderHook(() => useWalletSignatory(wallet));
 
@@ -102,7 +102,26 @@ describe("useWalletSignatory", () => {
 		});
 
 		expect(signatory).toBeInstanceOf(Signatories.Signatory);
-		expect(signatory.signingKey()).toBe("SDYxDiemdWw57qC5rjEDnNJJsy25XqbbQEhBbndwZ6ssNMbyWP3F");
+		expect(signatory.signingKey()).toBe(MNEMONICS[0]);
+		expect(signatory.confirmKey()).toBe(MNEMONICS[1]);
+	});
+
+	it("should sign with secret with encryption password", async () => {
+		const walletFromSecretWithEncryption = await profile.walletFactory().fromSecret({
+			coin: "ARK",
+			network: "ark.devnet",
+			password: "password",
+			secret: "testing",
+		});
+
+		const { result } = renderHook(() => useWalletSignatory(walletFromSecretWithEncryption));
+
+		const signatory = await result.current.sign({
+			encryptionPassword: "password",
+		});
+
+		expect(signatory).toBeInstanceOf(Signatories.Signatory);
+		expect(signatory.signingKey()).toBe("testing");
 	});
 
 	it("should sign with ledger wallet using derivation path", async () => {

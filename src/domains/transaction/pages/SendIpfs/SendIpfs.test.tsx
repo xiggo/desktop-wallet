@@ -806,9 +806,7 @@ describe("SendIpfs", () => {
 		const actsWithWifWithEncryptionMock = jest
 			.spyOn(encryptedWallet, "actsWithWifWithEncryption")
 			.mockReturnValue(true);
-		const wifGetMock = jest
-			.spyOn(encryptedWallet.wif(), "get")
-			.mockResolvedValue("S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV");
+		const wifGetMock = jest.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const history = createMemoryHistory();
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${encryptedWallet.id()}/send-ipfs`;

@@ -4196,21 +4196,10 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="font-semibold text-base text-theme-text"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 1
-                                </span>
-                              </span>
-                              <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
                               </span>
                             </div>
                           </div>
@@ -4226,9 +4215,9 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                               class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
-                                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                                title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
                               />
                             </div>
                           </div>
@@ -4248,7 +4237,9 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                           </div>
                           <div
                             class="font-semibold"
-                          />
+                          >
+                            testwallet2
+                          </div>
                         </div>
                       </div>
                       <div

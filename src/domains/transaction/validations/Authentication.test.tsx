@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { BIP39 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
 import { env, MNEMONICS } from "utils/testing-library";
 
@@ -88,13 +89,11 @@ describe("Authentication", () => {
 		);
 	});
 
-	it("should validate encryption password", async () => {
-		const wif = "SCoAuLqLrD6rfSBVhgcLqbdLKz2Gum2j4JR7pvLyiKaK9oiUfobg";
-
+	it("should validate encryption password with BIP39", async () => {
 		const fromWifMock = jest
 			.spyOn(walletWithPassword.coin().address(), "fromWIF")
 			.mockResolvedValue({ address: walletWithPassword.address() } as any);
-		const walletWifMock = jest.spyOn(walletWithPassword.wif(), "get").mockResolvedValue(wif);
+		const walletWifMock = jest.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue(MNEMONICS[1]);
 
 		const encryptionPassword = authentication(translationMock).encryptionPassword(walletWithPassword);
 
@@ -102,6 +101,23 @@ describe("Authentication", () => {
 
 		fromWifMock.mockRestore();
 		walletWifMock.mockRestore();
+	});
+
+	it("should validate encryption password with secret", async () => {
+		const BIP39Mock = jest.spyOn(BIP39, "validate").mockReturnValue(false);
+
+		const fromWifMock = jest
+			.spyOn(walletWithPassword.coin().address(), "fromWIF")
+			.mockResolvedValue({ address: walletWithPassword.address() } as any);
+		const walletWifMock = jest.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue(MNEMONICS[1]);
+
+		const encryptionPassword = authentication(translationMock).encryptionPassword(walletWithPassword);
+
+		await expect(encryptionPassword.validate("password")).resolves.toBe(true);
+
+		fromWifMock.mockRestore();
+		walletWifMock.mockRestore();
+		BIP39Mock.mockRestore();
 	});
 
 	it("should validate WIF", async () => {
@@ -162,9 +178,9 @@ describe("Authentication", () => {
 	});
 
 	it("should fail validation for encryption password", async () => {
-		const walletWifMock = jest
-			.spyOn(walletWithPassword.wif(), "get")
-			.mockImplementation(() => Promise.reject(new Error("failed")));
+		const walletWifMock = jest.spyOn(walletWithPassword.signingKey(), "get").mockImplementation(() => {
+			throw new Error("failed");
+		});
 
 		const fromWifMock = jest
 			.spyOn(walletWithPassword.coin().address(), "fromWIF")

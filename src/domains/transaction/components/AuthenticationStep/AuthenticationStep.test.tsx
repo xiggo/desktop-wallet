@@ -1,3 +1,4 @@
+import { PBKDF2 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { Form } from "app/components/Form";
@@ -7,6 +8,7 @@ import {
 	env,
 	fireEvent,
 	getDefaultProfileId,
+	getDefaultWalletMnemonic,
 	MNEMONICS,
 	renderWithRouter,
 	screen,
@@ -412,7 +414,7 @@ describe("AuthenticationStep", () => {
 	it("should render with encryption password input", async () => {
 		jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		jest.spyOn(wallet.wif(), "get").mockResolvedValue("6PYR8Zq7e84mKXq3kxZyrZ8Zyt6iE89fCngdMgibQ5HjCd7Bt3k7wKc4ZL");
+		jest.spyOn(wallet.signingKey(), "get").mockReturnValue(PBKDF2.encrypt(getDefaultWalletMnemonic(), "password"));
 
 		const { result } = renderHook(() => useForm({ mode: "onChange" }));
 		const { getByTestId } = renderWithRouter(

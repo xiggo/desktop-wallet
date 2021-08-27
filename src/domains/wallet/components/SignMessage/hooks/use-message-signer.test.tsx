@@ -34,17 +34,14 @@ describe("Use Message Signer Hook", () => {
 	it("should sign message with wif", async () => {
 		const { result } = renderHook(() => useMessageSigner(transport));
 
-		const walletUsesWIFMock = jest.spyOn(wallet.wif(), "exists").mockReturnValue(true);
-		const walletWifMock = jest.spyOn(wallet.wif(), "get").mockImplementation(() => {
-			const wif = "S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV";
-			return Promise.resolve(wif);
-		});
+		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(getDefaultWalletMnemonic());
 
 		const signedMessage = await result.current.sign(
 			wallet,
 			"message",
 			undefined,
-			await wallet.wif().get("password"),
+			wallet.signingKey().get("password"),
 		);
 
 		expect(signedMessage).toEqual({

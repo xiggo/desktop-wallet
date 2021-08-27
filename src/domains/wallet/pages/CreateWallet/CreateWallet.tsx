@@ -22,12 +22,20 @@ import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
 import { SuccessStep } from "./SuccessStep";
 import { WalletOverviewStep } from "./WalletOverviewStep";
 
+enum Step {
+	NetworkStep = 1,
+	WalletOverviewStep = 2,
+	ConfirmPassphraseStep = 3,
+	EncryptPasswordStep = 4,
+	SuccessStep = 5,
+}
+
 export const CreateWallet = () => {
 	const { persist } = useEnvironmentContext();
 	const history = useHistory();
 	const { t } = useTranslation();
 
-	const [activeTab, setActiveTab] = useState(1);
+	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const activeProfile = useActiveProfile();
 
 	const { selectedNetworkIds, setValue: setConfiguration } = useWalletConfig({ profile: activeProfile });
@@ -72,24 +80,17 @@ export const CreateWallet = () => {
 	};
 
 	const handleBack = () => {
-		if (activeTab === 1) {
+		if (activeTab === Step.NetworkStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		const network = getValues("network");
-		assertNetwork(network);
-
-		if (activeTab === 5 && !network.importMethods()?.bip39?.canBeEncrypted) {
-			setActiveTab(activeTab - 2);
-		} else {
-			setActiveTab(activeTab - 1);
-		}
+		setActiveTab(activeTab - 1);
 	};
 
 	const handleNext = async (params: { encryptionPassword?: string } = {}) => {
 		const newIndex = activeTab + 1;
 
-		if (newIndex === 2) {
+		if (newIndex === Step.WalletOverviewStep) {
 			setGenerationError("");
 			setIsGeneratingWallet(true);
 
@@ -105,13 +106,14 @@ export const CreateWallet = () => {
 			return;
 		}
 
-		if (newIndex === 5) {
+		if (newIndex === Step.SuccessStep) {
 			const { mnemonic, network } = getValues(["mnemonic", "network"]);
+
+			let wallet = getValues("wallet");
 
 			assertNetwork(network);
 			assertString(mnemonic);
-
-			let wallet = getValues("wallet");
+			assertWallet(wallet);
 
 			if (params.encryptionPassword) {
 				setIsGeneratingWallet(true);
@@ -132,12 +134,7 @@ export const CreateWallet = () => {
 
 			assertWallet(wallet);
 
-			wallet.mutator().alias(
-				getDefaultAlias({
-					network,
-					profile: activeProfile,
-				}),
-			);
+			wallet.mutator().alias(getDefaultAlias({ network, profile: activeProfile }));
 
 			setValue("wallet", wallet);
 
@@ -146,26 +143,15 @@ export const CreateWallet = () => {
 			setConfiguration("selectedNetworkIds", uniq([...selectedNetworkIds, network.id()]));
 
 			await persist();
-
-			setActiveTab(newIndex);
-
-			return;
 		}
 
-		const network = getValues("network");
-		assertNetwork(network);
-
-		if (newIndex === 4 && !network.importMethods()?.bip39?.canBeEncrypted) {
-			setActiveTab(newIndex + 1);
-		} else {
-			setActiveTab(newIndex);
-		}
+		setActiveTab(newIndex);
 	};
 
 	const handlePasswordSubmit = () => {
 		assertString(encryptionPassword);
 
-		handleNext({ encryptionPassword });
+		void handleNext({ encryptionPassword });
 	};
 
 	const renderUpdateWalletNameModal = () => {
@@ -199,7 +185,7 @@ export const CreateWallet = () => {
 						<StepIndicator size={5} activeIndex={activeTab} />
 
 						<div className="mt-8">
-							<TabPanel tabId={1}>
+							<TabPanel tabId={Step.NetworkStep}>
 								<NetworkStep
 									profile={activeProfile}
 									title={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.TITLE")}
@@ -209,25 +195,25 @@ export const CreateWallet = () => {
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={2}>
+							<TabPanel tabId={Step.WalletOverviewStep}>
 								<WalletOverviewStep />
 							</TabPanel>
 
-							<TabPanel tabId={3}>
+							<TabPanel tabId={Step.ConfirmPassphraseStep}>
 								<ConfirmPassphraseStep />
 							</TabPanel>
 
-							<TabPanel tabId={4}>
+							<TabPanel tabId={Step.EncryptPasswordStep}>
 								<EncryptPasswordStep />
 							</TabPanel>
 
-							<TabPanel tabId={5}>
+							<TabPanel tabId={Step.SuccessStep}>
 								<SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />
 							</TabPanel>
 
 							<div className="flex justify-between mt-8">
 								<div>
-									{activeTab === 4 && (
+									{activeTab === Step.EncryptPasswordStep && (
 										<Button
 											data-testid="CreateWallet__skip-button"
 											disabled={isGeneratingWallet}
@@ -239,7 +225,7 @@ export const CreateWallet = () => {
 								</div>
 
 								<div className="flex justify-end space-x-3">
-									{activeTab < 5 && (
+									{activeTab < Step.SuccessStep && (
 										<Button
 											data-testid="CreateWallet__back-button"
 											disabled={isGeneratingWallet}
@@ -250,7 +236,7 @@ export const CreateWallet = () => {
 										</Button>
 									)}
 
-									{activeTab < 4 && (
+									{activeTab < Step.EncryptPasswordStep && (
 										<Button
 											data-testid="CreateWallet__continue-button"
 											disabled={!isDirty ? true : !isValid || isGeneratingWallet}
@@ -261,7 +247,7 @@ export const CreateWallet = () => {
 										</Button>
 									)}
 
-									{activeTab === 4 && (
+									{activeTab === Step.EncryptPasswordStep && (
 										<Button
 											data-testid="CreateWallet__continue-encryption-button"
 											disabled={
@@ -277,7 +263,7 @@ export const CreateWallet = () => {
 										</Button>
 									)}
 
-									{activeTab === 5 && (
+									{activeTab === Step.SuccessStep && (
 										<Button
 											disabled={isSubmitting}
 											type="submit"

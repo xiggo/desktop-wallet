@@ -281,11 +281,8 @@ describe("DelegateRegistrationForm", () => {
 	});
 
 	it("should sign transaction using password encryption", async () => {
-		const walletUsesWIFMock = jest.spyOn(wallet.wif(), "exists").mockReturnValue(true);
-		const walletWifMock = jest.spyOn(wallet.wif(), "get").mockImplementation(() => {
-			const wif = "S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV";
-			return Promise.resolve(wif);
-		});
+		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(MNEMONICS[0]);
 
 		const form = {
 			clearErrors: jest.fn(),

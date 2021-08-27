@@ -69,7 +69,7 @@ describe("SendDelegateResignation", () => {
 		wallet = profile.wallets().push(
 			await profile.walletFactory().fromMnemonicWithBIP39({
 				coin: "ARK",
-				mnemonic: MNEMONICS[0],
+				mnemonic: passphrase,
 				network: "ark.devnet",
 			}),
 		);
@@ -403,31 +403,22 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should successfully sign and submit resignation transaction using encryption password", async () => {
-			const encryptedWallet = profile.wallets().first();
-			await encryptedWallet.synchroniser().identity();
+			const actsWithMnemonicMock = jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+			const actsWithWifWithEncryptionMock = jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+			const wifGetMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
-			const actsWithMnemonicMock = jest.spyOn(encryptedWallet, "actsWithMnemonic").mockReturnValue(false);
-			const actsWithWifWithEncryptionMock = jest
-				.spyOn(encryptedWallet, "actsWithWifWithEncryption")
-				.mockReturnValue(true);
-			const wifGetMock = jest
-				.spyOn(encryptedWallet.wif(), "get")
-				.mockResolvedValue("S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV");
-
-			const secondPublicKeyMock = jest
-				.spyOn(encryptedWallet, "secondPublicKey")
-				.mockReturnValue((await encryptedWallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+			const secondPublicKeyMock = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 			const signMock = jest
-				.spyOn(encryptedWallet.transaction(), "signDelegateResignation")
+				.spyOn(wallet.transaction(), "signDelegateResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-			const broadcastMock = jest.spyOn(encryptedWallet.transaction(), "broadcast").mockResolvedValue({
+			const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 				accepted: [transactionFixture.data.id],
 				errors: {},
 				rejected: [],
 			});
-			const transactionMock = createTransactionMock(encryptedWallet);
+			const transactionMock = createTransactionMock(wallet);
 
-			const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${encryptedWallet.id()}/send-delegate-resignation`;
+			const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
 			history.push(resignationEncryptedUrl);
 
 			const { asFragment, getByTestId } = renderWithRouter(

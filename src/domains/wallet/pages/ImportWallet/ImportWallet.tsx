@@ -142,11 +142,11 @@ export const ImportWallet = () => {
 		assertWallet(importedWallet);
 		assertString(walletGenerationInput);
 
-		if (secondMnemonicInput) {
-			await importedWallet.confirmationWIF().set(secondMnemonicInput, encryptionPassword);
-		}
+		importedWallet.signingKey().set(walletGenerationInput, encryptionPassword);
 
-		await importedWallet.wif().set(walletGenerationInput, encryptionPassword);
+		if (secondMnemonicInput) {
+			importedWallet.confirmKey().set(secondMnemonicInput, encryptionPassword);
+		}
 
 		if (importedWallet.actsWithMnemonic()) {
 			importedWallet

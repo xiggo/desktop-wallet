@@ -23,7 +23,7 @@ export const FormStep = ({
 
 	const subtitle = wallet.isLedger()
 		? t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER")
-		: wallet.wif().exists()
+		: wallet.signingKey().exists()
 		? t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
 		: t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
 
@@ -64,7 +64,7 @@ export const FormStep = ({
 				/>
 			</FormField>
 
-			{!wallet.isLedger() && !wallet.wif().exists() && wallet.actsWithMnemonic() && (
+			{!wallet.isLedger() && !wallet.signingKey().exists() && wallet.actsWithMnemonic() && (
 				<FormField name="mnemonic">
 					<FormLabel label={t("COMMON.MNEMONIC")} />
 					<InputPassword
@@ -74,7 +74,7 @@ export const FormStep = ({
 				</FormField>
 			)}
 
-			{!wallet.isLedger() && !wallet.wif().exists() && wallet.actsWithSecret() && (
+			{!wallet.isLedger() && !wallet.signingKey().exists() && wallet.actsWithSecret() && (
 				<FormField name="secret">
 					<FormLabel label={t("COMMON.SECRET")} />
 					<InputPassword
@@ -84,7 +84,7 @@ export const FormStep = ({
 				</FormField>
 			)}
 
-			{!wallet.isLedger() && wallet.wif().exists() && (
+			{!wallet.isLedger() && wallet.signingKey().exists() && (
 				<FormField name="encryptionPassword">
 					<FormLabel>{t("TRANSACTION.ENCRYPTION_PASSWORD")}</FormLabel>
 					<InputPassword

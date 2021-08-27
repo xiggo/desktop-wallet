@@ -1039,9 +1039,7 @@ describe("SendVote", () => {
 	it("should send a vote transaction using encryption password", async () => {
 		const actsWithMnemonicMock = jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 		const actsWithWifWithEncryptionMock = jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		const wifGetMock = jest
-			.spyOn(wallet.wif(), "get")
-			.mockResolvedValue("S9rDfiJ2ar4DpWAQuaXECPTJHfTZ3XjCPv15gjxu4cHJZKzABPyV");
+		const wifGetMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;

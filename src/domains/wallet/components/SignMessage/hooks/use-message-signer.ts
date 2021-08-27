@@ -35,6 +35,7 @@ const withAbortPromise = (signal?: AbortSignal) => <T>(promise: Promise<T>) =>
 		return promise.then(resolve).catch(reject);
 	});
 
+// @TODO: extract this into the SDK/Profiles
 export const useMessageSigner = (transport: typeof LedgerTransportNodeHID) => {
 	const sign = async (
 		wallet: ProfileContracts.IReadWriteWallet,
@@ -57,7 +58,7 @@ export const useMessageSigner = (transport: typeof LedgerTransportNodeHID) => {
 		}
 
 		if (wif) {
-			signatory = await wallet.signatory().wif(wif);
+			signatory = await wallet.signatory().mnemonic(wif);
 		}
 
 		if (secret) {
