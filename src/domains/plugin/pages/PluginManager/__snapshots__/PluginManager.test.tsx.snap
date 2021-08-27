@@ -109,7 +109,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -148,7 +148,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -178,7 +178,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -326,7 +326,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -850,7 +850,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex-1"
                             data-testid="PluginListItem__install"
                             type="button"
                           >
@@ -958,7 +958,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex-1"
                             data-testid="PluginListItem__install"
                             type="button"
                           >
@@ -1157,7 +1157,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1196,7 +1196,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1226,7 +1226,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1374,7 +1374,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -1914,7 +1914,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                               class="w-full"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
@@ -1944,7 +1944,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
                                   class="relative"
                                 >
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                                     type="button"
                                   >
                                     <div
@@ -2092,7 +2092,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2131,7 +2131,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -2161,7 +2161,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2309,7 +2309,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -2849,7 +2849,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                               class="w-full"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
@@ -2879,7 +2879,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
                                   class="relative"
                                 >
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                                     type="button"
                                   >
                                     <div
@@ -3027,7 +3027,7 @@ exports[`PluginManager should render 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -3066,7 +3066,7 @@ exports[`PluginManager should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -3096,7 +3096,7 @@ exports[`PluginManager should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -3244,7 +3244,7 @@ exports[`PluginManager should render 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -3492,7 +3492,7 @@ exports[`PluginManager should render 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3543,7 +3543,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3594,7 +3594,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3677,7 +3677,7 @@ exports[`PluginManager should render 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -3771,7 +3771,7 @@ exports[`PluginManager should render 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -3871,7 +3871,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -3951,7 +3951,7 @@ exports[`PluginManager should render 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4002,7 +4002,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4053,7 +4053,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4133,7 +4133,7 @@ exports[`PluginManager should render 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4184,7 +4184,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4235,7 +4235,7 @@ exports[`PluginManager should render 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -4410,7 +4410,7 @@ exports[`PluginManager should search for plugin 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -4449,7 +4449,7 @@ exports[`PluginManager should search for plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -4479,7 +4479,7 @@ exports[`PluginManager should search for plugin 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -4686,7 +4686,7 @@ exports[`PluginManager should search for plugin 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -5051,7 +5051,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -5090,7 +5090,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -5120,7 +5120,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -5268,7 +5268,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -5521,7 +5521,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -5613,7 +5613,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -5705,7 +5705,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -5797,7 +5797,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -5889,7 +5889,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -6098,7 +6098,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -6137,7 +6137,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -6167,7 +6167,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -6315,7 +6315,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -6562,7 +6562,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -6656,7 +6656,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -6876,7 +6876,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -6915,7 +6915,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -6945,7 +6945,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -7093,7 +7093,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -7340,7 +7340,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -7434,7 +7434,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -7654,7 +7654,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -7693,7 +7693,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -7723,7 +7723,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -7871,7 +7871,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -8119,7 +8119,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8170,7 +8170,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8221,7 +8221,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8304,7 +8304,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -8398,7 +8398,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 >
                   <div>
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -8498,7 +8498,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8578,7 +8578,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8629,7 +8629,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8680,7 +8680,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8760,7 +8760,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               >
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8811,7 +8811,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -8862,7 +8862,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
                 </div>
                 <div>
                   <button
-                    class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                    class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                     data-testid="Card"
                     tabindex="-1"
                     type="button"
@@ -9037,7 +9037,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -9076,7 +9076,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -9106,7 +9106,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -9254,7 +9254,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   class="pl-8 my-auto ml-5 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
                 />
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="PluginManager_header--install"
                   type="button"
                 >
@@ -9511,7 +9511,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                   There is 1 update available for your plugins. Would you like to update it?
                 </span>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd -mr-1"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC -mr-1"
                   data-testid="PluginManager__update-all"
                   type="button"
                 >
@@ -9825,7 +9825,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                               class="w-full"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                                 data-testid="PluginListItem__launch"
                                 disabled=""
                                 type="button"
@@ -9861,7 +9861,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                                     <span />
                                   </span>
                                   <button
-                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                                     type="button"
                                   >
                                     <div

@@ -1200,7 +1200,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -1819,7 +1819,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -2140,7 +2140,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -2461,7 +2461,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -3386,7 +3386,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -3707,7 +3707,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 ZKLCR text-theme-primary-600 hover:text-theme-primary-700"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkzWwe text-theme-primary-600 hover:text-theme-primary-700"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -4028,7 +4028,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >

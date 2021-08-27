@@ -108,7 +108,7 @@ exports[`ExchangeView should render 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -147,7 +147,7 @@ exports[`ExchangeView should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -177,7 +177,7 @@ exports[`ExchangeView should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >

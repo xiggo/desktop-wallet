@@ -537,7 +537,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                           class="flex justify-end pt-4 space-x-3"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="CreateProfile__back-button"
                             type="button"
                           >
@@ -548,7 +548,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                             </div>
                           </button>
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                             data-testid="CreateProfile__submit-button"
                             type="submit"
                           >
@@ -1110,7 +1110,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                           class="flex justify-end pt-4 space-x-3"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="CreateProfile__back-button"
                             type="button"
                           >
@@ -1121,7 +1121,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                             </div>
                           </button>
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                             data-testid="CreateProfile__submit-button"
                             type="submit"
                           >
@@ -1300,7 +1300,7 @@ exports[`ImportProfile should render first step 1`] = `
                     class="flex justify-end mt-8 space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                       data-testid="SelectFileStep__back"
                       type="button"
                     >

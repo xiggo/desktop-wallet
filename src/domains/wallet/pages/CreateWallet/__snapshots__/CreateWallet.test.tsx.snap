@@ -107,7 +107,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -146,7 +146,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--send"
                   disabled=""
                   type="button"
@@ -177,7 +177,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--receive"
                   disabled=""
                   type="button"
@@ -530,7 +530,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                     class="flex justify-end space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                       data-testid="CreateWallet__back-button"
                       type="button"
                     >
@@ -541,7 +541,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                       data-testid="CreateWallet__continue-button"
                       disabled=""
                       type="button"
@@ -671,7 +671,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -710,7 +710,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -740,7 +740,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -980,7 +980,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                         </div>
                       </div>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                         data-testid="CreateWallet__edit-alias"
                         type="button"
                       >
@@ -1009,7 +1009,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                     class="flex justify-end space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                       data-testid="CreateWallet__finish-button"
                       type="submit"
                     >
@@ -1138,7 +1138,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1177,7 +1177,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--send"
                   disabled=""
                   type="button"
@@ -1208,7 +1208,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--receive"
                   disabled=""
                   type="button"
@@ -1561,7 +1561,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                     class="flex justify-end space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                       data-testid="CreateWallet__back-button"
                       type="button"
                     >
@@ -1572,7 +1572,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                       data-testid="CreateWallet__continue-button"
                       disabled=""
                       type="button"
@@ -1702,7 +1702,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1741,7 +1741,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1771,7 +1771,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2011,7 +2011,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                         </div>
                       </div>
                       <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                         data-testid="CreateWallet__edit-alias"
                         type="button"
                       >
@@ -2040,7 +2040,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                     class="flex justify-end space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                       data-testid="CreateWallet__finish-button"
                       type="submit"
                     >
@@ -2171,7 +2171,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2210,7 +2210,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--send"
                   disabled=""
                   type="button"
@@ -2241,7 +2241,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--receive"
                   disabled=""
                   type="button"
@@ -2594,7 +2594,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                     class="flex justify-end space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                       data-testid="CreateWallet__back-button"
                       type="button"
                     >
@@ -2605,7 +2605,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                       data-testid="CreateWallet__continue-button"
                       disabled=""
                       type="button"
@@ -2737,7 +2737,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2776,7 +2776,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -2806,7 +2806,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -3158,7 +3158,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                     class="flex justify-end space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                       data-testid="CreateWallet__back-button"
                       type="button"
                     >
@@ -3169,7 +3169,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                       data-testid="CreateWallet__continue-button"
                       disabled=""
                       type="button"
@@ -3299,7 +3299,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -3338,7 +3338,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--send"
                   disabled=""
                   type="button"
@@ -3369,7 +3369,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--receive"
                   disabled=""
                   type="button"
@@ -3764,7 +3764,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                     class="flex justify-end space-x-3"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                       data-testid="CreateWallet__back-button"
                       type="button"
                     >
@@ -3775,7 +3775,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                       data-testid="CreateWallet__continue-button"
                       type="button"
                     >

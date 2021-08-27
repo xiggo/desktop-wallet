@@ -112,7 +112,7 @@ exports[`Wallets should load more wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -138,7 +138,7 @@ exports[`Wallets should load more wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -164,7 +164,7 @@ exports[`Wallets should load more wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -760,7 +760,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -786,7 +786,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -812,7 +812,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -1307,7 +1307,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
               class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
                 data-testid="modal__close-btn"
                 type="button"
               >
@@ -1498,7 +1498,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -1524,7 +1524,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -1550,7 +1550,7 @@ exports[`Wallets should render empty profile wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -1708,7 +1708,7 @@ exports[`Wallets should render grid 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -1734,7 +1734,7 @@ exports[`Wallets should render grid 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -1760,7 +1760,7 @@ exports[`Wallets should render grid 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -1816,7 +1816,7 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -1897,7 +1897,7 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -1993,7 +1993,7 @@ exports[`Wallets should render grid 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -2198,7 +2198,7 @@ exports[`Wallets should render grid in loading state 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -2224,7 +2224,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -2250,7 +2250,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -2306,7 +2306,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -2387,7 +2387,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -2483,7 +2483,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -2688,7 +2688,7 @@ exports[`Wallets should render list 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -2714,7 +2714,7 @@ exports[`Wallets should render list 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -2740,7 +2740,7 @@ exports[`Wallets should render list 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -3336,7 +3336,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -3362,7 +3362,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -3388,7 +3388,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -3444,7 +3444,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -3540,7 +3540,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                       data-testid="Card"
                       tabindex="-1"
                       type="button"
@@ -3588,7 +3588,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                       data-testid="Card"
                       tabindex="-1"
                       type="button"
@@ -3745,7 +3745,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
               class="flex space-x-3"
             >
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-ledger"
                 type="button"
               >
@@ -3771,7 +3771,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                 data-testid="WalletControls__import-wallet"
                 type="button"
               >
@@ -3797,7 +3797,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                 </div>
               </button>
               <button
-                class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                 data-testid="WalletControls__create-wallet"
                 type="button"
               >
@@ -3853,7 +3853,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -3934,7 +3934,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >
@@ -4030,7 +4030,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                     class="h-48"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 cdJALn"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 jtRXYU"
                       data-testid="Card"
                       type="button"
                     >

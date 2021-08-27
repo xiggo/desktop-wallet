@@ -95,7 +95,9 @@ export const WalletCard = ({ isLoading = false, className, wallet, displayType =
 				addonIcons={<WalletIcons wallet={wallet} />}
 				className="h-48"
 				onClick={
-					canDisplayBalance ? () => history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`) : undefined
+					canDisplayBalance
+						? () => history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`)
+						: undefined
 				}
 			>
 				<div className="flex relative flex-col justify-between p-5 h-full">

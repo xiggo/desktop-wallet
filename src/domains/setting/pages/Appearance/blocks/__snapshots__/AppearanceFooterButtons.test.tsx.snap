@@ -6,7 +6,7 @@ exports[`AppearanceFooterButtons should render 1`] = `
     class="flex justify-end mt-8 space-x-3 w-full"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
       data-testid="AppearanceFooterButtons__cancel"
       type="button"
     >
@@ -17,7 +17,7 @@ exports[`AppearanceFooterButtons should render 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
       data-testid="AppearanceFooterButtons__save"
       type="submit"
     >
@@ -37,7 +37,7 @@ exports[`AppearanceFooterButtons should render disabled 1`] = `
     class="flex justify-end mt-8 space-x-3 w-full"
   >
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
       data-testid="AppearanceFooterButtons__cancel"
       type="button"
     >
@@ -48,7 +48,7 @@ exports[`AppearanceFooterButtons should render disabled 1`] = `
       </div>
     </button>
     <button
-      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
       data-testid="AppearanceFooterButtons__save"
       disabled=""
       type="button"

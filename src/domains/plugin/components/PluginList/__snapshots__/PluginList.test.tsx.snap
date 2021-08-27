@@ -261,7 +261,7 @@ exports[`PluginList should not render pagination 1`] = `
                     class="w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                       data-testid="PluginListItem__launch"
                       disabled=""
                       type="button"
@@ -291,7 +291,7 @@ exports[`PluginList should not render pagination 1`] = `
                         class="relative"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                           type="button"
                         >
                           <div
@@ -408,7 +408,7 @@ exports[`PluginList should not render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex-1"
                   data-testid="PluginListItem__install"
                   type="button"
                 >
@@ -692,7 +692,7 @@ exports[`PluginList should render pagination 1`] = `
                     class="w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                       data-testid="PluginListItem__launch"
                       disabled=""
                       type="button"
@@ -722,7 +722,7 @@ exports[`PluginList should render pagination 1`] = `
                         class="relative"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                           type="button"
                         >
                           <div
@@ -839,7 +839,7 @@ exports[`PluginList should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex-1"
                   data-testid="PluginListItem__install"
                   type="button"
                 >
@@ -942,7 +942,7 @@ exports[`PluginList should render pagination 1`] = `
                     class="w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                       data-testid="PluginListItem__launch"
                       disabled=""
                       type="button"
@@ -972,7 +972,7 @@ exports[`PluginList should render pagination 1`] = `
                         class="relative"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                           type="button"
                         >
                           <div
@@ -1086,7 +1086,7 @@ exports[`PluginList should render pagination 1`] = `
                     class="w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                       data-testid="PluginListItem__launch"
                       disabled=""
                       type="button"
@@ -1116,7 +1116,7 @@ exports[`PluginList should render pagination 1`] = `
                         class="relative"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                           type="button"
                         >
                           <div
@@ -1170,7 +1170,7 @@ exports[`PluginList should render pagination 1`] = `
           </button>
         </div>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
           data-testid="Pagination__next"
           type="button"
         >
@@ -1456,7 +1456,7 @@ exports[`PluginList should render without pagination 1`] = `
                     class="w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                       data-testid="PluginListItem__launch"
                       disabled=""
                       type="button"
@@ -1486,7 +1486,7 @@ exports[`PluginList should render without pagination 1`] = `
                         class="relative"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                           type="button"
                         >
                           <div
@@ -1603,7 +1603,7 @@ exports[`PluginList should render without pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex-1"
                   data-testid="PluginListItem__install"
                   type="button"
                 >
@@ -1884,7 +1884,7 @@ exports[`PluginList should split by page 1`] = `
                     class="w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                       data-testid="PluginListItem__launch"
                       disabled=""
                       type="button"
@@ -1914,7 +1914,7 @@ exports[`PluginList should split by page 1`] = `
                         class="relative"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                           type="button"
                         >
                           <div
@@ -1949,7 +1949,7 @@ exports[`PluginList should split by page 1`] = `
         data-testid="Pagination"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
           data-testid="Pagination__previous"
           type="button"
         >
@@ -2254,7 +2254,7 @@ exports[`PluginList should trigger delete 1`] = `
                     class="w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                       data-testid="PluginListItem__launch"
                       disabled=""
                       type="button"
@@ -2284,7 +2284,7 @@ exports[`PluginList should trigger delete 1`] = `
                         class="relative"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                           type="button"
                         >
                           <div
@@ -2401,7 +2401,7 @@ exports[`PluginList should trigger delete 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex-1"
                   data-testid="PluginListItem__install"
                   type="button"
                 >
@@ -2685,7 +2685,7 @@ exports[`PluginList should trigger install 1`] = `
                     class="w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
                       data-testid="PluginListItem__launch"
                       disabled=""
                       type="button"
@@ -2715,7 +2715,7 @@ exports[`PluginList should trigger install 1`] = `
                         class="relative"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP text-left"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA text-left"
                           type="button"
                         >
                           <div
@@ -2832,7 +2832,7 @@ exports[`PluginList should trigger install 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex-1"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex-1"
                   data-testid="PluginListItem__install"
                   type="button"
                 >

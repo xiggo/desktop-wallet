@@ -161,7 +161,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                   data-testid="recipient-list__remove-recipient"
                   disabled=""
                   type="button"
@@ -269,7 +269,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -376,7 +376,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -472,7 +472,7 @@ exports[`RecipientList should conditionally disable remove button 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -964,7 +964,7 @@ exports[`RecipientList should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1071,7 +1071,7 @@ exports[`RecipientList should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1178,7 +1178,7 @@ exports[`RecipientList should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1274,7 +1274,7 @@ exports[`RecipientList should render editable 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1797,7 +1797,7 @@ exports[`RecipientList should render without amount column 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1883,7 +1883,7 @@ exports[`RecipientList should render without amount column 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -1969,7 +1969,7 @@ exports[`RecipientList should render without amount column 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >
@@ -2044,7 +2044,7 @@ exports[`RecipientList should render without amount column 1`] = `
                 class="inline-block"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                   data-testid="recipient-list__remove-recipient"
                   type="button"
                 >

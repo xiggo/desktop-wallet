@@ -245,6 +245,7 @@ module.exports = {
 			},
 			transitionProperty: {
 				background: "background-color",
+				"colors-shadow": "background-color, border-color, color, fill, stroke, box-shadow",
 			},
 			ringWidth: {
 				6: "6px",

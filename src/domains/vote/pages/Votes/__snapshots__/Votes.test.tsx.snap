@@ -111,7 +111,7 @@ exports[`Votes should filter current delegates 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -150,7 +150,7 @@ exports[`Votes should filter current delegates 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -180,7 +180,7 @@ exports[`Votes should filter current delegates 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -574,7 +574,7 @@ exports[`Votes should filter current delegates 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -746,7 +746,7 @@ exports[`Votes should filter current delegates 1`] = `
                     </div>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                     data-testid="DelegateTable__continue-button"
                     disabled=""
                     type="button"
@@ -875,7 +875,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -914,7 +914,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -944,7 +944,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1286,7 +1286,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -1367,7 +1367,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -1448,7 +1448,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -1620,7 +1620,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                     </div>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                     data-testid="DelegateTable__continue-button"
                     disabled=""
                     type="button"
@@ -1753,7 +1753,7 @@ exports[`Votes should render 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1792,7 +1792,7 @@ exports[`Votes should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1822,7 +1822,7 @@ exports[`Votes should render 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -2164,7 +2164,7 @@ exports[`Votes should render 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -2245,7 +2245,7 @@ exports[`Votes should render 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -2326,7 +2326,7 @@ exports[`Votes should render 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -2498,7 +2498,7 @@ exports[`Votes should render 1`] = `
                     </div>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                     data-testid="DelegateTable__continue-button"
                     disabled=""
                     type="button"
@@ -2627,7 +2627,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -2666,7 +2666,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -2696,7 +2696,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -3038,7 +3038,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -3119,7 +3119,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -3200,7 +3200,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -3372,7 +3372,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                     </div>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                     data-testid="DelegateTable__continue-button"
                     disabled=""
                     type="button"
@@ -3501,7 +3501,7 @@ exports[`Votes should render with no wallets 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -3533,7 +3533,7 @@ exports[`Votes should render with no wallets 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--send"
                   disabled=""
                   type="button"
@@ -3564,7 +3564,7 @@ exports[`Votes should render with no wallets 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hiXGOT"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 dMZjng"
                   data-testid="navbar__buttons--receive"
                   disabled=""
                   type="button"
@@ -3707,7 +3707,7 @@ exports[`Votes should render with no wallets 1`] = `
                   class="flex -m-3 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     type="button"
                   >
                     <div
@@ -3732,7 +3732,7 @@ exports[`Votes should render with no wallets 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     type="button"
                   >
                     <div
@@ -3874,7 +3874,7 @@ exports[`Votes should select a delegate 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -3913,7 +3913,7 @@ exports[`Votes should select a delegate 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -3943,7 +3943,7 @@ exports[`Votes should select a delegate 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -4285,7 +4285,7 @@ exports[`Votes should select a delegate 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -4366,7 +4366,7 @@ exports[`Votes should select a delegate 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -4447,7 +4447,7 @@ exports[`Votes should select a delegate 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -4617,7 +4617,7 @@ exports[`Votes should select a delegate 1`] = `
                     </div>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                     data-testid="DelegateTable__continue-button"
                     type="button"
                   >
@@ -4747,7 +4747,7 @@ exports[`Votes should select an address without vote 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -4786,7 +4786,7 @@ exports[`Votes should select an address without vote 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -4816,7 +4816,7 @@ exports[`Votes should select an address without vote 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -5158,7 +5158,7 @@ exports[`Votes should select an address without vote 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -5239,7 +5239,7 @@ exports[`Votes should select an address without vote 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -5320,7 +5320,7 @@ exports[`Votes should select an address without vote 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -5492,7 +5492,7 @@ exports[`Votes should select an address without vote 1`] = `
                     </div>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                     data-testid="DelegateTable__continue-button"
                     disabled=""
                     type="button"
@@ -5621,7 +5621,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -5660,7 +5660,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -5690,7 +5690,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -6151,7 +6151,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -6190,7 +6190,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -6220,7 +6220,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -6681,7 +6681,7 @@ exports[`Votes should show network warning 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -6720,7 +6720,7 @@ exports[`Votes should show network warning 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -6750,7 +6750,7 @@ exports[`Votes should show network warning 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -7092,7 +7092,7 @@ exports[`Votes should show network warning 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 jdgkJv"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -7173,7 +7173,7 @@ exports[`Votes should show network warning 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -7254,7 +7254,7 @@ exports[`Votes should show network warning 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -7424,7 +7424,7 @@ exports[`Votes should show network warning 1`] = `
                     </div>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                     data-testid="DelegateTable__continue-button"
                     type="button"
                   >
@@ -7552,7 +7552,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -7591,7 +7591,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -7621,7 +7621,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -7997,7 +7997,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -8078,7 +8078,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -8159,7 +8159,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -8331,7 +8331,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                     </div>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                     data-testid="DelegateTable__continue-button"
                     disabled=""
                     type="button"
@@ -8460,7 +8460,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -8499,7 +8499,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -8529,7 +8529,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -9133,7 +9133,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                           data-testid="AddressRow__select-0"
                           type="button"
                         >
@@ -9245,7 +9245,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                           data-testid="AddressRow__select-1"
                           type="button"
                         >
@@ -9346,7 +9346,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
                           data-testid="AddressRow__select-2"
                           disabled=""
                           type="button"

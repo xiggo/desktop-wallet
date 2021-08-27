@@ -448,7 +448,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         class="relative"
       >
         <button
-          class="ClipboardButton__StyledButton-sc-cammp1-0 gwLnQs"
+          class="ClipboardButton__StyledButton-sc-cammp1-0 dqAYlb"
           data-testid="CreateWallet__copy"
           type="button"
         >
@@ -471,7 +471,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
         </button>
       </div>
       <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA flex items-center space-x-2"
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL flex items-center space-x-2"
         data-testid="CreateWallet__download"
         type="button"
       >

@@ -107,7 +107,7 @@ exports[`Export Settings should render export settings 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -146,7 +146,7 @@ exports[`Export Settings should render export settings 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -176,7 +176,7 @@ exports[`Export Settings should render export settings 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -534,7 +534,7 @@ exports[`Export Settings should render export settings 1`] = `
                     class="flex justify-end mt-8 space-x-3 w-full"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                       data-testid="Export-settings__submit-button"
                       type="submit"
                     >

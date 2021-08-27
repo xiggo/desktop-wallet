@@ -179,7 +179,7 @@ exports[`ContactForm should render 1`] = `
         class="mt-4"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
           data-testid="contact-form__add-address-btn"
           disabled=""
           type="button"
@@ -199,7 +199,7 @@ exports[`ContactForm should render 1`] = `
         class="space-x-3"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
           data-testid="contact-form__cancel-btn"
           type="button"
         >
@@ -210,7 +210,7 @@ exports[`ContactForm should render 1`] = `
           </div>
         </button>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
           data-testid="contact-form__save-btn"
           disabled=""
           type="submit"
@@ -425,7 +425,7 @@ exports[`ContactForm should render with errors 1`] = `
         class="mt-4"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO w-full"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
           data-testid="contact-form__add-address-btn"
           disabled=""
           type="button"
@@ -445,7 +445,7 @@ exports[`ContactForm should render with errors 1`] = `
         class="space-x-3"
       >
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
           data-testid="contact-form__cancel-btn"
           type="button"
         >
@@ -456,7 +456,7 @@ exports[`ContactForm should render with errors 1`] = `
           </div>
         </button>
         <button
-          class="OriginalButton__StyledButton-sc-o0fs2j-0 hjVbvO"
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
           data-testid="contact-form__save-btn"
           disabled=""
           type="submit"

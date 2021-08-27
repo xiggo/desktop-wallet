@@ -109,7 +109,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -148,7 +148,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -178,7 +178,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -328,7 +328,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                     class="bg-theme-background"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                       data-testid="Card"
                       tabindex="-1"
                       type="button"
@@ -857,7 +857,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -896,7 +896,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -926,7 +926,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1076,7 +1076,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                     class="bg-theme-background"
                   >
                     <button
-                      class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+                      class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
                       data-testid="Card"
                       tabindex="-1"
                       type="button"
@@ -1377,7 +1377,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                     </button>
                   </div>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     data-testid="Pagination__next"
                     type="button"
                   >
@@ -1397,7 +1397,7 @@ exports[`News should filter results based on category query and asset 2`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     data-testid="Pagination__last"
                     type="button"
                   >

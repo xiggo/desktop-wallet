@@ -18,7 +18,7 @@ exports[`MultiSignatureDetail should add final signature and broadcast transacti
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -216,7 +216,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -663,7 +663,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -674,7 +674,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -713,7 +713,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1160,7 +1160,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -1171,7 +1171,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -1210,7 +1210,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -1681,7 +1681,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -2152,7 +2152,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -2561,7 +2561,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -3161,7 +3161,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -3516,7 +3516,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -3527,7 +3527,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -3566,7 +3566,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -4037,7 +4037,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -4481,7 +4481,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -4925,7 +4925,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -5123,7 +5123,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -5570,7 +5570,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -5581,7 +5581,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                     data-testid="MultiSignatureDetail__broadcast"
                     type="button"
                   >
@@ -5620,7 +5620,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -6067,7 +6067,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                   class="flex justify-end mt-8 space-x-3"
                 >
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                     data-testid="Paginator__cancel"
                     type="button"
                   >
@@ -6078,7 +6078,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                     </div>
                   </button>
                   <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd"
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                     data-testid="Paginator__sign"
                     type="button"
                   >
@@ -6117,7 +6117,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >
@@ -6315,7 +6315,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
           class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
         >
           <button
-            class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl w-11 h-11"
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm w-11 h-11"
             data-testid="modal__close-btn"
             type="button"
           >

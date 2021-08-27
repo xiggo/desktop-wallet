@@ -9,7 +9,7 @@ exports[`NewsCard should render 1`] = `
       class="bg-theme-background"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+        class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
         data-testid="Card"
         tabindex="-1"
         type="button"
@@ -141,7 +141,7 @@ exports[`NewsCard should render with cover image 1`] = `
       class="bg-theme-background"
     >
       <button
-        class="Cardstyles__CardButton-sc-ajtauu-0 fKWJCE"
+        class="Cardstyles__CardButton-sc-ajtauu-0 DdwDL"
         data-testid="Card"
         tabindex="-1"
         type="button"

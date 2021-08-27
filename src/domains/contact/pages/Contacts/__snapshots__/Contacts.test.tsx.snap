@@ -107,7 +107,7 @@ exports[`Contacts should render with contacts 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -146,7 +146,7 @@ exports[`Contacts should render with contacts 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -176,7 +176,7 @@ exports[`Contacts should render with contacts 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -328,7 +328,7 @@ exports[`Contacts should render with contacts 1`] = `
                   />
                 </div>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd whitespace-nowrap"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC whitespace-nowrap"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -599,7 +599,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -619,7 +619,7 @@ exports[`Contacts should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
                                   type="button"
                                 >
                                   <div
@@ -771,7 +771,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -791,7 +791,7 @@ exports[`Contacts should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
                                   type="button"
                                 >
                                   <div
@@ -917,7 +917,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -937,7 +937,7 @@ exports[`Contacts should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
                                   type="button"
                                 >
                                   <div
@@ -1063,7 +1063,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex items-center space-x-2"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gxaPnA"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                             data-testid="ContactListItem__send-button"
                             type="button"
                           >
@@ -1083,7 +1083,7 @@ exports[`Contacts should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 qHvBP"
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cpPdwA"
                                   type="button"
                                 >
                                   <div
@@ -1225,7 +1225,7 @@ exports[`Contacts should render without contacts 1`] = `
                     class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd group"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                       data-testid="navbar__buttons--notifications"
                       type="button"
                     >
@@ -1264,7 +1264,7 @@ exports[`Contacts should render without contacts 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--send"
                   type="button"
                 >
@@ -1294,7 +1294,7 @@ exports[`Contacts should render without contacts 1`] = `
                 class="NavigationBar__NavigationButtonWrapper-sc-1nkmx4c-2 jTnlvd"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 nEVl"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm"
                   data-testid="navbar__buttons--receive"
                   type="button"
                 >
@@ -1409,7 +1409,7 @@ exports[`Contacts should render without contacts 1`] = `
                 class="flex justify-end items-top"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cWqJgd whitespace-nowrap"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC whitespace-nowrap"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
