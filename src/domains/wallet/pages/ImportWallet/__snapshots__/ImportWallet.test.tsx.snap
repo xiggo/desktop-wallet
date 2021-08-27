@@ -883,22 +883,26 @@ exports[`ImportWallet should render as ledger import 1`] = `
                               >
                                 DEVELOPMENT NETWORKS
                               </span>
-                              <label
-                                class="flex"
+                              <span
+                                data-testid="SelectNetwork__developmentNetworks"
                               >
-                                <input
-                                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
-                                  data-testid="SelectNetwork__developmentNetworks"
-                                  type="checkbox"
-                                />
-                                <div
-                                  class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                <label
+                                  class="flex"
                                 >
-                                  <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                  <input
+                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    data-testid="SelectNetwork__developmentNetworks-toggle"
+                                    type="checkbox"
                                   />
-                                </div>
-                              </label>
+                                  <div
+                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                  >
+                                    <span
+                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                    />
+                                  </div>
+                                </label>
+                              </span>
                             </div>
                             <ul
                               aria-labelledby="NetworkStep__network-label"
@@ -1149,22 +1153,26 @@ exports[`ImportWallet should render network step 1`] = `
               >
                 DEVELOPMENT NETWORKS
               </span>
-              <label
-                class="flex"
+              <span
+                data-testid="SelectNetwork__developmentNetworks"
               >
-                <input
-                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
-                  data-testid="SelectNetwork__developmentNetworks"
-                  type="checkbox"
-                />
-                <div
-                  class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                <label
+                  class="flex"
                 >
-                  <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                  <input
+                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                    data-testid="SelectNetwork__developmentNetworks-toggle"
+                    type="checkbox"
                   />
-                </div>
-              </label>
+                  <div
+                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                  >
+                    <span
+                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                    />
+                  </div>
+                </label>
+              </span>
             </div>
             <ul
               aria-labelledby="NetworkStep__network-label"
@@ -1367,22 +1375,26 @@ exports[`ImportWallet should render network step without test networks 1`] = `
               >
                 DEVELOPMENT NETWORKS
               </span>
-              <label
-                class="flex"
+              <span
+                data-testid="SelectNetwork__developmentNetworks"
               >
-                <input
-                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
-                  data-testid="SelectNetwork__developmentNetworks"
-                  type="checkbox"
-                />
-                <div
-                  class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                <label
+                  class="flex"
                 >
-                  <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                  <input
+                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                    data-testid="SelectNetwork__developmentNetworks-toggle"
+                    type="checkbox"
                   />
-                </div>
-              </label>
+                  <div
+                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                  >
+                    <span
+                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                    />
+                  </div>
+                </label>
+              </span>
             </div>
             <ul
               aria-labelledby="NetworkStep__network-label"

@@ -213,11 +213,11 @@ describe("SelectNetwork", () => {
 
 		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
 
-		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks"));
+		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
 
 		expect(screen.getAllByRole("listbox")[1]).not.toHaveClass("hidden");
 
-		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks"));
+		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
 
 		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
 	});

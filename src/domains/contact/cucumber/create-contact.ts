@@ -28,20 +28,14 @@ const preSteps = {
 
 cucumber("@createContact", {
 	...preSteps,
-	"And enters a valid contact name": async (t: TestController) => {
+	"And submits valid contact details": async (t: TestController) => {
 		await t.typeText(nameInput, contactName);
-	},
-	"And selects a network": async (t: TestController) => {
 		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
 		await t.pressKey("tab");
-	},
-	"And adds a valid address": async (t: TestController) => {
 		const addressInput = Selector('[data-testid="contact-form__address-input"]');
 		await t.typeText(addressInput, "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
 		await t.expect(Selector('[data-testid="contact-form__add-address-btn"]').hasAttribute("disabled")).notOk();
 		await t.click(Selector('[data-testid="contact-form__add-address-btn"]'));
-	},
-	"And saves the contact": async (t: TestController) => {
 		await t.click(Selector('[data-testid="contact-form__save-btn"]'));
 		await t
 			.expect(

@@ -1,0 +1,39 @@
+Feature: Import Wallet
+
+    @importWallet-mnemonic
+    Scenario: Sucessfully Import Wallet via Mnemonic
+        Given Alice is on the import wallet page
+        When she enters a valid mnemonic to import
+        And completes the import wallet steps for mnemonic
+        Then the wallet is imported to her profile
+
+    @importWallet-address
+    Scenario: Sucessfully Import Wallet via Address
+        Given Alice is on the import wallet page
+        When she changes the import type to address
+        And enters a valid address to import
+        And completes the import wallet steps for address
+        Then the wallet is imported to her profile
+
+    @importWallet-invalidAddress
+    Scenario: Fail to Import Wallet due to invalid Address
+        Given Alice is on the import wallet page
+        When she changes the import type to address
+        And enters an invalid address to import
+        Then an error is displayed on the address field
+        And the continue button is disabled
+
+    @importWallet-invalidMnemmonic
+    Scenario: Fail to Import Wallet due to invalid Mnemonic
+        Given Alice is on the import wallet page
+        When she enters an invalid mnemonic to import
+        Then an error is displayed on the mnemonic field
+        And the continue button is disabled
+
+    @importWallet-duplicateAddress
+    Scenario: Fail to Import Wallet due to duplicate Address
+        Given Alice is on the import wallet page
+        And has imported a wallet
+        When she attempts to import the same wallet again
+        Then an error is displayed on the address field
+        And the continue button is disabled

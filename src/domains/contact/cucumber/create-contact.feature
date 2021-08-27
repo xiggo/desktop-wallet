@@ -4,10 +4,7 @@ Feature: Create Contact
 	Scenario: Successfully create a contact
 		Given Alice is on the contacts page
 		When she opens the add contact modal
-		And enters a valid contact name
-		And selects a network
-		And adds a valid address
-		And saves the contact
+		And submits valid contact details
 		Then the contact is displayed in her contact list
 
 	@createContact-openAndCancelModal

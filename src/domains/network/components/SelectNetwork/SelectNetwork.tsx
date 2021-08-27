@@ -193,11 +193,13 @@ export const SelectNetwork = ({
 								{t("COMMON.DEVELOPMENT_NETWORKS").toUpperCase()}
 							</span>
 
-							<Toggle
-								checked={showDevelopmentNetworks}
-								onChange={() => setShowDevelopmentNetworks(!showDevelopmentNetworks)}
-								data-testid="SelectNetwork__developmentNetworks"
-							/>
+							<span data-testid="SelectNetwork__developmentNetworks">
+								<Toggle
+									data-testid="SelectNetwork__developmentNetworks-toggle"
+									checked={showDevelopmentNetworks}
+									onChange={() => setShowDevelopmentNetworks(!showDevelopmentNetworks)}
+								/>
+							</span>
 						</div>
 					)}
 
