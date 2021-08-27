@@ -11,7 +11,22 @@ interface Properties {
 	walletNameClass?: string;
 	size?: Size;
 	fontWeight?: "normal";
+	truncateOnTable?: boolean;
 }
+
+const AddressWrapper = ({ children, truncateOnTable }: { children: JSX.Element; truncateOnTable?: boolean }) =>
+	truncateOnTable ? (
+		<div className="relative flex-grow">
+			{children}
+			{/* The workaround used to make the truncating work on tables means
+			wrapping the address on a DIV with an absolute position that doesn't
+			keep the space for the element, so we need to add an empty element
+			as a spacer. */}
+			<span>&nbsp;</span>
+		</div>
+	) : (
+		<>{children}</>
+	);
 
 export const Address = ({
 	address,
@@ -21,6 +36,7 @@ export const Address = ({
 	walletName,
 	maxNameChars,
 	size,
+	truncateOnTable,
 }: Properties) => {
 	const getFontSize = (size?: Size) => {
 		switch (size) {
@@ -61,14 +77,18 @@ export const Address = ({
 				</span>
 			)}
 			{address && (
-				<TruncateMiddleDynamic
-					data-testid="Address__address"
-					value={address}
-					className={`${
-						addressClass ||
-						(walletName ? "text-theme-secondary-500 dark:text-theme-secondary-700" : "text-theme-text")
-					} ${getFontWeight(fontWeight)} ${getFontSize(size)}`}
-				/>
+				<AddressWrapper truncateOnTable={truncateOnTable}>
+					<TruncateMiddleDynamic
+						data-testid="Address__address"
+						value={address}
+						className={`${
+							addressClass ||
+							(walletName ? "text-theme-secondary-500 dark:text-theme-secondary-700" : "text-theme-text")
+						} ${getFontWeight(fontWeight)} ${getFontSize(size)}${
+							truncateOnTable ? " absolute w-full" : ""
+						}`}
+					/>
+				</AddressWrapper>
 			)}
 		</div>
 	);

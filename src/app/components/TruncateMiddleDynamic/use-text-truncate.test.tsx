@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { render, screen } from "utils/testing-library";
+import { act, render, screen } from "utils/testing-library";
 
 import { useTextTruncate } from "./use-text-truncate";
 
@@ -8,7 +8,7 @@ let referenceElement: any;
 const value = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
 
 const Component = ({ value }: any) => {
-	referenceElement = useRef(null);
+	referenceElement = useRef();
 
 	const truncated = useTextTruncate(referenceElement?.current, value);
 
@@ -75,12 +75,29 @@ describe("useTextTruncate", () => {
 	});
 
 	it("should truncate the value if it does not fit the given container", () => {
-		const { asFragment, rerender } = render(<Component value={value} />);
+		// Stores the callbacks used on the resize observer to manually trigger
+		// them
+		let resizeObserverCallback: ResizeObserverCallback;
+		let requestAnimationFrameCallback: FrameRequestCallback;
+		class ResizeObserverMock {
+			constructor(callback: ResizeObserverCallback) {
+				resizeObserverCallback = callback;
+			}
+			observe = jest.fn();
+			unobserve = jest.fn();
+			disconnect = jest.fn();
+		}
 
-		expect(screen.getByText(value)).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
+		window.ResizeObserver = ResizeObserverMock;
 
-		const widthSpy = jest.spyOn(referenceElement.current, "offsetWidth", "get").mockReturnValue(50);
+		window.requestAnimationFrame = (callback: FrameRequestCallback) => {
+			requestAnimationFrameCallback = callback;
+			return 1;
+		};
+
+		render(<Component value={value} />);
+
+		const widthSpy = jest.spyOn(referenceElement.current, "offsetWidth", "get").mockReturnValue(0);
 
 		const element = document.createElement("span");
 
@@ -96,10 +113,23 @@ describe("useTextTruncate", () => {
 
 		const documentSpy = jest.spyOn(document, "createElement").mockReturnValue(element);
 
-		rerender(<Component value={value} />);
+		expect(screen.getByText(value)).toBeInTheDocument();
 
-		expect(screen.getByText("Lorem ipsum dolor sit amet…sectetur adipisicing elit.")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
+		// Emulates a resize observer event
+		act(() => {
+			resizeObserverCallback(
+				[
+					{
+						target: referenceElement.current,
+					},
+				] as ResizeObserverEntry[],
+				window.ResizeObserver,
+			);
+
+			requestAnimationFrameCallback(1);
+		});
+
+		expect(screen.getByText("Lorem ipsum dolor sit ame…ectetur adipisicing elit.")).toBeInTheDocument();
 
 		widthSpy.mockRestore();
 		documentSpy.mockRestore();

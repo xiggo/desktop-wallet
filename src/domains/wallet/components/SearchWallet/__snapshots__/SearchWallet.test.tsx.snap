@@ -181,7 +181,9 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -233,12 +235,19 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                 Sample Wallet
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -276,7 +285,9 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -328,12 +339,19 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                 ARK Wallet 2
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -560,7 +578,9 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -612,12 +632,19 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                                 Sample Wallet
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -655,7 +682,9 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -707,12 +736,19 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                                 ARK Wallet 2
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -939,7 +975,9 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -991,12 +1029,19 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                 Sample Wallet
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -1034,7 +1079,9 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -1086,12 +1133,19 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                 ARK Wallet 2
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -1348,7 +1402,9 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -1400,12 +1456,19 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                 Sample Wallet
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -1455,7 +1518,9 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -1507,12 +1572,19 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                 ARK Wallet 2
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -1781,7 +1853,9 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -1833,12 +1907,19 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                                 Sample Wallet
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -1888,7 +1969,9 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -1940,12 +2023,19 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                                 ARK Wallet 2
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -2214,7 +2304,9 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -2266,12 +2358,19 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                 Sample Wallet
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -2321,7 +2420,9 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
                       data-testid="TableRow"
                     >
-                      <td>
+                      <td
+                        class="w-full"
+                      >
                         <div
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
@@ -2373,12 +2474,19 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                 ARK Wallet 2
                               </span>
                             </span>
-                            <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
+                            <div
+                              class="relative flex-grow"
                             >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
+                              <span
+                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <span>
+                                 
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>

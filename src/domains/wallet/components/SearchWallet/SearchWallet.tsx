@@ -58,12 +58,12 @@ const SearchWalletListItem = ({
 
 	return (
 		<TableRow>
-			<TableCell variant="start" innerClassName="space-x-4">
+			<TableCell variant="start" innerClassName="space-x-4" className="w-full">
 				<div className="flex-shrink-0 -space-x-2">
 					{showNetwork && <NetworkIcon size="lg" network={network} />}
 					<Avatar size="lg" address={address} />
 				</div>
-				<Address walletName={name} address={address} maxNameChars={16} />
+				<Address walletName={name} address={address} maxNameChars={16} truncateOnTable />
 			</TableCell>
 
 			<TableCell innerClassName="font-semibold justify-end">

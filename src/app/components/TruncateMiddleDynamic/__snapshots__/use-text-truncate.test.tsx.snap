@@ -23,15 +23,3 @@ exports[`useTextTruncate should return the value if the elements have no width 1
 `;
 
 exports[`useTextTruncate should return the value if the elements have no width 2`] = `undefined`;
-
-exports[`useTextTruncate should truncate the value if it does not fit the given container 1`] = `
-<DocumentFragment>
-  <div
-    class="inline-flex overflow-hidden"
-  >
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
-</DocumentFragment>
-`;
-
-exports[`useTextTruncate should truncate the value if it does not fit the given container 2`] = `undefined`;

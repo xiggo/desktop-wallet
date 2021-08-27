@@ -86,3 +86,10 @@ afterAll(() => {
 });
 
 window.scrollTo = jest.fn();
+class ResizeObserverMock {
+	observe = jest.fn();
+	unobserve = jest.fn();
+	disconnect = jest.fn();
+}
+
+window.ResizeObserver = ResizeObserverMock;

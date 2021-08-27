@@ -1,16 +1,37 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-export const useTextTruncate = (referenceElement: any, value: string, offset = 0) =>
-	useMemo(() => {
-		const hasOverflow = (element: HTMLElement, referenceElement: HTMLElement) => {
-			if (!element.offsetWidth && !referenceElement.offsetWidth) {
+export const useTextTruncate = (referenceElement: any, value: string, offset = 0) => {
+	const [referenceElementWidth, setReferenceElementWidth] = useState<number | undefined>(
+		referenceElement instanceof HTMLElement ? referenceElement.offsetWidth : undefined,
+	);
+
+	useEffect(() => {
+		const referenceResizeObserver = new ResizeObserver((entries) => {
+			// Prevents: ResizeObserver loop limit exceeded exception
+			window.requestAnimationFrame(() => {
+				setReferenceElementWidth((entries[0].target as HTMLElement).offsetWidth);
+			});
+		});
+
+		if (referenceElement instanceof HTMLElement) {
+			referenceResizeObserver.observe(referenceElement);
+		}
+
+		return () => {
+			referenceResizeObserver.disconnect();
+		};
+	}, [referenceElement]);
+
+	return useMemo(() => {
+		const hasOverflow = (element: HTMLElement) => {
+			if (!element.offsetWidth || referenceElementWidth === undefined) {
 				return false;
 			}
 
-			return element.offsetWidth > referenceElement.offsetWidth - offset;
+			return element.offsetWidth > referenceElementWidth - offset;
 		};
 
-		if (!referenceElement) {
+		if (!(referenceElement instanceof HTMLElement)) {
 			return value;
 		}
 
@@ -23,7 +44,7 @@ export const useTextTruncate = (referenceElement: any, value: string, offset = 0
 
 		let temporary = value;
 
-		if (!hasOverflow(element, referenceElement)) {
+		if (!hasOverflow(element)) {
 			element.remove();
 			return value;
 		}
@@ -39,9 +60,10 @@ export const useTextTruncate = (referenceElement: any, value: string, offset = 0
 			element.innerHTML = temporary;
 
 			mid--;
-		} while (mid && hasOverflow(element, referenceElement));
+		} while (mid && hasOverflow(element));
 
 		element.remove();
 
 		return temporary;
-	}, [value, offset, referenceElement]);
+	}, [value, offset, referenceElementWidth, referenceElement]);
+};
