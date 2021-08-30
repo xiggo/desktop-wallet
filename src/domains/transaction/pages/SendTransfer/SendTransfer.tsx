@@ -30,6 +30,15 @@ import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
 import { SummaryStep } from "./SummaryStep";
 
+enum Step {
+	NetworkStep,
+	FormStep,
+	ReviewStep,
+	AuthenticationStep,
+	SummaryStep,
+	ErrorStep,
+}
+
 export const SendTransfer = () => {
 	const history = useHistory();
 	const profile = useActiveProfile();
@@ -53,9 +62,9 @@ export const SendTransfer = () => {
 	const hasDeepLinkParameters = Object.keys(deepLinkParameters).length > 0;
 
 	const showNetworkStep = !hasDeepLinkParameters && !hasWalletId;
-	const firstTabIndex = showNetworkStep ? 0 : 1;
+	const firstTabIndex: Step = showNetworkStep ? Step.NetworkStep : Step.FormStep;
 
-	const [activeTab, setActiveTab] = useState(firstTabIndex);
+	const [activeTab, setActiveTab] = useState<Step>(firstTabIndex);
 	const [unconfirmedTransactions, setUnconfirmedTransactions] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
 	const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
@@ -312,10 +321,10 @@ export const SendTransfer = () => {
 			await persist();
 
 			setTransaction(transaction);
-			setActiveTab(4);
+			setActiveTab(Step.SummaryStep);
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
-			setActiveTab(5);
+			setActiveTab(Step.ErrorStep);
 		}
 	};
 
@@ -335,26 +344,27 @@ export const SendTransfer = () => {
 
 		const newIndex = activeTab + 1;
 
-		if (newIndex === 3 && requireFeeConfirmation && !suppressWarning) {
+		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
 			return setShowFeeWarning(true);
 		}
 
 		const senderWallet = activeProfile.wallets().findByAddress(getValues("senderAddress"));
 
 		// Skip authorization step
-		if (newIndex === 3 && senderWallet?.isMultiSignature()) {
+		if (newIndex === Step.AuthenticationStep && senderWallet?.isMultiSignature()) {
 			await handleSubmit(() => submitForm(true))();
 			return;
 		}
 
-		if (newIndex === 3 && senderWallet?.isLedger()) {
+		if (newIndex === Step.AuthenticationStep && senderWallet?.isLedger()) {
 			handleSubmit(() => submitForm(true))();
 		}
 
 		setActiveTab(newIndex);
 	};
 
-	const hideStepNavigation = activeTab === 5 || (activeTab === 3 && wallet?.isLedger());
+	const hideStepNavigation =
+		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && wallet?.isLedger());
 
 	return (
 		<Page profile={activeProfile}>
@@ -367,11 +377,11 @@ export const SendTransfer = () => {
 						/>
 
 						<div className="mt-8">
-							<TabPanel tabId={0}>
+							<TabPanel tabId={Step.NetworkStep}>
 								<NetworkStep profile={activeProfile} networks={networks} />
 							</TabPanel>
 
-							<TabPanel tabId={1}>
+							<TabPanel tabId={Step.FormStep}>
 								<FormStep
 									networks={networks}
 									profile={activeProfile}
@@ -379,11 +389,11 @@ export const SendTransfer = () => {
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={2}>
+							<TabPanel tabId={Step.ReviewStep}>
 								<ReviewStep wallet={wallet!} />
 							</TabPanel>
 
-							<TabPanel tabId={3}>
+							<TabPanel tabId={Step.AuthenticationStep}>
 								<AuthenticationStep
 									wallet={wallet!}
 									ledgerDetails={
@@ -397,7 +407,7 @@ export const SendTransfer = () => {
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={4}>
+							<TabPanel tabId={Step.SummaryStep}>
 								{!!transaction && (
 									<SummaryStep
 										transaction={transaction}
@@ -407,7 +417,7 @@ export const SendTransfer = () => {
 								)}
 							</TabPanel>
 
-							<TabPanel tabId={5}>
+							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${wallet!.id()}`)
@@ -426,7 +436,9 @@ export const SendTransfer = () => {
 									}
 									onContinueClick={async () => await handleNext()}
 									isLoading={isSubmitting}
-									isNextDisabled={activeTab === 0 && network ? false : !isDirty ? true : !isValid}
+									isNextDisabled={
+										activeTab === Step.NetworkStep && network ? false : !isDirty ? true : !isValid
+									}
 									size={4}
 									activeIndex={activeTab}
 								/>

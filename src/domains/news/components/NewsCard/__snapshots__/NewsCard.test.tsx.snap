@@ -258,7 +258,7 @@ exports[`NewsCard should render with cover image 1`] = `
             class="flex justify-center p-1 -mx-10 border-t-2 border-theme-primary-100 dark:border-theme-secondary-800"
           >
             <img
-              alt="ARK Banner"
+              alt="Payvo Banner"
               src="https://via.placeholder.com/150"
             />
           </div>

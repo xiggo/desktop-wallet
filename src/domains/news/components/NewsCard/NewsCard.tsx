@@ -10,6 +10,7 @@ import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Linkify from "react-linkify";
+import { assertNetwork } from "utils/assertions";
 
 type Properties = {
 	coverImage?: string;
@@ -27,6 +28,8 @@ export const NewsCard = ({ text, category, author, created_at: createdAt, coverI
 		[author, env],
 	);
 
+	assertNetwork(network);
+
 	return (
 		<div data-testid="NewsCard">
 			<Card className="bg-theme-background">
@@ -36,11 +39,8 @@ export const NewsCard = ({ text, category, author, created_at: createdAt, coverI
 							<NetworkIcon network={network} size="lg" noShadow />
 
 							<div>
-								<h4
-									className="text-lg font-semibold"
-									data-testid={`NewsCard__asset-${network?.coin()}`}
-								>
-									{network?.coin()}
+								<h4 className="text-lg font-semibold" data-testid={`NewsCard__asset-${network.coin()}`}>
+									{network.coin()}
 								</h4>
 								<div className="flex items-center space-x-4">
 									<p
@@ -87,7 +87,7 @@ export const NewsCard = ({ text, category, author, created_at: createdAt, coverI
 
 					{coverImage && (
 						<div className="flex justify-center p-1 -mx-10 border-t-2 border-theme-primary-100 dark:border-theme-secondary-800">
-							<img src={coverImage} alt="ARK Banner" />
+							<img src={coverImage} alt="Payvo Banner" />
 						</div>
 					)}
 				</div>

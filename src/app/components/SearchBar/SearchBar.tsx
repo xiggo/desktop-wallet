@@ -1,6 +1,7 @@
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { Input } from "app/components/Input";
+import cn from "classnames";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -17,7 +18,7 @@ export const SearchBar = ({ placeholder, className, children, onSearch }: Search
 	const { t } = useTranslation();
 
 	return (
-		<div data-testid="SearchBar" className={`bg-theme-secondary-100 px-10 pt-8 pb-8 ${className}`}>
+		<div data-testid="SearchBar" className={cn("bg-theme-secondary-100 px-10 pt-8 pb-8", className)}>
 			<div className="flex items-center py-6 px-10 rounded shadow-xl bg-theme-background">
 				{children ? children : <Icon name="MagnifyingGlass" className="mr-8 w-4 text-theme-secondary-300" />}
 

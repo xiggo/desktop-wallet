@@ -14,20 +14,26 @@ import { ThirdStep } from "./Step3";
 interface WalletUpdateProperties {
 	version?: string;
 	profile?: Contracts.IProfile;
-	isOpen: boolean;
+	isOpen?: boolean;
 	onClose?: any;
 	onCancel?: any;
 }
 
-export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: WalletUpdateProperties) => {
-	const [activeStep, setActiveStep] = useState(1);
+enum Step {
+	InitialStep = 1,
+	DownloadStep,
+	ReadyToInstallStep,
+}
+
+export const WalletUpdate = ({ isOpen = false, onClose, onCancel, version, profile }: WalletUpdateProperties) => {
+	const [activeStep, setActiveStep] = useState<Step>(Step.InitialStep);
 
 	const { t } = useTranslation();
 	const { downloadUpdate, downloadProgress, downloadStatus, cancel, quitInstall } = useUpdater();
 
 	const handleUpdateNow = () => {
 		downloadUpdate();
-		setActiveStep(2);
+		setActiveStep(Step.DownloadStep);
 	};
 
 	const handleInstall = () => {
@@ -35,7 +41,7 @@ export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: Wa
 	};
 
 	const handleClose = () => {
-		setActiveStep(1);
+		setActiveStep(Step.InitialStep);
 
 		cancel();
 		onClose?.();
@@ -47,7 +53,7 @@ export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: Wa
 
 	useEffect(() => {
 		if (downloadStatus === "completed") {
-			setActiveStep(3);
+			setActiveStep(Step.ReadyToInstallStep);
 		}
 	}, [downloadStatus, setActiveStep]);
 
@@ -55,7 +61,7 @@ export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: Wa
 		<Modal
 			title={t("WALLETS.MODAL_WALLET_UPDATE.TITLE", { version })}
 			image={
-				activeStep < 3 ? (
+				activeStep < Step.ReadyToInstallStep ? (
 					<Image name="WalletUpdateBanner" domain="wallet" className="my-8" />
 				) : (
 					<Image name="WalletUpdateReadyBanner" domain="wallet" className="my-8" />
@@ -65,18 +71,18 @@ export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: Wa
 			onClose={handleClose}
 		>
 			<Tabs activeId={activeStep}>
-				<TabPanel tabId={1}>
+				<TabPanel tabId={Step.InitialStep}>
 					<FirstStep />
 				</TabPanel>
-				<TabPanel tabId={2}>
+				<TabPanel tabId={Step.DownloadStep}>
 					<SecondStep {...downloadProgress} />
 				</TabPanel>
-				<TabPanel tabId={3}>
+				<TabPanel tabId={Step.ReadyToInstallStep}>
 					<ThirdStep />
 				</TabPanel>
 
 				<div className="flex flex-col justify-center space-x-0 sm:flex-row sm:space-x-3">
-					{activeStep === 1 && (
+					{activeStep === Step.InitialStep && (
 						<>
 							<Button
 								variant="secondary"
@@ -92,7 +98,7 @@ export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: Wa
 						</>
 					)}
 
-					{activeStep === 3 && (
+					{activeStep === Step.ReadyToInstallStep && (
 						<Button data-testid="WalletUpdate__install-button" onClick={handleInstall}>
 							{t("COMMON.INSTALL")}
 						</Button>
@@ -101,8 +107,4 @@ export const WalletUpdate = ({ isOpen, onClose, onCancel, version, profile }: Wa
 			</Tabs>
 		</Modal>
 	);
-};
-
-WalletUpdate.defaultProps = {
-	isOpen: false,
 };

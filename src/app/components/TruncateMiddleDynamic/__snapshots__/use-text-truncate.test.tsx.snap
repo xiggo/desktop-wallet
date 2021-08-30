@@ -10,8 +10,6 @@ exports[`useTextTruncate should return the value if it fits the given container 
 </DocumentFragment>
 `;
 
-exports[`useTextTruncate should return the value if it fits the given container 2`] = `undefined`;
-
 exports[`useTextTruncate should return the value if the elements have no width 1`] = `
 <DocumentFragment>
   <div
@@ -21,5 +19,3 @@ exports[`useTextTruncate should return the value if the elements have no width 1
   </div>
 </DocumentFragment>
 `;
-
-exports[`useTextTruncate should return the value if the elements have no width 2`] = `undefined`;

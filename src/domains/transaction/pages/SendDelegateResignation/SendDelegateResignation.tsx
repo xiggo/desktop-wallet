@@ -17,6 +17,14 @@ import { useHistory } from "react-router-dom";
 
 import { FormStep, ReviewStep, SummaryStep } from ".";
 
+enum Step {
+	FormStep = 1,
+	ReviewStep,
+	AuthenticationStep,
+	SummaryStep,
+	ErrorStep,
+}
+
 export const SendDelegateResignation = () => {
 	const history = useHistory();
 
@@ -28,7 +36,7 @@ export const SendDelegateResignation = () => {
 	const { fee, fees } = watch();
 	const { common } = useValidation();
 
-	const [activeTab, setActiveTab] = useState(1);
+	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState((null as unknown) as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -55,7 +63,7 @@ export const SendDelegateResignation = () => {
 	} = useFeeConfirmation(fee, fees);
 
 	const handleBack = () => {
-		if (activeTab === 1) {
+		if (activeTab === Step.FormStep) {
 			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 		}
 
@@ -65,7 +73,7 @@ export const SendDelegateResignation = () => {
 	const handleNext = (suppressWarning?: boolean) => {
 		const newIndex = activeTab + 1;
 
-		if (newIndex === 3 && requireFeeConfirmation && !suppressWarning) {
+		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
 			return setShowFeeWarning(true);
 		}
 
@@ -101,11 +109,11 @@ export const SendDelegateResignation = () => {
 			handleNext();
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
-			setActiveTab(5);
+			setActiveTab(Step.ErrorStep);
 		}
 	};
 
-	const hideStepNavigation = activeTab === 5;
+	const hideStepNavigation = activeTab === Step.ErrorStep;
 
 	return (
 		<Page profile={activeProfile}>
@@ -115,23 +123,23 @@ export const SendDelegateResignation = () => {
 						<StepIndicator size={4} activeIndex={activeTab} />
 
 						<div className="mt-8">
-							<TabPanel tabId={1}>
+							<TabPanel tabId={Step.FormStep}>
 								<FormStep senderWallet={activeWallet} profile={activeProfile} />
 							</TabPanel>
 
-							<TabPanel tabId={2}>
+							<TabPanel tabId={Step.ReviewStep}>
 								<ReviewStep senderWallet={activeWallet} />
 							</TabPanel>
 
-							<TabPanel tabId={3}>
+							<TabPanel tabId={Step.AuthenticationStep}>
 								<AuthenticationStep wallet={activeWallet} />
 							</TabPanel>
 
-							<TabPanel tabId={4}>
+							<TabPanel tabId={Step.SummaryStep}>
 								<SummaryStep senderWallet={activeWallet} transaction={transaction} />
 							</TabPanel>
 
-							<TabPanel tabId={5}>
+							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
@@ -170,8 +178,4 @@ export const SendDelegateResignation = () => {
 			</Section>
 		</Page>
 	);
-};
-
-SendDelegateResignation.defaultProps = {
-	formDefaultData: {},
 };

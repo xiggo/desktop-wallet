@@ -80,7 +80,6 @@ exports[`NewsOptions should render 1`] = `
             >
               <input
                 class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-                data-testid="SelectCategory__undefined"
                 type="checkbox"
                 value=""
               />
@@ -96,7 +95,6 @@ exports[`NewsOptions should render 1`] = `
             >
               <input
                 class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-                data-testid="SelectCategory__undefined"
                 type="checkbox"
                 value=""
               />
@@ -112,7 +110,6 @@ exports[`NewsOptions should render 1`] = `
             >
               <input
                 class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-                data-testid="SelectCategory__undefined"
                 type="checkbox"
                 value=""
               />
@@ -129,7 +126,6 @@ exports[`NewsOptions should render 1`] = `
               <input
                 checked=""
                 class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-                data-testid="SelectCategory__undefined"
                 type="checkbox"
                 value=""
               />

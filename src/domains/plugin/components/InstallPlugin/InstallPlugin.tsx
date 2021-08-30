@@ -21,6 +21,12 @@ interface InstallPluginProperties {
 	profile: Contracts.IProfile;
 }
 
+enum Step {
+	PermissionsStep = 1,
+	DownloadStep,
+	InstallStep,
+}
+
 export const InstallPlugin = ({
 	isOpen,
 	onClose,
@@ -31,17 +37,18 @@ export const InstallPlugin = ({
 }: InstallPluginProperties) => {
 	const { t } = useTranslation();
 	const { downloadPlugin, installPlugin } = usePluginManagerContext();
-	const [activeStep, setActiveStep] = useState(1);
+	const [activeStep, setActiveStep] = useState<Step>(Step.PermissionsStep);
 	const [downloadProgress, setDownloadProgress] = useState<any>({ totalBytes: 0 });
 	const [savedPath, setSavedPath] = useState<string>();
 	const profileId = profile.id();
 
 	const handleDownload = useCallback(async () => {
-		setActiveStep(2);
+		setActiveStep(Step.DownloadStep);
+
 		try {
 			const savedPath = await downloadPlugin(plugin, repositoryURL);
 			setSavedPath(savedPath);
-			setTimeout(() => setActiveStep(3), 500); // Animation delay
+			setTimeout(() => setActiveStep(Step.InstallStep), 500); // Animation delay
 		} catch {
 			toasts.error(t("PLUGINS.MODAL_INSTALL_PLUGIN.DOWNLOAD_FAILURE", { name: plugin.title }));
 			onClose?.();
@@ -61,9 +68,9 @@ export const InstallPlugin = ({
 	}, [installPlugin, plugin, onClose, savedPath, t, profileId]);
 
 	const onModalClose = () => {
-		if (activeStep === 3) {
+		if (activeStep === Step.InstallStep) {
 			ipcRenderer.invoke("plugin:cancel-install", { savedPath });
-			setActiveStep(1);
+			setActiveStep(Step.PermissionsStep);
 			setSavedPath(undefined);
 		}
 
@@ -82,26 +89,26 @@ export const InstallPlugin = ({
 
 	return (
 		<Modal
-			title={t(activeStep === 1 ? "COMMON.ATTENTION" : "COMMON.DOWNLOADING")}
+			title={t(activeStep === Step.PermissionsStep ? "COMMON.ATTENTION" : "COMMON.DOWNLOADING")}
 			size="lg"
 			isOpen={isOpen}
 			onClose={onModalClose}
 		>
 			<Tabs activeId={activeStep}>
-				<TabPanel tabId={1}>
+				<TabPanel tabId={Step.PermissionsStep}>
 					<FirstStep plugin={plugin} />
 				</TabPanel>
 
-				<TabPanel tabId={2}>
+				<TabPanel tabId={Step.DownloadStep}>
 					<SecondStep plugin={plugin} downloadProgress={downloadProgress} />
 				</TabPanel>
 
-				<TabPanel tabId={3}>
+				<TabPanel tabId={Step.InstallStep}>
 					<ThirdStep plugin={plugin} />
 				</TabPanel>
 
 				<div className="flex justify-end mt-8 space-x-3">
-					{activeStep === 1 && (
+					{activeStep === Step.PermissionsStep && (
 						<>
 							<Button variant="secondary" onClick={onCancel} data-testid="InstallPlugin__cancel-button">
 								{t("COMMON.CANCEL")}
@@ -112,13 +119,13 @@ export const InstallPlugin = ({
 						</>
 					)}
 
-					{activeStep === 3 && (
+					{activeStep === Step.InstallStep && (
 						<>
 							<Button
 								variant="secondary"
 								onClick={() => {
 									ipcRenderer.invoke("plugin:cancel-install", { savedPath });
-									setActiveStep(1);
+									setActiveStep(Step.PermissionsStep);
 									setSavedPath(undefined);
 
 									onCancel?.();
@@ -137,8 +144,4 @@ export const InstallPlugin = ({
 			</Tabs>
 		</Modal>
 	);
-};
-
-InstallPlugin.defaultProps = {
-	isOpen: false,
 };

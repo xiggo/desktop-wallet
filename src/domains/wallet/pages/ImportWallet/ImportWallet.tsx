@@ -27,8 +27,15 @@ import { LedgerTabs } from "./Ledger/LedgerTabs";
 import { SecondStep } from "./Step2";
 import { ThirdStep } from "./Step3";
 
+enum Step {
+	NetworkStep = 1,
+	MethodStep,
+	EncryptPasswordStep,
+	SummaryStep,
+}
+
 export const ImportWallet = () => {
-	const [activeTab, setActiveTab] = useState(1);
+	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
 	const [secondMnemonicInput, setSecondMnemonicInput] = useState<string>();
@@ -75,24 +82,24 @@ export const ImportWallet = () => {
 	}, [secondMnemonic, setSecondMnemonicInput]);
 
 	const handleNext = async () => {
-		if (activeTab === 2) {
+		if (activeTab === Step.MethodStep) {
 			setIsImporting(true);
 
 			try {
 				const { canBeEncrypted } = await importWallet();
 
-				setActiveTab(activeTab + (canBeEncrypted ? 1 : 2));
+				setActiveTab(canBeEncrypted ? Step.EncryptPasswordStep : Step.SummaryStep);
 			} catch (error) {
 				/* istanbul ignore next */
 				toasts.error(error.message);
 			} finally {
 				setIsImporting(false);
 			}
-		} else if (activeTab === 3) {
+		} else if (activeTab === Step.EncryptPasswordStep) {
 			setIsEncrypting(true);
 
 			await encryptMnemonics();
-			setActiveTab(activeTab + 1);
+			setActiveTab(Step.SummaryStep);
 
 			setIsEncrypting(false);
 		} else {
@@ -101,7 +108,7 @@ export const ImportWallet = () => {
 	};
 
 	const handleBack = () => {
-		if (activeTab === 1) {
+		if (activeTab === Step.NetworkStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -190,22 +197,22 @@ export const ImportWallet = () => {
 							<StepIndicator size={4} activeIndex={activeTab} />
 
 							<div className="mt-8">
-								<TabPanel tabId={1}>
+								<TabPanel tabId={Step.NetworkStep}>
 									<NetworkStep
 										profile={activeProfile}
 										title={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE")}
 										subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}
 									/>
 								</TabPanel>
-								<TabPanel tabId={2}>
+								<TabPanel tabId={Step.MethodStep}>
 									<SecondStep profile={activeProfile} />
 								</TabPanel>
 
-								<TabPanel tabId={3}>
+								<TabPanel tabId={Step.EncryptPasswordStep}>
 									<EncryptPasswordStep />
 								</TabPanel>
 
-								<TabPanel tabId={4}>
+								<TabPanel tabId={Step.SummaryStep}>
 									<ThirdStep
 										importedWallet={importedWallet}
 										onClickEditAlias={() => setIsEditAliasModalOpen(true)}
@@ -214,9 +221,9 @@ export const ImportWallet = () => {
 
 								<div className="flex justify-between mt-8">
 									<div>
-										{activeTab === 3 && (
+										{activeTab === Step.EncryptPasswordStep && (
 											<Button
-												onClick={() => setActiveTab(4)}
+												onClick={() => setActiveTab(Step.SummaryStep)}
 												disabled={isEncrypting}
 												data-testid="ImportWallet__skip-button"
 											>
@@ -226,7 +233,7 @@ export const ImportWallet = () => {
 									</div>
 
 									<div className="flex justify-end space-x-3">
-										{activeTab < 3 && (
+										{activeTab < Step.EncryptPasswordStep && (
 											<Button
 												disabled={isImporting}
 												variant="secondary"
@@ -237,7 +244,7 @@ export const ImportWallet = () => {
 											</Button>
 										)}
 
-										{activeTab < 3 && (
+										{activeTab < Step.EncryptPasswordStep && (
 											<Button
 												disabled={!isDirty ? true : !isValid || isImporting}
 												isLoading={isImporting}
@@ -248,7 +255,7 @@ export const ImportWallet = () => {
 											</Button>
 										)}
 
-										{activeTab === 3 && (
+										{activeTab === Step.EncryptPasswordStep && (
 											<Button
 												disabled={
 													isEncrypting ||
@@ -264,7 +271,7 @@ export const ImportWallet = () => {
 											</Button>
 										)}
 
-										{activeTab === 4 && (
+										{activeTab === Step.SummaryStep && (
 											<Button
 												disabled={isSubmitting}
 												type="submit"

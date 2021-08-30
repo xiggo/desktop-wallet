@@ -10004,8 +10004,6 @@ exports[`SendTransfer should send a single transfer 1`] = `
 </div>
 `;
 
-exports[`SendTransfer should send a single transfer 2`] = `<div />`;
-
 exports[`SendTransfer should send a single transfer and handle undefined expiration 1`] = `
 <div>
   <div
@@ -10670,8 +10668,6 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
   </div>
 </div>
 `;
-
-exports[`SendTransfer should send a single transfer and handle undefined expiration 2`] = `<div />`;
 
 exports[`SendTransfer should send a single transfer and show unconfirmed transactions modal 1`] = `
 <div>
@@ -11649,8 +11645,6 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
 </div>
 `;
 
-exports[`SendTransfer should send a single transfer and show unconfirmed transactions modal 2`] = `<div />`;
-
 exports[`SendTransfer should send a single transfer using wallet with encryption password 1`] = `
 <div>
   <div
@@ -12315,8 +12309,6 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
   </div>
 </div>
 `;
-
-exports[`SendTransfer should send a single transfer using wallet with encryption password 2`] = `<div />`;
 
 exports[`SendTransfer should send a single transfer with a high fee by confirming the fee warning 1`] = `
 <div>
@@ -12983,8 +12975,6 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
 </div>
 `;
 
-exports[`SendTransfer should send a single transfer with a high fee by confirming the fee warning 2`] = `<div />`;
-
 exports[`SendTransfer should send a single transfer with a low fee by confirming the fee warning 1`] = `
 <div>
   <div
@@ -13649,8 +13639,6 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
   </div>
 </div>
 `;
-
-exports[`SendTransfer should send a single transfer with a low fee by confirming the fee warning 2`] = `<div />`;
 
 exports[`SendTransfer should show error step and go back 1`] = `
 <div>

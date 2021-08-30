@@ -2,6 +2,7 @@ import { chunk } from "@arkecosystem/utils";
 import { DropdownOption } from "app/components/Dropdown";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Pagination } from "app/components/Pagination";
+import cn from "classnames";
 import { PluginCard } from "domains/plugin/components/PluginCard";
 import React, { useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
@@ -127,7 +128,7 @@ export const PluginGrid = ({
 	if (isLoading) {
 		return (
 			<div data-testid="PluginGrid">
-				<div className={`grid grid-cols-3 gap-4.5 ${className}`}>
+				<div className={cn("grid grid-cols-3 gap-4.5", className)}>
 					{skeletons.map((_, index) => (
 						<PluginCardSkeleton key={index} />
 					))}
@@ -148,7 +149,7 @@ export const PluginGrid = ({
 
 	return (
 		<div data-testid="PluginGrid">
-			<div className={`grid grid-cols-3 gap-4.5 ${className}`}>
+			<div className={cn("grid grid-cols-3 gap-4.5", className)}>
 				{pagePlugins?.map((plugin: any, index: number) => (
 					<PluginCard
 						key={plugin?.id || `blank_${index}`}

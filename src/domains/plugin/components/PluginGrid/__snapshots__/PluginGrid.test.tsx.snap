@@ -6,7 +6,7 @@ exports[`PluginGrid should not render pagination 1`] = `
     data-testid="PluginGrid"
   >
     <div
-      class="grid grid-cols-3 gap-4.5 undefined"
+      class="grid grid-cols-3 gap-4.5"
     >
       <div
         data-testid="PluginCard--ark-explorer"
@@ -307,7 +307,7 @@ exports[`PluginGrid should render custom number of skeletons 1`] = `
     data-testid="PluginGrid"
   >
     <div
-      class="grid grid-cols-3 gap-4.5 undefined"
+      class="grid grid-cols-3 gap-4.5"
     >
       <div
         data-testid="PluginCardSkeleton"
@@ -635,7 +635,7 @@ exports[`PluginGrid should render pagination 1`] = `
     data-testid="PluginGrid"
   >
     <div
-      class="grid grid-cols-3 gap-4.5 undefined"
+      class="grid grid-cols-3 gap-4.5"
     >
       <div
         data-testid="PluginCard--ark-explorer"
@@ -1073,7 +1073,7 @@ exports[`PluginGrid should render skeletons 1`] = `
     data-testid="PluginGrid"
   >
     <div
-      class="grid grid-cols-3 gap-4.5 undefined"
+      class="grid grid-cols-3 gap-4.5"
     >
       <div
         data-testid="PluginCardSkeleton"
@@ -1401,7 +1401,7 @@ exports[`PluginGrid should render without pagination 1`] = `
     data-testid="PluginGrid"
   >
     <div
-      class="grid grid-cols-3 gap-4.5 undefined"
+      class="grid grid-cols-3 gap-4.5"
     >
       <div
         data-testid="PluginCard--ark-explorer"
@@ -1712,7 +1712,7 @@ exports[`PluginGrid should split by page 1`] = `
     data-testid="PluginGrid"
   >
     <div
-      class="grid grid-cols-3 gap-4.5 undefined"
+      class="grid grid-cols-3 gap-4.5"
     >
       <div
         data-testid="PluginCard--ark-avatars"
@@ -1892,7 +1892,7 @@ exports[`PluginGrid should trigger update by addon button 1`] = `
     data-testid="PluginGrid"
   >
     <div
-      class="grid grid-cols-3 gap-4.5 undefined"
+      class="grid grid-cols-3 gap-4.5"
     >
       <div
         data-testid="PluginCard--ark-explorer"

@@ -19,6 +19,13 @@ import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { LedgerImportStep } from "./LedgerImportStep";
 import { LedgerScanStep } from "./LedgerScanStep";
 
+enum Step {
+	NetworkStep = 1,
+	LedgerConnectionStep,
+	LedgerScanStep,
+	LedgerImportStep,
+}
+
 const Paginator = ({
 	activeIndex,
 	isMultiple,
@@ -31,7 +38,7 @@ const Paginator = ({
 	showRetry,
 	size,
 }: {
-	activeIndex: number;
+	activeIndex: Step;
 	isMultiple: boolean;
 	isNextDisabled?: boolean;
 	isNextLoading?: boolean;
@@ -84,11 +91,11 @@ const Paginator = ({
 };
 
 interface Properties {
-	activeIndex?: number;
+	activeIndex?: Step;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 }
 
-export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Properties) => {
+export const LedgerTabs = ({ activeIndex = Step.NetworkStep, onClickEditWalletName }: Properties) => {
 	const activeProfile = useActiveProfile();
 
 	const history = useHistory();
@@ -120,7 +127,7 @@ export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Propertie
 	);
 
 	const handleNext = useCallback(async () => {
-		if (activeTab === 3) {
+		if (activeTab === Step.LedgerScanStep) {
 			await handleSubmit((data: any) => importWallets(data))();
 		}
 
@@ -128,16 +135,20 @@ export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Propertie
 	}, [activeTab, handleSubmit, importWallets]);
 
 	const handleBack = () => {
-		if (activeTab === 1) {
+		if (activeTab === Step.NetworkStep) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
-		setActiveTab(activeTab - (activeTab === 3 ? 2 : 1));
+		if (activeTab === Step.LedgerScanStep) {
+			return setActiveTab(Step.NetworkStep);
+		}
+
+		setActiveTab(activeTab - 1);
 	};
 
-	const handleRetry = useCallback((function_?: () => void) => {
-		retryFunctionReference.current = function_;
-		setShowRetry(!!function_);
+	const handleRetry = useCallback((callback?: () => void) => {
+		retryFunctionReference.current = callback;
+		setShowRetry(!!callback);
 	}, []);
 
 	const handleFinish = () => {
@@ -157,7 +168,7 @@ export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Propertie
 			<StepIndicator size={4} activeIndex={activeTab} />
 
 			<div data-testid="LedgerTabs" className="mt-8">
-				<TabPanel tabId={1}>
+				<TabPanel tabId={Step.NetworkStep}>
 					<NetworkStep
 						filter={(network) =>
 							network.allows(Enums.FeatureFlag.TransactionTransferLedgerS) ||
@@ -168,13 +179,13 @@ export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Propertie
 						subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}
 					/>
 				</TabPanel>
-				<TabPanel tabId={2}>
-					<LedgerConnectionStep onConnect={() => setActiveTab(3)} />
+				<TabPanel tabId={Step.LedgerConnectionStep}>
+					<LedgerConnectionStep onConnect={() => setActiveTab(Step.LedgerScanStep)} />
 				</TabPanel>
-				<TabPanel tabId={3}>
+				<TabPanel tabId={Step.LedgerScanStep}>
 					<LedgerScanStep profile={activeProfile} setRetryFn={handleRetry} />
 				</TabPanel>
-				<TabPanel tabId={4}>
+				<TabPanel tabId={Step.LedgerImportStep}>
 					<LedgerImportStep
 						wallets={importedWallets}
 						profile={activeProfile}

@@ -7,7 +7,7 @@ interface CacheItem {
 
 export class Cache {
 	private store: Record<string, CacheItem> = {};
-	private ttl: number;
+	private readonly ttl: number;
 
 	public constructor(ttl: number) {
 		this.ttl = ttl;

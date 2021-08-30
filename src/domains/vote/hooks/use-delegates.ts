@@ -63,7 +63,7 @@ export const useDelegates = ({
 	const fetchVotes = useCallback(
 		(address) => {
 			const wallet = profile.wallets().findByAddress(address);
-			let votes: Contracts.VoteRegistryItem[] = [];
+			let votes: Contracts.VoteRegistryItem[];
 
 			try {
 				votes = wallet!.voting().current();

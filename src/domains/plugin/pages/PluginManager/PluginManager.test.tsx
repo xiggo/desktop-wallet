@@ -124,10 +124,11 @@ describe("PluginManager", () => {
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		expect(within(screen.getByTestId("PluginManager__container--all")).getByTestId("PluginList")).toBeTruthy(),
-			act(() => {
-				fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
-			});
+		expect(within(screen.getByTestId("PluginManager__container--all")).getByTestId("PluginList")).toBeTruthy();
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
+		});
 
 		expect(within(screen.getByTestId("PluginManager__container--all")).getByTestId("PluginGrid")).toBeTruthy();
 

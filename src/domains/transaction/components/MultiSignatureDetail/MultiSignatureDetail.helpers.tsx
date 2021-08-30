@@ -2,8 +2,15 @@ import { Button } from "app/components/Button";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+export enum MultiSignatureDetailStep {
+	SummaryStep = 1,
+	AuthenticationStep = 2,
+	SentStep = 3,
+	ErrorStep = 10,
+}
+
 interface PaginatorProperties {
-	activeStep: number;
+	activeStep: MultiSignatureDetailStep;
 	canBeSigned: boolean;
 	canBeBroadcasted: boolean;
 	onCancel?: () => void;
@@ -32,10 +39,12 @@ export const Paginator = ({
 	isCreator,
 }: PaginatorProperties) => {
 	const { t } = useTranslation();
-	const canAddFinalSignatureAndSend = canBeBroadcasted && canBeSigned && activeStep === 1;
-	const canSign = canBeSigned && !canBeBroadcasted && activeStep === 1;
-	const canAuthenticate = canBeSigned && activeStep === 2;
-	const canBroadCastOnly = canBeBroadcasted && !canBeSigned && isCreator && activeStep === 1;
+	const canAddFinalSignatureAndSend =
+		canBeBroadcasted && canBeSigned && activeStep === MultiSignatureDetailStep.SummaryStep;
+	const canSign = canBeSigned && !canBeBroadcasted && activeStep === MultiSignatureDetailStep.SummaryStep;
+	const canAuthenticate = canBeSigned && activeStep === MultiSignatureDetailStep.AuthenticationStep;
+	const canBroadCastOnly =
+		canBeBroadcasted && !canBeSigned && isCreator && activeStep === MultiSignatureDetailStep.SummaryStep;
 
 	if (canAuthenticate) {
 		return (

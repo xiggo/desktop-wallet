@@ -36,7 +36,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	useEffect(() => {
 		const loadVotes = () => {
-			let votes: Contracts.VoteRegistryItem[] = [];
+			let votes: Contracts.VoteRegistryItem[];
 
 			try {
 				votes = wallet.voting().current();

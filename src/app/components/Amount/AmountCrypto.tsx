@@ -13,9 +13,7 @@ const AmountCrypto: React.FC<AmountProperties> = ({
 	ticker,
 	value,
 }: AmountProperties) => {
-	const amount = formatCrypto({ locale, ticker, value });
-
-	let formattedAmount = amount;
+	let formattedAmount = formatCrypto({ locale, ticker, value });
 
 	if (!showTicker) {
 		formattedAmount = formattedAmount.split(" ").slice(0, -1).join(" ");

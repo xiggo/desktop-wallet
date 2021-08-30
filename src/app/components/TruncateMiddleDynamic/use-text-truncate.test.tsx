@@ -37,12 +37,11 @@ describe("useTextTruncate", () => {
 		// offsetWidth is read twice for each overflow check
 		const elementSpy = jest.spyOn(element, "offsetWidth", "get").mockReturnValueOnce(0).mockReturnValueOnce(0);
 
-		const documentSpy = jest.spyOn(document, "createElement").mockReturnValue(element);
+		const documentSpy = jest.spyOn(document, "createElement").mockReturnValue(element as WebviewTag);
 
 		rerender(<Component value={value} />);
 
 		expect(screen.getByText(value)).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 
 		widthSpy.mockRestore();
 		documentSpy.mockRestore();
@@ -67,7 +66,6 @@ describe("useTextTruncate", () => {
 		rerender(<Component value={value} />);
 
 		expect(screen.getByText(value)).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
 
 		widthSpy.mockRestore();
 		documentSpy.mockRestore();
@@ -123,7 +121,7 @@ describe("useTextTruncate", () => {
 						target: referenceElement.current,
 					},
 				] as ResizeObserverEntry[],
-				window.ResizeObserver,
+				window.ResizeObserver as any,
 			);
 
 			requestAnimationFrameCallback(1);

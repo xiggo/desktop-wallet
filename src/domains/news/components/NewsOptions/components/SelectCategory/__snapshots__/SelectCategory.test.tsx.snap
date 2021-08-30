@@ -4,10 +4,12 @@ exports[`SelectCategory should render 1`] = `
 <DocumentFragment>
   <label
     class="SelectCategory___StyledLabel-sc-1dgc7bb-2 ghVPbK"
+    for="category"
   >
     <input
       class="SelectCategory__Input-sc-1dgc7bb-0 hJcIAQ"
-      data-testid="SelectCategory__undefined"
+      data-testid="SelectCategory__category"
+      name="category"
       type="checkbox"
       value=""
     />

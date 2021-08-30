@@ -17,7 +17,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { AuthenticationStep } from "../AuthenticationStep";
-import { Paginator } from "./MultiSignatureDetail.helpers";
+import { MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
 import { SentStep } from "./SentStep";
 import { SummaryStep } from "./SummaryStep";
 
@@ -52,7 +52,7 @@ export const MultiSignatureDetail = ({
 	const { handleSubmit, formState } = form;
 	const { isValid, isSubmitting } = formState;
 
-	const [activeStep, setActiveStep] = useState(1);
+	const [activeStep, setActiveStep] = useState<MultiSignatureDetailStep>(MultiSignatureDetailStep.SummaryStep);
 
 	const { sign } = useWalletSignatory(wallet);
 	const { addSignature, broadcast } = useMultiSignatureRegistration();
@@ -67,10 +67,10 @@ export const MultiSignatureDetail = ({
 			setActiveTransaction(broadcastedTransaction);
 
 			await persist();
-			setActiveStep(3);
+			setActiveStep(MultiSignatureDetailStep.SentStep);
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
-			setActiveStep(10);
+			setActiveStep(MultiSignatureDetailStep.ErrorStep);
 		}
 	}, [wallet, transaction, persist, broadcast]);
 
@@ -102,7 +102,7 @@ export const MultiSignatureDetail = ({
 				const sentTransaction = wallet.transaction().transaction(transaction.id());
 				setActiveTransaction(sentTransaction);
 
-				setActiveStep(3);
+				setActiveStep(MultiSignatureDetailStep.SentStep);
 				await persist();
 			} catch {
 				toasts.error(t("TRANSACTION.MULTISIGNATURE.ERROR.FAILED_TO_SIGN"));
@@ -129,7 +129,7 @@ export const MultiSignatureDetail = ({
 			return handleSubmit(() => broadcastMultiSignature())();
 		}
 
-		setActiveStep(2);
+		setActiveStep(MultiSignatureDetailStep.AuthenticationStep);
 
 		if (wallet.isLedger() && isLedgerModelSupported) {
 			handleSubmit((data: any) => sendSignature(data))();
@@ -138,9 +138,7 @@ export const MultiSignatureDetail = ({
 
 	// Reset ledger authentication steps after reconnecting supported ledger
 	useEffect(() => {
-		const isAuthenticationStep = activeStep === 2;
-
-		if (isAuthenticationStep && wallet.isLedger() && isLedgerModelSupported) {
+		if (activeStep === MultiSignatureDetailStep.AuthenticationStep && wallet.isLedger() && isLedgerModelSupported) {
 			handleSubmit((data: any) => sendSignature(data))();
 		}
 	}, [ledgerDevice]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -149,11 +147,11 @@ export const MultiSignatureDetail = ({
 		<Modal title={""} isOpen={isOpen} onClose={onClose}>
 			<Form context={form} onSubmit={broadcastMultiSignature}>
 				<Tabs activeId={activeStep}>
-					<TabPanel tabId={1}>
+					<TabPanel tabId={MultiSignatureDetailStep.SummaryStep}>
 						<SummaryStep wallet={wallet} transaction={activeTransaction} />
 					</TabPanel>
 
-					<TabPanel tabId={2}>
+					<TabPanel tabId={MultiSignatureDetailStep.AuthenticationStep}>
 						<AuthenticationStep
 							wallet={wallet}
 							ledgerIsAwaitingDevice={!hasDeviceAvailable}
@@ -163,11 +161,11 @@ export const MultiSignatureDetail = ({
 						/>
 					</TabPanel>
 
-					<TabPanel tabId={3}>
+					<TabPanel tabId={MultiSignatureDetailStep.SentStep}>
 						<SentStep transaction={activeTransaction} wallet={wallet} />
 					</TabPanel>
 
-					<TabPanel tabId={10}>
+					<TabPanel tabId={MultiSignatureDetailStep.ErrorStep}>
 						<ErrorStep
 							onBack={onClose}
 							isRepeatDisabled={isSubmitting}
@@ -184,9 +182,14 @@ export const MultiSignatureDetail = ({
 						onCancel={onClose}
 						onSign={handleSend}
 						onSend={handleSend}
-						onBack={() => setActiveStep(1)}
+						onBack={() => setActiveStep(MultiSignatureDetailStep.SummaryStep)}
 						onContinue={handleSubmit((data: any) => sendSignature(data))}
-						isLoading={isSubmitting || (wallet.isLedger() && activeStep === 2 && !isLedgerModelSupported)}
+						isLoading={
+							isSubmitting ||
+							(wallet.isLedger() &&
+								activeStep === MultiSignatureDetailStep.AuthenticationStep &&
+								!isLedgerModelSupported)
+						}
 						isEnabled={isValid}
 						isSubmitting={isSubmitting}
 					/>
@@ -195,9 +198,3 @@ export const MultiSignatureDetail = ({
 		</Modal>
 	);
 };
-
-MultiSignatureDetail.defaultProps = {
-	isOpen: false,
-};
-
-MultiSignatureDetail.displayName = "MultiSignatureDetail";

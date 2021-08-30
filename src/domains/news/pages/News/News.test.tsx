@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { translations as commonTranslations } from "app/i18n/common/i18n";
+import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -14,9 +15,22 @@ import { News } from "./News";
 const history = createMemoryHistory();
 const newsURL = `/profiles/${getDefaultProfileId()}/news`;
 
-jest.setTimeout(10_000);
+const translations = buildTranslations();
+
+jest.setTimeout(30_000);
 
 describe("News", () => {
+	const renderPage = () =>
+		renderWithRouter(
+			<Route path="/profiles/:profileId/news">
+				<News />
+			</Route>,
+			{
+				history,
+				routes: [newsURL],
+			},
+		);
+
 	beforeAll(() => {
 		nock.disableNetConnect();
 
@@ -64,78 +78,50 @@ describe("News", () => {
 	});
 
 	it("should render", async () => {
-		renderWithRouter(
-			<Route path="/profiles/:profileId/news">
-				<News />
-			</Route>,
-			{
-				history,
-				routes: [newsURL],
-			},
-		);
+		const { asFragment } = renderPage();
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
+
+		expect(screen.getByTestId("NewsCard__content")).toHaveTextContent(page1Fixture.data[0].text);
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show error toast if news cannot be fetched", async () => {
 		const toastSpy = jest.spyOn(toasts, "error");
 
-		renderWithRouter(
-			<Route path="/profiles/:profileId/news">
-				<News />
-			</Route>,
-			{
-				history,
-				routes: [newsURL],
-			},
-		);
+		const { asFragment } = renderPage();
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		fireEvent.click(screen.getByTestId("Pagination__next"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(0));
 		await waitFor(() => expect(screen.queryAllByTestId("EmptyResults")).toHaveLength(1));
 
-		expect(toastSpy).toHaveBeenCalled();
+		expect(toastSpy).toHaveBeenCalledWith(translations.NEWS.PAGE_NEWS.ERRORS.NETWORK_ERROR);
+		expect(asFragment()).toMatchSnapshot();
 
 		toastSpy.mockRestore();
 	});
 
 	it("should navigate on next and previous pages", async () => {
-		renderWithRouter(
-			<Route path="/profiles/:profileId/news">
-				<News />
-			</Route>,
-			{
-				history,
-				routes: [newsURL],
-			},
-		);
+		renderPage();
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		fireEvent.click(screen.getByTestId("Pagination__next"));
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		fireEvent.click(screen.getByTestId("Pagination__previous"));
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 	});
 
 	it("should show no results screen", async () => {
-		renderWithRouter(
-			<Route path="/profiles/:profileId/news">
-				<News />
-			</Route>,
-			{
-				history,
-				routes: [newsURL],
-			},
-		);
+		renderPage();
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		fireEvent.change(screen.getByTestId("NewsOptions__search"), {
 			target: {
@@ -150,17 +136,9 @@ describe("News", () => {
 	});
 
 	it("should filter results based on category query and asset", async () => {
-		const { asFragment } = renderWithRouter(
-			<Route path="/profiles/:profileId/news">
-				<News />
-			</Route>,
-			{
-				history,
-				routes: [newsURL],
-			},
-		);
+		const { asFragment } = renderPage();
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		fireEvent.change(screen.getByTestId("NewsOptions__search"), {
 			target: {
@@ -174,9 +152,7 @@ describe("News", () => {
 			fireEvent.click(screen.getByTestId(`NewsOptions__category-${category}`));
 		}
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
-
-		expect(asFragment()).toMatchSnapshot();
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		fireEvent.change(screen.getByTestId("NewsOptions__search"), {
 			target: {
@@ -188,23 +164,15 @@ describe("News", () => {
 
 		fireEvent.click(screen.getByText(commonTranslations.SELECT_ALL));
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show not found with empty coins", async () => {
-		renderWithRouter(
-			<Route path="/profiles/:profileId/news">
-				<News />
-			</Route>,
-			{
-				history,
-				routes: [newsURL],
-			},
-		);
+		renderPage();
 
-		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1), { timeout: 10_000 });
+		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(1));
 
 		fireEvent.click(screen.getByTestId("NetworkOption__ark.mainnet"));
 

@@ -3488,7 +3488,7 @@ exports[`PluginManager should render 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div>
                   <button
@@ -3670,7 +3670,7 @@ exports[`PluginManager should render 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div
                   data-testid="PluginCard--@dated/delegate-calculator-wallet-plugin"
@@ -3947,7 +3947,7 @@ exports[`PluginManager should render 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div>
                   <button
@@ -4129,7 +4129,7 @@ exports[`PluginManager should render 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div>
                   <button
@@ -5514,7 +5514,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div
                   data-testid="PluginCard--test-plugin-0"
@@ -6555,7 +6555,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div
                   data-testid="PluginCard--@dated/delegate-calculator-wallet-plugin"
@@ -7333,7 +7333,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div
                   data-testid="PluginCard--@dated/delegate-calculator-wallet-plugin"
@@ -8115,7 +8115,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div>
                   <button
@@ -8297,7 +8297,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div
                   data-testid="PluginCard--@dated/delegate-calculator-wallet-plugin"
@@ -8574,7 +8574,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div>
                   <button
@@ -8756,7 +8756,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
               data-testid="PluginGrid"
             >
               <div
-                class="grid grid-cols-3 gap-4.5 undefined"
+                class="grid grid-cols-3 gap-4.5"
               >
                 <div>
                   <button

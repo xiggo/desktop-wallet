@@ -23,7 +23,7 @@ interface NewsFilters {
 }
 
 interface Properties {
-	itemsPerPage: number;
+	itemsPerPage?: number;
 }
 
 export const News = ({ itemsPerPage = 15 }: Properties) => {
@@ -142,7 +142,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 						{!isLoading && news.length > 0 && (
 							<>
 								<div className="space-y-5">
-									{news?.map((data, index) => (
+									{news.map((data, index) => (
 										<NewsCard key={index} {...data} />
 									))}
 

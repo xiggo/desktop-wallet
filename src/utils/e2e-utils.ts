@@ -238,12 +238,12 @@ export const requestMocks = {
 	exchange: [
 		mockRequest(
 			// eslint-disable-next-line
-			/https:\/\/min-api\.cryptocompare\.com\/data\/dayAvg\?fsym=ARK\&tsym=BTC\&toTs=[0-9]/,
+			/https:\/\/min-api\.cryptocompare\.com\/data\/dayAvg\?fsym=ARK&tsym=BTC&toTs=[0-9]/,
 			"exchange/cryptocompare",
 		),
 		mockRequest(
 			// eslint-disable-next-line
-			/https:\/\/min-api\.cryptocompare\.com\/data\/dayAvg\?fsym=ARK\&tsym=ETH\&toTs=[0-9]/,
+			/https:\/\/min-api\.cryptocompare\.com\/data\/dayAvg\?fsym=ARK&tsym=ETH&toTs=[0-9]/,
 			"exchange/cryptocompare-eth",
 		),
 		mockRequest(/https:\/\/min-api\.cryptocompare\.com\/data\/histoday/, "exchange/cryptocompare-historical"),

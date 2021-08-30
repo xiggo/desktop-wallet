@@ -276,7 +276,7 @@ exports[`WalletUpdate should render 3st step 1`] = `
       <p
         class="text-sm md:text-base text-theme-secondary-text"
       >
-        The update has been succesfully downloaded and is ready to be installed.
+        The update has been successfully downloaded and is ready to be installed.
       </p>
     </div>
   </section>

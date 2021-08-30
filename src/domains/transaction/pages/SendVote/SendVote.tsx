@@ -19,6 +19,14 @@ import { useHistory } from "react-router-dom";
 import { FormStep, ReviewStep, SummaryStep } from ".";
 import { VoteLedgerReview } from "./LedgerReview";
 
+enum Step {
+	FormStep = 1,
+	ReviewStep,
+	AuthenticationStep,
+	SummaryStep,
+	ErrorStep,
+}
+
 export const SendVote = () => {
 	const { env, persist } = useEnvironmentContext();
 	const history = useHistory();
@@ -31,7 +39,7 @@ export const SendVote = () => {
 	const unvoteAddresses = queryParameters.get("unvotes")?.split(",");
 	const voteAddresses = queryParameters.get("votes")?.split(",");
 
-	const [activeTab, setActiveTab] = useState(1);
+	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [unvotes, setUnvotes] = useState<Contracts.IReadOnlyWallet[]>([]);
 	const [votes, setVotes] = useState<Contracts.IReadOnlyWallet[]>([]);
 	const [transaction, setTransaction] = useState((null as unknown) as DTO.ExtendedSignedTransactionData);
@@ -102,7 +110,7 @@ export const SendVote = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (activeTab === 1) {
+		if (activeTab === Step.FormStep) {
 			const parameters = new URLSearchParams();
 
 			if (unvoteAddresses) {
@@ -127,19 +135,19 @@ export const SendVote = () => {
 
 		const newIndex = activeTab + 1;
 
-		if (newIndex === 3 && requireFeeConfirmation && !suppressWarning) {
+		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
 			return setShowFeeWarning(true);
 		}
 
 		const senderWallet = activeProfile.wallets().findByAddress(getValues("senderAddress"));
 
 		// Skip authorization step
-		if (newIndex === 3 && senderWallet?.isMultiSignature()) {
+		if (newIndex === Step.AuthenticationStep && senderWallet?.isMultiSignature()) {
 			await handleSubmit(submitForm)();
 			return;
 		}
 
-		if (newIndex === 3 && senderWallet?.isLedger()) {
+		if (newIndex === Step.AuthenticationStep && senderWallet?.isLedger()) {
 			handleSubmit(submitForm)();
 		}
 
@@ -176,8 +184,6 @@ export const SendVote = () => {
 					clearInterval(interval);
 					resolve();
 				}
-
-				return;
 			}, 1000);
 		});
 
@@ -259,7 +265,7 @@ export const SendVote = () => {
 
 					setTransaction(voteResult.transaction);
 
-					setActiveTab(4);
+					setActiveTab(Step.SummaryStep);
 
 					await confirmSendVote("vote");
 				} else {
@@ -294,7 +300,7 @@ export const SendVote = () => {
 
 					setTransaction(transaction);
 
-					setActiveTab(4);
+					setActiveTab(Step.SummaryStep);
 
 					await confirmSendVote("combined");
 				}
@@ -332,17 +338,18 @@ export const SendVote = () => {
 
 				setTransaction(transaction);
 
-				setActiveTab(4);
+				setActiveTab(Step.SummaryStep);
 
 				await confirmSendVote(isUnvote ? "unvote" : "vote");
 			}
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
-			setActiveTab(5);
+			setActiveTab(Step.ErrorStep);
 		}
 	};
 
-	const hideStepNavigation = activeTab === 5 || (activeTab === 3 && activeWallet.isLedger());
+	const hideStepNavigation =
+		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && activeWallet.isLedger());
 
 	return (
 		<Page profile={activeProfile}>
@@ -352,7 +359,7 @@ export const SendVote = () => {
 						<StepIndicator size={4} activeIndex={activeTab} />
 
 						<div className="mt-8">
-							<TabPanel tabId={1}>
+							<TabPanel tabId={Step.FormStep}>
 								<FormStep
 									profile={activeProfile}
 									unvotes={unvotes}
@@ -361,11 +368,11 @@ export const SendVote = () => {
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={2}>
+							<TabPanel tabId={Step.ReviewStep}>
 								<ReviewStep unvotes={unvotes} votes={votes} wallet={activeWallet} />
 							</TabPanel>
 
-							<TabPanel tabId={3}>
+							<TabPanel tabId={Step.AuthenticationStep}>
 								<AuthenticationStep
 									wallet={activeWallet}
 									ledgerDetails={
@@ -376,7 +383,7 @@ export const SendVote = () => {
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={4}>
+							<TabPanel tabId={Step.SummaryStep}>
 								<SummaryStep
 									senderWallet={activeWallet}
 									transaction={transaction}
@@ -385,7 +392,7 @@ export const SendVote = () => {
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={5}>
+							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)

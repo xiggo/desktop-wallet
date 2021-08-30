@@ -993,8 +993,6 @@ describe("SendTransfer", () => {
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
-
-		await waitFor(() => expect(container).toMatchSnapshot());
 	});
 
 	it("should fail sending a single transfer", async () => {
@@ -1215,8 +1213,6 @@ describe("SendTransfer", () => {
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
 		expirationMock.mockRestore();
-
-		await waitFor(() => expect(container).toMatchSnapshot());
 	});
 
 	it("should send a single transfer with a multisignature wallet", async () => {
@@ -1677,8 +1673,6 @@ describe("SendTransfer", () => {
 		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
 		pushSpy.mockRestore();
-
-		await waitFor(() => expect(container).toMatchSnapshot());
 	});
 
 	it("should error if wrong mnemonic", async () => {
@@ -2196,8 +2190,6 @@ describe("SendTransfer", () => {
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
-
-		await waitFor(() => expect(container).toMatchSnapshot());
 		sentTransactionsMock.mockRestore();
 	});
 
@@ -2429,8 +2421,6 @@ describe("SendTransfer", () => {
 
 		goSpy.mockRestore();
 		pushSpy.mockRestore();
-
-		await waitFor(() => expect(container).toMatchSnapshot());
 	});
 
 	it("should show initial step when reset=1 is added to route query params", async () => {

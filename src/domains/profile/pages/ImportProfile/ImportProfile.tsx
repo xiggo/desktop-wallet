@@ -12,12 +12,19 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+enum Step {
+	SelectFileStep = 1,
+	ProcessingStep,
+	FormStep,
+	ErrorStep,
+}
+
 export const ImportProfile = () => {
 	const { env, persist } = useEnvironmentContext();
 	const { t } = useTranslation();
 	const history = useHistory();
 
-	const [activeTab, setActiveTab] = useState(1);
+	const [activeTab, setActiveTab] = useState<Step>(Step.SelectFileStep);
 	const [fileFormat, setFileFormat] = useState(".dwe");
 	const [selectedFile, setSelectedFile] = useState<ReadableFile>();
 	const [password, setPassword] = useState<string>();
@@ -25,11 +32,11 @@ export const ImportProfile = () => {
 
 	const handleSelectedFile = (file: ReadableFile) => {
 		setSelectedFile(file);
-		setActiveTab(2);
+		setActiveTab(Step.ProcessingStep);
 	};
 
 	const handleImportError = () => {
-		setActiveTab(10);
+		setActiveTab(Step.ErrorStep);
 	};
 
 	const handleProfileSave = () => {
@@ -44,7 +51,7 @@ export const ImportProfile = () => {
 					<StepIndicator size={3} activeIndex={activeTab} />
 
 					<Tabs activeId={activeTab} className="mt-8">
-						<TabPanel tabId={1}>
+						<TabPanel tabId={Step.SelectFileStep}>
 							<SelectFileStep
 								fileFormat={fileFormat}
 								onFileFormatChange={setFileFormat}
@@ -53,7 +60,7 @@ export const ImportProfile = () => {
 							/>
 						</TabPanel>
 
-						<TabPanel tabId={2}>
+						<TabPanel tabId={Step.ProcessingStep}>
 							{selectedFile && (
 								<ProcessingImport
 									env={env}
@@ -61,16 +68,16 @@ export const ImportProfile = () => {
 									file={selectedFile}
 									onSuccess={(profile) => {
 										setProfile(profile);
-										setActiveTab(3);
+										setActiveTab(Step.FormStep);
 									}}
 									onPasswordChange={setPassword}
-									onBack={() => setActiveTab(1)}
+									onBack={() => setActiveTab(Step.SelectFileStep)}
 									onError={handleImportError}
 								/>
 							)}
 						</TabPanel>
 
-						<TabPanel tabId={3}>
+						<TabPanel tabId={Step.FormStep}>
 							{profile && (
 								<ImportProfileForm
 									file={selectedFile}
@@ -81,13 +88,13 @@ export const ImportProfile = () => {
 									onSubmit={handleProfileSave}
 									onBack={() => {
 										setPassword(undefined);
-										setActiveTab(1);
+										setActiveTab(Step.SelectFileStep);
 									}}
 								/>
 							)}
 						</TabPanel>
 
-						<TabPanel tabId={10}>
+						<TabPanel tabId={Step.ErrorStep}>
 							{selectedFile && (
 								<ImportError
 									file={selectedFile}

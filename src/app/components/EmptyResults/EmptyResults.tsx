@@ -1,4 +1,5 @@
 import { Image } from "app/components/Image";
+import cn from "classnames";
 import React from "react";
 
 interface EmptyResultsProperties {
@@ -9,7 +10,7 @@ interface EmptyResultsProperties {
 
 export const EmptyResults = ({ className, title, subtitle }: EmptyResultsProperties) => (
 	<div
-		className={`flex flex-col justify-center h-full text-center bg-theme-background ${className}`}
+		className={cn("flex flex-col justify-center h-full text-center bg-theme-background", className)}
 		data-testid="EmptyResults"
 	>
 		<div>

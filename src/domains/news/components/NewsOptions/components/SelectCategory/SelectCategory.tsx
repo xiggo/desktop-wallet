@@ -29,7 +29,7 @@ export const SelectCategory = React.forwardRef<HTMLInputElement, Properties>(
 	) => (
 		<label htmlFor={name} tw="cursor-pointer" {...properties}>
 			<Input
-				data-testid={`SelectCategory__${name}`}
+				data-testid={name ? `SelectCategory__${name}` : undefined}
 				ref={reference}
 				type={type}
 				name={name}
