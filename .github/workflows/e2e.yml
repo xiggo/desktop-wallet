@@ -111,7 +111,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e src/domains/vote/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e:ci src/domains/vote/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
@@ -171,7 +171,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e src/domains/transaction/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e:ci src/domains/transaction/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
@@ -231,7 +231,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1200x16" yarn test:e2e src/domains/contact/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1200x16" yarn test:e2e:ci src/domains/contact/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
@@ -291,7 +291,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e src/domains/plugin/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e:ci src/domains/plugin/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
@@ -351,7 +351,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e src/domains/dashboard/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e:ci src/domains/dashboard/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
@@ -411,7 +411,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e src/domains/profile/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e:ci src/domains/profile/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
@@ -471,7 +471,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e src/domains/news/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e:ci src/domains/news/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
@@ -531,7 +531,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e src/domains/wallet/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e:ci src/domains/wallet/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
@@ -591,7 +591,7 @@ jobs:
                   path: ${{ github.workspace }}/build
 
             - name: Test
-              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e src/domains/setting/cucumber
+              run: xvfb-run --server-args="-screen 0 1920x1080x16" yarn test:e2e:ci src/domains/setting/cucumber
 
             - name: Upload Screenshots
               if: ${{ failure() }}
