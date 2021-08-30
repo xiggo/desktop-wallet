@@ -15,22 +15,27 @@ interface NetworkStepProperties {
 	subtitle: string;
 	disabled?: boolean;
 	error?: string;
+	filter?: (network: Networks.Network) => boolean;
 }
 
-export const NetworkStep = ({ profile, title, subtitle, disabled, error }: NetworkStepProperties) => {
+export const NetworkStep = ({ profile, title, subtitle, disabled, error, filter }: NetworkStepProperties) => {
 	const { getValues, setValue, setError, clearErrors } = useFormContext();
 	const { env } = useEnvironmentContext();
 
 	const networks = useMemo(() => {
 		const usesTestNetworks = profile.settings().get(Contracts.ProfileSetting.UseTestNetworks);
-		const availableNetworks = env.availableNetworks();
+		let availableNetworks = env.availableNetworks();
 
 		if (!usesTestNetworks) {
-			return availableNetworks.filter((item) => item.isLive());
+			availableNetworks = availableNetworks.filter((item) => item.isLive());
+		}
+
+		if (filter) {
+			availableNetworks = availableNetworks.filter((network) => filter(network));
 		}
 
 		return availableNetworks;
-	}, [env, profile]);
+	}, [env, profile, filter]);
 
 	const selectedNetwork: Networks.Network = getValues("network");
 

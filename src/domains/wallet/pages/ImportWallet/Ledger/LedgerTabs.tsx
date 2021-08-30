@@ -1,5 +1,6 @@
 import { uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
+import { Enums } from "@payvo/sdk";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { StepIndicator } from "app/components/StepIndicator";
@@ -158,6 +159,10 @@ export const LedgerTabs = ({ activeIndex = 1, onClickEditWalletName }: Propertie
 			<div data-testid="LedgerTabs" className="mt-8">
 				<TabPanel tabId={1}>
 					<NetworkStep
+						filter={(network) =>
+							network.allows(Enums.FeatureFlag.TransactionTransferLedgerS) ||
+							network.allows(Enums.FeatureFlag.TransactionTransferLedgerX)
+						}
 						profile={activeProfile}
 						title={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE")}
 						subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}

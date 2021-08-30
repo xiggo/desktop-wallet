@@ -39,6 +39,22 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 		title: t("WALLETS.PAGE_WALLET_DETAILS.REGISTRATION_OPTIONS"),
 	};
 
+	const allowsMultiSignature = useMemo(() => {
+		const networkAllowsMuSig = wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature);
+		const isLedgerAndAllowsMuSig =
+			wallet.isLedger() &&
+			(wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerS) ||
+				wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignatureLedgerX));
+
+		return (
+			wallet.balance() > 0 &&
+			networkAllowsMuSig &&
+			!isMultiSignature &&
+			isRestoredAndSynced &&
+			(!!wallet.publicKey() || isLedgerAndAllowsMuSig)
+		);
+	}, [wallet, isMultiSignature, isRestoredAndSynced]);
+
 	if (wallet.balance() > 0 && !wallet.isLedger() && !isMultiSignature && isRestoredAndSynced) {
 		if (
 			wallet.network().allows(Enums.FeatureFlag.TransactionDelegateRegistration) &&
@@ -70,13 +86,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 		}
 	}
 
-	if (
-		wallet.balance() > 0 &&
-		wallet.network().allows(Enums.FeatureFlag.TransactionMultiSignature) &&
-		!isMultiSignature &&
-		isRestoredAndSynced &&
-		(wallet.isLedger() || !!wallet.publicKey())
-	) {
+	if (allowsMultiSignature) {
 		registrationOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE"),
 			value: "multi-signature",
