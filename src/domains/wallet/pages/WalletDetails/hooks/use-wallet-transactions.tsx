@@ -34,13 +34,20 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 		wallet.transaction().restore();
 
 		for (const transaction of [...pendingSigned, ...pendingTransfers]) {
-			const id = transaction.id();
+			let existingTransaction;
 
-			const hasBeenSigned = wallet.transaction().hasBeenSigned(id);
-			const isAwaitingConfirmation = wallet.transaction().isAwaitingConfirmation(id);
-			const isAwaitingOurSignature = wallet.transaction().isAwaitingOurSignature(id);
-			const isAwaitingOtherSignatures = wallet.transaction().isAwaitingOtherSignatures(id);
-			const isMultisignature = !!wallet.transaction().transaction(id).get("multiSignature");
+			// Check if transaction still exists in wallet's interal repo
+			try {
+				existingTransaction = wallet.transaction().transaction(transaction.id());
+			} catch {
+				continue;
+			}
+
+			const hasBeenSigned = wallet.transaction().hasBeenSigned(existingTransaction.id());
+			const isAwaitingConfirmation = wallet.transaction().isAwaitingConfirmation(existingTransaction.id());
+			const isAwaitingOurSignature = wallet.transaction().isAwaitingOurSignature(existingTransaction.id());
+			const isAwaitingOtherSignatures = wallet.transaction().isAwaitingOtherSignatures(existingTransaction.id());
+			const isMultisignature = !!existingTransaction.get("multiSignature");
 			const isPendingTransfer = !isMultisignature && (hasBeenSigned || isAwaitingConfirmation);
 
 			pending.push({

@@ -14,6 +14,7 @@ interface Properties {
 	wallet: Contracts.IReadWriteWallet;
 	pendingTransactions: PendingTransaction[];
 	onClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	onRemove?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onPendingTransactionClick?: (transaction: DTO.ExtendedConfirmedTransactionData) => void;
 }
 

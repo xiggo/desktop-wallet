@@ -88,6 +88,11 @@ export const translations: { [key: string]: any } = {
 	MAGISTRATE: "Magistrate",
 	MEMO: "Memo",
 	MNEMONIC: "Mnemonic",
+	MODAL_CONFIRM_REMOVE_PENDING_TRANSACTION: {
+		DESCRIPTION:
+			"Are you sure you want to remove {{type}} from the transaction pool? This action cannot be undone.",
+		TITLE: "Remove Transaction",
+	},
 	MODAL_CONFIRM_SEND_TRANSACTION: {
 		DESCRIPTION:
 			"You have unconfirmed transactions which will affect your balance when confirmed. Are you sure you wish to continue?",
@@ -248,6 +253,7 @@ export const translations: { [key: string]: any } = {
 	RECIPIENTS: "Recipients",
 	RECIPIENTS_COUNT: "Recipients ({{count}})",
 	RECIPIENTS_HELPTEXT: "A multiple recipient transaction allows up to {{count}} recipients in one transaction",
+	REGISTRATION: "Registration",
 	REGISTRATION_TYPE: "Registration Type",
 	REPOSITORIES: {
 		DESCRIPTION: "Show your projects through your repository",
@@ -281,9 +287,11 @@ export const translations: { [key: string]: any } = {
 	},
 	TIMESTAMP: "Timestamp",
 	TOTAL_AMOUNT: "Total Amount",
+	TRANSACTION: "Transaction",
 	TRANSACTION_AMOUNT: "Transaction Amount",
 	TRANSACTION_DETAILS: "Transaction Details",
 	TRANSACTION_FEE: "Transaction Fee",
+	TRANSACTION_REMOVED: "Transaction successfully removed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
 		DELEGATE_REGISTRATION: "Delegate Registration",

@@ -26,7 +26,10 @@ describe("Wallet Transactions Hook", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({ get: () => undefined }));
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
+			get: () => undefined,
+			id: () => fixtures.transfer,
+		}));
 	};
 
 	beforeAll(() => {
@@ -204,7 +207,10 @@ describe("Wallet Transactions Hook", () => {
 		jest.spyOn(wallet.transaction(), "pending").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 		});
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({ get: () => undefined }));
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
+			get: () => undefined,
+			id: () => fixtures.transfer,
+		}));
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
@@ -223,5 +229,32 @@ describe("Wallet Transactions Hook", () => {
 		render(<Component />);
 
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(1));
+	});
+
+	it("should prevent from rendering transaction if not found in wallet", async () => {
+		jest.spyOn(wallet.transaction(), "pending").mockReturnValue({
+			[fixtures.transfer.id()]: fixtures.transfer,
+		});
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => {
+			throw new Error("not found");
+		});
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
+		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+
+		let allPendingTransactions: PendingTransaction[];
+		const Component = () => {
+			const { pendingTransactions, syncPending } = useWalletTransactions(wallet);
+			allPendingTransactions = pendingTransactions;
+
+			useEffect(() => {
+				syncPending();
+			}, [syncPending]);
+			return <span>{pendingTransactions.length}</span>;
+		};
+
+		render(<Component />);
+
+		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
 	});
 });

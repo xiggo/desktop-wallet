@@ -62,6 +62,11 @@ describe("Signed Transaction Table", () => {
 				};
 			});
 
+		nock("https://ark-test-musig.payvo.com")
+			.post("/")
+			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
+			.persist();
+
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		wallet = profile.wallets().first();
@@ -459,6 +464,7 @@ describe("Signed Transaction Table", () => {
 	it.each([true, false])("should show the sign button with isCompact = %s", (isCompact: boolean) => {
 		mockMultisignatures(wallet);
 		const onClick = jest.fn();
+		const canBeBroadcastedMock = jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const awaitingMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 
 		const { asFragment } = render(
@@ -471,13 +477,14 @@ describe("Signed Transaction Table", () => {
 		);
 
 		act(() => {
-			fireEvent.click(screen.getByTestId("TransactionRow__sign"));
+			fireEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
 		});
 
 		expect(onClick).toHaveBeenCalled();
 		expect(asFragment()).toMatchSnapshot();
 
 		awaitingMock.mockReset();
+		canBeBroadcastedMock.mockReset();
 		jest.restoreAllMocks();
 	});
 
@@ -532,5 +539,84 @@ describe("Signed Transaction Table", () => {
 		isUnvoteMock.mockRestore();
 		canBeSignedMock.mockRestore();
 		jest.restoreAllMocks();
+	});
+
+	it("should remove pending multisignature", async () => {
+		const onRemove = jest.fn();
+		const isMultiSignatureReadyMock = jest
+			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
+			.mockReturnValue(true);
+		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
+
+		const { getAllByTestId, getByTestId } = render(
+			<PendingTransactions
+				wallet={wallet}
+				pendingTransactions={pendingMultisignatureTransactions}
+				onRemove={onRemove}
+			/>,
+		);
+
+		await waitFor(() => expect(getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+
+		expect(getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
+			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
+		);
+
+		act(() => {
+			fireEvent.click(getAllByTestId("TransactionRow__remove")[0]);
+		});
+
+		expect(getByTestId("modal__inner")).toBeTruthy();
+		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
+		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
+
+		act(() => {
+			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
+		});
+
+		await waitFor(() => expect(onRemove).toHaveBeenCalled());
+
+		expect(() => wallet.transaction().transaction(pendingMultisignatureTransactions[0].transaction.id())).toThrow();
+
+		canBeSignedMock.mockReset();
+		isMultiSignatureReadyMock.mockRestore();
+	});
+
+	it("should open and close removal confirmation of pending transaction", async () => {
+		const onRemove = jest.fn();
+		const isMultiSignatureReadyMock = jest
+			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
+			.mockReturnValue(true);
+		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
+
+		const { getAllByTestId, getByTestId } = render(
+			<PendingTransactions
+				wallet={wallet}
+				pendingTransactions={pendingMultisignatureTransactions}
+				onRemove={onRemove}
+			/>,
+		);
+
+		await waitFor(() => expect(getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+
+		expect(getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
+			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
+		);
+
+		act(() => {
+			fireEvent.click(getAllByTestId("TransactionRow__remove")[0]);
+		});
+
+		expect(getByTestId("modal__inner")).toBeTruthy();
+		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
+
+		act(() => {
+			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
+		});
+
+		expect(() => getByTestId("modal__inner")).toThrow();
+
+		canBeSignedMock.mockReset();
+		isMultiSignatureReadyMock.mockRestore();
 	});
 });

@@ -899,8 +899,28 @@ exports[`Signed Transaction Table should render signed transactions and handle e
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
-              />
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -1197,7 +1217,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
@@ -1219,6 +1239,25 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     <span>
                       Sign
                     </span>
+                  </div>
+                </button>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -1518,8 +1557,28 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
-              />
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -1816,7 +1875,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
@@ -1838,6 +1897,25 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                     <span>
                       Sign
                     </span>
+                  </div>
+                </button>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -2137,7 +2215,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
@@ -2157,6 +2235,25 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                     >
                       <svg>
                         double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
                       </svg>
                     </div>
                   </div>
@@ -2458,7 +2555,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
@@ -2480,6 +2577,25 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                     <span>
                       Sign
                     </span>
+                  </div>
+                </button>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>
@@ -3383,7 +3499,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
@@ -3403,6 +3519,25 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     >
                       <svg>
                         double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
                       </svg>
                     </div>
                   </div>
@@ -3704,7 +3839,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end space-x-2"
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 kkzWwe text-theme-primary-600 hover:text-theme-primary-700"
@@ -3724,6 +3859,25 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     >
                       <svg>
                         double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkzWwe text-theme-danger-400 hover:text-theme-danger-500"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM AFVmm"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        trash.svg
                       </svg>
                     </div>
                   </div>
@@ -4025,7 +4179,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
@@ -4047,6 +4201,25 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                     <span>
                       Sign
                     </span>
+                  </div>
+                </button>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                  data-testid="TransactionRow__remove"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdnxRM NjstW"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
                   </div>
                 </button>
               </div>

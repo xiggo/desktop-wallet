@@ -6,24 +6,31 @@ import { Tooltip } from "app/components/Tooltip";
 import { useTimeFormat } from "app/hooks/use-time-format";
 import { TransactionRowMemo } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMemo";
 import { useMultiSignatureStatus } from "domains/transaction/hooks";
-import React from "react";
+import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";
 import { BaseTransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 
-const SignButton = ({
-	isCompact,
-	isAwaitingFinalSignature,
-	canBeSigned,
-	onClick,
-}: {
+interface SignedTransactionRowProperties {
+	transaction: DTO.ExtendedSignedTransactionData;
+	onSign?: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	onRemovePendingTransaction?: (transaction: DTO.ExtendedSignedTransactionData) => void;
+	wallet: Contracts.IReadWriteWallet;
+	isCompact?: boolean;
+	showMemoColumn: boolean;
+}
+
+interface SignButtonProperties {
 	isCompact?: boolean;
 	isAwaitingFinalSignature: boolean;
 	canBeSigned: boolean;
 	onClick?: () => void;
-}) => {
+}
+
+const SignButton = ({ isCompact, isAwaitingFinalSignature, canBeSigned, onClick }: SignButtonProperties) => {
 	const { t } = useTranslation();
 
 	if (!canBeSigned) {
@@ -73,24 +80,46 @@ const SignButton = ({
 	);
 };
 
+const RemoveButton = ({ isCompact, onClick }: { isCompact?: boolean; onClick: (event: MouseEvent) => void }) => {
+	if (isCompact) {
+		return (
+			<Button
+				size="sm"
+				data-testid="TransactionRow__remove"
+				variant="transparent"
+				className="text-theme-danger-400 hover:text-theme-danger-500"
+				onClick={onClick}
+				icon="Trash"
+			/>
+		);
+	}
+
+	return (
+		<Button data-testid="TransactionRow__remove" variant="danger" onClick={onClick}>
+			<Icon name="Trash" size="lg" />
+		</Button>
+	);
+};
+
 export const SignedTransactionRow = ({
 	transaction,
 	onSign,
 	onRowClick,
 	wallet,
 	isCompact,
+	onRemovePendingTransaction,
 	showMemoColumn,
-}: {
-	transaction: DTO.ExtendedSignedTransactionData;
-	onSign?: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	wallet: Contracts.IReadWriteWallet;
-	isCompact?: boolean;
-	showMemoColumn: boolean;
-}) => {
+}: SignedTransactionRowProperties) => {
 	const timeFormat = useTimeFormat();
 	const recipient = transaction.get<string>("recipientId");
 	const { canBeSigned, isAwaitingFinalSignature, status } = useMultiSignatureStatus({ transaction, wallet });
+
+	const handleRemove = (event: MouseEvent) => {
+		event.preventDefault();
+		event.stopPropagation();
+
+		onRemovePendingTransaction?.(transaction);
+	};
 
 	return (
 		<TableRow onClick={() => onRowClick?.(transaction)}>
@@ -139,13 +168,15 @@ export const SignedTransactionRow = ({
 				/>
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
+			<TableCell variant="end" innerClassName="justify-end space-x-2" isCompact={isCompact}>
 				<SignButton
 					isCompact={isCompact}
 					canBeSigned={canBeSigned}
 					isAwaitingFinalSignature={isAwaitingFinalSignature}
 					onClick={() => onSign?.(transaction)}
 				/>
+
+				<RemoveButton isCompact={isCompact} onClick={handleRemove} />
 			</TableCell>
 		</TableRow>
 	);

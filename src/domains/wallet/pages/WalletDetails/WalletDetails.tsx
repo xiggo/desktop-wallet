@@ -118,6 +118,10 @@ export const WalletDetails = () => {
 								wallet={activeWallet}
 								onPendingTransactionClick={setTransactionModalItem}
 								onClick={setSignedTransactionModalItem}
+								onRemove={() => {
+									syncPending();
+									toasts.success(t("TRANSACTION.TRANSACTION_REMOVED"));
+								}}
 							/>
 						</div>
 					)}
