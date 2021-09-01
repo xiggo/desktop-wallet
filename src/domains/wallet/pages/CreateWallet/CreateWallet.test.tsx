@@ -144,11 +144,29 @@ describe("CreateWallet", () => {
 
 		expect(profile.wallets().values().length).toBe(1);
 
+		act(() => {
+			fireEvent.click(getByTestId("CreateWallet__edit-alias"));
+		});
+
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+
+		act(() => {
+			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "test alias" } });
+		});
+
+		await waitFor(() => expect(getByTestId("UpdateWalletName__submit")).not.toBeDisabled());
+
+		act(() => {
+			fireEvent.click(getByTestId("UpdateWalletName__submit"));
+		});
+
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
+
 		fireEvent.click(getByTestId("CreateWallet__finish-button"));
 
 		const wallet = profile.wallets().first();
 
-		expect(wallet.alias()).toBe("ARK Devnet #1");
+		expect(wallet.alias()).toBe("test alias");
 
 		await waitFor(() =>
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`),
@@ -509,5 +527,11 @@ describe("CreateWallet", () => {
 		});
 
 		await waitFor(() => expect(getByTestId("UpdateWalletName__submit")).toBeDisabled());
+
+		act(() => {
+			fireEvent.click(getByTestId("UpdateWalletName__cancel"));
+		});
+
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
 	});
 });

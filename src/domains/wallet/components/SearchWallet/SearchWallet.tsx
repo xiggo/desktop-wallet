@@ -106,7 +106,7 @@ export const SearchWallet = ({
 		const commonColumns = [
 			{
 				Header: t("COMMON.WALLET_ADDRESS"),
-				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.alias() || wallet.address(),
+				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.alias(),
 			},
 			{
 				Header: t("COMMON.BALANCE"),

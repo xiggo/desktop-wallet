@@ -2,12 +2,13 @@
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { LedgerData } from "app/contexts";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { LedgerImportStep } from "./LedgerImportStep";
 
@@ -19,7 +20,7 @@ describe("LedgerImportStep", () => {
 
 	const ledgerWallets: LedgerData[] = [
 		{ address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq", balance: 0, path: derivationPath },
-		{ address: "DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES", balance: 0, isNew: true, path: derivationPath },
+		{ address: "DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES", isNew: true, path: derivationPath },
 	];
 
 	beforeEach(async () => {
@@ -95,7 +96,7 @@ describe("LedgerImportStep", () => {
 	it("should render with single import", async () => {
 		const { container, onClickEditWalletName } = renderComponent(ledgerWallets.slice(1));
 
-		fireEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
+		userEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 		expect(container).toMatchSnapshot();
@@ -106,7 +107,7 @@ describe("LedgerImportStep", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("LedgerImportStep__edit-alias")).toHaveLength(2));
 
-		fireEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
+		userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 		expect(container).toMatchSnapshot();

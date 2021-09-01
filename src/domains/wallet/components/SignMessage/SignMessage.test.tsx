@@ -274,6 +274,66 @@ describe("SignMessage", () => {
 		walletWifMock.mockRestore();
 	});
 
+	it("should sign message with secret", async () => {
+		const signedMessage = {
+			message: "Hello World",
+			signatory: "03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933",
+			signature:
+				"dd373d859dc8d982de49532d55a654058cc18a79116677a09debf7a2b59b35ef27cf44c935a7b8685c359964b4a88dc602d20e52f7fae83f7482b221ba00179a",
+		};
+
+		const walletHasSigningKey = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
+		const walletActsWithSecret = jest.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+		const walletActsWithMnemonic = jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		const fromSecret = jest.spyOn(wallet.coin().address(), "fromSecret").mockResolvedValue({
+			address: wallet.address(),
+			type: "bip39",
+		});
+
+		const onSign = jest.fn();
+
+		const { getByTestId, getByText } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/:walletId">
+				<LedgerProvider transport={transport}>
+					<SignMessage profile={profile} onSign={onSign} walletId={wallet.id()} isOpen={true} />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [walletUrl],
+			},
+		);
+
+		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy());
+
+		const messageInput = getByTestId("SignMessage__message-input");
+
+		act(() => {
+			fireEvent.input(messageInput, { target: { value: "Hello World" } });
+		});
+
+		const secretInput = getByTestId("SignMessage__secret-input");
+
+		act(() => {
+			fireEvent.input(secretInput, { target: { value: "secret" } });
+		});
+
+		await waitFor(() => expect(getByTestId("SignMessage__submit-button")).toBeEnabled());
+
+		act(() => {
+			fireEvent.click(getByTestId("SignMessage__submit-button"));
+		});
+
+		await waitFor(() => expect(getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy());
+
+		expect(onSign).toHaveBeenCalledWith(signedMessage);
+
+		walletHasSigningKey.mockRestore();
+		walletActsWithSecret.mockRestore();
+		walletActsWithMnemonic.mockRestore();
+		fromSecret.mockRestore();
+	});
+
 	it("should sign message with ledger wallet", async () => {
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);

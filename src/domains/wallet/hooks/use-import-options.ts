@@ -20,7 +20,6 @@ export enum OptionsValue {
 	PRIVATE_KEY = "privateKey",
 	PUBLIC_KEY = "publicKey",
 	SECRET = "secret",
-	SECRET_WITH_ENCRYPTION = "secretWithEncryption",
 	WIF = "wif",
 }
 
@@ -42,7 +41,6 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 			{ label: t("COMMON.PUBLIC_KEY"), value: OptionsValue.PUBLIC_KEY },
 			{ label: t("COMMON.PRIVATE_KEY"), value: OptionsValue.PRIVATE_KEY },
 			{ label: t("COMMON.SECRET"), value: OptionsValue.SECRET },
-			{ label: t("COMMON.SECRET_WITH_ENCRYPTION"), value: OptionsValue.SECRET_WITH_ENCRYPTION },
 			{ label: t("COMMON.WIF"), value: OptionsValue.WIF },
 			{ label: t("COMMON.ENCRYPTED_WIF"), value: OptionsValue.ENCRYPTED_WIF },
 		],

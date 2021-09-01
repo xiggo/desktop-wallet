@@ -319,6 +319,24 @@ describe("ImportWallet", () => {
 			expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
 		});
 
+		act(() => {
+			fireEvent.click(getByTestId("ImportWallet__edit-alias"));
+		});
+
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+
+		act(() => {
+			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "test alias" } });
+		});
+
+		await waitFor(() => expect(getByTestId("UpdateWalletName__submit")).not.toBeDisabled());
+
+		act(() => {
+			fireEvent.click(getByTestId("UpdateWalletName__submit"));
+		});
+
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
+
 		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
@@ -377,6 +395,24 @@ describe("ImportWallet", () => {
 		await waitFor(() => {
 			expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
 		});
+
+		act(() => {
+			fireEvent.click(getByTestId("ImportWallet__edit-alias"));
+		});
+
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+
+		act(() => {
+			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "Test" } });
+		});
+
+		await waitFor(() => expect(getByTestId("UpdateWalletName__submit")).toBeDisabled());
+
+		act(() => {
+			fireEvent.click(getByTestId("UpdateWalletName__cancel"));
+		});
+
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
 
 		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
@@ -650,6 +686,124 @@ describe("ImportWallet", () => {
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeDisabled());
 	});
 
+	it("should import by secret", async () => {
+		const history = createMemoryHistory();
+		history.push(route);
+
+		const { getByTestId, getByText } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				history,
+				routes: [route],
+			},
+		);
+
+		const countBefore = profile.wallets().count();
+
+		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+
+		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
+
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+
+		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		expect(getByTestId("ImportWallet__second-step")).toBeTruthy();
+
+		fireEvent.focus(getByTestId("SelectDropdown__input"));
+
+		await waitFor(() => expect(getByText(commonTranslations.SECRET)).toBeInTheDocument());
+		fireEvent.mouseDown(getByText(commonTranslations.SECRET));
+
+		await waitFor(() => expect(getByTestId("ImportWallet__secret-input")).toBeTruthy());
+		fireEvent.input(getByTestId("ImportWallet__secret-input"), { target: { value: "secret.111" } });
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		await waitFor(() => {
+			expect(getByTestId("EncryptPassword")).toBeTruthy();
+		});
+
+		fireEvent.click(getByTestId("ImportWallet__skip-button"));
+
+		await waitFor(() => {
+			expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
+		});
+
+		fireEvent.click(getByTestId("ImportWallet__finish-button"));
+
+		await waitFor(() => expect(profile.wallets().count()).toBe(countBefore + 1));
+	});
+
+	it("should import by secret with encryption", async () => {
+		const history = createMemoryHistory();
+		history.push(route);
+
+		const { getByTestId, getByText, getAllByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				history,
+				routes: [route],
+			},
+		);
+
+		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+
+		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
+
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+
+		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		expect(getByTestId("ImportWallet__second-step")).toBeTruthy();
+
+		fireEvent.focus(getByTestId("SelectDropdown__input"));
+
+		await waitFor(() => expect(getByText(commonTranslations.SECRET)).toBeInTheDocument());
+		fireEvent.mouseDown(getByText(commonTranslations.SECRET));
+
+		await waitFor(() => expect(getByTestId("ImportWallet__secret-input")).toBeTruthy());
+		fireEvent.input(getByTestId("ImportWallet__secret-input"), { target: { value: "secret.222" } });
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		await waitFor(() => {
+			expect(getByTestId("EncryptPassword")).toBeTruthy();
+		});
+
+		await utilsAct(async () => {
+			fireEvent.input(getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword" } });
+		});
+
+		await utilsAct(async () => {
+			fireEvent.input(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
+		});
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		await waitFor(
+			() => {
+				expect(getByTestId("ImportWallet__third-step")).toBeTruthy();
+			},
+			{ timeout: 15_000 },
+		);
+	});
+
 	it("should get options depend on the network", async () => {
 		const history = createMemoryHistory();
 		history.push(route);
@@ -688,7 +842,61 @@ describe("ImportWallet", () => {
 		await waitFor(() => expect(queryByText(commonTranslations.ENCRYPTED_WIF)).toBeFalsy());
 	});
 
-	it("should show an error message for duplicate address", async () => {
+	it("should show an error message for duplicate address when importing by mnemonic", async () => {
+		const generated = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+
+		profile.wallets().push(generated.wallet);
+
+		const history = createMemoryHistory();
+		history.push(route);
+
+		const { getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				history,
+				routes: [route],
+			},
+		);
+
+		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+
+		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
+
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+
+		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+
+		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
+		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+
+		expect(getByTestId("ImportWallet__second-step")).toBeTruthy();
+
+		const passphraseInput = getByTestId("ImportWallet__mnemonic-input");
+
+		expect(passphraseInput).toBeTruthy();
+
+		fireEvent.input(passphraseInput, { target: { value: generated.mnemonic } });
+
+		await waitFor(() => {
+			expect(getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				commonTranslations.INPUT_ADDRESS.VALIDATION.ADDRESS_ALREADY_EXISTS.replace(
+					"{{address}}",
+					generated.wallet.address(),
+				),
+			);
+		});
+
+		expect(getByTestId("ImportWallet__continue-button")).toBeDisabled();
+	});
+
+	it("should show an error message for duplicate address when importing by address", async () => {
 		const history = createMemoryHistory();
 		history.push(route);
 

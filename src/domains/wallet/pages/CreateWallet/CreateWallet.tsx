@@ -161,10 +161,6 @@ export const CreateWallet = () => {
 
 		const wallet = getValues("wallet");
 
-		if (!wallet) {
-			return undefined;
-		}
-
 		assertWallet(wallet);
 
 		return (

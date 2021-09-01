@@ -2,13 +2,15 @@ import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
+import * as scanner from "app/contexts/Ledger/hooks/scanner.state";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
 
 import { LedgerTabs } from "./LedgerTabs";
 
@@ -139,9 +141,7 @@ describe("LedgerTabs", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		act(() => {
-			fireEvent.click(backSelector());
-		});
+		userEvent.click(backSelector());
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
@@ -149,9 +149,7 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
-		act(() => {
-			fireEvent.click(nextSelector());
-		});
+		userEvent.click(nextSelector());
 
 		await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument());
 		await waitFor(
@@ -162,9 +160,7 @@ describe("LedgerTabs", () => {
 			{ timeout: 10_000 },
 		);
 
-		act(() => {
-			fireEvent.click(backSelector());
-		});
+		userEvent.click(backSelector());
 
 		await waitFor(() => expect(screen.getByTestId("SelectNetwork")).toBeInTheDocument());
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
@@ -244,9 +240,7 @@ describe("LedgerTabs", () => {
 		// Auto redirect to next step
 		await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.click(backSelector());
-		});
+		userEvent.click(backSelector());
 
 		await waitFor(() => expect(screen.getByTestId("SelectNetwork")).toBeInTheDocument());
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
@@ -280,7 +274,7 @@ describe("LedgerTabs", () => {
 			);
 		};
 
-		renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		const { history } = renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
 		await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2), { timeout: 3000 });
@@ -289,9 +283,7 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(nextSelector());
-		});
+		userEvent.click(nextSelector());
 
 		await waitFor(() => expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument(), { timeout: 10_000 });
 
@@ -299,11 +291,86 @@ describe("LedgerTabs", () => {
 		expect(profile.wallets().values()).toHaveLength(3);
 
 		// First address
-		fireEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
+		userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 
+		const historySpy = jest.spyOn(history, "push").mockImplementation();
+
+		userEvent.click(screen.getByTestId("Paginator__finish-button"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${profile.wallets().last().id()}`);
+
+		historySpy.mockRestore();
 		getPublicKeySpy.mockReset();
+	});
+
+	it("should render finish step multiple", async () => {
+		const getPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const scannerMock = jest.spyOn(scanner, "scannerReducer").mockReturnValue({
+			selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
+			wallets: [
+				{
+					address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
+					path: "m/44'/1'/0'/0/0",
+				},
+				{
+					address: "DQh2wmdM8GksEx48rFrXCtJKsXz3bM6L6o",
+					path: "m/44'/1'/0'/0/1",
+				},
+			],
+		});
+
+		const Component = () => {
+			const form = useForm({
+				defaultValues: {
+					network: wallet.network(),
+				},
+				mode: "onChange",
+			});
+
+			const { register } = form;
+
+			useEffect(() => {
+				register("network");
+			}, [register]);
+
+			return (
+				<FormProvider {...form}>
+					<BaseComponent activeIndex={3} />
+				</FormProvider>
+			);
+		};
+
+		const { history } = renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
+
+		await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(3), { timeout: 3000 });
+
+		const walletsCountBefore = profile.wallets().count();
+
+		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(3));
+
+		expect(screen.getByTestId("Paginator__continue-button")).toBeEnabled();
+
+		userEvent.click(nextSelector());
+
+		await waitFor(() => expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument(), { timeout: 15_000 });
+
+		expect(profile.wallets().count()).toBe(walletsCountBefore + 2);
+
+		const historySpy = jest.spyOn(history, "push").mockImplementation();
+
+		userEvent.click(screen.getByTestId("Paginator__finish-button"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+
+		historySpy.mockRestore();
+		getPublicKeySpy.mockReset();
+		scannerMock.mockRestore();
 	});
 
 	it("should render scan step with failing fetch", async () => {
@@ -342,9 +409,7 @@ describe("LedgerTabs", () => {
 		await waitFor(() => expect(screen.getByTestId("LedgerScanStep")).toBeInTheDocument());
 		await waitFor(() => expect(screen.getByTestId("LedgerScanStep__error")).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__retry-button"));
-		});
+		userEvent.click(screen.getByTestId("Paginator__retry-button"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("LedgerScanStep__amount-skeleton")).toHaveLength(0), {
 			interval: 5,
@@ -353,9 +418,7 @@ describe("LedgerTabs", () => {
 
 		expect(container).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(backSelector());
-		});
+		userEvent.click(backSelector());
 
 		await waitFor(() => expect(screen.getByTestId("SelectNetwork")).toBeInTheDocument());
 

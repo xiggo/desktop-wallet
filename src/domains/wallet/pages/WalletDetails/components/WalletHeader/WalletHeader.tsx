@@ -184,7 +184,7 @@ export const WalletHeader = ({
 								{!!wallet.publicKey() && (
 									<Clipboard
 										variant="icon"
-										data={wallet.publicKey() || ""}
+										data={wallet.publicKey() as string}
 										tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
 										tooltipDarkTheme
 									>

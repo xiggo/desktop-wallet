@@ -9,7 +9,7 @@ import { TFunction } from "i18next";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { assertNetwork } from "utils/assertions";
+import { assertNetwork, assertString } from "utils/assertions";
 
 const validateAddress = async ({
 	findAddress,
@@ -183,7 +183,6 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 		);
 	}
 
-	/* istanbul ignore next */
 	if (type === OptionsValue.PRIVATE_KEY) {
 		return (
 			<MnemonicField
@@ -195,6 +194,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 						const { address } = await coin.address().fromPrivateKey(value);
 						return address;
 					} catch {
+						/* istanbul ignore next */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
 					}
 				}}
@@ -202,7 +202,6 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 		);
 	}
 
-	/* istanbul ignore next */
 	if (type === OptionsValue.WIF) {
 		return (
 			<MnemonicField
@@ -214,6 +213,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 						const { address } = await coin.address().fromWIF(value);
 						return address;
 					} catch {
+						/* istanbul ignore next */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));
 					}
 				}}
@@ -221,7 +221,6 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 		);
 	}
 
-	/* istanbul ignore next */
 	if (type === OptionsValue.ENCRYPTED_WIF) {
 		return (
 			<>
@@ -249,7 +248,6 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 		);
 	}
 
-	/* istanbul ignore next */
 	if (type === OptionsValue.SECRET) {
 		return (
 			<MnemonicField
@@ -261,6 +259,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 						const { address } = await coin.address().fromSecret(value);
 						return address;
 					} catch {
+						/* istanbul ignore next */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
 					}
 				}}
@@ -269,44 +268,14 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 	}
 
 	/* istanbul ignore next */
-	if (type === OptionsValue.SECRET_WITH_ENCRYPTION) {
-		return (
-			<>
-				<FormField name="secretWithEncryption">
-					<FormLabel label={t("COMMON.SECRET_WITH_ENCRYPTION")} />
-					<div className="relative">
-						<Input
-							ref={register({
-								required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-									field: t("COMMON.SECRET_WITH_ENCRYPTION"),
-								}).toString(),
-							})}
-							data-testid="ImportWallet__secretWithEncryption-input"
-						/>
-					</div>
-				</FormField>
-
-				<MnemonicField
-					profile={profile}
-					label={t("COMMON.PASSWORD")}
-					data-testid="ImportWallet__secretWithEncryption__password-input"
-					findAddress={(value) => Promise.resolve(value)}
-				/>
-			</>
-		);
-	}
-
-	/* istanbul ignore next */
-	return null;
+	throw new Error("Invalid import type. This looks like a bug.");
 };
 
 export const SecondStep = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 	const { getValues, watch, setValue, clearErrors, setError } = useFormContext();
 
-	// getValues does not get the value of `defaultValues` on first render
-	const [defaultNetwork] = useState(() => watch("network"));
-	const network = getValues("network") || defaultNetwork;
+	const network = getValues("network");
 	assertNetwork(network);
 
 	const [coin] = useState(() => profile.coins().set(network.coin(), network.id()));
@@ -330,6 +299,7 @@ export const SecondStep = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { options, defaultOption } = useImportOptions(network.importMethods());
 
 	const type = watch("type", defaultOption);
+	assertString(type);
 
 	return (
 		<section data-testid="ImportWallet__second-step">

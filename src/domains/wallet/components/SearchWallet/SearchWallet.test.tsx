@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
+import { Networks } from "@payvo/sdk";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -97,6 +99,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should render with selected address", async () => {
+		const onSelectWallet = jest.fn();
+
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
@@ -106,7 +110,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
-					onSelectWallet={() => undefined}
+					onSelectWallet={onSelectWallet}
 					selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
 				/>
 			</Route>,
@@ -119,7 +123,29 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		expect(screen.getByTestId("SearchWalletListItem__selected-0")).toBeInTheDocument();
 		expect(screen.getByTestId("SearchWalletListItem__select-1")).toBeInTheDocument();
 
-		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
+
+		expect(onSelectWallet).toHaveBeenNthCalledWith(
+			1,
+			expect.objectContaining({
+				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				name: wallets[0].alias(),
+				network: expect.any(Networks.Network),
+			}),
+		);
+
+		userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
+
+		expect(onSelectWallet).toHaveBeenNthCalledWith(
+			2,
+			expect.objectContaining({
+				address: wallets[1].address(),
+				name: wallets[1].alias(),
+				network: expect.any(Networks.Network),
+			}),
+		);
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should handle close", () => {

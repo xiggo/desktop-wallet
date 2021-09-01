@@ -72,7 +72,6 @@ export const WalletDetails = () => {
 
 	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
 
-	/* istanbul ignore next */
 	return (
 		<>
 			<Page profile={activeProfile}>

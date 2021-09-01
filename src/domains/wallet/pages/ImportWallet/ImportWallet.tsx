@@ -187,10 +187,12 @@ export const ImportWallet = () => {
 				>
 					{isLedgerImport ? (
 						<LedgerTabs
-							onClickEditWalletName={(wallet: Contracts.IReadWriteWallet) => {
-								setImportedWallet(wallet);
-								setIsEditAliasModalOpen(true);
-							}}
+							onClickEditWalletName={
+								/* istanbul ignore next */ (wallet: Contracts.IReadWriteWallet) => {
+									setImportedWallet(wallet);
+									setIsEditAliasModalOpen(true);
+								}
+							}
 						/>
 					) : (
 						<Tabs activeId={activeTab}>

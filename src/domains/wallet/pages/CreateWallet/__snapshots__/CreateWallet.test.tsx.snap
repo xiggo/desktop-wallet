@@ -980,7 +980,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                         <div
                           class="font-semibold"
                         >
-                          ARK Devnet #1
+                          test alias
                         </div>
                       </div>
                       <button

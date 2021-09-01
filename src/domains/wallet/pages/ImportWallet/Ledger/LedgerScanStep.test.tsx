@@ -1,6 +1,7 @@
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import nock from "nock";
 import React from "react";
@@ -130,13 +131,13 @@ describe("LedgerScanStep", () => {
 		// Select just first
 
 		act(() => {
-			fireEvent.click(screen.getAllByRole("checkbox")[0]);
+			fireEvent.click(screen.getAllByRole("checkbox")[1]);
 		});
 
 		await waitFor(() => expect(formReference.getValues("wallets").length).toBe(1));
 
 		act(() => {
-			fireEvent.click(screen.getAllByRole("checkbox")[0]);
+			fireEvent.click(screen.getAllByRole("checkbox")[1]);
 		});
 
 		await waitFor(() => expect(formReference.getValues("wallets").length).toBe(0));
@@ -178,15 +179,26 @@ describe("LedgerScanStep", () => {
 			]),
 		);
 
-		act(() => {
-			fireEvent.click(screen.getAllByRole("checkbox")[0]);
-		});
+		const checkboxSelectAll = screen.getAllByRole("checkbox")[0];
+		const checkboxFirstItem = screen.getAllByRole("checkbox")[1];
+
+		userEvent.click(checkboxSelectAll);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
 
-		act(() => {
-			fireEvent.click(screen.getAllByRole("checkbox")[0]);
-		});
+		userEvent.click(checkboxSelectAll);
+
+		await waitFor(() =>
+			expect(formReference.getValues("wallets")).toMatchObject([
+				{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
+			]),
+		);
+
+		userEvent.click(checkboxFirstItem);
+
+		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
+
+		userEvent.click(checkboxFirstItem);
 
 		await waitFor(() =>
 			expect(formReference.getValues("wallets")).toMatchObject([

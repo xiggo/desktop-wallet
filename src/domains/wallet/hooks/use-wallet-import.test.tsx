@@ -10,6 +10,7 @@ import { useWalletImport } from "./use-wallet-import";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
+let wallet: Contracts.IReadWriteWallet;
 
 describe("useWalletImport", () => {
 	beforeAll(async () => {
@@ -17,7 +18,7 @@ describe("useWalletImport", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const wallet = profile.wallets().first();
+		wallet = profile.wallets().first();
 		network = wallet.network();
 	});
 
@@ -106,6 +107,55 @@ describe("useWalletImport", () => {
 		).rejects.toThrow("error");
 
 		mockEncryptedWif.mockRestore();
+	});
+
+	it("should import wallet from encryptedWif", async () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletImport({ profile }));
+
+		const { wallet: newWallet } = await profile.walletFactory().generate({
+			coin: network.coin(),
+			network: network.id(),
+		});
+
+		const countBefore = profile.wallets().count();
+
+		const mockEncryptedWif = jest
+			.spyOn(profile.walletFactory(), "fromWIF")
+			.mockImplementation(() => Promise.resolve(newWallet));
+
+		await expect(
+			current.importWalletByType({
+				encryptedWif: "wif",
+				network,
+				type: OptionsValue.ENCRYPTED_WIF,
+				value: "password",
+			}),
+		).resolves.toBeInstanceOf(Wallet);
+
+		expect(profile.wallets().count()).toBe(countBefore + 1);
+
+		mockEncryptedWif.mockRestore();
+	});
+
+	it("should import wallet from secret", async () => {
+		const {
+			result: { current },
+		} = renderHook(() => useWalletImport({ profile }));
+
+		const countBefore = profile.wallets().count();
+
+		await expect(
+			current.importWalletByType({
+				encryptedWif: "",
+				network,
+				type: OptionsValue.SECRET,
+				value: "secret",
+			}),
+		).resolves.toBeInstanceOf(Wallet);
+
+		expect(profile.wallets().count()).toBe(countBefore + 1);
 	});
 
 	it("should reject import wallet from encryptedWif", async () => {
