@@ -1,21 +1,29 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { act, renderHook } from "@testing-library/react-hooks";
-import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
+import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "app/contexts";
+import { toasts } from "app/services";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { Route } from "react-router-dom";
 import {
+	act as renderAct,
 	env,
 	getDefaultProfileId,
+	MNEMONICS,
 	pluginManager,
 	renderWithRouter,
 	syncDelegates,
 	waitFor,
 } from "utils/testing-library";
 
-import { useProfileRestore, useProfileSyncStatus } from "./use-profile-synchronizer";
+import {
+	useProfileRestore,
+	useProfileStatusWatcher,
+	useProfileSynchronizer,
+	useProfileSyncStatus,
+} from "./use-profile-synchronizer";
 import * as profileUtilsHook from "./use-profile-utils";
 
 const history = createMemoryHistory();
@@ -106,8 +114,10 @@ describe("useProfileSyncStatus", () => {
 			result: { current },
 		} = renderHook(() => useProfileSyncStatus(), { wrapper });
 
-		current.setStatus("idle");
-		current.setStatus("syncing");
+		act(() => {
+			current.setStatus("idle");
+			current.setStatus("syncing");
+		});
 
 		expect(current.isIdle()).toEqual(false);
 		expect(current.shouldRestore(profile)).toEqual(false);
@@ -125,7 +135,9 @@ describe("useProfileSyncStatus", () => {
 			result: { current },
 		} = renderHook(() => useProfileSyncStatus(), { wrapper });
 
-		current.setStatus("synced");
+		act(() => {
+			current.setStatus("synced");
+		});
 
 		expect(current.isIdle()).toEqual(false);
 		expect(current.shouldRestore(profile)).toEqual(false);
@@ -143,7 +155,9 @@ describe("useProfileSyncStatus", () => {
 			result: { current },
 		} = renderHook(() => useProfileSyncStatus(), { wrapper });
 
-		current.setStatus("completed");
+		act(() => {
+			current.setStatus("completed");
+		});
 
 		expect(current.isIdle()).toEqual(false);
 		expect(current.shouldRestore(profile)).toEqual(false);
@@ -161,28 +175,13 @@ describe("useProfileSynchronizer", () => {
 		await profile.sync();
 
 		await syncDelegates(profile);
+
+		jest.spyOn(toasts, "success").mockImplementation();
+		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 	});
 
 	afterEach(() => {
 		jest.clearAllTimers();
-	});
-
-	it("should sync profile", async () => {
-		history.push(dashboardURL);
-		await act(async () => {
-			const { getByTestId } = renderWithRouter(
-				<Route path="/profiles/:profileId/dashboard">
-					<div data-testid="ProfileSynced">test</div>
-				</Route>,
-				{
-					history,
-					routes: [dashboardURL],
-					withProfileSynchronizer: true,
-				},
-			);
-
-			await waitFor(() => expect(getByTestId("ProfileSynced")).toBeInTheDocument(), { timeout: 4000 });
-		});
 	});
 
 	it("should clear last profile sync jobs", async () => {
@@ -201,13 +200,17 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		jest.runOnlyPendingTimers();
+		renderAct(() => {
+			jest.runOnlyPendingTimers();
+		});
 
 		await waitFor(() => expect(getByTestId("ProfileSynced")).toBeInTheDocument(), { timeout: 4000 });
 
-		history.push("/");
+		renderAct(() => {
+			history.push("/");
 
-		jest.runAllTimers();
+			jest.runAllTimers();
+		});
 
 		await waitFor(() => expect(history.location.pathname).toEqual("/"));
 		await waitFor(() => expect(() => getByTestId("ProfileSynced")).toThrow(), { timeout: 4000 });
@@ -320,6 +323,75 @@ describe("useProfileSynchronizer", () => {
 
 		await waitFor(() => expect(getByTestId("ProfileRestored")).toBeInTheDocument(), { timeout: 4000 });
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
+	});
+
+	it("should sync profile and handle resync with errored networks", async () => {
+		history.push(dashboardURL);
+		let configuration: any;
+		let profileErroredNetworks: string[] = [];
+
+		await act(async () => {
+			const Component = () => {
+				configuration = useConfiguration();
+				useProfileSynchronizer({
+					onProfileSyncError: (erroredNetworks: string[], retrySync) => {
+						profileErroredNetworks = erroredNetworks;
+						retrySync();
+					},
+				});
+				return <div data-testid="ProfileSynced">test</div>;
+			};
+
+			const { getByTestId } = renderWithRouter(
+				<Route path="/profiles/:profileId/dashboard">
+					<Component />
+				</Route>,
+				{
+					history,
+					routes: [dashboardURL],
+					withProfileSynchronizer: true,
+				},
+			);
+
+			await waitFor(() => expect(getByTestId("ProfileSynced")).toBeInTheDocument(), { timeout: 4000 });
+		});
+
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const mockWalletSyncStatus = jest
+			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
+			.mockReturnValue(false);
+
+		await renderAct(async () => {
+			configuration.setConfiguration({ profileIsSyncingWallets: true });
+		});
+		await waitFor(() => expect(configuration.profileIsSyncingWallets).toEqual(true));
+
+		await renderAct(async () => {
+			configuration.setConfiguration({ profileIsSyncingWallets: false });
+		});
+
+		await waitFor(() => expect(configuration.profileIsSyncingWallets).toEqual(false));
+		await waitFor(() => expect(profileErroredNetworks.length).toEqual(1));
+
+		mockWalletSyncStatus.mockRestore();
+	});
+
+	it("should sync profile", async () => {
+		history.push(dashboardURL);
+		await act(async () => {
+			const { getByTestId } = renderWithRouter(
+				<Route path="/profiles/:profileId/dashboard">
+					<div data-testid="ProfileSynced">test</div>
+				</Route>,
+				{
+					history,
+					routes: [dashboardURL],
+					withProfileSynchronizer: true,
+				},
+			);
+
+			await waitFor(() => expect(getByTestId("ProfileSynced")).toBeInTheDocument(), { timeout: 4000 });
+		});
 	});
 });
 
@@ -527,5 +599,241 @@ describe("useProfileRestore", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 		idleTimeMock.mockRestore();
 		historyMock.mockRestore();
+	});
+
+	it("should sync profile and handle sync error", async () => {
+		history.push(dashboardURL);
+
+		const profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		profile.wallets().push(
+			await profile.walletFactory().fromMnemonicWithBIP39({
+				coin: "ARK",
+				mnemonic: MNEMONICS[0],
+				network: "ark.devnet",
+			}),
+		);
+
+		profile.wallets().push(
+			await profile.walletFactory().fromAddress({
+				address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+				coin: "ARK",
+				network: "ark.mainnet",
+			}),
+		);
+
+		const profileSyncMock = jest.spyOn(profile, "sync").mockImplementation(() => {
+			throw new Error("sync test");
+		});
+
+		await act(async () => {
+			renderWithRouter(
+				<Route path="/profiles/:profileId/dashboard">
+					<div data-testid="ProfileSynced">test</div>
+				</Route>,
+				{
+					history,
+					routes: [dashboardURL],
+					withProfileSynchronizer: true,
+				},
+			);
+
+			await waitFor(() => expect(profileSyncMock).toHaveBeenCalled());
+		});
+
+		profileSyncMock.mockRestore();
+	});
+});
+
+describe("useProfileStatusWatcher", () => {
+	it("should not monitor for network status if profile is undefined", async () => {
+		const onProfileSyncComplete = jest.fn();
+		const onProfileSyncError = jest.fn();
+
+		const wrapper = ({ children }: any) => (
+			<EnvironmentProvider env={env}>
+				<ConfigurationProvider>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
+			</EnvironmentProvider>
+		);
+
+		renderHook(
+			() => useProfileStatusWatcher({ env, onProfileSyncComplete, onProfileSyncError, profile: undefined }),
+			{
+				wrapper,
+			},
+		);
+
+		expect(onProfileSyncComplete).not.toHaveBeenCalled();
+		expect(onProfileSyncError).not.toHaveBeenCalled();
+	});
+
+	it("should not monitor for network status if profile has not finished syncing", async () => {
+		const onProfileSyncComplete = jest.fn();
+		const onProfileSyncError = jest.fn();
+		const profile = env.profiles().findById(getDefaultProfileId());
+
+		const wrapper = ({ children }: any) => (
+			<EnvironmentProvider env={env}>
+				<ConfigurationProvider
+					defaultConfiguration={{ profileHasSynced: false, profileIsSyncingWallets: false }}
+				>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
+			</EnvironmentProvider>
+		);
+
+		renderHook(() => useProfileStatusWatcher({ env, onProfileSyncComplete, onProfileSyncError, profile }), {
+			wrapper,
+		});
+
+		expect(onProfileSyncComplete).not.toHaveBeenCalled();
+		expect(onProfileSyncError).not.toHaveBeenCalled();
+	});
+
+	it("should not monitor for network status if profile is still syncing wallets", async () => {
+		const onProfileSyncComplete = jest.fn();
+		const onProfileSyncError = jest.fn();
+		const profile = env.profiles().findById(getDefaultProfileId());
+
+		const wrapper = ({ children }: any) => (
+			<EnvironmentProvider env={env}>
+				<ConfigurationProvider defaultConfiguration={{ profileHasSynced: true, profileIsSyncingWallets: true }}>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
+			</EnvironmentProvider>
+		);
+
+		renderHook(() => useProfileStatusWatcher({ env, onProfileSyncComplete, onProfileSyncError, profile }), {
+			wrapper,
+		});
+
+		expect(onProfileSyncComplete).not.toHaveBeenCalled();
+		expect(onProfileSyncError).not.toHaveBeenCalled();
+	});
+
+	it("should not monitor for network status if profile has no wallets", async () => {
+		const onProfileSyncComplete = jest.fn();
+		const onProfileSyncError = jest.fn();
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const walletCountMock = jest.spyOn(profile.wallets(), "count").mockReturnValue(0);
+
+		const wrapper = ({ children }: any) => (
+			<EnvironmentProvider env={env}>
+				<ConfigurationProvider>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
+			</EnvironmentProvider>
+		);
+
+		renderHook(() => useProfileStatusWatcher({ env, onProfileSyncComplete, onProfileSyncError, profile }), {
+			wrapper,
+		});
+
+		expect(onProfileSyncComplete).not.toHaveBeenCalled();
+		expect(onProfileSyncError).not.toHaveBeenCalled();
+
+		walletCountMock.mockRestore();
+	});
+
+	it("should trigger sync error callback if profile has errored wallet networks", async () => {
+		const onProfileSyncComplete = jest.fn();
+		const onProfileSyncError = jest.fn();
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const mockWalletSyncStatus = jest
+			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
+			.mockReturnValue(false);
+
+		const wrapper = ({ children }: any) => (
+			<EnvironmentProvider env={env}>
+				<ConfigurationProvider
+					defaultConfiguration={{
+						profileHasSynced: true,
+						profileHasSyncedOnce: true,
+						profileIsSyncingWallets: false,
+					}}
+				>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
+			</EnvironmentProvider>
+		);
+
+		renderHook(() => useProfileStatusWatcher({ env, onProfileSyncComplete, onProfileSyncError, profile }), {
+			wrapper,
+		});
+
+		expect(onProfileSyncComplete).not.toHaveBeenCalled();
+		expect(onProfileSyncError).toHaveBeenCalled();
+
+		mockWalletSyncStatus.mockRestore();
+	});
+
+	it("should stay idle if network status has not changed", async () => {
+		const onProfileSyncComplete = jest.fn();
+		const onProfileSyncError = jest.fn();
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const wrapper = ({ children }: any) => (
+			<EnvironmentProvider env={env}>
+				<ConfigurationProvider
+					defaultConfiguration={{
+						profileHasSynced: true,
+						profileHasSyncedOnce: true,
+						profileIsSyncingWallets: false,
+					}}
+				>
+					<PluginManagerProvider manager={pluginManager} services={[]}>
+						{children}
+					</PluginManagerProvider>
+				</ConfigurationProvider>
+			</EnvironmentProvider>
+		);
+
+		const setState = jest.fn();
+		const useStateSpy = jest.spyOn(React, "useState");
+		//@ts-ignore
+		useStateSpy.mockImplementation((initialState, setActualState) => {
+			// Use actual state if it's not `isInitialSync` in useProfileStatusWatcher
+			if (initialState !== true) {
+				return [initialState, setActualState];
+			}
+
+			if (initialState.previousErroredNetworks) {
+				return [{ ...initialState, previousErroredNetworks: ["ARK Devnet"] }, setActualState];
+			}
+
+			// Mock `isInitialSync` as false for idle state
+			return [false, setState];
+		});
+
+		renderHook(
+			() =>
+				useProfileStatusWatcher({
+					env,
+					onProfileSyncComplete,
+					onProfileSyncError,
+					profile,
+				}),
+			{
+				wrapper,
+			},
+		);
+
+		useStateSpy.mockRestore();
+
+		expect(onProfileSyncComplete).not.toHaveBeenCalled();
+		expect(onProfileSyncError).not.toHaveBeenCalled();
 	});
 });

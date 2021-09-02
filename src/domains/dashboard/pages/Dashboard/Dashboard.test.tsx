@@ -6,7 +6,6 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
-import { toasts } from "app/services";
 import { translations as dashboardTranslations } from "domains/dashboard/i18n";
 import { translations as profileTranslations } from "domains/profile/i18n";
 import { translations as walletTranslations } from "domains/wallet/i18n";
@@ -262,38 +261,6 @@ describe("Dashboard", () => {
 
 		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/wallets/import`);
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should show warning for errored networks", async () => {
-		const walletRestoreMock = jest
-			.spyOn(profile.wallets().first(), "hasBeenPartiallyRestored")
-			.mockReturnValue(true);
-
-		const warningMock = jest.fn();
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation(warningMock);
-
-		const { asFragment, getByTestId } = renderWithRouter(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				routes: [dashboardURL],
-				withProfileSynchronizer: true,
-			},
-		);
-
-		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(3),
-			{ timeout: 4000 },
-		);
-
-		expect(toastSpy).toHaveBeenCalled();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		walletRestoreMock.mockRestore();
-		toastSpy.mockRestore();
 	});
 
 	it("should render loading state when profile is syncing", async () => {

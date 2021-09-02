@@ -51,6 +51,8 @@ export const ToastMessage = ({
 };
 
 export class ToastService {
+	#toastAnimationDuration = 1300;
+
 	private readonly defaultOptions: ToastOptions = {
 		autoClose: 5000,
 		closeButton: false,
@@ -92,5 +94,6 @@ export class ToastService {
 
 	public dismiss(id?: ToastId) {
 		toast.dismiss(id);
+		return new Promise((resolve) => setTimeout(() => resolve(), this.#toastAnimationDuration));
 	}
 }

@@ -116,6 +116,15 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
+				url: "https://ark-live.payvo.com/api/transactions/search?page=1&limit=10",
+			},
+			{
+				addresses: ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"],
+			},
+		),
+		mockRequest(
+			{
+				method: "POST",
 				url: "https://ark-live.payvo.com/api/transactions/search?limit=30",
 			},
 			{

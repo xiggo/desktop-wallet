@@ -22,7 +22,7 @@ import { Offline } from "domains/error/pages";
 import { Splash } from "domains/splash/pages";
 import React, { useLayoutEffect, useState } from "react";
 import { useErrorHandler } from "react-error-boundary";
-import { I18nextProvider } from "react-i18next";
+import { I18nextProvider, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { StubStorage } from "tests/mocks";
@@ -30,13 +30,14 @@ import { setThemeSource, shouldUseDarkColors } from "utils/electron-utils";
 import { bootEnvWithProfileFixtures, isE2E, isUnit } from "utils/test-helpers";
 
 import { middlewares, RouterView, routes } from "../router";
+import { SyncErrorMessage } from "./components/ProfileSyncStatusMessage";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, useEnvironmentContext } from "./contexts";
 import { useDeeplink, useNetworkStatus, useProfileSynchronizer } from "./hooks";
 import { i18n as index18n } from "./i18n";
 import { PluginProviders } from "./PluginProviders";
 import { SentryProvider } from "./sentry/SentryProvider";
 import { SentryRouterWrapper } from "./sentry/SentryRouterWrapper";
-import { httpClient } from "./services";
+import { httpClient, toasts } from "./services";
 
 const RouteWrappers = ({ children }: { children: React.ReactNode }) => (
 	<SentryRouterWrapper>{children}</SentryRouterWrapper>
@@ -47,9 +48,33 @@ const Main = () => {
 	const { env } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
+	const { t } = useTranslation();
 
 	useProfileSynchronizer({
 		onProfileRestoreError: () => history.push("/"),
+		onProfileSignOut: () => {
+			toasts.dismiss();
+		},
+		onProfileSyncComplete: async () => {
+			await toasts.dismiss();
+			toasts.success(t("COMMON.PROFILE_SYNC_COMPLETED"));
+		},
+		onProfileSyncError: async (failedNetworkNames, retryProfileSync) => {
+			await toasts.dismiss();
+
+			toasts.warning(
+				<SyncErrorMessage
+					failedNetworkNames={failedNetworkNames}
+					onRetry={async () => {
+						await toasts.dismiss();
+						retryProfileSync();
+					}}
+				/>,
+			);
+		},
+		onProfileSyncStart: () => {
+			toasts.warning(t("COMMON.PROFILE_SYNC_STARTED"), { autoClose: false });
+		},
 	});
 
 	useDeeplink();

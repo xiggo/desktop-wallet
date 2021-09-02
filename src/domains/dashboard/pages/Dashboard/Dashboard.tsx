@@ -2,15 +2,14 @@ import { Contracts, DTO } from "@payvo/profiles";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Page, Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useProfileUtils } from "app/hooks";
-import { toasts } from "app/services";
+import { useActiveProfile } from "app/hooks";
 import { Wallets } from "domains/dashboard/components/Wallets";
 import { useTutorial } from "domains/dashboard/hooks";
 import { ProfileCreated } from "domains/profile/components/ProfileCreated";
 import { TransactionDetailModal } from "domains/transaction/components/TransactionDetailModal";
 import { TransactionTable } from "domains/transaction/components/TransactionTable";
-import React, { useEffect, useState } from "react";
-import { Trans, useTranslation } from "react-i18next";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 export const Dashboard = () => {
@@ -20,7 +19,6 @@ export const Dashboard = () => {
 
 	const { profileIsSyncing } = useConfiguration();
 	const { env } = useEnvironmentContext();
-	const { getErroredNetworks } = useProfileUtils(env);
 	const { showTutorial, startTutorial, skipTutorial } = useTutorial(env, activeProfile);
 
 	const profileWalletsCount = activeProfile.wallets().count();
@@ -33,25 +31,6 @@ export const Dashboard = () => {
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
 		undefined,
 	);
-
-	useEffect(() => {
-		if (profileIsSyncing) {
-			return;
-		}
-
-		const { hasErroredNetworks, erroredNetworks } = getErroredNetworks(activeProfile);
-		if (!hasErroredNetworks) {
-			return;
-		}
-
-		toasts.warning(
-			<Trans
-				i18nKey="COMMON.ERRORS.NETWORK_ERROR"
-				values={{ network: erroredNetworks.join(", ") }}
-				components={{ bold: <strong /> }}
-			/>,
-		);
-	}, [profileIsSyncing, activeProfile, t, getErroredNetworks]);
 
 	return (
 		<>

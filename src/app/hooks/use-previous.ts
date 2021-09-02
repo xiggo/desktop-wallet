@@ -7,5 +7,5 @@ export const usePrevious = (value: any) => {
 		reference.current = value;
 	}, [value]);
 
-	return reference.current;
+	return reference.current as any;
 };

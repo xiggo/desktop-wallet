@@ -4,7 +4,6 @@ import { Contracts } from "@payvo/profiles";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { Enums } from "@payvo/sdk";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { toasts } from "app/services";
 import { translations as walletTranslations } from "domains/wallet/i18n";
 import electron from "electron";
 import { createMemoryHistory } from "history";
@@ -151,19 +150,6 @@ describe("WalletDetails", () => {
 	beforeEach(() => {
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
-	});
-
-	it("should show network connection warning", async () => {
-		const walletRestoreMock = jest.spyOn(wallet, "hasBeenPartiallyRestored").mockReturnValue(true);
-
-		const warningMock = jest.fn();
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation(warningMock);
-
-		await renderPage({ waitForTopSection: false });
-
-		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
-		walletRestoreMock.mockRestore();
-		toastSpy.mockRestore();
 	});
 
 	it("should not render wallet vote when the network does not support votes", async () => {

@@ -11,6 +11,7 @@ export const translations: { [key: string]: any } = {
 	ALL: "All",
 	AMOUNT: "Amount",
 	AMOUNT_PLACEHOLDER: "Enter an amount",
+	AND: "and",
 	APPEARANCE: "Appearance",
 	APP_NAME: "Payvo Wallet",
 	APP_NAME_SHORT: "Payvo Wallet",
@@ -101,7 +102,8 @@ export const translations: { [key: string]: any } = {
 	ERRORS: {
 		INVALID_IMAGE: "File is not an image",
 		INVALID_URL: "The link could not be opened: '{{url}}' is not a valid URL",
-		NETWORK_ERROR: "Failed to connect to <bold>{{network}}</bold>. Please check your peer settings",
+		NETWORK_ERROR:
+			"There has been a network problem on <bold>{{network}}</bold> while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect",
 	},
 	EXCHANGE: "Exchange",
 	EXPIRATION: "Expiration",
@@ -117,6 +119,7 @@ export const translations: { [key: string]: any } = {
 	FORGED_ARK: "Forged ARK",
 	GO_TO_PORTFOLIO: "Go to Portfolio",
 	GO_TO_WALLET: "Go to Wallet",
+	HERE: "here",
 	HIDE: "Hide",
 	HIDE_WALLET_BUTTON_TEXT: "Hide text from wallet buttons",
 	ID: "ID",
@@ -219,6 +222,10 @@ export const translations: { [key: string]: any } = {
 	PREVIOUS: "Previous",
 	PRIVATE_KEY: "Private Key",
 	PROFILE: "Profile",
+	PROFILE_SYNC_COMPLETED: "Data updated successfully",
+	PROFILE_SYNC_FAILED:
+		"There has been a network problem on <NetworkNames/> while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click <RetryLink/> to retry.",
+	PROFILE_SYNC_STARTED: "Synchronizing your wallets data. Please wait...",
 	PUBLIC_KEY: "Public Key",
 	PUBLIC_NETWORKS: "Public Networks",
 	QR_CODE: "QR Code",

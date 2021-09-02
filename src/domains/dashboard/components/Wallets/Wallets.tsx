@@ -40,6 +40,7 @@ export const Wallets = ({
 	const filterProperties = useWalletFilters({ profile: activeProfile });
 	const { viewType, walletsDisplayType, selectedNetworkIds, update } = filterProperties;
 
+	const profileIsSyncedWithNetwork = !activeProfile.hasBeenPartiallyRestored();
 	const wallets = useMemo(() => {
 		if (activeProfile.settings().get(Contracts.ProfileSetting.UseTestNetworks)) {
 			return activeProfile.wallets().values();
@@ -49,7 +50,7 @@ export const Wallets = ({
 			.wallets()
 			.values()
 			.filter((wallet) => wallet.network().isLive());
-	}, [activeProfile, walletsCount]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [activeProfile, walletsCount, profileIsSyncedWithNetwork]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const { listWallets, listHasMore, gridWallets, sliderOptions, hasWalletsMatchingOtherNetworks } = useWalletDisplay({
 		displayType: walletsDisplayType,

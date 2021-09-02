@@ -310,6 +310,21 @@ export const requestMocks = {
 		),
 
 		mockRequest(
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"coins/ark/devnet/transactions",
+		),
+
+		mockRequest(
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+			"coins/ark/devnet/transactions",
+		),
+
+		mockRequest(
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+			"coins/ark/devnet/transactions",
+		),
+
+		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/transactions",
 		),

@@ -17,11 +17,20 @@ export const ConfigurationProvider = ({ children, defaultConfiguration }: Proper
 		// Domain specific configuration defaults
 		dashboard: null,
 
+		// Errored networks names after a failed sync.
+		profileErroredNetworks: [],
+
+		profileHasSyncedOnce: false,
+
 		profileIsRestoring: false,
+
 		// Initial sync state of profile. Handled in profile synchronizer.
 		profileIsSyncing: true,
+
 		// Separate flag for exchange rate sync status. Updated by profile sync exchange job.
 		profileIsSyncingExchangeRates: false,
+
+		profileIsSyncingWallets: false,
 		restoredProfiles: [],
 		...defaultConfiguration,
 	});

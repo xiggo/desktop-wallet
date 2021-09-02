@@ -15,6 +15,7 @@ import {
 	getDefaultPassword,
 	getDefaultProfileId,
 	getPasswordProtectedProfileId,
+	MNEMONICS,
 	RenderResult,
 	renderWithRouter,
 	useDefaultNetMocks,
@@ -83,59 +84,9 @@ describe("App", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each([false, true])("should set the theme based on system preferences", async (shouldUseDarkColors) => {
+	it("should handle profile sync error", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
-
-		jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
-
-		const { getByText } = renderWithRouter(<App />, { withProviders: false });
-
-		await waitFor(() => {
-			expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
-		});
-
-		expect(document.body).toHaveClass(`theme-${shouldUseDarkColors ? "dark" : "light"}`);
-	});
-
-	it("should enter profile", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		const { getAllByTestId, getByTestId, getByText, history } = renderWithRouter(<App />, { withProviders: false });
-
-		await waitFor(() => {
-			expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
-		});
-
-		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
-
-		expect(history.location.pathname).toMatch("/");
-
-		await act(async () => {
-			fireEvent.click(getAllByTestId("Card")[1]);
-		});
-
-		await waitFor(() => {
-			expect(getByTestId("SignIn__input--password")).toBeInTheDocument();
-		});
-
-		await act(async () => {
-			fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
-		});
-
-		await waitFor(() => {
-			expect(getByTestId("SignIn__input--password")).toHaveValue("password");
-		});
-
-		await act(async () => {
-			fireEvent.click(getByTestId("SignIn__submit-button"));
-		});
-
-		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
-		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
-	});
-
-	it("should redirect to root if profile restoration error occurs", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
+		jest.useFakeTimers();
 
 		const { getAllByTestId, getByTestId, getByText, history } = renderWithRouter(<App />, { withProviders: false });
 
@@ -145,36 +96,60 @@ describe("App", () => {
 
 		expect(history.location.pathname).toMatch("/");
 
+		const selectedProfile = env.profiles().findById(profile.id());
+
+		selectedProfile.wallets().push(
+			await selectedProfile.walletFactory().fromMnemonicWithBIP39({
+				coin: "ARK",
+				mnemonic: MNEMONICS[0],
+				network: "ark.devnet",
+			}),
+		);
+
+		selectedProfile.wallets().push(
+			await selectedProfile.walletFactory().fromAddress({
+				address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+				coin: "ARK",
+				network: "ark.mainnet",
+			}),
+		);
+
+		env.profiles().persist(profile);
+
+		const walletSyncErrorMock = jest
+			.spyOn(selectedProfile.wallets().first(), "hasSyncedWithNetwork")
+			.mockReturnValue(false);
+		const walletRestoreErrorMock = jest
+			.spyOn(selectedProfile.wallets().last(), "hasBeenFullyRestored")
+			.mockReturnValue(false);
+		const profileSyncMock = jest.spyOn(selectedProfile, "sync").mockImplementation(() => {
+			throw new Error("sync test");
+		});
+
 		await act(async () => {
-			fireEvent.click(getAllByTestId("Card")[1]);
-		});
-
-		await waitFor(() => {
-			expect(getByTestId("SignIn__input--password")).toBeInTheDocument();
+			fireEvent.click(getAllByTestId("Card")[0]);
 		});
 
 		await act(async () => {
-			fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
+			const profileDashboardUrl = `/profiles/${profile.id()}/dashboard`;
+			await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
+
+			jest.runAllTimers();
+
+			await waitFor(() => expect(getByTestId("SyncErrorMessage__retry")).toBeInTheDocument(), { timeout: 4000 });
+
+			profileSyncMock.mockRestore();
+			fireEvent.click(getByTestId("SyncErrorMessage__retry"));
+
+			jest.runAllTimers();
+
+			await waitFor(() => expect(() => getByTestId("SyncErrorMessage__retry")).toThrow());
+			await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
 		});
 
-		await waitFor(() => {
-			expect(getByTestId("SignIn__input--password")).toHaveValue("password");
-		});
-
-		const verifyPasswordMock = jest.spyOn(Bcrypt, "verify").mockReturnValue(true);
-		const memoryPasswordMock = jest.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
-			throw new Error("password not found");
-		});
-
-		await act(async () => {
-			fireEvent.click(getByTestId("SignIn__submit-button"));
-		});
-
-		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalled());
-		await waitFor(() => expect(history.location.pathname).toMatch("/"), { timeout: 4000 });
-
-		memoryPasswordMock.mockRestore();
-		verifyPasswordMock.mockRestore();
+		walletRestoreErrorMock.mockRestore();
+		walletSyncErrorMock.mockRestore();
+		jest.useRealTimers();
 	});
 
 	it("should close splash screen if not e2e", async () => {
@@ -299,5 +274,150 @@ describe("App", () => {
 			expect(getByText(profileTranslations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
+	});
+
+	it("should redirect to root if profile restoration error occurs", async () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		const { getAllByTestId, getByTestId, getByText, history } = renderWithRouter(<App />, { withProviders: false });
+
+		await waitFor(() => {
+			expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		});
+
+		expect(history.location.pathname).toMatch("/");
+
+		await act(async () => {
+			fireEvent.click(getAllByTestId("Card")[1]);
+		});
+
+		await waitFor(() => {
+			expect(getByTestId("SignIn__input--password")).toBeInTheDocument();
+		});
+
+		await act(async () => {
+			fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
+		});
+
+		await waitFor(() => {
+			expect(getByTestId("SignIn__input--password")).toHaveValue("password");
+		});
+
+		const verifyPasswordMock = jest.spyOn(Bcrypt, "verify").mockReturnValue(true);
+		const memoryPasswordMock = jest.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
+			throw new Error("password not found");
+		});
+
+		await act(async () => {
+			fireEvent.click(getByTestId("SignIn__submit-button"));
+		});
+
+		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalled());
+		await waitFor(() => expect(history.location.pathname).toMatch("/"), { timeout: 4000 });
+
+		memoryPasswordMock.mockRestore();
+		verifyPasswordMock.mockRestore();
+		jest.restoreAllMocks();
+	});
+
+	it("should enter profile and show toast message for successfull sync", async () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+		jest.useFakeTimers();
+		const successToast = jest.spyOn(toasts, "success").mockImplementation();
+
+		const { getAllByTestId, getByText, history } = renderWithRouter(<App />, { withProviders: false });
+
+		await waitFor(() => {
+			expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		});
+
+		expect(history.location.pathname).toMatch("/");
+
+		const selectedProfile = env.profiles().findById(profile.id());
+
+		selectedProfile.wallets().push(
+			await selectedProfile.walletFactory().fromMnemonicWithBIP39({
+				coin: "ARK",
+				mnemonic: MNEMONICS[0],
+				network: "ark.devnet",
+			}),
+		);
+
+		selectedProfile.wallets().push(
+			await selectedProfile.walletFactory().fromAddress({
+				address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+				coin: "ARK",
+				network: "ark.mainnet",
+			}),
+		);
+
+		env.profiles().persist(profile);
+
+		await act(async () => {
+			fireEvent.click(getAllByTestId("Card")[0]);
+		});
+
+		await act(async () => {
+			const profileDashboardUrl = `/profiles/${profile.id()}/dashboard`;
+			await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
+			await waitFor(() => expect(successToast).toHaveBeenCalled());
+		});
+
+		jest.useRealTimers();
+		successToast.mockRestore();
+	});
+
+	it("should enter profile", async () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		const { getAllByTestId, getByTestId, getByText, history } = renderWithRouter(<App />, { withProviders: false });
+
+		await waitFor(() => {
+			expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		});
+
+		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
+
+		expect(history.location.pathname).toMatch("/");
+
+		await act(async () => {
+			fireEvent.click(getAllByTestId("Card")[1]);
+		});
+
+		await waitFor(() => {
+			expect(getByTestId("SignIn__input--password")).toBeInTheDocument();
+		});
+
+		await act(async () => {
+			fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
+		});
+
+		await waitFor(() => {
+			expect(getByTestId("SignIn__input--password")).toHaveValue("password");
+		});
+
+		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+
+		await act(async () => {
+			fireEvent.click(getByTestId("SignIn__submit-button"));
+		});
+
+		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
+		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
+	});
+
+	it.each([false, true])("should set the theme based on system preferences", async (shouldUseDarkColors) => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
+
+		const { getByText } = renderWithRouter(<App />, { withProviders: false });
+
+		await waitFor(() => {
+			expect(getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		});
+
+		expect(document.body).toHaveClass(`theme-${shouldUseDarkColors ? "dark" : "light"}`);
 	});
 });

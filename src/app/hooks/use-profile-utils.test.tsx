@@ -82,9 +82,7 @@ describe("useProfileUtils", () => {
 
 	it("should have errored networks", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const walletRestoreMock = jest
-			.spyOn(profile.wallets().first(), "hasBeenPartiallyRestored")
-			.mockReturnValue(true);
+		const walletRestoreMock = jest.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 

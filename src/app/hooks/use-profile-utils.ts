@@ -1,4 +1,3 @@
-import { uniq } from "@arkecosystem/utils";
 import { Contracts, Environment } from "@payvo/profiles";
 import { useCallback, useMemo } from "react";
 import { matchPath } from "react-router-dom";
@@ -45,13 +44,23 @@ export const useProfileUtils = (environment: Environment) => {
 	}, []);
 
 	const getErroredNetworks = useCallback((profile: Contracts.IProfile) => {
-		const erroredNetworks = profile
-			.wallets()
-			.values()
-			.filter((wallet) => wallet.hasBeenPartiallyRestored())
-			.map((wallet) => `${wallet.network().name()}`);
+		const erroredNetworks: string[] = [];
 
-		return { erroredNetworks: uniq(erroredNetworks), hasErroredNetworks: erroredNetworks.length > 0 };
+		for (const wallet of profile.wallets().values()) {
+			const name = `${wallet.network().coin()} ${wallet.network().name()}`;
+
+			if (erroredNetworks.includes(name)) {
+				continue;
+			}
+
+			if (wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork()) {
+				continue;
+			}
+
+			erroredNetworks.push(name);
+		}
+
+		return { erroredNetworks, hasErroredNetworks: erroredNetworks.length > 0 };
 	}, []);
 
 	return useMemo(() => ({ getErroredNetworks, getProfileById, getProfileFromUrl, getProfileStoredPassword }), [
