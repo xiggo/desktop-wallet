@@ -101,6 +101,19 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		data: () => ({ data: () => MultisignatureRegistrationFixture.data }),
 		explorerLink: () => `https://dexplorer.ark.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
 		fee: () => +MultisignatureRegistrationFixture.data.fee / 1e8,
+		get: (attribute: string) => {
+			if (attribute === "multiSignature") {
+				return {
+					min: 2,
+					publicKeys: [
+						"03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+						"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+					],
+				};
+			}
+
+			return undefined;
+		},
 		id: () => MultisignatureRegistrationFixture.data.id,
 		isMultiSignatureRegistration: () => true,
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,

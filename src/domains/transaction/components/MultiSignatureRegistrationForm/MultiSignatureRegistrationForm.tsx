@@ -1,5 +1,5 @@
 import { TabPanel, Tabs } from "app/components/Tabs";
-import { TransactionDetail, TransactionFee } from "domains/transaction/components/TransactionDetail";
+import { TransactionFee } from "domains/transaction/components/TransactionDetail";
 import {
 	SendRegistrationComponent,
 	SendRegistrationDetailsOptions,
@@ -20,12 +20,8 @@ const StepsComponent = ({ activeTab, fees, wallet, profile }: SendRegistrationCo
 	</Tabs>
 );
 
-const transactionDetails = ({ transaction, translations, wallet }: SendRegistrationDetailsOptions) => (
+const transactionDetails = ({ transaction, wallet }: SendRegistrationDetailsOptions) => (
 	<>
-		<TransactionDetail label={translations("TRANSACTION.MULTISIGNATURE.GENERATED_ADDRESS")}>
-			{transaction.generatedAddress}
-		</TransactionDetail>
-
 		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
 	</>
 );
