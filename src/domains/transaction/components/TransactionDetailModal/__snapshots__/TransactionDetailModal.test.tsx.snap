@@ -1857,7 +1857,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 gxyXCF no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1872,27 +1872,126 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   class="font-semibold"
                 >
                   <div
-                    class="flex flex-col space-y-2"
+                    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
                   >
                     <div
-                      class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+                      role="table"
                     >
-                      <span
-                        class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
+                      <table
+                        cellpadding="0"
+                        class="table-auto"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                      </span>
-                    </div>
-                    <div
-                      class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                    >
-                      <span
-                        class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                      </span>
+                        <thead>
+                          <tr
+                            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                            role="row"
+                          >
+                            <th
+                              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                              colspan="1"
+                              data-testid="table__th--0"
+                              role="columnheader"
+                            >
+                              <div
+                                class="flex flex-inline align-top hidden"
+                              >
+                                <div>
+                                  Avatar
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                              colspan="1"
+                              data-testid="table__th--1"
+                              role="columnheader"
+                            >
+                              <div
+                                class="flex flex-inline align-top hidden"
+                              >
+                                <div>
+                                  Address
+                                </div>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody
+                          role="rowgroup"
+                        >
+                          <tr
+                            class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                            data-testid="recipient-list__recipient-list-item"
+                          >
+                            <td>
+                              <div
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                >
+                                  <img
+                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                  />
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="flex-1 ml-4 w-28"
+                            >
+                              <div
+                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                              >
+                                <span
+                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr
+                            class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                            data-testid="recipient-list__recipient-list-item"
+                          >
+                            <td>
+                              <div
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                >
+                                  <img
+                                    alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                                    title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                  />
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="flex-1 ml-4 w-28"
+                            >
+                              <div
+                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                              >
+                                <span
+                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -1918,7 +2017,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
               </div>
             </div>
             <div
-              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
+              class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 gxyXCF no-ligatures"
               data-testid="TransactionDetail"
             >
               <div
@@ -1932,7 +2031,94 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 <div
                   class="font-semibold"
                 >
-                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                  <div
+                    class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
+                  >
+                    <div
+                      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+                      role="table"
+                    >
+                      <table
+                        cellpadding="0"
+                        class="table-auto"
+                      >
+                        <thead>
+                          <tr
+                            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                            role="row"
+                          >
+                            <th
+                              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                              colspan="1"
+                              data-testid="table__th--0"
+                              role="columnheader"
+                            >
+                              <div
+                                class="flex flex-inline align-top hidden"
+                              >
+                                <div>
+                                  Avatar
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                              colspan="1"
+                              data-testid="table__th--1"
+                              role="columnheader"
+                            >
+                              <div
+                                class="flex flex-inline align-top hidden"
+                              >
+                                <div>
+                                  Address
+                                </div>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody
+                          role="rowgroup"
+                        >
+                          <tr
+                            class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+                            data-testid="recipient-list__recipient-list-item"
+                          >
+                            <td>
+                              <div
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fuPYca flex-shrink-0"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                                >
+                                  <img
+                                    alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
+                                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                                    title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
+                                  />
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="flex-1 ml-4 w-28"
+                            >
+                              <div
+                                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                              >
+                                <span
+                                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,7 +1,8 @@
 import { DTO } from "@payvo/profiles";
 import { Enums } from "@payvo/sdk";
-import { Address } from "app/components/Address";
 import { Modal } from "app/components/Modal";
+import { RecipientList } from "domains/transaction/components/RecipientList";
+import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
 import {
 	TransactionConfirmations,
 	TransactionDetail,
@@ -27,14 +28,15 @@ export const MultiSignatureRegistrationDetail = ({
 	const { t } = useTranslation();
 
 	const wallet = transaction.wallet();
-	const [participants, setParticipants] = useState<string[]>([]);
-	const [generatedAddress, setGeneratedAddress] = useState<string | undefined>(undefined);
+	const [participants, setParticipants] = useState<RecipientListItem[]>([]);
+	const [generatedAddress, setGeneratedAddress] = useState<string>();
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const addresses: string[] = [];
+			const addresses: RecipientListItem[] = [];
 			for (const publicKey of transaction.publicKeys()) {
-				addresses.push((await wallet.coin().address().fromPublicKey(publicKey)).address);
+				const address = (await wallet.coin().address().fromPublicKey(publicKey)).address;
+				addresses.push({ address });
 			}
 
 			setParticipants(addresses);
@@ -67,21 +69,24 @@ export const MultiSignatureRegistrationDetail = ({
 
 			<TransactionConfirmations transaction={transaction} />
 
-			<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS")}>
-				<div className="flex flex-col space-y-2">
-					{participants.map((address) => (
-						<Address key={address} address={address} />
-					))}
-				</div>
+			<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS")} paddingPosition="top">
+				<RecipientList showAmount={false} variant="condensed" recipients={participants} isEditable={false} />
 			</TransactionDetail>
 
 			<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.MIN_SIGNATURES")}>
 				{transaction.min()} / {transaction.publicKeys().length}
 			</TransactionDetail>
 
-			<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.GENERATED_ADDRESS")}>
-				{generatedAddress}
-			</TransactionDetail>
+			{generatedAddress && (
+				<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.GENERATED_ADDRESS")} paddingPosition="top">
+					<RecipientList
+						showAmount={false}
+						variant="condensed"
+						recipients={[{ address: generatedAddress }]}
+						isEditable={false}
+					/>
+				</TransactionDetail>
+			)}
 		</Modal>
 	);
 };
