@@ -135,6 +135,7 @@
 					}
 				}
 			},
+			"exchangeTransactions": {},
 			"peers": {},
 			"plugins": {},
 			"data": {
@@ -165,6 +166,7 @@
 			"wallets": {},
 			"contacts": {},
 			"notifications": {},
+			"exchangeTransactions": {},
 			"peers": {},
 			"plugins": {},
 			"data": {

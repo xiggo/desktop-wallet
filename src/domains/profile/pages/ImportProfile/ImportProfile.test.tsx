@@ -194,7 +194,7 @@ describe("ImportProfile", () => {
 
 		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
 			dataTransfer: {
-				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+				files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
 			},
 		});
 
@@ -270,7 +270,7 @@ describe("ImportProfile", () => {
 
 		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
 			dataTransfer: {
-				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+				files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
 			},
 		});
 
@@ -303,7 +303,7 @@ describe("ImportProfile", () => {
 		act(() => {
 			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
 				dataTransfer: {
-					files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+					files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
 				},
 			});
 		});
@@ -384,7 +384,7 @@ describe("ImportProfile", () => {
 		act(() => {
 			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
 				dataTransfer: {
-					files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+					files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
 				},
 			});
 		});
