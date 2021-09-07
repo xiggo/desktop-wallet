@@ -117,7 +117,7 @@ export const WalletCard = ({ isLoading = false, className, wallet, displayType =
 							className="mt-auto text-lg font-bold text-theme-text"
 						/>
 					) : (
-						<div className="w-44 mt-4 h-3 rounded-full bg-theme-secondary-200 dark:bg-theme-secondary-800" />
+						<div className="w-44 mt-4 h-4.5 rounded bg-theme-secondary-200 dark:bg-theme-secondary-800" />
 					)}
 
 					<TruncateMiddleDynamic
