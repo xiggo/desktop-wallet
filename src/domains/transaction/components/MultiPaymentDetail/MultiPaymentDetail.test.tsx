@@ -104,7 +104,7 @@ describe("MultiPaymentDetail", () => {
 			fireEvent.mouseEnter(screen.getByTestId("TransactionAmount__Hint_Amount"));
 		});
 
-		expect(screen.getByText("Excluding 99 ARK sent to itself")).toBeInTheDocument();
+		expect(screen.getByText("Including 99 ARK sent to itself")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

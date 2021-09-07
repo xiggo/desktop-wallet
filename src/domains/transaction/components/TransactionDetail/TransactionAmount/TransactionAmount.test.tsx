@@ -54,6 +54,6 @@ describe("TransactionAmount", () => {
 			fireEvent.mouseEnter(screen.getByTestId("TransactionAmount__Hint_Amount"));
 		});
 
-		expect(screen.getByText("Excluding 1 DARK sent to itself")).toBeInTheDocument();
+		expect(screen.getByText("Including 1 DARK sent to itself")).toBeInTheDocument();
 	});
 });
