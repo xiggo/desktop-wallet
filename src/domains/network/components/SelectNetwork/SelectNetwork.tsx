@@ -10,30 +10,32 @@ import { useTranslation } from "react-i18next";
 import { SelectNetworkInput } from "./SelectNetworkInput";
 
 interface SelectNetworkProperties {
-	selected?: Networks.Network;
-	networks: Networks.Network[];
-	placeholder?: string;
-	name?: string;
-	value?: string;
-	id?: string;
+	autoFocus?: boolean;
 	disabled?: boolean;
 	hideOptions?: boolean;
+	id?: string;
+	name?: string;
+	networks: Networks.Network[];
 	onInputChange?: (value?: string, suggestion?: string) => void;
 	onSelect?: (network?: Networks.Network | null) => void;
+	placeholder?: string;
+	selected?: Networks.Network;
+	value?: string;
 }
 
 export const itemToString = (item: Networks.Network | null) => item?.displayName() || "";
 
 export const SelectNetwork = ({
-	selected,
-	networks,
-	placeholder,
-	onInputChange,
-	onSelect,
-	name,
-	id,
+	autoFocus,
 	disabled,
 	hideOptions,
+	id,
+	name,
+	networks,
+	onInputChange,
+	onSelect,
+	placeholder,
+	selected,
 }: SelectNetworkProperties) => {
 	const { t } = useTranslation();
 
@@ -139,14 +141,15 @@ export const SelectNetwork = ({
 			<div data-testid="SelectNetwork" {...getComboboxProps()}>
 				<label {...getLabelProps()} />
 				<SelectNetworkInput
+					autoFocus={autoFocus}
 					network={selectedItem}
 					suggestion={suggestion}
 					disabled={disabled}
 					{...getInputProps({
 						name,
 						onFocus: openMenu,
-						onKeyDown: (event: any) => {
-							if (event.key === "Tab" || event.key === "Enter") {
+						onKeyDown: (event: React.KeyboardEvent<HTMLInputElement>) => {
+							if (event.key === "Enter") {
 								const firstMatch = networks.find((network: Networks.Network) =>
 									isMatch(inputValue, network),
 								);

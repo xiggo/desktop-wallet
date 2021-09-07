@@ -99,20 +99,7 @@ describe("SelectNetwork", () => {
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 	});
 
-	it("should select first matching asset with tab", () => {
-		render(<SelectNetwork networks={availableNetworksMock} />);
-		const input = screen.getByTestId("SelectNetworkInput__input");
-
-		fireEvent.change(input, { target: { value: "ark" } });
-
-		expect(input).toHaveValue("ark");
-
-		fireEvent.keyDown(input, { code: 9, key: "Tab" });
-
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
-	});
-
-	it("should not select non-matching asset after key input and tab", () => {
+	it("should not select non-matching asset after key input and enter", () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
@@ -120,7 +107,7 @@ describe("SelectNetwork", () => {
 
 		expect(input).toHaveValue("Bot");
 
-		fireEvent.keyDown(input, { code: 9, key: "Tab" });
+		fireEvent.keyDown(input, { code: 13, key: "Enter" });
 
 		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
 	});

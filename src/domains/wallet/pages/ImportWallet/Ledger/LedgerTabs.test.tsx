@@ -356,7 +356,7 @@ describe("LedgerTabs", () => {
 
 		expect(screen.getByTestId("Paginator__continue-button")).toBeEnabled();
 
-		userEvent.click(nextSelector());
+		userEvent.keyboard("{enter}");
 
 		await waitFor(() => expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument(), { timeout: 15_000 });
 
@@ -364,7 +364,7 @@ describe("LedgerTabs", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		userEvent.click(screen.getByTestId("Paginator__finish-button"));
+		userEvent.keyboard("{enter}");
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 

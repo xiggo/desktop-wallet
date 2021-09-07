@@ -6,6 +6,7 @@ import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext } from "app/contexts";
 import { useActiveProfile, useActiveWallet, useValidation } from "app/hooks";
+import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import { FeeWarning } from "domains/transaction/components/FeeWarning";
@@ -61,6 +62,14 @@ export const SendDelegateResignation = () => {
 		showFeeWarning,
 		setShowFeeWarning,
 	} = useFeeConfirmation(fee, fees);
+
+	useKeydown("Enter", () => {
+		const isButton = (document.activeElement as any)?.type === "button";
+
+		if (!isButton && isValid && activeTab !== Step.AuthenticationStep) {
+			return handleNext();
+		}
+	});
 
 	const handleBack = () => {
 		if (activeTab === Step.FormStep) {

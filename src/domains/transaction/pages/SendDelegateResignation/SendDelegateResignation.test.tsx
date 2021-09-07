@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import { screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
@@ -42,10 +42,10 @@ const renderPage = () => {
 };
 
 const transactionResponse = {
-	amount: () => transactionFixture.data.amount / 1e8,
+	amount: () => +transactionFixture.data.amount / 1e8,
 	data: () => ({ data: () => transactionFixture.data }),
 	explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
-	fee: () => transactionFixture.data.fee / 1e8,
+	fee: () => +transactionFixture.data.fee / 1e8,
 	id: () => transactionFixture.data.id,
 	isMultiSignatureRegistration: () => false,
 	recipient: () => transactionFixture.data.recipient,
@@ -55,8 +55,7 @@ const transactionResponse = {
 };
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(transactionResponse);
+	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(transactionResponse as any);
 
 describe("SendDelegateResignation", () => {
 	beforeAll(async () => {
@@ -335,6 +334,56 @@ describe("SendDelegateResignation", () => {
 			});
 			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
 
+			fireEvent.click(getByTestId("StepNavigation__send-button"));
+			await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+
+			expect(asFragment()).toMatchSnapshot();
+
+			secondPublicKeyMock.mockRestore();
+			signMock.mockRestore();
+			broadcastMock.mockRestore();
+			transactionMock.mockRestore();
+		});
+
+		it("should successfully sign and submit resignation transaction with keyboard", async () => {
+			const secondPublicKeyMock = jest
+				.spyOn(wallet, "secondPublicKey")
+				.mockReturnValue((await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+			const signMock = jest
+				.spyOn(wallet.transaction(), "signDelegateResignation")
+				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+			const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+				accepted: [transactionFixture.data.id],
+				errors: {},
+				rejected: [],
+			});
+			const transactionMock = createTransactionMock(wallet);
+
+			const { asFragment, getByTestId } = renderPage();
+
+			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+
+			userEvent.keyboard("{enter}");
+			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+
+			userEvent.keyboard("{enter}");
+			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+
+			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
+				target: {
+					value: passphrase,
+				},
+			});
+			await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+			fireEvent.input(getByTestId("AuthenticationStep__second-mnemonic"), {
+				target: {
+					value: MNEMONICS[1],
+				},
+			});
+			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
+
+			userEvent.keyboard("{enter}");
 			fireEvent.click(getByTestId("StepNavigation__send-button"));
 			await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
 

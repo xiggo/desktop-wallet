@@ -3,6 +3,7 @@ import { DateTime } from "@payvo/intl";
 import { Contracts, DTO } from "@payvo/profiles";
 import { screen } from "@testing-library/react";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
 import { toasts } from "app/services";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
@@ -40,7 +41,6 @@ const fixtureProfileId = getDefaultProfileId();
 const fixtureWalletId = getDefaultWalletId();
 
 const createTransactionMultipleMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionMultipleFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionMultipleFixture.data }),
@@ -58,10 +58,9 @@ const createTransactionMultipleMock = (wallet: Contracts.IReadWriteWallet) =>
 		sender: () => transactionMultipleFixture.data.sender,
 		type: () => "multiPayment",
 		usesMultiSignature: () => false,
-	});
+	} as any);
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
@@ -79,7 +78,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		sender: () => transactionFixture.data.sender,
 		type: () => "transfer",
 		usesMultiSignature: () => false,
-	});
+	} as any);
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -761,7 +760,7 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.1");
 	});
 
-	it("should keep the selected fee when user step back", async () => {
+	it("should keep the selected fee when user steps back", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
 		const history = createMemoryHistory();
@@ -885,7 +884,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("1000000000"));
 	});
 
-	it("should send a single transfer", async () => {
+	it.each(["with keyboard", "without keyboard"])("should send a single transfer", async (inputMethod) => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
 		const history = createMemoryHistory();
@@ -946,13 +945,22 @@ describe("SendTransfer", () => {
 		// Step 2
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		if (inputMethod === "with keyboard") {
+			userEvent.keyboard("{enter}");
+		} else {
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		}
+
 		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		if (inputMethod === "with keyboard") {
+			userEvent.keyboard("{enter}");
+		} else {
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		}
 		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
 
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
@@ -970,6 +978,7 @@ describe("SendTransfer", () => {
 		const transactionMock = createTransactionMock(wallet);
 
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		userEvent.keyboard("{enter}");
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
 		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());

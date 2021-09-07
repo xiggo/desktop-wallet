@@ -7,6 +7,7 @@ import { StepIndicator } from "app/components/StepIndicator";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { LedgerData, useLedgerContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
+import { useKeydown } from "app/hooks/use-keydown";
 import { useWalletConfig } from "domains/dashboard/hooks";
 import { NetworkStep } from "domains/wallet/components/NetworkStep";
 import React, { useCallback, useRef, useState } from "react";
@@ -126,6 +127,20 @@ export const LedgerTabs = ({ activeIndex = Step.NetworkStep, onClickEditWalletNa
 		[importLedgerWallets, activeProfile, setValue, selectedNetworkIds],
 	);
 
+	const isNextDisabled = isBusy || !isValid;
+
+	useKeydown("Enter", () => {
+		const isButton = (document.activeElement as any)?.type === "button";
+
+		if (!isButton && !isNextDisabled && !isSubmitting) {
+			if (activeTab < Step.LedgerImportStep) {
+				handleNext();
+			} else {
+				handleFinish();
+			}
+		}
+	});
+
 	const handleNext = useCallback(async () => {
 		if (activeTab === Step.LedgerScanStep) {
 			await handleSubmit((data: any) => importWallets(data))();
@@ -197,7 +212,7 @@ export const LedgerTabs = ({ activeIndex = Step.NetworkStep, onClickEditWalletNa
 			<Paginator
 				activeIndex={activeTab}
 				isMultiple={isMultiple}
-				isNextDisabled={isBusy || !isValid}
+				isNextDisabled={isNextDisabled}
 				isNextLoading={isSubmitting}
 				onBack={handleBack}
 				onFinish={handleFinish}

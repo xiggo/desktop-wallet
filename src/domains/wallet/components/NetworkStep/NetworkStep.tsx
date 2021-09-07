@@ -80,6 +80,7 @@ export const NetworkStep = ({ profile, title, subtitle, disabled, error, filter 
 			<FormField name="network" className="flex flex-col mt-8 space-y-2">
 				<FormLabel label={t("COMMON.CRYPTOASSET")} />
 				<SelectNetwork
+					autoFocus
 					id="NetworkStep__network"
 					disabled={disabled}
 					networks={networks}

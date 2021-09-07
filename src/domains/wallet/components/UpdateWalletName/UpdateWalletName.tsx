@@ -60,6 +60,7 @@ export const UpdateWalletName = ({ onAfterSave, onCancel, profile, wallet }: Upd
 					<FormLabel>{t("WALLETS.WALLET_NAME")}</FormLabel>
 					<div className="relative">
 						<Input
+							autoFocus
 							errorMessage={errors.name?.message}
 							isInvalid={!isValid}
 							data-testid="UpdateWalletName__input"

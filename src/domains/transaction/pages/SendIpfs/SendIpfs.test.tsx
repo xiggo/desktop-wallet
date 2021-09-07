@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@payvo/profiles";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
 import { translations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
@@ -299,6 +300,87 @@ describe("SendIpfs", () => {
 		historySpy.mockRestore();
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should send an IPFS transaction navigating with keyboard", async () => {
+		const history = createMemoryHistory();
+		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
+
+		history.push(ipfsURL);
+
+		const { getByTestId, getByText } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
+				<LedgerProvider transport={transport}>
+					<SendIpfs />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [ipfsURL],
+			},
+		);
+
+		await waitFor(() => expect(getByTestId("SendIpfs__form-step")).toBeTruthy());
+
+		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
+		await waitFor(() => expect(getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
+		await waitFor(() => expect(getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
+
+		fireEvent.input(getByTestId("Input__hash"), {
+			target: { value: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco" },
+		});
+		await waitFor(() =>
+			expect(getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
+		);
+
+		expect(within(getByTestId("InputFee")).getAllByRole("radio")[1]).toBeChecked();
+
+		fireEvent.click(within(getByTestId("InputFee")).getAllByRole("radio")[2]);
+		await waitFor(() => expect(within(getByTestId("InputFee")).getAllByRole("radio")[2]).toBeChecked());
+
+		fireEvent.click(getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "10" } });
+		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("10"));
+
+		userEvent.keyboard("{enter}");
+		await waitFor(() => expect(getByTestId("SendIpfs__review-step")).toBeTruthy());
+
+		userEvent.keyboard("{enter}");
+
+		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
+			await waitFor(() => expect(getByTestId("FeeWarning__continue-button")).toBeTruthy());
+			fireEvent.click(getByTestId("FeeWarning__continue-button"));
+		}
+
+		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+
+		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		// Step 4
+		const signMock = jest
+			.spyOn(wallet.transaction(), "signIpfs")
+			.mockReturnValue(Promise.resolve(ipfsFixture.data.id));
+		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [ipfsFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createTransactionMock(wallet);
+
+		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+
+		userEvent.keyboard("{enter}");
+		fireEvent.click(getByTestId("StepNavigation__send-button"));
+		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+
+		expect(getByTestId("TransactionSuccessful")).toHaveTextContent(
+			"1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e",
+		);
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {

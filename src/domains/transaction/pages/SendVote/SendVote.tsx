@@ -7,6 +7,7 @@ import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
 import { useActiveProfile, useActiveWallet, useQueryParams, useValidation } from "app/hooks";
+import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import { FeeWarning } from "domains/transaction/components/FeeWarning";
@@ -105,6 +106,14 @@ export const SendVote = () => {
 			setVotes(voteDelegates);
 		}
 	}, [activeWallet, env, voteAddresses, votes]);
+
+	useKeydown("Enter", () => {
+		const isButton = (document.activeElement as any)?.type === "button";
+
+		if (!isButton && !isNextDisabled && activeTab !== Step.AuthenticationStep) {
+			return handleNext();
+		}
+	});
 
 	const handleBack = () => {
 		// Abort any existing listener
@@ -351,6 +360,8 @@ export const SendVote = () => {
 	const hideStepNavigation =
 		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && activeWallet.isLedger());
 
+	const isNextDisabled = !isDirty ? true : !isValid;
+
 	return (
 		<Page profile={activeProfile}>
 			<Section className="flex-1">
@@ -411,7 +422,7 @@ export const SendVote = () => {
 									}
 									onContinueClick={async () => await handleNext()}
 									isLoading={isSubmitting}
-									isNextDisabled={!isDirty ? true : !isValid}
+									isNextDisabled={isNextDisabled}
 									size={4}
 									activeIndex={activeTab}
 								/>

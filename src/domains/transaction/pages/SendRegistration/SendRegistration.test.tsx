@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { BIP39 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
@@ -80,7 +81,6 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	});
 
 const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		data: () => ({ data: () => SecondSignatureRegistrationFixture.data }),
@@ -92,10 +92,9 @@ const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWalle
 		sender: () => SecondSignatureRegistrationFixture.data.sender,
 		type: () => "secondSignature",
 		usesMultiSignature: () => false,
-	});
+	} as any);
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		data: () => ({ data: () => MultisignatureRegistrationFixture.data }),
@@ -120,7 +119,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "secondSignature",
 		usesMultiSignature: () => false,
-	});
+	} as any);
 
 describe("Registration", () => {
 	beforeAll(async () => {
@@ -212,16 +211,16 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.keyboard("{enter}");
 		await waitFor(() => expect(getByTestId("DelegateRegistrationForm__review-step")).toBeTruthy());
 
 		fireEvent.click(getByTestId("StepNavigation__back-button"));
 		await waitFor(() => expect(getByTestId("DelegateRegistrationForm__form-step")).toBeTruthy());
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.keyboard("{enter}");
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		userEvent.keyboard("{enter}");
 		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");

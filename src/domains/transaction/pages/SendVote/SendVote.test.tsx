@@ -4,6 +4,7 @@ import { Contracts } from "@payvo/profiles";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { screen, within } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
@@ -338,7 +339,7 @@ describe("SendVote", () => {
 		transactionVoteMock.mockRestore();
 	});
 
-	it("should send a vote transaction", async () => {
+	it.each(["with keyboard", "without keyboard"])("should send a vote transaction", async (inputMethod) => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
@@ -387,12 +388,20 @@ describe("SendVote", () => {
 		expect(screen.getAllByRole("radio")[2]).toBeChecked();
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		if (inputMethod === "with keyboard") {
+			userEvent.keyboard("{enter}");
+		} else {
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		}
 
 		// Review Step
 		expect(getByTestId("SendVote__review-step")).toBeTruthy();
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		if (inputMethod === "with keyboard") {
+			userEvent.keyboard("{enter}");
+		} else {
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		}
 
 		// AuthenticationStep
 		expect(getByTestId("AuthenticationStep")).toBeTruthy();
@@ -412,6 +421,7 @@ describe("SendVote", () => {
 
 		expect(passwordInput).toHaveValue(passphrase);
 
+		userEvent.keyboard("{enter}");
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		await act(async () => {

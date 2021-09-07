@@ -4,6 +4,7 @@ import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { EnvironmentProvider, LedgerProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { NetworkStep } from "domains/wallet/components/NetworkStep";
@@ -298,7 +299,7 @@ describe("ImportWallet", () => {
 		expect(selectNetworkInput).toHaveValue("ARK Devnet");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.keyboard("{enter}");
 
 		const passphraseInput = getByTestId("ImportWallet__mnemonic-input");
 
@@ -307,7 +308,7 @@ describe("ImportWallet", () => {
 		fireEvent.input(passphraseInput, { target: { value: mnemonic } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
-		fireEvent.click(getByTestId("ImportWallet__continue-button"));
+		userEvent.keyboard("{enter}");
 
 		await waitFor(() => {
 			expect(getByTestId("EncryptPassword")).toBeTruthy();
@@ -331,9 +332,8 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(getByTestId("UpdateWalletName__submit")).not.toBeDisabled());
 
-		act(() => {
-			fireEvent.click(getByTestId("UpdateWalletName__submit"));
-		});
+		userEvent.keyboard("{enter}");
+		userEvent.click(getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
 

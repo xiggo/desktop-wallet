@@ -15,6 +15,7 @@ import {
 	usePrevious,
 	useValidation,
 } from "app/hooks";
+import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import {
 	DelegateRegistrationForm,
@@ -147,6 +148,15 @@ export const SendRegistration = () => {
 		}
 	}, [ledgerDevice]); // eslint-disable-line react-hooks/exhaustive-deps
 
+	useKeydown("Enter", () => {
+		const isButton = (document.activeElement as any)?.type === "button";
+
+		/* istanbul ignore else */
+		if (!isButton && !isNextDisabled && stepCount > activeTab - 1) {
+			return handleNext();
+		}
+	});
+
 	const handleSubmit = async () => {
 		try {
 			const {
@@ -251,6 +261,8 @@ export const SendRegistration = () => {
 
 	const hideStepNavigation = activeTab === 10 || (activeTab === stepCount - 1 && activeWallet.isLedger());
 
+	const isNextDisabled = !isDirty ? true : !isValid || !!isLoading;
+
 	return (
 		<Page profile={activeProfile}>
 			<Section className="flex-1">
@@ -312,7 +324,7 @@ export const SendRegistration = () => {
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting || isLoading}
-									isNextDisabled={!isDirty ? true : !isValid || isLoading}
+									isNextDisabled={isNextDisabled}
 									size={stepCount}
 									activeIndex={activeTab}
 								/>

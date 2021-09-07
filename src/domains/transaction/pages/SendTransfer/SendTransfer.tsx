@@ -7,6 +7,7 @@ import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
 import { useActiveProfile, useActiveWallet, useQueryParams, useValidation } from "app/hooks";
+import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ConfirmSendTransaction } from "domains/transaction/components/ConfirmSendTransaction";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
@@ -109,6 +110,14 @@ export const SendTransfer = () => {
 	const transactionBuilder = useTransactionBuilder();
 	const { sign } = useWalletSignatory(wallet!);
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
+
+	useKeydown("Enter", () => {
+		const isButton = (document.activeElement as any)?.type === "button";
+
+		if (!isButton && !isNextDisabled && activeTab !== Step.AuthenticationStep) {
+			return handleNext();
+		}
+	});
 
 	useEffect(() => {
 		if (shouldResetForm) {
@@ -342,29 +351,41 @@ export const SendTransfer = () => {
 	const handleNext = async (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
-		const newIndex = activeTab + 1;
-
-		if (newIndex === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
-			return setShowFeeWarning(true);
-		}
-
 		const senderWallet = activeProfile.wallets().findByAddress(getValues("senderAddress"));
 
-		// Skip authorization step
-		if (newIndex === Step.AuthenticationStep && senderWallet?.isMultiSignature()) {
+		const nextStep = activeTab + 1;
+
+		if (nextStep === Step.AuthenticationStep && requireFeeConfirmation && !suppressWarning) {
+			setShowFeeWarning(true);
+			return;
+		}
+
+		if (nextStep === Step.AuthenticationStep && senderWallet?.isMultiSignature()) {
 			await handleSubmit(() => submitForm(true))();
 			return;
 		}
 
-		if (newIndex === Step.AuthenticationStep && senderWallet?.isLedger()) {
+		if (nextStep === Step.AuthenticationStep && senderWallet?.isLedger()) {
 			handleSubmit(() => submitForm(true))();
 		}
 
-		setActiveTab(newIndex);
+		setActiveTab(nextStep);
 	};
 
 	const hideStepNavigation =
 		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && wallet?.isLedger());
+
+	const isNextDisabled: boolean = useMemo(() => {
+		if (activeTab === Step.NetworkStep && getValues("network") instanceof Networks.Network) {
+			return false;
+		}
+
+		if (!isDirty) {
+			return true;
+		}
+
+		return !isValid;
+	}, [activeTab, getValues, isDirty, isValid]);
 
 	return (
 		<Page profile={activeProfile}>
@@ -436,9 +457,7 @@ export const SendTransfer = () => {
 									}
 									onContinueClick={async () => await handleNext()}
 									isLoading={isSubmitting}
-									isNextDisabled={
-										activeTab === Step.NetworkStep && network ? false : !isDirty ? true : !isValid
-									}
+									isNextDisabled={isNextDisabled}
 									size={4}
 									activeIndex={activeTab}
 								/>

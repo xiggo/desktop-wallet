@@ -334,7 +334,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                       </label>
                       <div>
                         <div
-                          aria-expanded="false"
+                          aria-expanded="true"
                           aria-haspopup="listbox"
                           aria-owns="NetworkStep__network-menu"
                           data-testid="SelectNetwork"
@@ -1369,7 +1369,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                       </label>
                       <div>
                         <div
-                          aria-expanded="false"
+                          aria-expanded="true"
                           aria-haspopup="listbox"
                           aria-owns="NetworkStep__network-menu"
                           data-testid="SelectNetwork"
@@ -2406,7 +2406,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                       </label>
                       <div>
                         <div
-                          aria-expanded="false"
+                          aria-expanded="true"
                           aria-haspopup="listbox"
                           aria-owns="NetworkStep__network-menu"
                           data-testid="SelectNetwork"
@@ -2974,7 +2974,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                       </label>
                       <div>
                         <div
-                          aria-expanded="false"
+                          aria-expanded="true"
                           aria-haspopup="listbox"
                           aria-owns="NetworkStep__network-menu"
                           data-testid="SelectNetwork"

@@ -37,7 +37,7 @@ exports[`SelectNetworkStep should render 1`] = `
       </label>
       <div>
         <div
-          aria-expanded="false"
+          aria-expanded="true"
           aria-haspopup="listbox"
           aria-owns="NetworkStep__network-menu"
           data-testid="SelectNetwork"

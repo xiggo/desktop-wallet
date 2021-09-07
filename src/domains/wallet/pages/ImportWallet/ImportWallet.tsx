@@ -9,6 +9,7 @@ import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext } from "app/contexts";
 import { useQueryParams } from "app/hooks";
 import { useActiveProfile } from "app/hooks/env";
+import { useKeydown } from "app/hooks/use-keydown";
 import { toasts } from "app/services";
 import { useWalletConfig } from "domains/dashboard/hooks";
 import { EncryptPasswordStep } from "domains/wallet/components/EncryptPasswordStep";
@@ -17,7 +18,7 @@ import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
 import { useWalletImport, WalletGenerationInput } from "domains/wallet/hooks/use-wallet-import";
 import { useWalletSync } from "domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -80,6 +81,14 @@ export const ImportWallet = () => {
 			setSecondMnemonicInput(secondMnemonic);
 		}
 	}, [secondMnemonic, setSecondMnemonicInput]);
+
+	useKeydown("Enter", () => {
+		const isButton = (document.activeElement as any)?.type === "button";
+
+		if (!isLedgerImport && !isButton && !isNextDisabled && activeTab <= Step.EncryptPasswordStep) {
+			return handleNext();
+		}
+	});
 
 	const handleNext = async () => {
 		if (activeTab === Step.MethodStep) {
@@ -176,6 +185,16 @@ export const ImportWallet = () => {
 		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet.id()}`);
 	};
 
+	const isNextDisabled = useMemo(() => {
+		if (activeTab < Step.EncryptPasswordStep) {
+			return !isDirty ? true : !isValid || isImporting;
+		}
+
+		if (activeTab === Step.EncryptPasswordStep) {
+			return isEncrypting || !isValid || !encryptionPassword || !confirmEncryptionPassword;
+		}
+	}, [activeTab, confirmEncryptionPassword, encryptionPassword, isDirty, isEncrypting, isImporting, isValid]);
+
 	return (
 		<Page profile={activeProfile}>
 			<Section className="flex-1">
@@ -246,26 +265,10 @@ export const ImportWallet = () => {
 											</Button>
 										)}
 
-										{activeTab < Step.EncryptPasswordStep && (
+										{activeTab <= Step.EncryptPasswordStep && (
 											<Button
-												disabled={!isDirty ? true : !isValid || isImporting}
-												isLoading={isImporting}
-												onClick={handleNext}
-												data-testid="ImportWallet__continue-button"
-											>
-												{t("COMMON.CONTINUE")}
-											</Button>
-										)}
-
-										{activeTab === Step.EncryptPasswordStep && (
-											<Button
-												disabled={
-													isEncrypting ||
-													!isValid ||
-													!encryptionPassword ||
-													!confirmEncryptionPassword
-												}
-												isLoading={isEncrypting}
+												disabled={isNextDisabled}
+												isLoading={isEncrypting || isImporting}
 												onClick={handleNext}
 												data-testid="ImportWallet__continue-button"
 											>
