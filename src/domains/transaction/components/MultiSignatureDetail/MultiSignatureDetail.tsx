@@ -162,7 +162,11 @@ export const MultiSignatureDetail = ({
 					</TabPanel>
 
 					<TabPanel tabId={MultiSignatureDetailStep.SentStep}>
-						<SentStep transaction={activeTransaction} wallet={wallet} />
+						<SentStep
+							isBroadcast={canBeSigned && (canBeBroadcasted || isAwaitingFinalSignature)}
+							transaction={activeTransaction}
+							wallet={wallet}
+						/>
 					</TabPanel>
 
 					<TabPanel tabId={MultiSignatureDetailStep.ErrorStep}>

@@ -545,7 +545,7 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
-		await waitFor(() => expect(screen.getByText(translations.SUCCESS.TITLE)).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_SIGNED)).toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 
@@ -871,7 +871,7 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
-		await waitFor(() => expect(screen.getByText(translations.SUCCESS.TITLE)).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_SIGNED)).toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 

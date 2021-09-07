@@ -4970,14 +4970,14 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
                           class="mb-0 text-2xl"
                           data-testid="header__title"
                         >
-                          Transaction Sent
+                          Transaction Signed
                         </h1>
                       </div>
                     </div>
                     <svg
                       class="my-4 w-full"
                     >
-                      transaction-success-banner-dark-green.svg
+                      transaction-signed-banner-dark-green.svg
                     </svg>
                     <p
                       class="text-theme-secondary-700"
@@ -6162,14 +6162,14 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                           class="mb-0 text-2xl"
                           data-testid="header__title"
                         >
-                          Transaction Sent
+                          Transaction Signed
                         </h1>
                       </div>
                     </div>
                     <svg
                       class="my-4 w-full"
                     >
-                      transaction-success-banner-dark-green.svg
+                      transaction-signed-banner-dark-green.svg
                     </svg>
                     <p
                       class="text-theme-secondary-700"
@@ -6360,14 +6360,14 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                           class="mb-0 text-2xl"
                           data-testid="header__title"
                         >
-                          Transaction Sent
+                          Transaction Signed
                         </h1>
                       </div>
                     </div>
                     <svg
                       class="my-4 w-full"
                     >
-                      transaction-success-banner-dark-green.svg
+                      transaction-signed-banner-dark-green.svg
                     </svg>
                     <p
                       class="text-theme-secondary-700"

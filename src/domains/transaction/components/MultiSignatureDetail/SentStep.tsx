@@ -9,16 +9,21 @@ import { Signatures } from "./Signatures";
 export const SentStep = ({
 	transaction,
 	wallet,
+	isBroadcast,
 }: {
 	transaction: DTO.ExtendedSignedTransactionData;
 	wallet: Contracts.IReadWriteWallet;
+	isBroadcast: boolean;
 }) => {
 	const { t } = useTranslation();
+	const title = isBroadcast ? t("TRANSACTION.SUCCESS.TITLE") : t("TRANSACTION.TRANSACTION_SIGNED");
+	const bannerName = isBroadcast ? "TransactionSuccessBanner" : "TransactionSignedBanner";
+
 	return (
 		<section>
-			<Header title={t("TRANSACTION.SUCCESS.TITLE")} />
+			<Header title={title} />
 
-			<Image name="TransactionSuccessBanner" domain="transaction" className="my-4 w-full" />
+			<Image name={bannerName} domain="transaction" className="my-4 w-full" />
 
 			<p className="text-theme-secondary-700">
 				{t("TRANSACTION.MODAL_MULTISIGNATURE_DETAIL.STEP_3.DESCRIPTION")}

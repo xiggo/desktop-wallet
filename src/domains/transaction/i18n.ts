@@ -292,6 +292,7 @@ export const translations: { [key: string]: any } = {
 	TRANSACTION_DETAILS: "Transaction Details",
 	TRANSACTION_FEE: "Transaction Fee",
 	TRANSACTION_REMOVED: "Transaction successfully removed",
+	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",
 	TRANSACTION_TYPES: {
 		DELEGATE_REGISTRATION: "Delegate Registration",
