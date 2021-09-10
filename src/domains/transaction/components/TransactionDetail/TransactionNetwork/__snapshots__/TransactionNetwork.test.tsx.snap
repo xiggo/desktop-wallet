@@ -15,7 +15,7 @@ exports[`TransactionNetwork should render 1`] = `
         Cryptoasset
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         ARK Devnet
       </div>

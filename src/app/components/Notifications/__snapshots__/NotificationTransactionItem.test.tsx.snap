@@ -67,7 +67,7 @@ exports[`Notifications should render notification item 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
           >
             <div
-              class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+              class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
               color="success"
             >
               <span

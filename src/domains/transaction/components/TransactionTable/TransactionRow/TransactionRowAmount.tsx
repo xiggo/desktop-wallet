@@ -38,7 +38,9 @@ const ExchangeTooltip: React.FC<ExchangeTooltipProperties> = ({
 
 	return (
 		<Tooltip content={exchangeAmount()} className="xl:opacity-0">
-			<div data-testid="TransactionAmount__tooltip">{children}</div>
+			<div data-testid="TransactionAmount__tooltip" className="flex items-center">
+				{children}
+			</div>
 		</Tooltip>
 	);
 };

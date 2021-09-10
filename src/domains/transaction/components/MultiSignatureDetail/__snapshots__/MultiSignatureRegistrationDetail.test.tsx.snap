@@ -61,7 +61,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -135,7 +135,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -192,7 +192,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -216,7 +216,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -235,7 +235,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -269,7 +269,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   Multisignature Participants
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -410,7 +410,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   Minimum Required Signatures
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   2
                    / 
@@ -431,7 +431,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                   Multisignature Address
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -593,7 +593,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -667,7 +667,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -724,7 +724,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -748,7 +748,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -767,7 +767,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -801,7 +801,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                   Multisignature Participants
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -942,7 +942,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                   Minimum Required Signatures
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   2
                    / 
@@ -963,7 +963,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                   Multisignature Address
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"

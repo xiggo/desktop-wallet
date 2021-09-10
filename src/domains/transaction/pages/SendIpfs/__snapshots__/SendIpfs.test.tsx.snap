@@ -476,7 +476,7 @@ exports[`SendIpfs should render form step 1`] = `
           Cryptoasset
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet
         </div>
@@ -511,7 +511,7 @@ exports[`SendIpfs should render form step 1`] = `
           Sender
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -782,7 +782,7 @@ exports[`SendIpfs should render review step 1`] = `
           Cryptoasset
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet
         </div>
@@ -817,7 +817,7 @@ exports[`SendIpfs should render review step 1`] = `
           Sender
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -874,7 +874,7 @@ exports[`SendIpfs should render review step 1`] = `
           IPFS Hash
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <span
             class="break-all"
@@ -1010,7 +1010,7 @@ exports[`SendIpfs should render summary step 1`] = `
             IPFS Hash
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <span
               class="break-all"
@@ -1361,7 +1361,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -1435,7 +1435,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             IPFS
                           </div>
@@ -1467,7 +1467,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -1502,7 +1502,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1559,7 +1559,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                             IPFS Hash
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="break-all"
@@ -1933,7 +1933,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -2007,7 +2007,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             IPFS
                           </div>
@@ -2039,7 +2039,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -2074,7 +2074,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -2131,7 +2131,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                             IPFS Hash
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="break-all"
@@ -2507,7 +2507,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -2581,7 +2581,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             IPFS
                           </div>
@@ -2613,7 +2613,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -2648,7 +2648,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -2705,7 +2705,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                             IPFS Hash
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="break-all"
@@ -3079,7 +3079,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -3153,7 +3153,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             IPFS
                           </div>
@@ -3185,7 +3185,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -3220,7 +3220,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -3277,7 +3277,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                             IPFS Hash
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="break-all"
@@ -3645,7 +3645,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                           Cryptoasset
                         </div>
                         <div
-                          class="font-semibold"
+                          class="flex items-center font-semibold"
                         >
                           ARK Devnet
                         </div>
@@ -3680,7 +3680,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                           Sender
                         </div>
                         <div
-                          class="font-semibold"
+                          class="flex items-center font-semibold"
                         >
                           <div
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"

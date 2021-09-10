@@ -63,7 +63,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -137,7 +137,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -183,7 +183,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   Recipient
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -229,14 +229,14 @@ exports[`TransferDetail should render a modal 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 cuqVRO"
+                    class="Label-sc-4akkzw-0 gOcLKd"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -252,9 +252,9 @@ exports[`TransferDetail should render a modal 1`] = `
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     sent.svg
@@ -275,7 +275,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -299,7 +299,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -335,7 +335,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -354,7 +354,7 @@ exports[`TransferDetail should render a modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -444,7 +444,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -518,7 +518,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -564,7 +564,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   Recipient
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -610,14 +610,14 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 cuqVRO"
+                    class="Label-sc-4akkzw-0 gOcLKd"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -633,9 +633,9 @@ exports[`TransferDetail should render as confirmed 1`] = `
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     sent.svg
@@ -656,7 +656,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -680,7 +680,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -716,7 +716,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -735,7 +735,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -827,7 +827,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -901,7 +901,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -947,7 +947,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   Recipient
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -993,14 +993,14 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 iTKkeF"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1016,9 +1016,9 @@ exports[`TransferDetail should render as not is sent 1`] = `
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     received.svg
@@ -1039,7 +1039,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1063,7 +1063,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -1099,7 +1099,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -1118,7 +1118,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -1208,7 +1208,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -1282,7 +1282,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1328,7 +1328,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   Recipient
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1374,14 +1374,14 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 iTKkeF"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1397,9 +1397,9 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     received.svg
@@ -1420,7 +1420,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1444,7 +1444,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -1480,7 +1480,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -1499,7 +1499,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"

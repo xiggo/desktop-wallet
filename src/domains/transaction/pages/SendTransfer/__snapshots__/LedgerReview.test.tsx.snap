@@ -35,7 +35,7 @@ exports[`TransferLedgerReview should render 1`] = `
         </div>
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         123
       </div>
@@ -157,7 +157,7 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
         </div>
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <span
           class="flex my-0.5"

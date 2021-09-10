@@ -336,7 +336,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -410,7 +410,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Transfer
                           </div>
@@ -442,7 +442,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -477,7 +477,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -534,7 +534,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             Recipient
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -580,14 +580,14 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             Amount
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 cuqVRO"
+                              class="Label-sc-4akkzw-0 gOcLKd"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-0.5 -mx-1"
+                                class="flex space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -603,9 +603,9 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               sent.svg
@@ -626,7 +626,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"
@@ -854,7 +854,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                                   >
                                     <div
-                                      class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                                      class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                                       color="danger"
                                     >
                                       <span
@@ -6512,7 +6512,7 @@ exports[`SendTransfer should render review step 1`] = `
           Cryptoasset
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet
         </div>
@@ -6547,7 +6547,7 @@ exports[`SendTransfer should render review step 1`] = `
           Sender
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -6604,7 +6604,7 @@ exports[`SendTransfer should render review step 1`] = `
           Recipient
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -6661,7 +6661,7 @@ exports[`SendTransfer should render review step 1`] = `
           Memo
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <p
             class="break-all whitespace-pre-line"
@@ -6804,7 +6804,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
           Cryptoasset
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet
         </div>
@@ -6839,7 +6839,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
           Sender
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -6896,7 +6896,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
           Recipients (2)
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -7071,7 +7071,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
           Memo
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <p
             class="break-all whitespace-pre-line"
@@ -7214,7 +7214,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
           Cryptoasset
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet
         </div>
@@ -7249,7 +7249,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
           Sender
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -7306,7 +7306,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
           Recipients (2)
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -7594,7 +7594,7 @@ exports[`SendTransfer should render summary step 1`] = `
             ID
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex items-center space-x-3"
@@ -7645,7 +7645,7 @@ exports[`SendTransfer should render summary step 1`] = `
             Cryptoasset
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             ARK Devnet
           </div>
@@ -7680,7 +7680,7 @@ exports[`SendTransfer should render summary step 1`] = `
             Sender
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -7839,7 +7839,7 @@ exports[`SendTransfer should render summary step 1`] = `
             Recipient
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -7896,14 +7896,14 @@ exports[`SendTransfer should render summary step 1`] = `
             Amount
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
-              class="Label-sc-4akkzw-0 cuqVRO"
+              class="Label-sc-4akkzw-0 gOcLKd"
               color="danger"
             >
               <div
-                class="flex space-x-0.5 -mx-1"
+                class="flex space-x-1"
               >
                 <span
                   class="whitespace-nowrap"
@@ -7919,9 +7919,9 @@ exports[`SendTransfer should render summary step 1`] = `
           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
         >
           <div
-            class="sc-bdnxRM AFVmm"
-            height="16"
-            width="16"
+            class="sc-bdnxRM NjstW"
+            height="20"
+            width="20"
           >
             <svg>
               sent.svg
@@ -7942,7 +7942,7 @@ exports[`SendTransfer should render summary step 1`] = `
             Transaction Fee
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <span
               class="whitespace-nowrap"
@@ -9796,7 +9796,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -9870,7 +9870,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Transfer
                           </div>
@@ -9902,7 +9902,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -9937,7 +9937,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -9994,7 +9994,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             Recipient
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -10040,14 +10040,14 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             Amount
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 cuqVRO"
+                              class="Label-sc-4akkzw-0 gOcLKd"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-0.5 -mx-1"
+                                class="flex space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -10063,9 +10063,9 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               sent.svg
@@ -10086,7 +10086,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"
@@ -11126,7 +11126,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -11200,7 +11200,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Transfer
                           </div>
@@ -11232,7 +11232,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -11267,7 +11267,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -11324,7 +11324,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             Recipient
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -11370,14 +11370,14 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             Amount
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 cuqVRO"
+                              class="Label-sc-4akkzw-0 gOcLKd"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-0.5 -mx-1"
+                                class="flex space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -11393,9 +11393,9 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               sent.svg
@@ -11416,7 +11416,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"
@@ -11791,7 +11791,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -11865,7 +11865,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Transfer
                           </div>
@@ -11897,7 +11897,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -11932,7 +11932,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -11989,7 +11989,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             Recipient
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -12035,14 +12035,14 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             Amount
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 cuqVRO"
+                              class="Label-sc-4akkzw-0 gOcLKd"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-0.5 -mx-1"
+                                class="flex space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -12058,9 +12058,9 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               sent.svg
@@ -12081,7 +12081,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"
@@ -12309,7 +12309,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                                   >
                                     <div
-                                      class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                                      class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                                       color="danger"
                                     >
                                       <span
@@ -12375,7 +12375,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                                   >
                                     <div
-                                      class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                                      class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                                       color="danger"
                                     >
                                       <span
@@ -12767,7 +12767,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -12841,7 +12841,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Transfer
                           </div>
@@ -12873,7 +12873,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -12908,7 +12908,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -12965,7 +12965,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             Recipient
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -13011,14 +13011,14 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             Amount
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 cuqVRO"
+                              class="Label-sc-4akkzw-0 gOcLKd"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-0.5 -mx-1"
+                                class="flex space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -13034,9 +13034,9 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               sent.svg
@@ -13057,7 +13057,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"
@@ -13432,7 +13432,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -13506,7 +13506,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Transfer
                           </div>
@@ -13538,7 +13538,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -13573,7 +13573,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -13630,7 +13630,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             Recipient
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -13676,14 +13676,14 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             Amount
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 cuqVRO"
+                              class="Label-sc-4akkzw-0 gOcLKd"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-0.5 -mx-1"
+                                class="flex space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -13699,9 +13699,9 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               sent.svg
@@ -13722,7 +13722,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"
@@ -14097,7 +14097,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -14171,7 +14171,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Transfer
                           </div>
@@ -14203,7 +14203,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -14238,7 +14238,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -14295,7 +14295,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             Recipient
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -14341,14 +14341,14 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             Amount
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 cuqVRO"
+                              class="Label-sc-4akkzw-0 gOcLKd"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-0.5 -mx-1"
+                                class="flex space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -14364,9 +14364,9 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               sent.svg
@@ -14387,7 +14387,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"

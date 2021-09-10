@@ -4725,7 +4725,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                   color="danger"
                 >
                   <span
@@ -4876,7 +4876,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                   color="danger"
                 >
                   <span
@@ -5023,7 +5023,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -5174,7 +5174,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -5325,7 +5325,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -5476,7 +5476,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -5627,7 +5627,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -5778,7 +5778,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -5929,7 +5929,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -6080,7 +6080,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -6231,7 +6231,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -6378,7 +6378,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -6529,7 +6529,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -6683,7 +6683,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -6834,7 +6834,7 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -7118,7 +7118,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                   color="danger"
                 >
                   <span
@@ -7269,7 +7269,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                   color="danger"
                 >
                   <span
@@ -7416,7 +7416,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -7567,7 +7567,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -7718,7 +7718,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -7869,7 +7869,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -8020,7 +8020,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -8171,7 +8171,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -8322,7 +8322,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -8473,7 +8473,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -8624,7 +8624,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -8771,7 +8771,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -8922,7 +8922,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -9076,7 +9076,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span
@@ -9227,7 +9227,7 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                   color="success"
                 >
                   <span

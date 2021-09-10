@@ -64,7 +64,7 @@ exports[`ReceiveFunds should not render qrcode without an address 1`] = `
                     Address
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -213,7 +213,7 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                     Name
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     My Wallet
                   </div>
@@ -252,7 +252,7 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                     Address
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -405,7 +405,7 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                     Address
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <div
                       class="flex items-center space-x-2"

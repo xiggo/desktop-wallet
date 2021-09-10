@@ -63,7 +63,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -137,7 +137,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -194,7 +194,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                   Delegate Name
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   Ark Wallet
                 </div>
@@ -226,7 +226,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -250,7 +250,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -269,7 +269,7 @@ exports[`DelegateRegistrationDetail should render a modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -359,7 +359,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -433,7 +433,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -490,7 +490,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                   Delegate Name
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   Ark Wallet
                 </div>
@@ -522,7 +522,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -546,7 +546,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -565,7 +565,7 @@ exports[`DelegateRegistrationDetail should render as confirmed 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"

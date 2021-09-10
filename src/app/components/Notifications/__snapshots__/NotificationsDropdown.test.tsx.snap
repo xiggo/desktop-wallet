@@ -226,7 +226,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -302,7 +302,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -378,7 +378,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -727,7 +727,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -803,7 +803,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -879,7 +879,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -1132,7 +1132,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -1208,7 +1208,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -1284,7 +1284,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -1366,7 +1366,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     ID
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <div
                       class="flex overflow-hidden items-baseline space-x-3"
@@ -1440,7 +1440,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     Sender
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <div
                       class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1486,7 +1486,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     Recipient
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <div
                       class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1532,14 +1532,14 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     Amount
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <div
-                      class="Label-sc-4akkzw-0 iTKkeF"
+                      class="Label-sc-4akkzw-0 fSJwcq"
                       color="success"
                     >
                       <div
-                        class="flex space-x-0.5 -mx-1"
+                        class="flex space-x-1"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1555,9 +1555,9 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                 >
                   <div
-                    class="sc-bdnxRM AFVmm"
-                    height="16"
-                    width="16"
+                    class="sc-bdnxRM NjstW"
+                    height="20"
+                    width="20"
                   >
                     <svg>
                       received.svg
@@ -1578,7 +1578,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     Transaction Fee
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1602,7 +1602,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     Memo
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <p
                       class="break-all whitespace-pre-line"
@@ -1638,7 +1638,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     Timestamp
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     02.10.2020 12:48 PM
                   </div>
@@ -1657,7 +1657,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     Confirmations
                   </div>
                   <div
-                    class="font-semibold"
+                    class="flex items-center font-semibold"
                   >
                     <div
                       class="flex items-center space-x-3"
@@ -1915,7 +1915,7 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -1991,7 +1991,7 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -2067,7 +2067,7 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -2320,7 +2320,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -2396,7 +2396,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -2472,7 +2472,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -2821,7 +2821,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -2897,7 +2897,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -2973,7 +2973,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -3226,7 +3226,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -3302,7 +3302,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span
@@ -3378,7 +3378,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 iTKkeF whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
                                 color="success"
                               >
                                 <span

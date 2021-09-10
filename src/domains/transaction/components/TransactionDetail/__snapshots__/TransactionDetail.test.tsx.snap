@@ -15,7 +15,7 @@ exports[`TransactionDetail should render 1`] = `
         Test
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         test
       </div>
@@ -39,7 +39,7 @@ exports[`TransactionDetail should render with bottom border 1`] = `
         Test
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         test
       </div>
@@ -63,7 +63,7 @@ exports[`TransactionDetail should render with extra children 1`] = `
         Test
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         test
       </div>
@@ -90,7 +90,7 @@ exports[`TransactionDetail should render with top border 1`] = `
         Test
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         test
       </div>
@@ -114,7 +114,7 @@ exports[`TransactionDetail should render without border 1`] = `
         Test
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         test
       </div>
@@ -138,7 +138,7 @@ exports[`TransactionDetail should render without padding 1`] = `
         Test
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         test
       </div>

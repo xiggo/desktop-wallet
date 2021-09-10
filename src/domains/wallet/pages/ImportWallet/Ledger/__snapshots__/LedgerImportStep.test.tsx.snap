@@ -39,7 +39,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
           Cryptoasset
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet
         </div>
@@ -72,7 +72,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
               class="flex-1 space-y-2 w-40 whitespace-nowrap"
             >
               <div
-                class="font-semibold"
+                class="flex items-center font-semibold"
               >
                 <div
                   class="flex items-center space-x-3"
@@ -157,7 +157,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
               class="flex-1 space-y-2 w-40 whitespace-nowrap"
             >
               <div
-                class="font-semibold"
+                class="flex items-center font-semibold"
               >
                 <div
                   class="flex items-center space-x-3"
@@ -278,7 +278,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
           Cryptoasset
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet
         </div>
@@ -313,7 +313,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
           Address
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -355,7 +355,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
           Balance
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <span
             class="whitespace-nowrap"
@@ -379,7 +379,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
           Wallet Name
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet #4
         </div>

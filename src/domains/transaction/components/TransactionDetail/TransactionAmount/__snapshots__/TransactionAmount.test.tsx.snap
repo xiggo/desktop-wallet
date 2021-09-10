@@ -15,14 +15,14 @@ exports[`TransactionAmount should render 1`] = `
         Amount
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 iTKkeF"
+          class="Label-sc-4akkzw-0 fSJwcq"
           color="success"
         >
           <div
-            class="flex space-x-0.5 -mx-1"
+            class="flex space-x-1"
           >
             <span
               class="whitespace-nowrap"
@@ -38,9 +38,9 @@ exports[`TransactionAmount should render 1`] = `
       class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM AFVmm"
-        height="16"
-        width="16"
+        class="sc-bdnxRM NjstW"
+        height="20"
+        width="20"
       >
         <svg>
           received.svg
@@ -66,14 +66,14 @@ exports[`TransactionAmount should render currency amount 1`] = `
         Amount
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 iTKkeF"
+          class="Label-sc-4akkzw-0 fSJwcq"
           color="success"
         >
           <div
-            class="flex space-x-0.5 -mx-1"
+            class="flex space-x-1"
           >
             <span
               class="whitespace-nowrap"
@@ -89,9 +89,9 @@ exports[`TransactionAmount should render currency amount 1`] = `
       class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM AFVmm"
-        height="16"
-        width="16"
+        class="sc-bdnxRM NjstW"
+        height="20"
+        width="20"
       >
         <svg>
           received.svg
@@ -117,14 +117,14 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
         Amount
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 iTKkeF"
+          class="Label-sc-4akkzw-0 fSJwcq"
           color="success"
         >
           <div
-            class="flex space-x-0.5 -mx-1"
+            class="flex space-x-1"
           >
             <span
               class="whitespace-nowrap"
@@ -140,9 +140,9 @@ exports[`TransactionAmount should render label for multiple recipients 1`] = `
       class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM AFVmm"
-        height="16"
-        width="16"
+        class="sc-bdnxRM NjstW"
+        height="20"
+        width="20"
       >
         <svg>
           received.svg
@@ -168,14 +168,14 @@ exports[`TransactionAmount should render label for multiple recipients 2`] = `
         Total Amount
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 iTKkeF"
+          class="Label-sc-4akkzw-0 fSJwcq"
           color="success"
         >
           <div
-            class="flex space-x-0.5 -mx-1"
+            class="flex space-x-1"
           >
             <span
               class="whitespace-nowrap"
@@ -191,9 +191,9 @@ exports[`TransactionAmount should render label for multiple recipients 2`] = `
       class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
     >
       <div
-        class="sc-bdnxRM AFVmm"
-        height="16"
-        width="16"
+        class="sc-bdnxRM NjstW"
+        height="20"
+        width="20"
       >
         <svg>
           received.svg

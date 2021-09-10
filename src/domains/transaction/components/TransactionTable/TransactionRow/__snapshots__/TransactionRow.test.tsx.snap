@@ -128,10 +128,11 @@ exports[`TransactionRow should omit the currency for transactions from test netw
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
           >
             <div
+              class="flex items-center"
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                 color="danger"
               >
                 <span
@@ -292,10 +293,11 @@ exports[`TransactionRow should show transaction with currency 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
           >
             <div
+              class="flex items-center"
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="Label-sc-4akkzw-0 cuqVRO whitespace-nowrap"
+                class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
                 color="danger"
               >
                 <span

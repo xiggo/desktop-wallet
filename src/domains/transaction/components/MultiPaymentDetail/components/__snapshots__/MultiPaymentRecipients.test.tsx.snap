@@ -49,7 +49,7 @@ exports[`MultiPaymentRecipients should render recipients 1`] = `
         </div>
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"

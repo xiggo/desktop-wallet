@@ -63,7 +63,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -137,7 +137,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -207,7 +207,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                   Unvotes (1)
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="-my-2"
@@ -272,7 +272,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -296,7 +296,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -315,7 +315,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -405,7 +405,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -479,7 +479,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -549,7 +549,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                   Votes (1)
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="-my-2"
@@ -614,7 +614,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -638,7 +638,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -657,7 +657,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -747,7 +747,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -821,7 +821,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -891,7 +891,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   Votes (1)
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="-my-2"
@@ -956,7 +956,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   Unvotes (1)
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="-my-2"
@@ -1021,7 +1021,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1045,7 +1045,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -1064,7 +1064,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"

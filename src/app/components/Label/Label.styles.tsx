@@ -1,7 +1,7 @@
 import tw from "twin.macro";
 import { Size } from "types";
 
-const baseStyle = tw`inline-block font-semibold border-2 rounded`;
+const baseStyle = tw`inline-block font-semibold border-2 rounded overflow-hidden`;
 
 const getColors = (name: string, variant?: string): any => {
 	if (variant === "solid") {
@@ -34,9 +34,9 @@ const getColors = (name: string, variant?: string): any => {
 const getSize = (size?: Size): any => {
 	switch (size) {
 		case "lg":
-			return tw`px-2 text-lg`;
+			return tw`px-1 text-lg`;
 		default:
-			return tw`px-2 text-base`;
+			return tw`px-1 text-base`;
 	}
 };
 

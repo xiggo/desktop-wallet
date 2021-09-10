@@ -63,7 +63,7 @@ exports[`SecondSignatureDetail should render a modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -133,7 +133,7 @@ exports[`SecondSignatureDetail should render a modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -157,7 +157,7 @@ exports[`SecondSignatureDetail should render a modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -176,7 +176,7 @@ exports[`SecondSignatureDetail should render a modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -210,7 +210,7 @@ exports[`SecondSignatureDetail should render a modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -340,7 +340,7 @@ exports[`SecondSignatureDetail should render a modal without a wallet alias 1`] 
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -399,7 +399,7 @@ exports[`SecondSignatureDetail should render a modal without a wallet alias 1`] 
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -423,7 +423,7 @@ exports[`SecondSignatureDetail should render a modal without a wallet alias 1`] 
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -442,7 +442,7 @@ exports[`SecondSignatureDetail should render a modal without a wallet alias 1`] 
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -476,7 +476,7 @@ exports[`SecondSignatureDetail should render a modal without a wallet alias 1`] 
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -606,7 +606,7 @@ exports[`SecondSignatureDetail should render as confirmed 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -676,7 +676,7 @@ exports[`SecondSignatureDetail should render as confirmed 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -700,7 +700,7 @@ exports[`SecondSignatureDetail should render as confirmed 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -719,7 +719,7 @@ exports[`SecondSignatureDetail should render as confirmed 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -755,7 +755,7 @@ exports[`SecondSignatureDetail should render as confirmed 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"

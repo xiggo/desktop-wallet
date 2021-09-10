@@ -15,7 +15,7 @@ exports[`TransactionMemo should render 1`] = `
         Memo
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <p
           class="break-all whitespace-pre-line"

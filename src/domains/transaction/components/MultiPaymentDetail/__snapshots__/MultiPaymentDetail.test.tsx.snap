@@ -63,7 +63,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -137,7 +137,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -217,7 +217,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -250,14 +250,14 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   Total Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 cuqVRO"
+                    class="Label-sc-4akkzw-0 gOcLKd"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -273,9 +273,9 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     sent.svg
@@ -296,7 +296,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -320,7 +320,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -356,7 +356,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -375,7 +375,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -465,7 +465,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -539,7 +539,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -619,7 +619,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   </div>
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -665,17 +665,17 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   Total Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 cuqVRO"
+                    class="Label-sc-4akkzw-0 gOcLKd"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <div
-                        class="flex items-center -ml-1 px-2 bg-theme-danger-100 dark:bg-theme-danger-400"
+                        class="flex items-center -ml-1.5 px-2 bg-theme-danger-100 dark:bg-theme-danger-400"
                         data-testid="TransactionAmount__Hint_Amount"
                       >
                         <div
@@ -702,9 +702,9 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     sent.svg
@@ -725,7 +725,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -749,7 +749,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -785,7 +785,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -804,7 +804,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -896,7 +896,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -970,7 +970,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1050,7 +1050,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   </div>
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1096,14 +1096,14 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   Total Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 cuqVRO"
+                    class="Label-sc-4akkzw-0 gOcLKd"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1119,9 +1119,9 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     sent.svg
@@ -1142,7 +1142,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1166,7 +1166,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -1202,7 +1202,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -1221,7 +1221,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"

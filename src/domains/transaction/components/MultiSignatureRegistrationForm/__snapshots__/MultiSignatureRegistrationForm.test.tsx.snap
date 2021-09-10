@@ -516,7 +516,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
                 Cryptoasset
               </div>
               <div
-                class="font-semibold"
+                class="flex items-center font-semibold"
               >
                 ARK Devnet
               </div>
@@ -551,7 +551,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
                 Sender
               </div>
               <div
-                class="font-semibold"
+                class="flex items-center font-semibold"
               >
                 <div
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -608,7 +608,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
                 Multisignature Participants
               </div>
               <div
-                class="font-semibold"
+                class="flex items-center font-semibold"
               >
                 <div
                   class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -749,7 +749,7 @@ exports[`MultiSignature Registration Form should render review step 1`] = `
                 Minimum Required Signatures
               </div>
               <div
-                class="font-semibold"
+                class="flex items-center font-semibold"
               >
                 <div
                   class="flex items-center space-x-1 font-semibold"
@@ -866,7 +866,7 @@ exports[`MultiSignature Registration Form should render transaction details 1`] 
         Transaction Fee
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <span
           class="whitespace-nowrap"

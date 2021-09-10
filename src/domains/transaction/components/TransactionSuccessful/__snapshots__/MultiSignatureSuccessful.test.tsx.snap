@@ -81,7 +81,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
             ID
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex items-center space-x-3"
@@ -216,7 +216,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
             Cryptoasset
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             ARK Devnet
           </div>
@@ -251,7 +251,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
             Sender
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -545,7 +545,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
             ID
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex items-center space-x-3"
@@ -680,7 +680,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
             Cryptoasset
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             ARK Devnet
           </div>
@@ -715,7 +715,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
             Sender
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"

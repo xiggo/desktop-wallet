@@ -38,7 +38,7 @@ exports[`SuccessStep should render 4th step 1`] = `
           Cryptoasset
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Devnet
         </div>
@@ -73,7 +73,7 @@ exports[`SuccessStep should render 4th step 1`] = `
           Address
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -115,7 +115,7 @@ exports[`SuccessStep should render 4th step 1`] = `
           Wallet Name
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           ARK Wallet 1
         </div>

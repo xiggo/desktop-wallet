@@ -64,7 +64,7 @@ export const NewsCard = ({ text, category, author, created_at: createdAt, coverI
 
 						<div className="flex flex-col justify-end">
 							<Label color="warning" variant="solid">
-								<span className="text-sm" data-testid="NewsCard__category">
+								<span className="text-sm mx-1" data-testid="NewsCard__category">
 									#{t(`NEWS.CATEGORIES.${category.toUpperCase()}`)}
 								</span>
 							</Label>

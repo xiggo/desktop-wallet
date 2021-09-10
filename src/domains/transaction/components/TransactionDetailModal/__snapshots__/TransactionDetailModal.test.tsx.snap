@@ -63,7 +63,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -137,7 +137,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -194,7 +194,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   Delegate Name
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   ARK Wallet
                 </div>
@@ -226,7 +226,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -250,7 +250,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -269,7 +269,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -360,7 +360,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -434,7 +434,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -491,7 +491,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   Delegate Name
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   ARK Wallet
                 </div>
@@ -523,7 +523,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -547,7 +547,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -566,7 +566,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -657,7 +657,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -731,7 +731,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -801,7 +801,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -825,7 +825,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   IPFS Hash
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68
                 </div>
@@ -857,7 +857,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -876,7 +876,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -967,7 +967,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -1041,7 +1041,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1111,7 +1111,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1135,7 +1135,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -1154,7 +1154,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -1245,7 +1245,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -1319,7 +1319,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1399,7 +1399,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   </div>
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1445,14 +1445,14 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   Total Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 cuqVRO"
+                    class="Label-sc-4akkzw-0 gOcLKd"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1468,9 +1468,9 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     sent.svg
@@ -1491,7 +1491,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1515,7 +1515,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -1551,7 +1551,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -1570,7 +1570,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -1661,7 +1661,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -1735,7 +1735,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1792,7 +1792,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1816,7 +1816,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -1835,7 +1835,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -1869,7 +1869,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   Multisignature Participants
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -2010,7 +2010,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   Minimum Required Signatures
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   2 / 2
                 </div>
@@ -2029,7 +2029,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   Multisignature Address
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -2192,7 +2192,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -2262,7 +2262,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2286,7 +2286,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -2305,7 +2305,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -2339,7 +2339,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -2470,7 +2470,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -2544,7 +2544,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -2590,7 +2590,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   Recipient
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -2636,14 +2636,14 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   Amount
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 cuqVRO"
+                    class="Label-sc-4akkzw-0 gOcLKd"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-0.5 -mx-1"
+                      class="flex space-x-1"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2659,9 +2659,9 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
               >
                 <div
-                  class="sc-bdnxRM AFVmm"
-                  height="16"
-                  width="16"
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
                 >
                   <svg>
                     sent.svg
@@ -2682,7 +2682,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2706,7 +2706,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   Memo
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <p
                     class="break-all whitespace-pre-line"
@@ -2742,7 +2742,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -2761,7 +2761,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -2852,7 +2852,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -2926,7 +2926,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -2996,7 +2996,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   Votes (1)
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="-my-2"
@@ -3061,7 +3061,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   Unvotes (1)
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="-my-2"
@@ -3126,7 +3126,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3150,7 +3150,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -3169,7 +3169,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"
@@ -3260,7 +3260,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   ID
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden items-baseline space-x-3"
@@ -3334,7 +3334,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   Sender
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -3404,7 +3404,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   Votes (1)
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="-my-2"
@@ -3469,7 +3469,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   Unvotes (1)
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="-my-2"
@@ -3534,7 +3534,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   Transaction Fee
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3558,7 +3558,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   Timestamp
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   31.07.2020 4:34 PM
                 </div>
@@ -3577,7 +3577,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   Confirmations
                 </div>
                 <div
-                  class="font-semibold"
+                  class="flex items-center font-semibold"
                 >
                   <div
                     class="flex items-center space-x-3"

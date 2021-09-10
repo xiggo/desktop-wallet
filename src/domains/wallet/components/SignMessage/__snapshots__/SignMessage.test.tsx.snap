@@ -463,7 +463,7 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
           Signatory
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           <div
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -516,7 +516,7 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
           Message
         </div>
         <div
-          class="font-semibold"
+          class="flex items-center font-semibold"
         >
           Hello World
         </div>

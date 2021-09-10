@@ -276,7 +276,7 @@ exports[`SecondSignatureRegistrationForm should not generate mnemonic if already
                 Sender
               </div>
               <div
-                class="font-semibold"
+                class="flex items-center font-semibold"
               >
                 <div
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -526,7 +526,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
                 Sender
               </div>
               <div
-                class="font-semibold"
+                class="flex items-center font-semibold"
               >
                 <div
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -719,7 +719,7 @@ exports[`SecondSignatureRegistrationForm should render transaction details 1`] =
         Transaction Fee
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <span
           class="whitespace-nowrap"

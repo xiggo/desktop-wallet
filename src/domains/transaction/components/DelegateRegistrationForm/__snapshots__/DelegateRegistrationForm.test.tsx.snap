@@ -68,7 +68,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
               Cryptoasset
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               ARK Devnet
             </div>
@@ -103,7 +103,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
               Sender
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -418,7 +418,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
               Cryptoasset
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               ARK Devnet
             </div>
@@ -453,7 +453,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
               Sender
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -723,7 +723,7 @@ exports[`DelegateRegistrationForm should render review step 1`] = `
               Cryptoasset
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               ARK Devnet
             </div>
@@ -758,7 +758,7 @@ exports[`DelegateRegistrationForm should render review step 1`] = `
               Sender
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -815,7 +815,7 @@ exports[`DelegateRegistrationForm should render review step 1`] = `
               Delegate Name
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             />
           </div>
         </div>
@@ -971,7 +971,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
               Cryptoasset
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               ARK Devnet
             </div>
@@ -1006,7 +1006,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
               Sender
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1279,7 +1279,7 @@ exports[`DelegateRegistrationForm should set username 1`] = `
               Cryptoasset
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               ARK Devnet
             </div>
@@ -1314,7 +1314,7 @@ exports[`DelegateRegistrationForm should set username 1`] = `
               Sender
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1610,7 +1610,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
               Cryptoasset
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               ARK Devnet
             </div>
@@ -1645,7 +1645,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
               Sender
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1960,7 +1960,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
               Cryptoasset
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               ARK Devnet
             </div>
@@ -1995,7 +1995,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
               Sender
             </div>
             <div
-              class="font-semibold"
+              class="flex items-center font-semibold"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"

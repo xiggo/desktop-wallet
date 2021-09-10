@@ -395,11 +395,11 @@ exports[`News should filter results based on category query and asset 1`] = `
                             class="flex flex-col justify-end"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 oJzaz"
+                              class="Label-sc-4akkzw-0 bEleDA"
                               color="warning"
                             >
                               <span
-                                class="text-sm"
+                                class="text-sm mx-1"
                                 data-testid="NewsCard__category"
                               >
                                 #Technical
@@ -1273,11 +1273,11 @@ exports[`News should render 1`] = `
                             class="flex flex-col justify-end"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 oJzaz"
+                              class="Label-sc-4akkzw-0 bEleDA"
                               color="warning"
                             >
                               <span
-                                class="text-sm"
+                                class="text-sm mx-1"
                                 data-testid="NewsCard__category"
                               >
                                 #Technical

@@ -15,7 +15,7 @@ exports[`TransactionExplorerLink should render a transaction link 1`] = `
         ID
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
           class="flex overflow-hidden items-baseline space-x-3"

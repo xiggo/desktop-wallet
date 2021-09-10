@@ -15,7 +15,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
         Recipients (2)
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
           class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -195,7 +195,7 @@ exports[`TransactionRecipients should render a single recipient 1`] = `
         Recipient
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -246,7 +246,7 @@ exports[`TransactionRecipients should render a single recipient with alias 1`] =
         Recipient
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -308,7 +308,7 @@ exports[`TransactionRecipients should render the delegate icon if isDelegate 1`]
         Recipient
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         <div
           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"

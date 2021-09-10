@@ -42,7 +42,7 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 		return (
 			<Tooltip content={tooltipContent}>
 				<Circle className={modeCircleStyle} size="lg">
-					<Icon name={modeIconName} />
+					<Icon name={modeIconName} size="lg" />
 				</Circle>
 			</Tooltip>
 		);
@@ -61,7 +61,7 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 			<Tooltip content={t("TRANSACTION.HINT_AMOUNT", { amount: returnedAmount, currency })}>
 				<div
 					data-testid="TransactionAmount__Hint_Amount"
-					className={cn("flex items-center -ml-1 px-2", hintStyle)}
+					className={cn("flex items-center -ml-1.5 px-2", hintStyle)}
 				>
 					<Icon name="HintSmall" size="sm" className="dark:text-white" />
 				</div>
@@ -77,7 +77,7 @@ export const TransactionAmount: React.FC<TransactionAmountProperties> = ({
 			{...properties}
 		>
 			<Label color={isSent ? "danger" : "success"}>
-				<div className="flex space-x-0.5 -mx-1">
+				<div className="flex space-x-1">
 					{renderHintIcon()}
 					<AmountCrypto showSign ticker={currency} value={amount} isNegative={isSent} />
 				</div>

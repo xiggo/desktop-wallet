@@ -15,7 +15,7 @@ exports[`TransactionTimestamp should render 1`] = `
         Timestamp
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         31.07.2020 4:34 PM
       </div>

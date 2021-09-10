@@ -15,7 +15,7 @@ exports[`TransactionType should render 1`] = `
         Transaction Type
       </div>
       <div
-        class="font-semibold"
+        class="flex items-center font-semibold"
       >
         Multipayment
       </div>
