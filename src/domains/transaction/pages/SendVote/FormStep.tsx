@@ -29,7 +29,7 @@ export const FormStep = ({
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 
-	const { findByType } = useFees(profile);
+	const { calculateFeesByType } = useFees(profile);
 
 	const form = useFormContext();
 	const { setValue, watch, getValues } = form;
@@ -39,7 +39,7 @@ export const FormStep = ({
 
 	useEffect(() => {
 		const setFees = async (network: Networks.Network) => {
-			const fees = await findByType(network.coin(), network.id(), "vote");
+			const fees = await calculateFeesByType(network.coin(), network.id(), "vote");
 
 			setValue("fees", fees);
 
@@ -52,7 +52,7 @@ export const FormStep = ({
 		};
 
 		setFees(wallet.network());
-	}, [env, wallet, setValue, findByType, getValues]);
+	}, [env, wallet, setValue, calculateFeesByType, getValues]);
 
 	const showFeeInput = useMemo(() => !wallet.network().chargesZeroFees(), [wallet]);
 

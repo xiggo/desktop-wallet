@@ -5,6 +5,8 @@ import { Tooltip } from "app/components/Tooltip";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { getMultiSignatureInfo } from "./MultiSignatureDetail.helpers";
+
 const WaitingBadge = () => {
 	const { t } = useTranslation();
 
@@ -89,9 +91,8 @@ export const Signatures = ({
 }) => {
 	const { t } = useTranslation();
 
-	const publicKeys = transaction
-		.get<{ publicKeys: string[] }>("multiSignature")
-		.publicKeys.filter((pubKey) => pubKey !== wallet.publicKey());
+	const { publicKeys: participantPublicKeys } = getMultiSignatureInfo(transaction);
+	const publicKeys = participantPublicKeys.filter((pubKey) => pubKey !== wallet.publicKey());
 
 	return (
 		<div data-testid="Signatures">

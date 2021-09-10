@@ -28,7 +28,7 @@ export const FormStep = ({
 
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
-	const { findByType } = useFees(profile);
+	const { calculateFeesByType } = useFees(profile);
 
 	const { getValues, setValue, watch } = useFormContext();
 	const { recipients, memo } = getValues();
@@ -42,7 +42,7 @@ export const FormStep = ({
 
 	const setTransactionFees = useCallback(
 		async (network: Networks.Network) => {
-			const transactionFees = await findByType(
+			const transactionFees = await calculateFeesByType(
 				network.coin(),
 				network.id(),
 				isSingle ? "transfer" : "multiPayment",
@@ -57,7 +57,7 @@ export const FormStep = ({
 				});
 			}
 		},
-		[findByType, isSingle, setValue, getValues],
+		[calculateFeesByType, isSingle, setValue, getValues],
 	);
 
 	useEffect(() => {

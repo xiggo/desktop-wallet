@@ -6,6 +6,7 @@ import { Header } from "app/components/Header";
 import { Icon } from "app/components/Icon";
 import { Image } from "app/components/Image";
 import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
+import { getMultiSignatureInfo } from "domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { RecipientList } from "domains/transaction/components/RecipientList";
 import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
 import {
@@ -53,8 +54,16 @@ export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }
 				return (await wallet.coin().address().fromPublicKey(publicKey)).address;
 			};
 
-			const { min, publicKeys } = transaction.get("multiSignature");
-			const { address } = await senderWallet.coin().address().fromMultiSignature(min, publicKeys);
+			const { min, publicKeys } = getMultiSignatureInfo(transaction);
+
+			try {
+				const { address } = await senderWallet.coin().address().fromMultiSignature(min, publicKeys);
+				setGeneratedAddress(address);
+				/* istanbul ignore next */
+			} catch {
+				// We are using a coin that doesn't support multi-signature address derivation.
+				// TODO: AddressService#fromMultiSignature is not implemented for Lisk.
+			}
 
 			const addresses: RecipientListItem[] = [];
 			for (const publicKey of publicKeys) {
@@ -63,7 +72,6 @@ export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }
 				addresses.push({ address });
 			}
 
-			setGeneratedAddress(address);
 			setParticipantAddresses(addresses);
 			setMinParticipants(min);
 			setPublicKeys(publicKeys);

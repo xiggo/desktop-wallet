@@ -75,7 +75,10 @@ export const useMultiSignatureRegistration = () => {
 		const transaction: ExtendedSignedTransactionData = wallet.transaction().transaction(
 			await wallet.transaction().signMultiSignature({
 				data: {
+					mandatoryKeys: publicKeys,
 					min: +minParticipants,
+					numberOfSignatures: +minParticipants,
+					optionalKeys: [],
 					publicKeys,
 					senderPublicKey,
 				},

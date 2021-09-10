@@ -23,7 +23,7 @@ export const FormStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { findByType } = useFees(profile);
+	const { calculateFeesByType } = useFees(profile);
 
 	const { getValues, setValue, watch } = useFormContext();
 	const { fee, fees } = watch();
@@ -32,7 +32,7 @@ export const FormStep = ({
 
 	useEffect(() => {
 		const setTransactionFees = async (network: Networks.Network) => {
-			const fees = await findByType(network.coin(), network.id(), "delegateResignation");
+			const fees = await calculateFeesByType(network.coin(), network.id(), "delegateResignation");
 
 			setValue("fees", fees);
 
@@ -45,7 +45,7 @@ export const FormStep = ({
 		};
 
 		setTransactionFees(senderWallet.network());
-	}, [findByType, getValues, setValue, senderWallet]);
+	}, [calculateFeesByType, getValues, setValue, senderWallet]);
 
 	return (
 		<section data-testid="SendDelegateResignation__form-step">

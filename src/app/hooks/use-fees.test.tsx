@@ -1,3 +1,4 @@
+import { BigNumber } from "@payvo/helpers";
 import { ARK } from "@payvo/sdk-ark";
 import { renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";
@@ -22,7 +23,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.findByType("ARK", "ark.devnet", "ipfs")).resolves.toEqual({
+		await expect(current.calculateFeesByType("ARK", "ark.devnet", "ipfs")).resolves.toEqual({
 			avg: 5,
 			max: 5,
 			min: 5,
@@ -48,7 +49,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.findByType("ARK", "ark.devnet", "ipfs")).resolves.toEqual({
+		await expect(current.calculateFeesByType("ARK", "ark.devnet", "ipfs")).resolves.toEqual({
 			avg: 5,
 			max: 5,
 			min: 5,
@@ -78,7 +79,7 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.findByType("ARK", "ark.devnet", "ipfs")).resolves.toEqual({
+		await expect(current.calculateFeesByType("ARK", "ark.devnet", "ipfs")).resolves.toEqual({
 			avg: 5,
 			max: 5,
 			min: 5,
@@ -110,13 +111,58 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", "ark.devnet");
 
-		await expect(current.findByType("ARK", "ark.devnet", "multiSignature")).resolves.toEqual({
+		await expect(current.calculateFeesByType("ARK", "ark.devnet", "multiSignature")).resolves.toEqual({
 			avg: 10,
 			isDynamic: false,
 			max: 10,
 			min: 10,
 			static: 10,
 		});
+
+		mockFind.mockRestore();
+	});
+
+	it("should calculate and return multisignature fees with two participants", async () => {
+		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
+
+		const mockFind = jest.spyOn(env.fees(), "findByType").mockImplementationOnce(() => {
+			throw new Error("test");
+		});
+
+		const profile = env.profiles().create("John Doe");
+		await env.profiles().restore(profile);
+		const { wallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+		await env.wallets().syncByProfile(profile);
+
+		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
+		const {
+			result: { current },
+		} = renderHook(() => useFees(profile), { wrapper });
+
+		await env.fees().sync(profile, "ARK", "ark.devnet");
+
+		const fee = await current.calculateMultiSignatureFee({
+			coin: wallet.coin(),
+			minParticipants: 2,
+			participants: [
+				{
+					address: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+					alias: "Wallet #1",
+					publicKey: "03af2feb4fc97301e16d6a877d5b135417e8f284d40fac0f84c09ca37f82886c51",
+				},
+				{
+					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					alias: "Wallet #2",
+					publicKey: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+				},
+			],
+		});
+
+		expect(fee).toBeInstanceOf(BigNumber);
+		expect(fee.toHuman()).toEqual(15);
 
 		mockFind.mockRestore();
 	});

@@ -53,7 +53,7 @@ export const SendRegistration = () => {
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
-	const { findByType } = useFees(activeProfile);
+	const { calculateFeesByType } = useFees(activeProfile);
 	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
@@ -80,12 +80,12 @@ export const SendRegistration = () => {
 
 	const setFeesByRegistrationType = useCallback(
 		async (type: string) => {
-			const fees = await findByType(activeWallet.coinId(), activeWallet.networkId(), type);
+			const fees = await calculateFeesByType(activeWallet.coinId(), activeWallet.networkId(), type);
 
 			setValue("fees", fees);
 			setValue("fee", fees?.avg);
 		},
-		[setValue, activeWallet, findByType],
+		[setValue, activeWallet, calculateFeesByType],
 	);
 
 	useEffect(() => {

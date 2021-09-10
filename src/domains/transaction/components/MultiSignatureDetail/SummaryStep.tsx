@@ -19,6 +19,7 @@ import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-t
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { getMultiSignatureInfo } from "./MultiSignatureDetail.helpers";
 import { Signatures } from "./Signatures";
 
 export const SummaryStep = ({
@@ -79,7 +80,7 @@ export const SummaryStep = ({
 		findVoteDelegates();
 	}, [env, wallet, transaction, type]);
 
-	const { publicKeys, min } = transaction.get<{ publicKeys: string[]; min: number }>("multiSignature");
+	const { publicKeys, min } = getMultiSignatureInfo(transaction);
 
 	return (
 		<section>

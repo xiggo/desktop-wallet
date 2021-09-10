@@ -1,3 +1,4 @@
+import { DTO } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -98,4 +99,18 @@ export const Paginator = ({
 	}
 
 	return null;
+};
+
+export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransactionData) => {
+	const { min, publicKeys, mandatoryKeys, numberOfSignatures } = transaction.get<{
+		mandatoryKeys: string[];
+		publicKeys: string[];
+		min: number;
+		numberOfSignatures: number;
+	}>("multiSignature");
+
+	return {
+		min: min ?? numberOfSignatures,
+		publicKeys: publicKeys || mandatoryKeys,
+	};
 };

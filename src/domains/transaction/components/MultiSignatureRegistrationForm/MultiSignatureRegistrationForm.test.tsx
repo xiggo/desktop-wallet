@@ -265,6 +265,7 @@ describe("MultiSignature Registration Form", () => {
 		const { result, waitForNextUpdate } = renderHook(() =>
 			useForm({
 				defaultValues: {
+					minParticipants: 2,
 					participants: [
 						{
 							address: wallet.address(),
@@ -283,6 +284,7 @@ describe("MultiSignature Registration Form", () => {
 
 		result.current.register("fee");
 		result.current.register("participants");
+		result.current.register("minParticipants");
 
 		await hookAct(async () => {
 			render(<Component form={result.current} />);
@@ -290,14 +292,6 @@ describe("MultiSignature Registration Form", () => {
 
 			act(() => {
 				fireEvent.click(screen.getByText(transactionTranslations.FEES.AVERAGE));
-			});
-
-			act(() => {
-				fireEvent.input(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), {
-					target: {
-						value: 3,
-					},
-				});
 			});
 
 			await waitForNextUpdate();

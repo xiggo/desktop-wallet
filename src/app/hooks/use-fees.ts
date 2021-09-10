@@ -1,36 +1,68 @@
 import { BigNumber } from "@payvo/helpers";
 import { Contracts as ProfileContracts } from "@payvo/profiles";
-import { Services } from "@payvo/sdk";
+import { Coins, Services } from "@payvo/sdk";
 import { useEnvironmentContext } from "app/contexts";
+import { Participant } from "domains/transaction/components/MultiSignatureRegistrationForm/components/AddParticipant/AddParticipant";
 import { useCallback } from "react";
 import { TransactionFees } from "types";
+import { assertString } from "utils/assertions";
+
+interface MusigFeesProperties {
+	participants: Participant[];
+	minParticipants: number;
+	coin: Coins.Coin;
+}
 
 export const useFees = (profile: ProfileContracts.IProfile) => {
 	const { env } = useEnvironmentContext();
 
-	const calculateMultiSignatureFee = useCallback(
-		async ({
-			coin,
-			network,
-			participants,
-		}: {
-			coin: string;
-			network: string;
-			participants: number;
-		}): Promise<BigNumber> => {
-			const activeCoin = profile.coins().get(coin, network);
+	const createMuSigFeeStubTransaction = useCallback(
+		async ({ participants, coin, minParticipants }: MusigFeesProperties) => {
+			const { mnemonic, wallet } = await profile.walletFactory().generate({
+				coin: coin.network().coin(),
+				network: coin.network().id(),
+			});
 
-			return activeCoin.fee().calculate({
-				asset: { multiSignature: { publicKeys: new Array(participants).fill(null) } },
-				// TODO: needs adjustments in sdk to support fee calculation if `SignedTransactionData` is not available
-				//@ts-ignore
-				type: "multiSignature",
+			const publicKey = wallet.publicKey();
+			assertString(publicKey);
+
+			const signatory = await coin.signatory().stub(mnemonic);
+
+			const publicKeys = participants.map((participant) => participant.publicKey);
+			// Some coins like ARK, throw error if signatory's public key is not included in musig participants public keys.
+			publicKeys.splice(1, 1, publicKey);
+
+			return coin.transaction().multiSignature({
+				data: {
+					mandatoryKeys: [],
+					min: minParticipants,
+					numberOfSignatures: minParticipants,
+					optionalKeys: publicKeys,
+					publicKeys,
+					senderPublicKey: publicKey,
+				},
+				nonce: "1",
+				signatory,
 			});
 		},
 		[profile],
 	);
 
-	const findByType = useCallback(
+	const calculateMultiSignatureFee = useCallback(
+		async ({ participants, coin, minParticipants }: MusigFeesProperties): Promise<BigNumber> => {
+			// Provide a stub `SignedTransactionData` for coins that need it to calculate fees.
+			const transaction = await createMuSigFeeStubTransaction({
+				coin,
+				minParticipants,
+				participants,
+			});
+
+			return coin.fee().calculate(transaction);
+		},
+		[createMuSigFeeStubTransaction],
+	);
+
+	const calculateFeesByType = useCallback(
 		async (coin: string, network: string, type: string): Promise<TransactionFees> => {
 			let transactionFees: Services.TransactionFee;
 
@@ -43,7 +75,14 @@ export const useFees = (profile: ProfileContracts.IProfile) => {
 			}
 
 			if (type === "multiSignature") {
-				const defaultMultiSignatureFee = await calculateMultiSignatureFee({ coin, network, participants: 1 });
+				const defaultMultiSignatureFee = await calculateMultiSignatureFee({
+					// participants: [{ address: wallet.address(), alias: wallet.alias(), publicKey }],
+					coin: profile.coins().get(coin, network),
+
+					minParticipants: 2,
+
+					participants: [],
+				});
 
 				return {
 					avg: defaultMultiSignatureFee.toHuman(),
@@ -64,5 +103,5 @@ export const useFees = (profile: ProfileContracts.IProfile) => {
 		[env, profile, calculateMultiSignatureFee],
 	);
 
-	return { calculateMultiSignatureFee, findByType };
+	return { calculateFeesByType, calculateMultiSignatureFee };
 };

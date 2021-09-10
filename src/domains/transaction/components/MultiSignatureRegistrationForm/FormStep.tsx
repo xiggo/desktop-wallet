@@ -52,9 +52,9 @@ export const FormStep = ({
 			setValue("isLoading", true, { shouldDirty: true });
 
 			const multiSignatureFee = await calculateMultiSignatureFee({
-				coin: wallet.coinId(),
-				network: wallet.networkId(),
-				participants: participants.length,
+				coin: wallet.coin(),
+				minParticipants,
+				participants: participants,
 			});
 
 			setValue("fee", multiSignatureFee.toHuman(), { shouldDirty: true, shouldValidate: true });
@@ -72,7 +72,7 @@ export const FormStep = ({
 		};
 
 		updateFee();
-	}, [setValue, participants, calculateMultiSignatureFee, wallet]);
+	}, [setValue, participants, calculateMultiSignatureFee, wallet, minParticipants]);
 
 	const handleParticipants = useCallback(
 		(values: Participant[]) => {

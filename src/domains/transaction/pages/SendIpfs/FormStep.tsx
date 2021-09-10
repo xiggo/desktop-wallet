@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();
 
-	const { findByType } = useFees(profile);
+	const { calculateFeesByType } = useFees(profile);
 
 	const { getValues, setValue, watch } = useFormContext();
 	const { hash, fee, fees } = watch();
@@ -21,7 +21,7 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 
 	useEffect(() => {
 		const setTransactionFees = async (wallet: Contracts.IReadWriteWallet) => {
-			const transactionFees = await findByType(wallet.coinId(), wallet.networkId(), "ipfs");
+			const transactionFees = await calculateFeesByType(wallet.coinId(), wallet.networkId(), "ipfs");
 			setValue("fees", transactionFees);
 
 			if (!getValues("fee")) {
@@ -33,7 +33,7 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 		};
 
 		setTransactionFees(wallet);
-	}, [findByType, getValues, wallet, setValue]);
+	}, [calculateFeesByType, getValues, wallet, setValue]);
 
 	return (
 		<section data-testid="SendIpfs__form-step">
