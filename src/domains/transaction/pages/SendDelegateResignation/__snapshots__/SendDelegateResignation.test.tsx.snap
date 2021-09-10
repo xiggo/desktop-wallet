@@ -4630,7 +4630,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -4704,7 +4704,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Delegate Resignation
                           </div>
@@ -4736,7 +4736,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -4771,7 +4771,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -4817,7 +4817,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                             Delegate Name
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             testwallet2
                           </div>
@@ -4836,7 +4836,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"

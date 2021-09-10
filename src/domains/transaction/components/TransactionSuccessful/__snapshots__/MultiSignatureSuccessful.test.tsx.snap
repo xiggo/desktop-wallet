@@ -148,7 +148,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
             </div>
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex flex-grow text-theme-primary-300 dark:text-theme-secondary-600 space-x-2 items-center"
@@ -308,7 +308,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
             Multisignature Participants
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -449,7 +449,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
             Minimum Required Signatures
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <span>
               2 
@@ -476,7 +476,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
             Transaction Type
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             Transfer
           </div>
@@ -612,7 +612,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
             </div>
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex flex-grow text-theme-primary-300 dark:text-theme-secondary-600 space-x-2 items-center"
@@ -772,7 +772,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
             Multisignature Participants
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -913,7 +913,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
             Minimum Required Signatures
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <span>
               2 
@@ -940,7 +940,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
             Transaction Type
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             Transfer
           </div>
@@ -1009,7 +1009,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
             ID
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex items-center space-x-3"
@@ -1060,7 +1060,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
             Cryptoasset
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             ARK Devnet
           </div>
@@ -1095,7 +1095,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
             Sender
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1140,7 +1140,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
             Multisignature Participants
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -1281,7 +1281,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
             Minimum Required Signatures
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <span>
               2 
@@ -1308,7 +1308,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
             Transaction Type
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             Transfer
           </div>
@@ -1377,7 +1377,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
             ID
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex items-center space-x-3"
@@ -1428,7 +1428,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
             Cryptoasset
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             ARK Devnet
           </div>
@@ -1463,7 +1463,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
             Sender
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1520,7 +1520,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
             Multisignature Participants
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -1661,7 +1661,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
             Minimum Required Signatures
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <span>
               2 
@@ -1688,7 +1688,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
             Transaction Type
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             Transfer
           </div>

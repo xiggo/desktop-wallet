@@ -7737,7 +7737,7 @@ exports[`SendTransfer should render summary step 1`] = `
             Multisignature Participants
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             <div
               class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
@@ -7807,7 +7807,7 @@ exports[`SendTransfer should render summary step 1`] = `
             Transaction Type
           </div>
           <div
-            class="font-semibold"
+            class="flex items-center font-semibold"
           >
             Transfer
           </div>
@@ -10461,7 +10461,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -10535,7 +10535,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Transfer
                           </div>
@@ -10567,7 +10567,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -10602,7 +10602,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -10659,7 +10659,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                             Recipient
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -10705,14 +10705,14 @@ exports[`SendTransfer should send a single transfer 2`] = `
                             Amount
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 cuqVRO"
+                              class="Label-sc-4akkzw-0 gOcLKd"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-0.5 -mx-1"
+                                class="flex space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -10728,9 +10728,9 @@ exports[`SendTransfer should send a single transfer 2`] = `
                           class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               sent.svg
@@ -10751,7 +10751,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"

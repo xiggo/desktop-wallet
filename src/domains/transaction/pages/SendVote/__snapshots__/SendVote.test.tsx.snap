@@ -1644,7 +1644,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                             ID
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden items-baseline space-x-3"
@@ -1718,7 +1718,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                             Transaction Type
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             Vote
                           </div>
@@ -1750,7 +1750,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                             Cryptoasset
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             ARK Devnet
                           </div>
@@ -1785,7 +1785,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                             Sender
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -1855,7 +1855,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                             Votes (1)
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <div
                               class="-my-2"
@@ -1920,7 +1920,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                             Transaction Fee
                           </div>
                           <div
-                            class="font-semibold"
+                            class="flex items-center font-semibold"
                           >
                             <span
                               class="whitespace-nowrap"
