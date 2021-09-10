@@ -59,11 +59,6 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                         class="relative w-full"
                       >
                         <div
-                          class="fixed invisible w-auto whitespace-nowrap"
-                        >
-                          …
-                        </div>
-                        <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                         >
                           <div
@@ -93,11 +88,6 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                               for="downshift-0-input"
                               id="downshift-0-label"
                             />
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              …
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                             >
@@ -342,11 +332,6 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
                 Minimum Required Signatures
               </label>
               <div
-                class="fixed invisible w-auto whitespace-nowrap"
-              >
-                0…
-              </div>
-              <div
                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
               >
                 <div
@@ -390,11 +375,6 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
               <div
                 class="relative"
               >
-                <div
-                  class="fixed invisible w-auto whitespace-nowrap"
-                >
-                  5…
-                </div>
                 <div
                   class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
                   disabled=""

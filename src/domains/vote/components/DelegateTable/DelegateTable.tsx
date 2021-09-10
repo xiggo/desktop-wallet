@@ -7,29 +7,16 @@ import { useTranslation } from "react-i18next";
 
 import { DelegateFooter } from "./DelegateFooter";
 import { DelegateRow } from "./DelegateRow";
-
-interface DelegateTableProperties {
-	delegates: Contracts.IReadOnlyWallet[];
-	emptyText?: string;
-	isLoading?: boolean;
-	itemsPerPage?: number;
-	maxVotes: number;
-	selectedUnvoteAddresses?: string[];
-	selectedVoteAddresses?: string[];
-	selectedWallet: string;
-	votes?: Contracts.VoteRegistryItem[];
-	onContinue?: (unvotes: string[], votes: string[]) => void;
-	isPaginationDisabled?: boolean;
-	subtitle?: React.ReactNode;
-}
+import { delegateExistsInVotes, useDelegateTableColumns } from "./DelegateTable.helpers";
+import { DelegateTableProperties, VoteDelegateProperties } from "./DelegateTable.models";
 
 export const DelegateTable = ({
 	delegates,
 	isLoading,
 	itemsPerPage,
 	maxVotes,
-	selectedUnvoteAddresses,
-	selectedVoteAddresses,
+	unvoteDelegates,
+	voteDelegates,
 	selectedWallet,
 	votes,
 	onContinue,
@@ -38,35 +25,28 @@ export const DelegateTable = ({
 }: DelegateTableProperties) => {
 	const { t } = useTranslation();
 	const [currentPage, setCurrentPage] = useState(1);
-	const [selectedUnvotes, setSelectedUnvotes] = useState<string[]>(selectedUnvoteAddresses || []);
-	const [selectedVotes, setSelectedVotes] = useState<string[]>(selectedVoteAddresses || []);
+	const [selectedUnvotes, setSelectedUnvotes] = useState<VoteDelegateProperties[]>(unvoteDelegates);
+	const [selectedVotes, setSelectedVotes] = useState<VoteDelegateProperties[]>(voteDelegates);
 	const [isVoteDisabled, setIsVoteDisabled] = useState(false);
+	const [availableBalance, setAvailableBalance] = useState(selectedWallet.balance());
 
-	const columns = [
-		{
-			Header: t("VOTE.DELEGATE_TABLE.NAME"),
-			accessor: (delegate: Contracts.IReadOnlyWallet) => isLoading || delegate.username(),
-			className: "justify-start",
-		},
-		{
-			Header: t("COMMON.EXPLORER"),
-			accessor: (delegate: Contracts.IReadOnlyWallet) => isLoading || delegate.explorerLink(),
-			className: "justify-center",
-			disableSortBy: true,
-		},
-		{
-			Header: t("VOTE.DELEGATE_TABLE.VOTE"),
-			accessor: "onSelect",
-			className: "justify-end",
-			disableSortBy: true,
-		},
-	];
+	const columns = useDelegateTableColumns({ isLoading, network: selectedWallet.network() });
 
 	const totalDelegates = delegates.length;
 	const hasVotes = votes!.length > 0;
 
 	useEffect(() => {
-		if (hasVotes && selectedVotes.length === maxVotes) {
+		if (voteDelegates.length === 0) {
+			return;
+		}
+
+		const totalVotesAmount = voteDelegates.reduce((accumulator, { amount }) => accumulator + amount, 0);
+
+		setAvailableBalance(availableBalance - totalVotesAmount);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+	useEffect(() => {
+		if ((hasVotes || maxVotes > 1) && selectedVotes.length === maxVotes) {
 			setIsVoteDisabled(true);
 		} else {
 			setIsVoteDisabled(false);
@@ -75,9 +55,16 @@ export const DelegateTable = ({
 
 	useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), [currentPage]);
 
-	const toggleUnvotesSelected = (address: string) => {
-		if (selectedUnvotes.find((delegateAddress) => delegateAddress === address)) {
-			setSelectedUnvotes(selectedUnvotes.filter((delegateAddress) => delegateAddress !== address));
+	const toggleUnvotesSelected = (address: string, voteAmount?: number) => {
+		let unvotesInstance = selectedUnvotes;
+		const delegateAlreadyExists = delegateExistsInVotes(selectedUnvotes, address);
+
+		if (delegateAlreadyExists) {
+			unvotesInstance = selectedUnvotes.filter(({ delegateAddress }) => delegateAddress !== address);
+		}
+
+		if (delegateAlreadyExists && voteAmount === undefined) {
+			setSelectedUnvotes(unvotesInstance);
 
 			if (maxVotes === 1 && selectedVotes.length > 0) {
 				setSelectedVotes([]);
@@ -86,16 +73,33 @@ export const DelegateTable = ({
 			return;
 		}
 
+		const voteDelegate: VoteDelegateProperties = {
+			amount: voteAmount ?? 0,
+			delegateAddress: address,
+		};
+
+		const delegate = votes?.find(({ wallet }) => wallet?.address() === address);
+		if (delegate?.amount && voteAmount === undefined) {
+			voteDelegate.amount = delegate.amount;
+		}
+
 		if (maxVotes === 1) {
-			setSelectedUnvotes([address]);
+			setSelectedUnvotes([voteDelegate]);
 		} else {
-			setSelectedUnvotes([...selectedUnvotes, address]);
+			setSelectedUnvotes([...unvotesInstance, voteDelegate]);
 		}
 	};
 
-	const toggleVotesSelected = (address: string) => {
-		if (selectedVotes.find((delegateAddress) => delegateAddress === address)) {
-			setSelectedVotes(selectedVotes.filter((delegateAddress) => delegateAddress !== address));
+	const toggleVotesSelected = (address: string, voteAmount?: number) => {
+		let votesInstance = selectedVotes;
+		const delegateAlreadyExists = delegateExistsInVotes(selectedVotes, address);
+
+		if (delegateAlreadyExists) {
+			votesInstance = selectedVotes.filter(({ delegateAddress }) => delegateAddress !== address);
+		}
+
+		if (delegateAlreadyExists && voteAmount === undefined) {
+			setSelectedVotes(votesInstance);
 
 			if (maxVotes === 1 && hasVotes) {
 				setSelectedUnvotes([]);
@@ -104,14 +108,24 @@ export const DelegateTable = ({
 			return;
 		}
 
+		const voteDelegate: VoteDelegateProperties = {
+			amount: voteAmount ?? 0,
+			delegateAddress: address,
+		};
+
 		if (maxVotes === 1) {
-			setSelectedVotes([address]);
+			setSelectedVotes([voteDelegate]);
 
 			if (hasVotes) {
-				setSelectedUnvotes(votes!.map(({ wallet }) => wallet!.address()));
+				setSelectedUnvotes(
+					votes!.map((vote) => ({
+						amount: vote.amount,
+						delegateAddress: vote.wallet!.address(),
+					})),
+				);
 			}
 		} else {
-			setSelectedVotes([...selectedVotes, address]);
+			setSelectedVotes([...votesInstance, voteDelegate]);
 		}
 	};
 
@@ -150,10 +164,10 @@ export const DelegateTable = ({
 
 			<Table columns={columns} data={data}>
 				{(delegate: Contracts.IReadOnlyWallet, index: number) => {
-					let isVoted = false;
+					let voted: Contracts.VoteRegistryItem | undefined;
 
 					if (hasVotes) {
-						isVoted = !!votes?.find(({ wallet }) => wallet?.address() === delegate?.address?.());
+						voted = votes?.find(({ wallet }) => wallet?.address() === delegate?.address?.());
 					}
 
 					return (
@@ -162,11 +176,14 @@ export const DelegateTable = ({
 							delegate={delegate}
 							selectedUnvotes={selectedUnvotes}
 							selectedVotes={selectedVotes}
-							isVoted={isVoted}
+							selectedWallet={selectedWallet}
+							availableBalance={availableBalance}
+							setAvailableBalance={setAvailableBalance}
+							voted={voted}
 							isVoteDisabled={isVoteDisabled}
 							isLoading={showSkeleton}
-							onUnvoteSelect={toggleUnvotesSelected}
-							onVoteSelect={toggleVotesSelected}
+							toggleUnvotesSelected={toggleUnvotesSelected}
+							toggleVotesSelected={toggleVotesSelected}
 						/>
 					);
 				}}
@@ -185,6 +202,7 @@ export const DelegateTable = ({
 
 			<DelegateFooter
 				selectedWallet={selectedWallet}
+				availableBalance={availableBalance}
 				selectedVotes={selectedVotes}
 				selectedUnvotes={selectedUnvotes}
 				maxVotes={maxVotes}

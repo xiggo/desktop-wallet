@@ -3,11 +3,6 @@
 exports[`InputCounter should render 1`] = `
 <DocumentFragment>
   <div
-    class="fixed invisible w-auto whitespace-nowrap"
-  >
-    …
-  </div>
-  <div
     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
   >
     <div
@@ -40,11 +35,6 @@ exports[`InputCounter should render 1`] = `
 
 exports[`InputCounter should render with invalid state 1`] = `
 <div>
-  <div
-    class="fixed invisible w-auto whitespace-nowrap"
-  >
-    …
-  </div>
   <div
     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
   >

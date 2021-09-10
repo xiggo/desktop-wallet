@@ -4,25 +4,31 @@ import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
-import { act, fireEvent, render } from "testing-library";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
+import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { DelegateTable } from "./DelegateTable";
+import { VoteDelegateProperties } from "./DelegateTable.models";
 
-const selectedWallet = "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P";
+let useRandomNumberSpy: jest.SpyInstance;
 
+let wallet: Contracts.IReadWriteWallet;
 let delegates: Contracts.IReadOnlyWallet[];
 let votes: Contracts.VoteRegistryItem[];
 
 describe("DelegateTable", () => {
 	beforeAll(() => {
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+		useRandomNumberSpy = jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+
+		const profile = env.profiles().findById(getDefaultProfileId());
+		wallet = profile.wallets().values()[0];
 
 		delegates = [0, 1, 2].map(
 			(index) =>
 				new ReadOnlyWallet({
 					address: data[index].address,
 					explorerLink: "",
+					governanceIdentifier: "address",
 					isDelegate: true,
 					isResignedDelegate: false,
 					publicKey: data[index].publicKey,
@@ -33,38 +39,69 @@ describe("DelegateTable", () => {
 		votes = [
 			{
 				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[0].address,
-					explorerLink: "",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: data[0].publicKey,
-					username: data[0].username,
-				}),
+				wallet: delegates[0],
 			},
 		];
 	});
 
 	afterAll(() => {
-		useRandomNumberHook.useRandomNumber.mockRestore();
+		useRandomNumberSpy.mockRestore();
 	});
 
 	it("should render", () => {
 		const { container, asFragment } = render(
-			<DelegateTable delegates={delegates} maxVotes={1} selectedWallet={selectedWallet} />,
+			<DelegateTable
+				delegates={delegates}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
 		);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render loading state", () => {
+	it("should render vote amount column", () => {
+		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+
 		const { container, asFragment } = render(
-			<DelegateTable delegates={[]} maxVotes={1} selectedWallet={selectedWallet} isLoading={true} />,
+			<DelegateTable
+				delegates={delegates}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
 		);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
+
+		votesAmountMinimumMock.mockRestore();
+	});
+
+	it.each(["base", "requiresAmount"])("should render loading state for %s", (voteType) => {
+		const votesAmountMinimumMock = jest
+			.spyOn(wallet.network(), "votesAmountMinimum")
+			.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
+
+		const { container, asFragment } = render(
+			<DelegateTable
+				delegates={[]}
+				isLoading={true}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+		);
+
+		expect(container).toBeTruthy();
+		expect(asFragment()).toMatchSnapshot();
+
+		votesAmountMinimumMock.mockRestore();
 	});
 
 	it("should render pagination", () => {
@@ -72,9 +109,11 @@ describe("DelegateTable", () => {
 			<DelegateTable
 				itemsPerPage={1}
 				delegates={delegates}
-				maxVotes={1}
-				selectedWallet={selectedWallet}
 				isLoading={false}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
@@ -84,25 +123,54 @@ describe("DelegateTable", () => {
 
 	it("should render with empty list", () => {
 		const { container, asFragment } = render(
-			<DelegateTable delegates={[]} maxVotes={1} selectedWallet={selectedWallet} />,
+			<DelegateTable
+				delegates={[]}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
 		);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should select a delegate to vote", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateTable delegates={delegates} maxVotes={1} selectedWallet={selectedWallet} />,
+	it("should render with subtitle", () => {
+		const { container, asFragment } = render(
+			<DelegateTable
+				delegates={delegates}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+				subtitle={<p>test</p>}
+			/>,
 		);
-		const selectButton = getByTestId("DelegateRow__toggle-0");
+
+		expect(container).toBeTruthy();
+		expect(screen.getByText("test")).toBeTruthy();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should select a delegate to vote", () => {
+		const { asFragment } = render(
+			<DelegateTable
+				delegates={delegates}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+		);
+		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(selectButton);
@@ -113,17 +181,24 @@ describe("DelegateTable", () => {
 	});
 
 	it("should unselect a delegate to vote", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateTable delegates={delegates} votes={votes} maxVotes={1} selectedWallet={selectedWallet} />,
+		const { asFragment } = render(
+			<DelegateTable
+				delegates={delegates}
+				votes={votes}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
 		);
-		const selectButton = getByTestId("DelegateRow__toggle-1");
+		const selectButton = screen.getByTestId("DelegateRow__toggle-1");
 
 		act(() => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(selectButton);
@@ -134,17 +209,24 @@ describe("DelegateTable", () => {
 	});
 
 	it("should select a delegate to unvote", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateTable delegates={delegates} votes={votes} maxVotes={1} selectedWallet={selectedWallet} />,
+		const { asFragment } = render(
+			<DelegateTable
+				delegates={delegates}
+				votes={votes}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
 		);
-		const selectButton = getByTestId("DelegateRow__toggle-0");
+		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(selectButton);
@@ -154,12 +236,137 @@ describe("DelegateTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should unselect a delegate to unvote", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateTable delegates={delegates} votes={votes} maxVotes={1} selectedWallet={selectedWallet} />,
+	it("should select a delegate with vote amount and make it unvote", () => {
+		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+
+		const votes: Contracts.VoteRegistryItem[] = [
+			{
+				amount: 10,
+				wallet: delegates[0],
+			},
+		];
+
+		const { asFragment } = render(
+			<DelegateTable
+				delegates={delegates}
+				votes={votes}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
 		);
-		const selectUnvoteButton = getByTestId("DelegateRow__toggle-0");
-		const selectVoteButton = getByTestId("DelegateRow__toggle-1");
+		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
+
+		act(() => {
+			fireEvent.click(selectButton);
+		});
+
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+
+		act(() => {
+			fireEvent.click(selectButton);
+		});
+
+		expect(selectButton).toHaveTextContent(translations.CURRENT);
+		expect(asFragment()).toMatchSnapshot();
+
+		votesAmountMinimumMock.mockRestore();
+	});
+
+	it("should select a changed delegate to unvote", async () => {
+		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountStepMock = jest.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
+
+		const votes: Contracts.VoteRegistryItem[] = [
+			{
+				amount: 20,
+				wallet: delegates[0],
+			},
+		];
+
+		const Table = () => (
+			<DelegateTable
+				delegates={delegates}
+				votes={votes}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>
+		);
+
+		const { asFragment, rerender } = render(<Table />);
+		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
+		const amountField = screen.getAllByTestId("InputCurrency")[0];
+
+		fireEvent.input(amountField, { target: { value: 30 } });
+
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		});
+
+		expect(selectButton).toHaveTextContent(translations.CHANGED);
+
+		act(() => {
+			fireEvent.click(selectButton);
+		});
+
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+
+		act(() => {
+			fireEvent.click(selectButton);
+		});
+
+		expect(selectButton).toHaveTextContent(translations.CURRENT);
+		expect(amountField).toHaveValue("20");
+
+		rerender(<Table />);
+
+		fireEvent.input(amountField, { target: { value: 10 } });
+
+		await waitFor(() => {
+			expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		});
+
+		expect(selectButton).toHaveTextContent(translations.CHANGED);
+
+		act(() => {
+			fireEvent.click(selectButton);
+		});
+
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+
+		act(() => {
+			fireEvent.click(selectButton);
+		});
+
+		expect(selectButton).toHaveTextContent(translations.CURRENT);
+		expect(amountField).toHaveValue("20");
+		expect(asFragment()).toMatchSnapshot();
+
+		votesAmountMinimumMock.mockRestore();
+		votesAmountStepMock.mockRestore();
+	});
+
+	it("should unselect a delegate to unvote", () => {
+		const { asFragment } = render(
+			<DelegateTable
+				delegates={delegates}
+				votes={votes}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+		);
+		const selectUnvoteButton = screen.getByTestId("DelegateRow__toggle-0");
+		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
 		act(() => {
 			fireEvent.click(selectUnvoteButton);
@@ -169,9 +376,9 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectVoteButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
-		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
 			fireEvent.click(selectUnvoteButton);
@@ -183,11 +390,18 @@ describe("DelegateTable", () => {
 	});
 
 	it("should select a delegate to unvote/vote", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateTable delegates={delegates} votes={votes} maxVotes={1} selectedWallet={selectedWallet} />,
+		const { asFragment } = render(
+			<DelegateTable
+				delegates={delegates}
+				votes={votes}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
 		);
-		const selectUnvoteButton = getByTestId("DelegateRow__toggle-0");
-		const selectVoteButton = getByTestId("DelegateRow__toggle-1");
+		const selectUnvoteButton = screen.getByTestId("DelegateRow__toggle-0");
+		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
 		act(() => {
 			fireEvent.click(selectUnvoteButton);
@@ -197,9 +411,9 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectVoteButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
-		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		expect(selectUnvoteButton).toHaveTextContent(translations.UNSELECTED);
 		expect(selectVoteButton).toHaveTextContent(translations.SELECTED);
@@ -207,10 +421,17 @@ describe("DelegateTable", () => {
 	});
 
 	it("should select multiple delegates to unvote/vote", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateTable delegates={delegates} votes={votes} maxVotes={10} selectedWallet={selectedWallet} />,
+		const { asFragment } = render(
+			<DelegateTable
+				delegates={delegates}
+				votes={votes}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={10}
+			/>,
 		);
-		const selectButtons = [0, 1, 2].map((index) => getByTestId(`DelegateRow__toggle-${index}`));
+		const selectButtons = [0, 1, 2].map((index) => screen.getByTestId(`DelegateRow__toggle-${index}`));
 
 		act(() => {
 			fireEvent.click(selectButtons[0]);
@@ -224,189 +445,229 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButtons[2]);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("2");
-		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("2");
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should emit action on continue button to vote", () => {
-		const delegateAddress = delegates[0].address()!;
+		const voteDelegates: VoteDelegateProperties[] = [
+			{
+				amount: 0,
+				delegateAddress: delegates[0].address(),
+			},
+		];
 
 		const onContinue = jest.fn();
-		const { container, asFragment, getByTestId } = render(
+		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
-				maxVotes={1}
-				selectedWallet={selectedWallet}
 				onContinue={onContinue}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectButton = getByTestId("DelegateRow__toggle-0");
+		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
 
 		act(() => {
-			fireEvent.click(getByTestId("DelegateTable__continue-button"));
+			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
 		expect(container).toBeTruthy();
-		expect(onContinue).toHaveBeenCalledWith([], [delegateAddress]);
+		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with a delegate to vote", () => {
-		const delegateAddress = delegates[0].address()!;
+		const voteDelegates: VoteDelegateProperties[] = [
+			{
+				amount: 0,
+				delegateAddress: delegates[0].address(),
+			},
+		];
 
 		const onContinue = jest.fn();
-		const { container, asFragment, getByTestId } = render(
+		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
-				maxVotes={1}
-				selectedVoteAddresses={[delegateAddress]}
-				selectedWallet={selectedWallet}
+				voteDelegates={voteDelegates}
+				unvoteDelegates={[]}
 				onContinue={onContinue}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
 
 		act(() => {
-			fireEvent.click(getByTestId("DelegateTable__continue-button"));
+			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
 		expect(container).toBeTruthy();
-		expect(onContinue).toHaveBeenCalledWith([], [delegateAddress]);
+		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with a delegate to unvote", () => {
-		const delegateAddress = delegates[0].address()!;
+		const unvoteDelegates: VoteDelegateProperties[] = [
+			{
+				amount: 0,
+				delegateAddress: delegates[0].address(),
+			},
+		];
 
 		const onContinue = jest.fn();
-		const { container, asFragment, getByTestId } = render(
+		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
-				maxVotes={1}
-				selectedUnvoteAddresses={[delegateAddress]}
-				selectedWallet={selectedWallet}
+				voteDelegates={[]}
+				unvoteDelegates={unvoteDelegates}
 				onContinue={onContinue}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
 
 		act(() => {
-			fireEvent.click(getByTestId("DelegateTable__continue-button"));
+			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
 		expect(container).toBeTruthy();
-		expect(onContinue).toHaveBeenCalledWith([delegateAddress], []);
+		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, []);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with a delegate to unvote/vote", () => {
-		const unvoteAddress = delegates[0].address()!;
-		const voteAddress = delegates[1].address()!;
+		const unvoteDelegates: VoteDelegateProperties[] = [
+			{
+				amount: 0,
+				delegateAddress: delegates[0].address(),
+			},
+		];
+		const voteDelegates: VoteDelegateProperties[] = [
+			{
+				amount: 0,
+				delegateAddress: delegates[1].address(),
+			},
+		];
 
 		const onContinue = jest.fn();
-		const { container, asFragment, getByTestId } = render(
+		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
-				maxVotes={1}
 				votes={votes}
-				selectedUnvoteAddresses={[unvoteAddress]}
-				selectedVoteAddresses={[voteAddress]}
-				selectedWallet={selectedWallet}
+				voteDelegates={voteDelegates}
+				unvoteDelegates={unvoteDelegates}
 				onContinue={onContinue}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
-		expect(getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
-			fireEvent.click(getByTestId("DelegateTable__continue-button"));
+			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
 		expect(container).toBeTruthy();
-		expect(onContinue).toHaveBeenCalledWith([unvoteAddress], [voteAddress]);
+		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, voteDelegates);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should emit action on continue button to unvote", () => {
-		const delegateAddress = votes[0].wallet!.address()!;
+		const voteDelegates: VoteDelegateProperties[] = [
+			{
+				amount: 0,
+				delegateAddress: votes[0].wallet!.address(),
+			},
+		];
 
 		const onContinue = jest.fn();
-		const { container, asFragment, getByTestId } = render(
+		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
-				maxVotes={1}
 				votes={votes}
-				selectedWallet={selectedWallet}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
 				onContinue={onContinue}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectButton = getByTestId("DelegateRow__toggle-0");
+		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
 
 		act(() => {
-			fireEvent.click(getByTestId("DelegateTable__continue-button"));
+			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
 		expect(container).toBeTruthy();
-		expect(onContinue).toHaveBeenCalledWith([delegateAddress], []);
+		expect(onContinue).toHaveBeenCalledWith(voteDelegates, []);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate on next and previous pages", () => {
-		const { getByTestId } = render(
+		render(
 			<DelegateTable
 				delegates={delegates}
 				votes={votes}
-				maxVotes={1}
-				selectedWallet={selectedWallet}
 				itemsPerPage={2}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
-		expect(getByTestId("DelegateRow__toggle-1")).toBeTruthy();
+		expect(screen.getByTestId("DelegateRow__toggle-1")).toBeTruthy();
 
 		act(() => {
-			fireEvent.click(getByTestId("Pagination__next"));
+			fireEvent.click(screen.getByTestId("Pagination__next"));
 		});
 
-		expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+		expect(screen.getByTestId("DelegateRow__toggle-0")).toBeTruthy();
 
 		act(() => {
-			fireEvent.click(getByTestId("Pagination__previous"));
+			fireEvent.click(screen.getByTestId("Pagination__previous"));
 		});
 
-		expect(getByTestId("DelegateRow__toggle-1")).toBeTruthy();
+		expect(screen.getByTestId("DelegateRow__toggle-1")).toBeTruthy();
 	});
 
 	it("should not show pagination", () => {
-		const { queryByTestId } = render(
+		render(
 			<DelegateTable
 				delegates={delegates}
 				votes={votes}
-				maxVotes={1}
-				selectedWallet={selectedWallet}
 				itemsPerPage={2}
 				isPaginationDisabled
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
 
-		expect(queryByTestId("Pagination__next")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("Pagination__next")).not.toBeInTheDocument();
 	});
 });

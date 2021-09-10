@@ -46,11 +46,6 @@ exports[`should allow to input a value 1`] = `
       class="relative"
     >
       <div
-        class="fixed invisible w-auto whitespace-nowrap"
-      >
-        0.447…
-      </div>
-      <div
         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
       >
         <div
@@ -160,11 +155,6 @@ exports[`should display converted value when on live net 1`] = `
     <div
       class="relative"
     >
-      <div
-        class="fixed invisible w-auto whitespace-nowrap"
-      >
-        0.3…
-      </div>
       <div
         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
       >
@@ -419,11 +409,6 @@ exports[`should keep different values for simple and advanced view types 1`] = `
     <div
       class="relative"
     >
-      <div
-        class="fixed invisible w-auto whitespace-nowrap"
-      >
-        0.3…
-      </div>
       <div
         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
       >
@@ -728,11 +713,6 @@ exports[`should render disabled 1`] = `
   <div
     class="relative"
   >
-    <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      0.3…
-    </div>
     <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
       disabled=""

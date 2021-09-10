@@ -308,11 +308,6 @@ exports[`Plugin View should render error boundary with error message 1`] = `
               An error occurred!
             </h3>
             <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
-            <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 ioTDRK py-4"
               disabled=""
             >
@@ -644,11 +639,6 @@ exports[`Plugin View should render error boundary with error stack 1`] = `
             >
               An error occurred!
             </h3>
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 ioTDRK py-4"
               disabled=""

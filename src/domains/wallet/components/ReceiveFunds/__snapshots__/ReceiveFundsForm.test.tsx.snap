@@ -32,11 +32,6 @@ exports[`ReceiveFundsForm should emit amount onChange event 1`] = `
             class="relative"
           >
             <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              10…
-            </div>
-            <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy pr-20"
             >
               <div
@@ -70,11 +65,6 @@ exports[`ReceiveFundsForm should emit amount onChange event 1`] = `
               optional
             </span>
           </label>
-          <div
-            class="fixed invisible w-auto whitespace-nowrap"
-          >
-            …
-          </div>
           <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
           >
@@ -142,11 +132,6 @@ exports[`ReceiveFundsForm should emit memo onChange event 1`] = `
             class="relative"
           >
             <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
-            <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy pr-20"
             >
               <div
@@ -180,11 +165,6 @@ exports[`ReceiveFundsForm should emit memo onChange event 1`] = `
               optional
             </span>
           </label>
-          <div
-            class="fixed invisible w-auto whitespace-nowrap"
-          >
-            …
-          </div>
           <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
           >
@@ -252,11 +232,6 @@ exports[`ReceiveFundsForm should not show memo if is not supported by network 1`
             class="relative"
           >
             <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
-            <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy pr-20"
             >
               <div
@@ -312,11 +287,6 @@ exports[`ReceiveFundsForm should render 1`] = `
             class="relative"
           >
             <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
-            <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy pr-20"
             >
               <div
@@ -350,11 +320,6 @@ exports[`ReceiveFundsForm should render 1`] = `
               optional
             </span>
           </label>
-          <div
-            class="fixed invisible w-auto whitespace-nowrap"
-          >
-            …
-          </div>
           <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
           >

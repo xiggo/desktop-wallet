@@ -41,7 +41,6 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 	const { env } = useEnvironmentContext();
 	const { setConfiguration } = useConfiguration();
 	const { notifyForUpdates } = useUpdater();
-	const { getProfileStoredPassword } = useProfileUtils(env);
 
 	const history = useHistory();
 
@@ -56,8 +55,6 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 			callback: async () => {
 				try {
 					setConfiguration({ profileIsSyncingWallets: true });
-					// Need to call restore to update wallet internal sync statuses
-					await env.profiles().restore(profile, getProfileStoredPassword(profile));
 					await env.wallets().syncByProfile(profile);
 					await profile.sync();
 

@@ -3,15 +3,20 @@ import React, { useEffect, useState } from "react";
 
 import { Input } from "./Input";
 
-type Properties = {
+type InputCurrencyProperties = {
 	addons?: any;
 	onChange?: (value: any) => void;
+	innerClassName?: string;
+	ignoreContext?: boolean;
+	errorMessage?: string;
+	isInvalid?: boolean;
+	noShadow?: boolean;
 } & Omit<React.InputHTMLAttributes<any>, "onChange" | "defaultValue">;
 
 const sanitize = (value?: string) => Currency.fromString(value || "").display;
 
-export const InputCurrency = React.forwardRef<HTMLInputElement, Properties>(
-	({ onChange, value, ...properties }: Properties, reference: any) => {
+export const InputCurrency = React.forwardRef<HTMLInputElement, InputCurrencyProperties>(
+	({ onChange, value, ...properties }: InputCurrencyProperties, reference) => {
 		const [amount, setAmount] = useState<string>(sanitize(value?.toString()));
 
 		useEffect(() => {

@@ -687,11 +687,6 @@ exports[`News should filter results based on category query and asset 1`] = `
                       class="flex justify-between items-center py-4 px-2 rounded-md shadow-xl"
                     >
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 hyKEbr"
                       >
                         <div
@@ -1565,11 +1560,6 @@ exports[`News should render 1`] = `
                       class="flex justify-between items-center py-4 px-2 rounded-md shadow-xl"
                     >
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 hyKEbr"
                       >
                         <div
@@ -2111,11 +2101,6 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                     <div
                       class="flex justify-between items-center py-4 px-2 rounded-md shadow-xl"
                     >
-                      <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
                       <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 hyKEbr"
                       >

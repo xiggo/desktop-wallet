@@ -139,11 +139,6 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
                       Password
                     </label>
                     <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
-                    <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                     >
                       <div
@@ -425,11 +420,6 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
                       Password
                     </label>
                     <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
-                    <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                     >
                       <div
@@ -674,11 +664,6 @@ exports[`Import Profile - Processing import should require password for password
                     >
                       Password
                     </label>
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                     >

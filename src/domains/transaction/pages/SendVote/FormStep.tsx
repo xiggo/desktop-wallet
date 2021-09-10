@@ -15,17 +15,13 @@ import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-export const FormStep = ({
-	unvotes,
-	votes,
-	wallet,
-	profile,
-}: {
+import { SendVoteStepProperties } from "./SendVote.models";
+
+type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
-	unvotes: ProfilesContracts.IReadOnlyWallet[];
-	votes: ProfilesContracts.IReadOnlyWallet[];
-	wallet: ProfilesContracts.IReadWriteWallet;
-}) => {
+} & SendVoteStepProperties;
+
+export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties) => {
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 
@@ -73,19 +69,19 @@ export const FormStep = ({
 
 			{unvotes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}>
-					<VoteList votes={unvotes} />
+					<VoteList votes={unvotes} currency={wallet.currency()} isNegativeAmount />
 				</TransactionDetail>
 			)}
 
 			{votes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.VOTES_COUNT", { count: votes.length })}>
-					<VoteList votes={votes} />
+					<VoteList votes={votes} currency={wallet.currency()} />
 				</TransactionDetail>
 			)}
 
 			{showFeeInput && (
 				<TransactionDetail paddingPosition="top">
-					<FormField name="fee">
+					<FormField name="fee" className="flex-1">
 						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 						<InputFee
 							min={fees?.min}

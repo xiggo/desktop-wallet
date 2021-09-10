@@ -167,11 +167,6 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                     Profile Name
                                   </label>
                                   <div
-                                    class="fixed invisible w-auto whitespace-nowrap"
-                                  >
-                                    …
-                                  </div>
-                                  <div
                                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                                   >
                                     <div
@@ -270,11 +265,6 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 </span>
                               </label>
                               <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                …
-                              </div>
-                              <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                               >
                                 <div
@@ -331,11 +321,6 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 </span>
                               </label>
                               <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                …
-                              </div>
-                              <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                               >
                                 <div
@@ -388,11 +373,6 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                               <div
                                 class="relative w-full"
                               >
-                                <div
-                                  class="fixed invisible w-auto whitespace-nowrap"
-                                >
-                                  AUD…
-                                </div>
                                 <div
                                   class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                                 >
@@ -760,11 +740,6 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                     Profile Name
                                   </label>
                                   <div
-                                    class="fixed invisible w-auto whitespace-nowrap"
-                                  >
-                                    …
-                                  </div>
-                                  <div
                                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                                   >
                                     <div
@@ -863,11 +838,6 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 </span>
                               </label>
                               <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                …
-                              </div>
-                              <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                               >
                                 <div
@@ -924,11 +894,6 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 </span>
                               </label>
                               <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                …
-                              </div>
-                              <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                               >
                                 <div
@@ -981,11 +946,6 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                               <div
                                 class="relative w-full"
                               >
-                                <div
-                                  class="fixed invisible w-auto whitespace-nowrap"
-                                >
-                                  AUD…
-                                </div>
                                 <div
                                   class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                                 >

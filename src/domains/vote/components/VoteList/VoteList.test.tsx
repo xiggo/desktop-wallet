@@ -1,28 +1,46 @@
+import { Contracts } from "@payvo/profiles";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import React from "react";
-import { render } from "testing-library";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
+import { render } from "utils/testing-library";
 
 import { VoteList } from "./VoteList";
 
-let votes: ReadOnlyWallet[];
+let votes: Contracts.IReadOnlyWallet[];
+let votesWithAmount: Contracts.VoteRegistryItem[];
 
 describe("VoteList", () => {
 	beforeAll(() => {
-		votes = [0, 1, 2].map(
+		const delegates = [0, 1, 2].map(
 			(index) =>
 				new ReadOnlyWallet({
 					address: data[index].address,
 					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
 					publicKey: data[index].publicKey,
-					rank: data[index].rank,
 					username: data[index].username,
 				}),
 		);
+
+		votes = delegates;
+
+		votesWithAmount = delegates.map((delegate) => ({
+			amount: 10,
+			wallet: delegate,
+		}));
 	});
 
 	it("should render", () => {
 		const { container, asFragment } = render(<VoteList votes={votes} />);
+
+		expect(container).toBeTruthy();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render vote amount", () => {
+		const { container, asFragment } = render(<VoteList votes={votesWithAmount} />);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();

@@ -605,39 +605,43 @@ exports[`Votes should filter current delegates 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex space-x-3 mr-auto"
+                    class="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex space-x-3"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                      >
-                        <span
-                          class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
-                          data-testid="Address__address"
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
+                          <img
+                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Address
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            data-testid="Address__address"
+                          >
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -648,7 +652,7 @@ exports[`Votes should filter current delegates 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -656,7 +660,7 @@ exports[`Votes should filter current delegates 1`] = `
                           Votes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--vote"
                           disabled=""
                         >
@@ -682,7 +686,7 @@ exports[`Votes should filter current delegates 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -690,7 +694,7 @@ exports[`Votes should filter current delegates 1`] = `
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--unvote"
                           disabled=""
                         >
@@ -716,7 +720,7 @@ exports[`Votes should filter current delegates 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -724,7 +728,7 @@ exports[`Votes should filter current delegates 1`] = `
                           Total
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
                           0/1
@@ -745,18 +749,22 @@ exports[`Votes should filter current delegates 1`] = `
                       </div>
                     </div>
                   </div>
-                  <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
-                    data-testid="DelegateTable__continue-button"
-                    disabled=""
-                    type="button"
+                  <span
+                    data-testid="DelegateTable__continue--wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      data-testid="DelegateTable__continue-button"
+                      disabled=""
+                      type="button"
                     >
-                      Continue
-                    </div>
-                  </button>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>
@@ -1479,39 +1487,43 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex space-x-3 mr-auto"
+                    class="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex space-x-3"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                      >
-                        <span
-                          class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
-                          data-testid="Address__address"
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
+                          <img
+                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Address
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            data-testid="Address__address"
+                          >
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1522,7 +1534,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -1530,7 +1542,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           Votes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--vote"
                           disabled=""
                         >
@@ -1556,7 +1568,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -1564,7 +1576,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--unvote"
                           disabled=""
                         >
@@ -1590,7 +1602,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -1598,7 +1610,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           Total
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
                           0/1
@@ -1619,18 +1631,22 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       </div>
                     </div>
                   </div>
-                  <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
-                    data-testid="DelegateTable__continue-button"
-                    disabled=""
-                    type="button"
+                  <span
+                    data-testid="DelegateTable__continue--wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      data-testid="DelegateTable__continue-button"
+                      disabled=""
+                      type="button"
                     >
-                      Continue
-                    </div>
-                  </button>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>
@@ -2357,39 +2373,43 @@ exports[`Votes should render 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex space-x-3 mr-auto"
+                    class="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex space-x-3"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                      >
-                        <span
-                          class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
-                          data-testid="Address__address"
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
+                          <img
+                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Address
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            data-testid="Address__address"
+                          >
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2400,7 +2420,7 @@ exports[`Votes should render 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -2408,7 +2428,7 @@ exports[`Votes should render 1`] = `
                           Votes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--vote"
                           disabled=""
                         >
@@ -2434,7 +2454,7 @@ exports[`Votes should render 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -2442,7 +2462,7 @@ exports[`Votes should render 1`] = `
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--unvote"
                           disabled=""
                         >
@@ -2468,7 +2488,7 @@ exports[`Votes should render 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -2476,7 +2496,7 @@ exports[`Votes should render 1`] = `
                           Total
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
                           0/1
@@ -2497,18 +2517,22 @@ exports[`Votes should render 1`] = `
                       </div>
                     </div>
                   </div>
-                  <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
-                    data-testid="DelegateTable__continue-button"
-                    disabled=""
-                    type="button"
+                  <span
+                    data-testid="DelegateTable__continue--wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      data-testid="DelegateTable__continue-button"
+                      disabled=""
+                      type="button"
                     >
-                      Continue
-                    </div>
-                  </button>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>
@@ -3231,39 +3255,43 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex space-x-3 mr-auto"
+                    class="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex space-x-3"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                      >
-                        <span
-                          class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
-                          data-testid="Address__address"
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
+                          <img
+                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Address
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            data-testid="Address__address"
+                          >
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3274,7 +3302,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -3282,7 +3310,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           Votes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--vote"
                           disabled=""
                         >
@@ -3308,7 +3336,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -3316,7 +3344,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--unvote"
                           disabled=""
                         >
@@ -3342,7 +3370,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -3350,7 +3378,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           Total
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
                           0/1
@@ -3371,18 +3399,22 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       </div>
                     </div>
                   </div>
-                  <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
-                    data-testid="DelegateTable__continue-button"
-                    disabled=""
-                    type="button"
+                  <span
+                    data-testid="DelegateTable__continue--wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      data-testid="DelegateTable__continue-button"
+                      disabled=""
+                      type="button"
                     >
-                      Continue
-                    </div>
-                  </button>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>
@@ -4478,39 +4510,43 @@ exports[`Votes should select a delegate 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex space-x-3 mr-auto"
+                    class="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex space-x-3"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                      >
-                        <span
-                          class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
-                          data-testid="Address__address"
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
+                          <img
+                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Address
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            data-testid="Address__address"
+                          >
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -4521,7 +4557,7 @@ exports[`Votes should select a delegate 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -4529,7 +4565,7 @@ exports[`Votes should select a delegate 1`] = `
                           Votes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--vote"
                           disabled=""
                         >
@@ -4555,7 +4591,7 @@ exports[`Votes should select a delegate 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -4563,7 +4599,7 @@ exports[`Votes should select a delegate 1`] = `
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--unvote"
                         >
                           1
@@ -4587,7 +4623,7 @@ exports[`Votes should select a delegate 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -4595,7 +4631,7 @@ exports[`Votes should select a delegate 1`] = `
                           Total
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
                           1/1
@@ -4616,17 +4652,21 @@ exports[`Votes should select a delegate 1`] = `
                       </div>
                     </div>
                   </div>
-                  <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-                    data-testid="DelegateTable__continue-button"
-                    type="button"
+                  <span
+                    data-testid="DelegateTable__continue--wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                      data-testid="DelegateTable__continue-button"
+                      type="button"
                     >
-                      Continue
-                    </div>
-                  </button>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>
@@ -5351,39 +5391,43 @@ exports[`Votes should select an address without vote 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex space-x-3 mr-auto"
+                    class="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex space-x-3"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                          title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                      >
-                        <span
-                          class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
-                          data-testid="Address__address"
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                         >
-                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                        </span>
+                          <img
+                            alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                            title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Address
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            data-testid="Address__address"
+                          >
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -5394,7 +5438,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -5402,7 +5446,7 @@ exports[`Votes should select an address without vote 1`] = `
                           Votes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--vote"
                           disabled=""
                         >
@@ -5428,7 +5472,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -5436,7 +5480,7 @@ exports[`Votes should select an address without vote 1`] = `
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--unvote"
                           disabled=""
                         >
@@ -5462,7 +5506,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -5470,7 +5514,7 @@ exports[`Votes should select an address without vote 1`] = `
                           Total
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
                           0/1
@@ -5491,18 +5535,22 @@ exports[`Votes should select an address without vote 1`] = `
                       </div>
                     </div>
                   </div>
-                  <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
-                    data-testid="DelegateTable__continue-button"
-                    disabled=""
-                    type="button"
+                  <span
+                    data-testid="DelegateTable__continue--wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      data-testid="DelegateTable__continue-button"
+                      disabled=""
+                      type="button"
                     >
-                      Continue
-                    </div>
-                  </button>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>
@@ -7285,39 +7333,43 @@ exports[`Votes should show network warning 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex space-x-3 mr-auto"
+                    class="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex space-x-3"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                      >
-                        <span
-                          class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
-                          data-testid="Address__address"
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
+                          <img
+                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Address
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            data-testid="Address__address"
+                          >
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -7328,7 +7380,7 @@ exports[`Votes should show network warning 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -7336,7 +7388,7 @@ exports[`Votes should show network warning 1`] = `
                           Votes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--vote"
                           disabled=""
                         >
@@ -7362,7 +7414,7 @@ exports[`Votes should show network warning 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -7370,7 +7422,7 @@ exports[`Votes should show network warning 1`] = `
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--unvote"
                         >
                           1
@@ -7394,7 +7446,7 @@ exports[`Votes should show network warning 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -7402,7 +7454,7 @@ exports[`Votes should show network warning 1`] = `
                           Total
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
                           1/1
@@ -7423,17 +7475,21 @@ exports[`Votes should show network warning 1`] = `
                       </div>
                     </div>
                   </div>
-                  <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-                    data-testid="DelegateTable__continue-button"
-                    type="button"
+                  <span
+                    data-testid="DelegateTable__continue--wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                      data-testid="DelegateTable__continue-button"
+                      type="button"
                     >
-                      Continue
-                    </div>
-                  </button>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>
@@ -8190,39 +8246,43 @@ exports[`Votes should show resigned delegate notice 1`] = `
                   class="flex h-11 font-semibold"
                 >
                   <div
-                    class="flex space-x-3 mr-auto"
+                    class="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
                   >
                     <div
-                      class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
-                      data-testid="Avatar"
+                      class="flex space-x-3"
                     >
                       <div
-                        class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                        data-testid="Avatar"
                       >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex flex-col space-y-2"
-                    >
-                      <div
-                        class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-                      >
-                        <span
-                          class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
-                          data-testid="Address__address"
+                        <div
+                          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                         >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
+                          <img
+                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col space-y-2"
+                      >
+                        <div
+                          class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
+                        >
+                          Address
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            data-testid="Address__address"
+                          >
+                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -8233,7 +8293,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -8241,7 +8301,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           Votes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--vote"
                           disabled=""
                         >
@@ -8267,7 +8327,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -8275,7 +8335,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 iYJsaG"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
                           data-testid="DelegateTable__footer--unvote"
                           disabled=""
                         >
@@ -8301,7 +8361,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="flex space-x-3 px-6"
                     >
                       <div
-                        class="flex flex-col space-y-2"
+                        class="flex flex-col space-y-2 text-right"
                       >
                         <div
                           class="DelegateFooterstyles__LabelWrapper-sc-waqbhw-0 kdAgZi"
@@ -8309,7 +8369,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           Total
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 kGWjLp"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
                           0/1
@@ -8330,18 +8390,22 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       </div>
                     </div>
                   </div>
-                  <button
-                    class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
-                    data-testid="DelegateTable__continue-button"
-                    disabled=""
-                    type="button"
+                  <span
+                    data-testid="DelegateTable__continue--wrapper"
                   >
-                    <div
-                      class="flex items-center space-x-2"
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      data-testid="DelegateTable__continue-button"
+                      disabled=""
+                      type="button"
                     >
-                      Continue
-                    </div>
-                  </button>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>

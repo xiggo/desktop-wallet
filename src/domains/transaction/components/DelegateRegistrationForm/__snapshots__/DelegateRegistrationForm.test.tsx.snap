@@ -161,11 +161,6 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
               Delegate Name
             </label>
             <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
-            <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
             >
               <div
@@ -510,11 +505,6 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
             >
               Delegate Name
             </label>
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
             >
@@ -1064,11 +1054,6 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
               Delegate Name
             </label>
             <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
-            <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
             >
               <div
@@ -1135,11 +1120,6 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
               <div
                 class="relative"
               >
-                <div
-                  class="fixed invisible w-auto whitespace-nowrap"
-                >
-                  11…
-                </div>
                 <div
                   class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                 >
@@ -1371,11 +1351,6 @@ exports[`DelegateRegistrationForm should set username 1`] = `
             >
               Delegate Name
             </label>
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
             >
@@ -1702,11 +1677,6 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
             >
               Delegate Name
             </label>
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
             >
@@ -2052,11 +2022,6 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
             >
               Delegate Name
             </label>
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
             >

@@ -6,12 +6,6 @@ exports[`SelectDropdown should render disabled option base 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -39,12 +33,6 @@ exports[`SelectDropdown should render disabled option base 1`] = `
           for="downshift-14-input"
           id="downshift-14-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
           disabled=""
@@ -106,12 +94,6 @@ exports[`SelectDropdown should render disabled option group 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -139,12 +121,6 @@ exports[`SelectDropdown should render disabled option group 1`] = `
           for="downshift-16-input"
           id="downshift-16-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
           disabled=""
@@ -206,12 +182,6 @@ exports[`SelectDropdown should render invalid option base 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
     >
       <div
@@ -257,12 +227,6 @@ exports[`SelectDropdown should render invalid option base 1`] = `
           for="downshift-10-input"
           id="downshift-10-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
         >
@@ -336,12 +300,6 @@ exports[`SelectDropdown should render invalid option group 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
     >
       <div
@@ -387,12 +345,6 @@ exports[`SelectDropdown should render invalid option group 1`] = `
           for="downshift-12-input"
           id="downshift-12-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
         >
@@ -466,12 +418,6 @@ exports[`SelectDropdown should render option base 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -499,12 +445,6 @@ exports[`SelectDropdown should render option base 1`] = `
           for="downshift-0-input"
           id="downshift-0-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -564,12 +504,6 @@ exports[`SelectDropdown should render option base with custom label 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -597,12 +531,6 @@ exports[`SelectDropdown should render option base with custom label 1`] = `
           for="downshift-4-input"
           id="downshift-4-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -708,12 +636,6 @@ exports[`SelectDropdown should render option base with default value when free t
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      3
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -741,12 +663,6 @@ exports[`SelectDropdown should render option base with default value when free t
           for="downshift-314-input"
           id="downshift-314-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          3
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -805,12 +721,6 @@ exports[`SelectDropdown should render option base with initial default value 1`]
   <div
     class="relative w-full"
   >
-    <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      3
-      …
-    </div>
     <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
@@ -914,12 +824,6 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -947,12 +851,6 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
           for="downshift-36-input"
           id="downshift-36-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -1012,12 +910,6 @@ exports[`SelectDropdown should render option base without caret 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -1045,12 +937,6 @@ exports[`SelectDropdown should render option base without caret 1`] = `
           for="downshift-18-input"
           id="downshift-18-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -1088,12 +974,6 @@ exports[`SelectDropdown should render option group 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -1121,12 +1001,6 @@ exports[`SelectDropdown should render option group 1`] = `
           for="downshift-2-input"
           id="downshift-2-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -1186,12 +1060,6 @@ exports[`SelectDropdown should render option group with custom label 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -1219,12 +1087,6 @@ exports[`SelectDropdown should render option group with custom label 1`] = `
           for="downshift-7-input"
           id="downshift-7-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -1373,12 +1235,6 @@ exports[`SelectDropdown should render option group with default value when free 
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      3
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -1406,12 +1262,6 @@ exports[`SelectDropdown should render option group with default value when free 
           for="downshift-317-input"
           id="downshift-317-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          3
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -1470,12 +1320,6 @@ exports[`SelectDropdown should render option group with initial default value 1`
   <div
     class="relative w-full"
   >
-    <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      3
-      …
-    </div>
     <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
@@ -1579,12 +1423,6 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -1612,12 +1450,6 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
           for="downshift-38-input"
           id="downshift-38-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -1677,12 +1509,6 @@ exports[`SelectDropdown should render option group without caret 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -1710,12 +1536,6 @@ exports[`SelectDropdown should render option group without caret 1`] = `
           for="downshift-20-input"
           id="downshift-20-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -1753,12 +1573,6 @@ exports[`SelectDropdown should render with empty options 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -1786,12 +1600,6 @@ exports[`SelectDropdown should render with empty options 1`] = `
           for="downshift-40-input"
           id="downshift-40-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -1851,12 +1659,6 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
     class="relative w-full"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
     >
       <div
@@ -1884,12 +1686,6 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
           for="downshift-42-input"
           id="downshift-42-label"
         />
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >

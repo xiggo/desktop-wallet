@@ -16,12 +16,6 @@ exports[`SelectAddress should render disabled 1`] = `
       />
     </span>
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
     >
       <div
@@ -78,12 +72,6 @@ exports[`SelectAddress should render empty 1`] = `
       />
     </span>
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
     >
       <div
@@ -139,12 +127,6 @@ exports[`SelectAddress should render invalid 1`] = `
         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
       />
     </span>
-    <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      
-      …
-    </div>
     <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
     >
@@ -222,12 +204,6 @@ exports[`SelectAddress should render with preselected address 1`] = `
         </span>
       </div>
     </span>
-    <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT
-      …
-    </div>
     <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
     >

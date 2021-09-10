@@ -499,11 +499,6 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                             class="relative"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              1…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                             >
                               <div
@@ -2076,11 +2071,6 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                         Mnemonic
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -2130,11 +2120,6 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                       >
                         2nd Mnemonic
                       </label>
-                      <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
                       <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
                         disabled=""
@@ -2553,11 +2538,6 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                         An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
                       </p>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 ioTDRK py-4"
                         disabled=""
                       >
@@ -2968,11 +2948,6 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                         Mnemonic
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -3022,11 +2997,6 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                       >
                         2nd Mnemonic
                       </label>
-                      <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
                       <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >

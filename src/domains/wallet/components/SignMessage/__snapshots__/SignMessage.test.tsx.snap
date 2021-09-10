@@ -85,11 +85,6 @@ exports[`SignMessage should render 1`] = `
                         Signatory
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr…
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
                         disabled=""
                       >
@@ -131,11 +126,6 @@ exports[`SignMessage should render 1`] = `
                         Message
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -160,11 +150,6 @@ exports[`SignMessage should render 1`] = `
                       >
                         Mnemonic
                       </label>
-                      <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
                       <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
@@ -329,11 +314,6 @@ exports[`SignMessage should render for ledger wallets 1`] = `
                         Signatory
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr…
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
                         disabled=""
                       >
@@ -374,11 +354,6 @@ exports[`SignMessage should render for ledger wallets 1`] = `
                       >
                         Message
                       </label>
-                      <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
                       <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
@@ -532,11 +507,6 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
       >
         Signature
       </label>
-      <div
-        class="fixed invisible w-auto whitespace-nowrap"
-      >
-        …
-      </div>
       <div
         class="Input__InputWrapperStyled-sc-1i8sd1r-0 xMTkF py-4"
       >

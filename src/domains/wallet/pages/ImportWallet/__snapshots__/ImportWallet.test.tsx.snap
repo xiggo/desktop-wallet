@@ -42,12 +42,6 @@ exports[`ImportWallet should render 2nd step 1`] = `
           class="relative w-full"
         >
           <div
-            class="fixed invisible w-auto whitespace-nowrap"
-          >
-            bip39
-            …
-          </div>
-          <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
           >
             <div
@@ -155,11 +149,6 @@ exports[`ImportWallet should render 2nd step 1`] = `
           Mnemonic
         </label>
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
@@ -215,11 +204,6 @@ exports[`ImportWallet should render 2nd step 1`] = `
             optional
           </span>
         </label>
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
           disabled=""
@@ -775,12 +759,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                             for="NetworkStep__network-input"
                             id="NetworkStep__network-label"
                           />
-                          <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            
-                            …
-                          </div>
+                          
                           <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
@@ -1005,11 +984,6 @@ exports[`ImportWallet should render network step 1`] = `
             for="NetworkStep__network-input"
             id="NetworkStep__network-label"
           />
-          <div
-            class="fixed invisible w-auto whitespace-nowrap"
-          >
-            …
-          </div>
           <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
           >
@@ -1236,11 +1210,6 @@ exports[`ImportWallet should render network step without test networks 1`] = `
             for="NetworkStep__network-input"
             id="NetworkStep__network-label"
           />
-          <div
-            class="fixed invisible w-auto whitespace-nowrap"
-          >
-            …
-          </div>
           <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
           >

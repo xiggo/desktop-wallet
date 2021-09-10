@@ -92,11 +92,6 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -163,11 +158,6 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                     Password
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -217,11 +207,6 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                   >
                     Confirm Password
                   </label>
-                  <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
                   <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                   >
@@ -290,11 +275,6 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                   <div
                     class="relative w-full"
                   >
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      BTC…
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
@@ -844,11 +824,6 @@ exports[`CreateProfile should not be able to create new profile if name already 
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
@@ -940,11 +915,6 @@ exports[`CreateProfile should not be able to create new profile if name already 
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -1001,11 +971,6 @@ exports[`CreateProfile should not be able to create new profile if name already 
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -1058,11 +1023,6 @@ exports[`CreateProfile should not be able to create new profile if name already 
                   <div
                     class="relative w-full"
                   >
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      BTC…
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
@@ -1612,11 +1572,6 @@ exports[`CreateProfile should not be able to create new profile if name consists
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
@@ -1708,11 +1663,6 @@ exports[`CreateProfile should not be able to create new profile if name consists
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -1769,11 +1719,6 @@ exports[`CreateProfile should not be able to create new profile if name consists
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -1826,11 +1771,6 @@ exports[`CreateProfile should not be able to create new profile if name consists
                   <div
                     class="relative w-full"
                   >
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      BTC…
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
@@ -2380,11 +2320,6 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
@@ -2476,11 +2411,6 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -2537,11 +2467,6 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -2594,11 +2519,6 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                   <div
                     class="relative w-full"
                   >
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      BTC…
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
@@ -3148,11 +3068,6 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
@@ -3265,11 +3180,6 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -3326,11 +3236,6 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -3384,11 +3289,6 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                     class="relative w-full"
                   >
                     <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
-                    <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
@@ -3417,11 +3317,6 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                           for="downshift-156-input"
                           id="downshift-156-label"
                         />
-                        <div
-                          class="fixed invisible w-auto whitespace-nowrap"
-                        >
-                          …
-                        </div>
                         <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
@@ -3663,11 +3558,6 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -3740,11 +3630,6 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -3801,11 +3686,6 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -3858,11 +3738,6 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                   <div
                     class="relative w-full"
                   >
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      BTC…
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
@@ -4411,11 +4286,6 @@ exports[`CreateProfile should render 1`] = `
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -4488,11 +4358,6 @@ exports[`CreateProfile should render 1`] = `
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -4549,11 +4414,6 @@ exports[`CreateProfile should render 1`] = `
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -4607,11 +4467,6 @@ exports[`CreateProfile should render 1`] = `
                     class="relative w-full"
                   >
                     <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
-                    <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
@@ -4640,11 +4495,6 @@ exports[`CreateProfile should render 1`] = `
                           for="downshift-0-input"
                           id="downshift-0-label"
                         />
-                        <div
-                          class="fixed invisible w-auto whitespace-nowrap"
-                        >
-                          …
-                        </div>
                         <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
@@ -4886,11 +4736,6 @@ exports[`CreateProfile should store profile 1`] = `
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -4984,11 +4829,6 @@ exports[`CreateProfile should store profile 1`] = `
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -5045,11 +4885,6 @@ exports[`CreateProfile should store profile 1`] = `
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -5102,11 +4937,6 @@ exports[`CreateProfile should store profile 1`] = `
                   <div
                     class="relative w-full"
                   >
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      BTC…
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
@@ -5655,11 +5485,6 @@ exports[`CreateProfile should store profile with password 1`] = `
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -5726,11 +5551,6 @@ exports[`CreateProfile should store profile with password 1`] = `
                     Password
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -5780,11 +5600,6 @@ exports[`CreateProfile should store profile with password 1`] = `
                   >
                     Confirm Password
                   </label>
-                  <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
                   <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
@@ -5838,11 +5653,6 @@ exports[`CreateProfile should store profile with password 1`] = `
                   <div
                     class="relative w-full"
                   >
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      BTC…
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
@@ -6391,11 +6201,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -6475,11 +6280,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -6536,11 +6336,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -6594,11 +6389,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     class="relative w-full"
                   >
                     <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
-                    <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
@@ -6627,11 +6417,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           for="downshift-139-input"
                           id="downshift-139-label"
                         />
-                        <div
-                          class="fixed invisible w-auto whitespace-nowrap"
-                        >
-                          …
-                        </div>
                         <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
@@ -6873,11 +6658,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
@@ -6969,11 +6749,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -7030,11 +6805,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -7088,11 +6858,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                     class="relative w-full"
                   >
                     <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
-                    <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >
                       <div
@@ -7121,11 +6886,6 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           for="downshift-139-input"
                           id="downshift-139-label"
                         />
-                        <div
-                          class="fixed invisible w-auto whitespace-nowrap"
-                        >
-                          …
-                        </div>
                         <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                         >
@@ -7367,11 +7127,6 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                         Profile Name
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                       >
                         <div
@@ -7444,11 +7199,6 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -7505,11 +7255,6 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                     </span>
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -7562,11 +7307,6 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                   <div
                     class="relative w-full"
                   >
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      BTC…
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                     >

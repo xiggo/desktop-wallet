@@ -48,12 +48,7 @@ exports[`LedgerConnectionStep should emit event on connect 1`] = `
             for="ImportWallet__network-input"
             id="ImportWallet__network-label"
           />
-          <div
-            class="fixed invisible w-auto whitespace-nowrap"
-          >
-            ARK Devnet
-            …
-          </div>
+          
           <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
             disabled=""
@@ -198,12 +193,7 @@ exports[`LedgerConnectionStep should emit event on fail 1`] = `
             for="ImportWallet__network-input"
             id="ImportWallet__network-label"
           />
-          <div
-            class="fixed invisible w-auto whitespace-nowrap"
-          >
-            ARK Devnet
-            …
-          </div>
+          
           <div
             class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
             disabled=""

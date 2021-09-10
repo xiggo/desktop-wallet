@@ -118,11 +118,6 @@ exports[`VerifyMessage should render 1`] = `
                       Public Key
                     </label>
                     <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
-                    <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                     >
                       <div
@@ -148,11 +143,6 @@ exports[`VerifyMessage should render 1`] = `
                       Message
                     </label>
                     <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
-                    <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                     >
                       <div
@@ -177,11 +167,6 @@ exports[`VerifyMessage should render 1`] = `
                     >
                       Signature
                     </label>
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                     >

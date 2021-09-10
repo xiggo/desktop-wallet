@@ -9,7 +9,7 @@ export const LabelWrapper = styled.div`
 `;
 
 export const TextWrapper = styled.div<{ disabled?: boolean }>`
-	${tw`text-lg text-right leading-tight`};
+	${tw`text-lg leading-tight`};
 
 	${({ disabled }) => {
 		if (disabled) {

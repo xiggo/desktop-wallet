@@ -4,7 +4,11 @@ import { useRandomNumber } from "app/hooks";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 
-export const DelegateRowSkeleton = () => {
+interface DelegateRowSkeletonProperties {
+	requiresStakeAmount?: boolean;
+}
+
+export const DelegateRowSkeleton = ({ requiresStakeAmount }: DelegateRowSkeletonProperties) => {
 	const nameWidth = useRandomNumber(120, 150);
 
 	return (
@@ -20,6 +24,12 @@ export const DelegateRowSkeleton = () => {
 			<TableCell className="w-24" innerClassName="justify-center">
 				<Skeleton height={16} width={22} />
 			</TableCell>
+
+			{requiresStakeAmount && (
+				<TableCell className="w-68" innerClassName="justify-center">
+					<Skeleton height={56} width={220} />
+				</TableCell>
+			)}
 
 			<TableCell variant="end" className="w-40" innerClassName="justify-end">
 				<Skeleton width={100} height={40} />

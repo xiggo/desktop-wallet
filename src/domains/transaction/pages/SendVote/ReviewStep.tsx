@@ -1,4 +1,3 @@
-import { Contracts } from "@payvo/profiles";
 import { Header } from "app/components/Header";
 import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
 import {
@@ -7,19 +6,13 @@ import {
 	TransactionSender,
 } from "domains/transaction/components/TransactionDetail";
 import { VoteList } from "domains/vote/components/VoteList";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-export const ReviewStep = ({
-	unvotes,
-	votes,
-	wallet,
-}: {
-	unvotes: Contracts.IReadOnlyWallet[];
-	votes: Contracts.IReadOnlyWallet[];
-	wallet: Contracts.IReadWriteWallet;
-}) => {
+import { SendVoteStepProperties } from "./SendVote.models";
+
+export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) => {
 	const { t } = useTranslation();
 	const { getValues, unregister } = useFormContext();
 
@@ -28,6 +21,8 @@ export const ReviewStep = ({
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
+
+	const totalAmount = useMemo(() => votes.reduce((totalAmount, { amount }) => totalAmount + amount, 0), [votes]);
 
 	return (
 		<section data-testid="SendVote__review-step">
@@ -43,18 +38,18 @@ export const ReviewStep = ({
 
 			{unvotes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}>
-					<VoteList votes={unvotes} />
+					<VoteList votes={unvotes} currency={wallet.currency()} isNegativeAmount />
 				</TransactionDetail>
 			)}
 
 			{votes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.VOTES_COUNT", { count: votes.length })}>
-					<VoteList votes={votes} />
+					<VoteList votes={votes} currency={wallet.currency()} />
 				</TransactionDetail>
 			)}
 
 			<div className="mt-2">
-				<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
+				<TotalAmountBox amount={totalAmount} fee={fee} ticker={wallet.currency()} />
 			</div>
 		</section>
 	);

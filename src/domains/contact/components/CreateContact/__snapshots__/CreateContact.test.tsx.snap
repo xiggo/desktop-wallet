@@ -73,11 +73,6 @@ exports[`CreateContact should render 1`] = `
                     Name
                   </label>
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -109,11 +104,6 @@ exports[`CreateContact should render 1`] = `
                       class="relative w-full"
                     >
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                       >
                         <div
@@ -142,11 +132,6 @@ exports[`CreateContact should render 1`] = `
                             for="downshift-0-input"
                             id="downshift-0-label"
                           />
-                          <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
                           <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
@@ -210,11 +195,6 @@ exports[`CreateContact should render 1`] = `
                     >
                       Address
                     </label>
-                    <div
-                      class="fixed invisible w-auto whitespace-nowrap"
-                    >
-                      …
-                    </div>
                     <div
                       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                     >

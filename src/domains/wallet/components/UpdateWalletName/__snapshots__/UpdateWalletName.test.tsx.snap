@@ -71,11 +71,6 @@ exports[`UpdateWalletName should render 1`] = `
                   class="relative"
                 >
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                   >
                     <div
@@ -198,11 +193,6 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
                 <div
                   class="relative"
                 >
-                  <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
                   <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                   >
@@ -345,11 +335,6 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
                   class="relative"
                 >
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                   >
                     <div
@@ -490,11 +475,6 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
                 <div
                   class="relative"
                 >
-                  <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
                   <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                   >
@@ -637,11 +617,6 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
                   class="relative"
                 >
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                   >
                     <div
@@ -783,11 +758,6 @@ exports[`UpdateWalletName should show error message when name consists only of w
                   class="relative"
                 >
                   <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
-                  <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                   >
                     <div
@@ -928,11 +898,6 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
                 <div
                   class="relative"
                 >
-                  <div
-                    class="fixed invisible w-auto whitespace-nowrap"
-                  >
-                    …
-                  </div>
                   <div
                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                   >

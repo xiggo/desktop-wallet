@@ -6,11 +6,6 @@ exports[`InputCurrency should render 1`] = `
     class="relative"
   >
     <div
-      class="fixed invisible w-auto whitespace-nowrap"
-    >
-      …
-    </div>
-    <div
       class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
     >
       <div

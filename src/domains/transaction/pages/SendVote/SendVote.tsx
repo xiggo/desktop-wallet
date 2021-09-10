@@ -6,13 +6,15 @@ import { StepIndicator } from "app/components/StepIndicator";
 import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useQueryParams, useValidation } from "app/hooks";
+import { useActiveProfile, useActiveWallet, useValidation } from "app/hooks";
 import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import { FeeWarning } from "domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransactionBuilder, useWalletSignatory } from "domains/transaction/hooks";
 import { handleBroadcastError } from "domains/transaction/utils";
+import { useVoteQueryParameters } from "domains/vote/hooks/use-vote-query-parameters";
+import { appendParameters } from "domains/vote/utils/url-parameters";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
@@ -36,13 +38,11 @@ export const SendVote = () => {
 
 	const networks = useMemo(() => env.availableNetworks(), [env]);
 
-	const queryParameters = useQueryParams();
-	const unvoteAddresses = queryParameters.get("unvotes")?.split(",");
-	const voteAddresses = queryParameters.get("votes")?.split(",");
+	const { voteDelegates, unvoteDelegates } = useVoteQueryParameters();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
-	const [unvotes, setUnvotes] = useState<Contracts.IReadOnlyWallet[]>([]);
-	const [votes, setVotes] = useState<Contracts.IReadOnlyWallet[]>([]);
+	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
+	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [transaction, setTransaction] = useState((null as unknown) as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -88,24 +88,30 @@ export const SendVote = () => {
 	} = useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
-		if (unvoteAddresses && unvotes.length === 0) {
-			const unvoteDelegates = unvoteAddresses?.map((address) =>
-				env.delegates().findByAddress(activeWallet.coinId(), activeWallet.networkId(), address),
-			);
+		if (unvoteDelegates.length > 0 && unvotes.length === 0) {
+			const unvotesList: Contracts.VoteRegistryItem[] = unvoteDelegates?.map((unvote) => ({
+				amount: unvote.amount,
+				wallet: env
+					.delegates()
+					.findByAddress(activeWallet.coinId(), activeWallet.networkId(), unvote.delegateAddress),
+			}));
 
-			setUnvotes(unvoteDelegates);
+			setUnvotes(unvotesList);
 		}
-	}, [activeWallet, env, unvoteAddresses, unvotes]);
+	}, [activeWallet, env, unvoteDelegates, unvotes]);
 
 	useEffect(() => {
-		if (voteAddresses && votes.length === 0) {
-			const voteDelegates = voteAddresses?.map((address) =>
-				env.delegates().findByAddress(activeWallet.coinId(), activeWallet.networkId(), address),
-			);
+		if (voteDelegates.length > 0 && votes.length === 0) {
+			const votesList: Contracts.VoteRegistryItem[] = voteDelegates?.map((vote) => ({
+				amount: vote.amount,
+				wallet: env
+					.delegates()
+					.findByAddress(activeWallet.coinId(), activeWallet.networkId(), vote.delegateAddress),
+			}));
 
-			setVotes(voteDelegates);
+			setVotes(votesList);
 		}
-	}, [activeWallet, env, voteAddresses, votes]);
+	}, [activeWallet, env, voteDelegates, votes]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -122,13 +128,9 @@ export const SendVote = () => {
 		if (activeTab === Step.FormStep) {
 			const parameters = new URLSearchParams();
 
-			if (unvoteAddresses) {
-				parameters.append("unvotes", unvoteAddresses.join(","));
-			}
+			appendParameters(parameters, "unvote", unvoteDelegates);
 
-			if (voteAddresses) {
-				parameters.append("votes", voteAddresses.join(","));
-			}
+			appendParameters(parameters, "vote", voteDelegates);
 
 			return history.push({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}/votes`,
@@ -172,17 +174,19 @@ export const SendVote = () => {
 				const walletVotes = activeWallet.voting().current();
 
 				if (type === "vote") {
-					isConfirmed = !!walletVotes.find(({ wallet }) => wallet?.address() === votes[0].address());
+					isConfirmed = !!walletVotes.find(({ wallet }) => wallet?.address() === votes[0].wallet?.address());
 				}
 
 				if (type === "unvote") {
-					isConfirmed = !walletVotes.find(({ wallet }) => wallet?.address() === unvotes[0].address());
+					isConfirmed = !walletVotes.find(({ wallet }) => wallet?.address() === unvotes[0].wallet?.address());
 				}
 
 				if (type === "combined") {
-					const voteConfirmed = !!walletVotes.find(({ wallet }) => wallet?.address() === votes[0].address());
+					const voteConfirmed = !!walletVotes.find(
+						({ wallet }) => wallet?.address() === votes[0].wallet?.address(),
+					);
 					const unvoteConfirmed = !walletVotes.find(
-						({ wallet }) => wallet?.address() === unvotes[0].address(),
+						({ wallet }) => wallet?.address() === unvotes[0].wallet?.address(),
 					);
 
 					isConfirmed = voteConfirmed && unvoteConfirmed;
@@ -229,9 +233,9 @@ export const SendVote = () => {
 						{
 							...voteTransactionInput,
 							data: {
-								unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => ({
-									amount: 0,
-									id: wallet.governanceIdentifier(),
+								unvotes: unvotes.map((unvote) => ({
+									amount: unvote.amount,
+									id: unvote.wallet?.governanceIdentifier(),
 								})),
 							},
 						},
@@ -254,9 +258,9 @@ export const SendVote = () => {
 						{
 							...voteTransactionInput,
 							data: {
-								votes: votes.map((wallet: Contracts.IReadOnlyWallet) => ({
-									amount: 0,
-									id: wallet.governanceIdentifier(),
+								votes: votes.map((vote) => ({
+									amount: vote.amount,
+									id: vote.wallet?.governanceIdentifier(),
 								})),
 							},
 						},
@@ -285,13 +289,13 @@ export const SendVote = () => {
 						{
 							...voteTransactionInput,
 							data: {
-								unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => ({
-									amount: 0,
-									id: wallet.governanceIdentifier(),
+								unvotes: unvotes.map((unvote) => ({
+									amount: unvote.amount,
+									id: unvote.wallet?.governanceIdentifier(),
 								})),
-								votes: votes.map((wallet: Contracts.IReadOnlyWallet) => ({
-									amount: 0,
-									id: wallet.governanceIdentifier(),
+								votes: votes.map((vote) => ({
+									amount: vote.amount,
+									id: vote.wallet?.governanceIdentifier(),
 								})),
 							},
 						},
@@ -321,15 +325,15 @@ export const SendVote = () => {
 						...voteTransactionInput,
 						data: isUnvote
 							? {
-									unvotes: unvotes.map((wallet: Contracts.IReadOnlyWallet) => ({
-										amount: 0,
-										id: wallet.governanceIdentifier(),
+									unvotes: unvotes.map((unvote) => ({
+										amount: unvote.amount,
+										id: unvote.wallet?.governanceIdentifier(),
 									})),
 							  }
 							: {
-									votes: votes.map((wallet: Contracts.IReadOnlyWallet) => ({
-										amount: 0,
-										id: wallet.governanceIdentifier(),
+									votes: votes.map((vote) => ({
+										amount: vote.amount,
+										id: vote.wallet?.governanceIdentifier(),
 									})),
 							  },
 					},
@@ -396,7 +400,7 @@ export const SendVote = () => {
 
 							<TabPanel tabId={Step.SummaryStep}>
 								<SummaryStep
-									senderWallet={activeWallet}
+									wallet={activeWallet}
 									transaction={transaction}
 									unvotes={unvotes}
 									votes={votes}

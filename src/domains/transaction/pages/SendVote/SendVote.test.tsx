@@ -7,6 +7,8 @@ import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
+import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
+import { appendParameters } from "domains/vote/utils/url-parameters";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
@@ -109,9 +111,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,
@@ -148,9 +157,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			unvotes: delegateData[1].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
 
 		history.push({
 			pathname: voteURL,
@@ -187,10 +203,25 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			unvotes: delegateData[1].address,
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,
@@ -225,23 +256,43 @@ describe("SendVote", () => {
 
 	it("should send a unvote & vote transaction", async () => {
 		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => [
-			new ReadOnlyWallet({
-				address: delegateData[1].address,
-				explorerLink: "",
-				publicKey: delegateData[1].publicKey,
-				rank: delegateData[1].rank,
-				username: delegateData[1].username,
-			}),
+			{
+				amount: 10,
+				wallet: new ReadOnlyWallet({
+					address: delegateData[1].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: delegateData[1].publicKey,
+					username: delegateData[1].username,
+				}),
+			},
 		]);
 		await wallet.synchroniser().votes();
 
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			unvotes: delegateData[1].address,
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,
@@ -343,9 +394,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,
@@ -442,9 +500,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			unvotes: delegateData[1].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
 
 		history.push({
 			pathname: voteURL,
@@ -490,16 +555,23 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getAllByTestId("AmountCrypto")).toBeTruthy());
 
-		expect(getAllByTestId("AmountCrypto")[2]).toHaveTextContent("0.02");
+		expect(getAllByTestId("AmountCrypto")[3]).toHaveTextContent("0.02");
 	});
 
 	it("should move back and forth between steps", async () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			unvotes: delegateData[1].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
 
 		history.push({
 			pathname: voteURL,
@@ -567,9 +639,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			unvotes: delegateData[1].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
 
 		history.push({
 			pathname: voteURL,
@@ -638,9 +717,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,
@@ -691,9 +777,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,
@@ -744,9 +837,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,
@@ -799,9 +899,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,
@@ -875,9 +982,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			unvotes: delegateData[1].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
 
 		history.push({
 			pathname: voteURL,
@@ -966,9 +1080,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			unvotes: delegateData[1].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
 
 		history.push({
 			pathname: voteURL,
@@ -1054,9 +1175,16 @@ describe("SendVote", () => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams({
-			votes: delegateData[0].address,
-		});
+		const parameters = new URLSearchParams();
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: voteURL,

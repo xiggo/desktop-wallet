@@ -11,12 +11,6 @@ exports[`SelectRecipient should render disabled 1`] = `
         class="relative w-full"
       >
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
         >
           <div
@@ -44,12 +38,6 @@ exports[`SelectRecipient should render disabled 1`] = `
               for="downshift-2-input"
               id="downshift-2-label"
             />
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
               disabled=""
@@ -125,12 +113,6 @@ exports[`SelectRecipient should render empty 1`] = `
         class="relative w-full"
       >
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
         >
           <div
@@ -158,12 +140,6 @@ exports[`SelectRecipient should render empty 1`] = `
               for="downshift-0-input"
               id="downshift-0-label"
             />
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
             >
@@ -237,12 +213,6 @@ exports[`SelectRecipient should render invalid 1`] = `
         class="relative w-full"
       >
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct sr-only"
         >
           <div
@@ -288,12 +258,6 @@ exports[`SelectRecipient should render invalid 1`] = `
               for="downshift-4-input"
               id="downshift-4-label"
             />
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
             >
@@ -381,12 +345,6 @@ exports[`SelectRecipient should render with preselected address 1`] = `
         class="relative w-full"
       >
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
         >
           <div
@@ -414,12 +372,6 @@ exports[`SelectRecipient should render with preselected address 1`] = `
               for="downshift-6-input"
               id="downshift-6-label"
             />
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
             >
@@ -493,12 +445,6 @@ exports[`SelectRecipient should update internal state when prop changes 1`] = `
         class="relative w-full"
       >
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
         >
           <div
@@ -526,12 +472,6 @@ exports[`SelectRecipient should update internal state when prop changes 1`] = `
               for="downshift-8-input"
               id="downshift-8-label"
             />
-            <div
-              class="fixed invisible w-auto whitespace-nowrap"
-            >
-              bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT
-              …
-            </div>
             <div
               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
             >

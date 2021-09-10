@@ -1,20 +1,26 @@
 import { Contracts } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
-import { translations } from "app/i18n/common/i18n";
+import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
-import { act, fireEvent, render } from "testing-library";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
+import { act, env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
+import { VoteDelegateProperties } from "../DelegateTable.models";
 import { DelegateRow } from "./DelegateRow";
 
+let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;
 
 describe("DelegateRow", () => {
 	beforeAll(() => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+		wallet = profile.wallets().values()[0];
+
 		delegate = new ReadOnlyWallet({
 			address: data[0].address,
 			explorerLink: "",
+			governanceIdentifier: "address",
 			isDelegate: true,
 			isResignedDelegate: false,
 			publicKey: data[0].publicKey,
@@ -26,7 +32,15 @@ describe("DelegateRow", () => {
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow index={0} delegate={delegate} />
+					<DelegateRow
+						index={0}
+						delegate={delegate}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						selectedWallet={wallet}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -36,37 +50,60 @@ describe("DelegateRow", () => {
 	});
 
 	it("should emit action on select button", () => {
-		const onSelect = jest.fn();
-		const { container, asFragment, getByTestId } = render(
+		const toggleVotesSelected = jest.fn();
+		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow index={0} delegate={delegate} onVoteSelect={onSelect} />
+					<DelegateRow
+						index={0}
+						delegate={delegate}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={toggleVotesSelected}
+						selectedWallet={wallet}
+					/>
 				</tbody>
 			</table>,
 		);
-		const selectButton = getByTestId("DelegateRow__toggle-0");
+		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
 		act(() => {
 			fireEvent.click(selectButton);
 		});
 
 		expect(container).toBeTruthy();
-		expect(onSelect).toHaveBeenCalledWith(delegate.address());
+		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render the selected delegate", () => {
-		const selected = [delegate.address()];
-		const { container, asFragment, getByTestId } = render(
+		const selected = [
+			{
+				amount: 0,
+				delegateAddress: delegate.address(),
+			},
+		];
+
+		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow index={0} delegate={delegate} selectedVotes={selected} />
+					<DelegateRow
+						index={0}
+						delegate={delegate}
+						selectedVotes={selected}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						selectedWallet={wallet}
+					/>
 				</tbody>
 			</table>,
 		);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("DelegateRow__toggle-0")).toHaveTextContent(translations.SELECTED);
+		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -74,6 +111,7 @@ describe("DelegateRow", () => {
 		const secondDelegate = new ReadOnlyWallet({
 			address: data[1].address,
 			explorerLink: "",
+			governanceIdentifier: "address",
 			isDelegate: true,
 			isResignedDelegate: false,
 			publicKey: data[1].publicKey,
@@ -83,27 +121,160 @@ describe("DelegateRow", () => {
 		const thirdDelegate = new ReadOnlyWallet({
 			address: data[2].address,
 			explorerLink: "",
+			governanceIdentifier: "address",
 			isDelegate: true,
 			isResignedDelegate: false,
 			publicKey: data[2].publicKey,
 			username: data[2].username,
 		});
 
-		const { container, asFragment, getByTestId } = render(
+		const { container, asFragment } = render(
 			<table>
 				<tbody>
-					<DelegateRow index={0} delegate={delegate} isVoted={true} />
-					<DelegateRow index={1} delegate={secondDelegate} />
-					<DelegateRow index={2} delegate={thirdDelegate} isVoteDisabled={true} />
+					<DelegateRow
+						index={0}
+						delegate={delegate}
+						voted={{
+							amount: 10,
+							wallet: delegate,
+						}}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						selectedWallet={wallet}
+					/>
+					<DelegateRow
+						index={1}
+						delegate={secondDelegate}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						selectedWallet={wallet}
+					/>
+					<DelegateRow
+						index={2}
+						delegate={thirdDelegate}
+						isVoteDisabled={true}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						selectedWallet={wallet}
+					/>
 				</tbody>
 			</table>,
 		);
 
 		expect(container).toBeTruthy();
-		expect(getByTestId("DelegateRow__toggle-0")).toHaveTextContent(translations.CURRENT);
-		expect(getByTestId("DelegateRow__toggle-1")).toHaveTextContent(translations.SELECT);
-		expect(getByTestId("DelegateRow__toggle-2")).toBeDisabled();
+		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.CURRENT);
+		expect(screen.getByTestId("DelegateRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
+		expect(screen.getByTestId("DelegateRow__toggle-2")).toBeDisabled();
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render the unselected vote", () => {
+		const selectedUnvotes: VoteDelegateProperties[] = [
+			{
+				amount: 0,
+				delegateAddress: delegate.address(),
+			},
+		];
+		const voted: Contracts.VoteRegistryItem = {
+			amount: 10,
+			wallet: delegate,
+		};
+
+		const { container, asFragment } = render(
+			<table>
+				<tbody>
+					<DelegateRow
+						index={0}
+						delegate={delegate}
+						voted={voted}
+						selectedUnvotes={selectedUnvotes}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						selectedWallet={wallet}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(container).toBeTruthy();
+		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.UNSELECTED);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render when network requires vote amount", () => {
+		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+
+		const { container, asFragment } = render(
+			<table>
+				<tbody>
+					<DelegateRow
+						index={0}
+						delegate={delegate}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						selectedWallet={wallet}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("DelegateVoteAmount")).toBeInTheDocument();
+
+		expect(container).toBeTruthy();
+		expect(asFragment()).toMatchSnapshot();
+
+		votesAmountMinimumMock.mockRestore();
+	});
+
+	it("should render changed style when network requires vote amount", () => {
+		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+
+		const selectedVotes: VoteDelegateProperties[] = [
+			{
+				amount: 20,
+				delegateAddress: delegate.address(),
+			},
+		];
+		const voted: Contracts.VoteRegistryItem = {
+			amount: 10,
+			wallet: delegate,
+		};
+
+		const { container, asFragment } = render(
+			<table>
+				<tbody>
+					<DelegateRow
+						index={0}
+						delegate={delegate}
+						voted={voted}
+						selectedVotes={selectedVotes}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						selectedWallet={wallet}
+					/>
+				</tbody>
+			</table>,
+		);
+
+		expect(container).toBeTruthy();
+		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.CHANGED);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		votesAmountMinimumMock.mockRestore();
 	});
 });

@@ -1,11 +1,15 @@
+import { Contracts } from "@payvo/profiles";
 import { Address } from "app/components/Address";
+import { AmountCrypto } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
-import React from "react";
+import cn from "classnames";
+import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { VoteDelegateProperties } from "../DelegateTable.models";
 import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
 
 interface FooterContentProperties {
@@ -17,7 +21,7 @@ interface FooterContentProperties {
 
 const FooterContent = ({ label, value, iconName, disabled }: FooterContentProperties) => (
 	<div className="flex space-x-3 px-6">
-		<div className="flex flex-col space-y-2">
+		<div className="flex flex-col space-y-2 text-right">
 			<LabelWrapper>{label}</LabelWrapper>
 			<TextWrapper disabled={disabled} data-testid={`DelegateTable__footer--${iconName.toLocaleLowerCase()}`}>
 				{value}
@@ -30,29 +34,47 @@ const FooterContent = ({ label, value, iconName, disabled }: FooterContentProper
 );
 
 interface DelegateFooterProperties {
-	selectedWallet: string;
-	selectedVotes: string[];
-	selectedUnvotes: string[];
+	selectedWallet: Contracts.IReadWriteWallet;
+	availableBalance: number;
+	selectedVotes: VoteDelegateProperties[];
+	selectedUnvotes: VoteDelegateProperties[];
 	maxVotes: number;
-	onContinue?: (unvotes: string[], votes: string[]) => void;
+	onContinue?: (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => void;
 }
 
 export const DelegateFooter = ({
 	selectedWallet,
+	availableBalance,
 	selectedVotes,
 	selectedUnvotes,
 	maxVotes,
 	onContinue,
 }: DelegateFooterProperties) => {
 	const { t } = useTranslation();
+	const [tooltipContent, setTooltipContent] = useState();
+	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 
-	const getTotalVotes = () => {
+	const getTotalVotes = useCallback(() => {
 		if (maxVotes === 1) {
 			return selectedVotes.length || selectedUnvotes.length;
 		}
 
 		return selectedVotes.length + selectedUnvotes.length;
-	};
+	}, [maxVotes, selectedUnvotes, selectedVotes]);
+
+	const continueButtonDisabled = useMemo(() => {
+		if (!getTotalVotes()) {
+			setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE"));
+
+			return true;
+		}
+
+		setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.ZERO_AMOUNT"));
+
+		const hasZeroAmount =
+			selectedVotes.some(({ amount }) => amount === 0) || selectedUnvotes.some(({ amount }) => amount === 0);
+		return requiresStakeAmount && hasZeroAmount;
+	}, [getTotalVotes, requiresStakeAmount, selectedUnvotes, selectedVotes, t]);
 
 	return (
 		<div
@@ -61,12 +83,30 @@ export const DelegateFooter = ({
 		>
 			<div className="container px-10 mx-auto">
 				<div className="flex h-11 font-semibold">
-					<div className="flex space-x-3 mr-auto">
-						<Avatar size="lg" address={selectedWallet} noShadow />
-						<div className="flex flex-col space-y-2">
-							<LabelWrapper>{t("COMMON.ADDRESS")}</LabelWrapper>
-							<Address address={selectedWallet} addressClass="leading-tight" size="lg" />
+					<div className="flex mr-auto divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
+						<div className={cn("flex space-x-3", { "pr-5": requiresStakeAmount })}>
+							<Avatar size="lg" address={selectedWallet.address()} noShadow />
+							<div className={cn("flex flex-col space-y-2", { "w-36": requiresStakeAmount })}>
+								<LabelWrapper>{t("COMMON.ADDRESS")}</LabelWrapper>
+								<Address address={selectedWallet.address()} addressClass="leading-tight" size="lg" />
+							</div>
 						</div>
+
+						{requiresStakeAmount && (
+							<div
+								className="flex flex-col space-y-2 px-6"
+								data-testid="DelegateTable__available-balance"
+							>
+								<LabelWrapper>
+									{t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {
+										percent: Math.ceil((availableBalance / selectedWallet.balance()) * 100),
+									})}
+								</LabelWrapper>
+								<TextWrapper>
+									<AmountCrypto value={availableBalance} ticker={selectedWallet.network().ticker()} />
+								</TextWrapper>
+							</div>
+						)}
 					</div>
 
 					<div className="flex mr-2 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
@@ -91,14 +131,16 @@ export const DelegateFooter = ({
 						/>
 					</div>
 
-					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE")} disabled={!!getTotalVotes()}>
-						<Button
-							disabled={!getTotalVotes()}
-							onClick={() => onContinue?.(selectedUnvotes, selectedVotes)}
-							data-testid="DelegateTable__continue-button"
-						>
-							{t("COMMON.CONTINUE")}
-						</Button>
+					<Tooltip content={tooltipContent} disabled={!continueButtonDisabled}>
+						<span data-testid="DelegateTable__continue--wrapper">
+							<Button
+								disabled={continueButtonDisabled}
+								onClick={() => onContinue?.(selectedUnvotes, selectedVotes)}
+								data-testid="DelegateTable__continue-button"
+							>
+								{t("COMMON.CONTINUE")}
+							</Button>
+						</span>
 					</Tooltip>
 				</div>
 			</div>

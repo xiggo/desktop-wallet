@@ -41,11 +41,6 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
           WIF
         </label>
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
@@ -131,11 +126,6 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
           Mnemonic
         </label>
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
@@ -185,11 +175,6 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
         >
           2nd Mnemonic
         </label>
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
           disabled=""
@@ -278,11 +263,6 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
           Mnemonic
         </label>
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
@@ -367,11 +347,6 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
         >
           Mnemonic
         </label>
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -458,11 +433,6 @@ exports[`AuthenticationStep should request private key if wallet was imported us
           Private Key
         </label>
         <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
-        <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
           <div
@@ -547,11 +517,6 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
         >
           Secret
         </label>
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >

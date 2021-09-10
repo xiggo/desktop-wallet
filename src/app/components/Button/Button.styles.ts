@@ -34,6 +34,13 @@ const getVariant = (variant: ButtonVariant, disabled: boolean): any => {
 				dark:(bg-theme-danger-400 text-white)
 				focus:ring-theme-danger-300
 			`;
+		case "warning":
+			return tw`
+				bg-theme-warning-100 text-theme-warning-700
+				hover:(bg-theme-warning-700 text-white)
+				dark:(bg-theme-warning-600 text-white)
+				focus:ring-theme-warning-300
+			`;
 		case "info":
 			return tw`
 				bg-theme-info-100 text-theme-info-600

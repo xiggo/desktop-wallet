@@ -10,11 +10,21 @@ export const translations: { [key: string]: any } = {
 		TOOLTIP: {
 			MAX_VOTES: "You have selected the maximum number of delegates",
 			SELECTED_DELEGATE: "You have not yet selected a delegate",
+			ZERO_AMOUNT: "You have at least 1 empty amount field",
 		},
 		TOTAL: "Total",
 		UNVOTES: "Unvotes",
 		VOTE: "Vote",
 		VOTES: "Votes",
+		VOTE_AMOUNT: {
+			AVAILABLE_TO_VOTE: "Available to Vote ({{percent}}%)",
+			TITLE: "Vote Amount",
+			TOOLTIP: "Number of {{ coinId }} you want to vote with for a specific delegate",
+			VALIDATION: {
+				AMOUNT_STEP: "Voting can only be done in multiples of {{step}} {{ coinId }}",
+				MINIMUM_AMOUNT: "Minimum voting amount must be at least {{minimumAmount}} {{ coinId }}",
+			},
+		},
 	},
 
 	FILTERS: {

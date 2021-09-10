@@ -345,11 +345,6 @@ exports[`CreateWallet should create a wallet 1`] = `
                             id="NetworkStep__network-label"
                           />
                           <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
-                          <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
                             <div
@@ -1379,11 +1374,6 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                             for="NetworkStep__network-input"
                             id="NetworkStep__network-label"
                           />
-                          <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
                           <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
@@ -2417,11 +2407,6 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                             id="NetworkStep__network-label"
                           />
                           <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
-                          <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
                             <div
@@ -2984,11 +2969,6 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                             for="NetworkStep__network-input"
                             id="NetworkStep__network-label"
                           />
-                          <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
                           <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
@@ -3582,11 +3562,6 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                             for="NetworkStep__network-input"
                             id="NetworkStep__network-label"
                           />
-                          <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            ARK Devnet…
-                          </div>
                           <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >

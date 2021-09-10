@@ -7,11 +7,12 @@ import Skeleton from "react-loading-skeleton";
 
 interface TransactionVotesProperties {
 	isLoading: boolean;
-	votes: Contracts.IReadOnlyWallet[];
-	unvotes: Contracts.IReadOnlyWallet[];
+	votes: Contracts.VoteRegistryItem[] | Contracts.IReadOnlyWallet[];
+	unvotes: Contracts.VoteRegistryItem[] | Contracts.IReadOnlyWallet[];
+	currency?: string;
 }
 
-export const TransactionVotes = ({ isLoading, votes, unvotes }: TransactionVotesProperties) => {
+export const TransactionVotes = ({ isLoading, votes, unvotes, currency }: TransactionVotesProperties) => {
 	const { t } = useTranslation();
 
 	if (isLoading) {
@@ -32,21 +33,21 @@ export const TransactionVotes = ({ isLoading, votes, unvotes }: TransactionVotes
 
 	return (
 		<>
-			{votes.length > 0 && (
-				<TransactionDetail
-					data-testid="TransactionVotes"
-					label={t("TRANSACTION.VOTES_COUNT", { count: votes.length })}
-				>
-					<VoteList votes={votes} />
-				</TransactionDetail>
-			)}
-
 			{unvotes.length > 0 && (
 				<TransactionDetail
 					data-testid="TransactionUnvotes"
 					label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}
 				>
-					<VoteList votes={unvotes} />
+					<VoteList votes={unvotes} currency={currency} isNegativeAmount />
+				</TransactionDetail>
+			)}
+
+			{votes.length > 0 && (
+				<TransactionDetail
+					data-testid="TransactionVotes"
+					label={t("TRANSACTION.VOTES_COUNT", { count: votes.length })}
+				>
+					<VoteList votes={votes} currency={currency} />
 				</TransactionDetail>
 			)}
 		</>

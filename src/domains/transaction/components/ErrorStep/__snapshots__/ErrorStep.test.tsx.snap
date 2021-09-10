@@ -34,11 +34,6 @@ exports[`ErrorStep should display error details 1`] = `
         An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
       </p>
       <div
-        class="fixed invisible w-auto whitespace-nowrap"
-      >
-        …
-      </div>
-      <div
         class="Input__InputWrapperStyled-sc-1i8sd1r-0 ioTDRK py-4"
         disabled=""
       >

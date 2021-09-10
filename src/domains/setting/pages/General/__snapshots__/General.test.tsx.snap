@@ -497,11 +497,6 @@ exports[`General Settings should disable submit button when profile is not resto
                             Profile Name
                           </label>
                           <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
-                          <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
                             <div
@@ -529,11 +524,6 @@ exports[`General Settings should disable submit button when profile is not resto
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              english…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -643,11 +633,6 @@ exports[`General Settings should disable submit button when profile is not resto
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              BTC…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -762,11 +747,6 @@ exports[`General Settings should disable submit button when profile is not resto
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              en-US…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -876,11 +856,6 @@ exports[`General Settings should disable submit button when profile is not resto
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              cryptocompare…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -989,11 +964,6 @@ exports[`General Settings should disable submit button when profile is not resto
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              h:mm A…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -1192,11 +1162,6 @@ exports[`General Settings should disable submit button when profile is not resto
                             <div
                               class="relative w-full"
                             >
-                              <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                15…
-                              </div>
                               <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                               >
@@ -1983,11 +1948,6 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                             Profile Name
                           </label>
                           <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
-                          <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
                             <div
@@ -2015,11 +1975,6 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              english…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -2129,11 +2084,6 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              BTC…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -2248,11 +2198,6 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              en-US…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -2362,11 +2307,6 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              cryptocompare…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -2475,11 +2415,6 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              h:mm A…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -2678,11 +2613,6 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                             <div
                               class="relative w-full"
                             >
-                              <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                15…
-                              </div>
                               <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                               >
@@ -3454,11 +3384,6 @@ exports[`General Settings should render 1`] = `
                             Profile Name
                           </label>
                           <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
-                          <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
                             <div
@@ -3486,11 +3411,6 @@ exports[`General Settings should render 1`] = `
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              english…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -3600,11 +3520,6 @@ exports[`General Settings should render 1`] = `
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              BTC…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -3719,11 +3634,6 @@ exports[`General Settings should render 1`] = `
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              en-US…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -3833,11 +3743,6 @@ exports[`General Settings should render 1`] = `
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              cryptocompare…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -3946,11 +3851,6 @@ exports[`General Settings should render 1`] = `
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              h:mm A…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -4149,11 +4049,6 @@ exports[`General Settings should render 1`] = `
                             <div
                               class="relative w-full"
                             >
-                              <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                15…
-                              </div>
                               <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                               >
@@ -4925,11 +4820,6 @@ exports[`General Settings should update profile 1`] = `
                             Profile Name
                           </label>
                           <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
-                          <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
                             <div
@@ -4957,11 +4847,6 @@ exports[`General Settings should update profile 1`] = `
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              english…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -5071,11 +4956,6 @@ exports[`General Settings should update profile 1`] = `
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              BTC…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -5190,11 +5070,6 @@ exports[`General Settings should update profile 1`] = `
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              en-US…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -5304,11 +5179,6 @@ exports[`General Settings should update profile 1`] = `
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              cryptocompare…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -5417,11 +5287,6 @@ exports[`General Settings should update profile 1`] = `
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              h:mm A…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -5621,11 +5486,6 @@ exports[`General Settings should update profile 1`] = `
                             <div
                               class="relative w-full"
                             >
-                              <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                15…
-                              </div>
                               <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                               >
@@ -6397,11 +6257,6 @@ exports[`General Settings should update the avatar when removing focus from name
                             Profile Name
                           </label>
                           <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
-                          <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                           >
                             <div
@@ -6429,11 +6284,6 @@ exports[`General Settings should update the avatar when removing focus from name
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              english…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -6543,11 +6393,6 @@ exports[`General Settings should update the avatar when removing focus from name
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              BTC…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -6662,11 +6507,6 @@ exports[`General Settings should update the avatar when removing focus from name
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              en-US…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -6776,11 +6616,6 @@ exports[`General Settings should update the avatar when removing focus from name
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              cryptocompare…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -6889,11 +6724,6 @@ exports[`General Settings should update the avatar when removing focus from name
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              h:mm A…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -7092,11 +6922,6 @@ exports[`General Settings should update the avatar when removing focus from name
                             <div
                               class="relative w-full"
                             >
-                              <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                15…
-                              </div>
                               <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                               >
@@ -7861,11 +7686,6 @@ exports[`General Settings should update the avatar when removing focus from name
                             Profile Name
                           </label>
                           <div
-                            class="fixed invisible w-auto whitespace-nowrap"
-                          >
-                            …
-                          </div>
-                          <div
                             class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                           >
                             <div
@@ -7912,11 +7732,6 @@ exports[`General Settings should update the avatar when removing focus from name
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              english…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -8026,11 +7841,6 @@ exports[`General Settings should update the avatar when removing focus from name
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              BTC…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -8145,11 +7955,6 @@ exports[`General Settings should update the avatar when removing focus from name
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              en-US…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -8259,11 +8064,6 @@ exports[`General Settings should update the avatar when removing focus from name
                             class="relative w-full"
                           >
                             <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              cryptocompare…
-                            </div>
-                            <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
                               <div
@@ -8372,11 +8172,6 @@ exports[`General Settings should update the avatar when removing focus from name
                           <div
                             class="relative w-full"
                           >
-                            <div
-                              class="fixed invisible w-auto whitespace-nowrap"
-                            >
-                              h:mm A…
-                            </div>
                             <div
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                             >
@@ -8575,11 +8370,6 @@ exports[`General Settings should update the avatar when removing focus from name
                             <div
                               class="relative w-full"
                             >
-                              <div
-                                class="fixed invisible w-auto whitespace-nowrap"
-                              >
-                                15…
-                              </div>
                               <div
                                 class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy sr-only"
                               >

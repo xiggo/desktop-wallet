@@ -3,11 +3,6 @@
 exports[`Input should render a default input 1`] = `
 <DocumentFragment>
   <div
-    class="fixed invisible w-auto whitespace-nowrap"
-  >
-    …
-  </div>
-  <div
     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
   >
     <div
@@ -26,11 +21,6 @@ exports[`Input should render a default input 1`] = `
 exports[`Input should render as custom element 1`] = `
 <DocumentFragment>
   <div
-    class="fixed invisible w-auto whitespace-nowrap"
-  >
-    …
-  </div>
-  <div
     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
   >
     <div
@@ -47,11 +37,6 @@ exports[`Input should render as custom element 1`] = `
 
 exports[`Input should render with addons 1`] = `
 <DocumentFragment>
-  <div
-    class="fixed invisible w-auto whitespace-nowrap"
-  >
-    …
-  </div>
   <div
     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
   >
@@ -85,11 +70,6 @@ exports[`Input should render with addons 1`] = `
 exports[`Input should render with focus 1`] = `
 <DocumentFragment>
   <div
-    class="fixed invisible w-auto whitespace-nowrap"
-  >
-    …
-  </div>
-  <div
     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
   >
     <div
@@ -107,11 +87,6 @@ exports[`Input should render with focus 1`] = `
 
 exports[`Input should render with invalid 1`] = `
 <DocumentFragment>
-  <div
-    class="fixed invisible w-auto whitespace-nowrap"
-  >
-    …
-  </div>
   <div
     class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
   >

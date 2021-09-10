@@ -71,12 +71,7 @@ exports[`LedgerTabs should render connection step 1`] = `
                   for="NetworkStep__network-input"
                   id="NetworkStep__network-label"
                 />
-                <div
-                  class="fixed invisible w-auto whitespace-nowrap"
-                >
-                  
-                  …
-                </div>
+                
                 <div
                   class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                 >
@@ -322,12 +317,7 @@ exports[`LedgerTabs should render scan step with failing fetch 1`] = `
                   for="ImportWallet__network-input"
                   id="ImportWallet__network-label"
                 />
-                <div
-                  class="fixed invisible w-auto whitespace-nowrap"
-                >
-                  ARK Devnet
-                  …
-                </div>
+                
                 <div
                   class="Input__InputWrapperStyled-sc-1i8sd1r-0 iqZIWh"
                   disabled=""

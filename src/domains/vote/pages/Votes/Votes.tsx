@@ -1,3 +1,4 @@
+import { Contracts } from "@payvo/profiles";
 import { Alert } from "app/components/Alert";
 import { Page, Section } from "app/components/Layout";
 import { useEnvironmentContext } from "app/contexts";
@@ -10,8 +11,8 @@ import { VotingWallets } from "domains/vote/components/VotingWallets/VotingWalle
 import { useDelegates } from "domains/vote/hooks/use-delegates";
 import { useVoteActions } from "domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "domains/vote/hooks/use-vote-filters";
-import { useVoteQueryParams } from "domains/vote/hooks/use-vote-query-params";
-import React, { useEffect } from "react";
+import { useVoteQueryParameters } from "domains/vote/hooks/use-vote-query-parameters";
+import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
 
@@ -23,9 +24,10 @@ export const Votes = () => {
 
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWallet();
+	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet>(activeWallet);
 
 	const { getErroredNetworks } = useProfileUtils(env);
-	const { filter, voteAddresses, unvoteAddresses } = useVoteQueryParams();
+	const { filter, voteDelegates, unvoteDelegates } = useVoteQueryParameters();
 
 	const {
 		filterProperties,
@@ -108,6 +110,7 @@ export const Votes = () => {
 
 		setSearchQuery("");
 		setSelectedAddress(address);
+		setSelectedWallet(wallet!);
 		setMaxVotes(wallet?.network().maximumVotesPerWallet());
 
 		fetchDelegates(wallet);
@@ -155,9 +158,9 @@ export const Votes = () => {
 						isLoading={isLoadingDelegates}
 						maxVotes={maxVotes!}
 						votes={votes}
-						selectedUnvoteAddresses={unvoteAddresses}
-						selectedVoteAddresses={voteAddresses}
-						selectedWallet={selectedAddress}
+						unvoteDelegates={unvoteDelegates}
+						voteDelegates={voteDelegates}
+						selectedWallet={selectedWallet}
 						onContinue={navigateToSendVote}
 						isPaginationDisabled={searchQuery.length > 0}
 						subtitle={

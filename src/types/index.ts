@@ -4,7 +4,7 @@ export type Size = "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4
 
 export type Position = "top" | "top-right" | "right" | "bottom-right" | "bottom" | "bottom-left" | "left" | "top-left";
 
-export type ButtonVariant = "primary" | "secondary" | "danger" | "transparent" | "info" | "reverse";
+export type ButtonVariant = "primary" | "secondary" | "danger" | "warning" | "transparent" | "info" | "reverse";
 
 export type NavbarVariant = "full" | "logo-only";
 

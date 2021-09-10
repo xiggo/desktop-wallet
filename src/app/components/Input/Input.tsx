@@ -6,15 +6,15 @@ import tw, { styled } from "twin.macro";
 
 import { useFormField } from "../Form/useFormField";
 
-interface Addon {
+interface AddonProperties {
 	wrapperClassName?: string;
 	content: JSX.Element;
 }
 
 type InputProperties = {
 	addons?: {
-		start?: Addon;
-		end?: Addon;
+		start?: AddonProperties;
+		end?: AddonProperties;
 	};
 	as?: React.ElementType;
 	errorMessage?: string;
@@ -142,9 +142,12 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 
 		return (
 			<>
-				<div ref={hiddenReference} className="fixed invisible w-auto whitespace-nowrap">
-					{value}…
-				</div>
+				{suggestion && (
+					<div ref={hiddenReference} className="fixed invisible w-auto whitespace-nowrap">
+						{value}…
+					</div>
+				)}
+
 				<InputWrapperStyled
 					style={style}
 					className={className}

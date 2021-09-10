@@ -1,6 +1,9 @@
 import { Contracts } from "@payvo/profiles";
 import { useHistory } from "react-router-dom";
 
+import { VoteDelegateProperties } from "../components/DelegateTable/DelegateTable.models";
+import { appendParameters } from "../utils/url-parameters";
+
 interface VoteActionsProperties {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
@@ -11,19 +14,14 @@ interface VoteActionsProperties {
 export const useVoteActions = ({ profile, wallet, selectedAddress, hasWalletId }: VoteActionsProperties) => {
 	const history = useHistory();
 
-	const navigateToSendVote = (unvotes: string[], votes: string[]) => {
+	const navigateToSendVote = (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => {
 		const walletId = hasWalletId ? wallet.id() : profile.wallets().findByAddress(selectedAddress)?.id();
 
 		const parameters = new URLSearchParams();
 
-		if (unvotes?.length > 0) {
-			parameters.append("unvotes", unvotes.join(","));
-		}
+		appendParameters(parameters, "unvote", unvotes);
 
-		/* istanbul ignore else */
-		if (votes?.length > 0) {
-			parameters.append("votes", votes.join(","));
-		}
+		appendParameters(parameters, "vote", votes);
 
 		history.push({
 			pathname: `/profiles/${profile.id()}/wallets/${walletId}/send-vote`,

@@ -34,6 +34,7 @@ export const translations: { [key: string]: any } = {
 	BUSINESS_COUNT_plural: "{{count}} Businesses",
 	CANCEL: "Cancel",
 	CATEGORY: "Category",
+	CHANGED: "Changed",
 	CHOOSE: "Choose",
 	CLIPBOARD: {
 		SUCCESS: "Copied!",

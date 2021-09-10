@@ -329,11 +329,6 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                         Mnemonic
                       </label>
                       <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
-                      <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                       >
                         <div
@@ -568,11 +563,6 @@ exports[`SendIpfs should render form step 1`] = `
         >
           IPFS Hash
         </label>
-        <div
-          class="fixed invisible w-auto whitespace-nowrap"
-        >
-          …
-        </div>
         <div
           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
         >
@@ -3738,11 +3728,6 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                           IPFS Hash
                         </label>
                         <div
-                          class="fixed invisible w-auto whitespace-nowrap"
-                        >
-                          …
-                        </div>
-                        <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 kzbxct"
                         >
                           <div
@@ -4266,11 +4251,6 @@ exports[`SendIpfs should show error step and go back 1`] = `
                       >
                         An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
                       </p>
-                      <div
-                        class="fixed invisible w-auto whitespace-nowrap"
-                      >
-                        …
-                      </div>
                       <div
                         class="Input__InputWrapperStyled-sc-1i8sd1r-0 ioTDRK py-4"
                         disabled=""

@@ -706,7 +706,9 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                               </div>
                               <span
                                 class="font-semibold truncate text-theme-secondary-text"
-                              />
+                              >
+                                arkx
+                              </span>
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
@@ -1504,7 +1506,9 @@ exports[`Dashboard should render 1`] = `
                               </div>
                               <span
                                 class="font-semibold truncate text-theme-secondary-text"
-                              />
+                              >
+                                arkx
+                              </span>
                             </div>
                             <span
                               class="whitespace-nowrap mt-auto text-lg font-bold text-theme-text"
