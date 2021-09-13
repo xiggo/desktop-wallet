@@ -18,7 +18,10 @@ describe("TransactionTable", () => {
 		nock("https://ark-test.payvo.com/api")
 			.get("/transactions")
 			.query(true)
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"));
+			.reply(
+				200,
+				require("tests/fixtures/coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10.json"),
+			);
 	});
 
 	beforeEach(async () => {
@@ -43,13 +46,9 @@ describe("TransactionTable", () => {
 	});
 
 	it("should render with memo", () => {
-		const mockMemo = jest.spyOn(transactions[0], "memo").mockReturnValue("memo");
-
 		renderWithRouter(<TransactionTable transactions={transactions} showMemoColumn />);
 
-		expect(screen.getAllByTestId("TransactionRowMemo__vendorField")).toHaveLength(1);
-
-		mockMemo.mockRestore();
+		expect(screen.getAllByTestId("TransactionRowMemo__vendorField")).toHaveLength(8);
 	});
 
 	it("should render compact", () => {
