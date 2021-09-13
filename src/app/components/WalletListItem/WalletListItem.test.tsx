@@ -28,12 +28,12 @@ describe("WalletListItem", () => {
 		await profile.sync();
 	});
 
-	it("should render", () => {
+	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
 		const { container, getByText } = renderWithRouter(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} />
+						<WalletListItem wallet={wallet} isCompact={isCompact} />
 					</Route>
 				</tbody>
 			</table>,

@@ -10,9 +10,10 @@ import { AddressRow } from "./AddressRow";
 interface AddressTableProperties {
 	wallets: Contracts.IReadWriteWallet[];
 	onSelect?: (address: string) => void;
+	isCompact?: boolean;
 }
 
-export const AddressTable = ({ wallets, onSelect }: AddressTableProperties) => {
+export const AddressTable = ({ wallets, onSelect, isCompact = false }: AddressTableProperties) => {
 	const { t } = useTranslation();
 
 	const wallet = useMemo(() => wallets[0], [wallets]);
@@ -95,7 +96,13 @@ export const AddressTable = ({ wallets, onSelect }: AddressTableProperties) => {
 
 			<Table columns={columns} data={wallets}>
 				{(wallet: Contracts.IReadWriteWallet, index: number) => (
-					<AddressRow index={index} maxVotes={maxVotes} wallet={wallet} onSelect={onSelect} />
+					<AddressRow
+						index={index}
+						maxVotes={maxVotes}
+						wallet={wallet}
+						onSelect={onSelect}
+						isCompact={isCompact}
+					/>
 				)}
 			</Table>
 		</div>

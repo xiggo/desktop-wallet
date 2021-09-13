@@ -9,9 +9,15 @@ interface VotingWalletsProperties {
 	showEmptyResults: boolean;
 	walletsByCoin: Record<string, Contracts.IReadWriteWallet[]>;
 	onSelectAddress: (address: string) => void;
+	isCompact?: boolean;
 }
 
-export const VotingWallets = ({ showEmptyResults, walletsByCoin, onSelectAddress }: VotingWalletsProperties) => {
+export const VotingWallets = ({
+	showEmptyResults,
+	walletsByCoin,
+	onSelectAddress,
+	isCompact,
+}: VotingWalletsProperties) => {
 	const { t } = useTranslation();
 
 	if (showEmptyResults) {
@@ -32,7 +38,11 @@ export const VotingWallets = ({ showEmptyResults, walletsByCoin, onSelectAddress
 				(coin, index) =>
 					walletsByCoin[coin].length > 0 && (
 						<Section key={index}>
-							<AddressTable wallets={walletsByCoin[coin]} onSelect={onSelectAddress} />
+							<AddressTable
+								wallets={walletsByCoin[coin]}
+								onSelect={onSelectAddress}
+								isCompact={isCompact}
+							/>
 						</Section>
 					),
 			)}

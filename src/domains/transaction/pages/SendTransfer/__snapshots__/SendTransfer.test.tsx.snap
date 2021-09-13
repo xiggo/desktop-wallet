@@ -1633,7 +1633,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                               class="flex items-center"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2372,7 +2372,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -2540,7 +2540,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                               class="flex items-center"
                                             >
                                               <div
-                                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                                                 data-testid="Avatar"
                                               >
                                                 <div
@@ -3365,7 +3365,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -4693,7 +4693,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                               class="flex items-center"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div
@@ -8229,7 +8229,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                               class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
                             >
                               <div
-                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                                class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                                 data-testid="Avatar"
                               >
                                 <div

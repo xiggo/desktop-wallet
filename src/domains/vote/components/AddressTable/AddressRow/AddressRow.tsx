@@ -8,6 +8,7 @@ import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import { useEnvironmentContext } from "app/contexts";
+import cn from "classnames";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -16,9 +17,10 @@ interface AddressRowProperties {
 	maxVotes: number;
 	wallet: Contracts.IReadWriteWallet;
 	onSelect?: (walletAddress: string) => void;
+	isCompact?: boolean;
 }
 
-export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProperties) => {
+export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = false }: AddressRowProperties) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
@@ -56,7 +58,12 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 	const renderAvatar = (address: string, username?: string) => (
 		<Tooltip content={username}>
 			<span className="inline-block">
-				<Avatar size="lg" address={address} />
+				<Avatar
+					className={cn({ "ring-2 ring-theme-background": isCompact })}
+					size={isCompact ? "xs" : "lg"}
+					address={address}
+					noShadow={isCompact}
+				/>
 			</span>
 		</Tooltip>
 	);
@@ -71,14 +78,18 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 	return (
 		<TableRow>
-			<TableCell variant="start" innerClassName="space-x-4">
-				<Avatar className="flex-shrink-0" size="lg" address={wallet.address()} noShadow />
+			<TableCell
+				variant="start"
+				innerClassName={cn({ "space-x-3": isCompact }, { "space-x-4": !isCompact })}
+				isCompact={isCompact}
+			>
+				<Avatar className="flex-shrink-0" size={isCompact ? "xs" : "lg"} address={wallet.address()} noShadow />
 				<div className="w-40 flex-1">
 					<Address address={wallet.address()} walletName={wallet.alias()} />
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle">
+			<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle" isCompact={isCompact}>
 				<div className="inline-flex items-center space-x-2">
 					{[
 						wallet.isLedger() && <WalletIcon key="ledger" type="Ledger" />,
@@ -90,20 +101,26 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName="justify-end font-bold text-theme-secondary-text whitespace-nowrap">
+			<TableCell
+				innerClassName="justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+				isCompact={isCompact}
+			>
 				<AmountCrypto value={wallet.balance()} ticker={wallet.network().ticker()} />
 			</TableCell>
 
-			<TableCell innerClassName="space-x-4 font-bold">
+			<TableCell
+				innerClassName={cn("font-bold", { "space-x-3": isCompact }, { "space-x-4": !isCompact })}
+				isCompact={isCompact}
+			>
 				{hasVotes ? (
 					maxVotes === 1 ? (
 						<>
-							<Avatar size="lg" address={votes[0].wallet?.address()} noShadow />
+							<Avatar size={isCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
 							<span>{votes[0].wallet?.username()}</span>
 						</>
 					) : (
 						<div className="flex items-center h-11">
-							<div className="flex -space-x-3">
+							<div className={cn("flex", { "-space-x-1": isCompact }, { "-space-x-3": !isCompact })}>
 								{renderAvatar(first.wallet!.address(), first.wallet!.username())}
 
 								{second && renderAvatar(second.wallet!.address(), second.wallet!.username())}
@@ -115,7 +132,10 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 									renderAvatar(rest[0].wallet!.address(), rest[0].wallet!.username())}
 
 								{rest && rest.length > 1 && (
-									<Circle size="lg" className="relative border-theme-text text-theme-text">
+									<Circle
+										size={isCompact ? "xs" : "lg"}
+										className="relative border-theme-text text-theme-text"
+									>
 										<span className="font-semibold">+{rest.length}</span>
 									</Circle>
 								)}
@@ -125,7 +145,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				) : (
 					<>
 						<Circle
-							size="lg"
+							size={isCompact ? "xs" : "lg"}
 							className="border-theme-secondary-300 dark:border-theme-secondary-800"
 							noShadow
 						/>
@@ -136,11 +156,14 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 
 			{maxVotes === 1 ? (
 				<>
-					<TableCell innerClassName="justify-center font-bold text-theme-secondary-text">
+					<TableCell
+						innerClassName="justify-center font-bold text-theme-secondary-text"
+						isCompact={isCompact}
+					>
 						{votes[0]?.wallet && <span>#{votes[0].wallet.rank()}</span>}
 					</TableCell>
 
-					<TableCell innerClassName="justify-center">
+					<TableCell innerClassName="justify-center" isCompact={isCompact}>
 						{hasVotes && (
 							<Icon
 								name="CircleCheckMark"
@@ -152,7 +175,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 					</TableCell>
 				</>
 			) : (
-				<TableCell>
+				<TableCell isCompact={isCompact}>
 					<div className="font-bold text-theme-secondary-400">
 						<span className="text-theme-secondary-text">{hasVotes ? votes.length : "0"}</span>
 						<span>/{maxVotes}</span>
@@ -160,10 +183,12 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProp
 				</TableCell>
 			)}
 
-			<TableCell variant="end" innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
 				<Button
+					size={isCompact ? "icon" : undefined}
 					disabled={!wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()}
-					variant="secondary"
+					variant={isCompact ? "transparent" : "secondary"}
+					className={cn({ "text-theme-primary-600 hover:text-theme-primary-700 -mr-3": isCompact })}
 					onClick={() => onSelect?.(wallet.address())}
 					data-testid={`AddressRow__select-${index}`}
 				>

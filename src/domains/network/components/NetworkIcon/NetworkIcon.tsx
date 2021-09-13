@@ -2,10 +2,11 @@ import { Networks } from "@payvo/sdk";
 import { Circle, CircleProps } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
+import cn from "classnames";
 import React from "react";
 import { Size } from "types";
 
-interface Properties {
+interface NetworkIconProperties {
 	network?: Networks.Network;
 	as?: React.ElementType;
 	size: Size;
@@ -15,6 +16,7 @@ interface Properties {
 	showTooltip?: boolean;
 	tooltipDarkTheme?: boolean;
 	noShadow?: boolean;
+	isCompact?: boolean;
 }
 
 const Placeholder = (properties: CircleProps) => (
@@ -27,12 +29,13 @@ const Placeholder = (properties: CircleProps) => (
 
 export const NetworkIcon = ({
 	network,
-	iconSize,
+	iconSize = "lg",
 	className,
-	showTooltip,
+	showTooltip = true,
 	tooltipDarkTheme,
+	isCompact = false,
 	...properties
-}: Properties) => {
+}: NetworkIconProperties) => {
 	if (!network) {
 		return <Placeholder className={className} {...properties} />;
 	}
@@ -49,21 +52,36 @@ export const NetworkIcon = ({
 		return "text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700";
 	};
 
-	return (
-		<Tooltip content={network.displayName()} disabled={!showTooltip} theme={tooltipDarkTheme ? "dark" : undefined}>
+	const renderIcon = () => {
+		const tickerIcon = <Icon data-testid="NetworkIcon__icon" name={network.ticker()} size={iconSize} />;
+
+		if (isCompact) {
+			return (
+				<div
+					aria-label={network.displayName()}
+					data-testid={`NetworkIcon-${network.coin()}-${network.id()}`}
+					className={cn("w-5 h-5 inline-flex items-center", getClassName())}
+				>
+					{tickerIcon}
+				</div>
+			);
+		}
+
+		return (
 			<Circle
 				aria-label={network.displayName()}
 				data-testid={`NetworkIcon-${network.coin()}-${network.id()}`}
 				className={getClassName()}
 				{...properties}
 			>
-				<Icon data-testid="NetworkIcon__icon" name={network.ticker()} size={iconSize} />
+				{tickerIcon}
 			</Circle>
+		);
+	};
+
+	return (
+		<Tooltip content={network.displayName()} disabled={!showTooltip} theme={tooltipDarkTheme ? "dark" : undefined}>
+			{renderIcon()}
 		</Tooltip>
 	);
-};
-
-NetworkIcon.defaultProps = {
-	iconSize: "lg",
-	showTooltip: true,
 };

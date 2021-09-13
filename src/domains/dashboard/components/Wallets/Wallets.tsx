@@ -69,6 +69,8 @@ export const Wallets = ({
 		onImportLedgerWallet?.();
 	};
 
+	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
+
 	return (
 		<Section>
 			<div className="flex justify-between items-center mb-8">
@@ -103,6 +105,7 @@ export const Wallets = ({
 				onViewMore={() => setViewMore(true)}
 				wallets={listWallets}
 				walletsDisplayType={walletsDisplayType}
+				isCompact={useCompactTables}
 			/>
 
 			{isWaitingLedger && (

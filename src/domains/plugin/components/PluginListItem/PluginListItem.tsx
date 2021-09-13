@@ -2,6 +2,7 @@ import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
+import cn from "classnames";
 import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -21,6 +22,7 @@ interface PluginListItemProperties {
 	updatingProgress?: any;
 	plugin: any;
 	showCategory?: boolean;
+	isCompact?: boolean;
 }
 
 export const PluginListItem = ({
@@ -35,6 +37,7 @@ export const PluginListItem = ({
 	updatingProgress,
 	plugin,
 	showCategory,
+	isCompact = false,
 }: PluginListItemProperties) => {
 	const { t } = useTranslation();
 
@@ -46,10 +49,14 @@ export const PluginListItem = ({
 		if (!plugin.isInstalled) {
 			return (
 				<Button
-					variant="secondary"
+					size={isCompact ? "icon" : undefined}
+					variant={isCompact ? "transparent" : "secondary"}
+					className={cn(
+						{ "flex-1": !isCompact },
+						{ "text-theme-primary-600 hover:text-theme-primary-700 -mr-3": isCompact },
+					)}
 					onClick={handleInstall}
 					data-testid="PluginListItem__install"
-					className="flex-1"
 				>
 					{t("COMMON.INSTALL")}
 				</Button>
@@ -57,14 +64,15 @@ export const PluginListItem = ({
 		}
 
 		return (
-			<div className="flex items-center w-full space-x-2">
-				<PluginLaunchButton plugin={plugin} onLaunch={onLaunch} />
+			<div className={cn("flex items-center justify-end w-full space-x-2")}>
+				<PluginLaunchButton plugin={plugin} onLaunch={onLaunch} isCompact={isCompact} />
 				<PluginMenu
 					plugin={plugin}
 					onDelete={onDelete}
 					onEnable={onEnable}
 					onDisable={onDisable}
 					onUpdate={onUpdate}
+					isCompact={isCompact}
 				/>
 			</div>
 		);
@@ -72,9 +80,13 @@ export const PluginListItem = ({
 
 	return (
 		<TableRow>
-			<TableCell variant="start" innerClassName="space-x-5">
+			<TableCell
+				variant="start"
+				innerClassName={cn({ "space-x-3": isCompact }, { "space-x-5": !isCompact })}
+				isCompact={isCompact}
+			>
 				<PluginImage
-					size="sm"
+					size={isCompact ? "2xs" : "sm"}
 					logoURL={plugin.logo}
 					isExchange={plugin.category === "exchange"}
 					isUpdating={isUpdating}
@@ -106,25 +118,25 @@ export const PluginListItem = ({
 				</div>
 			</TableCell>
 
-			<TableCell>
+			<TableCell isCompact={isCompact}>
 				<span className="truncate w-50">{plugin.author}</span>
 			</TableCell>
 
 			{showCategory && (
-				<TableCell>
+				<TableCell isCompact={isCompact}>
 					<span>{t(`PLUGINS.CATEGORIES.${plugin.category.toUpperCase()}`)}</span>
 				</TableCell>
 			)}
 
-			<TableCell>
+			<TableCell isCompact={isCompact}>
 				<span className="truncate w-30">{plugin.version}</span>
 			</TableCell>
 
-			<TableCell>
+			<TableCell isCompact={isCompact}>
 				<span>{plugin.size}</span>
 			</TableCell>
 
-			<TableCell>
+			<TableCell isCompact={isCompact}>
 				{plugin.isInstalled ? (
 					<>
 						{plugin.isEnabled ? (
@@ -159,7 +171,7 @@ export const PluginListItem = ({
 				)}
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
 				{renderPluginButtons()}
 			</TableCell>
 		</TableRow>

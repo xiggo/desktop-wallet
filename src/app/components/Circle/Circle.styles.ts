@@ -8,6 +8,8 @@ const defaultStyle = (noShadow: boolean) => [
 
 const getSize = (size?: Size): any => {
 	switch (size) {
+		case "xs":
+			return tw`w-5 h-5 text-sm`;
 		case "sm":
 			return tw`w-8 h-8 px-2 py-1 text-sm`;
 		case "lg":

@@ -1,4 +1,5 @@
 import React from "react";
+import { Size } from "types";
 import * as utils from "utils/electron-utils";
 import { fireEvent, render, screen } from "utils/testing-library";
 
@@ -45,8 +46,8 @@ describe("PluginImage", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.each(["2xs", "xs", "sm", "md", "lg"])("should render with size '%s'", () => {
-		const { container } = render(<PluginImage />);
+	it.each(["3xs", "2xs", "xs", "sm", "md", "lg"])("should render with size '%s'", (size) => {
+		const { container } = render(<PluginImage size={size as Size} />);
 
 		expect(screen.getByTestId("PluginImage")).toHaveTextContent("plugin-logo-placeholder.svg");
 		expect(container).toMatchSnapshot();

@@ -608,7 +608,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
                         class="flex items-center"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div

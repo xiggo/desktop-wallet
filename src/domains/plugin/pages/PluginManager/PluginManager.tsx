@@ -43,6 +43,7 @@ interface LatestPluginsProperties {
 	pluginsByCategory: Record<string, any[]>;
 	updatingStats?: any;
 	viewType: string;
+	isCompact?: boolean;
 }
 
 const LatestPlugins = ({
@@ -58,6 +59,7 @@ const LatestPlugins = ({
 	pluginsByCategory,
 	updatingStats,
 	viewType,
+	isCompact,
 }: LatestPluginsProperties) => {
 	const { t } = useTranslation();
 
@@ -93,6 +95,7 @@ const LatestPlugins = ({
 				plugins={plugins}
 				showPagination={false}
 				updatingStats={updatingStats}
+				isCompact={isCompact}
 			/>
 		);
 	};
@@ -219,6 +222,8 @@ export const PluginManager = () => {
 
 	const plugins = allPlugins.map(mapConfigToPluginData.bind(null, activeProfile));
 	const searchResultsData = searchResults.map(mapConfigToPluginData.bind(null, activeProfile));
+
+	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
 
 	const { hasUpdateAvailableCount, hasCompatibleUpdateAvailableCount } = plugins.reduce(
 		(counts, item) => {
@@ -449,6 +454,7 @@ export const PluginManager = () => {
 						onSelect={handleSelectPlugin}
 						onLaunch={handleLaunchPlugin}
 						onUpdate={handleUpdate}
+						isCompact={useCompactTables}
 					/>
 				)}
 
@@ -514,6 +520,7 @@ export const PluginManager = () => {
 										onEnable={handleEnablePlugin}
 										onInstall={openInstallPluginModal}
 										onLaunch={handleLaunchPlugin}
+										isCompact={useCompactTables}
 									/>
 								)}
 							</div>

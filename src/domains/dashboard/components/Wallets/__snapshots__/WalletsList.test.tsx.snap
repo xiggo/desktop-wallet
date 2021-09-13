@@ -141,7 +141,7 @@ exports[`WalletsList should render 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                 >
                   <div
-                    class="flex-shrink-0 -space-x-2"
+                    class="flex-shrink-0 flex items-center -space-x-1"
                   >
                     <div
                       aria-label="ARK Devnet"
@@ -235,7 +235,7 @@ exports[`WalletsList should render 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                 >
                   <div
-                    class="flex-shrink-0 -space-x-2"
+                    class="flex-shrink-0 flex items-center -space-x-1"
                   >
                     <div
                       aria-label="ARK Devnet"
@@ -541,35 +541,31 @@ exports[`WalletsList should render loading state 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                 >
                   <div
-                    class="-space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <div
-                      class="flex items-center mr-2 -space-x-1"
+                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
                     >
-                      <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                      >
-                        <span>
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
                         </span>
-                      </div>
-                      <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                      >
-                        <span>
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
                         </span>
-                      </div>
+                      </span>
                     </div>
                   </div>
                   <span>
@@ -634,35 +630,31 @@ exports[`WalletsList should render loading state 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                 >
                   <div
-                    class="-space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <div
-                      class="flex items-center mr-2 -space-x-1"
+                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
                     >
-                      <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                      >
-                        <span>
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
                         </span>
-                      </div>
-                      <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                      >
-                        <span>
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
                         </span>
-                      </div>
+                      </span>
                     </div>
                   </div>
                   <span>
@@ -727,35 +719,31 @@ exports[`WalletsList should render loading state 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                 >
                   <div
-                    class="-space-x-2"
+                    class="flex items-center -space-x-1"
                   >
                     <div
-                      class="flex items-center mr-2 -space-x-1"
+                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
                     >
-                      <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                      >
-                        <span>
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
                         </span>
-                      </div>
-                      <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                      >
-                        <span>
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
                         </span>
-                      </div>
+                      </span>
                     </div>
                   </div>
                   <span>
@@ -958,7 +946,7 @@ exports[`WalletsList should render with view more button 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                 >
                   <div
-                    class="flex-shrink-0 -space-x-2"
+                    class="flex-shrink-0 flex items-center -space-x-1"
                   >
                     <div
                       aria-label="ARK Devnet"
@@ -1052,7 +1040,7 @@ exports[`WalletsList should render with view more button 1`] = `
                   class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                 >
                   <div
-                    class="flex-shrink-0 -space-x-2"
+                    class="flex-shrink-0 flex items-center -space-x-1"
                   >
                     <div
                       aria-label="ARK Devnet"

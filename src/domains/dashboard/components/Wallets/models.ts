@@ -22,6 +22,7 @@ export interface WalletListProperties {
 	onViewMore?: any;
 	wallets: GridWallet[];
 	walletsDisplayType?: string;
+	isCompact?: boolean;
 }
 
 export interface UseWalletDisplayProperties {

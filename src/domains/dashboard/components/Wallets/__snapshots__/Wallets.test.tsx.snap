@@ -327,14 +327,14 @@ exports[`Wallets should load more wallets 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -349,7 +349,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -388,7 +388,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -397,7 +397,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -409,7 +409,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -421,14 +421,14 @@ exports[`Wallets should load more wallets 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -443,7 +443,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -482,7 +482,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -506,7 +506,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -518,7 +518,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -530,14 +530,14 @@ exports[`Wallets should load more wallets 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -552,7 +552,7 @@ exports[`Wallets should load more wallets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -591,7 +591,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -615,7 +615,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -627,7 +627,7 @@ exports[`Wallets should load more wallets 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -975,14 +975,14 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -997,7 +997,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1036,7 +1036,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -1045,7 +1045,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1057,7 +1057,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -1069,14 +1069,14 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -1091,7 +1091,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1130,7 +1130,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -1154,7 +1154,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1166,7 +1166,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -1178,14 +1178,14 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -1200,7 +1200,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1239,7 +1239,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -1263,7 +1263,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -1275,7 +1275,7 @@ exports[`Wallets should open and close ledger import modal 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2903,14 +2903,14 @@ exports[`Wallets should render list 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -2925,7 +2925,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2964,7 +2964,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -2973,7 +2973,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2985,7 +2985,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -2997,14 +2997,14 @@ exports[`Wallets should render list 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -3019,7 +3019,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3058,7 +3058,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -3082,7 +3082,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -3094,7 +3094,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       N/A
                     </div>
@@ -3106,14 +3106,14 @@ exports[`Wallets should render list 1`] = `
                 >
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
                     >
                       <div
-                        class="flex-shrink-0 -space-x-2"
+                        class="flex-shrink-0 flex items-center space-x-4"
                       >
                         <div
                           aria-label="ARK"
-                          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
+                          class="w-5 h-5 inline-flex items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
                           data-testid="NetworkIcon-ARK-ark.mainnet"
                         >
                           <div
@@ -3128,7 +3128,7 @@ exports[`Wallets should render list 1`] = `
                           </div>
                         </div>
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fSjBUt group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 hiKOvx group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3167,7 +3167,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -3191,7 +3191,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-semibold justify-end"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -3203,7 +3203,7 @@ exports[`Wallets should render list 1`] = `
                   </td>
                   <td>
                     <div
-                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-text"
+                      class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-text"
                     >
                       <span
                         class="whitespace-nowrap"

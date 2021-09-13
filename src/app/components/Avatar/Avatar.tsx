@@ -32,8 +32,17 @@ const AvatarWrapper = styled.div<Properties>`
 		}
 	}}
 
-	${({ noShadow, shadowClassName }) =>
-		noShadow ? tw`ring-0` : shadowClassName ? tw`ring-6` : tw`ring-6 ring-theme-background`}
+	${({ noShadow, shadowClassName }) => {
+		if (noShadow) {
+			return;
+		}
+
+		if (shadowClassName) {
+			return tw`ring-6`;
+		}
+
+		return tw`ring-6 ring-theme-background`;
+	}}
 `;
 
 export const Avatar = ({ address, className, highlight, noShadow, shadowClassName, size, children }: Properties) => {

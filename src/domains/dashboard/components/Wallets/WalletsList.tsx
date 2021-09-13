@@ -19,6 +19,7 @@ export const WalletsList = memo(
 		onViewMore,
 		wallets,
 		walletsDisplayType = "all",
+		isCompact = false,
 	}: WalletListProperties) => {
 		const { t } = useTranslation();
 
@@ -59,9 +60,9 @@ export const WalletsList = memo(
 						<Table columns={columns} data={tableRows}>
 							{(rowData: any) =>
 								isLoading ? (
-									<WalletListItemSkeleton />
+									<WalletListItemSkeleton isCompact={isCompact} />
 								) : (
-									<WalletListItem {...rowData} onClick={onRowClick} />
+									<WalletListItem {...rowData} onClick={onRowClick} isCompact={isCompact} />
 								)
 							}
 						</Table>

@@ -3,10 +3,17 @@ import { Button } from "app/components/Button";
 import { Dropdown, DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
+import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-const PluginLaunchButton = ({ plugin, onLaunch }: any) => {
+interface PluginLaunchButtonProperties {
+	plugin: any;
+	onLaunch?: (plugin: any) => void;
+	isCompact?: boolean;
+}
+
+const PluginLaunchButton = ({ plugin, onLaunch, isCompact }: PluginLaunchButtonProperties) => {
 	const { t } = useTranslation();
 
 	const tooltipContent = () => {
@@ -24,12 +31,35 @@ const PluginLaunchButton = ({ plugin, onLaunch }: any) => {
 			return t("COMMON.LAUNCH");
 		}
 
+		if (isCompact) {
+			return <span className="w-14 h-0.5 bg-theme-secondary-300 dark:bg-theme-secondary-700 rounded-full" />;
+		}
+
 		return <Icon name="Dash" size="lg" />;
 	};
 
-	return (
-		<Tooltip content={tooltipContent()}>
-			<div className="w-full">
+	const renderButton = () => {
+		if (isCompact) {
+			return (
+				<span className="flex">
+					<Button
+						size="icon"
+						variant="transparent"
+						onClick={() => onLaunch?.(plugin)}
+						disabled={!plugin.hasLaunch}
+						className={cn("text-theme-primary-600 hover:text-theme-primary-700", {
+							"-my-1": !plugin.hasLaunch,
+						})}
+						data-testid="PluginListItem__launch"
+					>
+						{renderButtonContent()}
+					</Button>
+				</span>
+			);
+		}
+
+		return (
+			<span className="flex w-full">
 				<Button
 					variant="secondary"
 					onClick={() => onLaunch?.(plugin)}
@@ -39,12 +69,23 @@ const PluginLaunchButton = ({ plugin, onLaunch }: any) => {
 				>
 					{renderButtonContent()}
 				</Button>
-			</div>
-		</Tooltip>
-	);
+			</span>
+		);
+	};
+
+	return <Tooltip content={tooltipContent()}>{renderButton()}</Tooltip>;
 };
 
-const PluginMenu = ({ plugin, onDelete, onEnable, onDisable, onUpdate }: any) => {
+interface PluginMenuProperties {
+	plugin: any;
+	onEnable?: (plugin: any) => void;
+	onDisable?: (plugin: any) => void;
+	onUpdate?: (plugin: any) => void;
+	onDelete?: (plugin: any) => void;
+	isCompact?: boolean;
+}
+
+const PluginMenu = ({ plugin, onDelete, onEnable, onDisable, onUpdate, isCompact }: PluginMenuProperties) => {
 	const { t } = useTranslation();
 
 	const actions = useMemo(() => {
@@ -83,7 +124,13 @@ const PluginMenu = ({ plugin, onDelete, onEnable, onDisable, onUpdate }: any) =>
 							/>
 						</Tooltip>
 					)}
-					<Button variant="secondary" size="icon" className="text-left">
+					<Button
+						size="icon"
+						variant={isCompact ? "transparent" : "secondary"}
+						className={cn("text-left", {
+							"text-theme-primary-600 hover:text-theme-primary-700 -mx-3": isCompact,
+						})}
+					>
 						<Icon name="EllipsisVertical" size="lg" />
 					</Button>
 				</div>

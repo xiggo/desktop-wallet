@@ -118,6 +118,8 @@ export const Votes = () => {
 
 	const hasSelectedAddress = !!selectedAddress;
 
+	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
+
 	return (
 		<Page profile={activeProfile}>
 			<Section border>
@@ -147,6 +149,7 @@ export const Votes = () => {
 					showEmptyResults={hasEmptyResults}
 					walletsByCoin={filteredWalletsByCoin}
 					onSelectAddress={handleSelectAddress}
+					isCompact={useCompactTables}
 				/>
 			)}
 

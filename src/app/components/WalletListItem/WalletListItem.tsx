@@ -16,12 +16,14 @@ export interface WalletListItemProperties {
 	wallet: Contracts.IReadWriteWallet;
 	activeWalletId?: string;
 	onClick?: (walletId: string) => void;
+	isCompact?: boolean;
 }
 
 export const WalletListItem: React.FC<WalletListItemProperties> = ({
 	wallet,
 	activeWalletId,
 	onClick,
+	isCompact = false,
 }: WalletListItemProperties) => {
 	const { t } = useTranslation();
 
@@ -66,21 +68,32 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 
 	return (
 		<TableRow isSelected={isSelected} onClick={canDisplayBalance ? () => onClick?.(wallet.id()) : undefined}>
-			<TableCell variant="start" innerClassName="space-x-4">
-				<div className="flex-shrink-0 -space-x-2">
-					<NetworkIcon size="lg" network={wallet.network()} shadowClassName={shadowClasses} />
-					<Avatar size="lg" address={wallet.address()} shadowClassName={shadowClasses} />
+			<TableCell variant="start" innerClassName="space-x-4" isCompact={isCompact}>
+				<div
+					className={cn(
+						"flex-shrink-0 flex items-center",
+						{ "space-x-4": isCompact },
+						{ "-space-x-1": !isCompact },
+					)}
+				>
+					<NetworkIcon
+						size="lg"
+						network={wallet.network()}
+						shadowClassName={shadowClasses}
+						isCompact={isCompact}
+					/>
+					<Avatar size={isCompact ? "xs" : "lg"} address={wallet.address()} shadowClassName={shadowClasses} />
 				</div>
 				<Address walletName={alias} address={wallet.address()} />
 			</TableCell>
 
-			<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle">
+			<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle" isCompact={isCompact}>
 				<div className="inline-flex items-center space-x-1">
 					<WalletIcons wallet={wallet} iconSize="lg" />
 				</div>
 			</TableCell>
 
-			<TableCell innerClassName="font-semibold justify-end">
+			<TableCell innerClassName="font-semibold justify-end" isCompact={isCompact}>
 				{canDisplayBalance ? (
 					<AmountCrypto value={wallet.balance()} ticker={wallet.network().ticker()} />
 				) : (
@@ -88,7 +101,7 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 				)}
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text">
+			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
 				{lastCellContent}
 			</TableCell>
 		</TableRow>

@@ -5,8 +5,10 @@ const baseStyle = tw`flex flex-col space-y-3 items-center justify-center transit
 
 const getSize = (size?: Size): any => {
 	switch (size) {
-		case "2xs":
+		case "3xs":
 			return tw`flex-shrink-0 h-6 w-6 rounded`;
+		case "2xs":
+			return tw`flex-shrink-0 h-8 w-8 rounded`;
 		case "xs":
 			return tw`flex-shrink-0 h-11 w-11 rounded-lg`;
 		case "sm":

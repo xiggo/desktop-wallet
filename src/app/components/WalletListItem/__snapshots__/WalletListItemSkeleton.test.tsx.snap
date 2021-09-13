@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
+exports[`WalletListItemSkeleton should render wallet list skeleton when isCompact = false 1`] = `
 <div>
   <table>
     <tbody
@@ -15,35 +15,31 @@ exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
           >
             <div
-              class="-space-x-2"
+              class="flex items-center -space-x-1"
             >
               <div
-                class="flex items-center mr-2 -space-x-1"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
               >
-                <div
-                  class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                >
-                  <span>
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 44px; height: 44px; border-radius: 50%;"
-                    >
-                      ‌
-                    </span>
+                <span>
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 44px; height: 44px; border-radius: 50%;"
+                  >
+                    ‌
                   </span>
-                </div>
-                <div
-                  class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
-                >
-                  <span>
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 44px; height: 44px; border-radius: 50%;"
-                    >
-                      ‌
-                    </span>
+                </span>
+              </div>
+              <div
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+              >
+                <span>
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 44px; height: 44px; border-radius: 50%;"
+                  >
+                    ‌
                   </span>
-                </div>
+                </span>
               </div>
             </div>
             <span>
@@ -87,6 +83,106 @@ exports[`WalletListItemSkeleton should render wallet list skeleton 1`] = `
         <td>
           <div
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end text-theme-secondary-400"
+          >
+            <span>
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 100px; height: 16px;"
+              >
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`WalletListItemSkeleton should render wallet list skeleton when isCompact = true 1`] = `
+<div>
+  <table>
+    <tbody
+      data-testid="WalletListSkeleton"
+    >
+      <tr
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
+          >
+            <div
+              class="flex items-center space-x-4"
+            >
+              <div
+                class="Circle__CircleWrapper-sc-d5u41q-0 ctbTNr border-transparent ring-theme-background"
+              >
+                <span>
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="Circle__CircleWrapper-sc-d5u41q-0 ctbTNr border-transparent ring-theme-background"
+              >
+                <span>
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </div>
+            <span>
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 260px; height: 16px;"
+              >
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center text-sm font-bold text-center align-middle"
+          >
+            <span>
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 100px; height: 16px;"
+              >
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-semibold justify-end"
+          >
+            <span>
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 229px; height: 16px;"
+              >
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end text-theme-secondary-400"
           >
             <span>
               <span

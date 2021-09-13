@@ -19,7 +19,7 @@ exports[`DelegateFooter should render 1`] = `
             class="flex space-x-3"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div

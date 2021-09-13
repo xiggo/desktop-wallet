@@ -46,7 +46,9 @@ describe("PluginManager", () => {
 		history.push(pluginsURL);
 	});
 
-	it("should render", async () => {
+	it.each([true, false])("should render when useExpandedTables = %s", async (isExpandedTables: boolean) => {
+		const profileAppearanceMock = jest.spyOn(profile.appearance(), "get").mockReturnValue(isExpandedTables);
+
 		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
@@ -69,6 +71,8 @@ describe("PluginManager", () => {
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
 
 		expect(asFragment()).toMatchSnapshot();
+
+		profileAppearanceMock.mockRestore();
 	});
 
 	it("should toggle between list and grid on latest", async () => {
@@ -177,9 +181,9 @@ describe("PluginManager", () => {
 
 	it("should switch to category by clicking on view all link", async () => {
 		// add plugins to fill category
-		const plugins = Array.from({ length: 5 }).map((_, i) => {
+		const plugins = Array.from({ length: 5 }).map((_, index) => {
 			const plugin = new PluginController(
-				{ "desktop-wallet": { categories: ["other"] }, name: `test-plugin-${i}` },
+				{ "desktop-wallet": { categories: ["other"] }, name: `test-plugin-${index}` },
 				() => void 0,
 			);
 

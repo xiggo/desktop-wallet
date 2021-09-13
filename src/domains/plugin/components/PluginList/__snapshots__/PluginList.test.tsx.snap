@@ -255,10 +255,10 @@ exports[`PluginList should not render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <div
-                  class="flex items-center w-full space-x-2"
+                  class="flex items-center justify-end w-full space-x-2"
                 >
-                  <div
-                    class="w-full"
+                  <span
+                    class="flex w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
@@ -280,7 +280,7 @@ exports[`PluginList should not render pagination 1`] = `
                         </div>
                       </div>
                     </button>
-                  </div>
+                  </span>
                   <div
                     class="relative"
                   >
@@ -686,10 +686,10 @@ exports[`PluginList should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <div
-                  class="flex items-center w-full space-x-2"
+                  class="flex items-center justify-end w-full space-x-2"
                 >
-                  <div
-                    class="w-full"
+                  <span
+                    class="flex w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
@@ -711,7 +711,7 @@ exports[`PluginList should render pagination 1`] = `
                         </div>
                       </div>
                     </button>
-                  </div>
+                  </span>
                   <div
                     class="relative"
                   >
@@ -936,10 +936,10 @@ exports[`PluginList should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <div
-                  class="flex items-center w-full space-x-2"
+                  class="flex items-center justify-end w-full space-x-2"
                 >
-                  <div
-                    class="w-full"
+                  <span
+                    class="flex w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
@@ -961,7 +961,7 @@ exports[`PluginList should render pagination 1`] = `
                         </div>
                       </div>
                     </button>
-                  </div>
+                  </span>
                   <div
                     class="relative"
                   >
@@ -1080,10 +1080,10 @@ exports[`PluginList should render pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <div
-                  class="flex items-center w-full space-x-2"
+                  class="flex items-center justify-end w-full space-x-2"
                 >
-                  <div
-                    class="w-full"
+                  <span
+                    class="flex w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
@@ -1105,7 +1105,7 @@ exports[`PluginList should render pagination 1`] = `
                         </div>
                       </div>
                     </button>
-                  </div>
+                  </span>
                   <div
                     class="relative"
                   >
@@ -1450,10 +1450,10 @@ exports[`PluginList should render without pagination 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <div
-                  class="flex items-center w-full space-x-2"
+                  class="flex items-center justify-end w-full space-x-2"
                 >
-                  <div
-                    class="w-full"
+                  <span
+                    class="flex w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
@@ -1475,7 +1475,7 @@ exports[`PluginList should render without pagination 1`] = `
                         </div>
                       </div>
                     </button>
-                  </div>
+                  </span>
                   <div
                     class="relative"
                   >
@@ -1878,10 +1878,10 @@ exports[`PluginList should split by page 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <div
-                  class="flex items-center w-full space-x-2"
+                  class="flex items-center justify-end w-full space-x-2"
                 >
-                  <div
-                    class="w-full"
+                  <span
+                    class="flex w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
@@ -1903,7 +1903,7 @@ exports[`PluginList should split by page 1`] = `
                         </div>
                       </div>
                     </button>
-                  </div>
+                  </span>
                   <div
                     class="relative"
                   >
@@ -2248,10 +2248,10 @@ exports[`PluginList should trigger delete 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <div
-                  class="flex items-center w-full space-x-2"
+                  class="flex items-center justify-end w-full space-x-2"
                 >
-                  <div
-                    class="w-full"
+                  <span
+                    class="flex w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
@@ -2273,7 +2273,7 @@ exports[`PluginList should trigger delete 1`] = `
                         </div>
                       </div>
                     </button>
-                  </div>
+                  </span>
                   <div
                     class="relative"
                   >
@@ -2679,10 +2679,10 @@ exports[`PluginList should trigger install 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
                 <div
-                  class="flex items-center w-full space-x-2"
+                  class="flex items-center justify-end w-full space-x-2"
                 >
-                  <div
-                    class="w-full"
+                  <span
+                    class="flex w-full"
                   >
                     <button
                       class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd w-full"
@@ -2704,7 +2704,7 @@ exports[`PluginList should trigger install 1`] = `
                         </div>
                       </div>
                     </button>
-                  </div>
+                  </span>
                   <div
                     class="relative"
                   >

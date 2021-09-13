@@ -223,7 +223,7 @@ exports[`LedgerScanStep should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
               >
                 <div
-                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
                   data-testid="Avatar"
                 >
                   <div

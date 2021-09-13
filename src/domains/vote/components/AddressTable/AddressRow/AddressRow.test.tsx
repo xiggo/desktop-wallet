@@ -79,11 +79,11 @@ describe("AddressRow", () => {
 		await wallet.synchroniser().coin();
 	});
 
-	it("should render", async () => {
+	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
 		const { asFragment, container, getByTestId } = render(
 			<table>
 				<tbody>
-					<AddressRow index={0} maxVotes={1} wallet={wallet} />
+					<AddressRow index={0} maxVotes={1} wallet={wallet} isCompact={isCompact} />
 				</tbody>
 			</table>,
 		);
@@ -95,43 +95,50 @@ describe("AddressRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render when the maximum votes is greater than 1", () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue(
-			[0, 1, 2, 3].map((index) => ({
-				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[index].address,
-					explorerLink: "",
-					publicKey: data[index].publicKey,
-					rank: data[index].rank,
-					username: data[index].username,
-				}),
-			})),
-		);
+	it.each([true, false])(
+		"should render with isCompact = %s when the maximum votes is greater than 1",
+		(isCompact: boolean) => {
+			const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue(
+				[0, 1, 2, 3].map((index) => ({
+					amount: 0,
+					wallet: new ReadOnlyWallet({
+						address: data[index].address,
+						explorerLink: "",
+						governanceIdentifier: "address",
+						isDelegate: true,
+						isResignedDelegate: false,
+						publicKey: data[index].publicKey,
+						username: data[index].username,
+					}),
+				})),
+			);
 
-		const { asFragment, container } = render(
-			<table>
-				<tbody>
-					<AddressRow index={0} maxVotes={10} wallet={wallet} />
-				</tbody>
-			</table>,
-		);
+			const { asFragment, container } = render(
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
+					</tbody>
+				</table>,
+			);
 
-		expect(container).toBeTruthy();
-		expect(asFragment()).toMatchSnapshot();
+			expect(container).toBeTruthy();
+			expect(asFragment()).toMatchSnapshot();
 
-		votesMock.mockRestore();
-	});
+			votesMock.mockRestore();
+		},
+	);
 
-	it("should render when the wallet has many votes", () => {
+	it.each([true, false])("should render with isCompact = %s when the wallet has many votes", (isCompact: boolean) => {
 		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue(
 			[0, 1, 2, 3, 4].map((index) => ({
 				amount: 0,
 				wallet: new ReadOnlyWallet({
 					address: data[index].address,
 					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
 					publicKey: data[index].publicKey,
-					rank: data[index].rank,
 					username: data[index].username,
 				}),
 			})),
@@ -140,7 +147,7 @@ describe("AddressRow", () => {
 		const { asFragment, container } = render(
 			<table>
 				<tbody>
-					<AddressRow index={0} maxVotes={10} wallet={wallet} />
+					<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
 				</tbody>
 			</table>,
 		);

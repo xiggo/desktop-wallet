@@ -1,4 +1,5 @@
 import React from "react";
+import { Size } from "types";
 import { render } from "utils/testing-library";
 
 import { Avatar } from "./Avatar";
@@ -42,7 +43,7 @@ describe("Avatar", () => {
 	});
 
 	it.each(["xs", "sm", "lg", "xl"])("should render with size", (size) => {
-		const { getByTestId, asFragment } = render(<Avatar address="abc" size={size} />);
+		const { getByTestId, asFragment } = render(<Avatar address="abc" size={size as Size} />);
 
 		expect(getByTestId("Avatar")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();

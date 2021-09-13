@@ -79,7 +79,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                       class="flex items-center"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -411,7 +411,7 @@ exports[`Add Participant should fail to find 1`] = `
                       class="flex items-center"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -748,7 +748,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                       class="flex items-center"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -852,7 +852,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                           class="flex items-center space-x-2 whitespace-nowrap"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0 flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0 flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -1137,7 +1137,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                       class="flex items-center"
                     >
                       <div
-                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0"
+                        class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0"
                         data-testid="Avatar"
                       >
                         <div
@@ -2168,7 +2168,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           class="flex items-center space-x-2 whitespace-nowrap"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0 flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0 flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div
@@ -2219,7 +2219,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                           class="flex items-center space-x-2 whitespace-nowrap"
                         >
                           <div
-                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 iypNVH flex-shrink-0 flex-shrink-0"
+                            class="Avatar__AvatarWrapper-sc-18vw8a4-0 dNqA-DA flex-shrink-0 flex-shrink-0"
                             data-testid="Avatar"
                           >
                             <div

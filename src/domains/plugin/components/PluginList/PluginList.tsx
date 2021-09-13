@@ -21,6 +21,7 @@ interface PluginListProperties {
 	onInstall: any;
 	onLaunch?: (plugin: any) => void;
 	onUpdate?: (plugin: any) => void;
+	isCompact?: boolean;
 }
 
 export const PluginList = ({
@@ -38,6 +39,7 @@ export const PluginList = ({
 	onInstall,
 	onLaunch,
 	onUpdate,
+	isCompact = false,
 }: PluginListProperties) => {
 	const { t } = useTranslation();
 
@@ -120,6 +122,7 @@ export const PluginList = ({
 						isUpdating={plugin && updatingStats?.[plugin.id]?.percent !== undefined}
 						updatingProgress={plugin && updatingStats?.[plugin.id]?.percent}
 						showCategory={showCategory}
+						isCompact={isCompact}
 					/>
 				)}
 			</Table>

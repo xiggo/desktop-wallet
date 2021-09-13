@@ -13,7 +13,7 @@ exports[`ContactListItem should render 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -69,7 +69,7 @@ exports[`ContactListItem should render 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -194,7 +194,7 @@ exports[`ContactListItem should render as delegate 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -250,7 +250,7 @@ exports[`ContactListItem should render as delegate 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -375,7 +375,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -431,7 +431,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -577,7 +577,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -723,7 +723,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -848,7 +848,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -904,7 +904,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1050,7 +1050,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1196,7 +1196,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1321,7 +1321,7 @@ exports[`ContactListItem should render with one option 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1377,7 +1377,7 @@ exports[`ContactListItem should render with one option 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1508,7 +1508,7 @@ exports[`ContactListItem should render with one option 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -1639,7 +1639,7 @@ exports[`ContactListItem should render with one option 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0"
               data-testid="Avatar"
             >
               <div

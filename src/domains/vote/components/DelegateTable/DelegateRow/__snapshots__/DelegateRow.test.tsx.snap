@@ -13,7 +13,7 @@ exports[`DelegateRow should emit action on select button 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -103,7 +103,7 @@ exports[`DelegateRow should render 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -193,7 +193,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -327,7 +327,7 @@ exports[`DelegateRow should render the selected delegate 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -417,7 +417,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -498,7 +498,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -579,7 +579,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -672,7 +672,7 @@ exports[`DelegateRow should render the unselected vote 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div
@@ -762,7 +762,7 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
           >
             <div
-              class="Avatar__AvatarWrapper-sc-18vw8a4-0 hqwBQL -ml-0.5 flex-shrink-0"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
               data-testid="Avatar"
             >
               <div

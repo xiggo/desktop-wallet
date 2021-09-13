@@ -12,18 +12,20 @@ describe("NetworkIcon", () => {
 		network = availableNetworksMock[0];
 	});
 
-	it("should render", () => {
-		const { getByTestId } = render(<NetworkIcon network={network} />, {});
+	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
+		const { asFragment } = render(<NetworkIcon network={network} size="lg" isCompact={isCompact} />, {});
 
-		expect(getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
+		expect(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
 			"aria-label",
 			network.displayName(),
 		);
-		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeTruthy();
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with tooltip in the dark mode", () => {
-		render(<NetworkIcon network={network} tooltipDarkTheme />, {});
+		render(<NetworkIcon network={network} size="lg" tooltipDarkTheme />, {});
 
 		act(() => {
 			fireEvent.mouseEnter(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
@@ -35,22 +37,22 @@ describe("NetworkIcon", () => {
 	it("should render with test network", () => {
 		network = availableNetworksMock[1];
 
-		const { getByTestId } = render(<NetworkIcon network={network} />, {});
+		render(<NetworkIcon size="lg" network={network} />, {});
 
-		expect(getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
+		expect(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
 			"aria-label",
 			network.displayName(),
 		);
-		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeTruthy();
 	});
 
 	it("should render network with custom classname", () => {
-		const { getByTestId } = render(<NetworkIcon network={network} className="test" />, {});
+		render(<NetworkIcon size="lg" network={network} className="test" />, {});
 
-		expect(getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
+		expect(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`)).toHaveAttribute(
 			"aria-label",
 			network.displayName(),
 		);
-		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeTruthy();
 	});
 });
