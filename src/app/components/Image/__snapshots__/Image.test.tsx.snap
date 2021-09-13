@@ -17,3 +17,12 @@ exports[`Image should render with domain 1`] = `
   </svg>
 </DocumentFragment>
 `;
+
+exports[`Image should render with string 1`] = `
+<DocumentFragment>
+  <img
+    alt=""
+    src="welcome-modal-step-1-banner-dark-green.png"
+  />
+</DocumentFragment>
+`;

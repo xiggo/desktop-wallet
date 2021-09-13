@@ -42,13 +42,6 @@ export const translations: { [key: string]: any } = {
 			UPDATE: "Update",
 		},
 	},
-	MODAL_PROFILE_CREATED: {
-		DESCRIPTION_1: "If you are new to the Payvo Wallet, view our tutorial to get started.",
-		DESCRIPTION_2: "If not, you can skip the tutorial to go directly to your portfolio.",
-		SKIP_TUTORIAL: "Skip Tutorial",
-		START_TUTORIAL: "Start Tutorial",
-		TITLE: "Profile Created!",
-	},
 	MODAL_RESET_PROFILE: {
 		DESCRIPTION:
 			"By performing this action, all of your Profile settings will be restored to default. This won't delete your wallets or plugins. This action cannot be undone. Do you want to reset your settings?",
@@ -65,6 +58,19 @@ export const translations: { [key: string]: any } = {
 		MAX_ATTEMPTS_ERROR:
 			"Maximum sign in attempts reached - please wait {{remainingTime}} seconds before trying again.",
 		TITLE: "Sign In",
+	},
+	MODAL_WELCOME: {
+		DESCRIPTION_STEP_1:
+			"Start a quick tour to learn how to get the most out of the Payvo Wallet, or skip it to go directly to your profile.",
+		DESCRIPTION_STEP_2:
+			"Create or import existing wallets from a broad range of assets and secure them using industry-standard encryption.",
+		DESCRIPTION_STEP_3:
+			"Payvo lets you extend your wallet’s functionality with a growing collection of Games, Utilities and more.",
+		DESCRIPTION_STEP_4: "With Payvo, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
+		DESCRIPTION_STEP_5:
+			"Customize or search your news feed to view the latest updates on your favorite cryptoassets.",
+		DONT_SHOW_CHECKBOX_LABEL: "Don't show this quick tour again.",
+		TITLE: "Welcome to Payvo Wallet",
 	},
 	PAGE_CREATE_PROFILE: {
 		DESCRIPTION: "Create a new Profile below.",

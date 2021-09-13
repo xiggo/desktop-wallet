@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DotNavigation should render 1`] = `
+<DocumentFragment>
+  <ul
+    class="DotNavigation__DotNavigationWrapper-sc-q7l2tr-1 gHGuPD"
+    data-testid="DotNavigation"
+  >
+    <li
+      class="DotNavigation__StepStyled-sc-q7l2tr-0 fqUZJl"
+      data-testid="DotNavigation-Step-0"
+    />
+    <li
+      class="DotNavigation__StepStyled-sc-q7l2tr-0 fWovlT"
+      data-testid="DotNavigation-Step-1"
+    />
+  </ul>
+</DocumentFragment>
+`;

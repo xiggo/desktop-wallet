@@ -121,38 +121,7 @@ describe("Dashboard", () => {
 			{ timeout: 4000 },
 		);
 
-		expect(getByText(profileTranslations.MODAL_PROFILE_CREATED.TITLE)).toBeInTheDocument();
-
-		mockHasCompletedTutorial.mockRestore();
-	});
-
-	it("should able to skip introductory tutorial", async () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
-		const { getByText, queryByText, getByTestId } = renderWithRouter(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				routes: [dashboardURL],
-				withProfileSynchronizer: true,
-			},
-		);
-
-		await waitFor(
-			() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(3),
-			{ timeout: 4000 },
-		);
-
-		await waitFor(() => expect(getByText(profileTranslations.MODAL_PROFILE_CREATED.TITLE)).toBeInTheDocument());
-
-		act(() => {
-			fireEvent.click(getByText(profileTranslations.MODAL_PROFILE_CREATED.SKIP_TUTORIAL));
-		});
-
-		await waitFor(() =>
-			expect(queryByText(profileTranslations.MODAL_PROFILE_CREATED.TITLE)).not.toBeInTheDocument(),
-		);
+		expect(getByText(profileTranslations.MODAL_WELCOME.TITLE)).toBeInTheDocument();
 
 		mockHasCompletedTutorial.mockRestore();
 	});

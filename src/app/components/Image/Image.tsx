@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import { images } from "app/assets/images";
 import { useActiveProfile } from "app/hooks";
+import { useAccentColor } from "app/hooks/use-accent-color";
 import React from "react";
 import { shouldUseDarkColors } from "utils/electron-utils";
 
@@ -11,6 +12,8 @@ type Properties = {
 
 export const Image = ({ name, domain, ...properties }: Properties) => {
 	const [imageName, setImageName] = React.useState("");
+	const { getCurrentAccentColor } = useAccentColor();
+	const currentAccentColor = getCurrentAccentColor();
 
 	let profile: Contracts.IProfile | undefined;
 	try {
@@ -29,15 +32,16 @@ export const Image = ({ name, domain, ...properties }: Properties) => {
 			imageName = `${imageName}Light`;
 		}
 
-		// @TODO: get colour scheme from profile settings once appearance tab is implemented
-		let theme = "green";
-		theme = theme.charAt(0).toUpperCase() + theme.slice(1);
+		const theme: string = currentAccentColor.charAt(0).toUpperCase() + currentAccentColor.slice(1);
 
 		setImageName(`${imageName}${theme}`);
-	}, [name, profile]);
+	}, [name, profile, currentAccentColor]);
 
-	// @ts-ignore
-	const Image = images[domain][imageName] || images[domain][name];
+	const Image = (images as any)[domain][imageName] || (images as any)[domain][name];
+
+	if (typeof Image === "string") {
+		return <img src={Image} alt="" {...(properties as React.ImgHTMLAttributes<any>)} />;
+	}
 
 	return Image ? <Image {...properties} /> : null;
 };

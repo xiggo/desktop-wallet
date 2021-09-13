@@ -24,4 +24,11 @@ describe("Image", () => {
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should render with string", () => {
+		const { container, asFragment } = render(<Image name="WelcomeModalStep1" domain="profile" />);
+
+		expect(container).toBeTruthy();
+		expect(asFragment()).toMatchSnapshot();
+	});
 });

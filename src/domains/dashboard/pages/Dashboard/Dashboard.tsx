@@ -4,8 +4,7 @@ import { Page, Section } from "app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { Wallets } from "domains/dashboard/components/Wallets";
-import { useTutorial } from "domains/dashboard/hooks";
-import { ProfileCreated } from "domains/profile/components/ProfileCreated";
+import { WelcomeModal } from "domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "domains/transaction/components/TransactionDetailModal";
 import { TransactionTable } from "domains/transaction/components/TransactionTable";
 import React, { useState } from "react";
@@ -19,7 +18,6 @@ export const Dashboard = () => {
 
 	const { profileIsSyncing } = useConfiguration();
 	const { env } = useEnvironmentContext();
-	const { showTutorial, startTutorial, skipTutorial } = useTutorial(env, activeProfile);
 
 	const profileWalletsCount = activeProfile.wallets().count();
 	const showTransactions = activeProfile.appearance().get("dashboardTransactionHistory");
@@ -67,12 +65,7 @@ export const Dashboard = () => {
 				)}
 			</Page>
 
-			<ProfileCreated
-				isOpen={showTutorial}
-				onStart={startTutorial}
-				onClose={skipTutorial}
-				onSkip={skipTutorial}
-			/>
+			<WelcomeModal profile={activeProfile} environment={env} />
 
 			{transactionModalItem && (
 				<TransactionDetailModal
