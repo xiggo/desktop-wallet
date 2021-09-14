@@ -100,7 +100,7 @@
 		"@payvo/helpers": "^1.1.1",
 		"@payvo/intl": "^1.0.1",
 		"@payvo/news": "^1.0.2",
-		"@payvo/profiles": "^1.4.1",
+		"@payvo/profiles": "^1.4.3",
 		"@payvo/sdk": "^1.7.2",
 		"@payvo/sdk-ada": "^1.7.2",
 		"@payvo/sdk-ark": "^1.7.2",
