@@ -68,6 +68,27 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		</Tooltip>
 	);
 
+	const renderRestOfVotes = (restOfVotes: number) => {
+		const rest = (
+			<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-600">
+				+{restOfVotes}
+			</span>
+		);
+
+		if (isCompact) {
+			return <div className="pl-3">{rest}</div>;
+		}
+
+		return (
+			<Circle
+				size="lg"
+				className="relative bg-theme-background border-theme-secondary-900 dark:border-theme-secondary-600"
+			>
+				{rest}
+			</Circle>
+		);
+	};
+
 	const WalletIcon = ({ type }: { type: string }) => (
 		<Tooltip content={t(`COMMON.${type.toUpperCase()}`)}>
 			<div className={`inline-block p-1 ${getIconColor(type)}`}>
@@ -119,27 +140,24 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 							<span>{votes[0].wallet?.username()}</span>
 						</>
 					) : (
-						<div className="flex items-center h-11">
-							<div className={cn("flex", { "-space-x-1": isCompact }, { "-space-x-3": !isCompact })}>
-								{renderAvatar(first.wallet!.address(), first.wallet!.username())}
+						<div
+							className={cn(
+								"flex items-center",
+								{ "-space-x-1": isCompact },
+								{ "-space-x-2": !isCompact },
+							)}
+						>
+							{renderAvatar(first.wallet!.address(), first.wallet!.username())}
 
-								{second && renderAvatar(second.wallet!.address(), second.wallet!.username())}
+							{second && renderAvatar(second.wallet!.address(), second.wallet!.username())}
 
-								{third && renderAvatar(third.wallet!.address(), third.wallet!.username())}
+							{third && renderAvatar(third.wallet!.address(), third.wallet!.username())}
 
-								{rest &&
-									rest.length === 1 &&
-									renderAvatar(rest[0].wallet!.address(), rest[0].wallet!.username())}
+							{rest &&
+								rest.length === 1 &&
+								renderAvatar(rest[0].wallet!.address(), rest[0].wallet!.username())}
 
-								{rest && rest.length > 1 && (
-									<Circle
-										size={isCompact ? "xs" : "lg"}
-										className="relative border-theme-text text-theme-text"
-									>
-										<span className="font-semibold">+{rest.length}</span>
-									</Circle>
-								)}
-							</div>
+							{rest && rest.length > 1 && renderRestOfVotes(rest.length)}
 						</div>
 					)
 				) : (

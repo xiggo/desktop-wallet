@@ -1354,84 +1354,80 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-bold space-x-4"
           >
             <div
-              class="flex items-center h-11"
+              class="flex items-center -space-x-2"
             >
-              <div
-                class="flex -space-x-3"
+              <span
+                class="inline-block"
               >
-                <span
-                  class="inline-block"
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  data-testid="Avatar"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                    data-testid="Avatar"
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
+                    <img
+                      alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                      title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    />
                   </div>
-                </span>
-                <span
-                  class="inline-block"
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  data-testid="Avatar"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                    data-testid="Avatar"
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
-                        title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                      />
-                    </div>
+                    <img
+                      alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                      title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                    />
                   </div>
-                </span>
-                <span
-                  class="inline-block"
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  data-testid="Avatar"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                    data-testid="Avatar"
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                        title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                      />
-                    </div>
+                    <img
+                      alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                      title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                    />
                   </div>
-                </span>
-                <span
-                  class="inline-block"
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  data-testid="Avatar"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                    data-testid="Avatar"
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      />
-                    </div>
+                    <img
+                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                    />
                   </div>
-                </span>
-              </div>
+                </div>
+              </span>
             </div>
           </div>
         </td>
@@ -1582,74 +1578,70 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-bold space-x-4"
           >
             <div
-              class="flex items-center h-11"
+              class="flex items-center -space-x-2"
             >
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                  >
+                    <img
+                      alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                      title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    />
+                  </div>
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                  >
+                    <img
+                      alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                      title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                    />
+                  </div>
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                  >
+                    <img
+                      alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                      title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                    />
+                  </div>
+                </div>
+              </span>
               <div
-                class="flex -space-x-3"
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative bg-theme-background border-theme-secondary-900 dark:border-theme-secondary-600 ring-theme-background"
               >
                 <span
-                  class="inline-block"
+                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
                 >
-                  <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
+                  +2
                 </span>
-                <span
-                  class="inline-block"
-                >
-                  <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
-                        title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                      />
-                    </div>
-                  </div>
-                </span>
-                <span
-                  class="inline-block"
-                >
-                  <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                        title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                      />
-                    </div>
-                  </div>
-                </span>
-                <div
-                  class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-text text-theme-text ring-theme-background"
-                >
-                  <span
-                    class="font-semibold"
-                  >
-                    +2
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -1801,84 +1793,80 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-bold space-x-3"
           >
             <div
-              class="flex items-center h-11"
+              class="flex items-center -space-x-1"
             >
-              <div
-                class="flex -space-x-1"
+              <span
+                class="inline-block"
               >
-                <span
-                  class="inline-block"
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
+                  data-testid="Avatar"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
-                    data-testid="Avatar"
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
+                    <img
+                      alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                      title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    />
                   </div>
-                </span>
-                <span
-                  class="inline-block"
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
+                  data-testid="Avatar"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
-                    data-testid="Avatar"
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
-                        title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                      />
-                    </div>
+                    <img
+                      alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                      title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                    />
                   </div>
-                </span>
-                <span
-                  class="inline-block"
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
+                  data-testid="Avatar"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
-                    data-testid="Avatar"
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                        title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                      />
-                    </div>
+                    <img
+                      alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                      title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                    />
                   </div>
-                </span>
-                <span
-                  class="inline-block"
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
+                  data-testid="Avatar"
                 >
                   <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
-                    data-testid="Avatar"
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                   >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                      />
-                    </div>
+                    <img
+                      alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                      title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                    />
                   </div>
-                </span>
-              </div>
+                </div>
+              </span>
             </div>
           </div>
         </td>
@@ -2029,74 +2017,70 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI font-bold space-x-3"
           >
             <div
-              class="flex items-center h-11"
+              class="flex items-center -space-x-1"
             >
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                  >
+                    <img
+                      alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                      title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                    />
+                  </div>
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                  >
+                    <img
+                      alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                      title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                    />
+                  </div>
+                </div>
+              </span>
+              <span
+                class="inline-block"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                  >
+                    <img
+                      alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                      title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                    />
+                  </div>
+                </div>
+              </span>
               <div
-                class="flex -space-x-1"
+                class="pl-3"
               >
                 <span
-                  class="inline-block"
+                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
                 >
-                  <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
+                  +2
                 </span>
-                <span
-                  class="inline-block"
-                >
-                  <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
-                        title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                      />
-                    </div>
-                  </div>
-                </span>
-                <span
-                  class="inline-block"
-                >
-                  <div
-                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-2 ring-theme-background flex-shrink-0"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                        title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                      />
-                    </div>
-                  </div>
-                </span>
-                <div
-                  class="Circle__CircleWrapper-sc-d5u41q-0 ctbTNr relative border-theme-text text-theme-text ring-theme-background"
-                >
-                  <span
-                    class="font-semibold"
-                  >
-                    +2
-                  </span>
-                </div>
               </div>
             </div>
           </div>
