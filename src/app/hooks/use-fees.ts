@@ -35,7 +35,7 @@ export const useFees = (profile: ProfileContracts.IProfile) => {
 			return coin.transaction().multiSignature({
 				data: {
 					mandatoryKeys: [],
-					min: minParticipants,
+					min: +minParticipants,
 					numberOfSignatures: minParticipants,
 					optionalKeys: publicKeys,
 					publicKeys,
