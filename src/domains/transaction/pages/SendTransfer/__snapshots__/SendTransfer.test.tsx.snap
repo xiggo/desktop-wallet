@@ -6684,7 +6684,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
           class="flex items-center font-semibold"
         >
           <div
-            class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
+            class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
           >
             <div
               class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
@@ -7094,7 +7094,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
           class="flex items-center font-semibold"
         >
           <div
-            class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
+            class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
           >
             <div
               class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
@@ -7525,7 +7525,7 @@ exports[`SendTransfer should render summary step 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
+              class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
             >
               <div
                 class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"

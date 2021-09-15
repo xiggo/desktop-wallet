@@ -155,15 +155,17 @@ export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }
 
 						{publicKeys?.length && (
 							<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.MIN_SIGNATURES")}>
-								<span>{minParticipants} </span>
-								<span
-									data-testid="MultiSignatureSuccessful__publicKeys"
-									className="text-theme-secondary-700"
-								>
-									{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", {
-										length: publicKeys.length,
-									})}
-								</span>
+								<div>
+									<span>{minParticipants} </span>
+									<span
+										data-testid="MultiSignatureSuccessful__publicKeys"
+										className="text-theme-secondary-700"
+									>
+										{t("TRANSACTION.MULTISIGNATURE.OUT_OF_LENGTH", {
+											length: publicKeys.length,
+										})}
+									</span>
+								</div>
 							</TransactionDetail>
 						)}
 

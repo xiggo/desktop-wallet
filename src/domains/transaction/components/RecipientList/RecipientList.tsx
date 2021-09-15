@@ -7,7 +7,7 @@ import { Table } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { styled } from "twin.macro";
+import tw, { styled } from "twin.macro";
 
 import {
 	RecipientList as RecipientListProperties,
@@ -17,6 +17,7 @@ import { defaultStyle } from "./RecipientList.styles";
 
 const RecipientListWrapper = styled.div`
 	${defaultStyle}
+	${tw`w-full`}
 `;
 const RecipientListItem = ({
 	address,

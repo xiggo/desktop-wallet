@@ -2683,7 +2683,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 hRAnZw"
+                            class="RecipientList__RecipientListWrapper-sc-16fvbk8-0 bCfwoA"
                           >
                             <div
                               class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
