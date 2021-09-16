@@ -1,8 +1,7 @@
 import { isNil } from "@arkecosystem/utils";
 import { Contracts, DTO } from "@payvo/profiles";
-import { Amount, AmountCrypto } from "app/components/Amount";
+import { Amount, AmountLabel } from "app/components/Amount";
 import { formatCrypto, formatFiat, getDecimalsByTicker } from "app/components/Amount/Amount.helpers";
-import { Label } from "app/components/Label";
 import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -65,11 +64,7 @@ const BaseTransactionRowAmount: React.FC<TransactionRowProperties> = ({
 	isTestNetwork,
 }: TransactionRowProperties) => {
 	const isNegative = total !== 0 && isSent;
-	const TransactionAmount = (
-		<Label color={isSent ? "danger" : "success"} className="whitespace-nowrap">
-			<AmountCrypto showSign ticker={wallet.currency()} value={total} isNegative={isNegative} />
-		</Label>
-	);
+	const TransactionAmount = <AmountLabel isNegative={isNegative} value={total} ticker={wallet.currency()} />;
 
 	if (!exchangeCurrency || isNil(convertedTotal)) {
 		return TransactionAmount;

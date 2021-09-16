@@ -226,15 +226,19 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 1 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 1 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -302,15 +306,19 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 20 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 20 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -378,15 +386,19 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 0.0000001 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 0.0000001 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -440,7 +452,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
             class="relative space-y-4"
           >
             <h2
-              class="mb-0 text-3xl font-bold"
+              class="mb-0 text-2xl font-bold"
             >
               Wallet Update 2.5.6
             </h2>
@@ -727,15 +739,19 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 1 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 1 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -803,15 +819,19 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 20 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 20 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -879,15 +899,19 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 0.0000001 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 0.0000001 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -1132,15 +1156,19 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 1 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 1 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -1208,15 +1236,19 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 20 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 20 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -1284,15 +1316,19 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 0.0000001 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 0.0000001 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -1346,7 +1382,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
             class="relative space-y-4"
           >
             <h2
-              class="mb-0 text-3xl font-bold"
+              class="mb-0 text-2xl font-bold"
             >
               Transfer
             </h2>
@@ -1915,15 +1951,19 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 1 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 1 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -1991,15 +2031,19 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 20 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 20 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -2067,15 +2111,19 @@ exports[`Notifications should open and close transaction details modal 2`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 0.0000001 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 0.0000001 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -2320,15 +2368,19 @@ exports[`Notifications should open and close wallet update notification modal 1`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 1 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 1 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -2396,15 +2448,19 @@ exports[`Notifications should open and close wallet update notification modal 1`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 20 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 20 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -2472,15 +2528,19 @@ exports[`Notifications should open and close wallet update notification modal 1`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 0.0000001 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 0.0000001 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -2534,7 +2594,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
             class="relative space-y-4"
           >
             <h2
-              class="mb-0 text-3xl font-bold"
+              class="mb-0 text-2xl font-bold"
             >
               Wallet Update 2.5.6
             </h2>
@@ -2821,15 +2881,19 @@ exports[`Notifications should open and close wallet update notification modal 2`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 1 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 1 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -2897,15 +2961,19 @@ exports[`Notifications should open and close wallet update notification modal 2`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 20 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 20 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -2973,15 +3041,19 @@ exports[`Notifications should open and close wallet update notification modal 2`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 0.0000001 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 0.0000001 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -3226,15 +3298,19 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 1 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 1 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -3302,15 +3378,19 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 20 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 20 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>
@@ -3378,15 +3458,19 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                                class="Label-sc-4akkzw-0 fSJwcq"
                                 color="success"
                               >
-                                <span
-                                  class="whitespace-nowrap"
-                                  data-testid="AmountCrypto"
+                                <div
+                                  class="flex space-x-1"
                                 >
-                                  + 0.0000001 DARK
-                                </span>
+                                  <span
+                                    class="whitespace-nowrap"
+                                    data-testid="AmountCrypto"
+                                  >
+                                    + 0.0000001 DARK
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </td>

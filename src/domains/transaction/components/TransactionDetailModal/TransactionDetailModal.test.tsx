@@ -75,7 +75,6 @@ describe("TransactionDetailModal", () => {
 						type: () => "transfer",
 					}}
 				/>
-				,
 			</Route>,
 			{
 				history,
@@ -332,6 +331,28 @@ describe("TransactionDetailModal", () => {
 					}}
 				/>
 				,
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render an unlock tokens modal", () => {
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionDetailModal
+					isOpen={true}
+					transactionItem={{
+						...TransactionFixture,
+						isTransfer: () => false,
+						isUnlockToken: () => true,
+						type: () => "unlockToken",
+					}}
+				/>
 			</Route>,
 			{
 				history,

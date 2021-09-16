@@ -89,7 +89,7 @@ const ModalContent = (properties: ModalContentProperties) => (
 			)}
 
 			{!properties.banner && properties.title && (
-				<h2 className={cs("mb-0 text-3xl font-bold", properties.titleClass)}>{properties.title}</h2>
+				<h2 className={cs("mb-0 text-2xl font-bold", properties.titleClass)}>{properties.title}</h2>
 			)}
 
 			<div className="flex-1">

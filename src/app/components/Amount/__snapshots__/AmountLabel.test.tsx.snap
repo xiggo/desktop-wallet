@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AmountLabel should render 1`] = `
+<DocumentFragment>
+  <div
+    class="Label-sc-4akkzw-0 fSJwcq"
+    color="success"
+  >
+    <div
+      class="flex space-x-1"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="AmountCrypto"
+      >
+        + 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render negative 1`] = `
+<DocumentFragment>
+  <div
+    class="Label-sc-4akkzw-0 gOcLKd"
+    color="danger"
+  >
+    <div
+      class="flex space-x-1"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="AmountCrypto"
+      >
+        - 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render with hint 1`] = `
+<DocumentFragment>
+  <div
+    class="Label-sc-4akkzw-0 fSJwcq"
+    color="success"
+  >
+    <div
+      class="flex space-x-1"
+    >
+      <div
+        class="flex items-center -ml-1.5 px-2 bg-theme-success-200 dark:bg-theme-success-600"
+        data-testid="AmountLabel__hint"
+      >
+        <div
+          class="sc-bdnxRM AkeAK dark:text-white"
+          height="10"
+          width="10"
+        >
+          <svg>
+            hint-small.svg
+          </svg>
+        </div>
+      </div>
+      <span
+        class="whitespace-nowrap"
+        data-testid="AmountCrypto"
+      >
+        + 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render zero 1`] = `
+<DocumentFragment>
+  <div
+    class="Label-sc-4akkzw-0 jAUPwt"
+    color="neutral"
+  >
+    <div
+      class="flex space-x-1"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="AmountCrypto"
+      >
+        0 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

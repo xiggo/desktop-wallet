@@ -1,0 +1,66 @@
+import { Contracts } from "@payvo/profiles";
+import { screen } from "@testing-library/react";
+import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
+import { buildTranslations } from "app/i18n/helpers";
+import React from "react";
+import { FormProvider, useForm } from "react-hook-form";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
+
+import { UnlockTokensFormState } from "../../UnlockTokens.contracts";
+import { UnlockTokensReview } from "./UnlockTokensReview";
+
+const translations = buildTranslations();
+
+describe("UnlockTokensReview", () => {
+	let profile: Contracts.IProfile;
+	let wallet: Contracts.IReadWriteWallet;
+
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+		wallet = profile.wallets().first();
+
+		jest.spyOn(wallet, "currency").mockReturnValue("LSK");
+		jest.spyOn(wallet, "alias").mockReturnValue("LSK Wallet 1");
+	});
+
+	it("should render", () => {
+		const onBack = jest.fn();
+		const onConfirm = jest.fn();
+
+		const { result } = renderHook(() =>
+			useForm<UnlockTokensFormState>({
+				defaultValues: {
+					amount: 10,
+					fee: 5,
+					selectedObjects: [],
+				},
+				mode: "onChange",
+			}),
+		);
+
+		result.current.register("amount");
+		result.current.register("fee");
+
+		const { asFragment } = render(
+			<FormProvider {...result.current}>
+				<UnlockTokensReview onBack={onBack} onConfirm={onConfirm} wallet={wallet} profile={profile} />
+			</FormProvider>,
+		);
+
+		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
+
+		expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("+ 10 LSK");
+		expect(screen.getAllByTestId("AmountCrypto")[1]).toHaveTextContent("5 LSK");
+
+		userEvent.click(screen.getByText(translations.COMMON.BACK));
+
+		expect(onBack).toHaveBeenCalled();
+
+		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
+
+		expect(onConfirm).toHaveBeenCalled();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+});

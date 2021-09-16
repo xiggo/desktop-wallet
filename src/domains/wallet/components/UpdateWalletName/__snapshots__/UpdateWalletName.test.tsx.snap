@@ -41,7 +41,7 @@ exports[`UpdateWalletName should render 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Wallet Name
           </h2>
@@ -164,7 +164,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Wallet Name
           </h2>
@@ -305,7 +305,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Wallet Name
           </h2>
@@ -446,7 +446,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Wallet Name
           </h2>
@@ -587,7 +587,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Wallet Name
           </h2>
@@ -728,7 +728,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Wallet Name
           </h2>
@@ -869,7 +869,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Wallet Name
           </h2>

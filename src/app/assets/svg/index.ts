@@ -93,6 +93,7 @@ export const SvgCollection: any = {
 	List,
 	LoaderLogo,
 	Lock,
+	LockOpen: TransactionIcons.UnlockToken,
 	MagnifyingGlass,
 	MagnifyingGlassId,
 	Pencil,

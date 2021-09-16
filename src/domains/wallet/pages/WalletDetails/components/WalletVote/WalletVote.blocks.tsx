@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import { AmountCrypto } from "app/components/Amount";
 import { Circle } from "app/components/Circle";
 import { Icon } from "app/components/Icon";
 import { Link } from "app/components/Link";
@@ -13,6 +14,7 @@ interface EmptyVotesProperties {
 }
 
 interface VotesProperties {
+	wallet: Contracts.IReadWriteWallet;
 	votes: Contracts.VoteRegistryItem[];
 	activeDelegates: number;
 	maxVotes: number;
@@ -63,7 +65,7 @@ const EmptyVotes = ({ maxVotes }: EmptyVotesProperties) => {
 	);
 };
 
-const Votes = ({ votes, activeDelegates, maxVotes, onButtonClick }: VotesProperties) => {
+const Votes = ({ wallet, votes, activeDelegates, maxVotes, onButtonClick }: VotesProperties) => {
 	const { t } = useTranslation();
 
 	const delegate = votes[0].wallet!;
@@ -212,6 +214,24 @@ const Votes = ({ votes, activeDelegates, maxVotes, onButtonClick }: VotesPropert
 							<span className="text-theme-secondary-500 dark:text-theme-secondary-700">/{maxVotes}</span>
 						</span>
 					</div>
+				)}
+
+				{wallet.network().usesLockedBalance() && (
+					<>
+						<div className="flex flex-col justify-between pl-6 ml-6 font-semibold border-l border-theme-secondary-300 dark:border-theme-secondary-800">
+							<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.LOCKED_VOTES")}
+							</span>
+							<AmountCrypto value={wallet.balance("lockedVotes")} ticker={wallet.currency()} />
+						</div>
+
+						<div className="flex flex-col justify-between pl-6 ml-6 font-semibold border-l border-theme-secondary-300 dark:border-theme-secondary-800">
+							<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.LOCKED_UNVOTES")}
+							</span>
+							<AmountCrypto value={wallet.balance("lockedUnvotes")} ticker={wallet.currency()} />
+						</div>
+					</>
 				)}
 			</div>
 

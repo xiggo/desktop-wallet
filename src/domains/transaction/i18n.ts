@@ -306,11 +306,35 @@ export const translations: { [key: string]: any } = {
 		MULTI_SIGNATURE: "Multisignature",
 		SECOND_SIGNATURE: "Second Signature",
 		TRANSFER: "Transfer",
+		UNLOCK_TOKEN: "Unlock Token",
 		UNVOTE: "Unvote",
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Vote / Unvote",
 	},
 	TYPE: "Type",
+
+	UNLOCK_TOKENS: {
+		EMPTY_MESSAGE: "Your wallet doesn’t have any locked balance.",
+		ERROR_MESSAGE: "Unable to retrieve unlockable balances. Click <RetryLink/> to retry.",
+		INSUFFICIENT_BALANCE_HINT: "You do not have enough {{currency}} to complete this transaction.",
+		LOCKED: "Locked",
+		LOCKED_BALANCE: "Locked Balance",
+		REVIEW: {
+			TITLE: "Unlock Balance",
+		},
+		SELECT: {
+			DESCRIPTION:
+				"View the details of your locked balances and waiting periods within the table below. Select the balances you wish to unlock once the waiting period has expired.",
+			TITLE: "Locked Balance",
+		},
+		SUMMARY: {
+			DESCRIPTION: "Your balance unlock transaction was successfully sent.",
+			TITLE: "Successfully Unlocked Balance",
+		},
+		UNLOCK: "Unlock",
+		UNLOCKABLE: "Unlockable",
+	},
+
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	VALIDATION: {

@@ -43,7 +43,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Delegate Vote
           </h2>
@@ -385,7 +385,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Delegate Vote
           </h2>
@@ -727,7 +727,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Delegate Vote
           </h2>

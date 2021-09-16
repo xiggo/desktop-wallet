@@ -25,6 +25,8 @@ const getColors = (name: string, variant?: string): any => {
 			return tw`text-theme-success-600 border-theme-success-200 dark:border-theme-success-600`;
 		case "danger":
 			return tw`text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400`;
+		case "neutral":
+			return tw`text-theme-secondary-900 border-theme-secondary-200 dark:text-theme-secondary-600 dark:border-theme-secondary-600`;
 		default:
 			// warning
 			return tw`text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700`;

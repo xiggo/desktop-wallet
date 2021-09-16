@@ -84,7 +84,7 @@ exports[`Label should render danger color 1`] = `
 exports[`Label should render neutral color 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 ccXYlh"
+    class="Label-sc-4akkzw-0 jAUPwt"
     color="neutral"
   />
 </div>

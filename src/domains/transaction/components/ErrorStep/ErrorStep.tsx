@@ -40,7 +40,7 @@ export const ErrorStep = ({ title, onBack, onRepeat, isRepeatDisabled = false, e
 				)}
 			</div>
 
-			<div className="flex">
+			<div className="flex space-x-3">
 				{errorMessage && (
 					<Clipboard variant="button" data={errorMessage}>
 						<Icon name="Copy" />
@@ -48,14 +48,11 @@ export const ErrorStep = ({ title, onBack, onRepeat, isRepeatDisabled = false, e
 					</Clipboard>
 				)}
 
-				<Button
-					className="ml-auto mr-3"
-					onClick={() => onBack?.()}
-					data-testid="ErrorStep__wallet-button"
-					variant="secondary"
-				>
-					{t("COMMON.BACK_TO_WALLET")}
-				</Button>
+				{!!onBack && (
+					<Button onClick={onBack} data-testid="ErrorStep__wallet-button" variant="secondary">
+						{t("COMMON.BACK_TO_WALLET")}
+					</Button>
+				)}
 
 				<Button data-testid="ErrorStep__repeat-button" disabled={isRepeatDisabled} onClick={() => onRepeat?.()}>
 					{t("COMMON.RETRY")}

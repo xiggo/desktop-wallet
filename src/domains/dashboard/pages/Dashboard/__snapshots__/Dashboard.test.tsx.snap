@@ -1827,15 +1827,19 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                            class="Label-sc-4akkzw-0 fSJwcq"
                             color="success"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-1"
                             >
-                              + 1 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                + 1 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1983,15 +1987,19 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                            class="Label-sc-4akkzw-0 fSJwcq"
                             color="success"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-1"
                             >
-                              + 20 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                + 20 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2139,15 +2147,19 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                            class="Label-sc-4akkzw-0 fSJwcq"
                             color="success"
                           >
-                            <span
-                              class="whitespace-nowrap"
-                              data-testid="AmountCrypto"
+                            <div
+                              class="flex space-x-1"
                             >
-                              + 0.0000001 DARK
-                            </span>
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="AmountCrypto"
+                              >
+                                + 0.0000001 DARK
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>

@@ -16,9 +16,17 @@ interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
 	transaction?: DTO.ExtendedSignedTransactionData;
 	senderWallet?: Contracts.IReadWriteWallet;
+	title?: string;
+	description?: string;
 }
 
-export const TransactionSuccessful = ({ children, transaction, senderWallet }: TransactionSuccessfulProperties) => {
+export const TransactionSuccessful = ({
+	children,
+	transaction,
+	senderWallet,
+	title,
+	description,
+}: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
 	if (transaction?.isMultiSignatureRegistration() || transaction?.usesMultiSignature()) {
@@ -31,11 +39,11 @@ export const TransactionSuccessful = ({ children, transaction, senderWallet }: T
 
 	return (
 		<section data-testid="TransactionSuccessful" className="space-y-8">
-			<Header title={t("TRANSACTION.SUCCESS.TITLE")} />
+			<Header title={title ?? t("TRANSACTION.SUCCESS.TITLE")} />
 
 			<Image name="TransactionSuccessBanner" domain="transaction" className="w-full" />
 
-			<p className="text-theme-secondary-text">{t("TRANSACTION.SUCCESS.DESCRIPTION")}</p>
+			<p className="text-theme-secondary-text">{description ?? t("TRANSACTION.SUCCESS.DESCRIPTION")}</p>
 
 			<div>
 				{senderWallet && transaction && (

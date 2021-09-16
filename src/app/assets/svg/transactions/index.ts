@@ -10,6 +10,7 @@ import { ReactComponent as SecondSignature } from "./second-signature.svg";
 import { ReactComponent as Sent } from "./sent.svg";
 import { ReactComponent as Timelock } from "./timelock.svg";
 import { ReactComponent as Transfer } from "./transfer.svg";
+import { ReactComponent as UnlockToken } from "./unlock-token.svg";
 import { ReactComponent as Unvote } from "./unvote.svg";
 import { ReactComponent as Vote } from "./vote.svg";
 import { ReactComponent as VoteCombination } from "./vote-combination.svg";
@@ -27,6 +28,7 @@ export const TransactionIcons: any = {
 	Sent,
 	Timelock,
 	Transfer,
+	UnlockToken,
 	Unvote,
 	Vote,
 	VoteCombination,

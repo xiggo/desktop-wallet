@@ -28,7 +28,7 @@ describe("TransactionAmount", () => {
 	});
 
 	it.each([false, true])("should render label for multiple recipients", (isMultiPayment) => {
-		const { container } = render(<TransactionAmount amount={1} currency="DARK" isMultiPayment={isMultiPayment} />);
+		const { container } = render(<TransactionAmount amount={1} currency="DARK" isTotalAmount={isMultiPayment} />);
 
 		expect(container).toHaveTextContent(
 			isMultiPayment ? transactionTranslations.TOTAL_AMOUNT : transactionTranslations.AMOUNT,
@@ -44,14 +44,14 @@ describe("TransactionAmount", () => {
 
 	it.each(["Sent", "Received"])("should render info indicator for '%s'", (type) => {
 		render(
-			<TransactionAmount amount={2} returnedAmount={1} isMultiPayment currency="DARK" isSent={type === "Sent"} />,
+			<TransactionAmount amount={2} returnedAmount={1} isTotalAmount currency="DARK" isSent={type === "Sent"} />,
 		);
 
-		expect(screen.getByTestId("TransactionAmount__Hint_Amount")).toBeInTheDocument();
+		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 		expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
 
 		act(() => {
-			fireEvent.mouseEnter(screen.getByTestId("TransactionAmount__Hint_Amount"));
+			fireEvent.mouseEnter(screen.getByTestId("AmountLabel__hint"));
 		});
 
 		expect(screen.getByText("Including 1 DARK sent to itself")).toBeInTheDocument();

@@ -99,6 +99,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		multiSignature: "Multisignature",
 		secondSignature: "SecondSignature",
 		transfer: "Transfer",
+		unlockToken: "UnlockToken",
 		unvote: "Unvote",
 		vote: "Vote",
 		voteCombination: "VoteCombination",
@@ -126,6 +127,7 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		secondSignature: t("TRANSACTION.TRANSACTION_TYPES.SECOND_SIGNATURE"),
 		// core
 		transfer: t("TRANSACTION.TRANSACTION_TYPES.TRANSFER"),
+		unlockToken: t("TRANSACTION.TRANSACTION_TYPES.UNLOCK_TOKEN"),
 		unvote: t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
 		vote: t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
 		voteCombination: t("TRANSACTION.TRANSACTION_TYPES.VOTE_COMBINATION"),

@@ -361,15 +361,19 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -517,15 +521,19 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -673,15 +681,19 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -829,15 +841,19 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -985,15 +1001,19 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1141,15 +1161,19 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1297,15 +1321,19 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1453,15 +1481,19 @@ exports[`Transactions should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1860,15 +1892,19 @@ exports[`Transactions should hide view more button when there are no next pages 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2016,15 +2052,19 @@ exports[`Transactions should hide view more button when there are no next pages 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2172,15 +2212,19 @@ exports[`Transactions should hide view more button when there are no next pages 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2328,15 +2372,19 @@ exports[`Transactions should hide view more button when there are no next pages 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2724,15 +2772,19 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2880,15 +2932,19 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3036,15 +3092,19 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3192,15 +3252,19 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3588,15 +3652,19 @@ exports[`Transactions should render 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3744,15 +3812,19 @@ exports[`Transactions should render 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3900,15 +3972,19 @@ exports[`Transactions should render 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4056,15 +4132,19 @@ exports[`Transactions should render 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4464,15 +4544,19 @@ exports[`Transactions should render with custom title 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4620,15 +4704,19 @@ exports[`Transactions should render with custom title 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 400,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 400,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4776,15 +4864,19 @@ exports[`Transactions should render with custom title 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4932,15 +5024,19 @@ exports[`Transactions should render with custom title 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                    class="Label-sc-4akkzw-0 fSJwcq"
                     color="success"
                   >
-                    <span
-                      class="whitespace-nowrap"
-                      data-testid="AmountCrypto"
+                    <div
+                      class="flex space-x-1"
                     >
-                      + 50,000 DARK
-                    </span>
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="AmountCrypto"
+                      >
+                        + 50,000 DARK
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

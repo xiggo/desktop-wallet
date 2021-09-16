@@ -12,6 +12,7 @@ import { useEnvironmentContext } from "app/contexts";
 import { usePrevious, useWalletAlias } from "app/hooks";
 import cn from "classnames";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
+import { UnlockTokensModal } from "domains/transaction/components/UnlockTokens";
 import { DeleteWallet } from "domains/wallet/components/DeleteWallet";
 import { ReceiveFunds } from "domains/wallet/components/ReceiveFunds";
 import { SignMessage } from "domains/wallet/components/SignMessage";
@@ -68,6 +69,8 @@ export const WalletHeader = ({
 	});
 
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
+
+	const hasLockedBalance = wallet.network().usesLockedBalance() && !!wallet.balance("locked");
 
 	const handleStar = async () => {
 		wallet.toggleStarred();
@@ -222,12 +225,31 @@ export const WalletHeader = ({
 							)}
 						</div>
 
-						<Amount
-							value={wallet.balance()}
-							ticker={wallet.currency()}
-							data-testid="WalletHeader__balance"
-							className="text-lg font-semibold text-white"
-						/>
+						<div className="flex items-center">
+							<Amount
+								value={wallet.balance()}
+								ticker={wallet.currency()}
+								data-testid="WalletHeader__balance"
+								className="text-lg font-semibold text-white"
+							/>
+
+							{hasLockedBalance && (
+								<div className="flex items-baseline text-theme-secondary-700 ml-1 space-x-1">
+									<span className="text-lg font-semibold">/</span>
+									<div
+										className="flex items-center space-x-2"
+										data-testid="WalletHeader__balance-locked"
+									>
+										<Amount
+											value={wallet.balance("locked")}
+											ticker={wallet.currency()}
+											className="font-semibold text-sm"
+										/>
+										<Icon name="Lock" />
+									</div>
+								</div>
+							)}
+						</div>
 					</div>
 
 					<div className="flex items-center my-auto space-x-3">
@@ -282,6 +304,20 @@ export const WalletHeader = ({
 					>
 						{t("COMMON.SEND")}
 					</Button>
+
+					{hasLockedBalance && (
+						<Tooltip content={t("TRANSACTION.UNLOCK_TOKENS.LOCKED_BALANCE")} theme="dark">
+							<Button
+								variant="transparent"
+								size="icon"
+								className="text-white bg-theme-secondary-800 hover:bg-theme-primary-700 my-auto ml-3"
+								data-testid="WalletHeader__locked-balance-button"
+								onClick={() => setModal("unlockable-balances")}
+							>
+								<Icon name="Lock" size="lg" />
+							</Button>
+						</Tooltip>
+					)}
 
 					<div data-testid="WalletHeader__more-button" className="my-auto ml-3">
 						<Dropdown
@@ -342,6 +378,10 @@ export const WalletHeader = ({
 				onCancel={() => setModal(undefined)}
 				onDelete={handleDeleteWallet}
 			/>
+
+			{modal === "unlockable-balances" && (
+				<UnlockTokensModal profile={profile} wallet={wallet} onClose={() => setModal(undefined)} />
+			)}
 		</>
 	);
 };

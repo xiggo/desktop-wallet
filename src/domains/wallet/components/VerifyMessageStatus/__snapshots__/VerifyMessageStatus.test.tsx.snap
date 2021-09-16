@@ -41,7 +41,7 @@ exports[`VerifyMessageStatus should render verify message error 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Title
           </h2>
@@ -107,7 +107,7 @@ exports[`VerifyMessageStatus should render verify message success 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Title
           </h2>

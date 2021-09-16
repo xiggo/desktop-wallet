@@ -41,7 +41,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Select Account
           </h2>
@@ -438,7 +438,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Select Account
           </h2>
@@ -835,7 +835,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Select Account
           </h2>
@@ -1232,7 +1232,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Select Account
           </h2>
@@ -1683,7 +1683,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Select Account
           </h2>
@@ -2134,7 +2134,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Select Account
           </h2>

@@ -4725,15 +4725,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 20 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 20 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -4876,15 +4880,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 20.03499657 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 20.03499657 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -5027,15 +5035,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -5178,15 +5190,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -5329,15 +5345,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -5480,15 +5500,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -5631,15 +5655,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -5782,15 +5810,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -5933,15 +5965,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -6084,15 +6120,19 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 0.100001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 0.100001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -6368,15 +6408,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 20 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 20 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -6519,15 +6563,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 20.03499657 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 20.03499657 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -6670,15 +6718,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -6821,15 +6873,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -6972,15 +7028,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -7123,15 +7183,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -7274,15 +7338,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -7425,15 +7493,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -7576,15 +7648,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.0000001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.0000001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -7727,15 +7803,19 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 0.100001 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 0.100001 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>

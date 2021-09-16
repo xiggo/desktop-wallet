@@ -277,15 +277,19 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 1.1 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 1.1 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -583,15 +587,19 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 1.1 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 1.1 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -885,15 +893,19 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -1203,15 +1215,19 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -1543,15 +1559,19 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -1861,15 +1881,19 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -2201,15 +2225,19 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -2541,15 +2569,19 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -2881,15 +2913,19 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.1 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.1 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -3183,15 +3219,19 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 fSJwcq"
                   color="success"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    + 0.1 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      + 0.1 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -3485,15 +3525,19 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -3825,15 +3869,19 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>
@@ -4165,15 +4213,19 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap"
+                  class="Label-sc-4akkzw-0 gOcLKd"
                   color="danger"
                 >
-                  <span
-                    class="whitespace-nowrap"
-                    data-testid="AmountCrypto"
+                  <div
+                    class="flex space-x-1"
                   >
-                    - 15 DARK
-                  </span>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="AmountCrypto"
+                    >
+                      - 15 DARK
+                    </span>
+                  </div>
                 </div>
               </div>
             </td>

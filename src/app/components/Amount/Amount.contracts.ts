@@ -15,6 +15,13 @@ interface AmountProperties {
 	className?: string;
 }
 
+interface AmountLabelProperties {
+	isNegative: boolean;
+	value: number;
+	ticker: string;
+	hint?: string;
+}
+
 interface FormatParameters {
 	locale?: string;
 	value: number;
@@ -23,4 +30,4 @@ interface FormatParameters {
 
 export { DEFAULT_DECIMALS, DEFAULT_TICKER };
 
-export type { AmountProperties, CurrencyKey, FormatParameters };
+export type { AmountLabelProperties, AmountProperties, CurrencyKey, FormatParameters };

@@ -64,7 +64,7 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Mu
 				returnedAmount={returnedAmount}
 				currency={wallet.currency()}
 				exchangeCurrency={wallet.exchangeCurrency()}
-				isMultiPayment={true}
+				isTotalAmount={true}
 				isSent={transaction.isSent()}
 			/>
 

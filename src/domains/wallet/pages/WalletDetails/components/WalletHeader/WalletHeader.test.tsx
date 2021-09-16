@@ -1,5 +1,6 @@
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
+import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import * as useQRCodeHook from "domains/wallet/components/ReceiveFunds/hooks";
@@ -17,6 +18,7 @@ import {
 	waitFor,
 	within,
 } from "testing-library";
+import { getDefaultLedgerTransport } from "utils/testing-library";
 
 import { WalletHeader } from "./WalletHeader";
 
@@ -412,5 +414,35 @@ describe("WalletHeader", () => {
 		expect(() => getByTestId("WalletIcon__Multisignature")).toThrow();
 
 		multisigSpy.mockRestore();
+	});
+
+	it("should handle locked balance", async () => {
+		const usesLockedBalance = jest.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
+		const balance = jest.spyOn(wallet, "balance").mockReturnValue(10);
+		const unlockableBalances = jest
+			.spyOn(wallet.coin().client(), "unlockableBalances")
+			.mockResolvedValue({ objects: [] } as any);
+
+		const { asFragment } = render(
+			<LedgerProvider transport={getDefaultLedgerTransport()}>
+				<WalletHeader profile={profile} wallet={wallet} />
+			</LedgerProvider>,
+		);
+		await waitFor(() => expect(screen.getByText(wallet.address())).toBeTruthy());
+
+		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
+		expect(asFragment()).toMatchSnapshot();
+
+		userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
+
+		await waitFor(() => expect(screen.getByTestId("UnlockTokensModal")).toBeInTheDocument());
+
+		userEvent.click(screen.getByTestId("modal__close-btn"));
+
+		await waitFor(() => expect(() => screen.getByTestId("UnlockTokensModal")).toThrow());
+
+		usesLockedBalance.mockRestore();
+		balance.mockRestore();
+		unlockableBalances.mockRestore();
 	});
 });

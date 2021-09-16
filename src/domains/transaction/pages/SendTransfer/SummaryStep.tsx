@@ -37,7 +37,7 @@ export const SummaryStep = ({
 			<TransactionAmount
 				amount={transaction.amount()}
 				currency={senderWallet.currency()}
-				isMultiPayment={transaction.recipients().length > 1}
+				isTotalAmount={transaction.recipients().length > 1}
 				isSent={true}
 			/>
 

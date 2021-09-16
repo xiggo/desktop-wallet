@@ -54,7 +54,13 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 		}
 
 		return (
-			<Votes votes={votes} activeDelegates={activeDelegates} maxVotes={maxVotes} onButtonClick={onButtonClick} />
+			<Votes
+				wallet={wallet}
+				votes={votes}
+				activeDelegates={activeDelegates}
+				maxVotes={maxVotes}
+				onButtonClick={onButtonClick}
+			/>
 		);
 	};
 
@@ -67,6 +73,8 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 				disabled={
 					isLoading ||
 					wallet.balance() === 0 ||
+					(wallet.network().usesLockedBalance() &&
+						wallet.balance("available") < wallet.network().votesAmountStep()) ||
 					!wallet.hasBeenFullyRestored() ||
 					!wallet.hasSyncedWithNetwork()
 				}

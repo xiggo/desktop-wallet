@@ -43,7 +43,7 @@ exports[`TransferDetail should render a modal 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Transfer
           </h2>
@@ -424,7 +424,7 @@ exports[`TransferDetail should render as confirmed 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Transfer
           </h2>
@@ -807,7 +807,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Transfer
           </h2>
@@ -1188,7 +1188,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Transfer
           </h2>

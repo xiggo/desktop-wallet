@@ -210,6 +210,8 @@ export const translations: { [key: string]: any } = {
 			ACTIVE_plural: "All Active",
 			DELEGATE_STATUS: "Delegate Status",
 			EMPTY_DESCRIPTION: "You have not voted for a Delegate yet.",
+			LOCKED_UNVOTES: "Locked Unvotes",
+			LOCKED_VOTES: "Locked Votes",
 			MULTIVOTE: "Multivote",
 			NOT_FORGING: "Your delegate is currently not in a forging position",
 			NOT_FORGING_COUNT: "{{count}} of your delegates are currently not in a forging position",

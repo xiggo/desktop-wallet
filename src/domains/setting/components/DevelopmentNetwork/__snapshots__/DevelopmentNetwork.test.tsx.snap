@@ -43,7 +43,7 @@ exports[`DevelopmentNetwork should render a modal 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Development Network
           </h2>

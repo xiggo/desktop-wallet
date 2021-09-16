@@ -98,10 +98,10 @@ describe("MultiPaymentDetail", () => {
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
 
-		expect(screen.getByTestId("TransactionAmount__Hint_Amount")).toBeInTheDocument();
+		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
 		act(() => {
-			fireEvent.mouseEnter(screen.getByTestId("TransactionAmount__Hint_Amount"));
+			fireEvent.mouseEnter(screen.getByTestId("AmountLabel__hint"));
 		});
 
 		expect(screen.getByText("Including 99 ARK sent to itself")).toBeInTheDocument();

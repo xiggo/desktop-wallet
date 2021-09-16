@@ -43,7 +43,7 @@ exports[`WelcomeModal should render a modal if user hasnt completed the tutorial
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Welcome to Payvo Wallet
           </h2>
@@ -157,7 +157,7 @@ exports[`WelcomeModal should render a modal if user hasnt completed the tutorial
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Welcome to Payvo Wallet
           </h2>

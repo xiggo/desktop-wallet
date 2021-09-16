@@ -112,7 +112,7 @@ exports[`Import Profile - Processing import should enter password again 1`] = `
               class="relative space-y-4"
             >
               <h2
-                class="mb-0 text-3xl font-bold items-left"
+                class="mb-0 text-2xl font-bold items-left"
               >
                 Profile Password
               </h2>
@@ -393,7 +393,7 @@ exports[`Import Profile - Processing import should handle invalid password 1`] =
               class="relative space-y-4"
             >
               <h2
-                class="mb-0 text-3xl font-bold items-left"
+                class="mb-0 text-2xl font-bold items-left"
               >
                 Profile Password
               </h2>
@@ -638,7 +638,7 @@ exports[`Import Profile - Processing import should require password for password
               class="relative space-y-4"
             >
               <h2
-                class="mb-0 text-3xl font-bold items-left"
+                class="mb-0 text-2xl font-bold items-left"
               >
                 Profile Password
               </h2>

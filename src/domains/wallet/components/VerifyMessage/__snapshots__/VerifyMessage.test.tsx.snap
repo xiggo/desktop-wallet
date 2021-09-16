@@ -41,7 +41,7 @@ exports[`VerifyMessage should render 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Verify
           </h2>

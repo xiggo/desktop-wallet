@@ -13,7 +13,7 @@ import React, { useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-interface LedgerStates {
+export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
 	ledgerSupportedModels?: LedgerModel[];

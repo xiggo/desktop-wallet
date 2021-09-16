@@ -60,6 +60,25 @@ describe("WalletVote", () => {
 		balanceSpy.mockRestore();
 	});
 
+	it("should disable vote button when balance is less than votesAmountStep", async () => {
+		const usesLockedBalance = jest.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
+		const votesAmountStepSpy = jest.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
+		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(5);
+
+		const { asFragment, getByRole, getByTestId } = render(
+			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
+		);
+
+		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+
+		expect(getByRole("button")).toBeDisabled();
+		expect(asFragment()).toMatchSnapshot();
+
+		usesLockedBalance.mockRestore();
+		votesAmountStepSpy.mockRestore();
+		balanceSpy.mockRestore();
+	});
+
 	it("should handle wallet votes error", async () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockImplementation(() => {
 			throw new Error("delegate error");

@@ -43,7 +43,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Transfer
           </h2>
@@ -445,7 +445,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Transfer
           </h2>
@@ -676,7 +676,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                     >
                       <div
                         class="flex items-center -ml-1.5 px-2 bg-theme-danger-100 dark:bg-theme-danger-400"
-                        data-testid="TransactionAmount__Hint_Amount"
+                        data-testid="AmountLabel__hint"
                       >
                         <div
                           class="sc-bdnxRM AkeAK dark:text-white"
@@ -876,7 +876,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
           class="relative space-y-4"
         >
           <h2
-            class="mb-0 text-3xl font-bold"
+            class="mb-0 text-2xl font-bold"
           >
             Transfer
           </h2>

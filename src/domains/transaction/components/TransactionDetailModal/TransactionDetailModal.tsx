@@ -7,6 +7,7 @@ import { MultiPaymentDetail } from "domains/transaction/components/MultiPaymentD
 import { MultiSignatureRegistrationDetail } from "domains/transaction/components/MultiSignatureDetail";
 import { SecondSignatureDetail } from "domains/transaction/components/SecondSignatureDetail";
 import { TransferDetail } from "domains/transaction/components/TransferDetail";
+import { UnlockTokenDetail } from "domains/transaction/components/UnlockTokenDetail";
 import { VoteDetail } from "domains/transaction/components/VoteDetail";
 import React, { useMemo } from "react";
 
@@ -91,6 +92,9 @@ export const TransactionDetailModal = ({
 			break;
 		case "magistrate":
 			TransactionModal = LegacyMagistrateDetail;
+			break;
+		case "unlockToken":
+			TransactionModal = UnlockTokenDetail;
 			break;
 
 		default:
