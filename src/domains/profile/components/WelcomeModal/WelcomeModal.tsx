@@ -36,10 +36,15 @@ export const WelcomeModal = ({ environment, profile }: { environment: Environmen
 	} = useWelcomeModal(environment, profile);
 
 	return (
-		<Modal title={t("PROFILE.MODAL_WELCOME.TITLE")} image={<Banner step={step} />} isOpen={show} onClose={onClose}>
+		<Modal
+			title={t(`PROFILE.MODAL_WELCOME.STEP_${step}_TITLE`)}
+			image={<Banner step={step} />}
+			isOpen={show}
+			onClose={onClose}
+		>
 			<div className="container space-y-8">
 				<div className="text-base leading-7 text-theme-secondary-text">
-					<p>{t(`PROFILE.MODAL_WELCOME.DESCRIPTION_STEP_${step}`)}</p>
+					<p>{t(`PROFILE.MODAL_WELCOME.STEP_${step}_DESCRIPTION`)}</p>
 				</div>
 
 				<div className="flex justify-between space-x-3 items-center">

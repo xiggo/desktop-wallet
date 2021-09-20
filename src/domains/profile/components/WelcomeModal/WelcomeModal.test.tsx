@@ -43,7 +43,7 @@ describe("WelcomeModal", () => {
 
 		const { asFragment, getByTestId } = render(<Wrapper />);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_WELCOME.TITLE);
+		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_WELCOME.STEP_1_TITLE);
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_WELCOME.DONT_SHOW_CHECKBOX_LABEL);
 		expect(getByTestId("modal__inner")).toHaveTextContent(commonTranslations.START);
 		expect(getByTestId("modal__inner")).toHaveTextContent(commonTranslations.SKIP);
@@ -55,7 +55,7 @@ describe("WelcomeModal", () => {
 
 		const { asFragment, getByTestId } = render(<Wrapper />);
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_WELCOME.TITLE);
+		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_WELCOME.STEP_1_TITLE);
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_WELCOME.DONT_SHOW_CHECKBOX_LABEL);
 		expect(getByTestId("modal__inner")).toHaveTextContent(commonTranslations.START);
 		expect(getByTestId("modal__inner")).toHaveTextContent(commonTranslations.SKIP);

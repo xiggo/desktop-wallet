@@ -121,7 +121,7 @@ describe("Dashboard", () => {
 			{ timeout: 4000 },
 		);
 
-		expect(getByText(profileTranslations.MODAL_WELCOME.TITLE)).toBeInTheDocument();
+		expect(getByText(profileTranslations.MODAL_WELCOME.STEP_1_TITLE)).toBeInTheDocument();
 
 		mockHasCompletedTutorial.mockRestore();
 	});
