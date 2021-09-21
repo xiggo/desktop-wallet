@@ -1,9 +1,10 @@
+import { sortByDesc } from "@arkecosystem/utils";
 import { Checkbox } from "app/components/Checkbox";
 import { TableColumn } from "app/components/Table/TableColumn.models";
 import { Tooltip } from "app/components/Tooltip";
 import { useScheduler } from "app/hooks/use-scheduler";
 import { toasts } from "app/services";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { UnlockTokensFetchError } from "./blocks/UnlockTokensFetchError";
@@ -17,6 +18,8 @@ import {
 } from "./UnlockTokens.contracts";
 
 const useUnlockableBalances: UseUnlockableBalancesHook = (wallet) => {
+	const loadCount = useRef(0);
+
 	const { start, stop } = useScheduler({
 		autostart: true,
 		handler: () => fetch(),
@@ -32,7 +35,14 @@ const useUnlockableBalances: UseUnlockableBalancesHook = (wallet) => {
 		try {
 			const response = await wallet.coin().client().unlockableBalances(wallet.address());
 
-			setItems(response.objects.map((value, index) => ({ ...value, id: `${index}` })));
+			setItems(
+				sortByDesc(response.objects, (value) => value.timestamp.toUNIX()).map((value, index) => ({
+					...value,
+					id: `${index}`,
+				})),
+			);
+
+			loadCount.current++;
 		} catch {
 			stop();
 
@@ -54,7 +64,11 @@ const useUnlockableBalances: UseUnlockableBalancesHook = (wallet) => {
 		}
 	};
 
-	return { items, loading };
+	return {
+		isFirstLoad: loadCount.current === 1,
+		items,
+		loading,
+	};
 };
 
 const useColumns: UseColumnsHook = ({ canSelectAll, isAllSelected, onToggleAll }) => {

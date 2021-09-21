@@ -168,6 +168,26 @@ describe("UnlockTokensSelect", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should pre-select unlockable items on first load", async () => {
+		render(
+			<Wrapper>
+				<UnlockTokensSelect
+					isFirstLoad={true}
+					items={items}
+					loading={false}
+					wallet={wallet}
+					profile={profile}
+					onClose={jest.fn()}
+					onUnlock={jest.fn()}
+				/>
+			</Wrapper>,
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(4));
+
+		expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(3);
+	});
+
 	it("should allow selection of unlockable items", async () => {
 		const onUnlock = jest.fn();
 

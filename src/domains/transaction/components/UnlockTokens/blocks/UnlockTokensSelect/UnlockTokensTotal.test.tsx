@@ -44,7 +44,7 @@ describe("UnlockTokensTotal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show hint when balance is less than the amount", () => {
+	it("should show hint when balance is less than the fee", () => {
 		jest.spyOn(wallet, "balance").mockReturnValueOnce(5);
 
 		render(<UnlockTokensTotal isLoading={false} isLoadingFee={false} amount={10} fee={8} wallet={wallet} />);

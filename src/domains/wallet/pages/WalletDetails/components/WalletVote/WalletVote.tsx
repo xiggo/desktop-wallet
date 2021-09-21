@@ -37,7 +37,6 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 		return <WalletVoteSkeleton />;
 	}
 
-	const maxVotes = wallet.network().maximumVotesPerWallet();
 	const activeDelegates = wallet.network().delegateCount();
 
 	let votes: Contracts.VoteRegistryItem[];
@@ -50,18 +49,10 @@ export const WalletVote = ({ wallet, onButtonClick, env, profile }: WalletVotePr
 
 	const renderVotes = () => {
 		if (votes.length === 0) {
-			return <EmptyVotes maxVotes={maxVotes} />;
+			return <EmptyVotes wallet={wallet} />;
 		}
 
-		return (
-			<Votes
-				wallet={wallet}
-				votes={votes}
-				activeDelegates={activeDelegates}
-				maxVotes={maxVotes}
-				onButtonClick={onButtonClick}
-			/>
-		);
+		return <Votes wallet={wallet} votes={votes} activeDelegates={activeDelegates} onButtonClick={onButtonClick} />;
 	};
 
 	return (

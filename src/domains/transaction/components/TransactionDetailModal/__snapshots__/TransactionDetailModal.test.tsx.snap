@@ -3649,7 +3649,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
           <h2
             class="mb-0 text-2xl font-bold"
           >
-            Unlock Token
+            Unlock Balance
           </h2>
           <div
             class="flex-1"

@@ -10,14 +10,13 @@ import { useTranslation } from "react-i18next";
 const votesHelpLink = "https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote";
 
 interface EmptyVotesProperties {
-	maxVotes: number;
+	wallet: Contracts.IReadWriteWallet;
 }
 
 interface VotesProperties {
 	wallet: Contracts.IReadWriteWallet;
 	votes: Contracts.VoteRegistryItem[];
 	activeDelegates: number;
-	maxVotes: number;
 	onButtonClick: (address?: string) => void;
 }
 
@@ -29,11 +28,12 @@ const HintIcon = ({ tooltipContent }: { tooltipContent: string }) => (
 	</Tooltip>
 );
 
-const EmptyVotes = ({ maxVotes }: EmptyVotesProperties) => {
+const EmptyVotes = ({ wallet }: EmptyVotesProperties) => {
 	const { t } = useTranslation();
+	const maxVotes = wallet.network().maximumVotesPerWallet();
 
 	return (
-		<>
+		<div className="flex flex-1 items-center space-x-4">
 			<Circle
 				size="lg"
 				className="border-theme-secondary-500 text-theme-secondary-500 dark:border-theme-secondary-700 dark:text-theme-secondary-700"
@@ -42,33 +42,48 @@ const EmptyVotes = ({ maxVotes }: EmptyVotesProperties) => {
 				<Icon name="Vote" size="lg" />
 			</Circle>
 
-			<div className="flex flex-1 ml-4">
-				<div className="flex flex-col justify-between">
-					<span className="font-semibold">
-						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE", { count: maxVotes })}
-						<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">
-							0/{maxVotes}
-						</span>
-					</span>
+			<div className="flex flex-col justify-between">
+				<span className="font-semibold">
+					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE", { count: maxVotes })}
+					<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">0/{maxVotes}</span>
+				</span>
 
-					<span className="leading-none">
-						<span className="mr-1 text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
-							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}
-						</span>
-						<Link to={votesHelpLink} isExternal>
-							<span className="text-sm">{t("COMMON.LEARN_MORE")}</span>
-						</Link>
+				<span className="leading-none">
+					<span className="mr-1 text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.EMPTY_DESCRIPTION")}
 					</span>
-				</div>
+					<Link to={votesHelpLink} isExternal>
+						<span className="text-sm">{t("COMMON.LEARN_MORE")}</span>
+					</Link>
+				</span>
 			</div>
-		</>
+
+			{wallet.network().usesLockedBalance() && (
+				<div className="flex ml-4">
+					<div className="flex flex-col justify-between pl-6 ml-6 font-semibold border-l border-theme-secondary-300 dark:border-theme-secondary-800">
+						<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.LOCKED_VOTES")}
+						</span>
+						<AmountCrypto value={0} ticker={wallet.currency()} />
+					</div>
+
+					<div className="flex flex-col justify-between pl-6 ml-6 font-semibold border-l border-theme-secondary-300 dark:border-theme-secondary-800">
+						<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.LOCKED_UNVOTES")}
+						</span>
+						<AmountCrypto value={0} ticker={wallet.currency()} />
+					</div>
+				</div>
+			)}
+		</div>
 	);
 };
 
-const Votes = ({ wallet, votes, activeDelegates, maxVotes, onButtonClick }: VotesProperties) => {
+const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesProperties) => {
 	const { t } = useTranslation();
 
 	const delegate = votes[0].wallet!;
+	const maxVotes = wallet.network().maximumVotesPerWallet();
 
 	// @ts-ignore
 	const activeCount = votes.filter(({ wallet }) => wallet?.rank() <= activeDelegates).length;

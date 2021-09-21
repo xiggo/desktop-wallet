@@ -37,6 +37,7 @@ type UseUnlockableBalancesHook = (
 ) => {
 	items: UnlockableBalance[];
 	loading: boolean;
+	isFirstLoad: boolean;
 };
 
 type UseColumnsHook = (config: {

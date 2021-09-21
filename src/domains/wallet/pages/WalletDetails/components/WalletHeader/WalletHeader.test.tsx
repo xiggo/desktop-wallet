@@ -422,6 +422,7 @@ describe("WalletHeader", () => {
 		const unlockableBalances = jest
 			.spyOn(wallet.coin().client(), "unlockableBalances")
 			.mockResolvedValue({ objects: [] } as any);
+		const allowsLockedBalance = jest.spyOn(wallet.network(), "allows").mockReturnValue(true);
 
 		const { asFragment } = render(
 			<LedgerProvider transport={getDefaultLedgerTransport()}>
@@ -444,5 +445,6 @@ describe("WalletHeader", () => {
 		usesLockedBalance.mockRestore();
 		balance.mockRestore();
 		unlockableBalances.mockRestore();
+		allowsLockedBalance.mockRestore();
 	});
 });

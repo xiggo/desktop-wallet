@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import { Enums } from "@payvo/sdk";
 import { Amount } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Button } from "app/components/Button";
@@ -19,7 +20,7 @@ import { SignMessage } from "domains/wallet/components/SignMessage";
 import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
 import { VerifyMessage } from "domains/wallet/components/VerifyMessage";
 import { useWalletSync } from "domains/wallet/hooks/use-wallet-sync";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import tw, { styled } from "twin.macro";
@@ -70,7 +71,20 @@ export const WalletHeader = ({
 
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 
-	const hasLockedBalance = wallet.network().usesLockedBalance() && !!wallet.balance("locked");
+	const isUnlockBalanceButtonVisible = useMemo(() => {
+		let supported: boolean;
+		const hasLockedBalance = wallet.network().usesLockedBalance() && !!wallet.balance("locked");
+
+		if (wallet.isLedger()) {
+			supported =
+				wallet.network().allows(Enums.FeatureFlag.TransactionUnlockTokenLedgerS) ||
+				wallet.network().allows(Enums.FeatureFlag.TransactionUnlockTokenLedgerX);
+		} else {
+			supported = wallet.network().allows(Enums.FeatureFlag.TransactionUnlockToken);
+		}
+
+		return supported && hasLockedBalance;
+	}, [wallet]);
 
 	const handleStar = async () => {
 		wallet.toggleStarred();
@@ -233,7 +247,7 @@ export const WalletHeader = ({
 								className="text-lg font-semibold text-white"
 							/>
 
-							{hasLockedBalance && (
+							{isUnlockBalanceButtonVisible && (
 								<div className="flex items-baseline text-theme-secondary-700 ml-1 space-x-1">
 									<span className="text-lg font-semibold">/</span>
 									<div
@@ -305,7 +319,7 @@ export const WalletHeader = ({
 						{t("COMMON.SEND")}
 					</Button>
 
-					{hasLockedBalance && (
+					{isUnlockBalanceButtonVisible && (
 						<Tooltip content={t("TRANSACTION.UNLOCK_TOKENS.LOCKED_BALANCE")} theme="dark">
 							<Button
 								variant="transparent"

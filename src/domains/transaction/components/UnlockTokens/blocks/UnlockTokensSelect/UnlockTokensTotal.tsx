@@ -25,7 +25,7 @@ export const UnlockTokensTotal: React.FC<Properties> = ({
 	const renderTotal = (isFee: boolean) => {
 		let hint: string | undefined = undefined;
 
-		if (isFee && wallet.balance("available") < amount) {
+		if (isFee && wallet.balance("available") < fee) {
 			hint = t("TRANSACTION.UNLOCK_TOKENS.INSUFFICIENT_BALANCE_HINT", {
 				currency: wallet.currency(),
 			});

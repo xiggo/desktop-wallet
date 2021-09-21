@@ -19,6 +19,7 @@ interface Properties {
 	profile: Contracts.IProfile;
 	onClose: () => void;
 	onUnlock: () => void;
+	isFirstLoad?: boolean;
 }
 
 const SKELETON_ROWS = new Array<UnlockableBalanceSkeleton>(3).fill({});
@@ -30,6 +31,7 @@ export const UnlockTokensSelect: React.FC<Properties> = ({
 	onUnlock,
 	items,
 	loading,
+	isFirstLoad,
 }: Properties) => {
 	const { t } = useTranslation();
 
@@ -60,6 +62,13 @@ export const UnlockTokensSelect: React.FC<Properties> = ({
 		selectedIds,
 		selectableObjects,
 	]);
+
+	useEffect(() => {
+		// pre-select unlockable items on first load
+		if (isFirstLoad && selectableObjects.length > 0 && selectedIds.length === 0) {
+			setSelectedIds(selectableObjects.map((item) => item.id));
+		}
+	}, [selectableObjects, isFirstLoad]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {
 		setValue(

@@ -33,7 +33,7 @@ export const UnlockTokensModal: React.FC<Properties> = ({ profile, wallet, onClo
 
 	const { hasDeviceAvailable, isConnected, transport, connect } = useLedgerContext();
 
-	const { items, loading } = useUnlockableBalances(wallet);
+	const { items, loading, isFirstLoad } = useUnlockableBalances(wallet);
 
 	const form = useForm<UnlockTokensFormState>({
 		defaultValues: {
@@ -95,6 +95,7 @@ export const UnlockTokensModal: React.FC<Properties> = ({ profile, wallet, onClo
 					<UnlockTokensSelect
 						items={items}
 						loading={loading}
+						isFirstLoad={isFirstLoad}
 						profile={profile}
 						wallet={wallet}
 						onClose={onClose}

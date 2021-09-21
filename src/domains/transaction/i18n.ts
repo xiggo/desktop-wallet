@@ -306,7 +306,7 @@ export const translations: { [key: string]: any } = {
 		MULTI_SIGNATURE: "Multisignature",
 		SECOND_SIGNATURE: "Second Signature",
 		TRANSFER: "Transfer",
-		UNLOCK_TOKEN: "Unlock Token",
+		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Vote / Unvote",

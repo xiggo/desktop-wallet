@@ -46,6 +46,7 @@ describe("useUnlockableBalances", () => {
 
 		expect(unlockableBalances).toHaveBeenCalledTimes(1);
 		expect(result.current.items).toHaveLength(1);
+		expect(result.current.isFirstLoad).toBe(true);
 
 		act(() => {
 			jest.advanceTimersByTime(POLLING_INTERVAL + 500);
@@ -54,6 +55,7 @@ describe("useUnlockableBalances", () => {
 		await waitForNextUpdate();
 
 		expect(unlockableBalances).toHaveBeenCalledTimes(2);
+		expect(result.current.isFirstLoad).toBe(false);
 
 		unlockableBalances.mockRestore();
 	});
@@ -75,6 +77,48 @@ describe("useUnlockableBalances", () => {
 
 		unlockableBalances.mockRestore();
 		toastWarning.mockRestore();
+	});
+
+	it("should return items sorted by date desc", async () => {
+		const unlockableBalances = jest.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
+			current: BigNumber.make(30),
+			objects: [
+				{
+					address: "lsk5gjpsoqgchb8shk8hvwez6ddx3a4b8gga59rw4",
+					amount: BigNumber.make(1),
+					height: "1",
+					isReady: true,
+					timestamp: DateTime.make("2020-01-01T00:00:00.000Z"),
+				},
+				{
+					address: "lsk5gjpsoqgchb8shk8hvwez6ddx3a4b8gga59rw4",
+					amount: BigNumber.make(3),
+					height: "3",
+					isReady: true,
+					timestamp: DateTime.make("2020-03-01T00:00:00.000Z"),
+				},
+				{
+					address: "lsk5gjpsoqgchb8shk8hvwez6ddx3a4b8gga59rw4",
+					amount: BigNumber.make(2),
+					height: "2",
+					isReady: true,
+					timestamp: DateTime.make("2020-02-01T00:00:00.000Z"),
+				},
+			],
+			pending: BigNumber.make(0),
+		});
+
+		const { result, waitForNextUpdate } = renderHook(() => useUnlockableBalances(wallet));
+
+		await waitForNextUpdate();
+
+		expect(unlockableBalances).toHaveBeenCalledTimes(1);
+		expect(result.current.items).toHaveLength(3);
+		expect(result.current.items[0].timestamp.format("MM")).toBe("03");
+		expect(result.current.items[1].timestamp.format("MM")).toBe("02");
+		expect(result.current.items[2].timestamp.format("MM")).toBe("01");
+
+		unlockableBalances.mockRestore();
 	});
 });
 

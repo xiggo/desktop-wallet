@@ -52,45 +52,39 @@ exports[`ErrorStep should display error details 1`] = `
       </div>
     </div>
     <div
-      class="flex space-x-3"
+      class="flex justify-between"
     >
-      <div
-        class="relative"
-      >
-        <button
-          class="ClipboardButton__StyledButton-sc-cammp1-0 dqAYlb"
-          data-testid="clipboard-button__wrapper"
-          type="button"
+      <div>
+        <div
+          class="relative"
         >
-          <div
-            class="flex items-center space-x-2"
+          <button
+            class="ClipboardButton__StyledButton-sc-cammp1-0 dqAYlb"
+            data-testid="clipboard-button__wrapper"
+            type="button"
           >
             <div
-              class="sc-bdnxRM AFVmm"
-              height="16"
-              width="16"
+              class="flex items-center space-x-2"
             >
-              <svg>
-                copy.svg
-              </svg>
+              <div
+                class="sc-bdnxRM AFVmm"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+              <span>
+                Copy
+              </span>
             </div>
-            <span>
-              Copy
-            </span>
-          </div>
-        </button>
-      </div>
-      <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-        data-testid="ErrorStep__repeat-button"
-        type="button"
-      >
-        <div
-          class="flex items-center space-x-2"
-        >
-          Retry
+          </button>
         </div>
-      </button>
+      </div>
+      <div
+        class="flex space-x-3"
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -131,30 +125,24 @@ exports[`ErrorStep should emit onBack 1`] = `
       </p>
     </div>
     <div
-      class="flex space-x-3"
+      class="flex justify-between"
     >
-      <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-        data-testid="ErrorStep__wallet-button"
-        type="button"
+      <div />
+      <div
+        class="flex space-x-3"
       >
-        <div
-          class="flex items-center space-x-2"
+        <button
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+          data-testid="ErrorStep__wallet-button"
+          type="button"
         >
-          Back to Wallet
-        </div>
-      </button>
-      <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-        data-testid="ErrorStep__repeat-button"
-        type="button"
-      >
-        <div
-          class="flex items-center space-x-2"
-        >
-          Retry
-        </div>
-      </button>
+          <div
+            class="flex items-center space-x-2"
+          >
+            Back to Wallet
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -195,19 +183,24 @@ exports[`ErrorStep should emit onRepeat 1`] = `
       </p>
     </div>
     <div
-      class="flex space-x-3"
+      class="flex justify-between"
     >
-      <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-        data-testid="ErrorStep__repeat-button"
-        type="button"
+      <div />
+      <div
+        class="flex space-x-3"
       >
-        <div
-          class="flex items-center space-x-2"
+        <button
+          class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+          data-testid="ErrorStep__repeat-button"
+          type="button"
         >
-          Retry
-        </div>
-      </button>
+          <div
+            class="flex items-center space-x-2"
+          >
+            Retry
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -248,19 +241,12 @@ exports[`ErrorStep should render with custom title 1`] = `
       </p>
     </div>
     <div
-      class="flex space-x-3"
+      class="flex justify-between"
     >
-      <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-        data-testid="ErrorStep__repeat-button"
-        type="button"
-      >
-        <div
-          class="flex items-center space-x-2"
-        >
-          Retry
-        </div>
-      </button>
+      <div />
+      <div
+        class="flex space-x-3"
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -301,19 +287,12 @@ exports[`ErrorStep should render with default texts 1`] = `
       </p>
     </div>
     <div
-      class="flex space-x-3"
+      class="flex justify-between"
     >
-      <button
-        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-        data-testid="ErrorStep__repeat-button"
-        type="button"
-      >
-        <div
-          class="flex items-center space-x-2"
-        >
-          Retry
-        </div>
-      </button>
+      <div />
+      <div
+        class="flex space-x-3"
+      />
     </div>
   </div>
 </DocumentFragment>

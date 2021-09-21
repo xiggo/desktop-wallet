@@ -14,7 +14,7 @@ import { env, getDefaultLedgerTransport, render } from "utils/testing-library";
 import { UnlockTokensModal } from "./UnlockTokensModal";
 
 const translations = buildTranslations();
-const transport = getDefaultLedgerTransport();
+const transport = getDefaultLedgerTransport() as any;
 
 describe("UnlockTokensModal", () => {
 	const mnemonic = "barrel own close sponsor strike win twice dwarf blame intact aerobic wild";
@@ -44,7 +44,7 @@ describe("UnlockTokensModal", () => {
 
 		jest.spyOn(profile.walletFactory(), "generate").mockResolvedValue(feeWallet);
 		jest.spyOn(feeWallet.wallet.coin().transaction(), "unlockToken").mockResolvedValue({
-			fee: () => BigNumber.make(transactionFixture.data.fee / 1e8),
+			fee: () => BigNumber.make(+transactionFixture.data.fee / 1e8),
 		} as any);
 
 		// items mock
@@ -77,7 +77,7 @@ describe("UnlockTokensModal", () => {
 			convertedAmount: () => 0,
 			convertedFee: () => 0,
 			explorerLink: () => `https://testnet.lisk.observer/transaction/${transactionFixture.data.id}`,
-			fee: () => transactionFixture.data.fee / 1e8,
+			fee: () => +transactionFixture.data.fee / 1e8,
 			id: () => transactionFixture.data.id,
 			isMultiSignatureRegistration: () => false,
 			isUnlockToken: () => true,
@@ -87,8 +87,6 @@ describe("UnlockTokensModal", () => {
 			usesMultiSignature: () => false,
 			wallet: () => wallet,
 		} as any);
-
-		// jest.spyOn(wallet.transaction(), "sync").mockImplementation();
 	});
 
 	it("should render", async () => {
@@ -121,12 +119,6 @@ describe("UnlockTokensModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
-		expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(2);
-
-		// select first unlockable balance item
-
-		userEvent.click(screen.getAllByRole("checkbox")[1]);
-
 		expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
 
 		await waitFor(() => {

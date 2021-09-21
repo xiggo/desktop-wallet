@@ -40,23 +40,32 @@ export const ErrorStep = ({ title, onBack, onRepeat, isRepeatDisabled = false, e
 				)}
 			</div>
 
-			<div className="flex space-x-3">
-				{errorMessage && (
-					<Clipboard variant="button" data={errorMessage}>
-						<Icon name="Copy" />
-						<span>{t("COMMON.COPY")}</span>
-					</Clipboard>
-				)}
+			<div className="flex justify-between">
+				<div>
+					{errorMessage && (
+						<Clipboard variant="button" data={errorMessage}>
+							<Icon name="Copy" />
+							<span>{t("COMMON.COPY")}</span>
+						</Clipboard>
+					)}
+				</div>
 
-				{!!onBack && (
-					<Button onClick={onBack} data-testid="ErrorStep__wallet-button" variant="secondary">
-						{t("COMMON.BACK_TO_WALLET")}
-					</Button>
-				)}
-
-				<Button data-testid="ErrorStep__repeat-button" disabled={isRepeatDisabled} onClick={() => onRepeat?.()}>
-					{t("COMMON.RETRY")}
-				</Button>
+				<div className="flex space-x-3">
+					{!!onBack && (
+						<Button onClick={onBack} data-testid="ErrorStep__wallet-button" variant="secondary">
+							{t("COMMON.BACK_TO_WALLET")}
+						</Button>
+					)}
+					{!!onRepeat && (
+						<Button
+							data-testid="ErrorStep__repeat-button"
+							disabled={isRepeatDisabled}
+							onClick={() => onRepeat()}
+						>
+							{t("COMMON.RETRY")}
+						</Button>
+					)}
+				</div>
 			</div>
 		</div>
 	);

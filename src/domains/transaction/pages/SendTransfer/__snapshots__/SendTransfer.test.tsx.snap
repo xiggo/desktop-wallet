@@ -14527,56 +14527,62 @@ exports[`SendTransfer should show error step and go back 1`] = `
                       </div>
                     </div>
                     <div
-                      class="flex space-x-3"
+                      class="flex justify-between"
                     >
+                      <div>
+                        <div
+                          class="relative"
+                        >
+                          <button
+                            class="ClipboardButton__StyledButton-sc-cammp1-0 dqAYlb"
+                            data-testid="clipboard-button__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              <div
+                                class="sc-bdnxRM AFVmm"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  copy.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Copy
+                              </span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
                       <div
-                        class="relative"
+                        class="flex space-x-3"
                       >
                         <button
-                          class="ClipboardButton__StyledButton-sc-cammp1-0 dqAYlb"
-                          data-testid="clipboard-button__wrapper"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                          data-testid="ErrorStep__wallet-button"
                           type="button"
                         >
                           <div
                             class="flex items-center space-x-2"
                           >
-                            <div
-                              class="sc-bdnxRM AFVmm"
-                              height="16"
-                              width="16"
-                            >
-                              <svg>
-                                copy.svg
-                              </svg>
-                            </div>
-                            <span>
-                              Copy
-                            </span>
+                            Back to Wallet
+                          </div>
+                        </button>
+                        <button
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                          data-testid="ErrorStep__repeat-button"
+                          type="button"
+                        >
+                          <div
+                            class="flex items-center space-x-2"
+                          >
+                            Retry
                           </div>
                         </button>
                       </div>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                        data-testid="ErrorStep__wallet-button"
-                        type="button"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Back to Wallet
-                        </div>
-                      </button>
-                      <button
-                        class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
-                        data-testid="ErrorStep__repeat-button"
-                        type="button"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Retry
-                        </div>
-                      </button>
                     </div>
                   </div>
                 </div>
