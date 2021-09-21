@@ -119,21 +119,23 @@ export const PluginListItem = ({
 			</TableCell>
 
 			<TableCell isCompact={isCompact}>
-				<span className="truncate w-50">{plugin.author}</span>
+				<span className="w-50 text-theme-secondary-text truncate">{plugin.author}</span>
 			</TableCell>
 
 			{showCategory && (
 				<TableCell isCompact={isCompact}>
-					<span>{t(`PLUGINS.CATEGORIES.${plugin.category.toUpperCase()}`)}</span>
+					<span className="text-theme-secondary-text">
+						{t(`PLUGINS.CATEGORIES.${plugin.category.toUpperCase()}`)}
+					</span>
 				</TableCell>
 			)}
 
 			<TableCell isCompact={isCompact}>
-				<span className="truncate w-30">{plugin.version}</span>
+				<span className="w-30 text-theme-secondary-text truncate">{plugin.version}</span>
 			</TableCell>
 
 			<TableCell isCompact={isCompact}>
-				<span>{plugin.size}</span>
+				<span className="text-theme-secondary-text">{plugin.size}</span>
 			</TableCell>
 
 			<TableCell isCompact={isCompact}>
