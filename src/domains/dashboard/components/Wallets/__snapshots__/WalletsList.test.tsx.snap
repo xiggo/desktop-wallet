@@ -54,7 +54,7 @@ exports[`WalletsList should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-40 min-w-40"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -68,7 +68,7 @@ exports[`WalletsList should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-72 min-w-72"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -98,7 +98,7 @@ exports[`WalletsList should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-44 min-w-44"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -175,25 +175,29 @@ exports[`WalletsList should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                    class="w-20 flex-1"
                   >
-                    <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                        data-testid="TruncateEnd"
+                        class="font-semibold text-base text-theme-text"
+                        data-testid="Address__alias"
                       >
-                        ARK Wallet 1
+                        <span
+                          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                          data-testid="TruncateEnd"
+                        >
+                          ARK Wallet 1
+                        </span>
                       </span>
-                    </span>
-                    <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -269,25 +273,29 @@ exports[`WalletsList should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                    class="w-20 flex-1"
                   >
-                    <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                        data-testid="TruncateEnd"
+                        class="font-semibold text-base text-theme-text"
+                        data-testid="Address__alias"
                       >
-                        ARK Wallet 2
+                        <span
+                          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                          data-testid="TruncateEnd"
+                        >
+                          ARK Wallet 2
+                        </span>
                       </span>
-                    </span>
-                    <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                    </span>
+                      <span
+                        class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                      </span>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -454,7 +462,7 @@ exports[`WalletsList should render loading state 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-40 min-w-40"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -468,7 +476,7 @@ exports[`WalletsList should render loading state 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-72 min-w-72"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -498,7 +506,7 @@ exports[`WalletsList should render loading state 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-44 min-w-44"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -859,7 +867,7 @@ exports[`WalletsList should render with view more button 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-40 min-w-40"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -873,7 +881,7 @@ exports[`WalletsList should render with view more button 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-72 min-w-72"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -903,7 +911,7 @@ exports[`WalletsList should render with view more button 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-44 min-w-44"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -980,25 +988,29 @@ exports[`WalletsList should render with view more button 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                    class="w-20 flex-1"
                   >
-                    <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                        data-testid="TruncateEnd"
+                        class="font-semibold text-base text-theme-text"
+                        data-testid="Address__alias"
                       >
-                        ARK Wallet 1
+                        <span
+                          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                          data-testid="TruncateEnd"
+                        >
+                          ARK Wallet 1
+                        </span>
                       </span>
-                    </span>
-                    <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </td>
@@ -1074,25 +1086,29 @@ exports[`WalletsList should render with view more button 1`] = `
                     </div>
                   </div>
                   <div
-                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                    class="w-20 flex-1"
                   >
-                    <span
-                      class="font-semibold text-base text-theme-text"
-                      data-testid="Address__alias"
+                    <div
+                      class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                     >
                       <span
-                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                        data-testid="TruncateEnd"
+                        class="font-semibold text-base text-theme-text"
+                        data-testid="Address__alias"
                       >
-                        ARK Wallet 2
+                        <span
+                          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                          data-testid="TruncateEnd"
+                        >
+                          ARK Wallet 2
+                        </span>
                       </span>
-                    </span>
-                    <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                    </span>
+                      <span
+                        class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                      </span>
+                    </div>
                   </div>
                 </div>
               </td>

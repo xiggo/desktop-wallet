@@ -84,7 +84,9 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 					/>
 					<Avatar size={isCompact ? "xs" : "lg"} address={wallet.address()} shadowClassName={shadowClasses} />
 				</div>
-				<Address walletName={alias} address={wallet.address()} />
+				<div className="w-20 flex-1">
+					<Address walletName={alias} address={wallet.address()} />
+				</div>
 			</TableCell>
 
 			<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle" isCompact={isCompact}>
