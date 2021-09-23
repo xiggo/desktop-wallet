@@ -128,6 +128,9 @@ describe("Password Settings", () => {
 
 	it("should show an error toast if the current password does not match", async () => {
 		const toastSpy = jest.spyOn(toasts, "error");
+		const authMock = jest.spyOn(profile, "auth").mockImplementation(() => {
+			throw new Error("mismatch");
+		});
 
 		const { container, asFragment, findByTestId, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
@@ -177,6 +180,8 @@ describe("Password Settings", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+
+		authMock.mockRestore();
 	});
 
 	it("should trigger password confirmation mismatch error", async () => {

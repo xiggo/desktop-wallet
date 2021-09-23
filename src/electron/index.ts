@@ -90,7 +90,16 @@ function createWindow() {
 		minWidth: 1024,
 		show: true,
 		webPreferences: {
+			contextIsolation: false,
+
+			// TODO: remove remote module. See more at https://nornagon.medium.com/electrons-remote-module-considered-harmful-70d69500f31
+			enableRemoteModule: true,
+
 			nodeIntegration: true,
+
+			// See more on multithreading: https://www.electronjs.org/docs/tutorial/multithreading
+			nodeIntegrationInWorker: true,
+
 			webviewTag: true,
 		},
 		width: windowState.width,

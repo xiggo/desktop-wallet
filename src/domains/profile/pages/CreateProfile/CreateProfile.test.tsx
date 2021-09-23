@@ -219,7 +219,7 @@ describe("CreateProfile", () => {
 			fireEvent.click(getByTestId("CreateProfile__submit-button"));
 		});
 
-		expect(env.profiles().last().usesPassword()).toBe(true);
+		await waitFor(() => expect(env.profiles().last().usesPassword()).toBe(true));
 
 		expect(asFragment()).toMatchSnapshot();
 	});

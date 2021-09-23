@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
+import * as passwordPwnd from "@faustbrian/node-haveibeenpwned";
 import { renderHook } from "@testing-library/react-hooks";
-import passwordPwnd from "password-pwnd";
 import { useTranslation } from "react-i18next";
 
 import { password } from "./password";
@@ -9,7 +9,7 @@ describe("Password Validation", () => {
 	let pwnd: jest.SpyInstance;
 
 	beforeEach(() => {
-		pwnd = jest.spyOn(passwordPwnd, "pwnd").mockImplementation(() => Promise.resolve(0));
+		pwnd = jest.spyOn(passwordPwnd, "pwned").mockImplementation(() => Promise.resolve(0));
 	});
 
 	it("should not be required", async () => {

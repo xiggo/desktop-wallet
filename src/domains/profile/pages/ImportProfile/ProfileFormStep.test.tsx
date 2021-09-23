@@ -171,7 +171,8 @@ describe("Import Profile - Profile Form Step", () => {
 			fireEvent.click(getByTestId("CreateProfile__submit-button"));
 		});
 
-		expect(env.profiles().count()).toBe(profilesCount + 1);
+		await waitFor(() => expect(env.profiles().count()).toBe(profilesCount + 1));
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 

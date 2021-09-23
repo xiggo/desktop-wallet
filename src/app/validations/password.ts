@@ -1,4 +1,4 @@
-import { pwnd, strong } from "password-pwnd";
+import { evaluate, pwned } from "@faustbrian/node-haveibeenpwned";
 
 export const password = (t: any) => ({
 	confirmOptionalPassword: (password: string) => ({
@@ -42,12 +42,12 @@ export const password = (t: any) => ({
 				return t("COMMON.VALIDATION.PASSWORD_SAME_AS_OLD");
 			}
 
-			if (!(await strong(password))) {
+			if (!(await evaluate(password))) {
 				return t("COMMON.VALIDATION.PASSWORD_WEAK");
 			}
 
 			try {
-				const hasBeenLeaked = await pwnd(password);
+				const hasBeenLeaked = await pwned(password);
 
 				if (hasBeenLeaked) {
 					return t("COMMON.VALIDATION.PASSWORD_LEAKED");
