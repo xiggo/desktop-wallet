@@ -50,7 +50,7 @@ exports[`Signatures should handle exception when checking if participant is awai
                 width="10"
               >
                 <svg>
-                  circle-check-mark.svg
+                  check-mark-small.svg
                 </svg>
               </div>
               <span />
@@ -97,7 +97,7 @@ exports[`Signatures should handle exception when checking if participant is awai
                 width="10"
               >
                 <svg>
-                  circle-check-mark.svg
+                  check-mark-small.svg
                 </svg>
               </div>
               <span />
@@ -160,7 +160,7 @@ exports[`Signatures should render 1`] = `
                 width="10"
               >
                 <svg>
-                  clock.svg
+                  clock-small.svg
                 </svg>
               </div>
               <span />
@@ -207,7 +207,7 @@ exports[`Signatures should render 1`] = `
                 width="10"
               >
                 <svg>
-                  circle-check-mark.svg
+                  check-mark-small.svg
                 </svg>
               </div>
               <span />
@@ -270,7 +270,7 @@ exports[`Signatures should show all participants as signed when all signatures a
                 width="10"
               >
                 <svg>
-                  circle-check-mark.svg
+                  check-mark-small.svg
                 </svg>
               </div>
               <span />
@@ -317,7 +317,7 @@ exports[`Signatures should show all participants as signed when all signatures a
                 width="10"
               >
                 <svg>
-                  circle-check-mark.svg
+                  check-mark-small.svg
                 </svg>
               </div>
               <span />

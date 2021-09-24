@@ -15,6 +15,7 @@ import { ReactComponent as CircleInfo } from "./circle-info.svg";
 import { ReactComponent as CircleQuestionMark } from "./circle-question-mark.svg";
 import { ReactComponent as Clock } from "./clock.svg";
 import { ReactComponent as ClockPencil } from "./clock-pencil.svg";
+import { ReactComponent as ClockSmall } from "./clock-small.svg";
 import { ReactComponent as Copy } from "./copy.svg";
 import { ReactComponent as CopyKey } from "./copy-key.svg";
 import { ReactComponent as Cross } from "./cross.svg";
@@ -71,6 +72,7 @@ export const SvgCollection: any = {
 	CircleQuestionMark,
 	Clock,
 	ClockPencil,
+	ClockSmall,
 	Copy,
 	CopyKey,
 	Cross,
