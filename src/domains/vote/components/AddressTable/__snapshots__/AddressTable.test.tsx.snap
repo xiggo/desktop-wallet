@@ -83,7 +83,7 @@ exports[`AddressTable should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-30 min-w-30"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -97,7 +97,7 @@ exports[`AddressTable should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-60 min-w-60"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -127,7 +127,7 @@ exports[`AddressTable should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-60 min-w-60"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -141,7 +141,7 @@ exports[`AddressTable should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
@@ -155,13 +155,13 @@ exports[`AddressTable should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
               data-testid="table__th--5"
               role="columnheader"
             >
               <div
-                class="flex flex-inline align-top justify-center no-border"
+                class="flex flex-inline align-top justify-center"
               >
                 <div>
                   Status
@@ -169,13 +169,13 @@ exports[`AddressTable should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
               colspan="1"
               data-testid="table__th--6"
               role="columnheader"
             >
               <div
-                class="flex flex-inline align-top"
+                class="flex flex-inline align-top no-border"
               >
                 <div>
                    
@@ -413,7 +413,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-30 min-w-30"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -427,7 +427,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-60 min-w-60"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -457,7 +457,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-60 min-w-60"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -471,13 +471,13 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
             >
               <div
-                class="flex flex-inline align-top no-border"
+                class="flex flex-inline align-top justify-center"
               >
                 <div>
                   Votes
@@ -485,13 +485,13 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
               colspan="1"
               data-testid="table__th--5"
               role="columnheader"
             >
               <div
-                class="flex flex-inline align-top"
+                class="flex flex-inline align-top no-border"
               >
                 <div>
                    
@@ -603,7 +603,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
             </td>
             <td>
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
               >
                 <div
                   class="font-bold text-theme-secondary-400"

@@ -193,7 +193,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 					</TableCell>
 				</>
 			) : (
-				<TableCell isCompact={isCompact}>
+				<TableCell innerClassName="justify-center" isCompact={isCompact}>
 					<div className="font-bold text-theme-secondary-400">
 						<span className="text-theme-secondary-text">{hasVotes ? votes.length : "0"}</span>
 						<span>/{maxVotes}</span>

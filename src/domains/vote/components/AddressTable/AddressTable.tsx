@@ -28,17 +28,20 @@ export const AddressTable = ({ wallets, onSelect, isCompact = false }: AddressTa
 		{
 			Header: t("COMMON.WALLET_TYPE"),
 			accessor: "wallet-type",
+			cellWidth: "w-30",
 			className: "justify-center",
 			disableSortBy: true,
 		},
 		{
 			Header: t("COMMON.BALANCE"),
 			accessor: (wallet: Contracts.IReadWriteWallet) => wallet.balance?.().toFixed(0),
+			cellWidth: "w-60",
 			className: "justify-end",
 		},
 		{
 			Header: maxVotes === 1 ? t("COMMON.DELEGATE") : t("COMMON.DELEGATES"),
 			accessor: "delegate",
+			cellWidth: "w-60",
 			className: maxVotes === 1 ? "ml-15" : "",
 			disableSortBy: true,
 		},
@@ -51,17 +54,20 @@ export const AddressTable = ({ wallets, onSelect, isCompact = false }: AddressTa
 				{
 					Header: t("COMMON.RANK"),
 					accessor: "rank",
+					cellWidth: "w-20",
 					className: "justify-center",
 					disableSortBy: true,
 				},
 				{
 					Header: t("COMMON.STATUS"),
 					accessor: "status",
-					className: "justify-center no-border",
+					cellWidth: "w-20",
+					className: "justify-center",
 					disableSortBy: true,
 				},
 				{
 					accessor: "onSelect",
+					className: "no-border",
 					disableSortBy: true,
 				},
 			];
@@ -72,11 +78,13 @@ export const AddressTable = ({ wallets, onSelect, isCompact = false }: AddressTa
 			{
 				Header: t("COMMON.VOTES"),
 				accessor: "votes",
-				className: "no-border",
+				cellWidth: "w-20",
+				className: "justify-center",
 				disableSortBy: true,
 			},
 			{
 				accessor: "onSelect",
+				className: "no-border",
 				disableSortBy: true,
 			},
 		];

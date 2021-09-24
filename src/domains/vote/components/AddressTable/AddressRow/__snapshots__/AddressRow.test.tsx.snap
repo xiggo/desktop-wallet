@@ -1433,7 +1433,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -1648,7 +1648,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -1872,7 +1872,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -2087,7 +2087,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center"
           >
             <div
               class="font-bold text-theme-secondary-400"
