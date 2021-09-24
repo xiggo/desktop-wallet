@@ -128,8 +128,8 @@ export const SummaryStep = ({
 			<TransactionDetail label={t("TRANSACTION.STATUS")}>{status.label}</TransactionDetail>
 
 			<TransactionDetail label={t("TRANSACTION.ID")}>
-				<div className="flex items-center space-x-3">
-					<span ref={reference} className="overflow-hidden">
+				<div className="flex-1 flex items-center space-x-3">
+					<span ref={reference} className="w-20 flex-1">
 						<TruncateMiddleDynamic value={transaction.id()} parentRef={reference} />
 					</span>
 

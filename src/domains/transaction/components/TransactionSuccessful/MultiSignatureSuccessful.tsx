@@ -94,8 +94,8 @@ export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }
 				{senderWallet && transaction && (
 					<>
 						<TransactionDetail label={t("TRANSACTION.ID")}>
-							<div className="flex items-center space-x-3">
-								<span ref={transactionIdReference} className="overflow-hidden">
+							<div className="flex-1 flex items-center space-x-3">
+								<span ref={transactionIdReference} className="w-20 flex-1">
 									<TruncateMiddleDynamic
 										value={transaction.id()}
 										parentRef={transactionIdReference}

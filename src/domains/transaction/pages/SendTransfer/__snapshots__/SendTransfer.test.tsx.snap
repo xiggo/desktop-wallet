@@ -7386,10 +7386,10 @@ exports[`SendTransfer should render summary step 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex items-center space-x-3"
+              class="flex-1 flex items-center space-x-3"
             >
               <span
-                class="overflow-hidden"
+                class="w-20 flex-1"
               >
                 <span
                   class="inline-flex overflow-hidden"

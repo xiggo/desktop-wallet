@@ -513,10 +513,10 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -1010,10 +1010,10 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -1507,10 +1507,10 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -1978,10 +1978,10 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -2387,10 +2387,10 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -2987,10 +2987,10 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -3366,10 +3366,10 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -3863,10 +3863,10 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -4307,10 +4307,10 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -4751,10 +4751,10 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -5420,10 +5420,10 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"
@@ -5917,10 +5917,10 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="flex items-center space-x-3"
+                            class="flex-1 flex items-center space-x-3"
                           >
                             <span
-                              class="overflow-hidden"
+                              class="w-20 flex-1"
                             >
                               <span
                                 class="inline-flex overflow-hidden"

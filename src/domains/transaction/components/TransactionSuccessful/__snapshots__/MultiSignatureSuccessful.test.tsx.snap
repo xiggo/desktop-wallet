@@ -84,10 +84,10 @@ exports[`MultiSignatureSuccessful should render 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="flex items-center space-x-3"
+              class="flex-1 flex items-center space-x-3"
             >
               <span
-                class="overflow-hidden"
+                class="w-20 flex-1"
               >
                 <span
                   class="inline-flex overflow-hidden"
@@ -550,10 +550,10 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="flex items-center space-x-3"
+              class="flex-1 flex items-center space-x-3"
             >
               <span
-                class="overflow-hidden"
+                class="w-20 flex-1"
               >
                 <span
                   class="inline-flex overflow-hidden"
@@ -1016,10 +1016,10 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
             class="flex items-center font-semibold"
           >
             <div
-              class="flex items-center space-x-3"
+              class="flex-1 flex items-center space-x-3"
             >
               <span
-                class="overflow-hidden"
+                class="w-20 flex-1"
               >
                 <span
                   class="inline-flex overflow-hidden"
@@ -1386,10 +1386,10 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
             class="flex items-center font-semibold"
           >
             <div
-              class="flex items-center space-x-3"
+              class="flex-1 flex items-center space-x-3"
             >
               <span
-                class="overflow-hidden"
+                class="w-20 flex-1"
               >
                 <span
                   class="inline-flex overflow-hidden"
