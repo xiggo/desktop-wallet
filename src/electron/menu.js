@@ -22,8 +22,8 @@ module.exports = function () {
 				],
 				css_path: isProduction ? path.resolve(__dirname, "styles.css") : null,
 				icon_path: isProduction
-					? path.resolve(__dirname, "../static/128x128.png")
-					: path.resolve(__dirname, "../app/assets/icons/128x128.png"),
+					? path.resolve(__dirname, "../static/512x512.png")
+					: path.resolve(__dirname, "../app/assets/icons/512x512.png"),
 				package_json_dir: path.resolve(__dirname, "../../"),
 				use_inner_html: true,
 			}),
