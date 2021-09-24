@@ -15,7 +15,10 @@ const preSteps = {
 		await t
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
-		await t.typeText(Selector('[data-testid="SelectNetworkInput__input"]'), "ARK Devnet");
+		await t.typeText(Selector('[data-testid="SelectNetworkInput__input"]'), "ARK Devnet", {
+			paste: true,
+		});
+
 		await t.pressKey("enter");
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
@@ -30,7 +33,9 @@ cucumber("@importWallet-mnemonic", {
 	...preSteps,
 	"When she enters a valid mnemonic to import": async (t: TestController) => {
 		const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
-		await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom");
+		await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom", {
+			paste: true,
+		});
 		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 	},
 	"And completes the import wallet steps for mnemonic": async (t: TestController) => {
@@ -38,7 +43,9 @@ cucumber("@importWallet-mnemonic", {
 		await t.click(Selector("[data-testid=ImportWallet__skip-button]"));
 		await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
 		const walletNameInput = Selector("input[name=name]");
-		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias");
+		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
+			paste: true,
+		});
 		await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
 	},
 	"Then the wallet is imported to her profile": async (t: TestController) => {
@@ -53,13 +60,17 @@ cucumber("@importWallet-address", {
 	},
 	"And enters a valid address to import": async (t: TestController) => {
 		const addressInput = Selector("[data-testid=ImportWallet__address-input]");
-		await t.typeText(addressInput, "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
+		await t.typeText(addressInput, "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P", {
+			paste: true,
+		});
 		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 	},
 	"And completes the import wallet steps for address": async (t: TestController) => {
 		await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
 		const walletNameInput = Selector("input[name=name]");
-		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias");
+		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
+			paste: true,
+		});
 		await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
 	},
 	"Then the wallet is imported to her profile": async (t: TestController) => {
@@ -74,7 +85,9 @@ cucumber("@importWallet-invalidAddress", {
 	},
 	"And enters an invalid address to import": async (t: TestController) => {
 		const addressInput = Selector("[data-testid=ImportWallet__address-input]");
-		await t.typeText(addressInput, "123");
+		await t.typeText(addressInput, "123", {
+			paste: true,
+		});
 	},
 	"Then an error is displayed on the address field": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok({ timeout: 5000 });
@@ -87,7 +100,9 @@ cucumber("@importWallet-invalidMnemonic", {
 	...preSteps,
 	"When she enters an invalid mnemonic to import": async (t: TestController) => {
 		const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
-		await t.typeText(passphraseInput, "123");
+		await t.typeText(passphraseInput, "123", {
+			paste: true,
+		});
 	},
 	"Then an error is displayed on the mnemonic field": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok({ timeout: 5000 });
@@ -100,13 +115,17 @@ cucumber("@importWallet-duplicateAddress", {
 	...preSteps,
 	"And has imported a wallet": async (t: TestController) => {
 		const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
-		await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom");
+		await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom", {
+			paste: true,
+		});
 		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 		await t.expect(Selector("[data-testid=EncryptPassword]").exists).ok();
 		await t.click(Selector("[data-testid=ImportWallet__skip-button]"));
 		await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
 		const walletNameInput = Selector("input[name=name]");
-		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias");
+		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
+			paste: true,
+		});
 		await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
 		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 	},
@@ -116,7 +135,9 @@ cucumber("@importWallet-duplicateAddress", {
 		await t
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
-		await t.typeText(Selector('[data-testid="SelectNetworkInput__input"]'), "ARK Devnet");
+		await t.typeText(Selector('[data-testid="SelectNetworkInput__input"]'), "ARK Devnet", {
+			paste: true,
+		});
 		await t.pressKey("enter");
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
@@ -126,7 +147,9 @@ cucumber("@importWallet-duplicateAddress", {
 			.expect(Selector("h1").withExactText(translations.WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE).exists)
 			.ok();
 		const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
-		await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom");
+		await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom", {
+			paste: true,
+		});
 	},
 	"Then an error is displayed on the mnemonic field": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok({ timeout: 5000 });

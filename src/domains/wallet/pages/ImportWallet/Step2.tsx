@@ -6,7 +6,7 @@ import { Input, InputAddress, InputPassword } from "app/components/Input";
 import { Select } from "app/components/SelectDropdown";
 import { OptionsValue, useImportOptions } from "domains/wallet/hooks/use-import-options";
 import { TFunction } from "i18next";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { assertNetwork, assertString } from "utils/assertions";
@@ -273,28 +273,12 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 
 export const SecondStep = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
-	const { getValues, watch, setValue, clearErrors, setError } = useFormContext();
+	const { getValues, watch, setValue, clearErrors } = useFormContext();
 
 	const network = getValues("network");
 	assertNetwork(network);
 
-	const [coin] = useState(() => profile.coins().set(network.coin(), network.id()));
-
-	useEffect(() => {
-		setError("coin", {
-			message: "coin",
-			type: "manual",
-		});
-	}, [setError]);
-
-	useEffect(() => {
-		const constructCoin = async () => {
-			await coin.__construct();
-			clearErrors("coin");
-		};
-
-		constructCoin();
-	}, [coin, clearErrors]);
+	const [coin] = useState(() => profile.coins().get(network.coin(), network.id()));
 
 	const { options, defaultOption } = useImportOptions(network.importMethods());
 

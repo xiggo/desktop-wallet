@@ -4,6 +4,7 @@ import { Networks } from "@payvo/sdk";
 import { Button } from "app/components/Button";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
+import { SyncErrorMessage } from "app/components/ProfileSyncStatusMessage";
 import { StepIndicator } from "app/components/StepIndicator";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext } from "app/contexts";
@@ -43,6 +44,7 @@ export const ImportWallet = () => {
 
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
+	const [isSyncingCoin, setIsSyncingCoin] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	const queryParameters = useQueryParams();
@@ -86,33 +88,75 @@ export const ImportWallet = () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
 		if (!isLedgerImport && !isButton && !isNextDisabled && activeTab <= Step.EncryptPasswordStep) {
-			return handleNext();
+			handleNext();
 		}
 	});
 
 	const handleNext = async () => {
-		if (activeTab === Step.MethodStep) {
-			setIsImporting(true);
+		switch (activeTab) {
+			case Step.MethodStep: {
+				setIsImporting(true);
 
-			try {
-				const { canBeEncrypted } = await importWallet();
+				try {
+					const { canBeEncrypted } = await importWallet();
 
-				setActiveTab(canBeEncrypted ? Step.EncryptPasswordStep : Step.SummaryStep);
-			} catch (error) {
-				/* istanbul ignore next */
-				toasts.error(error.message);
-			} finally {
-				setIsImporting(false);
+					setActiveTab(canBeEncrypted ? Step.EncryptPasswordStep : Step.SummaryStep);
+				} catch (error) {
+					/* istanbul ignore next */
+					toasts.error(error.message);
+				} finally {
+					setIsImporting(false);
+				}
+
+				break;
 			}
-		} else if (activeTab === Step.EncryptPasswordStep) {
-			setIsEncrypting(true);
+			case Step.EncryptPasswordStep: {
+				setIsEncrypting(true);
 
-			await encryptMnemonics();
-			setActiveTab(Step.SummaryStep);
+				await encryptMnemonics();
+				setActiveTab(Step.SummaryStep);
 
-			setIsEncrypting(false);
-		} else {
-			setActiveTab(activeTab + 1);
+				setIsEncrypting(false);
+
+				break;
+			}
+			case Step.NetworkStep: {
+				// Construct coin before moving to MethodStep.
+				// Will be used in import input validations
+				const network = getValues("network");
+				const coin = activeProfile.coins().set(network.coin(), network.id());
+
+				setIsSyncingCoin(true);
+
+				try {
+					toasts.dismiss();
+					await coin.__construct();
+					setIsSyncingCoin(false);
+				} catch {
+					const networkName = `${network.coin()} ${network.name()}`;
+
+					setIsSyncingCoin(false);
+
+					return toasts.warning(
+						<SyncErrorMessage
+							failedNetworkNames={[networkName]}
+							onRetry={async () => {
+								setIsSyncingCoin(true);
+								await toasts.dismiss();
+								handleNext();
+							}}
+						/>,
+					);
+				}
+
+				setActiveTab(activeTab + 1);
+
+				break;
+			}
+
+			default: {
+				setActiveTab(activeTab + 1);
+			}
 		}
 	};
 
@@ -267,8 +311,8 @@ export const ImportWallet = () => {
 
 										{activeTab <= Step.EncryptPasswordStep && (
 											<Button
-												disabled={isNextDisabled}
-												isLoading={isEncrypting || isImporting}
+												disabled={isNextDisabled || isSyncingCoin}
+												isLoading={isEncrypting || isImporting || isSyncingCoin}
 												onClick={handleNext}
 												data-testid="ImportWallet__continue-button"
 											>
