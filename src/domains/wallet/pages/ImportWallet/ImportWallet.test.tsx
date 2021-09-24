@@ -177,6 +177,71 @@ describe("ImportWallet", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should import type be editable in 2nd step", async () => {
+		let form: ReturnType<typeof useForm>;
+
+		const Component = () => {
+			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === "ark.devnet");
+			assertNetwork(network);
+
+			network.importMethods = () => ({
+				address: {
+					default: false,
+					permissions: [],
+				},
+				bip39: {
+					default: false,
+					permissions: [],
+				},
+			});
+
+			form = useForm({
+				defaultValues: { network },
+			});
+
+			form.register("type");
+			form.register("network");
+
+			return (
+				<EnvironmentProvider env={env}>
+					<FormProvider {...form}>
+						<SecondStep profile={profile} />
+					</FormProvider>
+				</EnvironmentProvider>
+			);
+		};
+
+		history.push(`/profiles/${profile.id()}`);
+		renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<Component />
+			</Route>,
+			{ history, withProviders: false },
+		);
+
+		expect(screen.getByTestId("ImportWallet__second-step")).toBeTruthy();
+
+		await waitFor(() => expect(screen.getByTestId("ImportWallet__mnemonic-input")).toBeInTheDocument());
+
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
+
+		fireEvent.change(selectDropdown, { target: { value: "test" } });
+
+		await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument());
+
+		fireEvent.change(selectDropdown, { target: { value: "addr" } });
+
+		await waitFor(() => expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.mouseDown(screen.getByTestId("SelectDropdown__option--0"));
+		});
+
+		expect(screen.getByTestId("select-list__input")).toHaveValue("address");
+
+		await waitFor(() => expect(screen.getByTestId("ImportWallet__address-input")).toBeInTheDocument());
+	});
+
 	it("should render 3rd step", async () => {
 		let form: ReturnType<typeof useForm>;
 		const onClickEditAlias = jest.fn();

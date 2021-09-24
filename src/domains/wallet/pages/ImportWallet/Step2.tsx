@@ -317,7 +317,7 @@ export const SecondStep = ({ profile }: { profile: Contracts.IProfile }) => {
 						defaultValue={type}
 						options={options}
 						onChange={(option: any) => {
-							setValue("type", option.value, { shouldDirty: true, shouldValidate: true });
+							setValue("type", option?.value, { shouldDirty: true, shouldValidate: true });
 							setValue("value", undefined);
 							clearErrors("value");
 						}}
