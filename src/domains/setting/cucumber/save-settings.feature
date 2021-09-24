@@ -29,4 +29,4 @@ Feature: Save Settings
         Given Alice signs into a profile with a wallet
         And she is on the settings page
         When she saves a new currency setting
-        Then the balance is the navbar is updated
+        Then the balance in the navbar is updated

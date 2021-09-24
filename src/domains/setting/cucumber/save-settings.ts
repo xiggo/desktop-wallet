@@ -99,37 +99,18 @@ cucumber(
 			await t.click(Selector("#select-currency-menu .select-list-option").withText("ETH (Ξ)"));
 			await saveSettings(t);
 		},
-		"Then the balance is the navbar is updated": async (t: TestController) => {
+		"Then the balance in the navbar is updated": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=Balance__value]").withText("0 ETH").exists).notOk();
 		},
 	},
 	[
 		mockRequest(
-			{
-				method: "POST",
-				url: "https://ark-live.payvo.com/api/transactions/search?page=1&limit=20",
-			},
-			{
-				addresses: ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"],
-			},
+			"https://ark-live.payvo.com/api/transactions?page=1&limit=20&senderId=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
+			[],
 		),
 		mockRequest(
-			{
-				method: "POST",
-				url: "https://ark-live.payvo.com/api/transactions/search?page=1&limit=10",
-			},
-			{
-				addresses: ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"],
-			},
-		),
-		mockRequest(
-			{
-				method: "POST",
-				url: "https://ark-live.payvo.com/api/transactions/search?limit=30",
-			},
-			{
-				addresses: ["AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"],
-			},
+			"https://ark-live.payvo.com/api/transactions?limit=30&address=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
+			[],
 		),
 	],
 );
