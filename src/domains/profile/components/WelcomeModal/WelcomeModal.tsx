@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 const Banner = ({ step }: { step: number }) => {
 	if (step > 1) {
 		return (
-			<div className="-mx-10 my-8">
+			<div className="-mx-10 my-8 border-t border-b border-theme-secondary-300 dark:border-theme-secondary-800">
 				<Image name={`WelcomeModalStep${step - 1}`} domain="profile" className="w-full h-auto" />
 			</div>
 		);
