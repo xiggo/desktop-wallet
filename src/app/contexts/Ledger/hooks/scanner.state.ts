@@ -1,4 +1,4 @@
-import { LedgerData } from "../utils";
+import { LedgerData } from "../contracts";
 
 interface State {
 	error?: string;

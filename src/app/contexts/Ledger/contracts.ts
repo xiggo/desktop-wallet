@@ -13,7 +13,6 @@ export interface LedgerDerivationScheme {
 	address?: number;
 }
 
-export const formatLedgerDerivationPath = (scheme: LedgerDerivationScheme) =>
-	`m/${scheme.purpose || 44}'/${scheme.coinType}'/${scheme.account || 0}'/${scheme.change || 0}/${
-		scheme.address || 0
-	}`;
+export const minVersionList: Record<string, any> = {
+	ARK: "2.1.0",
+};

@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@payvo/profiles";
-import { LedgerProvider } from "app/contexts";
+import { LedgerProvider, minVersionList } from "app/contexts";
 import { toasts } from "app/services";
 import React from "react";
 import MultisignatureRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
@@ -23,6 +23,7 @@ const passphrase = getDefaultWalletMnemonic();
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let getVersionSpy: jest.SpyInstance;
 
 const fixtures: Record<string, any> = {
 	ipfs: undefined,
@@ -44,6 +45,10 @@ beforeEach(async () => {
 	await syncDelegates(profile);
 
 	wallet = profile.wallets().first();
+
+	getVersionSpy = jest
+		.spyOn(wallet.coin().ledger(), "getVersion")
+		.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 	await wallet.synchroniser().identity();
 
@@ -196,6 +201,10 @@ beforeEach(async () => {
 			}),
 		wallet,
 	);
+});
+
+afterAll(() => {
+	getVersionSpy.mockRestore();
 });
 
 describe("MultiSignatureDetail", () => {

@@ -2,7 +2,7 @@
 import { Contracts, DTO } from "@payvo/profiles";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider } from "app/contexts";
+import { LedgerProvider, minVersionList } from "app/contexts";
 import { translations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -50,6 +50,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 const transport = getDefaultLedgerTransport();
+let getVersionSpy: jest.SpyInstance;
 
 describe("SendIpfs", () => {
 	beforeAll(async () => {
@@ -66,9 +67,18 @@ describe("SendIpfs", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+
+		getVersionSpy = jest
+			.spyOn(wallet.coin().ledger(), "getVersion")
+			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+
 		await wallet.synchroniser().identity();
 
 		await syncFees(profile);
+	});
+
+	afterAll(() => {
+		getVersionSpy.mockRestore();
 	});
 
 	it("should render form step", async () => {

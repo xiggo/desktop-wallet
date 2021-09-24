@@ -2,7 +2,7 @@
 import { BIP39 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider } from "app/contexts";
+import { LedgerProvider, minVersionList } from "app/contexts";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -36,6 +36,7 @@ let secondWallet: Contracts.IReadWriteWallet;
 const history = createMemoryHistory();
 const passphrase = getDefaultWalletMnemonic();
 const ledgerTransport = getDefaultLedgerTransport();
+let getVersionSpy: jest.SpyInstance;
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
@@ -138,6 +139,10 @@ describe("Registration", () => {
 			}),
 		);
 
+		getVersionSpy = jest
+			.spyOn(wallet.coin().ledger(), "getVersion")
+			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+
 		await wallet.synchroniser().identity();
 		await secondWallet.synchroniser().identity();
 
@@ -151,6 +156,10 @@ describe("Registration", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
+	});
+
+	afterAll(() => {
+		getVersionSpy.mockRestore();
 	});
 
 	beforeEach(() => {

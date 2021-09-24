@@ -4,7 +4,7 @@ import { Contracts, DTO } from "@payvo/profiles";
 import { screen } from "@testing-library/react";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider } from "app/contexts";
+import { LedgerProvider, minVersionList } from "app/contexts";
 import { toasts } from "app/services";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
@@ -83,6 +83,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
+let getVersionSpy: jest.SpyInstance;
 
 describe("SendTransfer", () => {
 	beforeAll(async () => {
@@ -94,6 +95,10 @@ describe("SendTransfer", () => {
 		wallet = profile.wallets().first();
 		secondWallet = profile.wallets().last();
 
+		getVersionSpy = jest
+			.spyOn(wallet.coin().ledger(), "getVersion")
+			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+
 		nock("https://ark-test.payvo.com")
 			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
@@ -103,6 +108,10 @@ describe("SendTransfer", () => {
 			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"));
 
 		await syncFees(profile);
+	});
+
+	afterAll(() => {
+		getVersionSpy.mockRestore();
 	});
 
 	it("should render form step", async () => {

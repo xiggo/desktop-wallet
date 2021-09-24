@@ -3,7 +3,7 @@ import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-moc
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider } from "app/contexts";
+import { LedgerProvider, minVersionList } from "app/contexts";
 import * as scanner from "app/contexts/Ledger/hooks/scanner.state";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -22,6 +22,7 @@ describe("LedgerTabs", () => {
 	let transport: typeof Transport;
 	let publicKeyPaths = new Map();
 	let onClickEditWalletName: jest.Mock;
+	let getVersionSpy: jest.SpyInstance;
 
 	beforeAll(() => {
 		nock("https://ark-test.payvo.com/api")
@@ -60,6 +61,11 @@ describe("LedgerTabs", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().first();
+
+		getVersionSpy = jest
+			.spyOn(wallet.coin().ledger(), "getVersion")
+			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+
 		await wallet.synchroniser().identity();
 
 		onClickEditWalletName = jest.fn();
@@ -92,6 +98,10 @@ describe("LedgerTabs", () => {
 		jest.useRealTimers();
 	});
 
+	afterAll(() => {
+		getVersionSpy.mockRestore();
+	});
+
 	const BaseComponent = ({ activeIndex }: { activeIndex: number }) => (
 		<Route path="/profiles/:profileId">
 			<LedgerProvider transport={transport}>
@@ -109,7 +119,7 @@ describe("LedgerTabs", () => {
 
 		const getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
-			.mockRejectedValue(new Error("Failed"));
+			.mockRejectedValue(new Error(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")));
 
 		let formReference: ReturnType<typeof useForm>;
 		const Component = () => {

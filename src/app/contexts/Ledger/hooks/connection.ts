@@ -7,9 +7,11 @@ import retry from "async-retry";
 import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import semver from "semver";
 
 import { useEnvironmentContext } from "../../Environment";
-import { formatLedgerDerivationPath, LedgerData } from "../utils";
+import { LedgerData, minVersionList } from "../contracts";
+import { formatLedgerDerivationPath } from "../utils/format-ledger-derivation-path";
 import { connectionReducer, defaultConnectionState } from "./connection.state";
 
 export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) => {
@@ -97,11 +99,24 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 
 				const connectFunction: retry.RetryFunction<void> = async (bail, attempts) => {
 					if (abortRetryReference.current && attempts > 1) {
-						bail(new Error("User aborted"));
+						bail(new Error(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")));
 					}
 
 					await instance.__construct();
 					await instance.ledger().connect(transport);
+
+					if (minVersionList[coin]) {
+						const currentVersion = await instance.ledger().getVersion();
+
+						if (semver.lt(currentVersion, minVersionList[coin])) {
+							bail(
+								new Error(
+									t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", { coin, version: currentVersion }),
+								),
+							);
+						}
+					}
+
 					// Ensure that the app is accessible
 					await instance.ledger().getPublicKey(formatLedgerDerivationPath({ coinType: slip44 }));
 				};
@@ -109,16 +124,21 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 				await retry(connectFunction, retryOptions);
 				dispatch({ type: "connected" });
 			} catch (connectError) {
+				const errorMessage =
+					connectError.statusText === "UNKNOWN_ERROR"
+						? t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")
+						: connectError.message;
+
 				try {
 					await instance.ledger().disconnect();
 				} catch {
 					//
 				}
-				dispatch({ message: connectError.message, type: "failed" });
+				dispatch({ message: errorMessage, type: "failed" });
 				throw connectError;
 			}
 		},
-		[transport],
+		[t, transport],
 	);
 
 	const disconnect = useCallback(async (coin: Coins.Coin) => {

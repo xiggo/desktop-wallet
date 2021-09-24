@@ -2,10 +2,16 @@ import Transport, { Observer } from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
 import { WalletData, WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
+import { LSK } from "@payvo/sdk-lsk";
+import { renderHook } from "@testing-library/react-hooks";
 import { toasts } from "app/services";
+import { translations as walletTranslations } from "domains/wallet/i18n";
+import nock from "nock";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
+import { minVersionList } from "../contracts";
 import { useLedgerConnection } from "./connection";
 
 describe("Use Ledger Connection", () => {
@@ -13,6 +19,7 @@ describe("Use Ledger Connection", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let publicKeyPaths = new Map();
+	let getVersionSpy: jest.SpyInstance;
 
 	beforeEach(async () => {
 		transport = createTransportReplayer(RecordStore.fromString(""));
@@ -22,6 +29,10 @@ describe("Use Ledger Connection", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().first();
+
+		getVersionSpy = jest
+			.spyOn(wallet.coin().ledger(), "getVersion")
+			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		publicKeyPaths = new Map([
 			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -37,6 +48,7 @@ describe("Use Ledger Connection", () => {
 	afterEach(() => {
 		jest.runOnlyPendingTimers();
 		jest.useRealTimers();
+		getVersionSpy.mockRestore();
 	});
 
 	it("should listen for device", async () => {
@@ -158,7 +170,15 @@ describe("Use Ledger Connection", () => {
 			jest.clearAllMocks();
 		});
 
-		const Component = ({ retries = 3 }: { retries?: number }) => {
+		const Component = ({
+			userProfile = profile,
+			userWallet = wallet,
+			retries = 3,
+		}: {
+			userProfile?: Contracts.IProfile;
+			userWallet?: Contracts.IReadWriteWallet;
+			retries?: number;
+		}) => {
 			const {
 				connect,
 				isConnected,
@@ -169,7 +189,7 @@ describe("Use Ledger Connection", () => {
 			} = useLedgerConnection(transport);
 			const handleConnect = async () => {
 				try {
-					await connect(profile, wallet.coinId(), wallet.networkId(), {
+					await connect(userProfile, userWallet.coinId(), userWallet.networkId(), {
 						factor: 1,
 						minTimeout: 10,
 						randomize: false,
@@ -188,7 +208,7 @@ describe("Use Ledger Connection", () => {
 
 					<button onClick={abortConnectionRetry}>Abort</button>
 					<button onClick={handleConnect}>Connect</button>
-					<button onClick={() => disconnect(wallet.coin())}>Disconnect</button>
+					<button onClick={() => disconnect(userWallet.coin())}>Disconnect</button>
 				</div>
 			);
 		};
@@ -254,7 +274,11 @@ describe("Use Ledger Connection", () => {
 				fireEvent.click(screen.getByText("Abort"));
 			});
 
-			await waitFor(() => expect(screen.getByText("User aborted")).toBeInTheDocument());
+			await waitFor(() =>
+				expect(
+					screen.getByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
+				).toBeInTheDocument(),
+			);
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(3);
@@ -265,7 +289,7 @@ describe("Use Ledger Connection", () => {
 		it("should fail to connect with retries", async () => {
 			const getPublicKeySpy = jest
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
-				.mockRejectedValue(new Error("Failed"));
+				.mockRejectedValue({ message: "Failed", statusText: "UNKNOWN_ERROR" });
 
 			render(<Component />);
 
@@ -278,11 +302,87 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await waitFor(() => expect(screen.queryByText("Failed")).toBeInTheDocument());
 
-			expect(getPublicKeySpy).toHaveBeenCalledTimes(5);
+			await waitFor(() =>
+				expect(
+					screen.queryByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
+				).toBeInTheDocument(),
+			);
+
+			expect(getPublicKeySpy).toHaveBeenCalledTimes(9);
 
 			getPublicKeySpy.mockReset();
+		});
+
+		it("should fail to connect if app version is less than minimum version", async () => {
+			const { result } = renderHook(() => useTranslation());
+			const { t } = result.current;
+
+			const getPublicKeySpy = jest
+				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.mockResolvedValue(publicKeyPaths.values().next().value);
+
+			const outdatedVersion = "1.0.1";
+			const getVersionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(outdatedVersion);
+
+			render(<Component />);
+
+			expect(screen.getByText("Connect")).toBeInTheDocument();
+
+			act(() => {
+				fireEvent.click(screen.getByText("Connect"));
+			});
+
+			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
+
+			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+
+			await waitFor(() =>
+				expect(
+					screen.queryByText(
+						t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
+							coin: wallet.network().coin(),
+							version: outdatedVersion,
+						}),
+					),
+				).toBeInTheDocument(),
+			);
+
+			getPublicKeySpy.mockReset();
+			getVersionSpy.mockReset();
+		});
+
+		it("should ignore the app version check for coins that are not in the minVersionList", async () => {
+			nock.disableNetConnect();
+
+			env.registerCoin("LSK", LSK);
+
+			const profile = env.profiles().create("empty");
+
+			const { wallet } = await profile.walletFactory().generate({
+				coin: "LSK",
+				network: "lsk.testnet",
+			});
+			await env.wallets().syncByProfile(profile);
+
+			const getPublicKeySpy = jest
+				.spyOn(wallet.coin().ledger(), "getPublicKey")
+				.mockResolvedValue(publicKeyPaths.values().next().value);
+
+			render(<Component userProfile={profile} userWallet={wallet} />);
+
+			act(() => {
+				fireEvent.click(screen.getByText("Connect"));
+			});
+
+			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
+
+			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByText("Connected")).toBeInTheDocument());
+
+			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
+
+			getPublicKeySpy.mockRestore();
 		});
 	});
 
@@ -318,7 +418,7 @@ describe("Use Ledger Connection", () => {
 		};
 
 		it("should succeed in connecting with options by default", async () => {
-			let toastSpy = jest.SpyInstance;
+			let toastSpy: jest.SpyInstance;
 
 			const getPublicKeySpy = jest
 				.spyOn(wallet.coin().ledger(), "getPublicKey")

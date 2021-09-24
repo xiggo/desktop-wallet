@@ -22,6 +22,7 @@ export const translations: { [key: string]: any } = {
 		NO_DEVICE_FOUND: "Ledger device was not found in time",
 		OPEN_APP: "Open the {{coin}} app on your device ...",
 		TITLE: "Ledger Wallet",
+		UPDATE_ERROR: "The {{coin}} app version is {{version}}. Please update the {{coin}} app via Ledger Live.",
 		WAITING_DEVICE: "Waiting for Ledger ...",
 	},
 	MODAL_NAME_WALLET: {

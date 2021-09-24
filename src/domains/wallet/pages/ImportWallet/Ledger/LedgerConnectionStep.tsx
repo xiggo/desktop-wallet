@@ -27,7 +27,7 @@ const ConnectionContent = ({
 	}
 
 	if (error) {
-		return <Alert variant="danger">{t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")}</Alert>;
+		return <Alert variant="danger">{error}</Alert>;
 	}
 
 	return (
