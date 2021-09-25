@@ -82,26 +82,29 @@ describe("DelegateTable", () => {
 		votesAmountMinimumMock.mockRestore();
 	});
 
-	it.each(["base", "requiresAmount"])("should render loading state for %s", (voteType) => {
-		const votesAmountMinimumMock = jest
-			.spyOn(wallet.network(), "votesAmountMinimum")
-			.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
+	describe.each(["base", "requiresAmount"])("loading state for %s", (voteType) => {
+		it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
+			const votesAmountMinimumMock = jest
+				.spyOn(wallet.network(), "votesAmountMinimum")
+				.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
 
-		const { container, asFragment } = render(
-			<DelegateTable
-				delegates={[]}
-				isLoading={true}
-				voteDelegates={[]}
-				unvoteDelegates={[]}
-				selectedWallet={wallet}
-				maxVotes={wallet.network().maximumVotesPerTransaction()}
-			/>,
-		);
+			const { container, asFragment } = render(
+				<DelegateTable
+					delegates={[]}
+					isLoading={true}
+					voteDelegates={[]}
+					unvoteDelegates={[]}
+					selectedWallet={wallet}
+					maxVotes={wallet.network().maximumVotesPerTransaction()}
+					isCompact={isCompact}
+				/>,
+			);
 
-		expect(container).toBeTruthy();
-		expect(asFragment()).toMatchSnapshot();
+			expect(container).toBeTruthy();
+			expect(asFragment()).toMatchSnapshot();
 
-		votesAmountMinimumMock.mockRestore();
+			votesAmountMinimumMock.mockRestore();
+		});
 	});
 
 	it("should render pagination", () => {

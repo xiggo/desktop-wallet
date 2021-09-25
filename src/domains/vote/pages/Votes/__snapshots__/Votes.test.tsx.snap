@@ -513,10 +513,10 @@ exports[`Votes should filter current delegates 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -538,7 +538,7 @@ exports[`Votes should filter current delegates 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -568,13 +568,13 @@ exports[`Votes should filter current delegates 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -1233,10 +1233,10 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1258,7 +1258,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -1288,13 +1288,13 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -1314,10 +1314,10 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1339,7 +1339,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -1369,13 +1369,13 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -1395,10 +1395,10 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1420,7 +1420,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -1450,13 +1450,13 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -2119,10 +2119,10 @@ exports[`Votes should render 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2144,7 +2144,7 @@ exports[`Votes should render 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -2174,13 +2174,13 @@ exports[`Votes should render 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -2200,10 +2200,10 @@ exports[`Votes should render 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2225,7 +2225,7 @@ exports[`Votes should render 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -2255,13 +2255,13 @@ exports[`Votes should render 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -2281,10 +2281,10 @@ exports[`Votes should render 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -2306,7 +2306,7 @@ exports[`Votes should render 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -2336,13 +2336,13 @@ exports[`Votes should render 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -3001,10 +3001,10 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3026,7 +3026,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -3056,13 +3056,13 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -3082,10 +3082,10 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3107,7 +3107,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -3137,13 +3137,13 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -3163,10 +3163,10 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3188,7 +3188,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -3218,13 +3218,13 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -4256,10 +4256,10 @@ exports[`Votes should select a delegate 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -4281,7 +4281,7 @@ exports[`Votes should select a delegate 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -4311,13 +4311,13 @@ exports[`Votes should select a delegate 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-danger-400 hover:text-theme-danger-500"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -4337,10 +4337,10 @@ exports[`Votes should select a delegate 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -4362,7 +4362,7 @@ exports[`Votes should select a delegate 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -4392,13 +4392,13 @@ exports[`Votes should select a delegate 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -4418,10 +4418,10 @@ exports[`Votes should select a delegate 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -4443,7 +4443,7 @@ exports[`Votes should select a delegate 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -4473,13 +4473,13 @@ exports[`Votes should select a delegate 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -5137,10 +5137,10 @@ exports[`Votes should select an address without vote 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5162,7 +5162,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -5192,13 +5192,13 @@ exports[`Votes should select an address without vote 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -5218,10 +5218,10 @@ exports[`Votes should select an address without vote 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5243,7 +5243,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -5273,13 +5273,13 @@ exports[`Votes should select an address without vote 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -5299,10 +5299,10 @@ exports[`Votes should select an address without vote 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5324,7 +5324,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -5354,13 +5354,13 @@ exports[`Votes should select an address without vote 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -7079,10 +7079,10 @@ exports[`Votes should show network warning 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -7104,7 +7104,7 @@ exports[`Votes should show network warning 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -7134,13 +7134,13 @@ exports[`Votes should show network warning 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-danger-400 hover:text-theme-danger-500"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -7160,10 +7160,10 @@ exports[`Votes should show network warning 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -7185,7 +7185,7 @@ exports[`Votes should show network warning 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -7215,13 +7215,13 @@ exports[`Votes should show network warning 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -7241,10 +7241,10 @@ exports[`Votes should show network warning 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -7266,7 +7266,7 @@ exports[`Votes should show network warning 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -7296,13 +7296,13 @@ exports[`Votes should show network warning 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -7992,10 +7992,10 @@ exports[`Votes should show resigned delegate notice 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -8017,7 +8017,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -8047,13 +8047,13 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -8073,10 +8073,10 @@ exports[`Votes should show resigned delegate notice 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -8098,7 +8098,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -8128,13 +8128,13 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -8154,10 +8154,10 @@ exports[`Votes should show resigned delegate notice 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4 font-bold border-2 border-r-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3"
                       >
                         <div
-                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM -ml-0.5 flex-shrink-0"
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
                           data-testid="Avatar"
                         >
                           <div
@@ -8179,7 +8179,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center border-t-2 border-b-2 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -8209,13 +8209,13 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end border-2 border-l-0 border-transparent"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >

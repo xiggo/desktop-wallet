@@ -107,7 +107,7 @@ describe("DelegateRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render the selected vote", () => {
+	it.each([true, false])("should render the selected vote", (isCompact: boolean) => {
 		const secondDelegate = new ReadOnlyWallet({
 			address: data[1].address,
 			explorerLink: "",
@@ -143,6 +143,7 @@ describe("DelegateRow", () => {
 						toggleUnvotesSelected={jest.fn()}
 						toggleVotesSelected={jest.fn()}
 						selectedWallet={wallet}
+						isCompact={isCompact}
 					/>
 					<DelegateRow
 						index={1}
@@ -152,6 +153,7 @@ describe("DelegateRow", () => {
 						toggleUnvotesSelected={jest.fn()}
 						toggleVotesSelected={jest.fn()}
 						selectedWallet={wallet}
+						isCompact={isCompact}
 					/>
 					<DelegateRow
 						index={2}
@@ -162,6 +164,7 @@ describe("DelegateRow", () => {
 						toggleUnvotesSelected={jest.fn()}
 						toggleVotesSelected={jest.fn()}
 						selectedWallet={wallet}
+						isCompact={isCompact}
 					/>
 				</tbody>
 			</table>,

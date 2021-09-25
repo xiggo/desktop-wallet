@@ -13,6 +13,7 @@ export interface DelegateTableProperties {
 	votes?: Contracts.VoteRegistryItem[];
 	onContinue?: (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => void;
 	isPaginationDisabled?: boolean;
+	isCompact?: boolean;
 	subtitle?: React.ReactNode;
 }
 

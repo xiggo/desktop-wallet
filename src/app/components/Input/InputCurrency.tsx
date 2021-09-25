@@ -10,6 +10,7 @@ type InputCurrencyProperties = {
 	ignoreContext?: boolean;
 	errorMessage?: string;
 	isInvalid?: boolean;
+	isCompact?: boolean;
 	noShadow?: boolean;
 } & Omit<React.InputHTMLAttributes<any>, "onChange" | "defaultValue">;
 

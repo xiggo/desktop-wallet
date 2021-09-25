@@ -4,8 +4,8 @@ import { render } from "utils/testing-library";
 import { Input } from "./Input";
 
 describe("Input", () => {
-	it("should render a default input", () => {
-		const { asFragment } = render(<Input />);
+	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
+		const { asFragment } = render(<Input isCompact={isCompact} />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

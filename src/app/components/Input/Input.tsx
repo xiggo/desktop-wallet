@@ -24,6 +24,7 @@ type InputProperties = {
 	isFocused?: boolean;
 	isInvalid?: boolean;
 	isTextArea?: boolean;
+	isCompact?: boolean;
 	noBorder?: boolean;
 	noShadow?: boolean;
 	suggestion?: string;
@@ -33,6 +34,7 @@ export const InputWrapperStyled = styled.div<{
 	disabled?: boolean;
 	invalid?: boolean;
 	isTextArea?: boolean;
+	isCompact?: boolean;
 	noBorder?: boolean;
 	noShadow?: boolean;
 }>`
@@ -62,9 +64,13 @@ export const InputWrapperStyled = styled.div<{
 		return tw`bg-theme-background border-theme-secondary-400 dark:border-theme-secondary-700 focus-within:(border-theme-primary-600 ring-theme-primary-600)`;
 	}}
 
-	${({ isTextArea }) => {
+	${({ isTextArea, isCompact }) => {
 		if (isTextArea) {
 			return tw`relative`;
+		}
+
+		if (isCompact) {
+			return tw`height[34px] overflow-hidden`;
 		}
 
 		return tw`h-14 overflow-hidden`;
@@ -98,6 +104,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 			isFocused,
 			isInvalid,
 			isTextArea,
+			isCompact,
 			noBorder,
 			noShadow,
 			style,
@@ -156,6 +163,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 					noBorder={noBorder}
 					noShadow={noShadow}
 					isTextArea={isTextArea}
+					isCompact={isCompact}
 				>
 					{addons?.start !== undefined && addons.start.content}
 					<div className={cn("relative flex flex-1 h-full", { invisible: hideInputValue })}>

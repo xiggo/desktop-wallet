@@ -68,7 +68,7 @@ describe("DelegateVoteAmount", () => {
 		votesAmountStepMock.mockRestore();
 	});
 
-	it("should render", () => {
+	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
 		const { container, asFragment } = render(
 			<DelegateVoteAmount
 				isSelectedVote={true}
@@ -81,6 +81,7 @@ describe("DelegateVoteAmount", () => {
 				delegateAddress={delegate.address()}
 				availableBalance={wallet.balance()}
 				setAvailableBalance={jest.fn()}
+				isCompact={isCompact}
 			/>,
 		);
 

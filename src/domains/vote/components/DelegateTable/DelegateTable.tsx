@@ -21,6 +21,7 @@ export const DelegateTable = ({
 	votes,
 	onContinue,
 	isPaginationDisabled,
+	isCompact,
 	subtitle,
 }: DelegateTableProperties) => {
 	const { t } = useTranslation();
@@ -182,6 +183,7 @@ export const DelegateTable = ({
 							voted={voted}
 							isVoteDisabled={isVoteDisabled}
 							isLoading={showSkeleton}
+							isCompact={isCompact}
 							toggleUnvotesSelected={toggleUnvotesSelected}
 							toggleVotesSelected={toggleVotesSelected}
 						/>
