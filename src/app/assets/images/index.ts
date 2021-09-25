@@ -1,4 +1,5 @@
 import { error } from "domains/error/images";
+import { exchange } from "domains/exchange/images";
 import { news } from "domains/news/images";
 import { plugin } from "domains/plugin/images";
 import { profile } from "domains/profile/images";
@@ -38,6 +39,7 @@ import { ReactComponent as WelcomeBannerDarkBlue } from "./welcome-banner-dark-b
 import { ReactComponent as WelcomeBannerDarkGreen } from "./welcome-banner-dark-green.svg";
 import { ReactComponent as WelcomeBannerLightBlue } from "./welcome-banner-light-blue.svg";
 import { ReactComponent as WelcomeBannerLightGreen } from "./welcome-banner-light-green.svg";
+import { ReactComponent as WorldMap } from "./world-map.svg";
 
 export const images = {
 	common: {
@@ -74,8 +76,10 @@ export const images = {
 		WelcomeBannerDarkGreen,
 		WelcomeBannerLightBlue,
 		WelcomeBannerLightGreen,
+		WorldMap,
 	},
 	error,
+	exchange,
 	news,
 	plugin,
 	profile,

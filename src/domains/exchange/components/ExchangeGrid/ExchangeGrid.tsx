@@ -1,16 +1,30 @@
 import { EmptyBlock } from "app/components/EmptyBlock";
+import { Exchange } from "domains/exchange/contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { ExchangeCard } from "../ExchangeCard";
+import { ExchangeCard, ExchangeCardSkeleton } from "../ExchangeCard";
 
 interface ExchangeGridProperties {
-	exchanges: any[];
-	onClick: (exchange: any) => void;
+	exchanges: Exchange[];
+	isLoading: boolean;
+	onClick: (exchangeId: string) => void;
 }
 
-export const ExchangeGrid = ({ exchanges, onClick }: ExchangeGridProperties) => {
+export const ExchangeGrid = ({ exchanges, isLoading, onClick }: ExchangeGridProperties) => {
 	const { t } = useTranslation();
+
+	if (isLoading) {
+		return (
+			<div data-testid="ExchangeGrid">
+				<div className="grid grid-cols-3 w-full gap-4.5">
+					{Array.from({ length: 3 }).map((_, index) => (
+						<ExchangeCardSkeleton key={index} />
+					))}
+				</div>
+			</div>
+		);
+	}
 
 	if (exchanges.length === 0) {
 		return (
@@ -22,8 +36,8 @@ export const ExchangeGrid = ({ exchanges, onClick }: ExchangeGridProperties) => 
 
 	return (
 		<div data-testid="ExchangeGrid" className="grid grid-cols-3 w-full gap-4.5">
-			{exchanges.map((exchange: any) => (
-				<ExchangeCard key={exchange.id} exchange={exchange} onClick={() => onClick(exchange)} />
+			{exchanges.map((exchange: Exchange) => (
+				<ExchangeCard key={exchange.slug} exchange={exchange} onClick={() => onClick(exchange.slug)} />
 			))}
 		</div>
 	);

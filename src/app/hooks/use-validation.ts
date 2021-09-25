@@ -1,5 +1,6 @@
 import { useEnvironmentContext } from "app/contexts";
 import { password } from "app/validations/password";
+import { exchangeOrder } from "domains/exchange/validations";
 import { createProfile } from "domains/profile/validations";
 import { settings } from "domains/setting/validations";
 import {
@@ -25,6 +26,7 @@ export const useValidation = () => {
 			common: common(t),
 			createProfile: createProfile(t, env),
 			delegateRegistration: delegateRegistration(t),
+			exchangeOrder: exchangeOrder(t),
 			multiSignatureRegistration: multiSignatureRegistration(t),
 			password: password(t),
 			receiveFunds: receiveFunds(t),

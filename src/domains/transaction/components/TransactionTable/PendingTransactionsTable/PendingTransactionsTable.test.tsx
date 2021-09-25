@@ -563,7 +563,7 @@ describe("Signed Transaction Table", () => {
 		);
 
 		act(() => {
-			fireEvent.click(getAllByTestId("TransactionRow__remove")[0]);
+			fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
 		});
 
 		expect(getByTestId("modal__inner")).toBeTruthy();
@@ -604,7 +604,7 @@ describe("Signed Transaction Table", () => {
 		);
 
 		act(() => {
-			fireEvent.click(getAllByTestId("TransactionRow__remove")[0]);
+			fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
 		});
 
 		expect(getByTestId("modal__inner")).toBeTruthy();

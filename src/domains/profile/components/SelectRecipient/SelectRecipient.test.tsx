@@ -88,6 +88,12 @@ describe("SelectRecipient", () => {
 		);
 	});
 
+	it("should not show select recipient button if showOptions is false", async () => {
+		render(<SelectRecipient profile={profile} showOptions={false} />);
+
+		expect(() => screen.getByTestId("SelectRecipient__select-recipient")).toThrow(/Unable to find an element by/);
+	});
+
 	it("should not open contacts modal if disabled", async () => {
 		const { getByTestId } = render(
 			<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" disabled />,

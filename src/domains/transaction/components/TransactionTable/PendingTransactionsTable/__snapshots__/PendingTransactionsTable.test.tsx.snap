@@ -915,7 +915,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TransactionRow__remove"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div
@@ -1259,7 +1259,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                 </button>
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TransactionRow__remove"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div
@@ -1581,7 +1581,7 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
               >
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TransactionRow__remove"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div
@@ -1925,7 +1925,7 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                 </button>
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TransactionRow__remove"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div
@@ -2269,7 +2269,7 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                 </button>
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TransactionRow__remove"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div
@@ -2613,7 +2613,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                 </button>
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TransactionRow__remove"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div
@@ -3569,7 +3569,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                 </button>
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TransactionRow__remove"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div
@@ -3912,8 +3912,8 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                   </div>
                 </button>
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 kkzWwe text-theme-danger-400 hover:text-theme-danger-500"
-                  data-testid="TransactionRow__remove"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm text-theme-danger-400 hover:text-theme-danger-500"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div
@@ -4257,7 +4257,7 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                 </button>
                 <button
                   class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TransactionRow__remove"
+                  data-testid="TableRemoveButton"
                   type="button"
                 >
                   <div

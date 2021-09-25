@@ -1,5 +1,4 @@
 /* eslint-disable unicorn/no-null */
-
 import { Profile } from "@payvo/profiles";
 import { Wallet } from "@payvo/profiles/distribution/wallet";
 import { Coins, Networks } from "@payvo/sdk";

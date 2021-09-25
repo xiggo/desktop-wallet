@@ -226,6 +226,25 @@ export const defaultNetMocks = () => {
 			.reply(200, require(`tests/fixtures/plugins/downloads/${pluginName}`))
 			.persist();
 	}
+
+	nock("https://exchanges.payvo.com")
+		.get("/api")
+		.reply(200, require("tests/fixtures/exchange/exchanges.json"))
+		.get("/api/changenow/currencies")
+		.reply(200, require("tests/fixtures/exchange/changenow/currencies.json"))
+		.get("/api/changenow/currencies/ark")
+		.reply(200, require("tests/fixtures/exchange/changenow/currency-ark.json"))
+		.get("/api/changenow/currencies/btc")
+		.reply(200, require("tests/fixtures/exchange/changenow/currency-btc.json"))
+		.get("/api/changenow/tickers/btc/ark")
+		.reply(200, require("tests/fixtures/exchange/changenow/minimum.json"))
+		.get("/api/changenow/currencies/ark/payoutAddress")
+		.reply(200, { data: true })
+		.get("/api/changenow/tickers/ark/btc")
+		.reply(200, require("tests/fixtures/exchange/changenow/minimum.json"))
+		.get(new RegExp("/api/changenow/tickers/[a-z]{3}/[a-z]{3}/1$"))
+		.reply(200, require("tests/fixtures/exchange/changenow/estimate.json"))
+		.persist();
 };
 
 export const useDefaultNetMocks = defaultNetMocks;

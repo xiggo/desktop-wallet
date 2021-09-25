@@ -9,7 +9,7 @@ import { Select } from "app/components/SelectDropdown";
 import { TruncateEnd } from "app/components/TruncateEnd";
 import { useWalletAlias, WalletAliasResult } from "app/hooks/use-wallet-alias";
 import cn from "classnames";
-import { useProfileAddresses } from "domains/profile/hooks/use-profile-addresses";
+import { AddressProperties, useProfileAddresses } from "domains/profile/hooks/use-profile-addresses";
 import { SearchRecipient } from "domains/transaction/components/SearchRecipient";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 
@@ -19,6 +19,7 @@ type SelectRecipientProperties = {
 	profile: Contracts.IProfile;
 	disabled?: boolean;
 	isInvalid?: boolean;
+	showOptions?: boolean;
 	contactSearchTitle?: string;
 	contactSearchDescription?: string;
 	placeholder?: string;
@@ -73,6 +74,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			profile,
 			disabled,
 			isInvalid,
+			showOptions = true,
 			network,
 			placeholder,
 			exceptMultiSignature,
@@ -123,7 +125,8 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 		}, [address]); // eslint-disable-line react-hooks/exhaustive-deps
 
 		const { allAddresses } = useProfileAddresses({ network, profile }, exceptMultiSignature);
-		const recipientAddresses = allAddresses.map(({ address }) => ({
+
+		const recipientOptions = allAddresses.map(({ address }: AddressProperties) => ({
 			label: address,
 			value: address,
 		}));
@@ -140,27 +143,31 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			<div>
 				<div data-testid="SelectRecipient__wrapper" className="flex relative items-center w-full text-left">
 					<Select
+						id="SelectRecipient__dropdown"
 						showCaret={false}
 						isInvalid={isInvalidValue}
 						disabled={disabled}
 						defaultValue={selectedAddress}
 						placeholder={placeholder}
 						ref={reference}
-						options={recipientAddresses}
+						options={showOptions ? recipientOptions : []}
+						showOptions={showOptions}
 						allowFreeInput={true}
 						onChange={(option: any) => onChangeAddress(option.value)}
 						addons={{
-							end: {
-								content: (
-									<div
-										data-testid="SelectRecipient__select-recipient"
-										className="flex items-center cursor-pointer"
-										onClick={openRecipients}
-									>
-										<Icon name="User" size="lg" />
-									</div>
-								),
-							},
+							end: showOptions
+								? {
+										content: (
+											<div
+												data-testid="SelectRecipient__select-recipient"
+												className={cn("flex items-center", { "cursor-pointer": !disabled })}
+												onClick={openRecipients}
+											>
+												<Icon name="User" size="lg" />
+											</div>
+										),
+								  }
+								: undefined,
 							start: {
 								content: (
 									<div className="flex items-center">

@@ -25,6 +25,7 @@ const SelectDropdown = ({
 	innerClassName,
 	allowFreeInput = false,
 	showCaret = true,
+	showOptions = true,
 	renderLabel,
 	id,
 }: SelectDropdownProperties) => {
@@ -205,8 +206,8 @@ const SelectDropdown = ({
 						placeholder,
 					})}
 				/>
-				<SelectOptionsList {...getMenuProps({ className: isOpen ? "is-open" : "" })}>
-					{isOpen && (
+				<SelectOptionsList {...getMenuProps({ className: showOptions && isOpen ? "is-open" : "" })}>
+					{showOptions && isOpen && (
 						<RenderOptions
 							data={data}
 							getItemProps={getItemProps}
@@ -233,6 +234,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 			innerClassName,
 			allowFreeInput,
 			showCaret,
+			showOptions,
 			isInvalid,
 			disabled,
 			onChange,
@@ -271,6 +273,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 					id={id}
 					allowFreeInput={allowFreeInput}
 					showCaret={showCaret}
+					showOptions={showOptions}
 					className={className}
 					innerClassName={innerClassName}
 					options={options}

@@ -2,6 +2,7 @@ import { Contracts, DTO } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
+import { TableRemoveButton } from "app/components/TableRemoveButton";
 import { Tooltip } from "app/components/Tooltip";
 import { useTimeFormat } from "app/hooks/use-time-format";
 import { TransactionRowMemo } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMemo";
@@ -76,27 +77,6 @@ const SignButton = ({ isCompact, isAwaitingFinalSignature, canBeSigned, onClick 
 			onClick={onClick}
 		>
 			<ButtonContent />
-		</Button>
-	);
-};
-
-const RemoveButton = ({ isCompact, onClick }: { isCompact?: boolean; onClick: (event: MouseEvent) => void }) => {
-	if (isCompact) {
-		return (
-			<Button
-				size="sm"
-				data-testid="TransactionRow__remove"
-				variant="transparent"
-				className="text-theme-danger-400 hover:text-theme-danger-500"
-				onClick={onClick}
-				icon="Trash"
-			/>
-		);
-	}
-
-	return (
-		<Button data-testid="TransactionRow__remove" variant="danger" onClick={onClick}>
-			<Icon name="Trash" size="lg" />
 		</Button>
 	);
 };
@@ -176,7 +156,7 @@ export const SignedTransactionRow = ({
 					onClick={() => onSign?.(transaction)}
 				/>
 
-				<RemoveButton isCompact={isCompact} onClick={handleRemove} />
+				<TableRemoveButton isCompact={isCompact} onClick={handleRemove} />
 			</TableCell>
 		</TableRow>
 	);

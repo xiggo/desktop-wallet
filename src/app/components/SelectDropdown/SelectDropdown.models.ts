@@ -40,6 +40,7 @@ export type SelectDropdownProperties = {
 	innerClassName?: string;
 	showCaret?: boolean;
 	isInvalid?: boolean;
+	showOptions?: boolean;
 	disabled?: boolean;
 	allowFreeInput?: boolean;
 	onSelectedItemChange: any;
@@ -53,6 +54,7 @@ export type SelectProperties = {
 	innerClassName?: string;
 	isInvalid?: boolean;
 	showCaret?: boolean;
+	showOptions?: boolean;
 	disabled?: boolean;
 	allowFreeInput?: boolean;
 	onChange?: (selected: OptionProperties) => void;

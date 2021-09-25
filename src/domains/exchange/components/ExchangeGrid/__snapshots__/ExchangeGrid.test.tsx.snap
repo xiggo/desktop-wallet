@@ -7,7 +7,7 @@ exports[`ExchangeGrid should render 1`] = `
     data-testid="ExchangeGrid"
   >
     <div
-      data-testid="ExchangeCard--exchange"
+      data-testid="ExchangeCard--changenow"
     >
       <div>
         <button
@@ -22,16 +22,19 @@ exports[`ExchangeGrid should render 1`] = `
               class="overflow-hidden flex-shrink-0 rounded-lg w-11 h-11"
             >
               <img
-                alt="undefined Logo"
+                alt="ChangeNOW Logo"
                 class="object-cover w-full h-full"
+                src="https://exchanges.payvo.com/images/changenow/thumbnail.png"
               />
             </div>
             <div
               class="flex flex-col truncate"
             >
               <div
-                class="truncate link font-semibold text-lg"
-              />
+                class="truncate font-semibold text-lg link"
+              >
+                ChangeNOW
+              </div>
             </div>
           </div>
           <div

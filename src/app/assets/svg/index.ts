@@ -14,6 +14,7 @@ import { ReactComponent as CircleExclamationMark } from "./circle-exclamation-ma
 import { ReactComponent as CircleInfo } from "./circle-info.svg";
 import { ReactComponent as CircleQuestionMark } from "./circle-question-mark.svg";
 import { ReactComponent as Clock } from "./clock.svg";
+import { ReactComponent as ClockError } from "./clock-error.svg";
 import { ReactComponent as ClockPencil } from "./clock-pencil.svg";
 import { ReactComponent as ClockSmall } from "./clock-small.svg";
 import { ReactComponent as Copy } from "./copy.svg";
@@ -39,6 +40,7 @@ import { ReactComponent as LoaderLogo } from "./loader-logo.svg";
 import { ReactComponent as Lock } from "./lock.svg";
 import { ReactComponent as MagnifyingGlass } from "./magnifying-glass.svg";
 import { ReactComponent as MagnifyingGlassId } from "./magnifying-glass-id.svg";
+import { ReactComponent as MoneyCoinSwap } from "./money-coin-swap.svg";
 import { ReactComponent as Pencil } from "./pencil.svg";
 import { ReactComponent as PencilRuler } from "./pencil-ruler.svg";
 import { ReactComponent as Plus } from "./plus.svg";
@@ -71,6 +73,7 @@ export const SvgCollection: any = {
 	CircleInfo,
 	CircleQuestionMark,
 	Clock,
+	ClockError,
 	ClockPencil,
 	ClockSmall,
 	Copy,
@@ -98,6 +101,7 @@ export const SvgCollection: any = {
 	LockOpen: TransactionIcons.UnlockToken,
 	MagnifyingGlass,
 	MagnifyingGlassId,
+	MoneyCoinSwap,
 	Pencil,
 	PencilRuler,
 	Plus,

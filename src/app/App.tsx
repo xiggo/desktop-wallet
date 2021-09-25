@@ -4,6 +4,7 @@ import "focus-visible";
 // import { XLM } from "@payvo/sdk-xlm";
 // import { XRP } from "@payvo/sdk-xrp";
 // import { ZIL } from "@payvo/sdk-zil";
+// @ts-ignore
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 // import { LUNA } from "@payvo/sdk-luna";
 // import { NANO } from "@payvo/sdk-nano";
@@ -19,6 +20,7 @@ import { ARK } from "@payvo/sdk-ark";
 // import { ETH } from "@payvo/sdk-eth";
 import { LSK } from "@payvo/sdk-lsk";
 import { Offline } from "domains/error/pages";
+import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import { Splash } from "domains/splash/pages";
 import React, { useLayoutEffect, useState } from "react";
 import { useErrorHandler } from "react-error-boundary";
@@ -176,7 +178,9 @@ export const App = () => {
 					<SentryProvider>
 						<LedgerProvider transport={LedgerTransportNodeHID}>
 							<PluginProviders>
-								<Main />
+								<ExchangeProvider>
+									<Main />
+								</ExchangeProvider>
 							</PluginProviders>
 						</LedgerProvider>
 					</SentryProvider>

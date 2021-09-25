@@ -247,6 +247,10 @@ export const requestMocks = {
 			"exchange/cryptocompare-eth",
 		),
 		mockRequest(/https:\/\/min-api\.cryptocompare\.com\/data\/histoday/, "exchange/cryptocompare-historical"),
+		mockRequest(/thumbnail.png$/, () => "/assets/background.png"),
+		mockRequest(/dark.png$/, () => "/assets/background.png"),
+		mockRequest(/light.png$/, () => "/assets/background.png"),
+		mockRequest("https://exchanges.payvo.com/api", "exchange/exchanges"),
 	],
 	multisignature: [...multisignatureMocks()],
 	other: [

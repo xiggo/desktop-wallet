@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useMemo } from "react";
 
-interface AddressProperties {
+export interface AddressProperties {
 	id: string;
 	address: string;
 	alias?: string;

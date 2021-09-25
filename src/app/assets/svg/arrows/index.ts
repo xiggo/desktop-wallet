@@ -1,4 +1,5 @@
 import { ReactComponent as ArrowDownBracket } from "./arrow-down-bracket.svg";
+import { ReactComponent as ArrowDownUp } from "./arrow-down-up.svg";
 import { ReactComponent as ArrowExternal } from "./arrow-external.svg";
 import { ReactComponent as ArrowRotateLeft } from "./arrow-rotate-left.svg";
 import { ReactComponent as ArrowRotateRight } from "./arrow-rotate-right.svg";
@@ -22,6 +23,7 @@ import { ReactComponent as DoubleChevronRightSmall } from "./double-chevron-righ
 
 export const ArrowIcons: any = {
 	ArrowDownBracket,
+	ArrowDownUp,
 	ArrowExternal,
 	ArrowRotateLeft,
 	ArrowRotateRight,
