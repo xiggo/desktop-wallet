@@ -297,12 +297,12 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-115-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-115-input"
-                          id="downshift-115-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -316,14 +316,14 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-115-item-0"
+                              aria-activedescendant="select-currency-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-115-menu"
-                              aria-labelledby="downshift-115-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-115-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -363,9 +363,9 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-115-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
-                          id="downshift-115-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         >
                           <ul
@@ -385,7 +385,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="true"
                               class="select-list-option is-highlighted"
                               data-testid="SelectDropdown__option--0"
-                              id="downshift-115-item-0"
+                              id="select-currency-item-0"
                               role="option"
                             >
                               <div
@@ -398,7 +398,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--1"
-                              id="downshift-115-item-1"
+                              id="select-currency-item-1"
                               role="option"
                             >
                               <div
@@ -411,7 +411,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--2"
-                              id="downshift-115-item-2"
+                              id="select-currency-item-2"
                               role="option"
                             >
                               <div
@@ -424,7 +424,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--3"
-                              id="downshift-115-item-3"
+                              id="select-currency-item-3"
                               role="option"
                             >
                               <div
@@ -437,7 +437,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--4"
-                              id="downshift-115-item-4"
+                              id="select-currency-item-4"
                               role="option"
                             >
                               <div
@@ -450,7 +450,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--5"
-                              id="downshift-115-item-5"
+                              id="select-currency-item-5"
                               role="option"
                             >
                               <div
@@ -463,7 +463,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--6"
-                              id="downshift-115-item-6"
+                              id="select-currency-item-6"
                               role="option"
                             >
                               <div
@@ -476,7 +476,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--7"
-                              id="downshift-115-item-7"
+                              id="select-currency-item-7"
                               role="option"
                             >
                               <div
@@ -489,7 +489,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--8"
-                              id="downshift-115-item-8"
+                              id="select-currency-item-8"
                               role="option"
                             >
                               <div
@@ -502,7 +502,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--9"
-                              id="downshift-115-item-9"
+                              id="select-currency-item-9"
                               role="option"
                             >
                               <div
@@ -515,7 +515,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--10"
-                              id="downshift-115-item-10"
+                              id="select-currency-item-10"
                               role="option"
                             >
                               <div
@@ -528,7 +528,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--11"
-                              id="downshift-115-item-11"
+                              id="select-currency-item-11"
                               role="option"
                             >
                               <div
@@ -541,7 +541,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--12"
-                              id="downshift-115-item-12"
+                              id="select-currency-item-12"
                               role="option"
                             >
                               <div
@@ -554,7 +554,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--13"
-                              id="downshift-115-item-13"
+                              id="select-currency-item-13"
                               role="option"
                             >
                               <div
@@ -567,7 +567,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--14"
-                              id="downshift-115-item-14"
+                              id="select-currency-item-14"
                               role="option"
                             >
                               <div
@@ -594,7 +594,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option is-selected"
                               data-testid="SelectDropdown__option--15"
-                              id="downshift-115-item-15"
+                              id="select-currency-item-15"
                               role="option"
                             >
                               <div
@@ -607,7 +607,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--16"
-                              id="downshift-115-item-16"
+                              id="select-currency-item-16"
                               role="option"
                             >
                               <div
@@ -620,7 +620,7 @@ exports[`CreateProfile should fail password confirmation 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--17"
-                              id="downshift-115-item-17"
+                              id="select-currency-item-17"
                               role="option"
                             >
                               <div
@@ -1045,12 +1045,12 @@ exports[`CreateProfile should not be able to create new profile if name already 
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-39-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-39-input"
-                          id="downshift-39-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -1064,14 +1064,14 @@ exports[`CreateProfile should not be able to create new profile if name already 
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-39-item-0"
+                              aria-activedescendant="select-currency-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-39-menu"
-                              aria-labelledby="downshift-39-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-39-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -1111,9 +1111,9 @@ exports[`CreateProfile should not be able to create new profile if name already 
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-39-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
-                          id="downshift-39-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         >
                           <ul
@@ -1133,7 +1133,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="true"
                               class="select-list-option is-highlighted"
                               data-testid="SelectDropdown__option--0"
-                              id="downshift-39-item-0"
+                              id="select-currency-item-0"
                               role="option"
                             >
                               <div
@@ -1146,7 +1146,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--1"
-                              id="downshift-39-item-1"
+                              id="select-currency-item-1"
                               role="option"
                             >
                               <div
@@ -1159,7 +1159,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--2"
-                              id="downshift-39-item-2"
+                              id="select-currency-item-2"
                               role="option"
                             >
                               <div
@@ -1172,7 +1172,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--3"
-                              id="downshift-39-item-3"
+                              id="select-currency-item-3"
                               role="option"
                             >
                               <div
@@ -1185,7 +1185,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--4"
-                              id="downshift-39-item-4"
+                              id="select-currency-item-4"
                               role="option"
                             >
                               <div
@@ -1198,7 +1198,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--5"
-                              id="downshift-39-item-5"
+                              id="select-currency-item-5"
                               role="option"
                             >
                               <div
@@ -1211,7 +1211,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--6"
-                              id="downshift-39-item-6"
+                              id="select-currency-item-6"
                               role="option"
                             >
                               <div
@@ -1224,7 +1224,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--7"
-                              id="downshift-39-item-7"
+                              id="select-currency-item-7"
                               role="option"
                             >
                               <div
@@ -1237,7 +1237,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--8"
-                              id="downshift-39-item-8"
+                              id="select-currency-item-8"
                               role="option"
                             >
                               <div
@@ -1250,7 +1250,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--9"
-                              id="downshift-39-item-9"
+                              id="select-currency-item-9"
                               role="option"
                             >
                               <div
@@ -1263,7 +1263,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--10"
-                              id="downshift-39-item-10"
+                              id="select-currency-item-10"
                               role="option"
                             >
                               <div
@@ -1276,7 +1276,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--11"
-                              id="downshift-39-item-11"
+                              id="select-currency-item-11"
                               role="option"
                             >
                               <div
@@ -1289,7 +1289,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--12"
-                              id="downshift-39-item-12"
+                              id="select-currency-item-12"
                               role="option"
                             >
                               <div
@@ -1302,7 +1302,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--13"
-                              id="downshift-39-item-13"
+                              id="select-currency-item-13"
                               role="option"
                             >
                               <div
@@ -1315,7 +1315,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--14"
-                              id="downshift-39-item-14"
+                              id="select-currency-item-14"
                               role="option"
                             >
                               <div
@@ -1342,7 +1342,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option is-selected"
                               data-testid="SelectDropdown__option--15"
-                              id="downshift-39-item-15"
+                              id="select-currency-item-15"
                               role="option"
                             >
                               <div
@@ -1355,7 +1355,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--16"
-                              id="downshift-39-item-16"
+                              id="select-currency-item-16"
                               role="option"
                             >
                               <div
@@ -1368,7 +1368,7 @@ exports[`CreateProfile should not be able to create new profile if name already 
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--17"
-                              id="downshift-39-item-17"
+                              id="select-currency-item-17"
                               role="option"
                             >
                               <div
@@ -1793,12 +1793,12 @@ exports[`CreateProfile should not be able to create new profile if name consists
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-56-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-56-input"
-                          id="downshift-56-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -1812,14 +1812,14 @@ exports[`CreateProfile should not be able to create new profile if name consists
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-56-item-0"
+                              aria-activedescendant="select-currency-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-56-menu"
-                              aria-labelledby="downshift-56-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-56-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -1859,9 +1859,9 @@ exports[`CreateProfile should not be able to create new profile if name consists
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-56-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
-                          id="downshift-56-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         >
                           <ul
@@ -1881,7 +1881,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="true"
                               class="select-list-option is-highlighted"
                               data-testid="SelectDropdown__option--0"
-                              id="downshift-56-item-0"
+                              id="select-currency-item-0"
                               role="option"
                             >
                               <div
@@ -1894,7 +1894,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--1"
-                              id="downshift-56-item-1"
+                              id="select-currency-item-1"
                               role="option"
                             >
                               <div
@@ -1907,7 +1907,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--2"
-                              id="downshift-56-item-2"
+                              id="select-currency-item-2"
                               role="option"
                             >
                               <div
@@ -1920,7 +1920,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--3"
-                              id="downshift-56-item-3"
+                              id="select-currency-item-3"
                               role="option"
                             >
                               <div
@@ -1933,7 +1933,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--4"
-                              id="downshift-56-item-4"
+                              id="select-currency-item-4"
                               role="option"
                             >
                               <div
@@ -1946,7 +1946,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--5"
-                              id="downshift-56-item-5"
+                              id="select-currency-item-5"
                               role="option"
                             >
                               <div
@@ -1959,7 +1959,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--6"
-                              id="downshift-56-item-6"
+                              id="select-currency-item-6"
                               role="option"
                             >
                               <div
@@ -1972,7 +1972,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--7"
-                              id="downshift-56-item-7"
+                              id="select-currency-item-7"
                               role="option"
                             >
                               <div
@@ -1985,7 +1985,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--8"
-                              id="downshift-56-item-8"
+                              id="select-currency-item-8"
                               role="option"
                             >
                               <div
@@ -1998,7 +1998,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--9"
-                              id="downshift-56-item-9"
+                              id="select-currency-item-9"
                               role="option"
                             >
                               <div
@@ -2011,7 +2011,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--10"
-                              id="downshift-56-item-10"
+                              id="select-currency-item-10"
                               role="option"
                             >
                               <div
@@ -2024,7 +2024,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--11"
-                              id="downshift-56-item-11"
+                              id="select-currency-item-11"
                               role="option"
                             >
                               <div
@@ -2037,7 +2037,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--12"
-                              id="downshift-56-item-12"
+                              id="select-currency-item-12"
                               role="option"
                             >
                               <div
@@ -2050,7 +2050,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--13"
-                              id="downshift-56-item-13"
+                              id="select-currency-item-13"
                               role="option"
                             >
                               <div
@@ -2063,7 +2063,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--14"
-                              id="downshift-56-item-14"
+                              id="select-currency-item-14"
                               role="option"
                             >
                               <div
@@ -2090,7 +2090,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option is-selected"
                               data-testid="SelectDropdown__option--15"
-                              id="downshift-56-item-15"
+                              id="select-currency-item-15"
                               role="option"
                             >
                               <div
@@ -2103,7 +2103,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--16"
-                              id="downshift-56-item-16"
+                              id="select-currency-item-16"
                               role="option"
                             >
                               <div
@@ -2116,7 +2116,7 @@ exports[`CreateProfile should not be able to create new profile if name consists
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--17"
-                              id="downshift-56-item-17"
+                              id="select-currency-item-17"
                               role="option"
                             >
                               <div
@@ -2541,12 +2541,12 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-73-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-73-input"
-                          id="downshift-73-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -2560,14 +2560,14 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-73-item-0"
+                              aria-activedescendant="select-currency-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-73-menu"
-                              aria-labelledby="downshift-73-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-73-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -2607,9 +2607,9 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-73-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
-                          id="downshift-73-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         >
                           <ul
@@ -2629,7 +2629,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="true"
                               class="select-list-option is-highlighted"
                               data-testid="SelectDropdown__option--0"
-                              id="downshift-73-item-0"
+                              id="select-currency-item-0"
                               role="option"
                             >
                               <div
@@ -2642,7 +2642,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--1"
-                              id="downshift-73-item-1"
+                              id="select-currency-item-1"
                               role="option"
                             >
                               <div
@@ -2655,7 +2655,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--2"
-                              id="downshift-73-item-2"
+                              id="select-currency-item-2"
                               role="option"
                             >
                               <div
@@ -2668,7 +2668,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--3"
-                              id="downshift-73-item-3"
+                              id="select-currency-item-3"
                               role="option"
                             >
                               <div
@@ -2681,7 +2681,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--4"
-                              id="downshift-73-item-4"
+                              id="select-currency-item-4"
                               role="option"
                             >
                               <div
@@ -2694,7 +2694,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--5"
-                              id="downshift-73-item-5"
+                              id="select-currency-item-5"
                               role="option"
                             >
                               <div
@@ -2707,7 +2707,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--6"
-                              id="downshift-73-item-6"
+                              id="select-currency-item-6"
                               role="option"
                             >
                               <div
@@ -2720,7 +2720,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--7"
-                              id="downshift-73-item-7"
+                              id="select-currency-item-7"
                               role="option"
                             >
                               <div
@@ -2733,7 +2733,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--8"
-                              id="downshift-73-item-8"
+                              id="select-currency-item-8"
                               role="option"
                             >
                               <div
@@ -2746,7 +2746,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--9"
-                              id="downshift-73-item-9"
+                              id="select-currency-item-9"
                               role="option"
                             >
                               <div
@@ -2759,7 +2759,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--10"
-                              id="downshift-73-item-10"
+                              id="select-currency-item-10"
                               role="option"
                             >
                               <div
@@ -2772,7 +2772,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--11"
-                              id="downshift-73-item-11"
+                              id="select-currency-item-11"
                               role="option"
                             >
                               <div
@@ -2785,7 +2785,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--12"
-                              id="downshift-73-item-12"
+                              id="select-currency-item-12"
                               role="option"
                             >
                               <div
@@ -2798,7 +2798,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--13"
-                              id="downshift-73-item-13"
+                              id="select-currency-item-13"
                               role="option"
                             >
                               <div
@@ -2811,7 +2811,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--14"
-                              id="downshift-73-item-14"
+                              id="select-currency-item-14"
                               role="option"
                             >
                               <div
@@ -2838,7 +2838,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option is-selected"
                               data-testid="SelectDropdown__option--15"
-                              id="downshift-73-item-15"
+                              id="select-currency-item-15"
                               role="option"
                             >
                               <div
@@ -2851,7 +2851,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--16"
-                              id="downshift-73-item-16"
+                              id="select-currency-item-16"
                               role="option"
                             >
                               <div
@@ -2864,7 +2864,7 @@ exports[`CreateProfile should not be able to create new profile if name is too l
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--17"
-                              id="downshift-73-item-17"
+                              id="select-currency-item-17"
                               role="option"
                             >
                               <div
@@ -3310,12 +3310,12 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-157-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-157-input"
-                          id="downshift-157-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
@@ -3325,12 +3325,12 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="downshift-157-menu"
-                              aria-labelledby="downshift-157-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
-                              id="downshift-157-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value=""
@@ -3360,9 +3360,9 @@ exports[`CreateProfile should not update the uploaded avatar when removing focus
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-157-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
-                          id="downshift-157-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         />
                       </div>
@@ -3760,12 +3760,12 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-193-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-193-input"
-                          id="downshift-193-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -3779,14 +3779,14 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-193-item-0"
+                              aria-activedescendant="select-currency-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-193-menu"
-                              aria-labelledby="downshift-193-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-193-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -3826,9 +3826,9 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-193-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
-                          id="downshift-193-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         >
                           <ul
@@ -3848,7 +3848,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="true"
                               class="select-list-option is-highlighted"
                               data-testid="SelectDropdown__option--0"
-                              id="downshift-193-item-0"
+                              id="select-currency-item-0"
                               role="option"
                             >
                               <div
@@ -3861,7 +3861,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--1"
-                              id="downshift-193-item-1"
+                              id="select-currency-item-1"
                               role="option"
                             >
                               <div
@@ -3874,7 +3874,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--2"
-                              id="downshift-193-item-2"
+                              id="select-currency-item-2"
                               role="option"
                             >
                               <div
@@ -3887,7 +3887,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--3"
-                              id="downshift-193-item-3"
+                              id="select-currency-item-3"
                               role="option"
                             >
                               <div
@@ -3900,7 +3900,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--4"
-                              id="downshift-193-item-4"
+                              id="select-currency-item-4"
                               role="option"
                             >
                               <div
@@ -3913,7 +3913,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--5"
-                              id="downshift-193-item-5"
+                              id="select-currency-item-5"
                               role="option"
                             >
                               <div
@@ -3926,7 +3926,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--6"
-                              id="downshift-193-item-6"
+                              id="select-currency-item-6"
                               role="option"
                             >
                               <div
@@ -3939,7 +3939,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--7"
-                              id="downshift-193-item-7"
+                              id="select-currency-item-7"
                               role="option"
                             >
                               <div
@@ -3952,7 +3952,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--8"
-                              id="downshift-193-item-8"
+                              id="select-currency-item-8"
                               role="option"
                             >
                               <div
@@ -3965,7 +3965,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--9"
-                              id="downshift-193-item-9"
+                              id="select-currency-item-9"
                               role="option"
                             >
                               <div
@@ -3978,7 +3978,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--10"
-                              id="downshift-193-item-10"
+                              id="select-currency-item-10"
                               role="option"
                             >
                               <div
@@ -3991,7 +3991,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--11"
-                              id="downshift-193-item-11"
+                              id="select-currency-item-11"
                               role="option"
                             >
                               <div
@@ -4004,7 +4004,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--12"
-                              id="downshift-193-item-12"
+                              id="select-currency-item-12"
                               role="option"
                             >
                               <div
@@ -4017,7 +4017,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--13"
-                              id="downshift-193-item-13"
+                              id="select-currency-item-13"
                               role="option"
                             >
                               <div
@@ -4030,7 +4030,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--14"
-                              id="downshift-193-item-14"
+                              id="select-currency-item-14"
                               role="option"
                             >
                               <div
@@ -4057,7 +4057,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option is-selected"
                               data-testid="SelectDropdown__option--15"
-                              id="downshift-193-item-15"
+                              id="select-currency-item-15"
                               role="option"
                             >
                               <div
@@ -4070,7 +4070,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--16"
-                              id="downshift-193-item-16"
+                              id="select-currency-item-16"
                               role="option"
                             >
                               <div
@@ -4083,7 +4083,7 @@ exports[`CreateProfile should not upload avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--17"
-                              id="downshift-193-item-17"
+                              id="select-currency-item-17"
                               role="option"
                             >
                               <div
@@ -4488,12 +4488,12 @@ exports[`CreateProfile should render 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-0-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-0-input"
-                          id="downshift-0-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
@@ -4503,12 +4503,12 @@ exports[`CreateProfile should render 1`] = `
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="downshift-0-menu"
-                              aria-labelledby="downshift-0-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
-                              id="downshift-0-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value=""
@@ -4538,9 +4538,9 @@ exports[`CreateProfile should render 1`] = `
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-0-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
-                          id="downshift-0-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         />
                       </div>
@@ -4959,12 +4959,12 @@ exports[`CreateProfile should store profile 1`] = `
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-6-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-6-input"
-                          id="downshift-6-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -4978,14 +4978,14 @@ exports[`CreateProfile should store profile 1`] = `
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-6-item-0"
+                              aria-activedescendant="select-currency-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-6-menu"
-                              aria-labelledby="downshift-6-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-6-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -5025,9 +5025,9 @@ exports[`CreateProfile should store profile 1`] = `
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-6-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
-                          id="downshift-6-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         >
                           <ul
@@ -5047,7 +5047,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="true"
                               class="select-list-option is-highlighted"
                               data-testid="SelectDropdown__option--0"
-                              id="downshift-6-item-0"
+                              id="select-currency-item-0"
                               role="option"
                             >
                               <div
@@ -5060,7 +5060,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--1"
-                              id="downshift-6-item-1"
+                              id="select-currency-item-1"
                               role="option"
                             >
                               <div
@@ -5073,7 +5073,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--2"
-                              id="downshift-6-item-2"
+                              id="select-currency-item-2"
                               role="option"
                             >
                               <div
@@ -5086,7 +5086,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--3"
-                              id="downshift-6-item-3"
+                              id="select-currency-item-3"
                               role="option"
                             >
                               <div
@@ -5099,7 +5099,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--4"
-                              id="downshift-6-item-4"
+                              id="select-currency-item-4"
                               role="option"
                             >
                               <div
@@ -5112,7 +5112,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--5"
-                              id="downshift-6-item-5"
+                              id="select-currency-item-5"
                               role="option"
                             >
                               <div
@@ -5125,7 +5125,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--6"
-                              id="downshift-6-item-6"
+                              id="select-currency-item-6"
                               role="option"
                             >
                               <div
@@ -5138,7 +5138,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--7"
-                              id="downshift-6-item-7"
+                              id="select-currency-item-7"
                               role="option"
                             >
                               <div
@@ -5151,7 +5151,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--8"
-                              id="downshift-6-item-8"
+                              id="select-currency-item-8"
                               role="option"
                             >
                               <div
@@ -5164,7 +5164,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--9"
-                              id="downshift-6-item-9"
+                              id="select-currency-item-9"
                               role="option"
                             >
                               <div
@@ -5177,7 +5177,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--10"
-                              id="downshift-6-item-10"
+                              id="select-currency-item-10"
                               role="option"
                             >
                               <div
@@ -5190,7 +5190,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--11"
-                              id="downshift-6-item-11"
+                              id="select-currency-item-11"
                               role="option"
                             >
                               <div
@@ -5203,7 +5203,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--12"
-                              id="downshift-6-item-12"
+                              id="select-currency-item-12"
                               role="option"
                             >
                               <div
@@ -5216,7 +5216,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--13"
-                              id="downshift-6-item-13"
+                              id="select-currency-item-13"
                               role="option"
                             >
                               <div
@@ -5229,7 +5229,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--14"
-                              id="downshift-6-item-14"
+                              id="select-currency-item-14"
                               role="option"
                             >
                               <div
@@ -5256,7 +5256,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option is-selected"
                               data-testid="SelectDropdown__option--15"
-                              id="downshift-6-item-15"
+                              id="select-currency-item-15"
                               role="option"
                             >
                               <div
@@ -5269,7 +5269,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--16"
-                              id="downshift-6-item-16"
+                              id="select-currency-item-16"
                               role="option"
                             >
                               <div
@@ -5282,7 +5282,7 @@ exports[`CreateProfile should store profile 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--17"
-                              id="downshift-6-item-17"
+                              id="select-currency-item-17"
                               role="option"
                             >
                               <div
@@ -5675,12 +5675,12 @@ exports[`CreateProfile should store profile with password 1`] = `
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-90-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-90-input"
-                          id="downshift-90-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -5694,14 +5694,14 @@ exports[`CreateProfile should store profile with password 1`] = `
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-90-item-0"
+                              aria-activedescendant="select-currency-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-90-menu"
-                              aria-labelledby="downshift-90-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-90-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -5741,9 +5741,9 @@ exports[`CreateProfile should store profile with password 1`] = `
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-90-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
-                          id="downshift-90-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         >
                           <ul
@@ -5763,7 +5763,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="true"
                               class="select-list-option is-highlighted"
                               data-testid="SelectDropdown__option--0"
-                              id="downshift-90-item-0"
+                              id="select-currency-item-0"
                               role="option"
                             >
                               <div
@@ -5776,7 +5776,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--1"
-                              id="downshift-90-item-1"
+                              id="select-currency-item-1"
                               role="option"
                             >
                               <div
@@ -5789,7 +5789,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--2"
-                              id="downshift-90-item-2"
+                              id="select-currency-item-2"
                               role="option"
                             >
                               <div
@@ -5802,7 +5802,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--3"
-                              id="downshift-90-item-3"
+                              id="select-currency-item-3"
                               role="option"
                             >
                               <div
@@ -5815,7 +5815,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--4"
-                              id="downshift-90-item-4"
+                              id="select-currency-item-4"
                               role="option"
                             >
                               <div
@@ -5828,7 +5828,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--5"
-                              id="downshift-90-item-5"
+                              id="select-currency-item-5"
                               role="option"
                             >
                               <div
@@ -5841,7 +5841,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--6"
-                              id="downshift-90-item-6"
+                              id="select-currency-item-6"
                               role="option"
                             >
                               <div
@@ -5854,7 +5854,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--7"
-                              id="downshift-90-item-7"
+                              id="select-currency-item-7"
                               role="option"
                             >
                               <div
@@ -5867,7 +5867,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--8"
-                              id="downshift-90-item-8"
+                              id="select-currency-item-8"
                               role="option"
                             >
                               <div
@@ -5880,7 +5880,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--9"
-                              id="downshift-90-item-9"
+                              id="select-currency-item-9"
                               role="option"
                             >
                               <div
@@ -5893,7 +5893,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--10"
-                              id="downshift-90-item-10"
+                              id="select-currency-item-10"
                               role="option"
                             >
                               <div
@@ -5906,7 +5906,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--11"
-                              id="downshift-90-item-11"
+                              id="select-currency-item-11"
                               role="option"
                             >
                               <div
@@ -5919,7 +5919,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--12"
-                              id="downshift-90-item-12"
+                              id="select-currency-item-12"
                               role="option"
                             >
                               <div
@@ -5932,7 +5932,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--13"
-                              id="downshift-90-item-13"
+                              id="select-currency-item-13"
                               role="option"
                             >
                               <div
@@ -5945,7 +5945,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--14"
-                              id="downshift-90-item-14"
+                              id="select-currency-item-14"
                               role="option"
                             >
                               <div
@@ -5972,7 +5972,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option is-selected"
                               data-testid="SelectDropdown__option--15"
-                              id="downshift-90-item-15"
+                              id="select-currency-item-15"
                               role="option"
                             >
                               <div
@@ -5985,7 +5985,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--16"
-                              id="downshift-90-item-16"
+                              id="select-currency-item-16"
                               role="option"
                             >
                               <div
@@ -5998,7 +5998,7 @@ exports[`CreateProfile should store profile with password 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--17"
-                              id="downshift-90-item-17"
+                              id="select-currency-item-17"
                               role="option"
                             >
                               <div
@@ -6410,12 +6410,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-140-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-140-input"
-                          id="downshift-140-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
@@ -6425,12 +6425,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="downshift-140-menu"
-                              aria-labelledby="downshift-140-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
-                              id="downshift-140-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value=""
@@ -6460,9 +6460,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-140-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
-                          id="downshift-140-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         />
                       </div>
@@ -6879,12 +6879,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-140-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-140-input"
-                          id="downshift-140-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
@@ -6894,12 +6894,12 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="downshift-140-menu"
-                              aria-labelledby="downshift-140-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
                               data-testid="SelectDropdown__input"
-                              id="downshift-140-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value=""
@@ -6929,9 +6929,9 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-140-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr"
-                          id="downshift-140-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         />
                       </div>
@@ -7329,12 +7329,12 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                       <div
                         aria-expanded="true"
                         aria-haspopup="listbox"
-                        aria-owns="downshift-167-menu"
+                        aria-owns="select-currency-menu"
                         role="combobox"
                       >
                         <label
-                          for="downshift-167-input"
-                          id="downshift-167-label"
+                          for="select-currency-input"
+                          id="select-currency-label"
                         />
                         <div
                           class="fixed invisible w-auto whitespace-nowrap"
@@ -7348,14 +7348,14 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                             class="relative flex flex-1 h-full"
                           >
                             <input
-                              aria-activedescendant="downshift-167-item-0"
+                              aria-activedescendant="select-currency-item-0"
                               aria-autocomplete="list"
-                              aria-controls="downshift-167-menu"
-                              aria-labelledby="downshift-167-label"
+                              aria-controls="select-currency-menu"
+                              aria-labelledby="select-currency-label"
                               autocomplete="off"
                               class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                               data-testid="SelectDropdown__input"
-                              id="downshift-167-input"
+                              id="select-currency-input"
                               name="currency"
                               placeholder="Select Currency"
                               value="BTC (Ƀ)"
@@ -7395,9 +7395,9 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                           </div>
                         </div>
                         <ul
-                          aria-labelledby="downshift-167-label"
+                          aria-labelledby="select-currency-label"
                           class="styles__SelectOptionsList-sc-120rtxy-0 eqsPyr is-open"
-                          id="downshift-167-menu"
+                          id="select-currency-menu"
                           role="listbox"
                         >
                           <ul
@@ -7417,7 +7417,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="true"
                               class="select-list-option is-highlighted"
                               data-testid="SelectDropdown__option--0"
-                              id="downshift-167-item-0"
+                              id="select-currency-item-0"
                               role="option"
                             >
                               <div
@@ -7430,7 +7430,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--1"
-                              id="downshift-167-item-1"
+                              id="select-currency-item-1"
                               role="option"
                             >
                               <div
@@ -7443,7 +7443,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--2"
-                              id="downshift-167-item-2"
+                              id="select-currency-item-2"
                               role="option"
                             >
                               <div
@@ -7456,7 +7456,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--3"
-                              id="downshift-167-item-3"
+                              id="select-currency-item-3"
                               role="option"
                             >
                               <div
@@ -7469,7 +7469,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--4"
-                              id="downshift-167-item-4"
+                              id="select-currency-item-4"
                               role="option"
                             >
                               <div
@@ -7482,7 +7482,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--5"
-                              id="downshift-167-item-5"
+                              id="select-currency-item-5"
                               role="option"
                             >
                               <div
@@ -7495,7 +7495,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--6"
-                              id="downshift-167-item-6"
+                              id="select-currency-item-6"
                               role="option"
                             >
                               <div
@@ -7508,7 +7508,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--7"
-                              id="downshift-167-item-7"
+                              id="select-currency-item-7"
                               role="option"
                             >
                               <div
@@ -7521,7 +7521,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--8"
-                              id="downshift-167-item-8"
+                              id="select-currency-item-8"
                               role="option"
                             >
                               <div
@@ -7534,7 +7534,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--9"
-                              id="downshift-167-item-9"
+                              id="select-currency-item-9"
                               role="option"
                             >
                               <div
@@ -7547,7 +7547,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--10"
-                              id="downshift-167-item-10"
+                              id="select-currency-item-10"
                               role="option"
                             >
                               <div
@@ -7560,7 +7560,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--11"
-                              id="downshift-167-item-11"
+                              id="select-currency-item-11"
                               role="option"
                             >
                               <div
@@ -7573,7 +7573,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--12"
-                              id="downshift-167-item-12"
+                              id="select-currency-item-12"
                               role="option"
                             >
                               <div
@@ -7586,7 +7586,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--13"
-                              id="downshift-167-item-13"
+                              id="select-currency-item-13"
                               role="option"
                             >
                               <div
@@ -7599,7 +7599,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--14"
-                              id="downshift-167-item-14"
+                              id="select-currency-item-14"
                               role="option"
                             >
                               <div
@@ -7626,7 +7626,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option is-selected"
                               data-testid="SelectDropdown__option--15"
-                              id="downshift-167-item-15"
+                              id="select-currency-item-15"
                               role="option"
                             >
                               <div
@@ -7639,7 +7639,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--16"
-                              id="downshift-167-item-16"
+                              id="select-currency-item-16"
                               role="option"
                             >
                               <div
@@ -7652,7 +7652,7 @@ exports[`CreateProfile should upload and remove avatar image 1`] = `
                               aria-selected="false"
                               class="select-list-option"
                               data-testid="SelectDropdown__option--17"
-                              id="downshift-167-item-17"
+                              id="select-currency-item-17"
                               role="option"
                             >
                               <div
