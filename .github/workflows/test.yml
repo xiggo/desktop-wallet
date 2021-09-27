@@ -46,8 +46,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/app
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/app
                   --env=./src/tests/custom-env.js --forceExit --maxWorkers=4
                   --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/app/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -88,8 +87,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/contact --env=./src/tests/custom-env.js
                   --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
@@ -131,8 +129,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/dashboard --env=./src/tests/custom-env.js
                   --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
@@ -174,8 +171,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/error --env=./src/tests/custom-env.js --forceExit
                   --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/error/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -216,8 +212,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/exchange --env=./src/tests/custom-env.js
                   --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
@@ -259,8 +254,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/network --env=./src/tests/custom-env.js
                   --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
@@ -302,8 +296,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/news --env=./src/tests/custom-env.js --forceExit
                   --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/news/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -344,8 +337,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/plugin --env=./src/tests/custom-env.js --forceExit
                   --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/plugin/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -386,8 +378,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/profile --env=./src/tests/custom-env.js
                   --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
@@ -429,8 +420,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/setting --env=./src/tests/custom-env.js
                   --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
@@ -472,8 +462,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/splash --env=./src/tests/custom-env.js --forceExit
                   --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/splash/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -514,10 +503,9 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/transaction --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
+                  --forceExit --maxWorkers=4 --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/transaction/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/transaction/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -557,8 +545,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/vote --env=./src/tests/custom-env.js --forceExit
                   --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/vote/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -599,8 +586,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/wallet --env=./src/tests/custom-env.js --forceExit
                   --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/wallet/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -641,8 +627,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/plugins
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/plugins
                   --env=./src/tests/custom-env.js --forceExit --maxWorkers=50%
                   --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/plugins/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -683,8 +668,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/router
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/router
                   --env=./src/tests/custom-env.js --forceExit --maxWorkers=50%
                   --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/router/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
@@ -725,8 +709,7 @@ jobs:
             - name: Rebuild
               run: npm rebuild
             - name: Test
-              run:
-                  ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/utils
+              run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/utils
                   --env=./src/tests/custom-env.js --forceExit --maxWorkers=50%
                   --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/utils/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
