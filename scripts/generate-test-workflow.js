@@ -250,7 +250,7 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 			},
 			{
 				name: "Test",
-				run: `./node_modules/react-app-rewired/bin/index.js --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=${maxWorkers} --logHeapUsage--watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
+				run: `./node_modules/react-app-rewired/bin/index.js --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=${maxWorkers} --logHeapUsage --watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
 					collectCoverageFrom,
 				)}' --coverageThreshold='${JSON.stringify({
 					[`./src/${directory}/`]: coverageThreshold,

@@ -49,7 +49,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/app
                   --env=./src/tests/custom-env.js --forceExit --maxWorkers=4
-                  --logHeapUsage--watchAll=false --coverage
+                  --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/app/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/app/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
     domains-contact:
@@ -91,7 +91,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/contact --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=50% --logHeapUsage--watchAll=false
+                  --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/contact/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/contact/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -134,7 +134,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/dashboard --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=50% --logHeapUsage--watchAll=false
+                  --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/dashboard/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/dashboard/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -177,7 +177,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/error --env=./src/tests/custom-env.js --forceExit
-                  --maxWorkers=50% --logHeapUsage--watchAll=false --coverage
+                  --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/error/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/error/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
     domains-exchange:
@@ -219,7 +219,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/exchange --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=50% --logHeapUsage--watchAll=false
+                  --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/exchange/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/exchange/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -262,7 +262,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/network --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=50% --logHeapUsage--watchAll=false
+                  --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/network/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/network/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -305,7 +305,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/news --env=./src/tests/custom-env.js --forceExit
-                  --maxWorkers=50% --logHeapUsage--watchAll=false --coverage
+                  --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/news/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/news/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
     domains-plugin:
@@ -347,7 +347,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/plugin --env=./src/tests/custom-env.js --forceExit
-                  --maxWorkers=50% --logHeapUsage--watchAll=false --coverage
+                  --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/plugin/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/plugin/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
     domains-profile:
@@ -389,7 +389,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/profile --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=50% --logHeapUsage--watchAll=false
+                  --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/profile/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/profile/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -432,7 +432,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/setting --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=50% --logHeapUsage--watchAll=false
+                  --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/setting/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/setting/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -475,7 +475,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/splash --env=./src/tests/custom-env.js --forceExit
-                  --maxWorkers=50% --logHeapUsage--watchAll=false --coverage
+                  --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/splash/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/splash/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
     domains-transaction:
@@ -517,7 +517,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/transaction --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=50% --logHeapUsage--watchAll=false
+                  --forceExit --maxWorkers=50% --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/transaction/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/transaction/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -560,7 +560,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/vote --env=./src/tests/custom-env.js --forceExit
-                  --maxWorkers=50% --logHeapUsage--watchAll=false --coverage
+                  --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/vote/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/vote/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
     domains-wallet:
@@ -602,7 +602,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/wallet --env=./src/tests/custom-env.js --forceExit
-                  --maxWorkers=50% --logHeapUsage--watchAll=false --coverage
+                  --maxWorkers=50% --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/domains/wallet/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/wallet/":{"branches":98,"functions":96,"lines":98,"statements":98}}'
     plugins:
@@ -644,7 +644,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/plugins
                   --env=./src/tests/custom-env.js --forceExit --maxWorkers=50%
-                  --logHeapUsage--watchAll=false --coverage
+                  --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/plugins/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/plugins/":{"branches":100,"functions":96.34,"lines":97.78,"statements":97.97}}'
     router:
@@ -686,7 +686,7 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/router
                   --env=./src/tests/custom-env.js --forceExit --maxWorkers=50%
-                  --logHeapUsage--watchAll=false --coverage
+                  --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/router/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/router/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
     utils:
@@ -728,6 +728,6 @@ jobs:
               run:
                   ./node_modules/react-app-rewired/bin/index.js --expose-gc test src/utils
                   --env=./src/tests/custom-env.js --forceExit --maxWorkers=50%
-                  --logHeapUsage--watchAll=false --coverage
+                  --logHeapUsage --watchAll=false --coverage
                   --collectCoverageFrom='["src/utils/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/utils/":{"branches":55.71,"functions":23.4,"lines":50,"statements":46.94}}'
