@@ -337,7 +337,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -411,7 +411,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -443,7 +443,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -478,7 +478,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -548,7 +548,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Unvotes (1)
                           </div>
@@ -623,7 +623,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -998,7 +998,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -1072,7 +1072,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -1104,7 +1104,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -1139,7 +1139,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -1209,7 +1209,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Votes (1)
                           </div>
@@ -1284,7 +1284,7 @@ exports[`SendVote should send a vote transaction 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -1659,7 +1659,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -1733,7 +1733,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -1765,7 +1765,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -1800,7 +1800,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -1870,7 +1870,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Votes (1)
                           </div>
@@ -1945,7 +1945,7 @@ exports[`SendVote should send a vote transaction 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>

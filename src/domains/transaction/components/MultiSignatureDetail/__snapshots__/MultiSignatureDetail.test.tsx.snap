@@ -273,7 +273,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -330,7 +330,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Recipient
                         </div>
@@ -376,7 +376,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Amount
                         </div>
@@ -422,7 +422,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -446,7 +446,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -465,7 +465,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -486,7 +486,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -505,7 +505,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -770,7 +770,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -827,7 +827,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Recipient
                         </div>
@@ -873,7 +873,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Amount
                         </div>
@@ -919,7 +919,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -943,7 +943,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -962,7 +962,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -983,7 +983,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -1002,7 +1002,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -1267,7 +1267,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -1324,7 +1324,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Recipient
                         </div>
@@ -1370,7 +1370,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Amount
                         </div>
@@ -1416,7 +1416,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -1440,7 +1440,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -1459,7 +1459,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -1480,7 +1480,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -1499,7 +1499,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -1738,7 +1738,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -1795,7 +1795,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Recipient
                         </div>
@@ -1841,7 +1841,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Amount
                         </div>
@@ -1887,7 +1887,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -1911,7 +1911,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -1930,7 +1930,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -1951,7 +1951,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -1970,7 +1970,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -2209,7 +2209,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -2266,7 +2266,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           IPFS Hash
                         </div>
@@ -2296,7 +2296,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -2320,7 +2320,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -2339,7 +2339,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -2360,7 +2360,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -2379,7 +2379,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -2618,7 +2618,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -2675,7 +2675,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Recipients (2)
                         </div>
@@ -2850,7 +2850,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Total Amount
                         </div>
@@ -2896,7 +2896,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -2920,7 +2920,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -2939,7 +2939,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -2960,7 +2960,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -2979,7 +2979,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -3218,7 +3218,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -3275,7 +3275,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -3299,7 +3299,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -3318,7 +3318,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -3339,7 +3339,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -3358,7 +3358,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -3623,7 +3623,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -3680,7 +3680,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Recipient
                         </div>
@@ -3726,7 +3726,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Amount
                         </div>
@@ -3772,7 +3772,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -3796,7 +3796,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -3815,7 +3815,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -3836,7 +3836,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -3855,7 +3855,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -4094,7 +4094,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -4151,7 +4151,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Unvotes (1)
                         </div>
@@ -4216,7 +4216,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -4240,7 +4240,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -4259,7 +4259,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -4280,7 +4280,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -4299,7 +4299,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -4538,7 +4538,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -4595,7 +4595,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Votes (1)
                         </div>
@@ -4660,7 +4660,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -4684,7 +4684,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -4703,7 +4703,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -4724,7 +4724,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -4743,7 +4743,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -5180,7 +5180,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -5237,7 +5237,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Recipient
                         </div>
@@ -5283,7 +5283,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Amount
                         </div>
@@ -5329,7 +5329,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -5353,7 +5353,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -5372,7 +5372,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -5393,7 +5393,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -5412,7 +5412,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>
@@ -5677,7 +5677,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>
@@ -5734,7 +5734,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Recipient
                         </div>
@@ -5780,7 +5780,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Amount
                         </div>
@@ -5826,7 +5826,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Transaction Fee
                         </div>
@@ -5850,7 +5850,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Timestamp
                         </div>
@@ -5869,7 +5869,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Minimum Required Signatures
                         </div>
@@ -5890,7 +5890,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Status
                         </div>
@@ -5909,7 +5909,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           ID
                         </div>

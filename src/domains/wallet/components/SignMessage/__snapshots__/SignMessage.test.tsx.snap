@@ -433,7 +433,7 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Signatory
         </div>
@@ -486,7 +486,7 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Message
         </div>

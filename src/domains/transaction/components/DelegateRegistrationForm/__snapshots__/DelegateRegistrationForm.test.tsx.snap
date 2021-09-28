@@ -63,7 +63,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Cryptoasset
             </div>
@@ -98,7 +98,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Sender
             </div>
@@ -408,7 +408,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Cryptoasset
             </div>
@@ -443,7 +443,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Sender
             </div>
@@ -708,7 +708,7 @@ exports[`DelegateRegistrationForm should render review step 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Cryptoasset
             </div>
@@ -743,7 +743,7 @@ exports[`DelegateRegistrationForm should render review step 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Sender
             </div>
@@ -800,7 +800,7 @@ exports[`DelegateRegistrationForm should render review step 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Delegate Name
             </div>
@@ -956,7 +956,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Cryptoasset
             </div>
@@ -991,7 +991,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Sender
             </div>
@@ -1254,7 +1254,7 @@ exports[`DelegateRegistrationForm should set username 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Cryptoasset
             </div>
@@ -1289,7 +1289,7 @@ exports[`DelegateRegistrationForm should set username 1`] = `
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Sender
             </div>
@@ -1580,7 +1580,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Cryptoasset
             </div>
@@ -1615,7 +1615,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Sender
             </div>
@@ -1925,7 +1925,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Cryptoasset
             </div>
@@ -1960,7 +1960,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
             class="flex-1 space-y-2 w-40 whitespace-nowrap"
           >
             <div
-              class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
             >
               Sender
             </div>

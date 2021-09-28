@@ -58,7 +58,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -132,7 +132,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -189,7 +189,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Delegate Name
                 </div>
@@ -221,7 +221,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -245,7 +245,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -264,7 +264,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -355,7 +355,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -429,7 +429,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -486,7 +486,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Delegate Name
                 </div>
@@ -518,7 +518,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -542,7 +542,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -561,7 +561,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -652,7 +652,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -726,7 +726,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -796,7 +796,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -820,7 +820,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   IPFS Hash
                 </div>
@@ -852,7 +852,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -871,7 +871,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -962,7 +962,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -1036,7 +1036,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -1106,7 +1106,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -1130,7 +1130,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -1149,7 +1149,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -1240,7 +1240,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -1314,7 +1314,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -1360,7 +1360,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   <div
                     class="flex items-center space-x-4"
@@ -1440,7 +1440,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Total Amount
                 </div>
@@ -1486,7 +1486,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -1510,7 +1510,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Memo
                 </div>
@@ -1546,7 +1546,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -1565,7 +1565,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -1656,7 +1656,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -1730,7 +1730,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -1787,7 +1787,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -1811,7 +1811,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -1830,7 +1830,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -1864,7 +1864,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Multisignature Participants
                 </div>
@@ -2005,7 +2005,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Minimum Required Signatures
                 </div>
@@ -2024,7 +2024,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Multisignature Address
                 </div>
@@ -2187,7 +2187,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -2257,7 +2257,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -2281,7 +2281,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -2300,7 +2300,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -2334,7 +2334,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -2465,7 +2465,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -2539,7 +2539,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -2585,7 +2585,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Recipient
                 </div>
@@ -2631,7 +2631,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Amount
                 </div>
@@ -2677,7 +2677,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -2701,7 +2701,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Memo
                 </div>
@@ -2737,7 +2737,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -2756,7 +2756,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -2846,7 +2846,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -2920,7 +2920,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -2990,7 +2990,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Unvotes (1)
                 </div>
@@ -3055,7 +3055,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Votes (1)
                 </div>
@@ -3120,7 +3120,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -3144,7 +3144,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -3163,7 +3163,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -3254,7 +3254,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -3328,7 +3328,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -3398,7 +3398,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Unvotes (1)
                 </div>
@@ -3463,7 +3463,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Votes (1)
                 </div>
@@ -3528,7 +3528,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -3552,7 +3552,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -3571,7 +3571,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -3662,7 +3662,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -3736,7 +3736,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -3793,7 +3793,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Amount
                 </div>
@@ -3839,7 +3839,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -3863,7 +3863,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -3882,7 +3882,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>

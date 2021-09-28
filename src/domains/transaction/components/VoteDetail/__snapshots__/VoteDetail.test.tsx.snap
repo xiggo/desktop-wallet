@@ -58,7 +58,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -132,7 +132,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -202,7 +202,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Unvotes (1)
                 </div>
@@ -267,7 +267,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -291,7 +291,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -310,7 +310,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -400,7 +400,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -474,7 +474,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -544,7 +544,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Votes (1)
                 </div>
@@ -609,7 +609,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -633,7 +633,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -652,7 +652,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -742,7 +742,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -816,7 +816,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -886,7 +886,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Unvotes (1)
                 </div>
@@ -951,7 +951,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Votes (1)
                 </div>
@@ -1016,7 +1016,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -1040,7 +1040,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -1059,7 +1059,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>

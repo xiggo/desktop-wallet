@@ -466,7 +466,7 @@ exports[`SendIpfs should render form step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Cryptoasset
         </div>
@@ -501,7 +501,7 @@ exports[`SendIpfs should render form step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Sender
         </div>
@@ -767,7 +767,7 @@ exports[`SendIpfs should render review step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Cryptoasset
         </div>
@@ -802,7 +802,7 @@ exports[`SendIpfs should render review step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Sender
         </div>
@@ -859,7 +859,7 @@ exports[`SendIpfs should render review step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           IPFS Hash
         </div>
@@ -995,7 +995,7 @@ exports[`SendIpfs should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             IPFS Hash
           </div>
@@ -1346,7 +1346,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -1420,7 +1420,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -1452,7 +1452,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -1487,7 +1487,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -1544,7 +1544,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             IPFS Hash
                           </div>
@@ -1918,7 +1918,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -1992,7 +1992,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -2024,7 +2024,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -2059,7 +2059,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -2116,7 +2116,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             IPFS Hash
                           </div>
@@ -2492,7 +2492,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -2566,7 +2566,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -2598,7 +2598,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -2633,7 +2633,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -2690,7 +2690,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             IPFS Hash
                           </div>
@@ -3064,7 +3064,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -3138,7 +3138,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -3170,7 +3170,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -3205,7 +3205,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -3262,7 +3262,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             IPFS Hash
                           </div>
@@ -3630,7 +3630,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Cryptoasset
                         </div>
@@ -3665,7 +3665,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Sender
                         </div>

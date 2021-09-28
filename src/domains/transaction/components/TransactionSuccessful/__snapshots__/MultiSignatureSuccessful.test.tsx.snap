@@ -76,7 +76,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             ID
           </div>
@@ -127,7 +127,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             <div
               class="flex items-center space-x-2"
@@ -211,7 +211,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Cryptoasset
           </div>
@@ -246,7 +246,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Sender
           </div>
@@ -303,7 +303,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Multisignature Participants
           </div>
@@ -444,7 +444,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Minimum Required Signatures
           </div>
@@ -473,7 +473,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Transaction Type
           </div>
@@ -542,7 +542,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             ID
           </div>
@@ -593,7 +593,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             <div
               class="flex items-center space-x-2"
@@ -677,7 +677,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Cryptoasset
           </div>
@@ -712,7 +712,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Sender
           </div>
@@ -769,7 +769,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Multisignature Participants
           </div>
@@ -910,7 +910,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Minimum Required Signatures
           </div>
@@ -939,7 +939,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Transaction Type
           </div>
@@ -1008,7 +1008,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             ID
           </div>
@@ -1059,7 +1059,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Cryptoasset
           </div>
@@ -1094,7 +1094,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Sender
           </div>
@@ -1139,7 +1139,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Multisignature Participants
           </div>
@@ -1280,7 +1280,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Minimum Required Signatures
           </div>
@@ -1309,7 +1309,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Transaction Type
           </div>
@@ -1378,7 +1378,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             ID
           </div>
@@ -1429,7 +1429,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Cryptoasset
           </div>
@@ -1464,7 +1464,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Sender
           </div>
@@ -1521,7 +1521,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Multisignature Participants
           </div>
@@ -1662,7 +1662,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Minimum Required Signatures
           </div>
@@ -1691,7 +1691,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Transaction Type
           </div>

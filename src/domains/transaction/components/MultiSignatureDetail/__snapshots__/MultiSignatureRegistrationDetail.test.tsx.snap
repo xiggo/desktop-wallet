@@ -56,7 +56,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -130,7 +130,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -187,7 +187,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -211,7 +211,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -230,7 +230,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -264,7 +264,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Multisignature Participants
                 </div>
@@ -405,7 +405,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Minimum Required Signatures
                 </div>
@@ -426,7 +426,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Multisignature Address
                 </div>
@@ -588,7 +588,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -662,7 +662,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -719,7 +719,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -743,7 +743,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -762,7 +762,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -796,7 +796,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Multisignature Participants
                 </div>
@@ -937,7 +937,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Minimum Required Signatures
                 </div>
@@ -958,7 +958,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Multisignature Address
                 </div>

@@ -43,7 +43,11 @@ export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDet
 			{...properties}
 		>
 			<div className="flex-1 space-y-2 w-40 whitespace-nowrap">
-				{label && <div className="text-sm font-semibold text-theme-secondary-700 no-ligatures">{label}</div>}
+				{label && (
+					<div className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures">
+						{label}
+					</div>
+				)}
 
 				<div className="flex items-center font-semibold">{children}</div>
 			</div>

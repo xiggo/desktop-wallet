@@ -891,7 +891,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Cryptoasset
                         </div>
@@ -926,7 +926,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Address
                         </div>
@@ -968,7 +968,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Wallet Name
                         </div>
@@ -1921,7 +1921,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Cryptoasset
                         </div>
@@ -1956,7 +1956,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Address
                         </div>
@@ -1998,7 +1998,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                         class="flex-1 space-y-2 w-40 whitespace-nowrap"
                       >
                         <div
-                          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                         >
                           Wallet Name
                         </div>

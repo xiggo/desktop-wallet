@@ -58,7 +58,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -132,7 +132,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -178,7 +178,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   <div
                     class="flex items-center space-x-4"
@@ -245,7 +245,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Total Amount
                 </div>
@@ -291,7 +291,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -315,7 +315,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Memo
                 </div>
@@ -351,7 +351,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -370,7 +370,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -460,7 +460,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -534,7 +534,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -580,7 +580,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   <div
                     class="flex items-center space-x-4"
@@ -660,7 +660,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Total Amount
                 </div>
@@ -720,7 +720,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -744,7 +744,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Memo
                 </div>
@@ -780,7 +780,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -799,7 +799,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>
@@ -891,7 +891,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   ID
                 </div>
@@ -965,7 +965,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Sender
                 </div>
@@ -1011,7 +1011,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   <div
                     class="flex items-center space-x-4"
@@ -1091,7 +1091,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Total Amount
                 </div>
@@ -1137,7 +1137,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Transaction Fee
                 </div>
@@ -1161,7 +1161,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Memo
                 </div>
@@ -1197,7 +1197,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Timestamp
                 </div>
@@ -1216,7 +1216,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 class="flex-1 space-y-2 w-40 whitespace-nowrap"
               >
                 <div
-                  class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                  class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
                   Confirmations
                 </div>

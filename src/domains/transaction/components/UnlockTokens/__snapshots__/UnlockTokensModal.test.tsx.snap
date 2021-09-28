@@ -413,7 +413,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Sender
                   </div>
@@ -459,7 +459,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Total Amount
                   </div>
@@ -505,7 +505,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Transaction Fee
                   </div>
@@ -1288,7 +1288,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Sender
                   </div>
@@ -1334,7 +1334,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Total Amount
                   </div>
@@ -1380,7 +1380,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Transaction Fee
                   </div>
@@ -1681,7 +1681,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                       class="flex-1 space-y-2 w-40 whitespace-nowrap"
                     >
                       <div
-                        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                       >
                         ID
                       </div>
@@ -1755,7 +1755,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                       class="flex-1 space-y-2 w-40 whitespace-nowrap"
                     >
                       <div
-                        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                       >
                         Transaction Type
                       </div>
@@ -1787,7 +1787,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                       class="flex-1 space-y-2 w-40 whitespace-nowrap"
                     >
                       <div
-                        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                       >
                         Cryptoasset
                       </div>
@@ -1822,7 +1822,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                       class="flex-1 space-y-2 w-40 whitespace-nowrap"
                     >
                       <div
-                        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                       >
                         Sender
                       </div>
@@ -1868,7 +1868,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                       class="flex-1 space-y-2 w-40 whitespace-nowrap"
                     >
                       <div
-                        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                       >
                         Total Amount
                       </div>
@@ -1914,7 +1914,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                       class="flex-1 space-y-2 w-40 whitespace-nowrap"
                     >
                       <div
-                        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                       >
                         Transaction Fee
                       </div>
@@ -1938,7 +1938,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                       class="flex-1 space-y-2 w-40 whitespace-nowrap"
                     >
                       <div
-                        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                       >
                         Timestamp
                       </div>

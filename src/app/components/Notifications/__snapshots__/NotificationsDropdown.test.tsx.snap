@@ -1397,7 +1397,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     ID
                   </div>
@@ -1471,7 +1471,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Sender
                   </div>
@@ -1517,7 +1517,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Recipient
                   </div>
@@ -1563,7 +1563,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Amount
                   </div>
@@ -1609,7 +1609,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Transaction Fee
                   </div>
@@ -1633,7 +1633,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Memo
                   </div>
@@ -1669,7 +1669,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Timestamp
                   </div>
@@ -1688,7 +1688,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   class="flex-1 space-y-2 w-40 whitespace-nowrap"
                 >
                   <div
-                    class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
                     Confirmations
                   </div>

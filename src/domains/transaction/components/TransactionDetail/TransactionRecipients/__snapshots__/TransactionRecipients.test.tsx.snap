@@ -10,7 +10,7 @@ exports[`TransactionRecipients should render a recipients array 1`] = `
       class="flex-1 space-y-2 w-40 whitespace-nowrap"
     >
       <div
-        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
       >
         Recipients (2)
       </div>
@@ -190,7 +190,7 @@ exports[`TransactionRecipients should render a single recipient 1`] = `
       class="flex-1 space-y-2 w-40 whitespace-nowrap"
     >
       <div
-        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
       >
         Recipient
       </div>
@@ -241,7 +241,7 @@ exports[`TransactionRecipients should render a single recipient with alias 1`] =
       class="flex-1 space-y-2 w-40 whitespace-nowrap"
     >
       <div
-        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
       >
         Recipient
       </div>
@@ -303,7 +303,7 @@ exports[`TransactionRecipients should render the delegate icon if isDelegate 1`]
       class="flex-1 space-y-2 w-40 whitespace-nowrap"
     >
       <div
-        class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
       >
         Recipient
       </div>

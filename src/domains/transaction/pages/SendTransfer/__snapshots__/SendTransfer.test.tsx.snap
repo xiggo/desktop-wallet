@@ -331,7 +331,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -405,7 +405,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -437,7 +437,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -472,7 +472,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -529,7 +529,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Recipient
                           </div>
@@ -575,7 +575,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Amount
                           </div>
@@ -621,7 +621,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -6296,7 +6296,7 @@ exports[`SendTransfer should render review step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Cryptoasset
         </div>
@@ -6331,7 +6331,7 @@ exports[`SendTransfer should render review step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Sender
         </div>
@@ -6388,7 +6388,7 @@ exports[`SendTransfer should render review step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Recipient
         </div>
@@ -6445,7 +6445,7 @@ exports[`SendTransfer should render review step 1`] = `
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Memo
         </div>
@@ -6588,7 +6588,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Cryptoasset
         </div>
@@ -6623,7 +6623,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Sender
         </div>
@@ -6680,7 +6680,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Recipients (2)
         </div>
@@ -6855,7 +6855,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Memo
         </div>
@@ -6998,7 +6998,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Cryptoasset
         </div>
@@ -7033,7 +7033,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Sender
         </div>
@@ -7090,7 +7090,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
         class="flex-1 space-y-2 w-40 whitespace-nowrap"
       >
         <div
-          class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
         >
           Recipients (2)
         </div>
@@ -7378,7 +7378,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             ID
           </div>
@@ -7429,7 +7429,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Cryptoasset
           </div>
@@ -7464,7 +7464,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Sender
           </div>
@@ -7521,7 +7521,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Multisignature Participants
           </div>
@@ -7591,7 +7591,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Transaction Type
           </div>
@@ -7623,7 +7623,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Recipient
           </div>
@@ -7680,7 +7680,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Amount
           </div>
@@ -7726,7 +7726,7 @@ exports[`SendTransfer should render summary step 1`] = `
           class="flex-1 space-y-2 w-40 whitespace-nowrap"
         >
           <div
-            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
           >
             Transaction Fee
           </div>
@@ -9540,7 +9540,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -9614,7 +9614,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -9646,7 +9646,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -9681,7 +9681,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -9738,7 +9738,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Recipient
                           </div>
@@ -9784,7 +9784,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Amount
                           </div>
@@ -9830,7 +9830,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -10205,7 +10205,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -10279,7 +10279,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -10311,7 +10311,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -10346,7 +10346,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -10403,7 +10403,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Recipient
                           </div>
@@ -10449,7 +10449,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Amount
                           </div>
@@ -10495,7 +10495,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -10870,7 +10870,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -10944,7 +10944,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -10976,7 +10976,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -11011,7 +11011,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -11068,7 +11068,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Recipient
                           </div>
@@ -11114,7 +11114,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Amount
                           </div>
@@ -11160,7 +11160,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -11535,7 +11535,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -11609,7 +11609,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -11641,7 +11641,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -11676,7 +11676,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -11733,7 +11733,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Recipient
                           </div>
@@ -11779,7 +11779,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Amount
                           </div>
@@ -11825,7 +11825,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -12519,7 +12519,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -12593,7 +12593,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -12625,7 +12625,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -12660,7 +12660,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -12717,7 +12717,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Recipient
                           </div>
@@ -12763,7 +12763,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Amount
                           </div>
@@ -12809,7 +12809,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -13184,7 +13184,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -13258,7 +13258,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -13290,7 +13290,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -13325,7 +13325,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -13382,7 +13382,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Recipient
                           </div>
@@ -13428,7 +13428,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Amount
                           </div>
@@ -13474,7 +13474,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
@@ -13849,7 +13849,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             ID
                           </div>
@@ -13923,7 +13923,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Type
                           </div>
@@ -13955,7 +13955,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Cryptoasset
                           </div>
@@ -13990,7 +13990,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Sender
                           </div>
@@ -14047,7 +14047,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Recipient
                           </div>
@@ -14093,7 +14093,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Amount
                           </div>
@@ -14139,7 +14139,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                           class="flex-1 space-y-2 w-40 whitespace-nowrap"
                         >
                           <div
-                            class="text-sm font-semibold text-theme-secondary-700 no-ligatures"
+                            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                           >
                             Transaction Fee
                           </div>
