@@ -2,7 +2,7 @@
 import { Contracts } from "@payvo/profiles";
 import { ProfileSetting } from "@payvo/profiles/distribution/contracts";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
-import { toasts } from "app/services";
+import { useProfileStatusWatcher } from "app/hooks";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
@@ -13,6 +13,7 @@ import {
 	fireEvent,
 	getDefaultProfileId,
 	renderWithRouter,
+	screen,
 	syncDelegates,
 	waitFor,
 	within,
@@ -235,6 +236,8 @@ describe("Votes", () => {
 				wallet: new ReadOnlyWallet({
 					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
 					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
 					isResignedDelegate: false,
 					publicKey: currentWallet.publicKey(),
 					rank: 52,
@@ -304,6 +307,8 @@ describe("Votes", () => {
 				wallet: new ReadOnlyWallet({
 					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
 					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
 					isResignedDelegate: false,
 					publicKey: currentWallet.publicKey(),
 					rank: 52,
@@ -415,37 +420,55 @@ describe("Votes", () => {
 		walletVoteMock.mockRestore();
 	});
 
-	it("should show network warning", async () => {
+	it("should trigger network connection warning", async () => {
 		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
 
-		const walletRestoreMock = jest.spyOn(currentWallet, "hasBeenPartiallyRestored").mockReturnValue(true);
-		const warningMock = jest.fn();
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation(warningMock);
+		const history = createMemoryHistory();
+		history.push(route);
 
-		const { asFragment, getByTestId } = renderPage(route);
+		const onProfileSyncError = jest.fn();
+		const Component = () => {
+			useProfileStatusWatcher({ env, onProfileSyncError, profile });
+			return <Votes />;
+		};
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/:walletId/votes">
+				<Component />
+			</Route>,
+			{
+				history,
+				routes: [route],
+				withProfileSynchronizer: true,
+			},
+		);
 
-		expect(getByTestId("DelegateTable")).toBeTruthy();
+		await waitFor(() => expect(screen.getByTestId("DelegateTable")).toBeTruthy());
 
 		await waitFor(() => {
-			expect(getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeTruthy();
 		});
 
-		const selectDelegateButton = getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
+
+		const syncMock = jest.spyOn(profile, "sync").mockImplementationOnce(() => {
+			throw new Error("error syncing");
+		});
+		const walletRestoreMock = jest.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
 
 		act(() => {
 			fireEvent.click(selectDelegateButton);
 		});
 
-		expect(getByTestId("DelegateTable__footer")).toBeTruthy();
-		expect(getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
+
+		await waitFor(() => expect(onProfileSyncError).toHaveBeenCalled());
+
 		expect(asFragment()).toMatchSnapshot();
 
+		syncMock.mockRestore();
 		walletRestoreMock.mockRestore();
-
-		expect(toastSpy).toHaveBeenCalled();
-
-		toastSpy.mockRestore();
 	});
 
 	it("should emit action on continue button", async () => {
@@ -629,6 +652,8 @@ describe("Votes", () => {
 				wallet: new ReadOnlyWallet({
 					address: "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
 					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
 					isResignedDelegate: true,
 					publicKey: currentWallet.publicKey(),
 					rank: 52,

@@ -17,6 +17,8 @@ export const ConfigurationProvider = ({ children, defaultConfiguration }: Proper
 		// Domain specific configuration defaults
 		dashboard: null,
 
+		isProfileInitialSync: true,
+
 		// Errored networks names after a failed sync.
 		profileErroredNetworks: [],
 

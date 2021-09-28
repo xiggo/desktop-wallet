@@ -10,15 +10,18 @@ import { Route } from "react-router-dom";
 import {
 	act as renderAct,
 	env,
+	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
 	pluginManager,
 	renderWithRouter,
+	screen,
 	syncDelegates,
 	waitFor,
 } from "utils/testing-library";
 
 import {
+	useProfileJobs,
 	useProfileRestore,
 	useProfileStatusWatcher,
 	useProfileSynchronizer,
@@ -349,7 +352,6 @@ describe("useProfileSynchronizer", () => {
 				{
 					history,
 					routes: [dashboardURL],
-					withProfileSynchronizer: true,
 				},
 			);
 
@@ -374,6 +376,39 @@ describe("useProfileSynchronizer", () => {
 		await waitFor(() => expect(profileErroredNetworks.length).toEqual(1));
 
 		mockWalletSyncStatus.mockRestore();
+	});
+
+	it("should reset sync profile wallets", async () => {
+		history.push(dashboardURL);
+
+		const profile = env.profiles().findById(getDefaultProfileId());
+		let configuration: any;
+
+		const Component = () => {
+			configuration = useConfiguration();
+			const { syncProfileWallets } = useProfileJobs(profile);
+
+			return <button data-testid="ResetSyncProfile" onClick={() => syncProfileWallets(true)} />;
+		};
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/dashboard">
+				<Component />
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("ResetSyncProfile")).toBeInTheDocument());
+
+		await waitFor(() => expect(configuration.isProfileInitialSync).toEqual(false));
+
+		fireEvent.click(screen.getByTestId("ResetSyncProfile"));
+
+		await waitFor(() => expect(configuration.isProfileInitialSync).toEqual(true));
 	});
 
 	it("should sync profile", async () => {

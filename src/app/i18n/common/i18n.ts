@@ -105,8 +105,6 @@ export const translations: { [key: string]: any } = {
 	ERRORS: {
 		INVALID_IMAGE: "File is not an image",
 		INVALID_URL: "The link could not be opened: '{{url}}' is not a valid URL",
-		NETWORK_ERROR:
-			"There has been a network problem on <bold>{{network}}</bold> while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect",
 	},
 	EXCHANGE: "Exchange",
 	EXPIRATION: "Expiration",

@@ -4,7 +4,7 @@ import { useConfiguration, useEnvironmentContext } from "app/contexts";
 import { useAccentColor } from "app/hooks/use-accent-color";
 import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
 import { isIdle } from "utils/electron-utils";
 
@@ -52,9 +52,13 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 		}
 
 		const syncProfileWallets = {
-			callback: async () => {
+			callback: async (reset = false) => {
 				try {
-					setConfiguration({ profileIsSyncingWallets: true });
+					setConfiguration({
+						profileIsSyncingWallets: true,
+						...(reset && { isProfileInitialSync: true }),
+					});
+
 					await env.wallets().syncByProfile(profile);
 					await profile.sync();
 
@@ -307,11 +311,11 @@ export const useProfileStatusWatcher = ({
 		profileIsSyncingWallets,
 		profileHasSyncedOnce,
 		profileErroredNetworks,
+		isProfileInitialSync,
 	} = useConfiguration();
 
 	const { getErroredNetworks } = useProfileUtils(env);
 	const previousErroredNetworks = usePrevious(profileErroredNetworks) || [];
-	const [isInitialSync, setIsInitialSync] = useState(true);
 
 	const walletsCount = profile?.wallets().count();
 
@@ -329,7 +333,7 @@ export const useProfileStatusWatcher = ({
 
 		// Prevent from showing network status toasts on every sync.
 		// Show them only on the initial sync and then when failed networks change.
-		if (!isInitialSync && !isStatusChanged) {
+		if (!isProfileInitialSync && !isStatusChanged) {
 			return;
 		}
 
@@ -337,7 +341,7 @@ export const useProfileStatusWatcher = ({
 
 		if (erroredNetworks.length > 0) {
 			onProfileSyncError?.(erroredNetworks, () => {
-				setIsInitialSync(true);
+				setConfiguration({ isProfileInitialSync: true });
 			});
 		}
 
@@ -345,7 +349,7 @@ export const useProfileStatusWatcher = ({
 			onProfileSyncComplete?.();
 		}
 
-		setIsInitialSync(false);
+		setConfiguration({ isProfileInitialSync: false });
 	}, [profileIsSyncingWallets, profileIsSyncing, profileHasSyncedOnce, getErroredNetworks, profile, walletsCount]); // eslint-disable-line react-hooks/exhaustive-deps
 };
 

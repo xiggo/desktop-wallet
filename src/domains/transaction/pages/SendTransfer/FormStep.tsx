@@ -4,7 +4,7 @@ import { Enums, Networks } from "@payvo/sdk";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { InputCounter } from "app/components/Input";
-import { useFees } from "app/hooks";
+import { useFees, useProfileJobs } from "app/hooks";
 import { toasts } from "app/services";
 import { SelectNetwork } from "domains/network/components/SelectNetwork";
 import { SelectAddress } from "domains/profile/components/SelectAddress";
@@ -13,7 +13,7 @@ import { InputFee } from "domains/transaction/components/InputFee";
 import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
 import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 export const FormStep = ({
 	networks,
@@ -25,6 +25,8 @@ export const FormStep = ({
 	deeplinkProps: any;
 }) => {
 	const { t } = useTranslation();
+
+	const { syncProfileWallets } = useProfileJobs(profile);
 
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
@@ -87,14 +89,7 @@ export const FormStep = ({
 		const isFullyRestoredAndSynced = senderWallet?.hasBeenFullyRestored() && senderWallet?.hasSyncedWithNetwork();
 
 		if (!isFullyRestoredAndSynced) {
-			toasts.warning(
-				<Trans
-					i18nKey="COMMON.ERRORS.NETWORK_ERROR"
-					values={{ network: `${network.coin()} ${network.name()}` }}
-					components={{ bold: <strong /> }}
-				/>,
-			);
-			return;
+			syncProfileWallets(true);
 		}
 	};
 

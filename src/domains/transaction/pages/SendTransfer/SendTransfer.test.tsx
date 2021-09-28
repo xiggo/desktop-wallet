@@ -5,6 +5,7 @@ import { screen } from "@testing-library/react";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
+import { useProfileStatusWatcher } from "app/hooks";
 import { toasts } from "app/services";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
@@ -451,52 +452,56 @@ describe("SendTransfer", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show network connection warning when selecting unsynced wallet", async () => {
+	it("should trigger network connection warning when selecting unsynced wallet", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const walletMock = jest.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
+		const onProfileSyncError = jest.fn();
+		const Component = () => {
+			useProfileStatusWatcher({ env, onProfileSyncError, profile });
+			return (
+				<LedgerProvider transport={getDefaultLedgerTransport()}>
+					<SendTransfer />
+				</LedgerProvider>
+			);
+		};
 
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/send-transfer">
-				<LedgerProvider transport={getDefaultLedgerTransport()}>
-					<SendTransfer />
-				</LedgerProvider>
+				<Component />
 			</Route>,
 			{
 				history,
 				routes: [transferURL],
+				withProfileSynchronizer: true,
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__network-step")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__network-step")).toBeTruthy());
 
-		fireEvent.click(getByTestId("NetworkIcon-ARK-ark.devnet"));
+		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() =>
-			expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet"),
+			expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet"),
 		);
 
-		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
 
-		const walletMock = jest.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
+		fireEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeTruthy());
 
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
-
-		fireEvent.click(within(getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
-
-		fireEvent.click(getByTestId("SearchWalletListItem__select-0"));
+		fireEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
 		await waitFor(() =>
-			expect(getByTestId("SelectAddress__input")).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
-		expect(toastSpy).toHaveBeenCalled();
-
+		await waitFor(() => expect(onProfileSyncError).toHaveBeenCalled());
 		walletMock.mockRestore();
-		toastSpy.mockRestore();
 	});
 
 	it("should select cryptoasset", async () => {
