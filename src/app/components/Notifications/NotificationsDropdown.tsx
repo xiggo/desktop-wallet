@@ -36,7 +36,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 						<Button variant="transparent" size="icon" data-testid="navbar__buttons--notifications">
 							<Icon name="Bell" size="lg" className="p-1" />
 							{hasUnread && (
-								<div className="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100">
+								<div className="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100">
 									<div className="w-2 h-2 rounded-full bg-theme-danger-500" />
 								</div>
 							)}

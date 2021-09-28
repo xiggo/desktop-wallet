@@ -46,7 +46,7 @@ exports[`ControlButton should render with dot 1`] = `
       class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
     >
       <div
-        class="flex absolute right-0 justify-center items-center -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background mr-1"
+        class="flex absolute top-0.5 right-1 justify-center items-center w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background"
       >
         <div
           class="w-2 h-2 rounded-full bg-theme-primary-500"
@@ -78,7 +78,7 @@ exports[`ControlButton should render without border and with dot 1`] = `
       class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 gPoGMb ring-focus"
     >
       <div
-        class="flex absolute right-0 justify-center items-center -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background -mr-1.5"
+        class="flex absolute top-0.5 right-1 justify-center items-center w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background -mr-2.5"
       >
         <div
           class="w-2 h-2 rounded-full bg-theme-primary-500"

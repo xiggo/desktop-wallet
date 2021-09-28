@@ -128,7 +128,7 @@ exports[`Votes should filter current delegates 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -343,7 +343,7 @@ exports[`Votes should filter current delegates 1`] = `
                           class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
                           <div
-                            class="flex absolute right-0 justify-center items-center -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background mr-1"
+                            class="flex absolute top-0.5 right-1 justify-center items-center w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background"
                           >
                             <div
                               class="w-2 h-2 rounded-full bg-theme-primary-500"
@@ -900,7 +900,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -1786,7 +1786,7 @@ exports[`Votes should render 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -2668,7 +2668,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -3923,7 +3923,7 @@ exports[`Votes should select a delegate 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -4804,7 +4804,7 @@ exports[`Votes should select an address without vote 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -5686,7 +5686,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -5901,7 +5901,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                           class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
                           <div
-                            class="flex absolute right-0 justify-center items-center -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background mr-1"
+                            class="flex absolute top-0.5 right-1 justify-center items-center w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background"
                           >
                             <div
                               class="w-2 h-2 rounded-full bg-theme-primary-500"
@@ -6216,7 +6216,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -6431,7 +6431,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                           class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
                         >
                           <div
-                            class="flex absolute right-0 justify-center items-center -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background mr-1"
+                            class="flex absolute top-0.5 right-1 justify-center items-center w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background"
                           >
                             <div
                               class="w-2 h-2 rounded-full bg-theme-primary-500"
@@ -6746,7 +6746,7 @@ exports[`Votes should show network warning 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -7625,7 +7625,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
@@ -8541,7 +8541,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                           </svg>
                         </div>
                         <div
-                          class="flex absolute right-0 justify-center items-center mr-3 -mt-3 w-3 h-3 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
                         >
                           <div
                             class="w-2 h-2 rounded-full bg-theme-danger-500"
