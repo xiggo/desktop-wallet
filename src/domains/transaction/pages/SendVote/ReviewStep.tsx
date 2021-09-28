@@ -6,7 +6,7 @@ import {
 	TransactionSender,
 } from "domains/transaction/components/TransactionDetail";
 import { VoteList } from "domains/vote/components/VoteList";
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -21,8 +21,6 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 	useEffect(() => {
 		unregister("mnemonic");
 	}, [unregister]);
-
-	const totalAmount = useMemo(() => votes.reduce((totalAmount, { amount }) => totalAmount + amount, 0), [votes]);
 
 	return (
 		<section data-testid="SendVote__review-step">
@@ -49,7 +47,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 			)}
 
 			<div className="mt-2">
-				<TotalAmountBox amount={totalAmount} fee={fee} ticker={wallet.currency()} />
+				<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />
 			</div>
 		</section>
 	);
