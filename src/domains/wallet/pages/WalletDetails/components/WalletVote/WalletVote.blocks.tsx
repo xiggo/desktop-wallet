@@ -140,7 +140,9 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 				return (
 					<>
 						<HintIcon
-							tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", { count: resignedCount })}
+							tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", {
+								count: resignedCount,
+							})}
 						/>
 
 						<span className="font-semibold text-theme-danger-600">
