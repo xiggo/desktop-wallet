@@ -76,7 +76,7 @@ exports[`NewsCard should render 1`] = `
               class="flex flex-col justify-end"
             >
               <div
-                class="Label-sc-4akkzw-0 bEleDA"
+                class="Label-sc-4akkzw-0 JnfDk"
                 color="warning"
               >
                 <span
@@ -208,7 +208,7 @@ exports[`NewsCard should render with cover image 1`] = `
               class="flex flex-col justify-end"
             >
               <div
-                class="Label-sc-4akkzw-0 bEleDA"
+                class="Label-sc-4akkzw-0 JnfDk"
                 color="warning"
               >
                 <span

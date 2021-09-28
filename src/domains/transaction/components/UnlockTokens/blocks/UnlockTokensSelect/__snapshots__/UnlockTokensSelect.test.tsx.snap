@@ -400,11 +400,11 @@ exports[`UnlockTokensSelect should render 1`] = `
           Total Amount
         </p>
         <div
-          class="Label-sc-4akkzw-0 jAUPwt"
+          class="Label-sc-4akkzw-0 koGEVV"
           color="neutral"
         >
           <div
-            class="flex space-x-1"
+            class="flex space-x-1 items-stretch"
           >
             <span
               class="whitespace-nowrap"
@@ -425,11 +425,11 @@ exports[`UnlockTokensSelect should render 1`] = `
           Transaction Fee
         </p>
         <div
-          class="Label-sc-4akkzw-0 jAUPwt"
+          class="Label-sc-4akkzw-0 koGEVV"
           color="neutral"
         >
           <div
-            class="flex space-x-1"
+            class="flex space-x-1 items-stretch"
           >
             <span
               class="whitespace-nowrap"

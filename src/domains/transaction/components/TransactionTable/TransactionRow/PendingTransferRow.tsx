@@ -72,6 +72,7 @@ export const PendingTransferRow = ({
 					isSent={transaction?.isSent?.()}
 					total={transaction.amount() + transaction.fee()}
 					wallet={wallet}
+					isCompact={isCompact}
 				/>
 			</TableCell>
 

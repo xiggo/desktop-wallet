@@ -80,6 +80,7 @@ const ExchangeTransactionRowAmount = ({
 				hint={isPending ? t("EXCHANGE.EXPECTED_AMOUNT_HINT") : undefined}
 				value={data.amount}
 				ticker={data.ticker}
+				isCompact={isCompact}
 				isNegative={type === "sent"}
 			/>
 		</>
@@ -164,7 +165,7 @@ export const ExchangeTransactionsRow = ({
 
 	return (
 		<TableRow>
-			<TableCell variant="start" innerClassName="space-x-4" isCompact={isCompact}>
+			<TableCell variant="start" isCompact={isCompact}>
 				<Tooltip content={exchangeTransaction.orderId()} className="no-ligatures">
 					<button
 						type="button"
@@ -184,11 +185,11 @@ export const ExchangeTransactionsRow = ({
 				{DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).format(timeFormat)}
 			</TableCell>
 
-			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
+			<TableCell innerClassName="space-x-3" isCompact={isCompact}>
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} isCompact={isCompact} />
 			</TableCell>
 
-			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
+			<TableCell innerClassName="space-x-3" isCompact={isCompact}>
 				<ExchangeTransactionRowAmount
 					type="received"
 					data={exchangeTransaction.output()}

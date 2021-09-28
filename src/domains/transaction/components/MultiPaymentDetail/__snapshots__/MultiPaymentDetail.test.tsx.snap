@@ -253,11 +253,11 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 gOcLKd"
+                    class="Label-sc-4akkzw-0 dCEjSJ"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-1"
+                      class="flex space-x-1 items-stretch"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -668,14 +668,14 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 gOcLKd"
+                    class="Label-sc-4akkzw-0 dCEjSJ"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-1"
+                      class="flex space-x-1 items-stretch"
                     >
                       <div
-                        class="flex items-center -ml-1.5 px-2 bg-theme-danger-100 dark:bg-theme-danger-400"
+                        class="flex items-center justify-center bg-theme-danger-100 dark:bg-theme-danger-400 -ml-1.5 px-2"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -1099,11 +1099,11 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 gOcLKd"
+                    class="Label-sc-4akkzw-0 dCEjSJ"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-1"
+                      class="flex space-x-1 items-stretch"
                     >
                       <span
                         class="whitespace-nowrap"

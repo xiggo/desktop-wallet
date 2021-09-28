@@ -384,11 +384,11 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 gOcLKd"
+                            class="Label-sc-4akkzw-0 dCEjSJ"
                             color="danger"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-stretch"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -881,11 +881,11 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 gOcLKd"
+                            class="Label-sc-4akkzw-0 dCEjSJ"
                             color="danger"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-stretch"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -1378,11 +1378,11 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 gOcLKd"
+                            class="Label-sc-4akkzw-0 dCEjSJ"
                             color="danger"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-stretch"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -1849,11 +1849,11 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 gOcLKd"
+                            class="Label-sc-4akkzw-0 dCEjSJ"
                             color="danger"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-stretch"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -2858,11 +2858,11 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 gOcLKd"
+                            class="Label-sc-4akkzw-0 dCEjSJ"
                             color="danger"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-stretch"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -3734,11 +3734,11 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 gOcLKd"
+                            class="Label-sc-4akkzw-0 dCEjSJ"
                             color="danger"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-stretch"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -5291,11 +5291,11 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 gOcLKd"
+                            class="Label-sc-4akkzw-0 dCEjSJ"
                             color="danger"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-stretch"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -5788,11 +5788,11 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 gOcLKd"
+                            class="Label-sc-4akkzw-0 dCEjSJ"
                             color="danger"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-stretch"
                             >
                               <span
                                 class="whitespace-nowrap"

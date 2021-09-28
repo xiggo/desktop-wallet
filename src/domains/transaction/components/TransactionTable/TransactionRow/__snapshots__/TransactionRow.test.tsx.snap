@@ -132,11 +132,11 @@ exports[`TransactionRow should omit the currency for transactions from test netw
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="Label-sc-4akkzw-0 gOcLKd"
+                class="Label-sc-4akkzw-0 dCEjSJ"
                 color="danger"
               >
                 <div
-                  class="flex space-x-1"
+                  class="flex space-x-1 items-stretch"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -301,11 +301,11 @@ exports[`TransactionRow should show transaction with currency 1`] = `
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="Label-sc-4akkzw-0 gOcLKd"
+                class="Label-sc-4akkzw-0 dCEjSJ"
                 color="danger"
               >
                 <div
-                  class="flex space-x-1"
+                  class="flex space-x-1 items-stretch"
                 >
                   <span
                     class="whitespace-nowrap"

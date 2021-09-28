@@ -1448,11 +1448,11 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 gOcLKd"
+                    class="Label-sc-4akkzw-0 dCEjSJ"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-1"
+                      class="flex space-x-1 items-stretch"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2639,11 +2639,11 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 gOcLKd"
+                    class="Label-sc-4akkzw-0 dCEjSJ"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-1"
+                      class="flex space-x-1 items-stretch"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -3801,11 +3801,11 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 gOcLKd"
+                    class="Label-sc-4akkzw-0 dCEjSJ"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-1"
+                      class="flex space-x-1 items-stretch"
                     >
                       <span
                         class="whitespace-nowrap"

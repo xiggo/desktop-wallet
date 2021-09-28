@@ -51,6 +51,7 @@ interface TransactionRowProperties {
 	convertedTotal?: number;
 	exchangeCurrency?: string;
 	exchangeTooltip?: boolean;
+	isCompact?: boolean;
 	isTestNetwork?: boolean;
 }
 
@@ -61,10 +62,13 @@ const BaseTransactionRowAmount: React.FC<TransactionRowProperties> = ({
 	convertedTotal,
 	exchangeCurrency,
 	exchangeTooltip,
+	isCompact,
 	isTestNetwork,
 }: TransactionRowProperties) => {
 	const isNegative = total !== 0 && isSent;
-	const TransactionAmount = <AmountLabel isNegative={isNegative} value={total} ticker={wallet.currency()} />;
+	const TransactionAmount = (
+		<AmountLabel isNegative={isNegative} value={total} ticker={wallet.currency()} isCompact={isCompact} />
+	);
 
 	if (!exchangeCurrency || isNil(convertedTotal)) {
 		return TransactionAmount;
@@ -85,10 +89,12 @@ const TransactionRowAmount = ({
 	transaction,
 	exchangeCurrency,
 	exchangeTooltip,
+	isCompact,
 }: {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	exchangeCurrency?: string;
 	exchangeTooltip?: boolean;
+	isCompact?: boolean;
 }): JSX.Element => (
 	<BaseTransactionRowAmount
 		isSent={transaction.isSent()}
@@ -97,6 +103,7 @@ const TransactionRowAmount = ({
 		convertedTotal={transaction.convertedTotal()}
 		exchangeCurrency={exchangeCurrency}
 		exchangeTooltip={exchangeTooltip}
+		isCompact={isCompact}
 		isTestNetwork={transaction.wallet().network().isTest()}
 	/>
 );

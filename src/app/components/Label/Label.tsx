@@ -7,6 +7,7 @@ interface LabelProperties {
 	color?: "primary" | "success" | "danger" | "warning" | "neutral";
 	size?: Size;
 	variant?: "solid";
+	noBorder?: boolean;
 }
 
 export const Label = styled.div<LabelProperties>(getStyles);

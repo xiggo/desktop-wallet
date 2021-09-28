@@ -89,11 +89,11 @@ exports[`UnlockTokensReview should render 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="Label-sc-4akkzw-0 fSJwcq"
+          class="Label-sc-4akkzw-0 bdvTBm"
           color="success"
         >
           <div
-            class="flex space-x-1"
+            class="flex space-x-1 items-stretch"
           >
             <span
               class="whitespace-nowrap"

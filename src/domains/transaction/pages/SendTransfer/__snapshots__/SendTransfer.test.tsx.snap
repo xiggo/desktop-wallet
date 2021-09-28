@@ -583,11 +583,11 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                             class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 gOcLKd"
+                              class="Label-sc-4akkzw-0 dCEjSJ"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-1"
+                                class="flex space-x-1 items-stretch"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -854,11 +854,11 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                                   >
                                     <div
-                                      class="Label-sc-4akkzw-0 gOcLKd"
+                                      class="Label-sc-4akkzw-0 dCEjSJ"
                                       color="danger"
                                     >
                                       <div
-                                        class="flex space-x-1"
+                                        class="flex space-x-1 items-stretch"
                                       >
                                         <span
                                           class="whitespace-nowrap"
@@ -7688,11 +7688,11 @@ exports[`SendTransfer should render summary step 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="Label-sc-4akkzw-0 gOcLKd"
+              class="Label-sc-4akkzw-0 dCEjSJ"
               color="danger"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -9792,11 +9792,11 @@ exports[`SendTransfer should send a single transfer 1`] = `
                             class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 gOcLKd"
+                              class="Label-sc-4akkzw-0 dCEjSJ"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-1"
+                                class="flex space-x-1 items-stretch"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -10457,11 +10457,11 @@ exports[`SendTransfer should send a single transfer 2`] = `
                             class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 gOcLKd"
+                              class="Label-sc-4akkzw-0 dCEjSJ"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-1"
+                                class="flex space-x-1 items-stretch"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -11122,11 +11122,11 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                             class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 gOcLKd"
+                              class="Label-sc-4akkzw-0 dCEjSJ"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-1"
+                                class="flex space-x-1 items-stretch"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -11787,11 +11787,11 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                             class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 gOcLKd"
+                              class="Label-sc-4akkzw-0 dCEjSJ"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-1"
+                                class="flex space-x-1 items-stretch"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -12058,11 +12058,11 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                                   >
                                     <div
-                                      class="Label-sc-4akkzw-0 gOcLKd"
+                                      class="Label-sc-4akkzw-0 dCEjSJ"
                                       color="danger"
                                     >
                                       <div
-                                        class="flex space-x-1"
+                                        class="flex space-x-1 items-stretch"
                                       >
                                         <span
                                           class="whitespace-nowrap"
@@ -12128,11 +12128,11 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                                   >
                                     <div
-                                      class="Label-sc-4akkzw-0 gOcLKd"
+                                      class="Label-sc-4akkzw-0 dCEjSJ"
                                       color="danger"
                                     >
                                       <div
-                                        class="flex space-x-1"
+                                        class="flex space-x-1 items-stretch"
                                       >
                                         <span
                                           class="whitespace-nowrap"
@@ -12771,11 +12771,11 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                             class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 gOcLKd"
+                              class="Label-sc-4akkzw-0 dCEjSJ"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-1"
+                                class="flex space-x-1 items-stretch"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -13436,11 +13436,11 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                             class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 gOcLKd"
+                              class="Label-sc-4akkzw-0 dCEjSJ"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-1"
+                                class="flex space-x-1 items-stretch"
                               >
                                 <span
                                   class="whitespace-nowrap"
@@ -14101,11 +14101,11 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                             class="flex items-center font-semibold"
                           >
                             <div
-                              class="Label-sc-4akkzw-0 gOcLKd"
+                              class="Label-sc-4akkzw-0 dCEjSJ"
                               color="danger"
                             >
                               <div
-                                class="flex space-x-1"
+                                class="flex space-x-1 items-stretch"
                               >
                                 <span
                                   class="whitespace-nowrap"

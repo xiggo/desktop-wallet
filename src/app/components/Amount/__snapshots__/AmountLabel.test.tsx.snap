@@ -3,12 +3,66 @@
 exports[`AmountLabel should render 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 fSJwcq"
+    class="Label-sc-4akkzw-0 bdvTBm"
     color="success"
   >
     <div
-      class="flex space-x-1"
+      class="flex space-x-1 items-stretch"
     >
+      <span
+        class="whitespace-nowrap"
+        data-testid="AmountCrypto"
+      >
+        + 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render compact 1`] = `
+<DocumentFragment>
+  <div
+    class="Label-sc-4akkzw-0 OOaVy"
+    color="success"
+  >
+    <div
+      class="flex space-x-1 items-center"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="AmountCrypto"
+      >
+        + 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render compact with hint 1`] = `
+<DocumentFragment>
+  <div
+    class="Label-sc-4akkzw-0 OOaVy"
+    color="success"
+  >
+    <div
+      class="flex space-x-1 items-center"
+    >
+      <div
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 w-5 h-5 rounded-full"
+        data-testid="AmountLabel__hint"
+      >
+        <div
+          class="sc-bdnxRM AkeAK dark:text-white"
+          height="10"
+          width="10"
+        >
+          <svg>
+            hint-small.svg
+          </svg>
+        </div>
+      </div>
       <span
         class="whitespace-nowrap"
         data-testid="AmountCrypto"
@@ -23,11 +77,11 @@ exports[`AmountLabel should render 1`] = `
 exports[`AmountLabel should render negative 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 gOcLKd"
+    class="Label-sc-4akkzw-0 dCEjSJ"
     color="danger"
   >
     <div
-      class="flex space-x-1"
+      class="flex space-x-1 items-stretch"
     >
       <span
         class="whitespace-nowrap"
@@ -43,14 +97,14 @@ exports[`AmountLabel should render negative 1`] = `
 exports[`AmountLabel should render with hint 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 fSJwcq"
+    class="Label-sc-4akkzw-0 bdvTBm"
     color="success"
   >
     <div
-      class="flex space-x-1"
+      class="flex space-x-1 items-stretch"
     >
       <div
-        class="flex items-center -ml-1.5 px-2 bg-theme-success-200 dark:bg-theme-success-600"
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
         data-testid="AmountLabel__hint"
       >
         <div
@@ -77,11 +131,11 @@ exports[`AmountLabel should render with hint 1`] = `
 exports[`AmountLabel should render zero 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 jAUPwt"
+    class="Label-sc-4akkzw-0 koGEVV"
     color="neutral"
   >
     <div
-      class="flex space-x-1"
+      class="flex space-x-1 items-stretch"
     >
       <span
         class="whitespace-nowrap"

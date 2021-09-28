@@ -148,11 +148,11 @@ exports[`Unconfirmed transaction table should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -218,11 +218,11 @@ exports[`Unconfirmed transaction table should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"

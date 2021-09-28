@@ -85,6 +85,7 @@ export const TransactionRow = memo(
 						transaction={transaction}
 						exchangeCurrency={exchangeCurrency}
 						exchangeTooltip
+						isCompact={isCompact}
 					/>
 				</TableCell>
 

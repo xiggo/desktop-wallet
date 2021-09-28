@@ -16,6 +16,7 @@ interface AmountProperties {
 }
 
 interface AmountLabelProperties {
+	isCompact?: boolean;
 	isNegative: boolean;
 	value: number;
 	ticker: string;

@@ -249,7 +249,7 @@ exports[`TransactionTable loading state should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -442,7 +442,7 @@ exports[`TransactionTable loading state should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -635,7 +635,7 @@ exports[`TransactionTable loading state should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -828,7 +828,7 @@ exports[`TransactionTable loading state should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -1021,7 +1021,7 @@ exports[`TransactionTable loading state should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -1339,7 +1339,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7"
                 >
                   <span>
                     <span
@@ -1524,7 +1524,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7"
                 >
                   <span>
                     <span
@@ -1709,7 +1709,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7"
                 >
                   <span>
                     <span
@@ -1894,7 +1894,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7"
                 >
                   <span>
                     <span
@@ -2079,7 +2079,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7"
                 >
                   <span>
                     <span
@@ -2419,7 +2419,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -2612,7 +2612,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -2805,7 +2805,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -2998,7 +2998,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -3191,7 +3191,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -3550,7 +3550,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -3762,7 +3762,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -3974,7 +3974,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -4186,7 +4186,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -4398,7 +4398,7 @@ exports[`TransactionTable loading state should render with memo column 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <span
-                  class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
                 >
                   <span>
                     <span
@@ -4725,11 +4725,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -4880,11 +4880,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -5035,11 +5035,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -5190,11 +5190,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -5345,11 +5345,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -5500,11 +5500,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -5655,11 +5655,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -5810,11 +5810,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -5965,11 +5965,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -6120,11 +6120,11 @@ exports[`TransactionTable should render 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -6408,11 +6408,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -6563,11 +6563,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 iUZRnl"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -6718,11 +6718,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -6873,11 +6873,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -7028,11 +7028,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -7183,11 +7183,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -7338,11 +7338,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -7493,11 +7493,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -7648,11 +7648,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -7803,11 +7803,11 @@ exports[`TransactionTable should render compact 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 iUZRnl"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"

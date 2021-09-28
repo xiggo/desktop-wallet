@@ -3,11 +3,11 @@
 exports[`TransactionRowAmount should show as received 1`] = `
 <DocumentFragment>
   <div
-    class="Label-sc-4akkzw-0 fSJwcq"
+    class="Label-sc-4akkzw-0 bdvTBm"
     color="success"
   >
     <div
-      class="flex space-x-1"
+      class="flex space-x-1 items-stretch"
     >
       <span
         class="whitespace-nowrap"

@@ -10,7 +10,7 @@ exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
           >
             <button
               class="link"
@@ -42,7 +42,7 @@ exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
@@ -58,11 +58,11 @@ exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 gOcLKd"
+              class="Label-sc-4akkzw-0 dCEjSJ"
               color="danger"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -76,7 +76,7 @@ exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
@@ -92,11 +92,11 @@ exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 fSJwcq"
+              class="Label-sc-4akkzw-0 bdvTBm"
               color="success"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -166,7 +166,7 @@ exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
           >
             <button
               class="link"
@@ -198,7 +198,7 @@ exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
@@ -214,11 +214,11 @@ exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 gOcLKd"
+              class="Label-sc-4akkzw-0 dCEjSJ"
               color="danger"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -232,7 +232,7 @@ exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
@@ -248,11 +248,11 @@ exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 fSJwcq"
+              class="Label-sc-4akkzw-0 bdvTBm"
               color="success"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -322,7 +322,7 @@ exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
           >
             <button
               class="link"
@@ -354,7 +354,7 @@ exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
@@ -370,11 +370,11 @@ exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 gOcLKd"
+              class="Label-sc-4akkzw-0 dCEjSJ"
               color="danger"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -388,7 +388,7 @@ exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
@@ -404,11 +404,11 @@ exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 fSJwcq"
+              class="Label-sc-4akkzw-0 bdvTBm"
               color="success"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -478,7 +478,7 @@ exports[`ExchangeTransactionsRow should render (New) 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
           >
             <button
               class="link"
@@ -510,7 +510,7 @@ exports[`ExchangeTransactionsRow should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
@@ -526,11 +526,11 @@ exports[`ExchangeTransactionsRow should render (New) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 gOcLKd"
+              class="Label-sc-4akkzw-0 dCEjSJ"
               color="danger"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -544,7 +544,7 @@ exports[`ExchangeTransactionsRow should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
@@ -560,14 +560,14 @@ exports[`ExchangeTransactionsRow should render (New) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 fSJwcq"
+              class="Label-sc-4akkzw-0 bdvTBm"
               color="success"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <div
-                  class="flex items-center -ml-1.5 px-2 bg-theme-success-200 dark:bg-theme-success-600"
+                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
                   data-testid="AmountLabel__hint"
                 >
                   <div
@@ -648,7 +648,7 @@ exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
           >
             <button
               class="link"
@@ -680,7 +680,7 @@ exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
@@ -696,11 +696,11 @@ exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 gOcLKd"
+              class="Label-sc-4akkzw-0 dCEjSJ"
               color="danger"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -714,7 +714,7 @@ exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
@@ -730,11 +730,11 @@ exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 fSJwcq"
+              class="Label-sc-4akkzw-0 bdvTBm"
               color="success"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -804,7 +804,7 @@ exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
           >
             <button
               class="link"
@@ -836,7 +836,7 @@ exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
@@ -852,11 +852,11 @@ exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 gOcLKd"
+              class="Label-sc-4akkzw-0 dCEjSJ"
               color="danger"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -870,7 +870,7 @@ exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh space-x-3"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
@@ -886,11 +886,11 @@ exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
               </div>
             </div>
             <div
-              class="Label-sc-4akkzw-0 fSJwcq"
+              class="Label-sc-4akkzw-0 bdvTBm"
               color="success"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap"
@@ -960,7 +960,7 @@ exports[`ExchangeTransactionsRow should render compact 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
           >
             <button
               class="link"
@@ -992,7 +992,7 @@ exports[`ExchangeTransactionsRow should render compact 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-3"
           >
             <span
               class="w-5 h-5 flex items-center border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
@@ -1008,11 +1008,11 @@ exports[`ExchangeTransactionsRow should render compact 1`] = `
               </div>
             </span>
             <div
-              class="Label-sc-4akkzw-0 gOcLKd"
+              class="Label-sc-4akkzw-0 iUZRnl"
               color="danger"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap"
@@ -1026,7 +1026,7 @@ exports[`ExchangeTransactionsRow should render compact 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-3"
           >
             <span
               class="w-5 h-5 flex items-center border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
@@ -1042,11 +1042,11 @@ exports[`ExchangeTransactionsRow should render compact 1`] = `
               </div>
             </span>
             <div
-              class="Label-sc-4akkzw-0 fSJwcq"
+              class="Label-sc-4akkzw-0 OOaVy"
               color="success"
             >
               <div
-                class="flex space-x-1"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap"

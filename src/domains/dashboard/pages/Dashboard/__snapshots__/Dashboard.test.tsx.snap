@@ -1827,11 +1827,11 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 fSJwcq"
+                            class="Label-sc-4akkzw-0 OOaVy"
                             color="success"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-center"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -1987,11 +1987,11 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 fSJwcq"
+                            class="Label-sc-4akkzw-0 OOaVy"
                             color="success"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-center"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -2147,11 +2147,11 @@ exports[`Dashboard should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="Label-sc-4akkzw-0 fSJwcq"
+                            class="Label-sc-4akkzw-0 OOaVy"
                             color="success"
                           >
                             <div
-                              class="flex space-x-1"
+                              class="flex space-x-1 items-center"
                             >
                               <span
                                 class="whitespace-nowrap"
@@ -3204,7 +3204,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
                       >
                         <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="flex items-center space-x-1 h-7"
                         >
                           <span>
                             <span
@@ -3389,7 +3389,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
                       >
                         <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="flex items-center space-x-1 h-7"
                         >
                           <span>
                             <span
@@ -3574,7 +3574,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
                       >
                         <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="flex items-center space-x-1 h-7"
                         >
                           <span>
                             <span
@@ -3759,7 +3759,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
                       >
                         <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="flex items-center space-x-1 h-7"
                         >
                           <span>
                             <span
@@ -3944,7 +3944,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
                       >
                         <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="flex items-center space-x-1 h-7"
                         >
                           <span>
                             <span
@@ -4129,7 +4129,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
                       >
                         <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="flex items-center space-x-1 h-7"
                         >
                           <span>
                             <span
@@ -4314,7 +4314,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
                       >
                         <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="flex items-center space-x-1 h-7"
                         >
                           <span>
                             <span
@@ -4499,7 +4499,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                         class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
                       >
                         <span
-                          class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                          class="flex items-center space-x-1 h-7"
                         >
                           <span>
                             <span

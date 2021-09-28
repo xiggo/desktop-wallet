@@ -201,11 +201,11 @@ exports[`UnlockTokenDetail should render a modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="Label-sc-4akkzw-0 gOcLKd"
+                    class="Label-sc-4akkzw-0 dCEjSJ"
                     color="danger"
                   >
                     <div
-                      class="flex space-x-1"
+                      class="flex space-x-1 items-stretch"
                     >
                       <span
                         class="whitespace-nowrap"

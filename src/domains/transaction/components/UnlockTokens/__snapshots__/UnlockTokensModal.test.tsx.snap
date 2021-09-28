@@ -255,11 +255,11 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                       Total Amount
                     </p>
                     <div
-                      class="Label-sc-4akkzw-0 fSJwcq"
+                      class="Label-sc-4akkzw-0 bdvTBm"
                       color="success"
                     >
                       <div
-                        class="flex space-x-1"
+                        class="flex space-x-1 items-stretch"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -280,14 +280,14 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                       Transaction Fee
                     </p>
                     <div
-                      class="Label-sc-4akkzw-0 gOcLKd"
+                      class="Label-sc-4akkzw-0 dCEjSJ"
                       color="danger"
                     >
                       <div
-                        class="flex space-x-1"
+                        class="flex space-x-1 items-stretch"
                       >
                         <div
-                          class="flex items-center -ml-1.5 px-2 bg-theme-danger-100 dark:bg-theme-danger-400"
+                          class="flex items-center justify-center bg-theme-danger-100 dark:bg-theme-danger-400 -ml-1.5 px-2"
                           data-testid="AmountLabel__hint"
                         >
                           <div
@@ -467,11 +467,11 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                     class="flex items-center font-semibold"
                   >
                     <div
-                      class="Label-sc-4akkzw-0 fSJwcq"
+                      class="Label-sc-4akkzw-0 bdvTBm"
                       color="success"
                     >
                       <div
-                        class="flex space-x-1"
+                        class="flex space-x-1 items-stretch"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1130,11 +1130,11 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                       Total Amount
                     </p>
                     <div
-                      class="Label-sc-4akkzw-0 fSJwcq"
+                      class="Label-sc-4akkzw-0 bdvTBm"
                       color="success"
                     >
                       <div
-                        class="flex space-x-1"
+                        class="flex space-x-1 items-stretch"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1155,14 +1155,14 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                       Transaction Fee
                     </p>
                     <div
-                      class="Label-sc-4akkzw-0 gOcLKd"
+                      class="Label-sc-4akkzw-0 dCEjSJ"
                       color="danger"
                     >
                       <div
-                        class="flex space-x-1"
+                        class="flex space-x-1 items-stretch"
                       >
                         <div
-                          class="flex items-center -ml-1.5 px-2 bg-theme-danger-100 dark:bg-theme-danger-400"
+                          class="flex items-center justify-center bg-theme-danger-100 dark:bg-theme-danger-400 -ml-1.5 px-2"
                           data-testid="AmountLabel__hint"
                         >
                           <div
@@ -1342,11 +1342,11 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                     class="flex items-center font-semibold"
                   >
                     <div
-                      class="Label-sc-4akkzw-0 fSJwcq"
+                      class="Label-sc-4akkzw-0 bdvTBm"
                       color="success"
                     >
                       <div
-                        class="flex space-x-1"
+                        class="flex space-x-1 items-stretch"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1876,11 +1876,11 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                         class="flex items-center font-semibold"
                       >
                         <div
-                          class="Label-sc-4akkzw-0 fSJwcq"
+                          class="Label-sc-4akkzw-0 bdvTBm"
                           color="success"
                         >
                           <div
-                            class="flex space-x-1"
+                            class="flex space-x-1 items-stretch"
                           >
                             <span
                               class="whitespace-nowrap"
@@ -2215,11 +2215,11 @@ exports[`UnlockTokensModal should render 1`] = `
                       Total Amount
                     </p>
                     <div
-                      class="Label-sc-4akkzw-0 fSJwcq"
+                      class="Label-sc-4akkzw-0 bdvTBm"
                       color="success"
                     >
                       <div
-                        class="flex space-x-1"
+                        class="flex space-x-1 items-stretch"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -2240,14 +2240,14 @@ exports[`UnlockTokensModal should render 1`] = `
                       Transaction Fee
                     </p>
                     <div
-                      class="Label-sc-4akkzw-0 gOcLKd"
+                      class="Label-sc-4akkzw-0 dCEjSJ"
                       color="danger"
                     >
                       <div
-                        class="flex space-x-1"
+                        class="flex space-x-1 items-stretch"
                       >
                         <div
-                          class="flex items-center -ml-1.5 px-2 bg-theme-danger-100 dark:bg-theme-danger-400"
+                          class="flex items-center justify-center bg-theme-danger-100 dark:bg-theme-danger-400 -ml-1.5 px-2"
                           data-testid="AmountLabel__hint"
                         >
                           <div

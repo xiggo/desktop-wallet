@@ -3,7 +3,7 @@
 exports[`Label should render 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 dgtFy"
+    class="Label-sc-4akkzw-0 hwgYhi"
     color="primary"
   />
 </div>
@@ -12,7 +12,7 @@ exports[`Label should render 1`] = `
 exports[`Label should render a large one 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 gLKaUd"
+    class="Label-sc-4akkzw-0 kpHyVp"
     color="primary"
   />
 </div>
@@ -21,7 +21,7 @@ exports[`Label should render a large one 1`] = `
 exports[`Label should render a small one 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 dgtFy"
+    class="Label-sc-4akkzw-0 hwgYhi"
     color="primary"
   />
 </div>
@@ -30,7 +30,7 @@ exports[`Label should render a small one 1`] = `
 exports[`Label should render as solid 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 kCNajM"
+    class="Label-sc-4akkzw-0 kbDwks"
     color="primary"
   />
 </div>
@@ -39,7 +39,7 @@ exports[`Label should render as solid 1`] = `
 exports[`Label should render as solid and danger 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 dIBNEL"
+    class="Label-sc-4akkzw-0 gspRXj"
     color="danger"
   />
 </div>
@@ -48,7 +48,7 @@ exports[`Label should render as solid and danger 1`] = `
 exports[`Label should render as solid and default 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 bEleDA"
+    class="Label-sc-4akkzw-0 JnfDk"
     color="neutral"
   />
 </div>
@@ -57,7 +57,7 @@ exports[`Label should render as solid and default 1`] = `
 exports[`Label should render as solid and primary 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 kCNajM"
+    class="Label-sc-4akkzw-0 kbDwks"
     color="primary"
   />
 </div>
@@ -66,7 +66,7 @@ exports[`Label should render as solid and primary 1`] = `
 exports[`Label should render as solid and success 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 kUYBhA"
+    class="Label-sc-4akkzw-0 eLXuCg"
     color="success"
   />
 </div>
@@ -75,7 +75,7 @@ exports[`Label should render as solid and success 1`] = `
 exports[`Label should render danger color 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 gOcLKd"
+    class="Label-sc-4akkzw-0 dCEjSJ"
     color="danger"
   />
 </div>
@@ -84,7 +84,7 @@ exports[`Label should render danger color 1`] = `
 exports[`Label should render neutral color 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 jAUPwt"
+    class="Label-sc-4akkzw-0 koGEVV"
     color="neutral"
   />
 </div>
@@ -93,7 +93,7 @@ exports[`Label should render neutral color 1`] = `
 exports[`Label should render primary color 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 dgtFy"
+    class="Label-sc-4akkzw-0 hwgYhi"
     color="primary"
   />
 </div>
@@ -102,7 +102,7 @@ exports[`Label should render primary color 1`] = `
 exports[`Label should render success color 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 fSJwcq"
+    class="Label-sc-4akkzw-0 bdvTBm"
     color="success"
   />
 </div>
@@ -111,7 +111,7 @@ exports[`Label should render success color 1`] = `
 exports[`Label should render warning color 1`] = `
 <div>
   <div
-    class="Label-sc-4akkzw-0 ccXYlh"
+    class="Label-sc-4akkzw-0 jdpCfF"
     color="warning"
   />
 </div>

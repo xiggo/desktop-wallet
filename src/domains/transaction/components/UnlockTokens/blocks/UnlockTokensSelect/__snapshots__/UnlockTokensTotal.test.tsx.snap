@@ -15,11 +15,11 @@ exports[`UnlockTokensTotal should render 1`] = `
         Total Amount
       </p>
       <div
-        class="Label-sc-4akkzw-0 fSJwcq"
+        class="Label-sc-4akkzw-0 bdvTBm"
         color="success"
       >
         <div
-          class="flex space-x-1"
+          class="flex space-x-1 items-stretch"
         >
           <span
             class="whitespace-nowrap"
@@ -40,11 +40,11 @@ exports[`UnlockTokensTotal should render 1`] = `
         Transaction Fee
       </p>
       <div
-        class="Label-sc-4akkzw-0 gOcLKd"
+        class="Label-sc-4akkzw-0 dCEjSJ"
         color="danger"
       >
         <div
-          class="flex space-x-1"
+          class="flex space-x-1 items-stretch"
         >
           <span
             class="whitespace-nowrap"
@@ -129,11 +129,11 @@ exports[`UnlockTokensTotal should render loading fee 1`] = `
         Total Amount
       </p>
       <div
-        class="Label-sc-4akkzw-0 fSJwcq"
+        class="Label-sc-4akkzw-0 bdvTBm"
         color="success"
       >
         <div
-          class="flex space-x-1"
+          class="flex space-x-1 items-stretch"
         >
           <span
             class="whitespace-nowrap"

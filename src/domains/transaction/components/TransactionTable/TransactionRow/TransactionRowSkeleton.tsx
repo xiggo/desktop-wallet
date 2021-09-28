@@ -2,6 +2,7 @@ import { Circle } from "app/components/Circle";
 import { Skeleton } from "app/components/Skeleton";
 import { TableCell, TableRow } from "app/components/Table";
 import { useRandomNumber } from "app/hooks";
+import cn from "classnames";
 import React from "react";
 
 type Properties = {
@@ -55,7 +56,11 @@ export const TransactionRowSkeleton = ({ isCompact, showMemoColumn }: Properties
 			</TableCell>
 
 			<TableCell innerClassName="justify-end" isCompact={isCompact}>
-				<span className="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800">
+				<span
+					className={cn("flex items-center space-x-1 h-7", {
+						"border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2": !isCompact,
+					})}
+				>
 					<Skeleton height={16} width={amountWidth} />
 					<Skeleton height={16} width={35} />
 				</span>

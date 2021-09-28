@@ -199,7 +199,7 @@ exports[`ConfirmationStep should render 1`] = `
               Amount Sent
             </span>
             <div
-              class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap mr-auto"
+              class="Label-sc-4akkzw-0 dCEjSJ whitespace-nowrap mr-auto"
               color="danger"
             >
               <span
@@ -309,7 +309,7 @@ exports[`ConfirmationStep should render 1`] = `
               Amount Received
             </span>
             <div
-              class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap mr-auto"
+              class="Label-sc-4akkzw-0 bdvTBm whitespace-nowrap mr-auto"
               color="success"
             >
               <span
@@ -1056,7 +1056,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                       Amount Sent
                     </span>
                     <div
-                      class="Label-sc-4akkzw-0 gOcLKd whitespace-nowrap mr-auto"
+                      class="Label-sc-4akkzw-0 dCEjSJ whitespace-nowrap mr-auto"
                       color="danger"
                     >
                       <span
@@ -1246,7 +1246,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                       Amount Received
                     </span>
                     <div
-                      class="Label-sc-4akkzw-0 fSJwcq whitespace-nowrap mr-auto"
+                      class="Label-sc-4akkzw-0 bdvTBm whitespace-nowrap mr-auto"
                       color="success"
                     >
                       <span

@@ -277,11 +277,11 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -587,11 +587,11 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 OOaVy"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-center"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -893,11 +893,11 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1215,11 +1215,11 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1559,11 +1559,11 @@ exports[`Signed Transaction Table should show as awaiting other wallets signatur
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1881,11 +1881,11 @@ exports[`Signed Transaction Table should show as awaiting the wallet signature 1
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -2225,11 +2225,11 @@ exports[`Signed Transaction Table should show as final signature 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -2569,11 +2569,11 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -2913,11 +2913,11 @@ exports[`Signed Transaction Table should show as unvote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -3219,11 +3219,11 @@ exports[`Signed Transaction Table should show as vote 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 fSJwcq"
+                  class="Label-sc-4akkzw-0 bdvTBm"
                   color="success"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -3525,11 +3525,11 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -3869,11 +3869,11 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -4213,11 +4213,11 @@ exports[`Signed Transaction Table should show unconfirmed multiSignature transac
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 gOcLKd"
+                  class="Label-sc-4akkzw-0 dCEjSJ"
                   color="danger"
                 >
                   <div
-                    class="flex space-x-1"
+                    class="flex space-x-1 items-stretch"
                   >
                     <span
                       class="whitespace-nowrap"
