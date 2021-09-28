@@ -44,7 +44,7 @@ const EmptyVotes = ({ wallet }: EmptyVotesProperties) => {
 
 			<div className="flex flex-col justify-between">
 				<span className="font-semibold">
-					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE", { count: maxVotes })}
+					{t(`WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE${maxVotes > 1 ? "_PLURAL" : ""}`, { count: maxVotes })}
 					<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">0/{maxVotes}</span>
 				</span>
 
@@ -102,7 +102,9 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 
 			return (
 				<span className="font-semibold text-theme-success-600">
-					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: activeCount })}
+					{t(`WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE${activeCount > 1 ? "_PLURAL" : ""}`, {
+						count: activeCount,
+					})}
 				</span>
 			);
 		}
@@ -129,7 +131,9 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 					/>
 
 					<span className="font-semibold text-theme-warning-500">
-						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: standbyCount })}
+						{t(`WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY${standbyCount > 1 ? "_PLURAL" : ""}`, {
+							count: standbyCount,
+						})}
 					</span>
 				</>
 			);
@@ -177,7 +181,12 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 					<span className="font-semibold">
 						{standbyCount > 0 && (
 							<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
-								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: standbyCount })}
+								{t(
+									`WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_${
+										standbyCount > 1 ? "plural" : "COUNT"
+									}`,
+									{ count: standbyCount },
+								)}
 							</span>
 						)}
 
@@ -205,7 +214,10 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 
 					{standbyCount > 0 && (
 						<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
-							&nbsp;/&nbsp;{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: standbyCount })}
+							&nbsp;/&nbsp;
+							{t(`WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_${standbyCount > 1 ? "plural" : "COUNT"}`, {
+								count: standbyCount,
+							})}
 						</span>
 					)}
 

@@ -1254,7 +1254,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
         <span
           class="font-semibold"
         >
-          My Vote
+          My Votes
           <span
             class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
           >

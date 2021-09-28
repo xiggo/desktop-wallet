@@ -12,7 +12,7 @@ jest.mock("fs", () => ({
 
 describe("SelectFile", () => {
 	it("should render", () => {
-		const { container } = render(<SelectFile />);
+		const { container } = render(<SelectFile fileFormat=".dwe" />);
 
 		expect(container).toMatchSnapshot();
 	});

@@ -130,7 +130,7 @@ exports[`ConfirmationStep should render 1`] = `
             <span
               class="font-semibold text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
             >
-              Exchange {{currency}} Address
+              Exchange  Address
             </span>
             <div
               class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
@@ -230,7 +230,7 @@ exports[`ConfirmationStep should render 1`] = `
         <h3
           class="font-bold text-lg m-0"
         >
-          {{currency}} Output
+           Output
         </h3>
       </div>
       <div
@@ -268,7 +268,7 @@ exports[`ConfirmationStep should render 1`] = `
             <span
               class="font-semibold text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
             >
-              Your {{currency}} Address
+              Your  Address
             </span>
             <div
               class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"

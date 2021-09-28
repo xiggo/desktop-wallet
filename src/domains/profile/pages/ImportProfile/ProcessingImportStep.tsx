@@ -70,7 +70,7 @@ export const ProcessingImport = ({
 		<div className="mx-auto max-w-xl" data-testid="ProcessingImport">
 			<Header
 				title={t("PROFILE.IMPORT.TITLE")}
-				subtitle={t("PROFILE.IMPORT.PROCESSING_IMPORT_STEP.DESCRIPTION", { name: file?.name })}
+				subtitle={t("PROFILE.IMPORT.PROCESSING_IMPORT_STEP.DESCRIPTION", { name: file?.name || "" })}
 			/>
 			<div className="text-theme-secondary-text">{t("PROFILE.IMPORT.PROCESSING_IMPORT_STEP.PLEASE_WAIT")}</div>
 

@@ -23,5 +23,7 @@ export const TimeAgo = ({ date }: { date: string }) => {
 
 	const { count, key } = dateDifference(date);
 
-	return <span data-testid="timeago">{t(`COMMON.DATETIME.${key}_AGO`, { count })}</span>;
+	const timeAgoText =
+		count && count > 1 ? t(`COMMON.DATETIME.${key}_AGO_PLURAL`, { count }) : t(`COMMON.DATETIME.${key}_AGO`);
+	return <span data-testid="timeago">{timeAgoText}</span>;
 };

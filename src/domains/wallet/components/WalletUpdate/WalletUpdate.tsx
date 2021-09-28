@@ -25,7 +25,7 @@ enum Step {
 	ReadyToInstallStep,
 }
 
-export const WalletUpdate = ({ isOpen = false, onClose, onCancel, version, profile }: WalletUpdateProperties) => {
+export const WalletUpdate = ({ isOpen = false, onClose, onCancel, version = "", profile }: WalletUpdateProperties) => {
 	const [activeStep, setActiveStep] = useState<Step>(Step.InitialStep);
 
 	const { t } = useTranslation();

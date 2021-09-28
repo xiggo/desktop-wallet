@@ -11,6 +11,15 @@ exports[`SelectFile should render 1`] = `
       data-testid="SelectFile__drop-zone"
     >
       <div
+        class="sc-bdnxRM cTrAIK"
+        height="40"
+        width="40"
+      >
+        <svg>
+          extension-dwe.svg
+        </svg>
+      </div>
+      <div
         class="mt-8 space-x-px"
       >
         <span
@@ -32,7 +41,7 @@ exports[`SelectFile should render 1`] = `
       <div
         class="mt-2 text-sm font-semibold text-theme-secondary-500"
       >
-        Supported format is {{fileFormat}}
+        Supported format is .dwe
       </div>
     </div>
   </div>
