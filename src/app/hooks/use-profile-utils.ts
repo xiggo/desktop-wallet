@@ -53,6 +53,10 @@ export const useProfileUtils = (environment: Environment) => {
 				continue;
 			}
 
+			if (wallet.isCold()) {
+				continue;
+			}
+
 			if (wallet.hasBeenFullyRestored() && wallet.hasSyncedWithNetwork()) {
 				continue;
 			}
