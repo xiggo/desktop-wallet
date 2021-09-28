@@ -141,9 +141,9 @@ export const translations: { [key: string]: any } = {
 	UPDATE_ALL_NOTICE_INCOMPATIBLE:
 		"There is {{count}} update available for your plugins, but your wallet version is incompatible. Please update the Payvo Wallet to continue.",
 
-	UPDATE_ALL_NOTICE_INCOMPATIBLE_plural:
+	UPDATE_ALL_NOTICE_INCOMPATIBLE_PLURAL:
 		"There are {{count}} updates available for your plugins, but your wallet version is incompatible. Please update the Payvo Wallet to continue.",
-	UPDATE_ALL_NOTICE_plural:
+	UPDATE_ALL_NOTICE_PLURAL:
 		"There are {{count}} updates available for your plugins. Would you like to update them all now?",
 
 	WARNING_DISCLAIMER:

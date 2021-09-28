@@ -1362,7 +1362,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
           class="mb-0 text-2xl"
           data-testid="header__title"
         >
-          Send 
+          Send {{ticker}}
         </h1>
         <div
           class="text-theme-secondary-text"
@@ -3885,7 +3885,7 @@ exports[`SendTransfer should render form step 1`] = `
           class="mb-0 text-2xl"
           data-testid="header__title"
         >
-          Send 
+          Send {{ticker}}
         </h1>
         <div
           class="text-theme-secondary-text"
@@ -4422,7 +4422,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
           class="mb-0 text-2xl"
           data-testid="header__title"
         >
-          Send 
+          Send {{ticker}}
         </h1>
         <div
           class="text-theme-secondary-text"
@@ -4970,7 +4970,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
           class="mb-0 text-2xl"
           data-testid="header__title"
         >
-          Send 
+          Send {{ticker}}
         </h1>
         <div
           class="text-theme-secondary-text"

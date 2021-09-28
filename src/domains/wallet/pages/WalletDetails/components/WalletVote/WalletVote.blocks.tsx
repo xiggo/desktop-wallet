@@ -92,6 +92,14 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 
 	const renderStatuses = () => {
 		if (activeCount === votes.length) {
+			if (activeCount > 1) {
+				return (
+					<span className="font-semibold text-theme-success-600">
+						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_PLURAL", { count: activeCount })}
+					</span>
+				);
+			}
+
 			return (
 				<span className="font-semibold text-theme-success-600">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: activeCount })}
@@ -100,6 +108,20 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 		}
 
 		if (standbyCount === votes.length) {
+			if (standbyCount > 1) {
+				return (
+					<>
+						<HintIcon
+							tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", { count: standbyCount })}
+						/>
+
+						<span className="font-semibold text-theme-warning-500">
+							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_PLURAL", { count: standbyCount })}
+						</span>
+					</>
+				);
+			}
+
 			return (
 				<>
 					<HintIcon
@@ -114,6 +136,20 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 		}
 
 		if (resignedCount === votes.length) {
+			if (resignedCount > 1) {
+				return (
+					<>
+						<HintIcon
+							tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", { count: resignedCount })}
+						/>
+
+						<span className="font-semibold text-theme-danger-600">
+							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED_PLURAL", { count: resignedCount })}
+						</span>
+					</>
+				);
+			}
+
 			return (
 				<>
 					<HintIcon

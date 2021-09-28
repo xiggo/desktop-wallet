@@ -507,7 +507,7 @@ exports[`Import Profile - Processing import should not run import process if fil
           class="text-theme-secondary-text"
           data-testid="header__subtitle"
         >
-          The file with name  is being imported.
+          The file with name {{name}} is being imported.
         </div>
       </div>
     </div>

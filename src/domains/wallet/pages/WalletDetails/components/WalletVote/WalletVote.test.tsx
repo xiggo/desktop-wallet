@@ -267,14 +267,14 @@ describe("WalletVote", () => {
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
 			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.ACTIVE_plural)).toBeTruthy();
+			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.ACTIVE_PLURAL)).toBeTruthy();
 
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
 		});
 
-		it("should render a vote for multiple active delegates", async () => {
+		it("should render a vote for multiple standby delegates", async () => {
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 				{
 					amount: 0,
@@ -303,7 +303,7 @@ describe("WalletVote", () => {
 			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
 
 			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeTruthy();
-			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.STANDBY_plural)).toBeTruthy();
+			expect(getByText(walletTranslations.PAGE_WALLET_DETAILS.VOTES.STANDBY_PLURAL)).toBeTruthy();
 
 			expect(asFragment()).toMatchSnapshot();
 

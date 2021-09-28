@@ -45,7 +45,7 @@ exports[`WalletUpdate should render 1`] = `
           <h2
             class="mb-0 text-2xl font-bold"
           >
-            Wallet Update 
+            Wallet Update {{version}}
           </h2>
           <div
             class="flex-1"
