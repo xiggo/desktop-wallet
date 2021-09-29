@@ -505,7 +505,7 @@ jobs:
             - name: Test
               run: ./node_modules/react-app-rewired/bin/index.js --expose-gc test
                   src/domains/transaction --env=./src/tests/custom-env.js
-                  --forceExit --maxWorkers=4 --logHeapUsage --watchAll=false
+                  --forceExit --maxWorkers=3 --logHeapUsage --watchAll=false
                   --coverage
                   --collectCoverageFrom='["src/domains/transaction/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/electron/**/*","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                   --coverageThreshold='{"./src/domains/transaction/":{"branches":100,"functions":100,"lines":100,"statements":100}}'

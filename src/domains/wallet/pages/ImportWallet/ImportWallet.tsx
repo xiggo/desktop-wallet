@@ -153,10 +153,6 @@ export const ImportWallet = () => {
 
 				break;
 			}
-
-			default: {
-				setActiveTab(activeTab + 1);
-			}
 		}
 	};
 

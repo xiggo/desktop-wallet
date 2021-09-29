@@ -16,6 +16,7 @@ import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { assertNetwork } from "utils/assertions";
 import {
 	act as utilsAct,
@@ -1255,14 +1256,16 @@ describe("ImportWallet", () => {
 		expect(getByTestId("UpdateWalletName__submit")).toBeDisabled();
 	});
 
-	it("should show warning toast for coin sync error in network step", async () => {
+	it("should show warning sync error toast in network step and retry sync", async () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
 		const { getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
-				<ImportWallet />
+				<>
+					<ToastContainer closeOnClick={false} newestOnTop />
+					<ImportWallet />
+				</>
 			</Route>,
 			{
 				history,
@@ -1291,8 +1294,143 @@ describe("ImportWallet", () => {
 			fireEvent.click(getByTestId("ImportWallet__continue-button"));
 		});
 
-		expect(toastSpy).toHaveBeenCalled();
+		await waitFor(() => expect(getByTestId("SyncErrorMessage__retry")).toBeInTheDocument());
+
+		const toastDismissMock = jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		act(() => {
+			fireEvent.click(getByTestId("SyncErrorMessage__retry"));
+		});
+
+		await waitFor(() => expect(getByTestId("SyncErrorMessage__retry")).toBeInTheDocument());
 
 		coinMock.mockRestore();
+		toastDismissMock.mockRestore();
+	});
+
+	it("should import with wif", async () => {
+		let form: ReturnType<typeof useForm>;
+		const wif = "wif.1111";
+
+		const Component = () => {
+			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === "ark.devnet");
+			assertNetwork(network);
+
+			network.importMethods = () => ({
+				wif: {
+					canBeEncrypted: true,
+					default: true,
+					permissions: ["read", "write"],
+				},
+			});
+
+			form = useForm({
+				defaultValues: { network, wif },
+				shouldUnregister: false,
+			});
+
+			form.register("type");
+			form.register("network");
+			form.register("wif");
+			form.register("value");
+
+			return (
+				<EnvironmentProvider env={env}>
+					<FormProvider {...form}>
+						<SecondStep profile={profile} />
+					</FormProvider>
+				</EnvironmentProvider>
+			);
+		};
+
+		history.push(`/profiles/${profile.id()}`);
+
+		const { container, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<Component />
+			</Route>,
+			{ history, withProviders: false },
+		);
+
+		expect(getByTestId("ImportWallet__second-step")).toBeTruthy();
+
+		await waitFor(() => expect(getByTestId("ImportWallet__wif-input")));
+
+		const passphraseInput = getByTestId("ImportWallet__wif-input");
+
+		expect(passphraseInput).toBeTruthy();
+
+		act(() => {
+			fireEvent.input(passphraseInput, { target: { value: wif } });
+		});
+
+		await waitFor(() => {
+			expect(form.getValues()).toMatchObject({ type: OptionsValue.WIF, value: wif });
+		});
+		await waitFor(() => {
+			expect(getByTestId("ImportWallet__wif-input")).toHaveValue(wif);
+		});
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it("should import with encryped wif", async () => {
+		let form: ReturnType<typeof useForm>;
+		const wif = "wif.1111";
+
+		const Component = () => {
+			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === "ark.devnet");
+			assertNetwork(network);
+
+			//ts-ignore
+			network.importMethods = () => ({
+				//ts-ignore
+				encryptedWif: true,
+			});
+
+			form = useForm({
+				defaultValues: { network, wif },
+				shouldUnregister: false,
+			});
+
+			form.register("type");
+			form.register("network");
+			form.register("encryptedWif");
+			form.register("value");
+
+			return (
+				<EnvironmentProvider env={env}>
+					<FormProvider {...form}>
+						<SecondStep profile={profile} />
+					</FormProvider>
+				</EnvironmentProvider>
+			);
+		};
+
+		history.push(`/profiles/${profile.id()}`);
+
+		const { container, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<Component />
+			</Route>,
+			{ history, withProviders: false },
+		);
+
+		expect(getByTestId("ImportWallet__second-step")).toBeTruthy();
+
+		await waitFor(() => expect(getByTestId("ImportWallet__encryptedWif-input")));
+
+		const passphraseInput = getByTestId("ImportWallet__encryptedWif-input");
+
+		expect(passphraseInput).toBeTruthy();
+
+		act(() => {
+			fireEvent.input(passphraseInput, { target: { value: wif } });
+		});
+
+		await waitFor(() => {
+			expect(getByTestId("ImportWallet__encryptedWif-input")).toHaveValue(wif);
+		});
+
+		expect(container).toMatchSnapshot();
 	});
 });

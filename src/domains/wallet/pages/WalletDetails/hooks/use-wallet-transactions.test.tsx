@@ -20,8 +20,9 @@ describe("Wallet Transactions Hook", () => {
 	};
 
 	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
-		jest.spyOn(wallet.transaction(), "pending").mockReturnValue({
+		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
+			[fixtures.multiSignatureTransfer.id()]: fixtures.multiSignatureTransfer,
 		});
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
@@ -63,6 +64,22 @@ describe("Wallet Transactions Hook", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
+
+		fixtures.multiSignatureTransfer = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: wallet.address(),
+					},
+					fee: 0.1,
+					nonce: "1",
+					signatory: await wallet.coin().signatory().secret("123"),
+				}),
+			wallet,
+		);
 
 		fixtures.transfer = new DTO.ExtendedSignedTransactionData(
 			await wallet

@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { Enums } from "@payvo/sdk";
+import { LedgerProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
+import { toasts } from "app/services";
 import { translations as walletTranslations } from "domains/wallet/i18n";
 import electron from "electron";
 import { createMemoryHistory } from "history";
@@ -14,8 +16,10 @@ import { Route } from "react-router-dom";
 import walletMock from "tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import {
 	act,
+	defaultNetMocks,
 	env,
 	fireEvent,
+	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	MNEMONICS,
 	RenderResult,
@@ -49,7 +53,10 @@ const renderPage = async ({
 } = {}) => {
 	const rendered: RenderResult = renderWithRouter(
 		<Route path="/profiles/:profileId/wallets/:walletId">
-			<WalletDetails />
+			<LedgerProvider transport={getDefaultLedgerTransport()}>
+				<WalletDetails />
+			</LedgerProvider>
+			,
 		</Route>,
 		{
 			history,
@@ -78,6 +85,28 @@ const renderPage = async ({
 };
 
 describe("WalletDetails", () => {
+	const fixtures: Record<string, any> = {
+		ipfs: undefined,
+		multiPayment: undefined,
+		multiSignature: undefined,
+		transfer: undefined,
+		unvote: undefined,
+		vote: undefined,
+	};
+
+	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
+		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
+			[fixtures.transfer.id()]: fixtures.transfer,
+		});
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
+		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
+			get: () => undefined,
+			id: () => fixtures.transfer,
+		}));
+	};
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
@@ -147,9 +176,155 @@ describe("WalletDetails", () => {
 			.persist();
 	});
 
-	beforeEach(() => {
+	beforeEach(async () => {
+		fixtures.transfer = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: wallet.address(),
+					},
+					fee: 0.1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
+	});
+
+	it("should render pending transactions and view details in modal", async () => {
+		mockPendingTransfers(wallet);
+
+		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
+		history.push(walletUrl);
+
+		const { getByTestId } = await renderPage();
+		await waitFor(() => expect(getByTestId("PendingTransactions")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.click(within(getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		});
+
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.click(getByTestId("modal__close-btn"));
+		});
+
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
+		jest.restoreAllMocks();
+	});
+
+	it("should remove pending multisignature transactions", async () => {
+		mockPendingTransfers(wallet);
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
+			get: (param) => {
+				if (param === "multiSignature") {
+					return true;
+				}
+				return undefined;
+			},
+			id: () => fixtures.transfer,
+		}));
+
+		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
+		history.push(walletUrl);
+
+		const { getByTestId } = await renderPage();
+		await waitFor(() => expect(getByTestId("PendingTransactions")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.click(within(getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		});
+
+		await waitFor(() => expect(getByTestId("TableRemoveButton")).toBeInTheDocument());
+		act(() => {
+			fireEvent.click(getByTestId("TableRemoveButton"));
+		});
+
+		await waitFor(() =>
+			expect(getByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction")).toBeInTheDocument(),
+		);
+
+		jest.restoreAllMocks();
+		defaultNetMocks();
+		nock("https://ark-test-musig.payvo.com/").get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS").reply(200, []);
+		nock("https://ark-test-musig.payvo.com")
+			.post("/")
+			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
+			.persist();
+
+		const toastsMock = jest.spyOn(toasts, "success");
+
+		act(() => {
+			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
+		});
+
+		await waitFor(() => expect(() => getByTestId("PendingTransactions")).toThrow());
+
+		expect(toastsMock).toHaveBeenCalled();
+
+		toastsMock.mockRestore();
+	});
+
+	it("should render pending multiSignatures and view details in modal", async () => {
+		mockPendingTransfers(wallet);
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
+			get: (param) => {
+				if (param === "multiSignature") {
+					return true;
+				}
+				return undefined;
+			},
+			id: () => fixtures.transfer,
+		}));
+
+		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
+		history.push(walletUrl);
+
+		const { getByTestId } = await renderPage();
+		await waitFor(() => expect(getByTestId("PendingTransactions")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.click(within(getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
+		});
+
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+
+		act(() => {
+			fireEvent.click(getByTestId("modal__close-btn"));
+		});
+
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
+		jest.restoreAllMocks();
+	});
+
+	it("should navigate to send transfer", async () => {
+		const { getByTestId } = await renderPage({ waitForTopSection: true });
+
+		const historySpy = jest.spyOn(history, "push").mockImplementation();
+
+		await waitFor(() => expect(getByTestId("WalletHeader__send-button")).toBeInTheDocument());
+		await waitFor(() => expect(getByTestId("WalletHeader__send-button")).not.toBeDisabled());
+
+		act(() => {
+			fireEvent.click(getByTestId("WalletHeader__send-button"));
+		});
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
+
+		historySpy.mockRestore();
 	});
 
 	it("should not render wallet vote when the network does not support votes", async () => {

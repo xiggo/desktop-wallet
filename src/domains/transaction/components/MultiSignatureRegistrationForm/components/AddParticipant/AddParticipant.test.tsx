@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
@@ -6,7 +7,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import walletFixture from "tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 import coldWalletFixture from "tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { AddParticipant } from "./AddParticipant";
 
@@ -202,7 +203,7 @@ describe("Add Participant", () => {
 				meta: { count: 1, pageCount: 1, totalCount: 1 },
 			});
 
-		const { asFragment } = render(<AddParticipant profile={profile} wallet={wallet} />);
+		render(<AddParticipant profile={profile} wallet={wallet} />);
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
@@ -214,12 +215,13 @@ describe("Add Participant", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(walletFixture.data.address),
 		);
 
-		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await act(async () => {
+			fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		});
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
 
 		expect(scope.isDone()).toBe(true);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render custom participants", () => {

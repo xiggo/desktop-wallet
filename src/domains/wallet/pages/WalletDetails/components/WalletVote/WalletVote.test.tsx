@@ -552,4 +552,40 @@ describe("WalletVote", () => {
 
 		walletSpy.mockRestore();
 	});
+
+	it("should render as all resigned", async () => {
+		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: wallet.address(),
+					explorerLink: "",
+					isDelegate: true,
+					isResignedDelegate: true,
+					publicKey: wallet.publicKey(),
+					username: "arky",
+				}),
+			},
+			{
+				amount: 0,
+				wallet: new ReadOnlyWallet({
+					address: wallet.address(),
+					explorerLink: "",
+					isDelegate: true,
+					isResignedDelegate: true,
+					publicKey: wallet.publicKey(),
+					username: "arky",
+				}),
+			},
+		]);
+		const { asFragment, getByTestId } = render(
+			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
+		);
+
+		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+
+		expect(asFragment()).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
 });
