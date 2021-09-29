@@ -164,14 +164,14 @@ export const WalletHeader = ({
 					</div>
 
 					<div className="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full">
-						<div className="flex items-center space-x-5 text-theme-secondary-text">
+						<div className="flex items-center space-x-2 text-theme-secondary-text">
 							{!!alias && (
 								<span data-testid="WalletHeader__name" className="text-sm font-semibold">
 									{alias}
 								</span>
 							)}
 
-							<div className="flex items-center space-x-3">
+							<div className="flex items-center space-x-1">
 								<WalletIcons
 									wallet={wallet}
 									iconColor="text-theme-secondary-text"

@@ -47,7 +47,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
         class="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full"
       >
         <div
-          class="flex items-center space-x-5 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text"
         >
           <span
             class="text-sm font-semibold"
@@ -56,7 +56,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
             ARK Wallet 1
           </span>
           <div
-            class="flex items-center space-x-3"
+            class="flex items-center space-x-1"
           />
         </div>
         <div
@@ -308,7 +308,7 @@ exports[`WalletHeader should render 1`] = `
         class="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full"
       >
         <div
-          class="flex items-center space-x-5 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text"
         >
           <span
             class="text-sm font-semibold"
@@ -317,7 +317,7 @@ exports[`WalletHeader should render 1`] = `
             ARK Wallet 1
           </span>
           <div
-            class="flex items-center space-x-3"
+            class="flex items-center space-x-1"
           />
         </div>
         <div
@@ -521,7 +521,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
         class="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full"
       >
         <div
-          class="flex items-center space-x-5 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text"
         >
           <span
             class="text-sm font-semibold"
@@ -530,7 +530,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
             ARK Wallet 1
           </span>
           <div
-            class="flex items-center space-x-3"
+            class="flex items-center space-x-1"
           />
         </div>
         <div
@@ -740,7 +740,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
         class="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full"
       >
         <div
-          class="flex items-center space-x-5 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text"
         >
           <span
             class="text-sm font-semibold"
@@ -749,7 +749,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
             ARK Wallet 1
           </span>
           <div
-            class="flex items-center space-x-3"
+            class="flex items-center space-x-1"
           />
         </div>
         <div
@@ -971,7 +971,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
         class="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full"
       >
         <div
-          class="flex items-center space-x-5 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text"
         >
           <span
             class="text-sm font-semibold"
@@ -980,7 +980,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
             ARK Wallet 1
           </span>
           <div
-            class="flex items-center space-x-3"
+            class="flex items-center space-x-1"
           />
         </div>
         <div
@@ -1202,7 +1202,7 @@ exports[`WalletHeader should show modifiers 1`] = `
         class="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full"
       >
         <div
-          class="flex items-center space-x-5 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text"
         >
           <span
             class="text-sm font-semibold"
@@ -1211,7 +1211,7 @@ exports[`WalletHeader should show modifiers 1`] = `
             ARK Wallet 1
           </span>
           <div
-            class="flex items-center space-x-3"
+            class="flex items-center space-x-1"
           >
             <div
               class="inline-block p-1 text-theme-secondary-text"
@@ -1444,7 +1444,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
         class="flex overflow-hidden flex-col py-2 pr-2 -my-2 ml-4 -mr-2 w-full"
       >
         <div
-          class="flex items-center space-x-5 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text"
         >
           <span
             class="text-sm font-semibold"
@@ -1453,7 +1453,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
             ARK Wallet 1
           </span>
           <div
-            class="flex items-center space-x-3"
+            class="flex items-center space-x-1"
           />
         </div>
         <div
