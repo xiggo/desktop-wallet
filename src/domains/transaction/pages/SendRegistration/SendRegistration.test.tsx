@@ -200,7 +200,7 @@ describe("Registration", () => {
 		await waitFor(() => expect(renderedPage.getByTestId("header__title")).toHaveTextContent(label));
 	});
 
-	it("should register delegate", async () => {
+	it.each(["with keyboard", "without keyboard"])("should register delegate %s", async (inputMethod) => {
 		const { asFragment, getByTestId, history } = await renderPage(wallet);
 
 		// Step 1
@@ -220,16 +220,28 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
 
-		userEvent.keyboard("{enter}");
+		if (inputMethod === "with keyboard") {
+			userEvent.keyboard("{enter}");
+		} else {
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		}
 		await waitFor(() => expect(getByTestId("DelegateRegistrationForm__review-step")).toBeTruthy());
 
 		fireEvent.click(getByTestId("StepNavigation__back-button"));
 		await waitFor(() => expect(getByTestId("DelegateRegistrationForm__form-step")).toBeTruthy());
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
-		userEvent.keyboard("{enter}");
+		if (inputMethod === "with keyboard") {
+			userEvent.keyboard("{enter}");
+		} else {
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		}
 
-		userEvent.keyboard("{enter}");
+		if (inputMethod === "with keyboard") {
+			userEvent.keyboard("{enter}");
+		} else {
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+		}
 		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
@@ -248,7 +260,11 @@ describe("Registration", () => {
 		});
 		const transactionMock = createDelegateRegistrationMock(wallet);
 
-		fireEvent.click(getByTestId("StepNavigation__send-button"));
+		if (inputMethod === "with keyboard") {
+			fireEvent.submit(getByTestId("AuthenticationStep"));
+		} else {
+			fireEvent.click(getByTestId("StepNavigation__send-button"));
+		}
 
 		await waitFor(() => expect(signMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());

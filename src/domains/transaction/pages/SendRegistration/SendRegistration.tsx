@@ -152,7 +152,7 @@ export const SendRegistration = () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
 		/* istanbul ignore else */
-		if (!isButton && !isNextDisabled && stepCount > activeTab - 1) {
+		if (!isButton && !isNextDisabled && activeTab !== stepCount - 1) {
 			return handleNext();
 		}
 	});

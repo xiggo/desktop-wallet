@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Registration should register delegate 1`] = `<DocumentFragment />`;
+exports[`Registration should register delegate with keyboard 1`] = `<DocumentFragment />`;
+
+exports[`Registration should register delegate without keyboard 1`] = `<DocumentFragment />`;
 
 exports[`Registration should register second signature 1`] = `
 <DocumentFragment>

@@ -667,7 +667,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
 </div>
 `;
 
-exports[`SendVote should send a vote transaction 1`] = `
+exports[`SendVote should send a vote transaction with keyboard 1`] = `
 <div>
   <div
     class="flex relative flex-col min-h-screen"
@@ -1328,7 +1328,7 @@ exports[`SendVote should send a vote transaction 1`] = `
 </div>
 `;
 
-exports[`SendVote should send a vote transaction 2`] = `
+exports[`SendVote should send a vote transaction without keyboard 1`] = `
 <div>
   <div
     class="flex relative flex-col min-h-screen"

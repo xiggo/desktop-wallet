@@ -390,7 +390,7 @@ describe("SendVote", () => {
 		transactionVoteMock.mockRestore();
 	});
 
-	it.each(["with keyboard", "without keyboard"])("should send a vote transaction", async (inputMethod) => {
+	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {
 		const history = createMemoryHistory();
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
