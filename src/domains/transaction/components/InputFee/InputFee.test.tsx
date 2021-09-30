@@ -113,6 +113,27 @@ describe("InputFee", () => {
 		expect(defaultProps.onChange).toBeCalledWith(defaultProps.value);
 	});
 
+	it("should switch to simple and advanced type when value is number", () => {
+		defaultProps.value = 0.123;
+
+		render(<Wrapper />);
+
+		expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
+
+		// go to advanced mode and check value changes
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+
+		expect(screen.getByTestId("InputCurrency")).toBeInTheDocument();
+		expect(screen.queryByTestId("ButtonGroup")).not.toBeInTheDocument();
+
+		expect(screen.getByTestId("InputCurrency")).toHaveValue("0.123");
+
+		// go to simple mode
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.SIMPLE));
+
+		expect(screen.getByTestId("ButtonGroup")).toBeInTheDocument();
+	});
+
 	describe("simple view type", () => {
 		it.each([
 			[translations.FEES.SLOW, getDefaultProperties().min],
