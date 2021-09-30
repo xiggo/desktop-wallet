@@ -3,25 +3,31 @@ import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { InputDefault } from "app/components/Input";
 import { useFees } from "app/hooks";
-import { InputFee } from "domains/transaction/components/InputFee";
+import { FeeField } from "domains/transaction/components/FeeField";
 import { TransactionNetwork, TransactionSender } from "domains/transaction/components/TransactionDetail";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();
 
-	const { calculateFeesByType } = useFees(profile);
+	const { calculate } = useFees(profile);
 
 	const { getValues, setValue, watch } = useFormContext();
-	const { hash, fee, fees } = watch();
+	const { hash } = watch();
 
-	const inputFeeSettings = watch("inputFeeSettings") ?? {};
+	const network = useMemo(() => wallet.network(), [wallet]);
+	const feeTransactionData = useMemo(() => ({ hash }), [hash]);
 
 	useEffect(() => {
 		const setTransactionFees = async (wallet: Contracts.IReadWriteWallet) => {
-			const transactionFees = await calculateFeesByType(wallet.coinId(), wallet.networkId(), "ipfs");
+			const transactionFees = await calculate({
+				coin: wallet.coinId(),
+				network: wallet.networkId(),
+				type: "ipfs",
+			});
+
 			setValue("fees", transactionFees);
 
 			if (!getValues("fee")) {
@@ -33,7 +39,7 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 		};
 
 		setTransactionFees(wallet);
-	}, [calculateFeesByType, getValues, wallet, setValue]);
+	}, [calculate, getValues, wallet, setValue]);
 
 	return (
 		<section data-testid="SendIpfs__form-step">
@@ -65,36 +71,7 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 
 				<FormField name="fee">
 					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<InputFee
-						min={fees?.min}
-						avg={fees?.avg}
-						max={fees?.max}
-						loading={!fees}
-						value={fee}
-						step={0.01}
-						disabled={wallet.network().feeType() !== "dynamic"}
-						network={wallet.network()}
-						profile={profile}
-						onChange={(value) => {
-							setValue("fee", value, { shouldDirty: true, shouldValidate: true });
-						}}
-						viewType={inputFeeSettings.viewType}
-						onChangeViewType={(viewType) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, viewType },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
-						simpleValue={inputFeeSettings.simpleValue}
-						onChangeSimpleValue={(simpleValue) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, simpleValue },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
-					/>
+					<FeeField type="ipfs" data={feeTransactionData} network={network} profile={profile} />
 				</FormField>
 			</div>
 		</section>

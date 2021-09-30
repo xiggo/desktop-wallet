@@ -44,7 +44,7 @@ export const HeaderSearchBar = ({
 	const reference = useRef(null);
 	useEffect(() => clickOutsideHandler(reference, () => setSearchbarVisible(false)), [reference]);
 
-	const debouncedQuery = useDebounce(query, debounceTimeout);
+	const [debouncedQuery] = useDebounce(query, debounceTimeout);
 	useEffect(() => onSearch?.(debouncedQuery), [debouncedQuery]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const handleQueryReset = useCallback(() => {

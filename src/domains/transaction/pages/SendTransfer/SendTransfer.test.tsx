@@ -10,7 +10,7 @@ import { toasts } from "app/services";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
-import React from "react";
+import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 import transactionFixture from "tests/fixtures/coins/ark/devnet/transactions/transfer.json";
@@ -125,19 +125,27 @@ describe("SendTransfer", () => {
 			}),
 		);
 
+		form.current.register("network");
+		form.current.register("fee");
+		form.current.register("fees");
+		form.current.register("inputFeeSettings");
+
 		let rendered: RenderResult;
 
 		await hookAct(async () => {
 			rendered = render(
 				<FormProvider {...form.current}>
-					<FormStep networks={[]} profile={profile} />
+					<FormStep deeplinkProps={{}} networks={[]} profile={profile} />
 				</FormProvider>,
 			);
 		});
 
-		const { getByTestId, asFragment } = rendered;
+		const { getByTestId, getAllByTestId, asFragment } = rendered;
 
 		expect(getByTestId("SendTransfer__form-step")).toBeTruthy();
+
+		await waitFor(() => expect(getAllByTestId("AmountCrypto")).toHaveLength(3));
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -151,21 +159,29 @@ describe("SendTransfer", () => {
 			}),
 		);
 
-		const useNetworksMock = jest.spyOn(profile.settings(), "get").mockReturnValue(false);
+		form.current.register("network");
+		form.current.register("fee");
+		form.current.register("fees");
+		form.current.register("inputFeeSettings");
 
-		let rendered: RenderResult;
+		const useNetworksMock = jest.spyOn(profile.settings(), "get").mockImplementation((setting) => {
+			if (setting === Contracts.ProfileSetting.ExchangeCurrency) {
+				return "USD";
+			}
 
-		await hookAct(async () => {
-			rendered = render(
-				<FormProvider {...form.current}>
-					<FormStep networks={env.availableNetworks()} profile={profile} />
-				</FormProvider>,
-			);
+			return false;
 		});
 
-		const { getByTestId, asFragment } = rendered;
+		const { getByTestId, asFragment, getAllByTestId } = render(
+			<FormProvider {...form.current}>
+				<FormStep networks={env.availableNetworks()} profile={profile} />
+			</FormProvider>,
+		);
 
 		expect(getByTestId("SendTransfer__form-step")).toBeTruthy();
+
+		await waitFor(() => expect(getAllByTestId("AmountCrypto")).toHaveLength(3));
+
 		expect(asFragment()).toMatchSnapshot();
 
 		useNetworksMock.mockRestore();
@@ -202,14 +218,6 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render form step with deeplink values and use them", async () => {
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					network: wallet.network(),
-					senderAddress: wallet.address(),
-				},
-			}),
-		);
 		const deeplinkProperties: any = {
 			amount: "1.2",
 			coin: "ark",
@@ -219,27 +227,39 @@ describe("SendTransfer", () => {
 			recipient: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
 		};
 
-		await hookAct(async () => {
-			const { getByTestId, asFragment } = render(
-				<FormProvider {...form.current}>
-					<FormStep networks={[]} profile={profile} deeplinkProps={deeplinkProperties} />
-				</FormProvider>,
-			);
-
-			expect(getByTestId("SendTransfer__form-step")).toBeTruthy();
-			expect(asFragment()).toMatchSnapshot();
-		});
-	});
-
-	it("should render 1st step with custom deeplink values and use them", async () => {
-		const { result: form } = renderHook(() =>
-			useForm({
+		const Component = () => {
+			const form = useForm({
 				defaultValues: {
 					network: wallet.network(),
 					senderAddress: wallet.address(),
 				},
-			}),
-		);
+			});
+
+			const { register } = form;
+
+			useEffect(() => {
+				register("network");
+				register("fee");
+				register("fees");
+				register("inputFeeSettings");
+				register("senderAddress");
+			}, [register]);
+
+			return (
+				<FormProvider {...form}>
+					<FormStep networks={[]} profile={profile} deeplinkProps={deeplinkProperties} />
+				</FormProvider>
+			);
+		};
+
+		const { asFragment } = render(<Component />);
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render 1st step with custom deeplink values and use them", async () => {
 		const deeplinkProperties: any = {
 			amount: "1.2",
 			coin: "ark",
@@ -248,19 +268,35 @@ describe("SendTransfer", () => {
 			recipient: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
 		};
 
-		let rendered: RenderResult;
+		const Component = () => {
+			const form = useForm({
+				defaultValues: {
+					network: wallet.network(),
+					senderAddress: wallet.address(),
+				},
+			});
 
-		await hookAct(async () => {
-			rendered = render(
-				<FormProvider {...form.current}>
+			const { register } = form;
+
+			useEffect(() => {
+				register("network");
+				register("fee");
+				register("fees");
+				register("inputFeeSettings");
+				register("senderAddress");
+			}, [register]);
+
+			return (
+				<FormProvider {...form}>
 					<FormStep networks={[]} profile={profile} deeplinkProps={deeplinkProperties} />
-				</FormProvider>,
+				</FormProvider>
 			);
-		});
+		};
 
-		const { getByTestId, asFragment } = rendered;
+		const { asFragment } = render(<Component />);
 
-		expect(getByTestId("SendTransfer__form-step")).toBeTruthy();
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 

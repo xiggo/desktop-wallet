@@ -1,41 +1,27 @@
-import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { Input } from "app/components/Input";
-import { useFees, useValidation } from "app/hooks";
+import { useValidation } from "app/hooks";
 import cn from "classnames";
-import React, { ChangeEvent, useCallback, useEffect } from "react";
+import { FeeField } from "domains/transaction/components/FeeField";
+import React, { ChangeEvent, useCallback, useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { TransactionFees } from "types";
 
-import { InputFee } from "../InputFee";
+import { FormStepProperties } from "../../pages/SendRegistration/SendRegistration.models";
 import { AddParticipant, Participant } from "./components/AddParticipant/AddParticipant";
 
-export const FormStep = ({
-	profile,
-	fees,
-	wallet,
-	step = 0.001,
-}: {
-	profile: ProfilesContracts.IProfile;
-	fees: TransactionFees;
-	wallet: ProfilesContracts.IReadWriteWallet;
-	step?: number;
-}) => {
+export const FormStep: React.FC<FormStepProperties> = ({ profile, wallet }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { errors, setValue, register, watch } = useFormContext();
-	const { participants, fee, minParticipants, inputFeeSettings = {} } = watch();
+	const { participants, minParticipants } = watch();
 
 	const { common, multiSignatureRegistration } = useValidation();
 
-	const { calculateMultiSignatureFee } = useFees(profile);
-
 	useEffect(() => {
-		register("fee", common.fee(wallet.balance(), wallet.network()));
 		register("participants", multiSignatureRegistration.participants());
 		register("minParticipants", multiSignatureRegistration.minParticipants(participants));
-	}, [register, participants, common, fees, multiSignatureRegistration, wallet]);
+	}, [register, participants, common, multiSignatureRegistration, wallet]);
 
 	useEffect(() => {
 		if (minParticipants === undefined) {
@@ -47,36 +33,8 @@ export const FormStep = ({
 		}
 	}, [setValue, minParticipants, participants]);
 
-	useEffect(() => {
-		const updateFee = async () => {
-			if (!participants) {
-				return;
-			}
-
-			setValue("isLoading", true, { shouldDirty: true });
-
-			const multiSignatureFee = await calculateMultiSignatureFee({
-				coin: wallet.coin(),
-				minParticipants,
-				participants: participants,
-			});
-
-			setValue("fee", multiSignatureFee.toHuman(), { shouldDirty: true, shouldValidate: true });
-			setValue(
-				"fees",
-				{
-					avg: multiSignatureFee.toHuman(),
-					max: multiSignatureFee.toHuman(),
-					min: multiSignatureFee.toHuman(),
-					static: multiSignatureFee.toHuman(),
-				},
-				{ shouldDirty: true, shouldValidate: true },
-			);
-			setValue("isLoading", false, { shouldDirty: true });
-		};
-
-		updateFee();
-	}, [setValue, participants, calculateMultiSignatureFee, wallet, minParticipants]);
+	const network = useMemo(() => wallet.network(), [wallet]);
+	const feeTransactionData = useMemo(() => ({ minParticipants, participants }), [minParticipants, participants]);
 
 	const handleParticipants = useCallback(
 		(values: Participant[]) => {
@@ -135,34 +93,7 @@ export const FormStep = ({
 
 				<FormField name="fee">
 					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<InputFee
-						min={fees?.min}
-						avg={fees?.avg}
-						max={fees?.max}
-						loading={!fees}
-						value={fee}
-						step={step}
-						disabled={wallet.network().feeType() !== "dynamic" || !fees?.isDynamic}
-						onChange={(value) => setValue("fee", value, { shouldDirty: true, shouldValidate: true })}
-						network={wallet.network()}
-						profile={profile}
-						viewType={inputFeeSettings.viewType}
-						onChangeViewType={(viewType) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, viewType },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
-						simpleValue={inputFeeSettings.simpleValue}
-						onChangeSimpleValue={(simpleValue) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, simpleValue },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
-					/>
+					<FeeField type="multiSignature" data={feeTransactionData} network={network} profile={profile} />
 				</FormField>
 			</div>
 		</section>

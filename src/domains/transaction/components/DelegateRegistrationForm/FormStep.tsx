@@ -5,31 +5,26 @@ import { Header } from "app/components/Header";
 import { InputDefault } from "app/components/Input";
 import { useEnvironmentContext } from "app/contexts";
 import { useValidation } from "app/hooks";
-import { InputFee } from "domains/transaction/components/InputFee";
+import { FeeField } from "domains/transaction/components/FeeField";
 import { TransactionNetwork, TransactionSender } from "domains/transaction/components/TransactionDetail";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-export const FormStep = ({ fees, wallet, step = 0.001, profile }: any) => {
+import { FormStepProperties } from "../../pages/SendRegistration/SendRegistration.models";
+
+export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
-	const { delegateRegistration, common } = useValidation();
+	const { delegateRegistration } = useValidation();
 
-	const { getValues, register, unregister, setValue, watch } = useFormContext();
+	const { getValues, register, setValue } = useFormContext();
 	const username = getValues("username");
 	const [usernames, setUsernames] = useState<string[]>([]);
 
-	const inputFeeSettings = getValues("inputFeeSettings") ?? {};
-
-	// getValues does not get the value of `defaultValues` on first render
-	const [defaultFee] = useState(() => watch("fee"));
-	const fee = getValues("fee") || defaultFee;
-
-	useEffect(() => {
-		register("fee", common.fee(wallet.balance(), wallet.network()));
-	}, [register, unregister, common, fees, wallet]);
+	const network = useMemo(() => wallet.network(), [wallet]);
+	const feeTransactionData = useMemo(() => ({ username }), [username]);
 
 	useEffect(() => {
 		setUsernames(
@@ -44,7 +39,7 @@ export const FormStep = ({ fees, wallet, step = 0.001, profile }: any) => {
 		if (!username) {
 			register("username", delegateRegistration.username(usernames));
 		}
-	}, [delegateRegistration, usernames, register, username, t]);
+	}, [delegateRegistration, usernames, register, username]);
 
 	return (
 		<section data-testid="DelegateRegistrationForm__form-step">
@@ -73,35 +68,11 @@ export const FormStep = ({ fees, wallet, step = 0.001, profile }: any) => {
 
 				<FormField name="fee">
 					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<InputFee
-						min={fees?.min}
-						avg={fees?.avg}
-						max={fees?.max}
-						loading={!fees}
-						value={fee}
-						step={step}
-						disabled={wallet.network().feeType() !== "dynamic"}
-						network={wallet.network()}
+					<FeeField
+						type="delegateRegistration"
+						data={feeTransactionData}
+						network={network}
 						profile={profile}
-						onChange={(value) => {
-							setValue("fee", value, { shouldDirty: true, shouldValidate: true });
-						}}
-						viewType={inputFeeSettings.viewType}
-						onChangeViewType={(viewType) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, viewType },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
-						simpleValue={inputFeeSettings.simpleValue}
-						onChangeSimpleValue={(simpleValue) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, simpleValue },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
 					/>
 				</FormField>
 			</div>

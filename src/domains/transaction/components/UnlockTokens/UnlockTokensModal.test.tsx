@@ -5,6 +5,7 @@ import { LSK } from "@payvo/sdk-lsk";
 import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
+import * as useFeesHook from "app/hooks/use-fees";
 import { buildTranslations } from "app/i18n/helpers";
 import nock from "nock";
 import React from "react";
@@ -18,6 +19,7 @@ const transport = getDefaultLedgerTransport() as any;
 
 describe("UnlockTokensModal", () => {
 	const mnemonic = "barrel own close sponsor strike win twice dwarf blame intact aerobic wild";
+	const fee = 0.001_47;
 
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -35,17 +37,9 @@ describe("UnlockTokensModal", () => {
 			network: "lsk.testnet",
 		});
 
-		// wallet for fee calculation
-
-		const feeWallet = await profile.walletFactory().generate({
-			coin: wallet.coinId(),
-			network: wallet.networkId(),
+		jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve({ avg: fee, max: fee, min: fee, static: fee }),
 		});
-
-		jest.spyOn(profile.walletFactory(), "generate").mockResolvedValue(feeWallet);
-		jest.spyOn(feeWallet.wallet.coin().transaction(), "unlockToken").mockResolvedValue({
-			fee: () => BigNumber.make(+transactionFixture.data.fee / 1e8),
-		} as any);
 
 		// items mock
 

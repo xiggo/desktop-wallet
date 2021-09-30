@@ -29,6 +29,7 @@ import { FormStep } from "./FormStep";
 import { TransferLedgerReview } from "./LedgerReview";
 import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
+import { buildTransferData } from "./SendTransfer.helpers";
 import { SummaryStep } from "./SummaryStep";
 
 enum Step {
@@ -150,7 +151,7 @@ export const SendTransfer = () => {
 		register("recipients", sendTransfer.recipients());
 		register("senderAddress", sendTransfer.senderAddress());
 		register("fees");
-		register("fee", common.fee(remainingBalance, wallet?.network?.()));
+		register("fee", common.fee(remainingBalance, wallet?.network(), fees));
 		register("memo", sendTransfer.memo());
 
 		register("remainingBalance");
@@ -285,33 +286,15 @@ export const SendTransfer = () => {
 				wif,
 			});
 
-			const transactionInput: Services.TransactionInputs = {
-				data: {},
-				fee: +fee,
-				signatory,
-			};
+			const data = await buildTransferData({
+				coin: wallet.coin(),
+				memo,
+				recipients,
+			});
 
-			transactionInput.data = isMultiPayment
-				? {
-						payments: recipients.map(({ address, amount }: { address: string; amount: number }) => ({
-							amount: +amount,
-							to: address,
-						})),
-				  }
-				: {
-						amount: +recipients[0].amount,
-						to: recipients[0].address,
-				  };
+			setLastEstimatedExpiration(data.expiration);
 
-			if (memo) {
-				transactionInput.data.memo = memo;
-			}
-
-			const expiration = await wallet.coin().transaction().estimateExpiration();
-			if (expiration) {
-				transactionInput.data.expiration = Number.parseInt(expiration);
-				setLastEstimatedExpiration(transactionInput.data.expiration);
-			}
+			const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
 
 			if (wallet.isLedger()) {
 				await connect(profile, wallet.coinId(), wallet.networkId());

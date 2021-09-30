@@ -2,14 +2,16 @@ import { Contracts } from "@payvo/profiles";
 import { Header } from "app/components/Header";
 import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
 import { TransactionNetwork, TransactionSender } from "domains/transaction/components/TransactionDetail";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();
-	const { getValues, unregister } = useFormContext();
-	const { fee } = getValues();
+	const { watch, getValues, unregister } = useFormContext();
+
+	const [defaultFee] = useState(() => watch("fee"));
+	const fee = getValues("fee") ?? defaultFee;
 
 	useEffect(() => {
 		unregister("mnemonic");

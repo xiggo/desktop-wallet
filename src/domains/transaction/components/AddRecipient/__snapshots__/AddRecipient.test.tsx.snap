@@ -1406,7 +1406,7 @@ exports[`AddRecipient should set available amount 1`] = `
                       name="amount"
                       placeholder="Enter an amount"
                       type="text"
-                      value=""
+                      value="33.75089801"
                     />
                   </div>
                 </div>
@@ -1416,7 +1416,7 @@ exports[`AddRecipient should set available amount 1`] = `
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 fXfgyw"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 fXfgyw active"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1661,7 +1661,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
               class="inline-flex"
             >
               <button
-                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 fXfgyw"
+                class="AddRecipient__InputButtonStyled-sc-1tdk8mn-0 fXfgyw active"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >

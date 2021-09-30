@@ -101,7 +101,7 @@ export const AddRecipient = ({
 		clearErrors,
 		formState: { errors },
 	} = useFormContext();
-	const { network, senderAddress, fee, recipientAddress, amount, recipientAlias } = watch();
+	const { network, senderAddress, fee, recipientAddress, amount, recipientAlias, isSendAllSelected } = watch();
 	const { sendTransfer } = useValidation();
 
 	const ticker = network?.ticker();
@@ -236,6 +236,27 @@ export const AddRecipient = ({
 		isMountedReference.current = true;
 	}, []);
 	//endregion
+
+	useEffect(() => {
+		if (!isSendAllSelected) {
+			return;
+		}
+
+		const remaining = remainingBalance > fee ? remainingNetBalance : remainingBalance;
+
+		setValue("displayAmount", remaining);
+		setValue("amount", remaining, {
+			shouldDirty: true,
+			shouldValidate: true,
+		});
+
+		singleRecipientOnChange({
+			address: recipientAddress,
+			alias: recipientAlias,
+			amount: remaining,
+		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [fee, isSendAllSelected, remainingBalance, remainingNetBalance, setValue]);
 
 	const singleRecipientOnChange = ({
 		address,
@@ -398,24 +419,6 @@ export const AddRecipient = ({
 										className={cn({ active: getValues("isSendAllSelected") })}
 										onClick={() => {
 											setValue("isSendAllSelected", !getValues("isSendAllSelected"));
-
-											if (getValues("isSendAllSelected")) {
-												const remaining =
-													remainingBalance > fee ? remainingNetBalance : remainingBalance;
-
-												setValue("displayAmount", remaining);
-
-												setValue("amount", remaining, {
-													shouldDirty: true,
-													shouldValidate: true,
-												});
-
-												singleRecipientOnChange({
-													address: recipientAddress,
-													alias: recipientAlias,
-													amount: remaining,
-												});
-											}
 										}}
 										data-testid="AddRecipient__send-all"
 									>

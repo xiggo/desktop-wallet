@@ -58,7 +58,7 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 	});
 
 	const [searchQuery, setSearchQuery] = useState("");
-	const debouncedSearchQuery = useDebounce(searchQuery, 500);
+	const [debouncedSearchQuery] = useDebounce(searchQuery, 500);
 
 	const showSelectAllCategories = useMemo(() => categories.some((option: Option) => !option.isSelected), [
 		categories,

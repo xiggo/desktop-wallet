@@ -46,20 +46,11 @@ type UseColumnsHook = (config: {
 	onToggleAll: () => void;
 }) => TableColumn[];
 
-type UseFeesHook = (config: {
-	profile: Contracts.IProfile;
-	coin: string;
-	network: string;
-}) => {
-	calculateFee: (objects: UnlockableBalance[]) => Promise<number>;
-};
-
 export type {
 	UnlockableBalance,
 	UnlockableBalanceSkeleton,
 	UnlockTokensFormState,
 	UseColumnsHook,
-	UseFeesHook,
 	UseUnlockableBalancesHook,
 };
 

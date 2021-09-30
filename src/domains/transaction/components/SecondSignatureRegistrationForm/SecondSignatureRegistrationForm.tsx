@@ -4,24 +4,21 @@ import { TransactionFee } from "domains/transaction/components/TransactionDetail
 import { SendRegistrationForm } from "domains/transaction/pages/SendRegistration/SendRegistration.models";
 import { handleBroadcastError } from "domains/transaction/utils";
 import React from "react";
-import { TransactionFees } from "types";
 
 import { BackupStep, GenerationStep, ReviewStep, VerificationStep } from ".";
 
 const component = ({
 	activeTab,
-	fees,
 	wallet,
 	profile,
 }: {
 	activeTab: number;
-	fees: TransactionFees;
 	wallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }) => (
 	<Tabs activeId={activeTab}>
 		<TabPanel tabId={1}>
-			<GenerationStep wallet={wallet} fees={fees} profile={profile} />
+			<GenerationStep wallet={wallet} profile={profile} />
 		</TabPanel>
 
 		<TabPanel tabId={2}>
@@ -53,7 +50,6 @@ export const SecondSignatureRegistrationForm: SendRegistrationForm = {
 	component,
 	formFields: ["secondMnemonic", "verification"],
 	tabSteps: 4,
-
 	transactionDetails,
 };
 

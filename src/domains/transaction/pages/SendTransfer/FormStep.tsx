@@ -1,17 +1,17 @@
-import { isEqual } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Enums, Networks } from "@payvo/sdk";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { InputCounter } from "app/components/Input";
-import { useFees, useProfileJobs } from "app/hooks";
+import { useProfileJobs } from "app/hooks";
 import { toasts } from "app/services";
 import { SelectNetwork } from "domains/network/components/SelectNetwork";
 import { SelectAddress } from "domains/profile/components/SelectAddress";
 import { AddRecipient } from "domains/transaction/components/AddRecipient";
-import { InputFee } from "domains/transaction/components/InputFee";
+import { FeeField } from "domains/transaction/components/FeeField";
 import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
-import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { buildTransferData } from "domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -30,44 +30,39 @@ export const FormStep = ({
 
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
-	const { calculateFeesByType } = useFees(profile);
-
 	const { getValues, setValue, watch } = useFormContext();
-	const { recipients, memo } = getValues();
-	const { network, senderAddress, fee, fees } = watch();
-
-	const [isSingle, setIsSingle] = useState((recipients || []).length <= 1);
-
-	const inputFeeSettings = watch("inputFeeSettings") ?? {};
+	const { recipients, memo = "" } = getValues();
+	const { network, senderAddress } = watch();
 
 	const senderWallet = profile.wallets().findByAddress(senderAddress);
 
-	const setTransactionFees = useCallback(
-		async (network: Networks.Network) => {
-			const transactionFees = await calculateFeesByType(
-				network.coin(),
-				network.id(),
-				isSingle ? "transfer" : "multiPayment",
-			);
-
-			if (!isEqual(getValues("fees"), transactionFees)) {
-				setValue("fees", transactionFees);
-
-				setValue("fee", transactionFees.avg, {
-					shouldDirty: true,
-					shouldValidate: true,
-				});
-			}
-		},
-		[calculateFeesByType, isSingle, setValue, getValues],
-	);
+	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
 	useEffect(() => {
-		if (network) {
-			setTransactionFees(network);
-			setWallets(profile.wallets().findByCoinWithNetwork(network.coin(), network.id()));
+		if (!network) {
+			return;
 		}
-	}, [isSingle, network, profile, setTransactionFees]);
+
+		const updateFeeTransactionData = async () => {
+			setFeeTransactionData(
+				await buildTransferData({
+					coin: profile.coins().get(network.coin(), network.id()),
+					memo,
+					recipients,
+				}),
+			);
+		};
+
+		updateFeeTransactionData();
+	}, [network, memo, recipients, profile]);
+
+	useEffect(() => {
+		if (!network) {
+			return;
+		}
+
+		setWallets(profile.wallets().findByCoinWithNetwork(network.coin(), network.id()));
+	}, [network, profile]);
 
 	const getRecipients = () => {
 		if (deeplinkProps?.recipient && deeplinkProps?.amount) {
@@ -140,8 +135,7 @@ export const FormStep = ({
 						onChange={(value: RecipientListItem[]) =>
 							setValue("recipients", value, { shouldDirty: true, shouldValidate: true })
 						}
-						onTypeChange={(isSingle: boolean) => {
-							setIsSingle(isSingle);
+						onTypeChange={() => {
 							toasts.warning(t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE"));
 						}}
 					/>
@@ -154,7 +148,7 @@ export const FormStep = ({
 						type="text"
 						placeholder=" "
 						maxLengthLabel="255"
-						value={memo || ""}
+						value={memo}
 						onChange={(event: ChangeEvent<HTMLInputElement>) =>
 							setValue("memo", event.target.value, { shouldDirty: true, shouldValidate: true })
 						}
@@ -164,36 +158,14 @@ export const FormStep = ({
 				{showFeeInput && (
 					<FormField name="fee">
 						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-						<InputFee
-							min={fees?.min}
-							avg={fees?.avg}
-							max={fees?.max}
-							loading={!fees}
-							value={fee}
-							step={0.01}
-							disabled={network?.feeType() !== "dynamic"}
-							network={network}
-							profile={profile}
-							onChange={(value) => {
-								setValue("fee", value, { shouldDirty: true, shouldValidate: true });
-							}}
-							viewType={inputFeeSettings.viewType}
-							onChangeViewType={(viewType) => {
-								setValue(
-									"inputFeeSettings",
-									{ ...inputFeeSettings, viewType },
-									{ shouldDirty: true, shouldValidate: true },
-								);
-							}}
-							simpleValue={inputFeeSettings.simpleValue}
-							onChangeSimpleValue={(simpleValue) => {
-								setValue(
-									"inputFeeSettings",
-									{ ...inputFeeSettings, simpleValue },
-									{ shouldDirty: true, shouldValidate: true },
-								);
-							}}
-						/>
+						{!!network && (
+							<FeeField
+								type={recipients?.length > 1 ? "multiPayment" : "transfer"}
+								data={feeTransactionData}
+								network={network}
+								profile={profile}
+							/>
+						)}
 					</FormField>
 				)}
 			</div>

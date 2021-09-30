@@ -1,17 +1,14 @@
 import { Contracts as ProfilesContracts } from "@payvo/profiles";
-import { Networks } from "@payvo/sdk";
 import { Alert } from "app/components/Alert";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
-import { useFees } from "app/hooks";
-import { InputFee } from "domains/transaction/components/InputFee";
+import { FeeField } from "domains/transaction/components/FeeField";
 import {
 	TransactionDetail,
 	TransactionNetwork,
 	TransactionSender,
 } from "domains/transaction/components/TransactionDetail";
-import React, { useEffect } from "react";
-import { useFormContext } from "react-hook-form";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 export const FormStep = ({
@@ -22,30 +19,6 @@ export const FormStep = ({
 	profile: ProfilesContracts.IProfile;
 }) => {
 	const { t } = useTranslation();
-
-	const { calculateFeesByType } = useFees(profile);
-
-	const { getValues, setValue, watch } = useFormContext();
-	const { fee, fees } = watch();
-
-	const inputFeeSettings = watch("inputFeeSettings") ?? {};
-
-	useEffect(() => {
-		const setTransactionFees = async (network: Networks.Network) => {
-			const fees = await calculateFeesByType(network.coin(), network.id(), "delegateResignation");
-
-			setValue("fees", fees);
-
-			if (!getValues("fee")) {
-				setValue("fee", fees.avg, {
-					shouldDirty: true,
-					shouldValidate: true,
-				});
-			}
-		};
-
-		setTransactionFees(senderWallet.network());
-	}, [calculateFeesByType, getValues, setValue, senderWallet]);
 
 	return (
 		<section data-testid="SendDelegateResignation__form-step">
@@ -67,33 +40,11 @@ export const FormStep = ({
 			<div className="pt-6">
 				<FormField name="fee">
 					<FormLabel>{t("TRANSACTION.TRANSACTION_FEE")}</FormLabel>
-					<InputFee
-						min={fees?.min}
-						avg={fees?.avg}
-						max={fees?.max}
-						loading={!fees}
-						value={fee}
-						step={0.01}
-						disabled={senderWallet.network().feeType() !== "dynamic"}
-						onChange={(value) => setValue("fee", value, { shouldDirty: true, shouldValidate: true })}
+					<FeeField
+						type="delegateResignation"
+						data={undefined}
 						network={senderWallet.network()}
 						profile={profile}
-						viewType={inputFeeSettings.viewType}
-						onChangeViewType={(viewType) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, viewType },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
-						simpleValue={inputFeeSettings.simpleValue}
-						onChangeSimpleValue={(simpleValue) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, simpleValue },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
 					/>
 				</FormField>
 			</div>

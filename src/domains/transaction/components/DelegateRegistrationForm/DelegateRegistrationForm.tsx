@@ -9,18 +9,16 @@ import { FormStep, ReviewStep } from ".";
 
 const component = ({
 	activeTab,
-	fees,
 	wallet,
 	profile,
 }: {
 	activeTab: number;
-	fees: any;
 	wallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }) => (
 	<Tabs activeId={activeTab}>
 		<TabPanel tabId={1}>
-			<FormStep fees={fees} wallet={wallet} profile={profile} />
+			<FormStep wallet={wallet} profile={profile} />
 		</TabPanel>
 		<TabPanel tabId={2}>
 			<ReviewStep wallet={wallet} />
@@ -42,7 +40,6 @@ const transactionDetails = ({
 			{transaction.username()}
 		</TransactionDetail>
 
-		{/* @TODO: normalise fee in SDK */}
 		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
 	</>
 );

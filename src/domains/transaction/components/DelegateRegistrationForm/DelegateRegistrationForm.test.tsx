@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import * as useFeesHook from "app/hooks/use-fees";
 import { translations } from "domains/transaction/i18n";
-import React from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import React, { useEffect } from "react";
+import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import delegateRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
 import {
 	env,
@@ -21,26 +23,36 @@ import { DelegateRegistrationForm, signDelegateRegistration } from "./DelegateRe
 
 let profile: ProfilesContracts.IProfile;
 let wallet: ProfilesContracts.IReadWriteWallet;
-let fees: Record<string, string>;
 
-const renderComponent = async (defaultValues = { fee: "2" }) => {
-	let renderer: RenderResult;
-	const { result: form } = renderHook(() => useForm({ defaultValues }));
+const fees = { avg: 1.354, isDynamic: true, max: 10, min: 0, static: 0 };
 
-	await act(async () => {
-		renderer = render(
-			<FormProvider {...form.current}>
-				<DelegateRegistrationForm.component activeTab={1} fees={fees} wallet={wallet} />
-			</FormProvider>,
+const renderComponent = (properties?: any) => {
+	let form: UseFormMethods | undefined;
+
+	const defaultValues = properties?.defaultValues ?? { fee: "2" };
+	const activeTab = properties?.activeTab ?? 1;
+
+	const Component = () => {
+		form = useForm<any>({ defaultValues, mode: "onChange" });
+
+		const { register } = form;
+
+		useEffect(() => {
+			register("fee");
+			register("fees");
+			register("inputFeeSettings");
+		}, [register]);
+
+		return (
+			<FormProvider {...form}>
+				<DelegateRegistrationForm.component profile={profile} activeTab={activeTab} wallet={wallet} />
+			</FormProvider>
 		);
-
-		await waitFor(() => expect(renderer.getByTestId("DelegateRegistrationForm__form-step")));
-	});
-
-	return {
-		...renderer!,
-		form: form.current,
 	};
+
+	const renderResult: RenderResult = render(<Component />);
+
+	return { ...renderResult, form };
 };
 
 const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
@@ -67,155 +79,97 @@ describe("DelegateRegistrationForm", () => {
 
 		await syncDelegates(profile);
 
-		fees = {
-			avg: "1.354",
-			max: "10",
-			min: "0",
-		};
+		jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve(fees),
+		});
 	});
 
 	it("should render form step", async () => {
-		const { asFragment } = await renderComponent();
+		const { asFragment } = renderComponent();
 
 		await waitFor(() => expect(asFragment()).toMatchSnapshot());
 	});
 
 	it("should render review step", async () => {
-		const { asFragment, form, getByTestId, rerender } = await renderComponent();
+		const { asFragment } = renderComponent({ activeTab: 2 });
 
-		rerender(
-			<FormProvider {...form}>
-				<DelegateRegistrationForm.component activeTab={2} fees={fees} wallet={wallet} />
-			</FormProvider>,
-		);
-
-		await waitFor(() => expect(getByTestId("DelegateRegistrationForm__review-step")));
+		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__review-step")).toBeInTheDocument());
 		await waitFor(() => expect(asFragment()).toMatchSnapshot());
 	});
 
 	it("should set username", async () => {
-		const { asFragment, form, getByTestId, rerender } = await renderComponent();
+		const { form } = renderComponent();
 
-		const input = getByTestId("Input__username");
-		await act(async () => {
-			fireEvent.change(input, { target: { value: "test_delegate" } });
-		});
+		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")).toBeInTheDocument());
 
-		await act(async () => {
-			rerender(
-				<FormProvider {...form}>
-					<DelegateRegistrationForm.component activeTab={1} fees={fees} wallet={wallet} />
-				</FormProvider>,
-			);
+		fireEvent.change(screen.getByTestId("Input__username"), { target: { value: "test_delegate" } });
 
-			await waitFor(() => expect(getByTestId("DelegateRegistrationForm__form-step")));
-		});
-
-		await waitFor(() => expect(input).toHaveValue("test_delegate"));
-		await waitFor(() => expect(form.getValues("username")).toEqual("test_delegate"));
-		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
+		await waitFor(() => expect(form?.getValues("username")).toEqual("test_delegate"));
 	});
 
 	it("should set fee", async () => {
-		const { asFragment, form, getByTestId, getByText, rerender } = await renderComponent({ fee: "10" });
-		form.register("inputFeeSettings" as any);
-
-		await act(async () => {
-			fireEvent.click(getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		const { asFragment } = renderComponent({
+			defaultValues: {
+				fee: "10",
+			},
 		});
 
-		await act(async () => {
-			rerender(
-				<FormProvider {...form}>
-					<DelegateRegistrationForm.component activeTab={1} fees={fees} wallet={wallet} />
-				</FormProvider>,
-			);
+		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId("InputFee")).toBeInTheDocument());
 
-			await waitFor(() => expect(getByTestId("DelegateRegistrationForm__form-step")));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+
+		fireEvent.change(screen.getByTestId("InputCurrency"), {
+			target: {
+				value: "11",
+			},
 		});
 
-		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("10"));
-
-		await act(async () => {
-			fireEvent.change(getByTestId("InputCurrency"), {
-				target: {
-					value: "11",
-				},
-			});
-		});
-
-		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("11"));
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("11"));
 		await waitFor(() => expect(asFragment()).toMatchSnapshot());
 	});
 
 	it("should show error if username contains illegal characters", async () => {
-		const { asFragment, form, getByTestId, rerender } = await renderComponent();
+		const { asFragment } = renderComponent();
 
-		await act(async () => {
-			fireEvent.change(getByTestId("Input__username"), { target: { value: "<invalid>" } });
-		});
+		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
 
-		await act(async () => {
-			rerender(
-				<FormProvider {...form}>
-					<DelegateRegistrationForm.component activeTab={1} fees={fees} wallet={wallet} />
-				</FormProvider>,
-			);
+		fireEvent.change(screen.getByTestId("Input__username"), { target: { value: "<invalid>" } });
 
-			await waitFor(() => expect(getByTestId("DelegateRegistrationForm__form-step")));
-		});
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 
-		expect(getByTestId("Input__username")).toHaveAttribute("aria-invalid");
-		expect(getByTestId("Input__error")).toBeVisible();
-
+		expect(screen.getByTestId("Input__error")).toBeVisible();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should error if username is too long", async () => {
-		const { asFragment, form, getByTestId, rerender } = await renderComponent();
+		const { asFragment } = renderComponent();
 
-		await act(async () => {
-			fireEvent.change(getByTestId("Input__username"), {
-				target: { value: "thisisaveryveryverylongdelegatename" },
-			});
+		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
+
+		fireEvent.change(screen.getByTestId("Input__username"), {
+			target: { value: "thisisaveryveryverylongdelegatename" },
 		});
 
-		await act(async () => {
-			rerender(
-				<FormProvider {...form}>
-					<DelegateRegistrationForm.component activeTab={1} fees={fees} wallet={wallet} />
-				</FormProvider>,
-			);
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 
-			await waitFor(() => expect(getByTestId("DelegateRegistrationForm__form-step")));
-		});
-
-		expect(getByTestId("Input__username")).toHaveAttribute("aria-invalid");
-		expect(getByTestId("Input__error")).toBeVisible();
-
+		expect(screen.getByTestId("Input__error")).toBeVisible();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show error if username already exists", async () => {
-		const { asFragment, form, getByTestId, rerender } = await renderComponent();
+		const { asFragment } = renderComponent();
 
-		await act(async () => {
-			fireEvent.change(getByTestId("Input__username"), { target: { value: "arkx" } });
-		});
+		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
 
-		await act(async () => {
-			rerender(
-				<FormProvider {...form}>
-					<DelegateRegistrationForm.component activeTab={1} fees={fees} wallet={wallet} />
-				</FormProvider>,
-			);
+		fireEvent.change(screen.getByTestId("Input__username"), { target: { value: "arkx" } });
 
-			await waitFor(() => expect(getByTestId("DelegateRegistrationForm__form-step")));
-		});
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 
-		expect(getByTestId("Input__username")).toHaveAttribute("aria-invalid");
-		expect(getByTestId("Input__error")).toBeVisible();
-
+		expect(screen.getByTestId("Input__error")).toBeVisible();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

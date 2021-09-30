@@ -3,12 +3,13 @@ import { Button } from "app/components/Button";
 import { EmptyBlock } from "app/components/EmptyBlock";
 import { Header } from "app/components/Header";
 import { Table } from "app/components/Table";
+import { useFees } from "app/hooks";
 import React, { useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 import { UnlockableBalance, UnlockableBalanceSkeleton, UnlockTokensFormState } from "../../UnlockTokens.contracts";
-import { useColumns, useFees } from "../../UnlockTokens.helpers";
+import { useColumns } from "../../UnlockTokens.helpers";
 import { UnlockTokensRow } from "./UnlockTokensRow";
 import { UnlockTokensTotal } from "./UnlockTokensTotal";
 
@@ -41,11 +42,7 @@ export const UnlockTokensSelect: React.FC<Properties> = ({
 	const [isLoadingFee, setIsLoadingFee] = useState<boolean>(false);
 	const [selectedIds, setSelectedIds] = useState<string[]>(selectedObjects.map((value) => value.id));
 
-	const { calculateFee } = useFees({
-		coin: wallet.coinId(),
-		network: wallet.networkId(),
-		profile,
-	});
+	const { calculate } = useFees(profile);
 
 	const { data, isEmpty, isLoading } = useMemo(
 		() => ({
@@ -86,14 +83,27 @@ export const UnlockTokensSelect: React.FC<Properties> = ({
 		};
 
 		const recalculateFee = async () => {
+			if (selectedObjects.length === 0) {
+				setValue("fee", 0);
+				return;
+			}
+
 			setIsLoadingFee(true);
-			setValue("fee", await calculateFee(selectedObjects));
+
+			const fees = await calculate({
+				coin: wallet.coinId(),
+				data: { objects: selectedObjects },
+				network: wallet.networkId(),
+				type: "unlockToken",
+			});
+
+			setValue("fee", fees.min);
 			setIsLoadingFee(false);
 		};
 
 		recalculateAmount();
 		void recalculateFee();
-	}, [calculateFee, selectedObjects, setValue]);
+	}, [calculate, selectedObjects, setValue, wallet]);
 
 	const toggle = (itemId: string): void => {
 		setSelectedIds((value) => (value.includes(itemId) ? value.filter((id) => id !== itemId) : [...value, itemId]));

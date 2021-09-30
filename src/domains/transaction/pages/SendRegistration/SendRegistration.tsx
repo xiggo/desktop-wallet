@@ -7,14 +7,7 @@ import { StepIndicator } from "app/components/StepIndicator";
 import { StepNavigation } from "app/components/StepNavigation";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import {
-	useActiveProfile,
-	useActiveWallet,
-	useFees,
-	useLedgerModelStatus,
-	usePrevious,
-	useValidation,
-} from "app/hooks";
+import { useActiveProfile, useActiveWallet, useLedgerModelStatus, useValidation } from "app/hooks";
 import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import {
@@ -29,7 +22,7 @@ import {
 	signSecondSignatureRegistration,
 } from "domains/transaction/components/SecondSignatureRegistrationForm";
 import { useFeeConfirmation, useMultiSignatureRegistration, useWalletSignatory } from "domains/transaction/hooks";
-import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
 
@@ -53,7 +46,6 @@ export const SendRegistration = () => {
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
-	const { calculateFeesByType } = useFees(activeProfile);
 	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
 
 	const { isLedgerModelSupported } = useLedgerModelStatus({
@@ -63,36 +55,18 @@ export const SendRegistration = () => {
 
 	const form = useForm({ mode: "onChange" });
 
-	const { formState, register, setValue, trigger, watch, getValues } = form;
+	const { formState, register, setValue, watch, getValues } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const { fee, fees, isLoading } = watch();
-
-	const previousFee = usePrevious(fee);
-
-	useLayoutEffect(() => {
-		if (fee && previousFee === undefined) {
-			trigger("fee");
-		}
-	}, [fee, previousFee, trigger]);
 
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
 	const authenticationStep = stepCount - 1;
 	const isAuthenticationStep = activeTab === authenticationStep;
 
-	const setFeesByRegistrationType = useCallback(
-		async (type: string) => {
-			const fees = await calculateFeesByType(activeWallet.coinId(), activeWallet.networkId(), type);
-
-			setValue("fees", fees);
-			setValue("fee", fees?.avg);
-		},
-		[setValue, activeWallet, calculateFeesByType],
-	);
-
 	useEffect(() => {
-		register("fee", common.fee(activeWallet.balance(), activeWallet.network?.()));
 		register("fees");
+		register("fee", common.fee(activeWallet.balance(), activeWallet.network(), fees));
 		register("inputFeeSettings");
 
 		register("network", { required: true });
@@ -100,7 +74,7 @@ export const SendRegistration = () => {
 
 		register("suppressWarning");
 		register("isLoading");
-	}, [register, activeWallet, common]);
+	}, [register, activeWallet, common, fees]);
 
 	const {
 		dismissFeeWarning,
@@ -123,8 +97,6 @@ export const SendRegistration = () => {
 	}, [activeWallet, env, setValue]);
 
 	useLayoutEffect(() => {
-		setFeesByRegistrationType(registrationType);
-
 		switch (registrationType) {
 			case "secondSignature": {
 				return setRegistrationForm(SecondSignatureRegistrationForm);
@@ -136,7 +108,7 @@ export const SendRegistration = () => {
 				return setRegistrationForm(DelegateRegistrationForm);
 			}
 		}
-	}, [registrationType, setFeesByRegistrationType]);
+	}, [registrationType]);
 
 	// Reset ledger authentication steps after reconnecting supported ledger
 	useEffect(() => {
@@ -293,7 +265,6 @@ export const SendRegistration = () => {
 								<>
 									<registrationForm.component
 										activeTab={activeTab}
-										fees={fees}
 										wallet={activeWallet}
 										profile={activeProfile}
 									/>

@@ -2,7 +2,6 @@ import { Contracts, DTO, Environment } from "@payvo/profiles";
 import { Signatories } from "@payvo/sdk";
 import { TFunction } from "i18next";
 import { useForm } from "react-hook-form";
-import { TransactionFees } from "types";
 
 export type ExtendedSignedTransactionData = DTO.ExtendedSignedTransactionData & {
 	generatedAddress?: string;
@@ -16,7 +15,6 @@ export interface SendRegistrationDetailsOptions {
 
 export interface SendRegistrationComponent {
 	activeTab: number;
-	fees: TransactionFees;
 	wallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }
@@ -26,6 +24,11 @@ export interface SendRegistrationSignOptions {
 	form: ReturnType<typeof useForm>;
 	profile: Contracts.IProfile;
 	signatory: Signatories.Signatory;
+}
+
+export interface FormStepProperties {
+	wallet: Contracts.IReadWriteWallet;
+	profile: Contracts.IProfile;
 }
 
 export interface SendRegistrationForm {

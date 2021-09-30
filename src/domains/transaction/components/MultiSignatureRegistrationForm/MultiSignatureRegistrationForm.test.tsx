@@ -1,13 +1,12 @@
 import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
-import { act as hookAct, renderHook } from "@testing-library/react-hooks";
-import { Form } from "app/components/Form";
-import React from "react";
-import { useForm } from "react-hook-form";
+import { RenderResult } from "@testing-library/react";
+import React, { useEffect } from "react";
+import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import multiSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import { TransactionFees } from "types";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "utils/testing-library";
 
 import { translations as transactionTranslations } from "../../i18n";
 import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
@@ -34,172 +33,149 @@ describe("MultiSignature Registration Form", () => {
 		await syncFees(profile);
 	});
 
-	const Component = ({
-		form,
-		onSubmit = () => void 0,
-		activeTab = 1,
-	}: {
-		form: ReturnType<typeof useForm>;
-		onSubmit?: () => void;
-		activeTab?: number;
-	}) => (
-		<Form context={form} onSubmit={onSubmit}>
-			<MultiSignatureRegistrationForm.component
-				profile={profile}
-				activeTab={activeTab}
-				fees={fees}
-				wallet={wallet}
-			/>
-		</Form>
-	);
+	const renderComponent = (properties?: any) => {
+		let form: UseFormMethods<any> | undefined;
+
+		const activeTab = properties?.activeTab ?? 1;
+		const defaultValues = properties?.defaultValues ?? { fees };
+
+		const Component = () => {
+			form = useForm({
+				defaultValues,
+				mode: "onChange",
+			});
+
+			const { register } = form;
+
+			useEffect(() => {
+				register("fee");
+				register("fees");
+				register("inputFeeSettings");
+				register("minParticipants");
+				register("participants");
+			}, [register]);
+
+			return (
+				<FormProvider {...form}>
+					<MultiSignatureRegistrationForm.component profile={profile} activeTab={activeTab} wallet={wallet} />
+				</FormProvider>
+			);
+		};
+
+		const renderResult: RenderResult = render(<Component />);
+
+		return { ...renderResult, form };
+	};
 
 	it("should render form step", async () => {
-		const { result, waitForNextUpdate } = renderHook(() => useForm());
-
 		fees.isDynamic = false;
-		await hookAct(async () => {
-			const { asFragment, getByTestId, queryAllByRole } = render(<Component form={result.current} />);
-			await waitForNextUpdate();
 
-			await waitFor(() => expect(queryAllByRole("row")).toHaveLength(1));
+		const { asFragment } = renderComponent();
 
-			await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue(String(fees.static)));
+		await waitFor(() => expect(screen.queryAllByRole("row")).toHaveLength(1));
 
-			expect(asFragment()).toMatchSnapshot();
-		});
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue(String(fees.static)));
+
+		expect(asFragment()).toMatchSnapshot();
+
 		fees.isDynamic = true;
 	});
 
 	it("should set fee if dynamic", async () => {
-		const { result, waitForNextUpdate } = renderHook(() => useForm());
-		result.current.register("fee");
-		result.current.register("inputFeeSettings");
+		renderComponent();
 
-		await hookAct(async () => {
-			const { rerender } = render(<Component form={result.current} />);
-			await waitForNextUpdate();
+		fireEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
-			fireEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
-			rerender(<Component form={result.current} />);
-
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
-
-			fireEvent.change(screen.getByTestId("InputCurrency"), {
-				target: {
-					value: "9",
-				},
-			});
-
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("9"));
+		fireEvent.change(screen.getByTestId("InputCurrency"), {
+			target: {
+				value: "9",
+			},
 		});
+
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("9"));
 	});
 
 	it("should fill form", async () => {
-		const { result, waitForNextUpdate } = renderHook(() => useForm());
-		result.current.register("fee");
-		result.current.register("participants");
+		const { form } = renderComponent();
 
-		await hookAct(async () => {
-			const { rerender } = render(<Component form={result.current} />);
-			await waitForNextUpdate();
+		fireEvent.click(screen.getByText(transactionTranslations.FEES.AVERAGE));
 
-			act(() => {
-				fireEvent.click(screen.getByText(transactionTranslations.FEES.AVERAGE));
-			});
-
-			act(() => {
-				fireEvent.input(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), {
-					target: {
-						value: 3,
-					},
-				});
-			});
-
-			await waitForNextUpdate();
-			await waitFor(() => expect(result.current.getValues("fee")).toBe(String(fees.avg)));
-			await waitFor(() => expect(result.current.getValues("minParticipants")).toBe("3"));
-
-			fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-				target: {
-					value: wallet2.address(),
-				},
-			});
-
-			fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
-
-			rerender(<Component form={result.current} />);
-
-			await waitFor(() => expect(result.current.getValues("minParticipants")).toBe("3"));
-			await waitFor(() =>
-				expect(result.current.getValues("participants")).toEqual([
-					{
-						address: wallet.address(),
-						alias: wallet.alias(),
-						publicKey: wallet.publicKey(),
-					},
-					{
-						address: wallet2.address(),
-						alias: wallet2.alias(),
-						publicKey: wallet2.publicKey(),
-					},
-				]),
-			);
+		fireEvent.input(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), {
+			target: {
+				value: 3,
+			},
 		});
+
+		await waitFor(() => expect(form?.getValues("fee")).toBe(String(fees.avg)));
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
+
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
+			target: {
+				value: wallet2.address(),
+			},
+		});
+
+		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
+		await waitFor(() =>
+			expect(form?.getValues("participants")).toEqual([
+				{
+					address: wallet.address(),
+					alias: wallet.alias(),
+					publicKey: wallet.publicKey(),
+				},
+				{
+					address: wallet2.address(),
+					alias: wallet2.alias(),
+					publicKey: wallet2.publicKey(),
+				},
+			]),
+		);
 	});
 
 	it("should show name of wallets in form step", async () => {
-		const { result, waitForNextUpdate } = renderHook(() => useForm());
+		const { form } = renderComponent();
 
-		await hookAct(async () => {
-			result.current.register("fee");
-			result.current.register("participants");
+		await waitFor(() => expect(screen.getAllByTestId("Address__alias")).toHaveLength(1));
 
-			const { rerender, getAllByTestId } = render(<Component form={result.current} />);
-			await waitForNextUpdate();
-
-			await waitFor(() => expect(getAllByTestId("Address__alias")).toHaveLength(1));
-
-			fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-				target: {
-					value: wallet2.address(),
-				},
-			});
-
-			fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
-
-			rerender(<Component form={result.current} />);
-
-			await waitFor(() => expect(result.current.getValues("participants")).toHaveLength(2));
-
-			expect(screen.getByText("Participant #1")).toBeInTheDocument();
-			expect(screen.getAllByTestId("recipient-list__recipient-list-item")[0]).toHaveTextContent("ARK Wallet 1");
-			expect(screen.getByText("Participant #2")).toBeInTheDocument();
-			expect(screen.getAllByTestId("recipient-list__recipient-list-item")[1]).toHaveTextContent("ARK Wallet 2");
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
+			target: {
+				value: wallet2.address(),
+			},
 		});
+
+		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+
+		await waitFor(() => expect(form?.getValues("participants")).toHaveLength(2));
+
+		expect(screen.getByText("Participant #1")).toBeInTheDocument();
+		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[0]).toHaveTextContent("ARK Wallet 1");
+		expect(screen.getByText("Participant #2")).toBeInTheDocument();
+		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[1]).toHaveTextContent("ARK Wallet 2");
 	});
 
 	it("should render review step", () => {
-		const { result } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: fees.avg,
-					minParticipants: 2,
-					participants: [
-						{
-							address: wallet.address(),
-							publicKey: wallet.publicKey()!,
-						},
-						{
-							address: wallet2.address(),
-							publicKey: wallet2.publicKey()!,
-						},
-					],
-				},
-			}),
-		);
-
-		const { asFragment } = render(<Component activeTab={2} form={result.current} />);
+		const { asFragment } = renderComponent({
+			activeTab: 2,
+			defaultValues: {
+				fee: fees.avg,
+				fees,
+				minParticipants: 2,
+				participants: [
+					{
+						address: wallet.address(),
+						publicKey: wallet.publicKey()!,
+					},
+					{
+						address: wallet2.address(),
+						publicKey: wallet2.publicKey()!,
+					},
+				],
+			},
+		});
 
 		expect(screen.getByText(transactionTranslations.MULTISIGNATURE.PARTICIPANTS)).toBeInTheDocument();
 		expect(screen.getByText(transactionTranslations.MULTISIGNATURE.MIN_SIGNATURES)).toBeInTheDocument();
@@ -208,28 +184,26 @@ describe("MultiSignature Registration Form", () => {
 	});
 
 	it("should show name of wallets in review step", () => {
-		const { result } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: fees.avg,
-					minParticipants: 2,
-					participants: [
-						{
-							address: wallet.address(),
-							alias: wallet.alias(),
-							publicKey: wallet.publicKey()!,
-						},
-						{
-							address: wallet2.address(),
-							alias: wallet2.alias(),
-							publicKey: wallet2.publicKey()!,
-						},
-					],
-				},
-			}),
-		);
-
-		render(<Component activeTab={2} form={result.current} />);
+		renderComponent({
+			activeTab: 2,
+			defaultValues: {
+				fee: fees.avg,
+				fees,
+				minParticipants: 2,
+				participants: [
+					{
+						address: wallet.address(),
+						alias: wallet.alias(),
+						publicKey: wallet.publicKey()!,
+					},
+					{
+						address: wallet2.address(),
+						alias: wallet2.alias(),
+						publicKey: wallet2.publicKey()!,
+					},
+				],
+			},
+		});
 
 		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[0]).toHaveTextContent("ARK Wallet 1");
 		expect(screen.getAllByTestId("recipient-list__recipient-list-item")[1]).toHaveTextContent("ARK Wallet 2");
@@ -262,78 +236,48 @@ describe("MultiSignature Registration Form", () => {
 	});
 
 	it("should set final fee based on participants", async () => {
-		const { result, waitForNextUpdate } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					minParticipants: 2,
-					participants: [
-						{
-							address: wallet.address(),
-							alias: wallet.alias(),
-							publicKey: wallet.publicKey(),
-						},
-						{
-							address: wallet2.address(),
-							alias: wallet2.alias(),
-							publicKey: wallet2.publicKey(),
-						},
-					],
-				},
-			}),
-		);
-
-		result.current.register("fee");
-		result.current.register("participants");
-		result.current.register("minParticipants");
-
-		await hookAct(async () => {
-			render(<Component form={result.current} />);
-			await waitForNextUpdate();
-
-			act(() => {
-				fireEvent.click(screen.getByText(transactionTranslations.FEES.AVERAGE));
-			});
-
-			await waitForNextUpdate();
-			await waitFor(() => expect(result.current.getValues("fee")).toBe(fees.static + fees.static * 2));
+		const { form } = renderComponent({
+			defaultValues: {
+				minParticipants: 2,
+				participants: [
+					{
+						address: wallet.address(),
+						alias: wallet.alias(),
+						publicKey: wallet.publicKey(),
+					},
+					{
+						address: wallet2.address(),
+						alias: wallet2.alias(),
+						publicKey: wallet2.publicKey(),
+					},
+				],
+			},
 		});
+
+		await waitFor(() => expect(form?.getValues("participants")).toHaveLength(2));
+
+		await waitFor(() => expect(form?.getValues("fee")).toBe(fees.static + fees.static * 2));
 	});
 
 	it("should limit min required signatures to max participants", async () => {
-		const { result, waitForNextUpdate } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					minParticipants: 3,
-					participants: [
-						{
-							address: wallet.address(),
-							alias: wallet.alias(),
-							publicKey: wallet.publicKey(),
-						},
-						{
-							address: wallet2.address(),
-							alias: wallet2.alias(),
-							publicKey: wallet2.publicKey(),
-						},
-					],
-				},
-			}),
-		);
-
-		result.current.register("fee");
-		result.current.register("participants");
-		result.current.register("minParticipants");
-
-		await hookAct(async () => {
-			render(<Component form={result.current} />);
-			await waitForNextUpdate();
-
-			act(() => {
-				fireEvent.click(screen.getByText(transactionTranslations.FEES.AVERAGE));
-			});
-
-			await waitForNextUpdate();
-			await waitFor(() => expect(result.current.getValues("minParticipants")).toBe(2));
+		const { form } = renderComponent({
+			defaultValues: {
+				minParticipants: 3,
+				participants: [
+					{
+						address: wallet.address(),
+						alias: wallet.alias(),
+						publicKey: wallet.publicKey(),
+					},
+					{
+						address: wallet2.address(),
+						alias: wallet2.alias(),
+						publicKey: wallet2.publicKey(),
+					},
+				],
+			},
 		});
+
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(2));
 	});
 });

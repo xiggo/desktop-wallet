@@ -9,10 +9,10 @@ import React from "react";
 
 import { FormStep, ReviewStep } from ".";
 
-const StepsComponent = ({ activeTab, fees, wallet, profile }: SendRegistrationComponent) => (
+const StepsComponent = ({ activeTab, wallet, profile }: SendRegistrationComponent) => (
 	<Tabs activeId={activeTab}>
 		<TabPanel tabId={1}>
-			<FormStep fees={fees} wallet={wallet} profile={profile} />
+			<FormStep wallet={wallet} profile={profile} />
 		</TabPanel>
 		<TabPanel tabId={2}>
 			<ReviewStep wallet={wallet} />
@@ -21,9 +21,7 @@ const StepsComponent = ({ activeTab, fees, wallet, profile }: SendRegistrationCo
 );
 
 const transactionDetails = ({ transaction, wallet }: SendRegistrationDetailsOptions) => (
-	<>
-		<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
-	</>
+	<TransactionFee currency={wallet.currency()} value={transaction.fee()} paddingPosition="top" />
 );
 
 StepsComponent.displayName = "MultiSignatureRegistrationForm";

@@ -63,7 +63,7 @@ export const SendVote = () => {
 		register("network", sendVote.network());
 		register("senderAddress", sendVote.senderAddress());
 		register("fees");
-		register("fee", common.fee(activeWallet?.balance?.(), activeWallet?.network?.()));
+		register("fee", common.fee(activeWallet?.balance(), activeWallet?.network(), fees));
 		register("inputFeeSettings");
 
 		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
@@ -77,7 +77,7 @@ export const SendVote = () => {
 				break;
 			}
 		}
-	}, [activeWallet, networks, register, setValue, common, getValues, sendVote]);
+	}, [activeWallet, networks, register, setValue, common, getValues, sendVote, fees]);
 
 	const {
 		dismissFeeWarning,

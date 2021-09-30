@@ -6,15 +6,18 @@ import {
 	TransactionNetwork,
 	TransactionSender,
 } from "domains/transaction/components/TransactionDetail";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();
 
-	const { getValues, unregister } = useFormContext();
-	const { fee, username } = getValues();
+	const { getValues, unregister, watch } = useFormContext();
+	const username = getValues("username");
+
+	const [defaultFee] = useState(() => watch("fee"));
+	const fee = getValues("fee") ?? defaultFee;
 
 	useEffect(() => {
 		unregister("mnemonic");

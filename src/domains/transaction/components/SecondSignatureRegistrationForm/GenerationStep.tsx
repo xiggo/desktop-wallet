@@ -4,45 +4,31 @@ import { Alert } from "app/components/Alert";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { useValidation } from "app/hooks";
+import { FeeField } from "domains/transaction/components/FeeField";
 import { TransactionSender } from "domains/transaction/components/TransactionDetail";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { TransactionFees } from "types";
 
-import { InputFee } from "../InputFee";
+import { FormStepProperties } from "../../pages/SendRegistration/SendRegistration.models";
 
-export const GenerationStep = ({
-	fees,
-	wallet,
-	step = 0.001,
-	profile,
-}: {
-	fees: TransactionFees;
-	wallet: Contracts.IReadWriteWallet;
-	step?: number;
-	profile: Contracts.IProfile;
-}) => {
+export const GenerationStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { common } = useValidation();
-	const { getValues, setValue, register, watch } = useFormContext();
+	const { setValue, register, watch } = useFormContext();
 
-	// getValues does not get the value of `defaultValues` on first render
-	const [defaultFee] = useState(() => watch("fee"));
-	const fee = getValues("fee") || defaultFee;
+	const secondMnemonic = watch("secondMnemonic");
 
-	const inputFeeSettings = getValues("inputFeeSettings") ?? {};
+	const network = useMemo(() => wallet.network(), [wallet]);
+	const feeTransactionData = useMemo(() => ({ mnemonic: secondMnemonic }), [secondMnemonic]);
 
 	useEffect(() => {
-		register("fee", common.fee(wallet.balance(), wallet.network()));
 		register("secondMnemonic");
 		register("wallet");
-	}, [register, common, fees, wallet]);
+	}, [register, common, wallet]);
 
 	useEffect(() => {
-		const secondMnemonic = getValues("secondMnemonic");
-
 		if (secondMnemonic) {
 			return;
 		}
@@ -54,7 +40,7 @@ export const GenerationStep = ({
 
 		setValue("secondMnemonic", newMnemonic);
 		setValue("wallet", wallet);
-	}, [profile, getValues, setValue, wallet]);
+	}, [profile, setValue, wallet, secondMnemonic]);
 
 	return (
 		<section data-testid="SecondSignatureRegistrationForm__generation-step">
@@ -70,36 +56,7 @@ export const GenerationStep = ({
 			<div className="pt-6">
 				<FormField name="fee">
 					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<InputFee
-						min={fees?.min}
-						avg={fees?.avg}
-						max={fees?.max}
-						loading={!fees}
-						value={fee}
-						step={step}
-						disabled={wallet.network().feeType() !== "dynamic"}
-						network={wallet.network()}
-						profile={profile}
-						onChange={(value) => {
-							setValue("fee", value, { shouldDirty: true, shouldValidate: true });
-						}}
-						viewType={inputFeeSettings.viewType}
-						onChangeViewType={(viewType) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, viewType },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
-						simpleValue={inputFeeSettings.simpleValue}
-						onChangeSimpleValue={(simpleValue) => {
-							setValue(
-								"inputFeeSettings",
-								{ ...inputFeeSettings, simpleValue },
-								{ shouldDirty: true, shouldValidate: true },
-							);
-						}}
-					/>
+					<FeeField type="secondSignature" data={feeTransactionData} network={network} profile={profile} />
 				</FormField>
 			</div>
 		</section>

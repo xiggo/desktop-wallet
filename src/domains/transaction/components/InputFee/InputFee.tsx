@@ -4,7 +4,6 @@ import { Switch } from "app/components/Switch";
 import { useExchangeRate } from "app/hooks/use-exchange-rate";
 import React, { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { assertString } from "utils/assertions";
 
 import { InputFeeAdvanced } from "./blocks/InputFeeAdvanced";
 import { InputFeeSimple } from "./blocks/InputFeeSimple";
@@ -86,8 +85,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			}
 
 			if (newValue === InputFeeViewType.Advanced) {
-				assertString(advancedValue);
-				onChange(advancedValue);
+				onChange(`${advancedValue}`);
 			}
 		};
 
@@ -95,7 +93,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 			properties.onChangeSimpleValue?.(newValue);
 
 			const feeValue = options[newValue].displayValue;
-			onChange(feeValue.toString());
+			onChange(feeValue?.toString());
 		};
 
 		const onChangeAdvancedValue = (newValue: string) => {
@@ -106,7 +104,7 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		const renderAdvanced = () => (
 			<InputFeeAdvanced
 				convert={convert}
-				disabled={disabled}
+				disabled={disabled || loading}
 				exchangeTicker={exchangeTicker!}
 				onChange={onChangeAdvancedValue}
 				showConvertedValue={showConvertedValues}

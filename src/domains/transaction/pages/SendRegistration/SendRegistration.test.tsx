@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { Observer } from "@ledgerhq/hw-transport";
 import { BIP39 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
 import userEvent from "@testing-library/user-event";
@@ -385,8 +386,6 @@ describe("Registration", () => {
 		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
 
-		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
-
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
 				value: wallet2.address(),
@@ -460,8 +459,6 @@ describe("Registration", () => {
 		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
 
-		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
-
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
 				value: wallet2.address(),
@@ -533,8 +530,6 @@ describe("Registration", () => {
 		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
 
-		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
-
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
 				value: wallet2.address(),
@@ -603,8 +598,6 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(getByTestId("Registration__form")).toBeTruthy());
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Multisignature Registration"));
-
-		await waitFor(() => expect(getByTestId("InputCurrency")).not.toHaveValue("0"));
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {

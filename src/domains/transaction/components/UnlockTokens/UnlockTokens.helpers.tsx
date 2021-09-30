@@ -4,7 +4,7 @@ import { TableColumn } from "app/components/Table/TableColumn.models";
 import { Tooltip } from "app/components/Tooltip";
 import { useScheduler } from "app/hooks/use-scheduler";
 import { toasts } from "app/services";
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { UnlockTokensFetchError } from "./blocks/UnlockTokensFetchError";
@@ -13,7 +13,6 @@ import {
 	UnlockableBalance,
 	UnlockableBalanceSkeleton,
 	UseColumnsHook,
-	UseFeesHook,
 	UseUnlockableBalancesHook,
 } from "./UnlockTokens.contracts";
 
@@ -104,33 +103,4 @@ const useColumns: UseColumnsHook = ({ canSelectAll, isAllSelected, onToggleAll }
 	return [columnAmount, columnTime, columnStatus];
 };
 
-const useFees: UseFeesHook = ({ profile, coin, network }) => {
-	const walletAndSignatory = useMemo(async () => {
-		const generated = await profile.walletFactory().generate({ coin, network });
-		const signatory = await generated.wallet.signatory().mnemonic(generated.mnemonic);
-
-		return { blankWallet: generated.wallet, signatory };
-	}, [profile, coin, network]);
-
-	const calculateFee = useCallback(
-		async (objects: UnlockableBalance[]) => {
-			if (objects.length === 0) {
-				return 0;
-			}
-
-			const { blankWallet, signatory } = await walletAndSignatory;
-
-			const transaction = await blankWallet.coin().transaction().unlockToken({
-				data: { objects },
-				signatory,
-			});
-
-			return transaction.fee().toHuman();
-		},
-		[walletAndSignatory],
-	);
-
-	return { calculateFee };
-};
-
-export { useColumns, useFees, useUnlockableBalances };
+export { useColumns, useUnlockableBalances };

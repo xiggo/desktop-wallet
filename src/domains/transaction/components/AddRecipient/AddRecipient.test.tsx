@@ -1,38 +1,50 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { act } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
+import { buildTranslations } from "app/i18n/helpers";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "utils/testing-library";
+import {
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	MNEMONICS,
+	render,
+	renderWithRouter,
+	screen,
+	waitFor,
+	within,
+} from "utils/testing-library";
 
-import { translations as transactionTranslations } from "../../i18n";
 import { AddRecipient } from "./AddRecipient";
+
+const translations = buildTranslations();
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let network: Networks.Network;
 
 const renderWithFormProvider = async (children: any, defaultValues?: any) => {
-	let rendered: any;
-
-	const { result: form, waitForNextUpdate } = renderHook(() =>
-		useForm({
+	const Wrapper = () => {
+		const form = useForm({
 			defaultValues: {
-				...{ fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+				...{
+					fee: 0,
+					network,
+					senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				},
 				...defaultValues,
 			},
 			mode: "onChange",
 			shouldUnregister: false,
-		}),
-	);
+		});
 
-	await act(async () => {
-		rendered = render(<FormProvider {...form.current}>{children}</FormProvider>);
-	});
+		return <FormProvider {...form}>{children}</FormProvider>;
+	};
 
-	return { ...rendered, form, waitForNextUpdate };
+	return renderWithRouter(<Wrapper />);
 };
 
 describe("AddRecipient", () => {
@@ -106,27 +118,28 @@ describe("AddRecipient", () => {
 				} as any),
 		);
 
-		const { getByTestId, form } = await renderWithFormProvider(
+		const { getByTestId } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" onChange={onChange} />,
 		);
 
-		await act(async () => {
-			fireEvent.input(getByTestId("AddRecipient__amount"), {
-				target: {
-					value: "1",
-				},
-			});
-
-			fireEvent.input(getByTestId("SelectDropdown__input"), {
-				target: {
-					value: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",
-				},
-			});
+		fireEvent.input(getByTestId("AddRecipient__amount"), {
+			target: {
+				value: "1",
+			},
 		});
 
-		await waitFor(() => expect(form.current.getValues("amount")).toEqual("1"));
+		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		expect(getByTestId("SelectDropdown__input")).toHaveValue("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT");
+		fireEvent.input(getByTestId("SelectDropdown__input"), {
+			target: {
+				value: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",
+			},
+		});
+
+		await waitFor(() =>
+			expect(getByTestId("SelectDropdown__input")).toHaveValue("bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"),
+		);
+
 		expect(onChange).toHaveBeenCalledWith([
 			{
 				address: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",
@@ -165,16 +178,13 @@ describe("AddRecipient", () => {
 	});
 
 	it("should set available amount", async () => {
-		const { getByTestId, container, form } = await renderWithFormProvider(
+		const { getByTestId, container } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
-		const sendAll = getByTestId("AddRecipient__send-all");
-		await act(async () => {
-			fireEvent.click(sendAll);
-		});
+		fireEvent.click(getByTestId("AddRecipient__send-all"));
 
-		await waitFor(() => expect(form.current.getValues("amount")).toEqual(wallet.balance()));
+		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue(`${wallet.balance()}`));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -193,16 +203,13 @@ describe("AddRecipient", () => {
 
 		emptyProfile.wallets().push(emptyWallet);
 
-		const { getByTestId, container, form } = await renderWithFormProvider(
+		const { getByTestId, container } = await renderWithFormProvider(
 			<AddRecipient profile={emptyProfile} wallet={emptyWallet} assetSymbol="ARK" />,
 		);
 
-		const sendAll = getByTestId("AddRecipient__send-all");
-		await act(async () => {
-			fireEvent.click(sendAll);
-		});
+		fireEvent.click(getByTestId("AddRecipient__send-all"));
 
-		await waitFor(() => expect(form.current.getValues("amount")).toEqual(0));
+		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue(""));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -212,8 +219,8 @@ describe("AddRecipient", () => {
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
-		const singleButton = getByText(transactionTranslations.SINGLE);
-		const multipleButton = getByText(transactionTranslations.MULTIPLE);
+		const singleButton = getByText(translations.TRANSACTION.SINGLE);
+		const multipleButton = getByText(translations.TRANSACTION.MULTIPLE);
 
 		const recipientLabel = "Recipient #1";
 
@@ -374,7 +381,7 @@ describe("AddRecipient", () => {
 
 		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("");
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
+		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -403,7 +410,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for low balance", async () => {
-		const { getByTestId, form } = await renderWithFormProvider(
+		const { getByTestId } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -422,6 +429,8 @@ describe("AddRecipient", () => {
 		await act(async () => {
 			fireEvent.click(firstAddress);
 		});
+
+		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
 		await act(async () => {
 			fireEvent.change(getByTestId("AddRecipient__amount"), {
@@ -431,13 +440,13 @@ describe("AddRecipient", () => {
 			});
 		});
 
-		await waitFor(() => expect(form.current.formState.errors.amount).toBeDefined());
+		await waitFor(() => expect(getByTestId("Input__error")).toBeInTheDocument());
 	});
 
 	it("should show error for zero balance", async () => {
 		const mockWalletBalance = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { getByTestId, form } = await renderWithFormProvider(
+		const { getByTestId } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -456,6 +465,8 @@ describe("AddRecipient", () => {
 		await act(async () => {
 			fireEvent.click(firstAddress);
 		});
+
+		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
 		await act(async () => {
 			fireEvent.change(getByTestId("AddRecipient__amount"), {
@@ -465,40 +476,37 @@ describe("AddRecipient", () => {
 			});
 		});
 
-		await waitFor(() => expect(form.current.formState.errors.amount).toBeDefined());
+		await waitFor(() => expect(getByTestId("Input__error")).toBeInTheDocument());
 
 		mockWalletBalance.mockRestore();
 	});
 
 	it("should show error for invalid address", async () => {
-		const { getByTestId, form } = await renderWithFormProvider(
+		const { getByTestId, getAllByTestId } = await renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
+
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
+
+		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
+
+		fireEvent.change(getByTestId("SelectDropdown__input"), {
+			target: {
+				value: "abc",
+			},
 		});
 
-		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
-		});
-
-		const firstAddress = getByTestId("RecipientListItem__select-button-0");
-		await act(async () => {
-			fireEvent.click(firstAddress);
-		});
-
-		await act(async () => {
-			fireEvent.change(getByTestId("SelectDropdown__input"), {
-				target: {
-					value: "abc",
-				},
-			});
-		});
-
-		await waitFor(() => expect(form.current.formState.errors.recipientAddress).toBeDefined());
+		await waitFor(() =>
+			expect(getAllByTestId("Input__error")[0]).toHaveAttribute(
+				"data-errortext",
+				translations.COMMON.VALIDATION.RECIPIENT_INVALID,
+			),
+		);
 	});
 
 	it("should remove recipient in multiple tab", async () => {
@@ -623,7 +631,7 @@ describe("AddRecipient", () => {
 		render(<Component />);
 
 		act(() => {
-			fireEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
+			fireEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 		});
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
@@ -645,7 +653,7 @@ describe("AddRecipient", () => {
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
 
 		act(() => {
-			fireEvent.click(screen.getByText(transactionTranslations.SINGLE));
+			fireEvent.click(screen.getByText(translations.TRANSACTION.SINGLE));
 		});
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(values.amount.toString()));
@@ -669,7 +677,7 @@ describe("AddRecipient", () => {
 		);
 
 		await act(async () => {
-			userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
+			userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 		});
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));

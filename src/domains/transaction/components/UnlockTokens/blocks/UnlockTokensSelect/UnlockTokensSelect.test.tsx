@@ -4,6 +4,7 @@ import { Contracts } from "@payvo/profiles";
 import { LSK } from "@payvo/sdk-lsk";
 import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import * as useFeesHook from "app/hooks/use-fees";
 import { buildTranslations } from "app/i18n/helpers";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -18,6 +19,8 @@ const translations = buildTranslations();
 describe("UnlockTokensSelect", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
+
+	const fee = 1.1;
 
 	const items: UnlockableBalance[] = [
 		{
@@ -70,18 +73,9 @@ describe("UnlockTokensSelect", () => {
 
 		profile.wallets().push(wallet);
 
-		// wallet used for fee calculation
-
-		const feeWallet = await profile.walletFactory().generate({
-			coin: wallet.coinId(),
-			network: wallet.networkId(),
+		jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve({ avg: fee, max: fee, min: fee, static: fee }),
 		});
-
-		jest.spyOn(profile.walletFactory(), "generate").mockResolvedValue(feeWallet);
-
-		jest.spyOn(feeWallet.wallet.coin().transaction(), "unlockToken").mockResolvedValue({
-			fee: () => BigNumber.make(1.1),
-		} as any);
 	});
 
 	const Wrapper = ({ children }: any) => {

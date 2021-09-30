@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@payvo/sdk";
+import { LSK } from "@payvo/sdk-lsk";
 import { renderHook } from "@testing-library/react-hooks";
 import { useTranslation } from "react-i18next";
 import { env } from "utils/testing-library";
@@ -50,5 +51,20 @@ describe("Common", () => {
 		const commonValidation = common(t).fee(1, network);
 
 		expect(commonValidation.validate.valid("-1")).toBe(t("TRANSACTION.VALIDATION.FEE_NEGATIVE"));
+	});
+
+	it("should validate minimum fee on network with size feeType", () => {
+		const sizeFeeNetwork = new Networks.Network(LSK.manifest, LSK.manifest.networks["lsk.testnet"]);
+
+		const commonValidation = common(t).fee(100, sizeFeeNetwork, {
+			avg: 1,
+			max: 1,
+			min: 1,
+			static: 1,
+		});
+
+		expect(commonValidation.validate.valid("0.5")).toBe(
+			t("COMMON.VALIDATION.MIN").replace("{{field}}", t("COMMON.FEE")).replace("{{min}}", 1),
+		);
 	});
 });

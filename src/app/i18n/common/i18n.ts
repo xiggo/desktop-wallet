@@ -316,6 +316,7 @@ export const translations: { [key: string]: any } = {
 		ILLEGAL_CHARACTERS: "The following characters are not allowed: {{- characters}}",
 		IS_REQUIRED: "is required",
 		MAX_LENGTH: "{{field}} should have at most {{maxLength}} characters",
+		MIN: "{{field}} should be least {{min}}",
 		MIN_LENGTH: "{{field}} should have at least {{minLength}} characters",
 		MIN_RECIPIENTS: "At least one recipient is required",
 		OPTIONAL: "This field is optional",
