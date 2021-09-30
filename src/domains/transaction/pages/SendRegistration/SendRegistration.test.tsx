@@ -767,6 +767,63 @@ describe("Registration", () => {
 		secondPublicKeyMock.mockRestore();
 	});
 
+	it("should prevent going to the next step with enter on the success step", async () => {
+		await renderPage(wallet);
+
+		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")).toBeInTheDocument());
+
+		fireEvent.change(screen.getByTestId("Input__username"), {
+			target: {
+				value: "username",
+			},
+		});
+		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
+
+		userEvent.keyboard("{enter}");
+		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__review-step")).toBeInTheDocument());
+
+		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+
+		userEvent.keyboard("{enter}");
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument());
+
+		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
+
+		fireEvent.input(mnemonic, { target: { value: passphrase } });
+		await waitFor(() => expect(mnemonic).toHaveValue(passphrase));
+
+		userEvent.keyboard("{enter}");
+
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument());
+
+		const signMock = jest
+			.spyOn(wallet.transaction(), "signDelegateRegistration")
+			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
+		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [DelegateRegistrationFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+		const transactionMock = createDelegateRegistrationMock(wallet);
+
+		fireEvent.submit(screen.getByTestId("AuthenticationStep"));
+
+		await waitFor(() => expect(signMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+		await waitFor(() => expect(transactionMock).toHaveBeenCalled());
+
+		signMock.mockRestore();
+		broadcastMock.mockRestore();
+		transactionMock.mockRestore();
+
+		// Step 4 - success screen
+		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument());
+
+		userEvent.keyboard("{enter}");
+
+		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument());
+	});
+
 	it("should go back to wallet details", async () => {
 		const { getByTestId } = await renderPage(wallet);
 

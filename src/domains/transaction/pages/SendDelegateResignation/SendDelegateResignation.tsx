@@ -66,9 +66,11 @@ export const SendDelegateResignation = () => {
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
-		if (!isButton && isValid && activeTab !== Step.AuthenticationStep) {
-			return handleNext();
+		if (isButton || !isValid || activeTab >= Step.AuthenticationStep) {
+			return;
 		}
+
+		return handleNext();
 	});
 
 	const handleBack = () => {

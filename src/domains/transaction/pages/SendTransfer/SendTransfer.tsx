@@ -114,9 +114,11 @@ export const SendTransfer = () => {
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
-		if (!isButton && !isNextDisabled && activeTab !== Step.AuthenticationStep) {
-			return handleNext();
+		if (isButton || isNextDisabled || activeTab >= Step.AuthenticationStep) {
+			return;
 		}
+
+		return handleNext();
 	});
 
 	useEffect(() => {

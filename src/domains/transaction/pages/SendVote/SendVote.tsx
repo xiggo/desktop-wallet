@@ -116,9 +116,11 @@ export const SendVote = () => {
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
-		if (!isButton && !isNextDisabled && activeTab !== Step.AuthenticationStep) {
-			return handleNext();
+		if (isButton || isNextDisabled || activeTab >= Step.AuthenticationStep) {
+			return;
 		}
+
+		return handleNext();
 	});
 
 	const handleBack = () => {

@@ -77,6 +77,8 @@ export const SendRegistration = () => {
 	}, [fee, previousFee, trigger]);
 
 	const stepCount = registrationForm ? registrationForm.tabSteps + 2 : 1;
+	const authenticationStep = stepCount - 1;
+	const isAuthenticationStep = activeTab === authenticationStep;
 
 	const setFeesByRegistrationType = useCallback(
 		async (type: string) => {
@@ -138,7 +140,6 @@ export const SendRegistration = () => {
 
 	// Reset ledger authentication steps after reconnecting supported ledger
 	useEffect(() => {
-		const isAuthenticationStep = activeTab === stepCount - 1;
 		if (registrationType !== "multiSignature") {
 			return;
 		}
@@ -151,10 +152,11 @@ export const SendRegistration = () => {
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
-		/* istanbul ignore else */
-		if (!isButton && !isNextDisabled && activeTab !== stepCount - 1) {
-			return handleNext();
+		if (isButton || isNextDisabled || activeTab >= authenticationStep) {
+			return;
 		}
+
+		return handleNext();
 	});
 
 	const handleSubmit = async () => {
@@ -244,22 +246,22 @@ export const SendRegistration = () => {
 	const handleNext = (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
-		const newIndex = activeTab + 1;
-		const isAuthenticationStep = newIndex === stepCount - 1;
+		const nextStep = activeTab + 1;
+		const isNextStepAuthentication = nextStep === authenticationStep;
 
-		if (newIndex === stepCount - 1 && requireFeeConfirmation && !suppressWarning) {
+		if (isNextStepAuthentication && requireFeeConfirmation && !suppressWarning) {
 			return setShowFeeWarning(true);
 		}
 
 		// Skip authentication step
-		if (isAuthenticationStep && activeWallet.isLedger() && isLedgerModelSupported) {
+		if (isNextStepAuthentication && activeWallet.isLedger() && isLedgerModelSupported) {
 			handleSubmit();
 		}
 
-		setActiveTab(newIndex);
+		setActiveTab(nextStep);
 	};
 
-	const hideStepNavigation = activeTab === 10 || (activeTab === stepCount - 1 && activeWallet.isLedger());
+	const hideStepNavigation = activeTab === 10 || (isAuthenticationStep && activeWallet.isLedger());
 
 	const isNextDisabled = !isDirty ? true : !isValid || !!isLoading;
 
@@ -296,7 +298,7 @@ export const SendRegistration = () => {
 										profile={activeProfile}
 									/>
 
-									<TabPanel tabId={stepCount - 1}>
+									<TabPanel tabId={authenticationStep}>
 										<AuthenticationStep
 											wallet={activeWallet}
 											ledgerIsAwaitingDevice={!hasDeviceAvailable}
