@@ -41,7 +41,11 @@ export const FormStep = ({
 		if (minParticipants === undefined) {
 			setValue("minParticipants", 2, { shouldDirty: true, shouldValidate: true });
 		}
-	}, [setValue, minParticipants]);
+
+		if (minParticipants > participants?.length) {
+			setValue("minParticipants", participants.length, { shouldDirty: true, shouldValidate: true });
+		}
+	}, [setValue, minParticipants, participants]);
 
 	useEffect(() => {
 		const updateFee = async () => {

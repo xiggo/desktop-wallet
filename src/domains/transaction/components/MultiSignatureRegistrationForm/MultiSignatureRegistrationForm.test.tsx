@@ -298,4 +298,42 @@ describe("MultiSignature Registration Form", () => {
 			await waitFor(() => expect(result.current.getValues("fee")).toBe(fees.static + fees.static * 2));
 		});
 	});
+
+	it("should limit min required signatures to max participants", async () => {
+		const { result, waitForNextUpdate } = renderHook(() =>
+			useForm({
+				defaultValues: {
+					minParticipants: 3,
+					participants: [
+						{
+							address: wallet.address(),
+							alias: wallet.alias(),
+							publicKey: wallet.publicKey(),
+						},
+						{
+							address: wallet2.address(),
+							alias: wallet2.alias(),
+							publicKey: wallet2.publicKey(),
+						},
+					],
+				},
+			}),
+		);
+
+		result.current.register("fee");
+		result.current.register("participants");
+		result.current.register("minParticipants");
+
+		await hookAct(async () => {
+			render(<Component form={result.current} />);
+			await waitForNextUpdate();
+
+			act(() => {
+				fireEvent.click(screen.getByText(transactionTranslations.FEES.AVERAGE));
+			});
+
+			await waitForNextUpdate();
+			await waitFor(() => expect(result.current.getValues("minParticipants")).toBe(2));
+		});
+	});
 });
