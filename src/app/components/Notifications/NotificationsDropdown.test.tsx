@@ -3,7 +3,16 @@ import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, render, renderWithRouter, waitFor } from "utils/testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	render,
+	renderWithRouter,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { NotificationsDropdown } from ".";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
@@ -39,16 +48,14 @@ describe("Notifications", () => {
 	});
 
 	it("should render with transactions and plugins", async () => {
-		const { container, getAllByRole, getAllByTestId, queryAllByTestId } = render(
-			<NotificationsDropdown profile={profile} />,
-		);
+		const { container } = render(<NotificationsDropdown profile={profile} />);
 
 		act(() => {
-			fireEvent.click(getAllByRole("button")[0]);
+			fireEvent.click(screen.getAllByRole("button")[0]);
 		});
 
-		await waitFor(() => expect(getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -56,7 +63,7 @@ describe("Notifications", () => {
 	it("should open and close transaction details modal", async () => {
 		await profile.sync();
 
-		const { container, getAllByRole, getByTestId, queryAllByTestId, getAllByTestId } = renderWithRouter(
+		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<NotificationsDropdown profile={profile} />
 			</Route>,
@@ -67,31 +74,31 @@ describe("Notifications", () => {
 		);
 
 		act(() => {
-			fireEvent.click(getAllByRole("button")[0]);
+			fireEvent.click(screen.getAllByRole("button")[0]);
 		});
 
-		await waitFor(() => expect(getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
 		act(() => {
-			fireEvent.click(getAllByTestId("TransactionRowMode")[0]);
+			fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeInTheDocument());
+
+		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 
 		expect(container).toMatchSnapshot();
 
 		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
+			fireEvent.click(screen.getByTestId("modal__close-btn"));
 		});
 
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/^Unable to find an element by/));
-
-		expect(container).toMatchSnapshot();
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 	});
 
 	it("should open and close wallet update notification modal", async () => {
-		const { container, getAllByRole, getByTestId, queryAllByTestId, getAllByTestId } = renderWithRouter(
+		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<NotificationsDropdown profile={profile} />
 			</Route>,
@@ -102,31 +109,31 @@ describe("Notifications", () => {
 		);
 
 		act(() => {
-			fireEvent.click(getAllByRole("button")[0]);
+			fireEvent.click(screen.getAllByRole("button")[0]);
 		});
 
-		await waitFor(() => expect(getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
 		act(() => {
-			fireEvent.click(getAllByTestId("NotificationItem__action")[0]);
+			fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 		});
 
-		await waitFor(() => expect(getByTestId("WalletUpdate__first-step")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("WalletUpdate__first-step")).toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 
 		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
+			fireEvent.click(screen.getByTestId("modal__close-btn"));
 		});
 
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/^Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should open and cancel wallet update notification modal", async () => {
-		const { container, getAllByRole, getByTestId, queryAllByTestId, getAllByTestId } = renderWithRouter(
+		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<NotificationsDropdown profile={profile} />
 			</Route>,
@@ -137,25 +144,25 @@ describe("Notifications", () => {
 		);
 
 		act(() => {
-			fireEvent.click(getAllByRole("button")[0]);
+			fireEvent.click(screen.getAllByRole("button")[0]);
 		});
 
-		await waitFor(() => expect(getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
 		act(() => {
-			fireEvent.click(getAllByTestId("NotificationItem__action")[0]);
+			fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 		});
 
-		await waitFor(() => expect(getByTestId("WalletUpdate__first-step")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("WalletUpdate__first-step")).toBeTruthy());
 
 		expect(container).toMatchSnapshot();
 
 		act(() => {
-			fireEvent.click(getByTestId("WalletUpdate__cancel-button"));
+			fireEvent.click(screen.getByTestId("WalletUpdate__cancel-button"));
 		});
 
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/^Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 	});

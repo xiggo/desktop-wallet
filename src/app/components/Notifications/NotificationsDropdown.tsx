@@ -9,7 +9,9 @@ import { WalletUpdate } from "domains/wallet/components/WalletUpdate";
 import React, { useState } from "react";
 
 export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile }) => {
-	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData>();
+	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
+		undefined,
+	);
 	const [isWalletUpdateOpen, setIsWalletUpdateOpen] = useState<boolean>();
 	const [walletUpdateVersion, setWalletUpdateVersion] = useState<string>();
 
@@ -57,6 +59,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 				<TransactionDetailModal
 					isOpen={!!transactionModalItem}
 					transactionItem={transactionModalItem}
+					profile={profile}
 					onClose={() => setTransactionModalItem(undefined)}
 				/>
 			)}
