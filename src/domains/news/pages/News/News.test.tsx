@@ -6,6 +6,7 @@ import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
+import filteredFixture from "tests/fixtures/news/filtered.json";
 import page1Fixture from "tests/fixtures/news/page-1.json";
 import page2Fixture from "tests/fixtures/news/page-2.json";
 import { fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
@@ -53,7 +54,7 @@ describe("News", () => {
 			})
 			.get("/api")
 			.query((parameters) => !!parameters.categories)
-			.reply(200, () => require("tests/fixtures/news/filtered.json"))
+			.reply(200, filteredFixture)
 			.get("/api?coins=ARK&query=NoResult&page=1")
 			.reply(200, require("tests/fixtures/news/empty-response.json"))
 			.persist();
@@ -82,7 +83,7 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
-		expect(screen.getByTestId("NewsCard__content")).toHaveTextContent(page1Fixture.data[0].text);
+		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page1Fixture.data[0].text);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -109,9 +110,13 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
+		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page1Fixture.data[0].text);
+
 		fireEvent.click(screen.getByTestId("Pagination__next"));
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
+
+		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page2Fixture.data[0].text);
 
 		fireEvent.click(screen.getByTestId("Pagination__previous"));
 
@@ -140,6 +145,9 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
+		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page1Fixture.data[0].text);
+		expect(screen.getByTestId("NewsCard")).not.toHaveTextContent("Hacking");
+
 		fireEvent.change(screen.getByTestId("NewsOptions__search"), {
 			target: {
 				value: "Hacking",
@@ -154,6 +162,8 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
+		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(filteredFixture.data[0].text);
+
 		fireEvent.change(screen.getByTestId("NewsOptions__search"), {
 			target: {
 				value: "",
@@ -166,6 +176,7 @@ describe("News", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
+		expect(screen.getAllByTestId("NewsCard__content")[0]).toHaveTextContent(page1Fixture.data[0].text);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
