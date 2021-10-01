@@ -36,10 +36,14 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 		for (const transaction of [...pendingSigned, ...pendingTransfers]) {
 			let existingTransaction;
 
-			// Check if transaction still exists in wallet's interal repo
 			try {
 				existingTransaction = wallet.transaction().transaction(transaction.id());
 			} catch {
+				// Transaction not found.
+			}
+
+			// Check if transaction still exists in wallet's internal state.
+			if (!existingTransaction) {
 				continue;
 			}
 
