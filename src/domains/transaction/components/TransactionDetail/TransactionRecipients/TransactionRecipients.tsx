@@ -37,7 +37,7 @@ export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = 
 				data-testid="TransactionRecipients"
 				label={t("TRANSACTION.RECIPIENT")}
 				extra={
-					<div className="flex items-center -space-x-2">
+					<div className="flex items-center -space-x-1">
 						{isDelegate && (
 							<Circle
 								className="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600"

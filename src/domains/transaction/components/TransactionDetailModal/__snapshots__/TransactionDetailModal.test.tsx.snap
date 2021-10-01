@@ -163,7 +163,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -460,7 +460,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -757,7 +757,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
@@ -1067,7 +1067,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
@@ -1334,7 +1334,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1414,7 +1414,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1761,7 +1761,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -2218,7 +2218,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
@@ -2559,7 +2559,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -2605,7 +2605,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -2951,7 +2951,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
@@ -3359,7 +3359,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
@@ -3767,7 +3767,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"

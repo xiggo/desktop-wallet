@@ -59,7 +59,7 @@ const SearchWalletListItem = ({
 	return (
 		<TableRow>
 			<TableCell variant="start" innerClassName="space-x-4" className="w-full">
-				<div className="flex-shrink-0 -space-x-2">
+				<div className="flex-shrink-0 -space-x-1">
 					{showNetwork && <NetworkIcon size="lg" network={network} />}
 					<Avatar size="lg" address={address} />
 				</div>

@@ -96,7 +96,7 @@ exports[`ReceiveFunds should not render qrcode without an address 1`] = `
                   </div>
                 </div>
                 <div
-                  class="-space-x-2 whitespace-nowrap"
+                  class="-space-x-1 whitespace-nowrap"
                 >
                   <div
                     aria-label="ARK Devnet"
@@ -291,7 +291,7 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                   </div>
                 </div>
                 <div
-                  class="-space-x-2 whitespace-nowrap"
+                  class="-space-x-1 whitespace-nowrap"
                 >
                   <div
                     class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -444,7 +444,7 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                   </div>
                 </div>
                 <div
-                  class="-space-x-2 whitespace-nowrap"
+                  class="-space-x-1 whitespace-nowrap"
                 >
                   <div
                     aria-label="ARK Devnet"

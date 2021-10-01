@@ -61,7 +61,7 @@ const ReceiveFunds = ({ address, name, network, isOpen, onClose }: ReceiveFundsP
 					label={t("COMMON.ADDRESS")}
 					borderPosition="bottom"
 					extra={
-						<div className="-space-x-2 whitespace-nowrap">
+						<div className="-space-x-1 whitespace-nowrap">
 							{!name && <NetworkIcon size="lg" network={network} />}
 							<Avatar address={address} size="lg" />
 						</div>

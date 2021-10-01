@@ -167,7 +167,7 @@ exports[`UnlockTokenDetail should render a modal 1`] = `
                 </div>
               </div>
               <div
-                class="flex items-center -space-x-2"
+                class="flex items-center -space-x-1"
               >
                 <div
                   class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"

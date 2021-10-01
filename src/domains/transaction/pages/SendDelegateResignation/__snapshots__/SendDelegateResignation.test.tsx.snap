@@ -406,7 +406,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1007,7 +1007,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1589,7 +1589,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -3600,7 +3600,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -4181,7 +4181,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -4762,7 +4762,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"

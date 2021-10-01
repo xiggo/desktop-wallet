@@ -304,7 +304,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -350,7 +350,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -801,7 +801,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -847,7 +847,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1298,7 +1298,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1344,7 +1344,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1769,7 +1769,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1815,7 +1815,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -2240,7 +2240,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -2649,7 +2649,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -3249,7 +3249,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -3654,7 +3654,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -3700,7 +3700,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -4125,7 +4125,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -4569,7 +4569,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -5211,7 +5211,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -5257,7 +5257,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -5708,7 +5708,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -5754,7 +5754,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"

@@ -509,7 +509,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
@@ -1170,7 +1170,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
@@ -1831,7 +1831,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"

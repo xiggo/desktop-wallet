@@ -65,7 +65,7 @@ export const WalletCard = ({ isLoading = false, className, wallet, displayType =
 			<div data-testid="WalletCard__blank" className={cn("w-64 inline-block", className)}>
 				<Card addonIcons={walletIcon()} className="h-48">
 					<div className="flex flex-col justify-between p-5 h-full">
-						<div className="flex -space-x-2">
+						<div className="flex -space-x-1">
 							<Circle
 								size="lg"
 								className="bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800"
@@ -102,7 +102,7 @@ export const WalletCard = ({ isLoading = false, className, wallet, displayType =
 			>
 				<div className="flex relative flex-col justify-between p-5 h-full">
 					<div className="flex items-center space-x-4">
-						<div className="-space-x-2 whitespace-nowrap">
+						<div className="-space-x-1 whitespace-nowrap">
 							<NetworkIcon size="lg" network={wallet.network()} />
 							<Avatar size="lg" address={wallet.address()} />
 						</div>

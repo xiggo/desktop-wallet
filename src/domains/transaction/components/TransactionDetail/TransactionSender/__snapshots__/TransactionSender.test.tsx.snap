@@ -30,7 +30,7 @@ exports[`TransactionSender should not render delegate icon 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center -space-x-2"
+      class="flex items-center -space-x-1"
     >
       <div
         class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background"
@@ -105,7 +105,7 @@ exports[`TransactionSender should not render with alias 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center -space-x-2"
+      class="flex items-center -space-x-1"
     >
       <div
         class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -156,7 +156,7 @@ exports[`TransactionSender should render 1`] = `
       </div>
     </div>
     <div
-      class="flex items-center -space-x-2"
+      class="flex items-center -space-x-1"
     >
       <div
         class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"

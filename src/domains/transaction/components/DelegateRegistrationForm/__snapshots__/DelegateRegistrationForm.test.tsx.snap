@@ -129,7 +129,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
             </div>
           </div>
           <div
-            class="flex items-center -space-x-2"
+            class="flex items-center -space-x-1"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -453,7 +453,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
             </div>
           </div>
           <div
-            class="flex items-center -space-x-2"
+            class="flex items-center -space-x-1"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -689,7 +689,7 @@ exports[`DelegateRegistrationForm should render review step 1`] = `
             </div>
           </div>
           <div
-            class="flex items-center -space-x-2"
+            class="flex items-center -space-x-1"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -937,7 +937,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
             </div>
           </div>
           <div
-            class="flex items-center -space-x-2"
+            class="flex items-center -space-x-1"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1235,7 +1235,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
             </div>
           </div>
           <div
-            class="flex items-center -space-x-2"
+            class="flex items-center -space-x-1"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1559,7 +1559,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
             </div>
           </div>
           <div
-            class="flex items-center -space-x-2"
+            class="flex items-center -space-x-1"
           >
             <div
               class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"

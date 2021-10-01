@@ -188,7 +188,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -292,7 +292,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -585,7 +585,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -689,7 +689,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -982,7 +982,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -1086,7 +1086,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -1409,7 +1409,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -1525,7 +1525,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -1860,7 +1860,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -1976,7 +1976,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -2311,7 +2311,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -2427,7 +2427,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                           class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
                         >
                           <div
-                            class="flex-shrink-0 -space-x-2"
+                            class="flex-shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"

@@ -1851,7 +1851,7 @@ exports[`Wallets should render grid 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -1932,7 +1932,7 @@ exports[`Wallets should render grid 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -2028,7 +2028,7 @@ exports[`Wallets should render grid 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK"
@@ -2341,7 +2341,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -2422,7 +2422,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -2518,7 +2518,7 @@ exports[`Wallets should render grid in loading state 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK"
@@ -3491,7 +3491,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK"
@@ -3585,7 +3585,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                         class="flex flex-col justify-between p-5 h-full"
                       >
                         <div
-                          class="flex -space-x-2"
+                          class="flex -space-x-1"
                         >
                           <div
                             class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
@@ -3633,7 +3633,7 @@ exports[`Wallets should render without testnet wallets 1`] = `
                         class="flex flex-col justify-between p-5 h-full"
                       >
                         <div
-                          class="flex -space-x-2"
+                          class="flex -space-x-1"
                         >
                           <div
                             class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
@@ -3900,7 +3900,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -3981,7 +3981,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -4077,7 +4077,7 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           class="flex items-center space-x-4"
                         >
                           <div
-                            class="-space-x-2 whitespace-nowrap"
+                            class="-space-x-1 whitespace-nowrap"
                           >
                             <div
                               aria-label="ARK"

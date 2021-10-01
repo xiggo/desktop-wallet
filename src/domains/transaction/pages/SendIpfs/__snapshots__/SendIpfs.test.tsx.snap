@@ -532,7 +532,7 @@ exports[`SendIpfs should render form step 1`] = `
         </div>
       </div>
       <div
-        class="flex items-center -space-x-2"
+        class="flex items-center -space-x-1"
       >
         <div
           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -764,7 +764,7 @@ exports[`SendIpfs should render review step 1`] = `
         </div>
       </div>
       <div
-        class="flex items-center -space-x-2"
+        class="flex items-center -space-x-1"
       >
         <div
           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -1449,7 +1449,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -2021,7 +2021,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -2595,7 +2595,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -3167,7 +3167,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex items-center -space-x-2"
+                          class="flex items-center -space-x-1"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"
@@ -3627,7 +3627,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                         </div>
                       </div>
                       <div
-                        class="flex items-center -space-x-2"
+                        class="flex items-center -space-x-1"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy flex-shrink-0"

@@ -120,7 +120,7 @@ export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }
 									</div>
 								}
 								extra={
-									<div className="flex items-center -space-x-2">
+									<div className="flex items-center">
 										<Avatar address={generatedAddress} size="lg" />
 									</div>
 								}

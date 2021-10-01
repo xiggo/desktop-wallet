@@ -21,7 +21,7 @@ exports[`Wallet Card should render 1`] = `
             class="flex items-center space-x-4"
           >
             <div
-              class="-space-x-2 whitespace-nowrap"
+              class="-space-x-1 whitespace-nowrap"
             >
               <div
                 aria-label="ARK Devnet"
@@ -143,7 +143,7 @@ exports[`Wallet Card should render blank 1`] = `
           class="flex flex-col justify-between p-5 h-full"
         >
           <div
-            class="flex -space-x-2"
+            class="flex -space-x-1"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
@@ -191,7 +191,7 @@ exports[`Wallet Card should render blank with ledger display type 1`] = `
           class="flex flex-col justify-between p-5 h-full"
         >
           <div
-            class="flex -space-x-2"
+            class="flex -space-x-1"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
@@ -249,7 +249,7 @@ exports[`Wallet Card should render blank with starred display type 1`] = `
           class="flex flex-col justify-between p-5 h-full"
         >
           <div
-            class="flex -space-x-2"
+            class="flex -space-x-1"
           >
             <div
               class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background"
@@ -435,7 +435,7 @@ exports[`Wallet Card should render with wallet data 1`] = `
             class="flex items-center space-x-4"
           >
             <div
-              class="-space-x-2 whitespace-nowrap"
+              class="-space-x-1 whitespace-nowrap"
             >
               <div
                 aria-label="ARK Devnet"
@@ -560,7 +560,7 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             class="flex items-center space-x-4"
           >
             <div
-              class="-space-x-2 whitespace-nowrap"
+              class="-space-x-1 whitespace-nowrap"
             >
               <div
                 aria-label="ARK Devnet"
