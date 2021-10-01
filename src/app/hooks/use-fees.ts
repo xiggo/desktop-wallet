@@ -131,7 +131,7 @@ export const useFees = (profile: Contracts.IProfile) => {
 
 				return {
 					...feesBySize,
-					isDynamic: transactionFees.isDynamic,
+					isDynamic: transactionFees?.isDynamic,
 				};
 			}
 
