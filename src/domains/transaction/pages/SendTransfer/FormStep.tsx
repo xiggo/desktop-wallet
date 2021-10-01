@@ -11,7 +11,7 @@ import { AddRecipient } from "domains/transaction/components/AddRecipient";
 import { FeeField } from "domains/transaction/components/FeeField";
 import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
 import { buildTransferData } from "domains/transaction/pages/SendTransfer/SendTransfer.helpers";
-import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
+import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -24,6 +24,8 @@ export const FormStep = ({
 	profile: Contracts.IProfile;
 	deeplinkProps: any;
 }) => {
+	const isMounted = useRef(true);
+
 	const { t } = useTranslation();
 
 	const { syncProfileWallets } = useProfileJobs(profile);
@@ -44,17 +46,20 @@ export const FormStep = ({
 		}
 
 		const updateFeeTransactionData = async () => {
-			setFeeTransactionData(
-				await buildTransferData({
-					coin: profile.coins().get(network.coin(), network.id()),
-					memo,
-					recipients,
-				}),
-			);
+			const transferData = await buildTransferData({
+				coin: profile.coins().get(network.coin(), network.id()),
+				memo,
+				recipients,
+			});
+
+			/* istanbul ignore next */
+			if (isMounted.current) {
+				setFeeTransactionData(transferData);
+			}
 		};
 
 		updateFeeTransactionData();
-	}, [network, memo, recipients, profile]);
+	}, [network, memo, recipients, profile, isMounted]);
 
 	useEffect(() => {
 		if (!network) {
@@ -63,6 +68,14 @@ export const FormStep = ({
 
 		setWallets(profile.wallets().findByCoinWithNetwork(network.coin(), network.id()));
 	}, [network, profile]);
+
+	useEffect(
+		/* istanbul ignore next */
+		() => () => {
+			isMounted.current = false;
+		},
+		[],
+	);
 
 	const getRecipients = () => {
 		if (deeplinkProps?.recipient && deeplinkProps?.amount) {

@@ -25,6 +25,7 @@ import {
 	MNEMONICS,
 	render,
 	RenderResult,
+	renderWithForm,
 	renderWithRouter,
 	syncFees,
 	waitFor,
@@ -116,54 +117,26 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render form step", async () => {
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					network: wallet.network(),
-					senderAddress: wallet.address(),
-				},
-			}),
-		);
-
-		form.current.register("network");
-		form.current.register("fee");
-		form.current.register("fees");
-		form.current.register("inputFeeSettings");
-
-		let rendered: RenderResult;
-
-		await hookAct(async () => {
-			rendered = render(
-				<FormProvider {...form.current}>
-					<FormStep deeplinkProps={{}} networks={[]} profile={profile} />
-				</FormProvider>,
-			);
+		const { asFragment } = renderWithForm(<FormStep deeplinkProps={{}} networks={[]} profile={profile} />, {
+			defaultValues: {
+				network: wallet.network(),
+			},
+			registerCallback: ({ register }) => {
+				register("network");
+				register("fee");
+				register("fees");
+			},
+			withProviders: true,
 		});
 
-		const { getByTestId, getAllByTestId, asFragment } = rendered;
+		expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy();
 
-		expect(getByTestId("SendTransfer__form-step")).toBeTruthy();
-
-		await waitFor(() => expect(getAllByTestId("AmountCrypto")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form step without test networks", async () => {
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					network: wallet.network(),
-					senderAddress: wallet.address(),
-				},
-			}),
-		);
-
-		form.current.register("network");
-		form.current.register("fee");
-		form.current.register("fees");
-		form.current.register("inputFeeSettings");
-
 		const useNetworksMock = jest.spyOn(profile.settings(), "get").mockImplementation((setting) => {
 			if (setting === Contracts.ProfileSetting.ExchangeCurrency) {
 				return "USD";
@@ -172,15 +145,24 @@ describe("SendTransfer", () => {
 			return false;
 		});
 
-		const { getByTestId, asFragment, getAllByTestId } = render(
-			<FormProvider {...form.current}>
-				<FormStep networks={env.availableNetworks()} profile={profile} />
-			</FormProvider>,
+		const { asFragment } = renderWithForm(
+			<FormStep deeplinkProps={{}} networks={env.availableNetworks()} profile={profile} />,
+			{
+				defaultValues: {
+					network: wallet.network(),
+				},
+				registerCallback: ({ register }) => {
+					register("network");
+					register("fee");
+					register("fees");
+				},
+				withProviders: true,
+			},
 		);
 
-		expect(getByTestId("SendTransfer__form-step")).toBeTruthy();
+		expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy();
 
-		await waitFor(() => expect(getAllByTestId("AmountCrypto")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -378,14 +360,6 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render summary step", async () => {
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					network: wallet.network(),
-					senderAddress: wallet.address(),
-				},
-			}),
-		);
 		await wallet.synchroniser().identity();
 
 		const transaction = new DTO.ExtendedSignedTransactionData(
@@ -410,13 +384,24 @@ describe("SendTransfer", () => {
 			wallet,
 		);
 
-		const { getByTestId, asFragment } = render(
-			<FormProvider {...form.current}>
-				<SummaryStep transaction={transaction} senderWallet={wallet} profile={profile} />
-			</FormProvider>,
+		const { asFragment } = renderWithForm(
+			<SummaryStep transaction={transaction} senderWallet={wallet} profile={profile} />,
+			{
+				defaultValues: {
+					network: wallet.network(),
+					senderAddress: wallet.address(),
+				},
+				registerCallback: ({ register }) => {
+					register("network");
+					register("fee");
+					register("fees");
+				},
+				withProviders: true,
+			},
 		);
 
-		expect(getByTestId("TransactionSuccessful")).toBeTruthy();
+		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toBeTruthy());
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 

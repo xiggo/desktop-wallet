@@ -185,7 +185,7 @@ describe("Registration", () => {
 		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
 		history.push(registrationPath);
 
-		const renderedPage = renderWithRouter(
+		renderWithRouter(
 			<Route path={path}>
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendRegistration />
@@ -197,8 +197,8 @@ describe("Registration", () => {
 			},
 		);
 
-		await waitFor(() => expect(renderedPage.getByTestId("Registration__form")).toBeTruthy());
-		await waitFor(() => expect(renderedPage.getByTestId("header__title")).toHaveTextContent(label));
+		await waitFor(() => expect(screen.getByTestId("Registration__form")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(label));
 	});
 
 	it.each(["with keyboard", "without keyboard"])("should register delegate %s", async (inputMethod) => {

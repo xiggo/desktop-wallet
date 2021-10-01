@@ -2,7 +2,7 @@
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts, Environment } from "@payvo/profiles";
 import { ARK } from "@payvo/sdk-ark";
-import { render } from "@testing-library/react";
+import { render, RenderResult } from "@testing-library/react";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import { useProfileSynchronizer } from "app/hooks/use-profile-synchronizer";
 import { i18n } from "app/i18n";
@@ -12,6 +12,7 @@ import nock from "nock";
 import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import { PluginManager } from "plugins/core/plugin-manager";
 import React from "react";
+import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
 import { Router } from "react-router-dom";
 import delegate from "tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
@@ -45,6 +46,37 @@ export const WithProviders: React.FC = ({ children }: { children?: React.ReactNo
 
 const customRender = (component: React.ReactElement, options: any = {}) =>
 	render(component, { wrapper: WithProviders, ...options });
+
+export function renderWithForm(
+	component: React.ReactElement,
+	options?: {
+		withProviders?: boolean;
+		defaultValues?: any;
+		registerCallback?: (useFormMethods: UseFormMethods) => void;
+		shouldUnregister?: boolean;
+	},
+) {
+	const renderFn = options?.withProviders ? customRender : render;
+	const defaultValues = options?.defaultValues ?? {};
+
+	let form: UseFormMethods | undefined;
+
+	const Component = () => {
+		form = useForm<any>({
+			defaultValues,
+			mode: "onChange",
+			shouldUnregister: options?.shouldUnregister,
+		});
+
+		options?.registerCallback?.(form);
+
+		return <FormProvider {...form}>{component}</FormProvider>;
+	};
+
+	const renderResult: RenderResult = renderFn(<Component />);
+
+	return { ...renderResult, form: () => form };
+}
 
 const renderWithRouter = (
 	component: React.ReactElement,

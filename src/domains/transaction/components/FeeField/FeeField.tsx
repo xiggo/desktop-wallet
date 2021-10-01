@@ -3,7 +3,7 @@ import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useDebounce, useFees } from "app/hooks";
 import { InputFee } from "domains/transaction/components/InputFee";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
 interface Properties {
@@ -14,6 +14,8 @@ interface Properties {
 }
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
+	const isMounted = useRef(true);
+
 	const { calculate } = useFees(profile);
 
 	const [isLoadingFee, setIsLoadingFee] = useState(false);
@@ -94,11 +96,22 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				});
 			}
 
-			setIsLoadingFee(false);
+			/* istanbul ignore next */
+			if (isMounted.current) {
+				setIsLoadingFee(false);
+			}
 		};
 
 		recalculateFee();
-	}, [calculate, data, getValues, network, setValue, type, usesSizeBasedFee]);
+	}, [calculate, data, getValues, isMounted, network, setValue, type, usesSizeBasedFee]);
+
+	useEffect(
+		/* istanbul ignore next */
+		() => () => {
+			isMounted.current = false;
+		},
+		[],
+	);
 
 	useEffect(() => {
 		if (fees && getValues("fee") === undefined) {

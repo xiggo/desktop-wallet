@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
-import { act } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import React, { useEffect } from "react";
@@ -26,7 +25,7 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let network: Networks.Network;
 
-const renderWithFormProvider = async (children: any, defaultValues?: any) => {
+const renderWithFormProvider = (children: any, defaultValues?: any) => {
 	const Wrapper = () => {
 		const form = useForm({
 			defaultValues: {
@@ -55,16 +54,15 @@ describe("AddRecipient", () => {
 	});
 
 	it("should render", async () => {
-		const { container } = await renderWithFormProvider(
+		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
-		// await waitFor(() => expect(getByTestId("SelectDropdown__input")).toHaveValue(""));
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render without recipients", async () => {
-		const { container } = await renderWithFormProvider(
+		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={undefined} />,
 		);
 
@@ -78,7 +76,7 @@ describe("AddRecipient", () => {
 			recipientAddress: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
 		};
 
-		const { getByTestId, container } = await renderWithFormProvider(
+		const { getByTestId, container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} />,
 			values,
 		);
@@ -92,7 +90,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should render with multiple recipients switch", async () => {
-		const { getByTestId, container } = await renderWithFormProvider(
+		const { getByTestId, container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" showMultiPaymentOption />,
 		);
 
@@ -102,7 +100,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should render without the single & multiple switch", async () => {
-		const { container } = await renderWithFormProvider(
+		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" showMultiPaymentOption={false} />,
 		);
 
@@ -118,7 +116,7 @@ describe("AddRecipient", () => {
 				} as any),
 		);
 
-		const { getByTestId } = await renderWithFormProvider(
+		const { getByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" onChange={onChange} />,
 		);
 
@@ -153,24 +151,19 @@ describe("AddRecipient", () => {
 	});
 
 	it("should select recipient", async () => {
-		const { getByTestId } = await renderWithFormProvider(
+		const { getByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
-		});
+		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
 		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
-		const firstAddress = getByTestId("RecipientListItem__select-button-0");
-		await act(async () => {
-			fireEvent.click(firstAddress);
-		});
+		userEvent.click(getByTestId("RecipientListItem__select-button-0"));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		const selectedAddressValue = profile.wallets().first().address();
 
@@ -178,7 +171,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should set available amount", async () => {
-		const { getByTestId, container } = await renderWithFormProvider(
+		const { getByTestId, container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -203,7 +196,7 @@ describe("AddRecipient", () => {
 
 		emptyProfile.wallets().push(emptyWallet);
 
-		const { getByTestId, container } = await renderWithFormProvider(
+		const { getByTestId, container } = renderWithFormProvider(
 			<AddRecipient profile={emptyProfile} wallet={emptyWallet} assetSymbol="ARK" />,
 		);
 
@@ -215,7 +208,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should toggle between single and multiple recipients", async () => {
-		const { getByText, queryByText } = await renderWithFormProvider(
+		const { getByText, queryByText } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -226,17 +219,13 @@ describe("AddRecipient", () => {
 
 		expect(queryByText(recipientLabel)).toBeFalsy();
 
-		await act(async () => {
-			fireEvent.click(multipleButton);
-		});
+		userEvent.click(multipleButton);
 
-		expect(queryByText(recipientLabel)).toBeTruthy();
+		await waitFor(() => expect(queryByText(recipientLabel)).toBeTruthy());
 
-		await act(async () => {
-			fireEvent.click(singleButton);
-		});
+		userEvent.click(singleButton);
 
-		expect(queryByText(recipientLabel)).toBeFalsy();
+		await waitFor(() => expect(queryByText(recipientLabel)).toBeFalsy());
 	});
 
 	it("should prevent adding invalid recipient address in multiple type", async () => {
@@ -328,7 +317,7 @@ describe("AddRecipient", () => {
 			network: null,
 		};
 
-		const { getByTestId } = await renderWithFormProvider(
+		const { getByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 			values,
 		);
@@ -345,7 +334,7 @@ describe("AddRecipient", () => {
 			senderAddress: null,
 		};
 
-		const { getByTestId } = await renderWithFormProvider(
+		const { getByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 			values,
 		);
@@ -410,34 +399,26 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for low balance", async () => {
-		const { getByTestId } = await renderWithFormProvider(
+		const { getByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
-		});
+		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
-		});
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
 		const firstAddress = getByTestId("RecipientListItem__select-button-0");
 
-		await act(async () => {
-			fireEvent.click(firstAddress);
-		});
+		userEvent.click(firstAddress);
 
 		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
-		await act(async () => {
-			fireEvent.change(getByTestId("AddRecipient__amount"), {
-				target: {
-					value: "10000000000",
-				},
-			});
+		fireEvent.change(getByTestId("AddRecipient__amount"), {
+			target: {
+				value: "10000000000",
+			},
 		});
 
 		await waitFor(() => expect(getByTestId("Input__error")).toBeInTheDocument());
@@ -446,34 +427,26 @@ describe("AddRecipient", () => {
 	it("should show error for zero balance", async () => {
 		const mockWalletBalance = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { getByTestId } = await renderWithFormProvider(
+		const { getByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
-		});
+		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
-		});
+		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
 
 		const firstAddress = getByTestId("RecipientListItem__select-button-0");
 
-		await act(async () => {
-			fireEvent.click(firstAddress);
-		});
+		userEvent.click(firstAddress);
 
 		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
-		await act(async () => {
-			fireEvent.change(getByTestId("AddRecipient__amount"), {
-				target: {
-					value: "0.1",
-				},
-			});
+		fireEvent.change(getByTestId("AddRecipient__amount"), {
+			target: {
+				value: "0.1",
+			},
 		});
 
 		await waitFor(() => expect(getByTestId("Input__error")).toBeInTheDocument());
@@ -482,7 +455,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for invalid address", async () => {
-		const { getByTestId, getAllByTestId } = await renderWithFormProvider(
+		const { getByTestId, getAllByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -630,9 +603,7 @@ describe("AddRecipient", () => {
 
 		render(<Component />);
 
-		act(() => {
-			fireEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
-		});
+		fireEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
 			target: {
@@ -646,15 +617,11 @@ describe("AddRecipient", () => {
 			},
 		});
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("AddRecipient__add-button"));
-		});
+		fireEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
 
-		act(() => {
-			fireEvent.click(screen.getByText(translations.TRANSACTION.SINGLE));
-		});
+		fireEvent.click(screen.getByText(translations.TRANSACTION.SINGLE));
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(values.amount.toString()));
 	});
@@ -662,7 +629,7 @@ describe("AddRecipient", () => {
 	it("should prevent adding more recipients than the coin supports", async () => {
 		const mockMultiPaymentRecipients = jest.spyOn(wallet.network(), "multiPaymentRecipients").mockReturnValue(1);
 
-		await renderWithFormProvider(
+		renderWithFormProvider(
 			<AddRecipient
 				recipients={[
 					{
@@ -676,21 +643,15 @@ describe("AddRecipient", () => {
 			/>,
 		);
 
-		await act(async () => {
-			userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
-		});
+		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
+
+		await waitFor(() => expect(screen.getByTestId("SelectRecipient__select-recipient")).toBeInTheDocument());
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
-		});
+		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeTruthy());
 
-		const firstAddress = screen.getByTestId("RecipientListItem__select-button-0");
-
-		await act(async () => {
-			userEvent.click(firstAddress);
-		});
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
 		fireEvent.change(screen.getByTestId("AddRecipient__amount"), {
 			target: {
@@ -698,7 +659,7 @@ describe("AddRecipient", () => {
 			},
 		});
 
-		expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled();
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled());
 
 		mockMultiPaymentRecipients.mockRestore();
 	});

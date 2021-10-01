@@ -1,17 +1,23 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { BIP39 } from "@payvo/cryptography";
 import { Contracts as ProfilesContracts } from "@payvo/profiles";
 import { Contracts } from "@payvo/sdk";
-import { RenderResult, within } from "@testing-library/react";
+import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Form } from "app/components/Form";
 import { toasts } from "app/services";
-import React, { useEffect } from "react";
-import { useForm, UseFormMethods } from "react-hook-form";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import secondSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import * as utils from "utils/electron-utils";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
+import {
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	MNEMONICS,
+	render,
+	renderWithForm,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { translations as transactionTranslations } from "../../i18n";
 import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
@@ -40,51 +46,23 @@ describe("SecondSignatureRegistrationForm", () => {
 			sender: () => secondSignatureFixture.data.sender,
 		});
 
-	const renderComponent = (properties?: any) => {
-		let form: UseFormMethods | undefined;
-
-		const defaultValues = properties?.defaultValues ?? { fees };
-		const onSubmit = properties?.onSubmit ?? jest.fn();
-		const activeTab = properties?.activeTab ?? 1;
-
-		const Component = () => {
-			form = useForm<any>({ defaultValues, mode: "onChange" });
-
-			const { register } = form;
-
-			useEffect(() => {
-				register("fee");
-				register("fees");
-				register("inputFeeSettings");
-			}, [register]);
-
-			return (
-				<Form context={form} onSubmit={onSubmit}>
-					<SecondSignatureRegistrationForm.component
-						profile={profile}
-						activeTab={activeTab}
-						wallet={wallet}
-					/>
-				</Form>
-			);
-		};
-
-		const renderResult: RenderResult = render(<Component />);
-		return { ...renderResult, form };
-	};
-
 	it("should render generation step", async () => {
 		const passphrase = "mock bip39 passphrase";
 		const bip39GenerateMock = jest.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
-		const { form, asFragment } = renderComponent();
-
-		expect(asFragment()).toMatchSnapshot();
+		const { form, asFragment } = renderWithForm(
+			<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />,
+			{
+				defaultValues: { fees },
+				withProviders: true,
+			},
+		);
 
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
-		await waitFor(() => expect(form?.getValues("secondMnemonic")).toEqual(passphrase));
+		await waitFor(() => expect(form()?.getValues("secondMnemonic")).toEqual(passphrase));
 
 		expect(bip39GenerateMock).toHaveBeenCalled();
+		expect(asFragment()).toMatchSnapshot();
 
 		bip39GenerateMock.mockRestore();
 	});
@@ -92,26 +70,40 @@ describe("SecondSignatureRegistrationForm", () => {
 	it("should not generate mnemonic if already set", async () => {
 		const bip39GenerateMock = jest.spyOn(BIP39, "generate").mockImplementation();
 
-		const { form, asFragment } = renderComponent({
-			defaultValues: {
-				fees,
-				secondMnemonic: "test mnemonic",
+		const { form, asFragment } = renderWithForm(
+			<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />,
+			{
+				defaultValues: {
+					fees,
+					secondMnemonic: "test mnemonic",
+				},
+				withProviders: true,
 			},
-		});
-
-		expect(asFragment()).toMatchSnapshot();
+		);
 
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
 
-		expect(form?.getValues("secondMnemonic")).toEqual("test mnemonic");
-
+		expect(form()?.getValues("secondMnemonic")).toEqual("test mnemonic");
 		expect(bip39GenerateMock).not.toHaveBeenCalled();
+		expect(asFragment()).toMatchSnapshot();
 
 		bip39GenerateMock.mockRestore();
 	});
 
 	it("should set fee", async () => {
-		renderComponent();
+		renderWithForm(<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />, {
+			defaultValues: {
+				fees,
+			},
+			registerCallback: ({ register }) => {
+				register("fees");
+				register("fee");
+				register("inputFeeSettings");
+			},
+			withProviders: true,
+		});
+
+		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
 
 		// simple
 
@@ -138,16 +130,19 @@ describe("SecondSignatureRegistrationForm", () => {
 
 	describe("backup step", () => {
 		it("should render", async () => {
-			const { asFragment } = renderComponent({
-				activeTab: 2,
-				defaultValues: {
-					fees,
-					secondMnemonic: "test mnemonic",
-					wallet: {
-						address: () => "address",
+			const { asFragment } = renderWithForm(
+				<SecondSignatureRegistrationForm.component profile={profile} activeTab={2} wallet={wallet} />,
+				{
+					defaultValues: {
+						fees,
+						secondMnemonic: "test mnemonic",
+						wallet: {
+							address: () => "address",
+						},
 					},
+					withProviders: true,
 				},
-			});
+			);
 
 			await waitFor(() =>
 				expect(screen.getByTestId("SecondSignatureRegistrationForm__backup-step")).toBeTruthy(),
@@ -167,16 +162,23 @@ describe("SecondSignatureRegistrationForm", () => {
 		});
 
 		it("should show success toast on successful download", async () => {
-			renderComponent({
-				activeTab: 2,
-				defaultValues: {
-					fees,
-					secondMnemonic: "test mnemonic",
-					wallet: {
-						address: () => "address",
+			renderWithForm(
+				<SecondSignatureRegistrationForm.component profile={profile} activeTab={2} wallet={wallet} />,
+				{
+					defaultValues: {
+						fees,
+						secondMnemonic: "test mnemonic",
+						wallet: {
+							address: () => "address",
+						},
 					},
+					withProviders: true,
 				},
-			});
+			);
+
+			await waitFor(() =>
+				expect(screen.getByTestId("SecondSignatureRegistrationForm__backup-step")).toBeTruthy(),
+			);
 
 			jest.spyOn(utils, "saveFile").mockResolvedValueOnce("filePath");
 
@@ -190,16 +192,23 @@ describe("SecondSignatureRegistrationForm", () => {
 		});
 
 		it("should not show success toast on cancelled download", async () => {
-			renderComponent({
-				activeTab: 2,
-				defaultValues: {
-					fees,
-					secondMnemonic: "test mnemonic",
-					wallet: {
-						address: () => "address",
+			renderWithForm(
+				<SecondSignatureRegistrationForm.component profile={profile} activeTab={2} wallet={wallet} />,
+				{
+					defaultValues: {
+						fees,
+						secondMnemonic: "test mnemonic",
+						wallet: {
+							address: () => "address",
+						},
 					},
+					withProviders: true,
 				},
-			});
+			);
+
+			await waitFor(() =>
+				expect(screen.getByTestId("SecondSignatureRegistrationForm__backup-step")).toBeTruthy(),
+			);
 
 			jest.spyOn(utils, "saveFile").mockResolvedValueOnce(undefined);
 
@@ -213,16 +222,23 @@ describe("SecondSignatureRegistrationForm", () => {
 		});
 
 		it("should show error toast on error", async () => {
-			renderComponent({
-				activeTab: 2,
-				defaultValues: {
-					fees,
-					secondMnemonic: "test mnemonic",
-					wallet: {
-						address: () => "address",
+			renderWithForm(
+				<SecondSignatureRegistrationForm.component profile={profile} activeTab={2} wallet={wallet} />,
+				{
+					defaultValues: {
+						fees,
+						secondMnemonic: "test mnemonic",
+						wallet: {
+							address: () => "address",
+						},
 					},
+					withProviders: true,
 				},
-			});
+			);
+
+			await waitFor(() =>
+				expect(screen.getByTestId("SecondSignatureRegistrationForm__backup-step")).toBeTruthy(),
+			);
 
 			jest.spyOn(utils, "saveFile").mockRejectedValueOnce(new Error("Error"));
 
@@ -237,19 +253,22 @@ describe("SecondSignatureRegistrationForm", () => {
 	});
 
 	it("should render verification step", async () => {
-		const { form } = renderComponent({
-			activeTab: 3,
-			defaultValues: {
-				fees,
-				secondMnemonic: passphrase,
+		const { form } = renderWithForm(
+			<SecondSignatureRegistrationForm.component profile={profile} activeTab={3} wallet={wallet} />,
+			{
+				defaultValues: {
+					fees,
+					secondMnemonic: passphrase,
+				},
+				withProviders: true,
 			},
-		});
+		);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("SecondSignatureRegistrationForm__verification-step")).toBeTruthy(),
 		);
 
-		expect(form?.getValues("verification")).toBeUndefined();
+		expect(form()?.getValues("verification")).toBeUndefined();
 
 		const walletMnemonic = passphrase.split(" ");
 
@@ -263,16 +282,16 @@ describe("SecondSignatureRegistrationForm", () => {
 			}
 		}
 
-		await waitFor(() => expect(form?.getValues("verification")).toBe(true));
+		await waitFor(() => expect(form()?.getValues("verification")).toBe(true));
 	});
 
 	it("should render review step", async () => {
-		renderComponent({
-			activeTab: 4,
+		renderWithForm(<SecondSignatureRegistrationForm.component profile={profile} activeTab={4} wallet={wallet} />, {
 			defaultValues: {
 				fee: 0,
 				fees,
 			},
+			withProviders: true,
 		});
 
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__review-step")).toBeTruthy());

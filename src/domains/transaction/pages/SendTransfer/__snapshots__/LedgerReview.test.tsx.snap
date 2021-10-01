@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TransferLedgerReview should render 1`] = `
-<div>
+<DocumentFragment>
   <div
     class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionDetail"
@@ -119,11 +119,11 @@ exports[`TransferLedgerReview should render 1`] = `
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`TransferLedgerReview should render skeleton while loading expiration 1`] = `
-<div>
+<DocumentFragment>
   <div
     class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures"
     data-testid="TransactionDetail"
@@ -258,5 +258,5 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

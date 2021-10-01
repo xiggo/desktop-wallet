@@ -1,16 +1,13 @@
 import { PBKDF2 } from "@payvo/cryptography";
 import { Contracts } from "@payvo/profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
-import { Form } from "app/components/Form";
 import React from "react";
-import { useForm } from "react-hook-form";
 import {
 	env,
 	fireEvent,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
 	MNEMONICS,
-	renderWithRouter,
+	renderWithForm,
 	screen,
 	waitFor,
 } from "utils/testing-library";
@@ -26,12 +23,6 @@ describe("AuthenticationStep", () => {
 		wallet = profile.wallets().first();
 	});
 
-	const Component = ({ form, ...props }: any) => (
-		<Form context={form} onSubmit={() => void 0}>
-			<AuthenticationStep wallet={wallet} {...props} />
-		</Form>
-	);
-
 	it("should validate if mnemonic match the wallet address", async () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
@@ -43,40 +34,25 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
-		const TestValidation = () => {
-			const form = useForm({ mode: "onChange" });
-			const { formState } = form;
-			const { isValid } = formState;
-
-			return (
-				<div>
-					<span>{isValid ? "Valid" : "Invalid"}</span>
-					<Component form={form} />
-				</div>
-			);
-		};
-
-		renderWithRouter(<TestValidation />);
-
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: "wrong passphrase",
-				},
-			});
+		const { form } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByText("Invalid")).toBeInTheDocument());
-
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: MNEMONICS[0],
-				},
-			});
+		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: "wrong passphrase",
+			},
 		});
 
-		await waitFor(() => expect(screen.queryByText("Valid")).toBeInTheDocument());
+		await waitFor(() => expect(form()?.formState.isValid).toBe(false));
+
+		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: MNEMONICS[0],
+			},
+		});
+
+		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 
 		profile.wallets().forget(wallet.id());
 		jest.clearAllMocks();
@@ -97,48 +73,31 @@ describe("AuthenticationStep", () => {
 			(await wallet.coin().publicKey().fromMnemonic(secondMnemonic)).publicKey,
 		);
 
-		const TestValidation = () => {
-			const form = useForm({ mode: "onChange" });
-			const { formState } = form;
-			const { isValid } = formState;
-
-			return (
-				<div>
-					<span>{isValid ? "Valid" : "Invalid"}</span>
-					<Component form={form} />
-				</div>
-			);
-		};
-
-		renderWithRouter(<TestValidation />);
-
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: MNEMONICS[0],
-				},
-			});
+		const { form } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
 		});
 
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
-				target: {
-					value: "wrong second mnemonic",
-				},
-			});
+		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: MNEMONICS[0],
+			},
 		});
 
-		await waitFor(() => expect(screen.queryByText("Invalid")).toBeInTheDocument());
-
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
-				target: {
-					value: secondMnemonic,
-				},
-			});
+		fireEvent.input(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
+			target: {
+				value: "wrong second mnemonic",
+			},
 		});
 
-		await waitFor(() => expect(screen.queryByText("Valid")).toBeInTheDocument());
+		await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
+
+		fireEvent.input(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
+			target: {
+				value: secondMnemonic,
+			},
+		});
+
+		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 
 		profile.wallets().forget(wallet.id());
 		jest.clearAllMocks();
@@ -153,21 +112,21 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { asFragment } = renderWithRouter(<Component form={result.current} />);
-
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument());
-
-		act(() => {
-			fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: MNEMONICS[0],
-				},
-			});
+		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
 		});
 
-		await waitFor(() => expect(result.current.getValues()).toEqual({ mnemonic: MNEMONICS[0] }));
+		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+
+		expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
+
+		fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: MNEMONICS[0],
+			},
+		});
+
+		await waitFor(() => expect(form()?.getValues()).toEqual({ mnemonic: MNEMONICS[0] }));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -181,21 +140,21 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { asFragment } = renderWithRouter(<Component form={result.current} />);
-
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__secret")).toBeInTheDocument());
-
-		act(() => {
-			fireEvent.change(screen.getByTestId("AuthenticationStep__secret"), {
-				target: {
-					value: "secret",
-				},
-			});
+		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
 		});
 
-		await waitFor(() => expect(result.current.getValues()).toEqual({ secret: "secret" }));
+		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+
+		expect(screen.queryByTestId("AuthenticationStep__secret")).toBeInTheDocument();
+
+		fireEvent.change(screen.getByTestId("AuthenticationStep__secret"), {
+			target: {
+				value: "secret",
+			},
+		});
+
+		await waitFor(() => expect(form()?.getValues()).toEqual({ secret: "secret" }));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -209,21 +168,21 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { asFragment } = renderWithRouter(<Component form={result.current} />);
-
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument());
-
-		act(() => {
-			fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: MNEMONICS[0],
-				},
-			});
+		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
 		});
 
-		await waitFor(() => expect(result.current.getValues()).toEqual({ mnemonic: MNEMONICS[0] }));
+		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+
+		expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
+
+		fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: MNEMONICS[0],
+			},
+		});
+
+		await waitFor(() => expect(form()?.getValues()).toEqual({ mnemonic: MNEMONICS[0] }));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -237,12 +196,13 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { asFragment } = renderWithRouter(<Component form={result.current} />);
+		const { asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__private-key")).toBeInTheDocument());
 
+		expect(screen.queryByTestId("AuthenticationStep__private-key")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -255,12 +215,13 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { asFragment } = renderWithRouter(<Component form={result.current} />);
+		const { asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__wif")).toBeInTheDocument());
 
+		expect(screen.queryByTestId("AuthenticationStep__wif")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -268,30 +229,28 @@ describe("AuthenticationStep", () => {
 		await wallet.synchroniser().identity();
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(true);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { asFragment } = renderWithRouter(<Component form={result.current} />);
-
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument());
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeInTheDocument());
-
-		act(() => {
-			fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: MNEMONICS[0],
-				},
-			});
+		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
 		});
 
-		act(() => {
-			fireEvent.change(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
-				target: {
-					value: MNEMONICS[1],
-				},
-			});
+		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument());
+
+		expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeInTheDocument();
+
+		fireEvent.change(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: MNEMONICS[0],
+			},
+		});
+
+		fireEvent.change(screen.getByTestId("AuthenticationStep__second-mnemonic"), {
+			target: {
+				value: MNEMONICS[1],
+			},
 		});
 
 		await waitFor(() =>
-			expect(result.current.getValues()).toEqual({
+			expect(form()?.getValues()).toEqual({
 				mnemonic: MNEMONICS[0],
 				secondMnemonic: MNEMONICS[1],
 			}),
@@ -303,8 +262,9 @@ describe("AuthenticationStep", () => {
 	it("should show only ledger confirmation", async () => {
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { asFragment } = renderWithRouter(<Component form={result.current} />);
+		const { asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+			withProviders: true,
+		});
 
 		await waitFor(() => expect(screen.queryByTestId("LedgerConfirmation-description")).toBeInTheDocument());
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
@@ -318,20 +278,22 @@ describe("AuthenticationStep", () => {
 	it("should specify ledger supported model", async () => {
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { asFragment } = renderWithRouter(
-			<Component
-				form={result.current}
+		const { asFragment } = renderWithForm(
+			<AuthenticationStep
 				ledgerIsAwaitingApp={false}
 				ledgerIsAwaitingDevice={true}
 				ledgerConnectedModel={Contracts.WalletLedgerModel.NanoS}
 				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
+				wallet={wallet}
 			/>,
+			{
+				withProviders: true,
+			},
 		);
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
+		expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull();
 		expect(asFragment()).toMatchSnapshot();
 
 		jest.clearAllMocks();
@@ -340,36 +302,32 @@ describe("AuthenticationStep", () => {
 	it("should show ledger waiting device screen", () => {
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { container, queryByTestId } = renderWithRouter(
-			<Form context={result.current} onSubmit={() => void 0}>
-				<AuthenticationStep wallet={wallet} ledgerIsAwaitingDevice={true} />
-			</Form>,
-		);
+		const { asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} ledgerIsAwaitingDevice={true} />, {
+			withProviders: true,
+		});
 
-		expect(queryByTestId("LedgerWaitingDevice-loading_message")).toBeInTheDocument();
-
-		expect(container).toMatchSnapshot();
+		expect(screen.queryByTestId("LedgerWaitingDevice-loading_message")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show ledger waiting device screen for Nano X", async () => {
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { container } = renderWithRouter(
-			<Form context={result.current} onSubmit={() => void 0}>
-				<AuthenticationStep
-					wallet={wallet}
-					ledgerIsAwaitingDevice={false}
-					ledgerIsAwaitingApp={false}
-					ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
-				/>
-			</Form>,
+		const { asFragment } = renderWithForm(
+			<AuthenticationStep
+				ledgerIsAwaitingDevice={false}
+				ledgerIsAwaitingApp={false}
+				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
+				wallet={wallet}
+			/>,
+			{
+				withProviders: true,
+			},
 		);
 
 		await waitFor(() => expect(screen.queryByTestId("LedgerConfirmation-description")).toBeInTheDocument());
 
-		expect(container).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 
 		jest.restoreAllMocks();
 	});
@@ -377,21 +335,21 @@ describe("AuthenticationStep", () => {
 	it("should show ledger waiting device screen for Nano S", async () => {
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { container } = renderWithRouter(
-			<Form context={result.current} onSubmit={() => void 0}>
-				<AuthenticationStep
-					wallet={wallet}
-					ledgerIsAwaitingDevice={false}
-					ledgerIsAwaitingApp={false}
-					ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoS]}
-				/>
-			</Form>,
+		const { asFragment } = renderWithForm(
+			<AuthenticationStep
+				ledgerIsAwaitingDevice={false}
+				ledgerIsAwaitingApp={false}
+				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoS]}
+				wallet={wallet}
+			/>,
+			{
+				withProviders: true,
+			},
 		);
 
 		await waitFor(() => expect(screen.queryByTestId("LedgerConfirmation-description")).toBeInTheDocument());
 
-		expect(container).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 
 		jest.restoreAllMocks();
 	});
@@ -399,16 +357,21 @@ describe("AuthenticationStep", () => {
 	it("should show ledger waiting app screen", () => {
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		const { result } = renderHook(() => useForm({ mode: "onChange", shouldUnregister: false }));
-		const { container, queryByTestId } = renderWithRouter(
-			<Form context={result.current} onSubmit={() => void 0}>
-				<AuthenticationStep wallet={wallet} ledgerIsAwaitingDevice={false} ledgerIsAwaitingApp={true} />
-			</Form>,
+		const { asFragment } = renderWithForm(
+			<AuthenticationStep
+				ledgerIsAwaitingDevice={false}
+				ledgerIsAwaitingApp={true}
+				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoS]}
+				wallet={wallet}
+			/>,
+			{
+				withProviders: true,
+			},
 		);
 
-		expect(queryByTestId("LedgerWaitingApp-loading_message")).toBeInTheDocument();
+		expect(screen.queryByTestId("LedgerWaitingApp-loading_message")).toBeInTheDocument();
 
-		expect(container).toMatchSnapshot();
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with encryption password input", async () => {
@@ -416,14 +379,9 @@ describe("AuthenticationStep", () => {
 		jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
 		jest.spyOn(wallet.signingKey(), "get").mockReturnValue(PBKDF2.encrypt(getDefaultWalletMnemonic(), "password"));
 
-		const { result } = renderHook(() => useForm({ mode: "onChange" }));
-		const { getByTestId } = renderWithRouter(
-			<Form context={result.current} onSubmit={() => void 0}>
-				<AuthenticationStep wallet={wallet} />
-			</Form>,
-		);
+		renderWithForm(<AuthenticationStep wallet={wallet} />, { withProviders: true });
 
-		await waitFor(() => expect(getByTestId("AuthenticationStep__encryption-password")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toBeInTheDocument());
 
 		jest.clearAllMocks();
 	});
