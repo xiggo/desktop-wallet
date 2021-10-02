@@ -84,6 +84,17 @@ describe("WalletIcons", () => {
 		isMultiSignatureSpy.mockRestore();
 	});
 
+	it("should render the test network icon", () => {
+		const walletSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
+
+		render(<WalletIcons wallet={wallet} />);
+
+		expect(screen.getByTestId("WalletIcon__TestNetwork")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__TestNetwork")).toHaveTextContent("code.svg");
+
+		walletSpy.mockRestore();
+	});
+
 	it("should not render excluded icons", () => {
 		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(true);
 

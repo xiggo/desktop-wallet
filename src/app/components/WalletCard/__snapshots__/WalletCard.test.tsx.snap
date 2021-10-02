@@ -117,6 +117,20 @@ exports[`Wallet Card should render 1`] = `
               </svg>
             </div>
           </div>
+          <div
+            class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+            data-testid="WalletIcon__TestNetwork"
+          >
+            <div
+              class="sc-bdnxRM AFVmm"
+              height="16"
+              width="16"
+            >
+              <svg>
+                code.svg
+              </svg>
+            </div>
+          </div>
         </div>
       </button>
     </div>
@@ -531,6 +545,20 @@ exports[`Wallet Card should render with wallet data 1`] = `
               </svg>
             </div>
           </div>
+          <div
+            class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+            data-testid="WalletIcon__TestNetwork"
+          >
+            <div
+              class="sc-bdnxRM AFVmm"
+              height="16"
+              width="16"
+            >
+              <svg>
+                code.svg
+              </svg>
+            </div>
+          </div>
         </div>
       </button>
     </div>
@@ -653,6 +681,20 @@ exports[`Wallet Card should render with wallet data and optional icon 1`] = `
             >
               <svg>
                 multisignature.svg
+              </svg>
+            </div>
+          </div>
+          <div
+            class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+            data-testid="WalletIcon__TestNetwork"
+          >
+            <div
+              class="sc-bdnxRM AFVmm"
+              height="16"
+              width="16"
+            >
+              <svg>
+                code.svg
               </svg>
             </div>
           </div>

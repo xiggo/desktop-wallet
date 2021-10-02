@@ -175,7 +175,7 @@ export const WalletHeader = ({
 								<WalletIcons
 									wallet={wallet}
 									iconColor="text-theme-secondary-text"
-									exclude={["isStarred"]}
+									exclude={["isStarred", "isTestNetwork"]}
 									tooltipDarkTheme
 								/>
 							</div>

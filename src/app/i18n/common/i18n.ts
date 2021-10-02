@@ -289,6 +289,7 @@ export const translations: { [key: string]: any } = {
 	SUBMIT: "Submit",
 	SUCCESS: "Success",
 	SUPPORT: "Support",
+	TEST_NETWORK: "Test Network",
 	THEME: "Theme",
 	TIME: "Time",
 	TIME_FORMAT: "Time format",

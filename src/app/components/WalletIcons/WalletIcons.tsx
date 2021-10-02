@@ -1,3 +1,4 @@
+import { constantCase } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Icon } from "app/components/Icon";
 import { Tooltip } from "app/components/Tooltip";
@@ -30,6 +31,10 @@ const getIconName = (type: string) => {
 		return "UserCheckMark";
 	}
 
+	if (type === "TestNetwork") {
+		return "Code";
+	}
+
 	return type;
 };
 
@@ -40,7 +45,7 @@ const WalletIcon = ({ type, label, iconColor, iconSize, tooltipDarkTheme }: Wall
 	const { t } = useTranslation();
 
 	return (
-		<Tooltip content={label || t(`COMMON.${type.toUpperCase()}`)} theme={tooltipDarkTheme ? "dark" : undefined}>
+		<Tooltip content={label || t(`COMMON.${constantCase(type)}`)} theme={tooltipDarkTheme ? "dark" : undefined}>
 			<div data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>
 				<Icon name={getIconName(type)} size={iconSize} />
 			</div>
@@ -67,6 +72,9 @@ export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsP
 			{!exclude?.includes("isStarred") && wallet.isStarred() && <WalletIcon type="Starred" {...iconProperties} />}
 			{!exclude?.includes("isMultiSignature") && wallet.hasSyncedWithNetwork() && wallet.isMultiSignature() && (
 				<WalletIcon type="Multisignature" {...iconProperties} />
+			)}
+			{!exclude?.includes("isTestNetwork") && wallet.network().isTest() && (
+				<WalletIcon type="TestNetwork" {...iconProperties} />
 			)}
 		</>
 	);

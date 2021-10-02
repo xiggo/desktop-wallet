@@ -547,7 +547,22 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                           </div>
                           <div
                             class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
-                          />
+                          >
+                            <div
+                              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                              data-testid="WalletIcon__TestNetwork"
+                            >
+                              <div
+                                class="sc-bdnxRM AFVmm"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  code.svg
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -640,6 +655,20 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                               >
                                 <svg>
                                   second-signature.svg
+                                </svg>
+                              </div>
+                            </div>
+                            <div
+                              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                              data-testid="WalletIcon__TestNetwork"
+                            >
+                              <div
+                                class="sc-bdnxRM AFVmm"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  code.svg
                                 </svg>
                               </div>
                             </div>
@@ -1347,7 +1376,22 @@ exports[`Dashboard should render 1`] = `
                           </div>
                           <div
                             class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
-                          />
+                          >
+                            <div
+                              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                              data-testid="WalletIcon__TestNetwork"
+                            >
+                              <div
+                                class="sc-bdnxRM AFVmm"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  code.svg
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -1440,6 +1484,20 @@ exports[`Dashboard should render 1`] = `
                               >
                                 <svg>
                                   second-signature.svg
+                                </svg>
+                              </div>
+                            </div>
+                            <div
+                              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                              data-testid="WalletIcon__TestNetwork"
+                            >
+                              <div
+                                class="sc-bdnxRM AFVmm"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  code.svg
                                 </svg>
                               </div>
                             </div>
@@ -2737,7 +2795,22 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                           </div>
                           <div
                             class="flex absolute -top-1 -right-1 items-center m-4 space-x-1"
-                          />
+                          >
+                            <div
+                              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                              data-testid="WalletIcon__TestNetwork"
+                            >
+                              <div
+                                class="sc-bdnxRM AFVmm"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  code.svg
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -2830,6 +2903,20 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                               >
                                 <svg>
                                   second-signature.svg
+                                </svg>
+                              </div>
+                            </div>
+                            <div
+                              class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                              data-testid="WalletIcon__TestNetwork"
+                            >
+                              <div
+                                class="sc-bdnxRM AFVmm"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  code.svg
                                 </svg>
                               </div>
                             </div>
