@@ -123,7 +123,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 3,
 	},
 	"domains/vote": {
 		coverageThreshold: {
@@ -250,11 +250,16 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 			},
 			{
 				name: "Test",
-				run: `./node_modules/react-app-rewired/bin/index.js --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=${maxWorkers} --logHeapUsage --watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
-					collectCoverageFrom,
-				)}' --coverageThreshold='${JSON.stringify({
-					[`./src/${directory}/`]: coverageThreshold,
-				})}'`,
+				uses: "nick-invision/retry@v2",
+				with: {
+					timeout_minutes: 10,
+					max_attempts: 3,
+					command: `./node_modules/react-app-rewired/bin/index.js --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=${maxWorkers} --logHeapUsage --watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
+						collectCoverageFrom,
+					)}' --coverageThreshold='${JSON.stringify({
+						[`./src/${directory}/`]: coverageThreshold,
+					})}'`,
+				},
 			},
 		],
 	};

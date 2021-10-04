@@ -183,7 +183,7 @@
 		"@cucumber/cucumber": "^7.3.1",
 		"@ledgerhq/hw-transport": "^6.3.0",
 		"@ledgerhq/hw-transport-mocker": "^6.3.0",
-		"@sindresorhus/slugify": "^2.1.0",
+		"@sindresorhus/slugify": "^1.0.0",
 		"@testing-library/jest-dom": "^5.11.10",
 		"@testing-library/react": "^11.2.5",
 		"@testing-library/react-hooks": "^5.1.1",
