@@ -1968,9 +1968,9 @@ exports[`Wallets should render grid 1`] = `
                           data-testid="WalletIcon__TestNetwork"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               code.svg
@@ -2064,9 +2064,9 @@ exports[`Wallets should render grid 1`] = `
                           data-testid="WalletIcon__SecondSignature"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               second-signature.svg
@@ -2078,9 +2078,9 @@ exports[`Wallets should render grid 1`] = `
                           data-testid="WalletIcon__TestNetwork"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               code.svg
@@ -2174,9 +2174,9 @@ exports[`Wallets should render grid 1`] = `
                           data-testid="WalletIcon__SecondSignature"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               second-signature.svg
@@ -2487,9 +2487,9 @@ exports[`Wallets should render grid in loading state 1`] = `
                           data-testid="WalletIcon__TestNetwork"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               code.svg
@@ -2583,9 +2583,9 @@ exports[`Wallets should render grid in loading state 1`] = `
                           data-testid="WalletIcon__SecondSignature"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               second-signature.svg
@@ -2597,9 +2597,9 @@ exports[`Wallets should render grid in loading state 1`] = `
                           data-testid="WalletIcon__TestNetwork"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               code.svg
@@ -2693,9 +2693,9 @@ exports[`Wallets should render grid in loading state 1`] = `
                           data-testid="WalletIcon__SecondSignature"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               second-signature.svg
@@ -3695,9 +3695,9 @@ exports[`Wallets should render without testnet wallets 1`] = `
                           data-testid="WalletIcon__SecondSignature"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               second-signature.svg
@@ -4104,9 +4104,9 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           data-testid="WalletIcon__TestNetwork"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               code.svg
@@ -4200,9 +4200,9 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           data-testid="WalletIcon__SecondSignature"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               second-signature.svg
@@ -4214,9 +4214,9 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           data-testid="WalletIcon__TestNetwork"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               code.svg
@@ -4310,9 +4310,9 @@ exports[`Wallets should toggle between grid and list view 1`] = `
                           data-testid="WalletIcon__SecondSignature"
                         >
                           <div
-                            class="sc-bdnxRM AFVmm"
-                            height="16"
-                            width="16"
+                            class="sc-bdnxRM NjstW"
+                            height="20"
+                            width="20"
                           >
                             <svg>
                               second-signature.svg

@@ -26,20 +26,17 @@ const Wrapper = styled.div(({ width, height }: WrapperProperties) => ({
 export const Icon = ({ name, fallback, size, ...properties }: Properties) => {
 	const Svg = SvgCollection[name];
 
-	const getDimensions = (size?: Size) => {
-		if (size === "sm") {
-			return [10, 10];
-		}
+	const getDimensions = (size?: Size): number[] => {
+		const sizeMap: {
+			[key: string]: number[];
+		} = {
+			lg: [20, 20],
+			md: [16, 16],
+			sm: [10, 10],
+			xl: [40, 40],
+		};
 
-		if (size === "lg") {
-			return [20, 20];
-		}
-
-		if (size === "xl") {
-			return [40, 40];
-		}
-
-		return [16, 16];
+		return sizeMap[size || "md"];
 	};
 
 	const [width, height] = getDimensions(size);
