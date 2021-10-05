@@ -32,7 +32,6 @@ export const PlatformSdkChoices = {
 	},
 	languages: [{ label: "English", value: "en-US" }],
 	marketProviders: [
-		{ label: "CoinCap", value: "coincap" },
 		{ label: "CoinGecko", value: "coingecko" },
 		{ label: "CryptoCompare", value: "cryptocompare" },
 	],
