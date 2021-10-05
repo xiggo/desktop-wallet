@@ -35,14 +35,13 @@ export const WalletsList = memo(
 			},
 			{
 				Header: t("COMMON.BALANCE"),
-				accessor: ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => wallet?.balance?.().toFixed(0),
+				accessor: ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => wallet?.balance?.(),
 				cellWidth: "w-72",
 				className: "flex-row-reverse justify-end",
 			},
 			{
 				Header: t("COMMON.CURRENCY"),
-				accessor: ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =>
-					wallet?.convertedBalance?.().toFixed(0),
+				accessor: ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => wallet?.convertedBalance?.(),
 				cellWidth: "w-44",
 				className: "flex-row-reverse justify-end",
 			},
