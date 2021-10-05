@@ -53,7 +53,7 @@ export const ProcessingImport = ({
 
 				if (error.message === "InvalidPassword") {
 					setIsPasswordModalOpen(true);
-					setPasswordError(t("COMMON.VALIDATION.SUBJECT_INVALID", { subject: t("COMMON.PASSWORD") }));
+					setPasswordError(t("COMMON.VALIDATION.FIELD_INVALID", { field: t("COMMON.PASSWORD") }));
 					return;
 				}
 

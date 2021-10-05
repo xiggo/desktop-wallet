@@ -327,7 +327,6 @@ export const translations: { [key: string]: any } = {
 		PASSWORD_WEAK:
 			"The password must contain at least 1 lowercase character, 1 uppercase character, 1 numeric character, 1 special character and must be 8 characters or longer",
 		RECIPIENT_INVALID: "Recipient address is invalid",
-		SUBJECT_INVALID: "The {{subject}} is invalid",
 		SUBJECT_MISMATCH: "The {{subject}} do not match",
 	},
 	VALUE: "Value",
