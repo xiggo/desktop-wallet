@@ -25,7 +25,6 @@ export const translations: { [key: string]: any } = {
 	AWAITING_SIGNATURE: "Awaiting Signature",
 	BACK: "Back",
 	BACKGROUND: "Background",
-	BACK_TO_HOME: "Back to Home",
 	BACK_TO_WALLET: "Back to Wallet",
 	BALANCE: "Balance",
 	BEST: "Best",

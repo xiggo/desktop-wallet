@@ -85,7 +85,7 @@ exports[`Import Profile - Error Step should render 1`] = `
         <div
           class="flex items-center space-x-2"
         >
-          Back to Home
+          Back
         </div>
       </button>
       <button

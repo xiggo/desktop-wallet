@@ -24,7 +24,7 @@ export const ImportError = ({ file, onBack, onRetry }: ImportErrorProperties) =>
 
 			<div className="flex justify-end mt-8 space-x-3">
 				<Button data-testid="ImportError__back" variant="secondary" onClick={onBack}>
-					{t("COMMON.BACK_TO_HOME")}
+					{t("COMMON.BACK")}
 				</Button>
 				<Button data-testid="ImportError__retry" onClick={onRetry}>
 					{t("COMMON.RETRY")}
