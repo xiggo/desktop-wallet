@@ -34,7 +34,7 @@ export const AddressTable = ({ wallets, onSelect, isCompact = false }: AddressTa
 		},
 		{
 			Header: t("COMMON.BALANCE"),
-			accessor: (wallet: Contracts.IReadWriteWallet) => wallet.balance?.().toFixed(0),
+			accessor: (wallet: Contracts.IReadWriteWallet) => wallet.balance?.(),
 			cellWidth: "w-60",
 			className: "justify-end",
 		},
