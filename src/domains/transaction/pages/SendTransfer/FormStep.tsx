@@ -4,7 +4,6 @@ import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { InputCounter } from "app/components/Input";
 import { useProfileJobs } from "app/hooks";
-import { toasts } from "app/services";
 import { SelectNetwork } from "domains/network/components/SelectNetwork";
 import { SelectAddress } from "domains/profile/components/SelectAddress";
 import { AddRecipient } from "domains/transaction/components/AddRecipient";
@@ -148,9 +147,6 @@ export const FormStep = ({
 						onChange={(value: RecipientListItem[]) =>
 							setValue("recipients", value, { shouldDirty: true, shouldValidate: true })
 						}
-						onTypeChange={() => {
-							toasts.warning(t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE"));
-						}}
 					/>
 				</div>
 

@@ -119,7 +119,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		isMultiSignatureRegistration: () => true,
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
-		type: () => "secondSignature",
+		type: () => "multiSignature",
 		usesMultiSignature: () => false,
 	} as any);
 
@@ -398,10 +398,11 @@ describe("Registration", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
 
 		// Step 2
-		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toHaveAttribute("disabled"));
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review step
+		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Authentication step

@@ -256,7 +256,7 @@ describe("MultiSignature Registration Form", () => {
 
 		await waitFor(() => expect(form?.getValues("participants")).toHaveLength(2));
 
-		await waitFor(() => expect(form?.getValues("fee")).toBe(fees.static + fees.static * 2));
+		await waitFor(() => expect(form?.getValues("fee")?.toString()).toBe(`${fees.static + fees.static * 2}`));
 	});
 
 	it("should limit min required signatures to max participants", async () => {

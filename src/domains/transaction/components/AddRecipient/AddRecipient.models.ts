@@ -14,7 +14,6 @@ export interface AddRecipientProperties {
 	disableMultiPaymentOption?: boolean;
 	withDeeplink?: boolean;
 	onChange?: (recipients: RecipientListItem[]) => void;
-	onTypeChange?: (isSingle: boolean) => void;
 }
 
 export interface ToggleButtonProperties {

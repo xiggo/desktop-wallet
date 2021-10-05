@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { DateTime } from "@payvo/intl";
 import { Contracts, DTO } from "@payvo/profiles";
+import { LSK } from "@payvo/sdk-lsk";
 import { screen } from "@testing-library/react";
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider, minVersionList } from "app/contexts";
 import { useProfileStatusWatcher } from "app/hooks";
-import { toasts } from "app/services";
+import * as useFeesHook from "app/hooks/use-fees";
 import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -100,6 +101,8 @@ describe("SendTransfer", () => {
 		getVersionSpy = jest
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+
+		nock.disableNetConnect();
 
 		nock("https://ark-test.payvo.com")
 			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
@@ -1039,6 +1042,121 @@ describe("SendTransfer", () => {
 		pushSpy.mockRestore();
 	});
 
+	it("should correctly handle fees when network's fee type is size", async () => {
+		env.registerCoin("LSK", LSK);
+
+		const { wallet: lskWallet } = await profile.walletFactory().generate({
+			coin: "LSK",
+			network: "lsk.testnet",
+		});
+
+		jest.spyOn(lskWallet, "balance").mockReturnValue(10);
+		jest.spyOn(lskWallet, "isDelegate").mockReturnValue(false);
+
+		profile.wallets().push(lskWallet);
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${lskWallet.id()}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
+		const useFeesMock = jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve({ avg: 0.1, max: 0.1, min: 0.1, static: 0.1 }),
+		});
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<LedgerProvider transport={getDefaultLedgerTransport()}>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("Lisk Testnet"));
+		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(lskWallet.address()));
+
+		const goSpy = jest.spyOn(history, "go").mockImplementation();
+
+		const backButton = screen.getByTestId("StepNavigation__back-button");
+
+		expect(backButton).not.toHaveAttribute("disabled");
+
+		fireEvent.click(backButton);
+
+		expect(goSpy).toHaveBeenCalledWith(-1);
+
+		// Select recipient
+		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
+			target: { value: "lsksktujwqbak4azhj57sd8rtc58y7tjb5tgq8oyk" },
+		});
+		await waitFor(() =>
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(
+				"lsksktujwqbak4azhj57sd8rtc58y7tjb5tgq8oyk",
+			),
+		);
+
+		// Set amount
+		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		// Assert that fee initial value is 0 and then it changes to 0.1 when loaded
+		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0 LSK");
+
+		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.1 LSK"));
+		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+
+		// Continue to review step
+		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__review-step")).toBeTruthy());
+
+		expect(
+			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[0],
+		).toHaveTextContent("1 LSK");
+		expect(
+			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[1],
+		).toHaveTextContent("0.1 LSK");
+		expect(
+			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[2],
+		).toHaveTextContent("1.1 LSK");
+
+		expect(backButton).not.toHaveAttribute("disabled");
+
+		// Go back to form step
+		fireEvent.click(backButton);
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+
+		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.1 LSK"));
+
+		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
+
+		// Continue to review step
+		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__review-step")).toBeTruthy());
+
+		expect(
+			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[0],
+		).toHaveTextContent("1 LSK");
+		expect(
+			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[1],
+		).toHaveTextContent("0.1 LSK");
+		expect(
+			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[2],
+		).toHaveTextContent("1.1 LSK");
+
+		profile.wallets().forget(lskWallet.id());
+
+		useFeesMock.mockRestore();
+		goSpy.mockRestore();
+	});
+
 	it("should fail sending a single transfer", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
@@ -1885,37 +2003,6 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
 
 		broadcastMock.mockRestore();
-	});
-
-	it("should show fee update warning when switching transaction type", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
-
-		const history = createMemoryHistory();
-		history.push(transferURL);
-
-		const { getByTestId, getByText } = renderWithRouter(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider transport={getDefaultLedgerTransport()}>
-					<SendTransfer />
-				</LedgerProvider>
-			</Route>,
-			{
-				history,
-				routes: [transferURL],
-			},
-		);
-
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
-
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
-
-		fireEvent.click(getByText(transactionTranslations.MULTIPLE));
-		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
-
-		fireEvent.click(getByText(transactionTranslations.SINGLE));
-		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
-
-		toastSpy.mockRestore();
 	});
 
 	it("should send a multi payment", async () => {

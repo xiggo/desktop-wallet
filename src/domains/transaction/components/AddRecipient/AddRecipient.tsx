@@ -83,7 +83,6 @@ export const AddRecipient = ({
 	disableMultiPaymentOption,
 	withDeeplink,
 	onChange,
-	onTypeChange,
 }: AddRecipientProperties) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientListItem[]>([]);
@@ -348,7 +347,6 @@ export const AddRecipient = ({
 						disableMultiple={disableMultiPaymentOption}
 						onChange={(isSingle) => {
 							setIsSingle(isSingle);
-							onTypeChange?.(isSingle);
 						}}
 					/>
 				)}

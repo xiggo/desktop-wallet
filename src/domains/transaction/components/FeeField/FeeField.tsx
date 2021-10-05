@@ -2,9 +2,11 @@ import { isEqual } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useDebounce, useFees } from "app/hooks";
+import { toasts } from "app/services";
 import { InputFee } from "domains/transaction/components/InputFee";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 interface Properties {
 	type: string;
@@ -15,6 +17,7 @@ interface Properties {
 
 export const FeeField: React.FC<Properties> = ({ type, network, profile, ...properties }: Properties) => {
 	const isMounted = useRef(true);
+	const { t } = useTranslation();
 
 	const { calculate } = useFees(profile);
 
@@ -33,28 +36,32 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	const usesSizeBasedFee = useMemo(() => network.feeType() === "size", [network]);
 	const usesStaticFee = useMemo(() => network.feeType() !== "dynamic" || !fees?.isDynamic, [fees, network]);
 
-	useEffect(() => {
-		if (!usesSizeBasedFee) {
-			return;
-		}
+	const showFeeChangedToast = () => {
+		toasts.warning(t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE"));
+	};
 
-		if (isCalculatingFee) {
-			// This message does not need i18n as it is only intended to mark
-			// the form as invalid until fee calculation has been completed.
-			setError("feeCalculation", { message: "fee calculation not completed" });
-		} else {
-			clearErrors("feeCalculation");
+	useEffect(() => {
+		if (usesSizeBasedFee || type === "multiSignature") {
+			if (isCalculatingFee) {
+				// This message does not need i18n as it is only intended to mark
+				// the form as invalid until fee calculation has been completed.
+				setError("feeCalculation", { message: "fee calculation not completed" });
+			} else {
+				clearErrors("feeCalculation");
+			}
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isCalculatingFee, setError, clearErrors, usesSizeBasedFee]);
 
 	useEffect(() => {
-		const resetFees = () => {
-			setValue("fees", { avg: 0, max: 0, min: 0, static: 0 });
-			setValue("fee", 0, { shouldDirty: false, shouldValidate: false });
-		};
-
 		const recalculateFee = async () => {
+			// Set fees to 0 when fee type is "size" but current form data
+			// is not sufficient yet to calculate the transaction fees.
 			if (usesSizeBasedFee) {
+				const resetFees = () => {
+					setValue("fees", { avg: 0, max: 0, min: 0, static: 0 });
+				};
+
 				if (data === undefined) {
 					return resetFees();
 				}
@@ -90,10 +97,27 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 			});
 
 			if (!isEqual(getValues("fees"), transactionFees)) {
-				setValue("fees", transactionFees, {
-					shouldDirty: true,
-					shouldValidate: true,
-				});
+				if (
+					network.feeType() === "static" ||
+					transactionFees.isDynamic === false ||
+					getValues("fee") === undefined
+				) {
+					const newFee = transactionFees.isDynamic ? transactionFees.avg : transactionFees.static;
+
+					if (getValues("fee") !== undefined) {
+						showFeeChangedToast();
+					}
+
+					setValue("fee", newFee, { shouldDirty: true, shouldValidate: true });
+				}
+
+				if (usesSizeBasedFee && +getValues("fee") < +transactionFees.min) {
+					setValue("fee", transactionFees.min, { shouldDirty: true, shouldValidate: true });
+
+					showFeeChangedToast();
+				}
+
+				setValue("fees", transactionFees, { shouldDirty: true, shouldValidate: true });
 			}
 
 			/* istanbul ignore next */
@@ -103,6 +127,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		};
 
 		recalculateFee();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [calculate, data, getValues, isMounted, network, setValue, type, usesSizeBasedFee]);
 
 	useEffect(
@@ -112,14 +137,6 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 		},
 		[],
 	);
-
-	useEffect(() => {
-		if (fees && getValues("fee") === undefined) {
-			const feeValue = fees.isDynamic ? fees.avg : fees.static;
-
-			setValue("fee", feeValue, { shouldDirty: true, shouldValidate: true });
-		}
-	}, [fees, setValue, getValues]);
 
 	return (
 		<InputFee

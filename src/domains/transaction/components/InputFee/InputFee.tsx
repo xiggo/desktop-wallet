@@ -45,12 +45,12 @@ export const InputFee: React.FC<InputFeeProperties> = memo(
 		useEffect(() => {
 			const setDefaultAdvancedValue = () => {
 				if (avg && isNil(advancedValue)) {
-					setAdvancedValue(avg.toString());
+					onChangeAdvancedValue(avg.toString());
 				}
 			};
 
 			setDefaultAdvancedValue();
-		}, [avg, advancedValue]);
+		}, [avg, advancedValue]); // eslint-disable-line react-hooks/exhaustive-deps
 
 		const ticker = network?.ticker();
 		const exchangeTicker = profile?.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
