@@ -8057,15 +8057,15 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                 </div>
               </div>
               <div
-                class="flex"
+                class="flex space-x-2"
               >
                 <h2
-                  class="mb-0 text-2xl font-bold"
+                  class="mb-0 text-lg font-bold"
                 >
                   ARK Devnet
                 </h2>
                 <span
-                  class="ml-2 text-2xl font-bold text-theme-secondary-500 dark:text-theme-secondary-700"
+                  class="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700"
                 >
                   3
                 </span>

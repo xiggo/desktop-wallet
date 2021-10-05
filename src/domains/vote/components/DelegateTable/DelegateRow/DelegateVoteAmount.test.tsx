@@ -19,6 +19,14 @@ let walletBalanceMock: jest.SpyInstance;
 let votesAmountMinimumMock: jest.SpyInstance;
 let votesAmountStepMock: jest.SpyInstance;
 
+const Wrapper = ({ children }: { children: React.ReactNode }) => (
+	<table>
+		<tbody>
+			<tr>{children}</tr>
+		</tbody>
+	</table>
+);
+
 describe("DelegateVoteAmount", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
@@ -47,18 +55,20 @@ describe("DelegateVoteAmount", () => {
 
 		// eslint-disable-next-line react/display-name
 		Component = () => (
-			<DelegateVoteAmount
-				isSelectedVote={true}
-				isSelectedUnvote={false}
-				selectedWallet={wallet}
-				selectedUnvotes={[]}
-				selectedVotes={selectedVotes}
-				toggleUnvotesSelected={jest.fn()}
-				toggleVotesSelected={jest.fn()}
-				delegateAddress={delegate.address()}
-				availableBalance={wallet.balance()}
-				setAvailableBalance={jest.fn()}
-			/>
+			<Wrapper>
+				<DelegateVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={selectedVotes}
+					toggleUnvotesSelected={jest.fn()}
+					toggleVotesSelected={jest.fn()}
+					delegateAddress={delegate.address()}
+					availableBalance={wallet.balance()}
+					setAvailableBalance={jest.fn()}
+				/>
+			</Wrapper>
 		);
 	});
 
@@ -70,19 +80,21 @@ describe("DelegateVoteAmount", () => {
 
 	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
 		const { container, asFragment } = render(
-			<DelegateVoteAmount
-				isSelectedVote={true}
-				isSelectedUnvote={false}
-				selectedWallet={wallet}
-				selectedUnvotes={[]}
-				selectedVotes={[]}
-				toggleUnvotesSelected={jest.fn()}
-				toggleVotesSelected={jest.fn()}
-				delegateAddress={delegate.address()}
-				availableBalance={wallet.balance()}
-				setAvailableBalance={jest.fn()}
-				isCompact={isCompact}
-			/>,
+			<Wrapper>
+				<DelegateVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={[]}
+					toggleUnvotesSelected={jest.fn()}
+					toggleVotesSelected={jest.fn()}
+					delegateAddress={delegate.address()}
+					availableBalance={wallet.balance()}
+					setAvailableBalance={jest.fn()}
+					isCompact={isCompact}
+				/>
+			</Wrapper>,
 		);
 
 		expect(container).toBeTruthy();
@@ -91,18 +103,20 @@ describe("DelegateVoteAmount", () => {
 
 	it("should change alignment of input by focus", () => {
 		const { container, asFragment } = render(
-			<DelegateVoteAmount
-				isSelectedVote={false}
-				isSelectedUnvote={false}
-				selectedWallet={wallet}
-				selectedUnvotes={[]}
-				selectedVotes={[]}
-				toggleUnvotesSelected={jest.fn()}
-				toggleVotesSelected={jest.fn()}
-				delegateAddress={delegate.address()}
-				availableBalance={wallet.balance()}
-				setAvailableBalance={jest.fn()}
-			/>,
+			<Wrapper>
+				<DelegateVoteAmount
+					isSelectedVote={false}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={[]}
+					toggleUnvotesSelected={jest.fn()}
+					toggleVotesSelected={jest.fn()}
+					delegateAddress={delegate.address()}
+					availableBalance={wallet.balance()}
+					setAvailableBalance={jest.fn()}
+				/>
+			</Wrapper>,
 		);
 
 		const amountField = screen.getByTestId("InputCurrency");
@@ -123,18 +137,20 @@ describe("DelegateVoteAmount", () => {
 
 	it("should focus on the input by clicking on ticker", () => {
 		render(
-			<DelegateVoteAmount
-				isSelectedVote={true}
-				isSelectedUnvote={false}
-				selectedWallet={wallet}
-				selectedUnvotes={[]}
-				selectedVotes={[]}
-				toggleUnvotesSelected={jest.fn()}
-				toggleVotesSelected={jest.fn()}
-				delegateAddress={delegate.address()}
-				availableBalance={wallet.balance()}
-				setAvailableBalance={jest.fn()}
-			/>,
+			<Wrapper>
+				<DelegateVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={[]}
+					toggleUnvotesSelected={jest.fn()}
+					toggleVotesSelected={jest.fn()}
+					delegateAddress={delegate.address()}
+					availableBalance={wallet.balance()}
+					setAvailableBalance={jest.fn()}
+				/>
+			</Wrapper>,
 		);
 
 		const amountField = screen.getByTestId("InputCurrency");
@@ -254,18 +270,20 @@ describe("DelegateVoteAmount", () => {
 			];
 
 			render(
-				<DelegateVoteAmount
-					isSelectedVote={true}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={selectedVotes}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
-					delegateAddress={delegate.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
-				/>,
+				<Wrapper>
+					<DelegateVoteAmount
+						isSelectedVote={true}
+						isSelectedUnvote={false}
+						selectedWallet={wallet}
+						selectedUnvotes={[]}
+						selectedVotes={selectedVotes}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						delegateAddress={delegate.address()}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+					/>
+				</Wrapper>,
 			);
 
 			await waitFor(() => {
@@ -286,19 +304,21 @@ describe("DelegateVoteAmount", () => {
 			];
 
 			render(
-				<DelegateVoteAmount
-					isSelectedVote={true}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={selectedUnvotes}
-					selectedVotes={[]}
-					voted={voted}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
-					delegateAddress={delegate.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
-				/>,
+				<Wrapper>
+					<DelegateVoteAmount
+						isSelectedVote={true}
+						isSelectedUnvote={false}
+						selectedWallet={wallet}
+						selectedUnvotes={selectedUnvotes}
+						selectedVotes={[]}
+						voted={voted}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						delegateAddress={delegate.address()}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+					/>
+				</Wrapper>,
 			);
 
 			await waitFor(() => {
@@ -313,19 +333,21 @@ describe("DelegateVoteAmount", () => {
 			};
 
 			render(
-				<DelegateVoteAmount
-					isSelectedVote={true}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={[]}
-					voted={voted}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
-					delegateAddress={delegate.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
-				/>,
+				<Wrapper>
+					<DelegateVoteAmount
+						isSelectedVote={true}
+						isSelectedUnvote={false}
+						selectedWallet={wallet}
+						selectedUnvotes={[]}
+						selectedVotes={[]}
+						voted={voted}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						delegateAddress={delegate.address()}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+					/>
+				</Wrapper>,
 			);
 
 			await waitFor(() => {
@@ -346,19 +368,21 @@ describe("DelegateVoteAmount", () => {
 				selectedUnvotes: VoteDelegateProperties[];
 				selectedVotes: VoteDelegateProperties[];
 			}) => (
-				<DelegateVoteAmount
-					isSelectedVote={true}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={selectedUnvotes}
-					selectedVotes={selectedVotes}
-					voted={voted}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
-					delegateAddress={delegate.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
-				/>
+				<Wrapper>
+					<DelegateVoteAmount
+						isSelectedVote={true}
+						isSelectedUnvote={false}
+						selectedWallet={wallet}
+						selectedUnvotes={selectedUnvotes}
+						selectedVotes={selectedVotes}
+						voted={voted}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						delegateAddress={delegate.address()}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+					/>
+				</Wrapper>
 			);
 
 			const selectedVotes: VoteDelegateProperties[] = [
@@ -424,18 +448,20 @@ describe("DelegateVoteAmount", () => {
 		];
 
 		const VoteAmount = () => (
-			<DelegateVoteAmount
-				isSelectedVote={true}
-				isSelectedUnvote={false}
-				selectedWallet={wallet}
-				selectedUnvotes={[]}
-				selectedVotes={selectedVotes}
-				toggleUnvotesSelected={jest.fn()}
-				toggleVotesSelected={toggleVotesSelected}
-				delegateAddress={delegate.address()}
-				availableBalance={availableBalance}
-				setAvailableBalance={setAvailableBalance}
-			/>
+			<Wrapper>
+				<DelegateVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={selectedVotes}
+					toggleUnvotesSelected={jest.fn()}
+					toggleVotesSelected={toggleVotesSelected}
+					delegateAddress={delegate.address()}
+					availableBalance={availableBalance}
+					setAvailableBalance={setAvailableBalance}
+				/>
+			</Wrapper>
 		);
 
 		const { rerender } = render(<VoteAmount />);
@@ -464,18 +490,20 @@ describe("DelegateVoteAmount", () => {
 		const setAvailableBalance = jest.fn((balance: number) => (availableBalance = balance));
 
 		const VoteAmount = () => (
-			<DelegateVoteAmount
-				isSelectedVote={true}
-				isSelectedUnvote={false}
-				selectedWallet={wallet}
-				selectedUnvotes={[]}
-				selectedVotes={[]}
-				toggleUnvotesSelected={jest.fn()}
-				toggleVotesSelected={jest.fn()}
-				delegateAddress={delegate.address()}
-				availableBalance={availableBalance}
-				setAvailableBalance={setAvailableBalance}
-			/>
+			<Wrapper>
+				<DelegateVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={[]}
+					toggleUnvotesSelected={jest.fn()}
+					toggleVotesSelected={jest.fn()}
+					delegateAddress={delegate.address()}
+					availableBalance={availableBalance}
+					setAvailableBalance={setAvailableBalance}
+				/>
+			</Wrapper>
 		);
 
 		const { rerender } = render(<VoteAmount />);
@@ -516,19 +544,21 @@ describe("DelegateVoteAmount", () => {
 		};
 
 		const VoteAmount = () => (
-			<DelegateVoteAmount
-				isSelectedVote={true}
-				isSelectedUnvote={false}
-				selectedWallet={wallet}
-				selectedUnvotes={[]}
-				selectedVotes={[]}
-				voted={voted}
-				toggleUnvotesSelected={toggleUnvotesSelected}
-				toggleVotesSelected={toggleVotesSelected}
-				delegateAddress={delegate.address()}
-				availableBalance={availableBalance}
-				setAvailableBalance={setAvailableBalance}
-			/>
+			<Wrapper>
+				<DelegateVoteAmount
+					isSelectedVote={true}
+					isSelectedUnvote={false}
+					selectedWallet={wallet}
+					selectedUnvotes={[]}
+					selectedVotes={[]}
+					voted={voted}
+					toggleUnvotesSelected={toggleUnvotesSelected}
+					toggleVotesSelected={toggleVotesSelected}
+					delegateAddress={delegate.address()}
+					availableBalance={availableBalance}
+					setAvailableBalance={setAvailableBalance}
+				/>
+			</Wrapper>
 		);
 
 		const { rerender } = render(<VoteAmount />);
@@ -615,18 +645,20 @@ describe("DelegateVoteAmount", () => {
 	describe("disabled", () => {
 		it("should render disabled", () => {
 			render(
-				<DelegateVoteAmount
-					isSelectedVote={false}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={[]}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
-					delegateAddress={delegate.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
-				/>,
+				<Wrapper>
+					<DelegateVoteAmount
+						isSelectedVote={false}
+						isSelectedUnvote={false}
+						selectedWallet={wallet}
+						selectedUnvotes={[]}
+						selectedVotes={[]}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						delegateAddress={delegate.address()}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+					/>
+				</Wrapper>,
 			);
 
 			expect(screen.getByTestId("InputCurrency")).toBeDisabled();
@@ -634,18 +666,20 @@ describe("DelegateVoteAmount", () => {
 
 		it("should hide error after disabled", async () => {
 			const VoteAmount = ({ isSelectedVote }: { isSelectedVote: boolean }) => (
-				<DelegateVoteAmount
-					isSelectedVote={isSelectedVote}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={[]}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
-					delegateAddress={delegate.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
-				/>
+				<Wrapper>
+					<DelegateVoteAmount
+						isSelectedVote={isSelectedVote}
+						isSelectedUnvote={false}
+						selectedWallet={wallet}
+						selectedUnvotes={[]}
+						selectedVotes={[]}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						delegateAddress={delegate.address()}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={jest.fn()}
+					/>
+				</Wrapper>
 			);
 
 			const { rerender } = render(<VoteAmount isSelectedVote />);
@@ -669,18 +703,20 @@ describe("DelegateVoteAmount", () => {
 			const setAvailableBalance = jest.fn((balance: number) => (availableBalance = balance));
 
 			const VoteAmount = ({ isSelectedVote }: { isSelectedVote: boolean }) => (
-				<DelegateVoteAmount
-					isSelectedVote={isSelectedVote}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={[]}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={toggleVotesSelected}
-					delegateAddress={delegate.address()}
-					availableBalance={availableBalance}
-					setAvailableBalance={setAvailableBalance}
-				/>
+				<Wrapper>
+					<DelegateVoteAmount
+						isSelectedVote={isSelectedVote}
+						isSelectedUnvote={false}
+						selectedWallet={wallet}
+						selectedUnvotes={[]}
+						selectedVotes={[]}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={toggleVotesSelected}
+						delegateAddress={delegate.address()}
+						availableBalance={availableBalance}
+						setAvailableBalance={setAvailableBalance}
+					/>
+				</Wrapper>
 			);
 
 			const { rerender } = render(<VoteAmount isSelectedVote />);
@@ -713,19 +749,21 @@ describe("DelegateVoteAmount", () => {
 			};
 
 			const VoteAmount = ({ isSelectedUnvote }: { isSelectedUnvote: boolean }) => (
-				<DelegateVoteAmount
-					isSelectedVote={true}
-					isSelectedUnvote={isSelectedUnvote}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={[]}
-					voted={voted}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
-					delegateAddress={delegate.address()}
-					availableBalance={availableBalance}
-					setAvailableBalance={setAvailableBalance}
-				/>
+				<Wrapper>
+					<DelegateVoteAmount
+						isSelectedVote={true}
+						isSelectedUnvote={isSelectedUnvote}
+						selectedWallet={wallet}
+						selectedUnvotes={[]}
+						selectedVotes={[]}
+						voted={voted}
+						toggleUnvotesSelected={jest.fn()}
+						toggleVotesSelected={jest.fn()}
+						delegateAddress={delegate.address()}
+						availableBalance={availableBalance}
+						setAvailableBalance={setAvailableBalance}
+					/>
+				</Wrapper>
 			);
 
 			const { rerender } = render(<VoteAmount isSelectedUnvote={false} />);

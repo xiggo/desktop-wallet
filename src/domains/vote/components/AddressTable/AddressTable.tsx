@@ -94,9 +94,9 @@ export const AddressTable = ({ wallets, onSelect, isCompact = false }: AddressTa
 		<div data-testid="AddressTable">
 			<div className="flex items-center py-5 space-x-4">
 				<NetworkIcon size="lg" network={wallet.network()} />
-				<div className="flex">
-					<h2 className="mb-0 text-2xl font-bold">{wallet.network().displayName()}</h2>
-					<span className="ml-2 text-2xl font-bold text-theme-secondary-500 dark:text-theme-secondary-700">
+				<div className="flex space-x-2">
+					<h2 className="mb-0 text-lg font-bold">{wallet.network().displayName()}</h2>
+					<span className="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700">
 						{wallets.length}
 					</span>
 				</div>
