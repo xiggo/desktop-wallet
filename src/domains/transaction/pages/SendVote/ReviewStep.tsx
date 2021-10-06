@@ -28,11 +28,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 
 			<TransactionNetwork network={wallet.network()} border={false} />
 
-			<TransactionSender
-				address={wallet.address()}
-				alias={wallet.alias()}
-				isDelegate={wallet.isDelegate() && !wallet.isResignedDelegate()}
-			/>
+			<TransactionSender wallet={wallet} />
 
 			{unvotes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}>

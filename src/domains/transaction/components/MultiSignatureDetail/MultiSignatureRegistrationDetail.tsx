@@ -1,4 +1,3 @@
-import { DTO } from "@payvo/profiles";
 import { Enums } from "@payvo/sdk";
 import { Modal } from "app/components/Modal";
 import { RecipientList } from "domains/transaction/components/RecipientList";
@@ -14,17 +13,9 @@ import {
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-interface MultisignatureRegistrationDetailProperties {
-	isOpen: boolean;
-	transaction: DTO.ExtendedConfirmedTransactionData;
-	onClose?: () => void;
-}
+import { TransactionDetailProperties } from "../TransactionDetailModal/TransactionDetailModal.models";
 
-export const MultiSignatureRegistrationDetail = ({
-	isOpen,
-	transaction,
-	onClose,
-}: MultisignatureRegistrationDetailProperties) => {
+export const MultiSignatureRegistrationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 
 	const wallet = transaction.wallet();
@@ -61,11 +52,11 @@ export const MultiSignatureRegistrationDetail = ({
 		<Modal title={t("TRANSACTION.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender address={transaction.sender()} alias={wallet.alias()} border={false} />
+			<TransactionSender wallet={wallet} border={false} />
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 
-			<TransactionTimestamp timestamp={transaction.timestamp()!} />
+			<TransactionTimestamp timestamp={transaction.timestamp()} />
 
 			<TransactionConfirmations transaction={transaction} />
 

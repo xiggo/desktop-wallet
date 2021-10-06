@@ -373,7 +373,7 @@ export const WalletHeader = ({
 			<ReceiveFunds
 				isOpen={modal === "receive-funds"}
 				address={wallet.address()}
-				name={wallet.alias()}
+				name={alias}
 				network={wallet.network()}
 				onClose={() => setModal(undefined)}
 			/>

@@ -9,6 +9,13 @@ export interface TransactionAliases {
 export interface TransactionDetailModalProperties {
 	isOpen: boolean;
 	transactionItem: DTO.ExtendedConfirmedTransactionData;
-	profile?: Contracts.IProfile;
+	profile: Contracts.IProfile;
+	onClose?: any;
+}
+
+export interface TransactionDetailProperties {
+	isOpen: boolean;
+	transaction: DTO.ExtendedConfirmedTransactionData;
+	aliases?: TransactionAliases;
 	onClose?: any;
 }

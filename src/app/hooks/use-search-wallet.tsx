@@ -2,8 +2,16 @@ import { Contracts } from "@payvo/profiles";
 import { RecipientProperties } from "domains/transaction/components/SearchRecipient/SearchRecipient.models";
 import { useCallback, useMemo, useState } from "react";
 
-export const useSearchWallet = (list: Contracts.IReadWriteWallet[] | RecipientProperties[]) => {
+import { useWalletAlias } from "./use-wallet-alias";
+
+interface SearchWalletProperties {
+	profile?: Contracts.IProfile;
+	wallets: Contracts.IReadWriteWallet[] | RecipientProperties[];
+}
+
+export const useSearchWallet = ({ profile, wallets }: SearchWalletProperties) => {
 	const [searchKeyword, setSearchKeyword] = useState("");
+	const { getWalletAlias } = useWalletAlias();
 
 	const matchKeyword = useCallback((value?: string) => value?.toLowerCase().includes(searchKeyword.toLowerCase()), [
 		searchKeyword,
@@ -11,19 +19,25 @@ export const useSearchWallet = (list: Contracts.IReadWriteWallet[] | RecipientPr
 
 	const filteredList = useMemo(() => {
 		if (searchKeyword.length === 0) {
-			return list;
+			return wallets;
 		}
 
-		if (typeof list[0].address === "string") {
-			return (list as RecipientProperties[]).filter(
+		if (typeof wallets[0].address === "string") {
+			return (wallets as RecipientProperties[]).filter(
 				({ address, alias }) => matchKeyword(address) || matchKeyword(alias),
 			);
 		}
 
-		return (list as Contracts.IReadWriteWallet[]).filter(
-			(wallet) => matchKeyword(wallet.address()) || matchKeyword(wallet.alias()),
-		);
-	}, [list, matchKeyword, searchKeyword.length]);
+		return (wallets as Contracts.IReadWriteWallet[]).filter((wallet) => {
+			const { alias } = getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			});
+
+			return matchKeyword(wallet.address()) || matchKeyword(alias);
+		});
+	}, [getWalletAlias, wallets, matchKeyword, profile, searchKeyword.length]);
 
 	const isEmptyResults = useMemo(() => searchKeyword.length > 0 && filteredList.length === 0, [
 		filteredList.length,

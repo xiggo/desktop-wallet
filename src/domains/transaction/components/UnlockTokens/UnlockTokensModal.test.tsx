@@ -9,8 +9,9 @@ import * as useFeesHook from "app/hooks/use-fees";
 import { buildTranslations } from "app/i18n/helpers";
 import nock from "nock";
 import React from "react";
+import { Route } from "react-router-dom";
 import transactionFixture from "tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
-import { env, getDefaultLedgerTransport, render } from "utils/testing-library";
+import { env, getDefaultLedgerTransport, renderWithRouter } from "utils/testing-library";
 
 import { UnlockTokensModal } from "./UnlockTokensModal";
 
@@ -86,10 +87,15 @@ describe("UnlockTokensModal", () => {
 	it("should render", async () => {
 		const onClose = jest.fn();
 
-		const { asFragment } = render(
-			<LedgerProvider transport={transport}>
-				<UnlockTokensModal wallet={wallet} onClose={onClose} profile={profile} />
-			</LedgerProvider>,
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<LedgerProvider transport={transport}>
+					<UnlockTokensModal wallet={wallet} onClose={onClose} profile={profile} />
+				</LedgerProvider>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		await waitFor(() => expect(screen.getByTestId("UnlockTokensModal")).toBeInTheDocument());
@@ -102,10 +108,15 @@ describe("UnlockTokensModal", () => {
 	});
 
 	it.each(["success", "error"])("should handle unlock token transaction with %s", async (expectedOutcome) => {
-		const { asFragment } = render(
-			<LedgerProvider transport={transport}>
-				<UnlockTokensModal wallet={wallet} onClose={jest.fn()} profile={profile} />
-			</LedgerProvider>,
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<LedgerProvider transport={transport}>
+					<UnlockTokensModal wallet={wallet} onClose={jest.fn()} profile={profile} />
+				</LedgerProvider>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		await waitFor(() => expect(screen.getByTestId("UnlockTokensModal")).toBeInTheDocument());

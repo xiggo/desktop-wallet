@@ -43,7 +43,6 @@ enum Step {
 
 export const SendTransfer = () => {
 	const history = useHistory();
-	const profile = useActiveProfile();
 	const { walletId: hasWalletId } = useParams();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -81,11 +80,11 @@ export const SendTransfer = () => {
 
 	const networks = useMemo(() => {
 		const results: Record<string, Networks.Network> = {};
-		for (const wallet of profile.wallets().values()) {
+		for (const wallet of activeProfile.wallets().values()) {
 			results[wallet.networkId()] = wallet.network();
 		}
 		return Object.values(results);
-	}, [profile]);
+	}, [activeProfile]);
 
 	const defaultValues = {
 		amount: 0,
@@ -297,7 +296,7 @@ export const SendTransfer = () => {
 			const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
 
 			if (wallet.isLedger()) {
-				await connect(profile, wallet.coinId(), wallet.networkId());
+				await connect(activeProfile, wallet.coinId(), wallet.networkId());
 				await wallet.ledger().connect(transport);
 			}
 

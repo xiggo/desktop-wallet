@@ -1103,19 +1103,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
           >
             <div
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
-            >
-              <span
-                class="font-semibold text-base text-theme-text"
-                data-testid="Address__alias"
-              >
-                <span
-                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                  data-testid="TruncateEnd"
-                >
-                  ARK Wallet 1
-                </span>
-              </span>
-            </div>
+            />
           </div>
         </div>
         <div

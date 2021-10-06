@@ -138,11 +138,7 @@ export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }
 
 						<TransactionNetwork network={senderWallet.network()} />
 
-						<TransactionSender
-							address={senderWallet.address()}
-							alias={senderWallet.alias()}
-							isDelegate={senderWallet.isDelegate() && !senderWallet.isResignedDelegate()}
-						/>
+						<TransactionSender wallet={senderWallet} />
 
 						<TransactionDetail label={t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS")} paddingPosition="top">
 							<RecipientList

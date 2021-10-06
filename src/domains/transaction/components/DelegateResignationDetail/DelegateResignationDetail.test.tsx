@@ -1,9 +1,12 @@
 import React from "react";
-import { render } from "testing-library";
+import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
+import { getDefaultProfileId, render, renderWithRouter } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { DelegateResignationDetail } from "./DelegateResignationDetail";
+
+const fixtureProfileId = getDefaultProfileId();
 
 describe("DelegateResignationDetail", () => {
 	it("should not render if not open", () => {
@@ -25,17 +28,22 @@ describe("DelegateResignationDetail", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateResignationDetail
-				isOpen={true}
-				transaction={{
-					...TransactionFixture,
-					wallet: () => ({
-						...TransactionFixture.wallet(),
-						username: () => "ARK Wallet",
-					}),
-				}}
-			/>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<DelegateResignationDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						wallet: () => ({
+							...TransactionFixture.wallet(),
+							username: () => "ARK Wallet",
+						}),
+					}}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE);
@@ -43,19 +51,24 @@ describe("DelegateResignationDetail", () => {
 	});
 
 	it("should render as confirmed", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateResignationDetail
-				isOpen={true}
-				transaction={{
-					...TransactionFixture,
-					isConfirmed: () => true,
-					username: () => "Ark Wallet",
-					wallet: () => ({
-						...TransactionFixture.wallet(),
-						username: () => "ARK Wallet",
-					}),
-				}}
-			/>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<DelegateResignationDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						isConfirmed: () => true,
+						username: () => "Ark Wallet",
+						wallet: () => ({
+							...TransactionFixture.wallet(),
+							username: () => "ARK Wallet",
+						}),
+					}}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE);

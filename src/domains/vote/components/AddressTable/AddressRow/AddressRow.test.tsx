@@ -4,10 +4,19 @@ import { Contracts } from "@payvo/profiles";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import nock from "nock";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, syncDelegates, waitFor } from "testing-library";
+import { Route } from "react-router-dom";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import { MNEMONICS } from "utils/testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	MNEMONICS,
+	renderWithRouter,
+	syncDelegates,
+	waitFor,
+} from "utils/testing-library";
 
 import { AddressRow } from "./AddressRow";
 
@@ -80,12 +89,17 @@ describe("AddressRow", () => {
 	});
 
 	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
-		const { asFragment, container, getByTestId } = render(
-			<table>
-				<tbody>
-					<AddressRow index={0} maxVotes={1} wallet={wallet} isCompact={isCompact} />
-				</tbody>
-			</table>,
+		const { asFragment, container, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={1} wallet={wallet} isCompact={isCompact} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
 		);
 
 		expect(container).toBeTruthy();
@@ -113,12 +127,17 @@ describe("AddressRow", () => {
 				})),
 			);
 
-			const { asFragment, container } = render(
-				<table>
-					<tbody>
-						<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
-					</tbody>
-				</table>,
+			const { asFragment, container } = renderWithRouter(
+				<Route path="/profiles/:profileId/votes">
+					<table>
+						<tbody>
+							<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
+						</tbody>
+					</table>
+				</Route>,
+				{
+					routes: [`/profiles/${profile.id()}/votes`],
+				},
 			);
 
 			expect(container).toBeTruthy();
@@ -144,12 +163,17 @@ describe("AddressRow", () => {
 			})),
 		);
 
-		const { asFragment, container } = render(
-			<table>
-				<tbody>
-					<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
-				</tbody>
-			</table>,
+		const { asFragment, container } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={10} wallet={wallet} isCompact={isCompact} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
 		);
 
 		expect(container).toBeTruthy();
@@ -160,12 +184,17 @@ describe("AddressRow", () => {
 
 	it("should render for a multisignature wallet", async () => {
 		const isMultiSignatureSpy = jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
-		const { asFragment, container, getByTestId } = render(
-			<table>
-				<tbody>
-					<AddressRow index={0} maxVotes={1} wallet={wallet} />
-				</tbody>
-			</table>,
+		const { asFragment, container, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={1} wallet={wallet} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
 		);
 
 		expect(container).toBeTruthy();
@@ -178,13 +207,18 @@ describe("AddressRow", () => {
 	});
 
 	it("should render when wallet not found for votes", async () => {
-		const { asFragment, getByTestId } = render(
-			<table>
-				<tbody>
-					<AddressRow index={0} maxVotes={1} wallet={wallet} />
-					<AddressRow index={1} maxVotes={1} wallet={blankWallet} />
-				</tbody>
-			</table>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={1} wallet={wallet} />
+						<AddressRow index={1} maxVotes={1} wallet={blankWallet} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
 		);
 
 		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
@@ -195,13 +229,18 @@ describe("AddressRow", () => {
 	});
 
 	it("should render when wallet hasn't voted", async () => {
-		const { asFragment, getAllByTestId, getByTestId } = render(
-			<table>
-				<tbody>
-					<AddressRow index={0} maxVotes={1} wallet={wallet} />
-					<AddressRow index={1} maxVotes={1} wallet={unvotedWallet} />
-				</tbody>
-			</table>,
+		const { asFragment, getAllByTestId, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={1} wallet={wallet} />
+						<AddressRow index={1} maxVotes={1} wallet={unvotedWallet} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
 		);
 
 		await waitFor(() => expect(getAllByTestId("AddressRow__status")).toBeTruthy());
@@ -217,12 +256,17 @@ describe("AddressRow", () => {
 		await wallet.synchroniser().coin();
 
 		const onSelect = jest.fn();
-		const { asFragment, container, getByTestId } = render(
-			<table>
-				<tbody>
-					<AddressRow index={0} maxVotes={1} wallet={wallet} onSelect={onSelect} />
-				</tbody>
-			</table>,
+		const { asFragment, container, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/votes">
+				<table>
+					<tbody>
+						<AddressRow index={0} maxVotes={1} wallet={wallet} onSelect={onSelect} />
+					</tbody>
+				</table>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/votes`],
+			},
 		);
 		const selectButton = getByTestId("AddressRow__select-0");
 

@@ -12,13 +12,9 @@ import {
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-interface VoteDetailProperties {
-	isOpen: boolean;
-	transaction: any;
-	onClose?: () => void;
-}
+import { TransactionDetailProperties } from "../TransactionDetailModal/TransactionDetailModal.models";
 
-export const VoteDetail = ({ transaction, isOpen, onClose }: VoteDetailProperties) => {
+export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 
@@ -57,12 +53,7 @@ export const VoteDetail = ({ transaction, isOpen, onClose }: VoteDetailPropertie
 		<Modal title={t("TRANSACTION.MODAL_VOTE_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender
-				address={transaction.sender()}
-				alias={wallet.alias()}
-				isDelegate={wallet.isDelegate() && !wallet.isResignedDelegate()}
-				border={false}
-			/>
+			<TransactionSender wallet={wallet} border={false} />
 
 			<TransactionVotes isLoading={isLoadingDelegates} {...delegates} />
 

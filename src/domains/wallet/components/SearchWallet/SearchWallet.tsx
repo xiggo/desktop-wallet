@@ -7,6 +7,7 @@ import { EmptyResults } from "app/components/EmptyResults";
 import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
 import { Modal } from "app/components/Modal";
 import { Table, TableCell, TableRow } from "app/components/Table";
+import { useWalletAlias } from "app/hooks";
 import { useSearchWallet } from "app/hooks/use-search-wallet";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { useMemo } from "react";
@@ -15,15 +16,11 @@ import { useTranslation } from "react-i18next";
 import { SearchWalletListItemProperties, SearchWalletProperties } from "./SearchWallet.models";
 
 const SearchWalletListItem = ({
-	address,
-	balance,
-	network,
-	convertedBalance,
-	currency,
-	disabled,
-	exchangeCurrency,
 	index,
-	name,
+	disabled,
+	profile,
+	wallet,
+	exchangeCurrency,
 	showConvertedValue,
 	showNetwork,
 	onAction,
@@ -31,13 +28,25 @@ const SearchWalletListItem = ({
 }: SearchWalletListItemProperties) => {
 	const { t } = useTranslation();
 
+	const { getWalletAlias } = useWalletAlias();
+
+	const { alias } = useMemo(
+		() =>
+			getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		[profile, getWalletAlias, wallet],
+	);
+
 	const renderButton = () => {
-		if (selectedAddress === address) {
+		if (selectedAddress === wallet.address()) {
 			return (
 				<Button
 					data-testid={`SearchWalletListItem__selected-${index}`}
 					variant="reverse"
-					onClick={() => onAction({ address, name, network })}
+					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -49,7 +58,7 @@ const SearchWalletListItem = ({
 				data-testid={`SearchWalletListItem__select-${index}`}
 				disabled={disabled}
 				variant="secondary"
-				onClick={() => onAction({ address, name, network })}
+				onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 			>
 				{t("COMMON.SELECT")}
 			</Button>
@@ -60,19 +69,19 @@ const SearchWalletListItem = ({
 		<TableRow>
 			<TableCell variant="start" innerClassName="space-x-4" className="w-full">
 				<div className="flex-shrink-0 -space-x-1">
-					{showNetwork && <NetworkIcon size="lg" network={network} />}
-					<Avatar size="lg" address={address} />
+					{showNetwork && <NetworkIcon size="lg" network={wallet.network()} />}
+					<Avatar size="lg" address={wallet.address()} />
 				</div>
-				<Address walletName={name} address={address} maxNameChars={16} truncateOnTable />
+				<Address walletName={alias} address={wallet.address()} maxNameChars={16} truncateOnTable />
 			</TableCell>
 
 			<TableCell innerClassName="font-semibold justify-end">
-				<AmountCrypto value={balance} ticker={currency} />
+				<AmountCrypto value={wallet.balance()} ticker={wallet.currency()} />
 			</TableCell>
 
 			{showConvertedValue && (
 				<TableCell innerClassName="text-theme-secondary-400 justify-end">
-					<Amount value={convertedBalance} ticker={exchangeCurrency} />
+					<Amount value={wallet.convertedBalance()} ticker={exchangeCurrency} />
 				</TableCell>
 			)}
 
@@ -98,7 +107,7 @@ export const SearchWallet = ({
 	profile,
 	selectedAddress,
 }: SearchWalletProperties) => {
-	const { setSearchKeyword, filteredList: filteredWallets, isEmptyResults } = useSearchWallet(wallets);
+	const { setSearchKeyword, filteredList: filteredWallets, isEmptyResults } = useSearchWallet({ profile, wallets });
 
 	const { t } = useTranslation();
 
@@ -168,17 +177,13 @@ export const SearchWallet = ({
 					{(wallet: Contracts.IReadWriteWallet, index: number) => (
 						<SearchWalletListItem
 							index={index}
-							address={wallet.address()}
-							balance={wallet.balance()}
-							convertedBalance={wallet.convertedBalance()}
+							wallet={wallet}
+							profile={profile}
 							disabled={disableAction?.(wallet)}
-							network={wallet.network()}
-							currency={wallet.currency()}
 							exchangeCurrency={
 								wallet.exchangeCurrency() ||
 								(profile?.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string)
 							}
-							name={wallet.alias()}
 							showConvertedValue={showConvertedValue}
 							showNetwork={showNetwork}
 							onAction={onSelectWallet}

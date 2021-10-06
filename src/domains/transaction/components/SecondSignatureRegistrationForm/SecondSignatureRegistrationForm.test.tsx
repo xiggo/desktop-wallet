@@ -4,8 +4,10 @@ import { Contracts } from "@payvo/sdk";
 import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { toasts } from "app/services";
+import { createMemoryHistory } from "history";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Route, Router } from "react-router-dom";
 import secondSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import * as utils from "utils/electron-utils";
 import {
@@ -21,6 +23,9 @@ import {
 
 import { translations as transactionTranslations } from "../../i18n";
 import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
+
+const history = createMemoryHistory();
+const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 
 describe("SecondSignatureRegistrationForm", () => {
 	const passphrase = "power return attend drink piece found tragic fire liar page disease combine";
@@ -47,11 +52,17 @@ describe("SecondSignatureRegistrationForm", () => {
 		});
 
 	it("should render generation step", async () => {
+		history.push(dashboardURL);
+
 		const passphrase = "mock bip39 passphrase";
 		const bip39GenerateMock = jest.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		const { form, asFragment } = renderWithForm(
-			<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />,
+			<Router history={history}>
+				<Route path="/profiles/:profileId/dashboard">
+					<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />
+				</Route>
+			</Router>,
 			{
 				defaultValues: { fees },
 				withProviders: true,
@@ -68,10 +79,16 @@ describe("SecondSignatureRegistrationForm", () => {
 	});
 
 	it("should not generate mnemonic if already set", async () => {
+		history.push(dashboardURL);
+
 		const bip39GenerateMock = jest.spyOn(BIP39, "generate").mockImplementation();
 
 		const { form, asFragment } = renderWithForm(
-			<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />,
+			<Router history={history}>
+				<Route path="/profiles/:profileId/dashboard">
+					<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />
+				</Route>
+			</Router>,
 			{
 				defaultValues: {
 					fees,
@@ -91,17 +108,24 @@ describe("SecondSignatureRegistrationForm", () => {
 	});
 
 	it("should set fee", async () => {
-		renderWithForm(<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />, {
-			defaultValues: {
-				fees,
+		renderWithForm(
+			<Router history={history}>
+				<Route path="/profiles/:profileId/dashboard">
+					<SecondSignatureRegistrationForm.component profile={profile} activeTab={1} wallet={wallet} />
+				</Route>
+			</Router>,
+			{
+				defaultValues: {
+					fees,
+				},
+				registerCallback: ({ register }) => {
+					register("fees");
+					register("fee");
+					register("inputFeeSettings");
+				},
+				withProviders: true,
 			},
-			registerCallback: ({ register }) => {
-				register("fees");
-				register("fee");
-				register("inputFeeSettings");
-			},
-			withProviders: true,
-		});
+		);
 
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
 
@@ -286,13 +310,20 @@ describe("SecondSignatureRegistrationForm", () => {
 	});
 
 	it("should render review step", async () => {
-		renderWithForm(<SecondSignatureRegistrationForm.component profile={profile} activeTab={4} wallet={wallet} />, {
-			defaultValues: {
-				fee: 0,
-				fees,
+		renderWithForm(
+			<Router history={history}>
+				<Route path="/profiles/:profileId/dashboard">
+					<SecondSignatureRegistrationForm.component profile={profile} activeTab={4} wallet={wallet} />
+				</Route>
+			</Router>,
+			{
+				defaultValues: {
+					fee: 0,
+					fees,
+				},
+				withProviders: true,
 			},
-			withProviders: true,
-		});
+		);
 
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__review-step")).toBeTruthy());
 	});

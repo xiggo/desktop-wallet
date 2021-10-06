@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
+import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { MultiSignatureRegistrationDetail } from "./MultiSignatureRegistrationDetail";
@@ -19,16 +20,21 @@ describe("MultiSignatureRegistrationDetail", () => {
 	});
 
 	it("should render", async () => {
-		const { container } = render(
-			<MultiSignatureRegistrationDetail
-				transaction={{
-					...TransactionFixture,
-					min: () => 2,
-					publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()],
-					wallet: () => wallet,
-				}}
-				isOpen
-			/>,
+		const { container } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureRegistrationDetail
+					transaction={{
+						...TransactionFixture,
+						min: () => 2,
+						publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						wallet: () => wallet,
+					}}
+					isOpen
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		await waitFor(() =>
@@ -41,16 +47,21 @@ describe("MultiSignatureRegistrationDetail", () => {
 	it("should render sender's address as generated address when musig address derivation is not supported", async () => {
 		jest.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
-		const { container } = render(
-			<MultiSignatureRegistrationDetail
-				transaction={{
-					...TransactionFixture,
-					min: () => 2,
-					publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()],
-					wallet: () => wallet,
-				}}
-				isOpen
-			/>,
+		const { container } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureRegistrationDetail
+					transaction={{
+						...TransactionFixture,
+						min: () => 2,
+						publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						wallet: () => wallet,
+					}}
+					isOpen
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		await waitFor(() =>

@@ -35,8 +35,6 @@ export const SummaryStep = ({
 	const { getLabel } = useTransactionTypes();
 	const { status } = useMultiSignatureStatus({ transaction, wallet });
 
-	const [senderAddress, setSenderAddress] = useState("");
-
 	const reference = useRef(null);
 
 	const type = transaction.type();
@@ -58,11 +56,6 @@ export const SummaryStep = ({
 	});
 
 	useEffect(() => {
-		const setAddress = async () => {
-			const { address } = await wallet.coin().address().fromPublicKey(transaction.get("senderPublicKey"));
-			setSenderAddress(address);
-		};
-
 		const findVoteDelegates = () => {
 			if (["vote", "unvote"].includes(type)) {
 				const asset = transaction.get<{ votes: string[] }>("asset");
@@ -76,7 +69,6 @@ export const SummaryStep = ({
 			}
 		};
 
-		setAddress();
 		findVoteDelegates();
 	}, [env, wallet, transaction, type]);
 
@@ -86,7 +78,7 @@ export const SummaryStep = ({
 		<section>
 			<Header title={getLabel(type)} />
 
-			<TransactionSender address={senderAddress} alias={wallet.alias()} border={false} />
+			<TransactionSender address={transaction.sender()} border={false} />
 
 			{recipients && <TransactionRecipients currency={wallet.currency()} recipients={recipients} />}
 

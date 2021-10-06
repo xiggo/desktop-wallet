@@ -9,15 +9,13 @@ import {
 import { TransactionSuccessful } from "domains/transaction/components/TransactionSuccessful";
 import React from "react";
 
-export const SummaryStep = ({
-	profile,
-	senderWallet,
-	transaction,
-}: {
+interface SummaryStepProperties {
 	profile: Contracts.IProfile;
 	senderWallet: Contracts.IReadWriteWallet;
 	transaction: DTO.ExtendedSignedTransactionData;
-}): JSX.Element => {
+}
+
+export const SummaryStep = ({ profile, senderWallet, transaction }: SummaryStepProperties): JSX.Element => {
 	const { getWalletAlias } = useWalletAlias();
 
 	const recipients: RecipientListItem[] = transaction.recipients().map((recipient) => {

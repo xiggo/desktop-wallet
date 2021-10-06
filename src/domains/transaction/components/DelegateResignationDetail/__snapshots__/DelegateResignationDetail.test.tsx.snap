@@ -150,7 +150,7 @@ exports[`DelegateResignationDetail should render a modal 1`] = `
                         class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
-                        Test Wallet
+                        ARK Wallet 1
                       </span>
                     </span>
                     <span
@@ -446,7 +446,7 @@ exports[`DelegateResignationDetail should render as confirmed 1`] = `
                         class="TruncateEnd__Wrapper-sc-1hhdnni-0"
                         data-testid="TruncateEnd"
                       >
-                        Test Wallet
+                        ARK Wallet 1
                       </span>
                     </span>
                     <span

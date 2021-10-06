@@ -105,7 +105,6 @@ export const UnlockTokensModal: React.FC<Properties> = ({ profile, wallet, onClo
 
 				{step === Step.ReviewStep && (
 					<UnlockTokensReview
-						profile={profile}
 						wallet={wallet}
 						onBack={() => setStep(Step.SelectStep)}
 						onConfirm={() => setStep(Step.AuthenticationStep)}

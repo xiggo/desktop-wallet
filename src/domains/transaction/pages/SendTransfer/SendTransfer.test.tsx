@@ -13,7 +13,7 @@ import { createMemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { Route } from "react-router-dom";
+import { Route, Router } from "react-router-dom";
 import transactionFixture from "tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionMultipleFixture from "tests/fixtures/coins/ark/devnet/transactions/transfer-multiple.json";
 import {
@@ -24,7 +24,6 @@ import {
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
 	MNEMONICS,
-	render,
 	RenderResult,
 	renderWithForm,
 	renderWithRouter,
@@ -173,6 +172,11 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render network step without test networks", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
 		const { result: form } = renderHook(() =>
 			useForm({
 				defaultValues: {
@@ -187,10 +191,16 @@ describe("SendTransfer", () => {
 		let rendered: RenderResult;
 
 		await hookAct(async () => {
-			rendered = render(
-				<FormProvider {...form.current}>
-					<NetworkStep networks={env.availableNetworks()} profile={profile} />
-				</FormProvider>,
+			rendered = renderWithRouter(
+				<Route path="/profiles/:profileId/send-transfer">
+					<FormProvider {...form.current}>
+						<NetworkStep networks={env.availableNetworks()} profile={profile} />
+					</FormProvider>
+				</Route>,
+				{
+					history,
+					routes: [transferURL],
+				},
 			);
 		});
 
@@ -203,6 +213,11 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render form step with deeplink values and use them", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
 		const deeplinkProperties: any = {
 			amount: "1.2",
 			coin: "ark",
@@ -237,7 +252,15 @@ describe("SendTransfer", () => {
 			);
 		};
 
-		const { asFragment } = render(<Component />);
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId/send-transfer">
+				<Component />
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
+		);
 
 		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
 
@@ -245,6 +268,11 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render 1st step with custom deeplink values and use them", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
 		const deeplinkProperties: any = {
 			amount: "1.2",
 			coin: "ark",
@@ -278,7 +306,15 @@ describe("SendTransfer", () => {
 			);
 		};
 
-		const { asFragment } = render(<Component />);
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId/send-transfer">
+				<Component />
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
+		);
 
 		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
 
@@ -286,6 +322,11 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render review step", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
 		const { result: form } = renderHook(() =>
 			useForm({
 				defaultValues: {
@@ -304,10 +345,16 @@ describe("SendTransfer", () => {
 			}),
 		);
 
-		const { asFragment, container, getByTestId, getAllByTestId } = render(
-			<FormProvider {...form.current}>
-				<ReviewStep wallet={wallet} />
-			</FormProvider>,
+		const { asFragment, container, getByTestId, getAllByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/send-transfer">
+				<FormProvider {...form.current}>
+					<ReviewStep wallet={wallet} />
+				</FormProvider>
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
 		);
 
 		expect(getByTestId("SendTransfer__review-step")).toBeTruthy();
@@ -323,6 +370,11 @@ describe("SendTransfer", () => {
 		["with memo", "memo"],
 		["without memo", undefined],
 	])("should render review step with multiple recipients (%s)", async (_, memo) => {
+		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
 		const { result: form } = renderHook(() =>
 			useForm({
 				defaultValues: {
@@ -344,10 +396,16 @@ describe("SendTransfer", () => {
 			}),
 		);
 
-		const { asFragment, container, getByTestId } = render(
-			<FormProvider {...form.current}>
-				<ReviewStep wallet={wallet} />
-			</FormProvider>,
+		const { asFragment, container, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/send-transfer">
+				<FormProvider {...form.current}>
+					<ReviewStep wallet={wallet} />
+				</FormProvider>
+			</Route>,
+			{
+				history,
+				routes: [transferURL],
+			},
 		);
 
 		expect(getByTestId("SendTransfer__review-step")).toBeTruthy();
@@ -363,6 +421,11 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render summary step", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
+
+		const history = createMemoryHistory();
+		history.push(transferURL);
+
 		await wallet.synchroniser().identity();
 
 		const transaction = new DTO.ExtendedSignedTransactionData(
@@ -388,7 +451,11 @@ describe("SendTransfer", () => {
 		);
 
 		const { asFragment } = renderWithForm(
-			<SummaryStep transaction={transaction} senderWallet={wallet} profile={profile} />,
+			<Router history={history}>
+				<Route path="/profiles/:profileId/send-transfer">
+					<SummaryStep transaction={transaction} senderWallet={wallet} profile={profile} />
+				</Route>
+			</Router>,
 			{
 				defaultValues: {
 					network: wallet.network(),

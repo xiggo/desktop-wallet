@@ -9,18 +9,11 @@ import {
 	TransactionSender,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
-import { TransactionAliases } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
+import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-interface TransferDetailProperties {
-	isOpen: boolean;
-	aliases?: TransactionAliases;
-	transaction: any;
-	onClose?: any;
-}
-
-export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: TransferDetailProperties) => {
+export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
@@ -37,12 +30,7 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: Transf
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender
-				address={transaction.sender()}
-				alias={aliases?.sender.alias}
-				isDelegate={aliases?.sender.isDelegate}
-				border={false}
-			/>
+			<TransactionSender wallet={wallet} border={false} />
 
 			<TransactionRecipients currency={wallet.currency()} recipients={recipients} />
 

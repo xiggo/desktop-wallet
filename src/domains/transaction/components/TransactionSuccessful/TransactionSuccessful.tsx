@@ -13,19 +13,19 @@ import { useTranslation } from "react-i18next";
 import { MultiSignatureSuccessful } from ".";
 
 interface TransactionSuccessfulProperties {
-	children?: React.ReactNode;
 	transaction?: DTO.ExtendedSignedTransactionData;
-	senderWallet?: Contracts.IReadWriteWallet;
+	senderWallet: Contracts.IReadWriteWallet;
 	title?: string;
 	description?: string;
+	children?: React.ReactNode;
 }
 
 export const TransactionSuccessful = ({
-	children,
 	transaction,
 	senderWallet,
 	title,
 	description,
+	children,
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
@@ -54,11 +54,7 @@ export const TransactionSuccessful = ({
 
 						<TransactionNetwork network={senderWallet.network()} />
 
-						<TransactionSender
-							address={senderWallet.address()}
-							alias={senderWallet.alias()}
-							isDelegate={senderWallet.isDelegate() && !senderWallet.isResignedDelegate()}
-						/>
+						<TransactionSender wallet={senderWallet} />
 					</>
 				)}
 

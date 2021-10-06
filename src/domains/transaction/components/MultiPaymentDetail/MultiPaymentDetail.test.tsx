@@ -1,9 +1,12 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { act, fireEvent, render, screen, waitFor } from "utils/testing-library";
+import { act, fireEvent, getDefaultProfileId, render, renderWithRouter, screen, waitFor } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { MultiPaymentDetail } from "./MultiPaymentDetail";
+
+const fixtureProfileId = getDefaultProfileId();
 
 describe("MultiPaymentDetail", () => {
 	it("should not render if not open", () => {
@@ -22,14 +25,19 @@ describe("MultiPaymentDetail", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = render(
-			<MultiPaymentDetail
-				isOpen={true}
-				transaction={{
-					...TransactionFixture,
-					blockId: () => "adsad12312xsd1w312e1s13203e12",
-				}}
-			/>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiPaymentDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						blockId: () => "adsad12312xsd1w312e1s13203e12",
+					}}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
@@ -37,29 +45,34 @@ describe("MultiPaymentDetail", () => {
 	});
 
 	it("should render with recipients", async () => {
-		const { asFragment, getByText, getByTestId } = render(
-			<MultiPaymentDetail
-				isOpen={true}
-				transaction={{
-					...TransactionFixture,
-					blockId: () => "adsad12312xsd1w312e1s13203e12",
-					isConfirmed: () => true,
-					recipients: () => [
-						{
-							address: "adsad12312xsd1w312e1s13203e12",
-							amount: 200,
-						},
-						{
-							address: "adsad12312xsd1w312e1s13203e13",
-							amount: 1990,
-						},
-						{
-							address: "adsad12312xsd1w312e1s13203e14",
-							amount: 1990,
-						},
-					],
-				}}
-			/>,
+		const { asFragment, getByText, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiPaymentDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						blockId: () => "adsad12312xsd1w312e1s13203e12",
+						isConfirmed: () => true,
+						recipients: () => [
+							{
+								address: "adsad12312xsd1w312e1s13203e12",
+								amount: 200,
+							},
+							{
+								address: "adsad12312xsd1w312e1s13203e13",
+								amount: 1990,
+							},
+							{
+								address: "adsad12312xsd1w312e1s13203e14",
+								amount: 1990,
+							},
+						],
+					}}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
@@ -70,30 +83,35 @@ describe("MultiPaymentDetail", () => {
 	});
 
 	it("should render hint icon with tooltip when it's a returned transaction", () => {
-		const { asFragment } = render(
-			<MultiPaymentDetail
-				isOpen={true}
-				transaction={{
-					...TransactionFixture,
-					blockId: () => "adsad12312xsd1w312e1s13203e12",
-					isConfirmed: () => true,
-					isReturn: () => true,
-					recipients: () => [
-						{
-							address: "adsad12312xsd1w312e1s13203e12",
-							amount: 200,
-						},
-						{
-							address: TransactionFixture.sender(),
-							amount: 99,
-						},
-						{
-							address: "adsad12312xsd1w312e1s13203e14",
-							amount: 1990,
-						},
-					],
-				}}
-			/>,
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiPaymentDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						blockId: () => "adsad12312xsd1w312e1s13203e12",
+						isConfirmed: () => true,
+						isReturn: () => true,
+						recipients: () => [
+							{
+								address: "adsad12312xsd1w312e1s13203e12",
+								amount: 200,
+							},
+							{
+								address: TransactionFixture.sender(),
+								amount: 99,
+							},
+							{
+								address: "adsad12312xsd1w312e1s13203e14",
+								amount: 1990,
+							},
+						],
+					}}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);

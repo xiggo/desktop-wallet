@@ -4,13 +4,12 @@ import { TransactionSuccessful } from "domains/transaction/components/Transactio
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-export const SummaryStep = ({
-	transaction,
-	senderWallet,
-}: {
+interface SummaryStepProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
-}) => {
+}
+
+export const SummaryStep = ({ transaction, senderWallet }: SummaryStepProperties) => {
 	const { t } = useTranslation();
 
 	return (

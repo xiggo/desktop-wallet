@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import { TransactionDetail } from "../../TransactionDetail";
 
 interface MultiPaymentRecipientsProperties {
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: DTO.ExtendedConfirmedTransactionData;
 	recipients: {
 		address: string;
 		amount?: number;

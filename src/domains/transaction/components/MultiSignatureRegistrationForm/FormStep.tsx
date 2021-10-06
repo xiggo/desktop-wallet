@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import { FormStepProperties } from "../../pages/SendRegistration/SendRegistration.models";
 import { AddParticipant, Participant } from "./components/AddParticipant/AddParticipant";
 
-export const FormStep: React.FC<FormStepProperties> = ({ profile, wallet }: FormStepProperties) => {
+export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { errors, setValue, register, watch } = useFormContext();
 	const { participants, minParticipants } = watch();

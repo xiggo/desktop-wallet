@@ -12,13 +12,9 @@ import {
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-interface IpfsDetailProperties {
-	isOpen: boolean;
-	transaction?: any;
-	onClose?: any;
-}
+import { TransactionDetailProperties } from "../TransactionDetailModal/TransactionDetailModal.models";
 
-export const IpfsDetail = ({ isOpen, transaction, onClose }: IpfsDetailProperties) => {
+export const IpfsDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
@@ -27,12 +23,7 @@ export const IpfsDetail = ({ isOpen, transaction, onClose }: IpfsDetailPropertie
 		<Modal title={t("TRANSACTION.MODAL_IPFS_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender
-				address={transaction.sender()}
-				alias={wallet.alias()}
-				isDelegate={wallet.isDelegate() && !wallet.isResignedDelegate()}
-				border={false}
-			/>
+			<TransactionSender wallet={wallet} border={false} />
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 

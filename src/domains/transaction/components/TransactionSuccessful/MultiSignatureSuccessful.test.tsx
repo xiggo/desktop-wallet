@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { env, getDefaultProfileId, render, waitFor } from "testing-library";
+import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
+import { env, getDefaultProfileId, render, renderWithRouter, waitFor } from "utils/testing-library";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 
@@ -37,10 +38,15 @@ describe("MultiSignatureSuccessful", () => {
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
-		const { asFragment, getByTestId } = render(
-			<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
-				<div />
-			</MultiSignatureSuccessful>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
+					<div />
+				</MultiSignatureSuccessful>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		await waitFor(() => expect(getByTestId("MultiSignatureSuccessful__publicKeys")).toBeInTheDocument());
@@ -73,10 +79,15 @@ describe("MultiSignatureSuccessful", () => {
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
-		const { asFragment, getByTestId } = render(
-			<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
-				<div />
-			</MultiSignatureSuccessful>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
+					<div />
+				</MultiSignatureSuccessful>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		await waitFor(() => expect(getByTestId("MultiSignatureSuccessful__publicKeys")).toBeInTheDocument());
@@ -120,10 +131,15 @@ describe("MultiSignatureSuccessful", () => {
 			address: undefined,
 		});
 
-		const { asFragment, getByTestId } = render(
-			<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
-				<div />
-			</MultiSignatureSuccessful>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
+					<div />
+				</MultiSignatureSuccessful>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		await waitFor(() => expect(getByTestId("MultiSignatureSuccessful__publicKeys")).toBeInTheDocument());
@@ -171,10 +187,15 @@ describe("MultiSignatureSuccessful", () => {
 			address: undefined,
 		});
 
-		const { asFragment, getByTestId } = render(
-			<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
-				<div />
-			</MultiSignatureSuccessful>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
+					<div />
+				</MultiSignatureSuccessful>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		await waitFor(() => expect(getByTestId("MultiSignatureSuccessful__publicKeys")).toBeInTheDocument());

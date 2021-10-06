@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 
 import { FormStepProperties } from "../../pages/SendRegistration/SendRegistration.models";
 
-export const GenerationStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
+export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const { common } = useValidation();
@@ -51,7 +51,7 @@ export const GenerationStep: React.FC<FormStepProperties> = ({ wallet, profile }
 
 			<Alert className="mt-6">{t("TRANSACTION.PAGE_SECOND_SIGNATURE.GENERATION_STEP.WARNING")}</Alert>
 
-			<TransactionSender address={wallet.address()} alias={wallet.alias()} borderPosition="bottom" />
+			<TransactionSender wallet={wallet} borderPosition="bottom" />
 
 			<div className="pt-6">
 				<FormField name="fee">

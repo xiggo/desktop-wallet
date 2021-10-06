@@ -68,7 +68,9 @@ export const SearchRecipient = ({
 	recipients,
 	selectedAddress,
 }: SearchRecipientProperties) => {
-	const { setSearchKeyword, filteredList: filteredRecipients, isEmptyResults } = useSearchWallet(recipients);
+	const { setSearchKeyword, filteredList: filteredRecipients, isEmptyResults } = useSearchWallet({
+		wallets: recipients,
+	});
 
 	const { t } = useTranslation();
 

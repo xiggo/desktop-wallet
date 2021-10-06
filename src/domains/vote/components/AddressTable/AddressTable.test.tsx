@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/profiles";
 import nock from "nock";
 import React from "react";
-import { env, getDefaultProfileId, render, syncDelegates, waitFor } from "testing-library";
+import { Route } from "react-router-dom";
+import { env, getDefaultProfileId, renderWithRouter, screen, syncDelegates, waitFor } from "utils/testing-library";
 
 import { AddressTable } from "./AddressTable";
 
@@ -29,18 +30,32 @@ describe("AddressTable", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, container, getByTestId } = render(<AddressTable wallets={[wallet]} />);
+		const { asFragment, container } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<AddressTable wallets={[wallet]} />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
 
 		expect(container).toBeTruthy();
 
-		await waitFor(() => expect(getByTestId("AddressRow__status")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("AddressRow__status")).toBeTruthy());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
 		const maxVotesMock = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(10);
-		const { asFragment, container } = render(<AddressTable wallets={[wallet]} />);
+		const { asFragment, container } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<AddressTable wallets={[wallet]} />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();

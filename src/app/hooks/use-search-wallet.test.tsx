@@ -1,8 +1,10 @@
 import { Contracts } from "@payvo/profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { RecipientProperties } from "domains/transaction/components/SearchRecipient/SearchRecipient.models";
+import React from "react";
 import { env, getDefaultProfileId } from "utils/testing-library";
 
+import { EnvironmentProvider } from "../contexts";
 import { useSearchWallet } from "./use-search-wallet";
 
 enum ListType {
@@ -10,8 +12,11 @@ enum ListType {
 	recipients = "recipients",
 }
 
+let profile: Contracts.IProfile;
 let wallets: Contracts.IReadWriteWallet[];
 let recipients: RecipientProperties[];
+
+const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 
 const getList = (listType: ListType) => {
 	if (listType === ListType.wallets) {
@@ -23,7 +28,7 @@ const getList = (listType: ListType) => {
 
 describe("useSearchWallet", () => {
 	beforeAll(() => {
-		const profile = env.profiles().findById(getDefaultProfileId());
+		profile = env.profiles().findById(getDefaultProfileId());
 		wallets = profile.wallets().values();
 
 		recipients = wallets.map((wallet) => ({
@@ -42,7 +47,7 @@ describe("useSearchWallet", () => {
 			const defaultList = getList(listType);
 			const {
 				result: { current },
-			} = renderHook(() => useSearchWallet(defaultList));
+			} = renderHook(() => useSearchWallet({ wallets: defaultList }), { wrapper });
 
 			const { filteredList } = current;
 
@@ -51,7 +56,7 @@ describe("useSearchWallet", () => {
 	);
 
 	it.each([ListType.wallets, ListType.recipients])("should filter %s by address", (listType) => {
-		const { result } = renderHook(() => useSearchWallet(getList(listType)));
+		const { result } = renderHook(() => useSearchWallet({ wallets: getList(listType) }), { wrapper });
 
 		expect(result.current.filteredList).toHaveLength(2);
 
@@ -72,7 +77,7 @@ describe("useSearchWallet", () => {
 	});
 
 	it.each([ListType.wallets, ListType.recipients])("should filter %s by alias", (listType) => {
-		const { result } = renderHook(() => useSearchWallet(getList(listType)));
+		const { result } = renderHook(() => useSearchWallet({ profile, wallets: getList(listType) }), { wrapper });
 
 		expect(result.current.filteredList).toHaveLength(2);
 
@@ -95,7 +100,7 @@ describe("useSearchWallet", () => {
 	it.each([ListType.wallets, ListType.recipients])(
 		"should not find search %s and turn 'isEmptyResults' to true",
 		(listType) => {
-			const { result } = renderHook(() => useSearchWallet(getList(listType)));
+			const { result } = renderHook(() => useSearchWallet({ wallets: getList(listType) }), { wrapper });
 
 			expect(result.current.filteredList).toHaveLength(2);
 			expect(result.current.isEmptyResults).toBeFalsy();

@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { TransactionDetail } from "../TransactionDetail";
 
 interface TransactionTimestampProperties {
-	timestamp: DateTime;
+	timestamp?: DateTime;
 }
 
 export const TransactionTimestamp = ({ timestamp }: TransactionTimestampProperties) => {
@@ -15,7 +15,7 @@ export const TransactionTimestamp = ({ timestamp }: TransactionTimestampProperti
 
 	return (
 		<TransactionDetail data-testid="TransactionTimestamp" label={t("TRANSACTION.TIMESTAMP")}>
-			{timestamp.format(format)}
+			{timestamp?.format(format)}
 		</TransactionDetail>
 	);
 };

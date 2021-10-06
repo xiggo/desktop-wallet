@@ -22,10 +22,6 @@ export const TransactionDetailModal = ({
 	const { getWalletAlias } = useWalletAlias();
 
 	const aliases: TransactionAliases | undefined = useMemo(() => {
-		if (!transactionItem.isTransfer() && !transactionItem.isMultiPayment()) {
-			return;
-		}
-
 		const sender = getWalletAlias({
 			address: transactionItem.sender(),
 			network: transactionItem.wallet().network(),

@@ -6,7 +6,7 @@ import { translations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Router } from "react-router-dom";
 import ipfsFixture from "tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 import {
 	env,
@@ -80,10 +80,19 @@ describe("SendIpfs", () => {
 	});
 
 	it("should render form step", async () => {
+		const history = createMemoryHistory();
+		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
+
+		history.push(ipfsURL);
+
 		const { asFragment } = renderWithForm(
-			<LedgerProvider transport={transport}>
-				<FormStep profile={profile} wallet={wallet} />
-			</LedgerProvider>,
+			<Router history={history}>
+				<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
+					<LedgerProvider transport={transport}>
+						<FormStep profile={profile} wallet={wallet} />
+					</LedgerProvider>
+				</Route>
+			</Router>,
 			{
 				withProviders: true,
 			},
@@ -95,10 +104,19 @@ describe("SendIpfs", () => {
 	});
 
 	it("should render review step", async () => {
+		const history = createMemoryHistory();
+		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
+
+		history.push(ipfsURL);
+
 		const { asFragment, container } = renderWithForm(
-			<LedgerProvider transport={transport}>
-				<ReviewStep wallet={wallet} />
-			</LedgerProvider>,
+			<Router history={history}>
+				<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
+					<LedgerProvider transport={transport}>
+						<ReviewStep wallet={wallet} />
+					</LedgerProvider>
+				</Route>
+			</Router>,
 			{
 				defaultValues: {
 					fee: "0.1",
@@ -118,6 +136,11 @@ describe("SendIpfs", () => {
 	});
 
 	it("should render summary step", async () => {
+		const history = createMemoryHistory();
+		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
+
+		history.push(ipfsURL);
+
 		const transaction = new DTO.ExtendedSignedTransactionData(
 			await wallet
 				.coin()
@@ -139,9 +162,13 @@ describe("SendIpfs", () => {
 		);
 
 		const { asFragment } = renderWithForm(
-			<LedgerProvider transport={transport}>
-				<SummaryStep senderWallet={wallet} transaction={transaction} />
-			</LedgerProvider>,
+			<Router history={history}>
+				<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
+					<LedgerProvider transport={transport}>
+						<SummaryStep senderWallet={wallet} transaction={transaction} />
+					</LedgerProvider>
+				</Route>
+			</Router>,
 			{
 				withProviders: true,
 			},

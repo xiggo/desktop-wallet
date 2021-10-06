@@ -7,6 +7,7 @@ import * as useFeesHook from "app/hooks/use-fees";
 import { translations } from "domains/transaction/i18n";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
+import { Route } from "react-router-dom";
 import delegateRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
 import {
 	env,
@@ -15,6 +16,7 @@ import {
 	MNEMONICS,
 	render,
 	RenderResult,
+	renderWithRouter,
 	syncDelegates,
 	waitFor,
 } from "utils/testing-library";
@@ -50,7 +52,14 @@ const renderComponent = (properties?: any) => {
 		);
 	};
 
-	const renderResult: RenderResult = render(<Component />);
+	const renderResult: RenderResult = renderWithRouter(
+		<Route path="/profiles/:profileId">
+			<Component />
+		</Route>,
+		{
+			routes: [`/profiles/${profile.id()}`],
+		},
+	);
 
 	return { ...renderResult, form };
 };

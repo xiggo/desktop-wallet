@@ -6,16 +6,11 @@ import {
 	TransactionSender,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
+import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-interface LegacyMagistrateDetailProperties {
-	isOpen: boolean;
-	transaction: any;
-	onClose?: any;
-}
-
-export const LegacyMagistrateDetail = ({ isOpen, transaction, onClose }: LegacyMagistrateDetailProperties) => {
+export const LegacyMagistrateDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
@@ -24,12 +19,7 @@ export const LegacyMagistrateDetail = ({ isOpen, transaction, onClose }: LegacyM
 		<Modal title={t("TRANSACTION.TRANSACTION_TYPES.MAGISTRATE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender
-				address={transaction.sender()}
-				alias={wallet.alias()}
-				isDelegate={wallet.isDelegate() && !wallet.isResignedDelegate()}
-				border={false}
-			/>
+			<TransactionSender wallet={wallet} border={false} />
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 

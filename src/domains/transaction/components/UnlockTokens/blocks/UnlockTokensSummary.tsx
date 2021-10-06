@@ -8,11 +8,11 @@ import { TransactionSuccessful } from "domains/transaction/components/Transactio
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-interface Properties {
+interface UnlockTokensSummaryProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
 }
 
-export const UnlockTokensSummary: React.FC<Properties> = ({ transaction }: Properties) => {
+export const UnlockTokensSummary = ({ transaction }: UnlockTokensSummaryProperties) => {
 	const { t } = useTranslation();
 
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);

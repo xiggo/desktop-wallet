@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { TransactionDetail } from "../TransactionDetail";
 
 interface TransactionMemoProperties {
-	memo: string;
+	memo?: string;
 }
 
 export const TransactionMemo = ({ memo }: TransactionMemoProperties) => {

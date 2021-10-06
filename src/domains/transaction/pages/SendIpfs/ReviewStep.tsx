@@ -29,7 +29,7 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 
 			<TransactionNetwork network={wallet.network()} border={false} />
 
-			<TransactionSender address={wallet.address()} alias={wallet.alias()} />
+			<TransactionSender wallet={wallet} />
 
 			<TransactionDetail label={t("TRANSACTION.IPFS_HASH")}>
 				<span className="break-all">{hash}</span>

@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import { FormField, FormLabel, SubForm } from "app/components/Form";
+import { useWalletAlias } from "app/hooks";
 import { SelectRecipient } from "domains/profile/components/SelectRecipient";
 import { RecipientList } from "domains/transaction/components/RecipientList";
 import React, { useCallback, useEffect, useRef, useState } from "react";
@@ -27,6 +28,8 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 	const [participants, setParticipants] = useState<Participant[]>(defaultParticipants!);
 	const lastValidationReference = useRef<unknown | undefined>();
 
+	const { getWalletAlias } = useWalletAlias();
+
 	const form = useForm({ mode: "onSubmit", reValidateMode: "onSubmit" });
 	const { register, handleSubmit, setValue, watch } = form;
 	const { address, participantAlias } = watch();
@@ -37,15 +40,21 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 
 	useEffect(() => {
 		if (defaultParticipants!.length === 0) {
+			const { alias } = getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			});
+
 			setParticipants([
 				{
 					address: wallet.address(),
-					alias: wallet.alias(),
+					alias,
 					publicKey: wallet.publicKey()!,
 				},
 			]);
 		}
-	}, [wallet, defaultParticipants]);
+	}, [wallet, defaultParticipants, getWalletAlias, profile]);
 
 	const addParticipant = () => {
 		const reference = lastValidationReference.current as Contracts.IReadWriteWallet;

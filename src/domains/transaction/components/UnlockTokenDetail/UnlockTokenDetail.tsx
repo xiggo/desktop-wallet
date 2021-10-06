@@ -1,6 +1,4 @@
-import { DTO } from "@payvo/profiles";
 import { Modal } from "app/components/Modal";
-import { useActiveProfile, useWalletAlias } from "app/hooks";
 import {
 	TransactionAmount,
 	TransactionConfirmations,
@@ -9,40 +7,21 @@ import {
 	TransactionSender,
 	TransactionTimestamp,
 } from "domains/transaction/components/TransactionDetail";
+import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-interface Properties {
-	isOpen: boolean;
-	transaction: DTO.ExtendedConfirmedTransactionData;
-	onClose: () => void;
-}
-
-export const UnlockTokenDetail: React.FC<Properties> = ({ transaction, isOpen, onClose }: Properties) => {
+export const UnlockTokenDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
-
-	const profile = useActiveProfile();
 
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
 	const timestamp = useMemo(() => transaction.timestamp(), [transaction]);
-
-	const { getWalletAlias } = useWalletAlias();
-
-	const { alias, isDelegate } = useMemo(
-		() =>
-			getWalletAlias({
-				address: wallet.address(),
-				network: wallet.network(),
-				profile,
-			}),
-		[getWalletAlias, profile, wallet],
-	);
 
 	return (
 		<Modal title={t("TRANSACTION.TRANSACTION_TYPES.UNLOCK_TOKEN")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender address={transaction.sender()} alias={alias} isDelegate={isDelegate} border={false} />
+			<TransactionSender wallet={wallet} border={false} />
 
 			<TransactionAmount
 				amount={transaction.amount()}

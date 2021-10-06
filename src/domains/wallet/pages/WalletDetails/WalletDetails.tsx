@@ -144,6 +144,7 @@ export const WalletDetails = () => {
 				<TransactionDetailModal
 					isOpen={!!transactionModalItem}
 					transactionItem={transactionModalItem}
+					profile={activeProfile}
 					onClose={() => setTransactionModalItem(undefined)}
 				/>
 			)}

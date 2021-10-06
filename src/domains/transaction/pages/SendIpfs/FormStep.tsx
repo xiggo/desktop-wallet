@@ -50,7 +50,7 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 
 			<TransactionNetwork network={wallet.network()} border={false} />
 
-			<TransactionSender address={wallet.address()} alias={wallet.alias()} borderPosition="both" />
+			<TransactionSender wallet={wallet} borderPosition="both" />
 
 			<div className="pt-6 space-y-6">
 				<FormField name="hash">

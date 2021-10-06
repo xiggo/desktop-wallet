@@ -8,8 +8,9 @@ import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import { useEnvironmentContext } from "app/contexts";
+import { useActiveProfile, useWalletAlias } from "app/hooks";
 import cn from "classnames";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface AddressRowProperties {
@@ -23,6 +24,18 @@ interface AddressRowProperties {
 export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = false }: AddressRowProperties) => {
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
+	const activeProfile = useActiveProfile();
+
+	const { getWalletAlias } = useWalletAlias();
+	const { alias } = useMemo(
+		() =>
+			getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile: activeProfile,
+			}),
+		[activeProfile, getWalletAlias, wallet],
+	);
 
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
 
@@ -106,7 +119,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			>
 				<Avatar className="flex-shrink-0" size={isCompact ? "xs" : "lg"} address={wallet.address()} noShadow />
 				<div className="w-40 flex-1">
-					<Address address={wallet.address()} walletName={wallet.alias()} />
+					<Address address={wallet.address()} walletName={alias} />
 				</div>
 			</TableCell>
 

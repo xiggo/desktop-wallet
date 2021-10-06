@@ -1,9 +1,12 @@
 import React from "react";
-import { render } from "testing-library";
+import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
+import { getDefaultProfileId, render, renderWithRouter } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { SecondSignatureDetail } from "./SecondSignatureDetail";
+
+const fixtureProfileId = getDefaultProfileId();
 
 describe("SecondSignatureDetail", () => {
 	it("should not render if not open", () => {
@@ -16,8 +19,13 @@ describe("SecondSignatureDetail", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = render(
-			<SecondSignatureDetail isOpen={true} transaction={TransactionFixture} />,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<SecondSignatureDetail isOpen={true} transaction={TransactionFixture} />
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);
@@ -25,17 +33,22 @@ describe("SecondSignatureDetail", () => {
 	});
 
 	it("should render a modal without a wallet alias", () => {
-		const { asFragment, getByTestId } = render(
-			<SecondSignatureDetail
-				isOpen={true}
-				transaction={{
-					...TransactionFixture,
-					wallet: () => ({
-						...TransactionFixture.wallet(),
-						alias: () => undefined,
-					}),
-				}}
-			/>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<SecondSignatureDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						wallet: () => ({
+							...TransactionFixture.wallet(),
+							alias: () => undefined,
+						}),
+					}}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);
@@ -43,14 +56,19 @@ describe("SecondSignatureDetail", () => {
 	});
 
 	it("should render as confirmed", () => {
-		const { asFragment, getByText, getByTestId } = render(
-			<SecondSignatureDetail
-				isOpen={true}
-				transaction={{
-					...TransactionFixture,
-					isConfirmed: () => true,
-				}}
-			/>,
+		const { asFragment, getByText, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<SecondSignatureDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						isConfirmed: () => true,
+					}}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SECOND_SIGNATURE_DETAIL.TITLE);

@@ -11,13 +11,12 @@ import {
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-export const FormStep = ({
-	senderWallet,
-	profile,
-}: {
+interface FormStepProperties {
 	senderWallet: ProfilesContracts.IReadWriteWallet;
 	profile: ProfilesContracts.IProfile;
-}) => {
+}
+
+export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -31,7 +30,7 @@ export const FormStep = ({
 
 			<TransactionNetwork network={senderWallet.network()} border={false} />
 
-			<TransactionSender address={senderWallet.address()} alias={senderWallet.alias()} />
+			<TransactionSender wallet={senderWallet} />
 
 			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} borderPosition="both">
 				{senderWallet.username()}

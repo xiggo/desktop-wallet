@@ -1,9 +1,12 @@
 import React from "react";
-import { render } from "testing-library";
+import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
+import { getDefaultProfileId, render, renderWithRouter } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { DelegateRegistrationDetail } from "./DelegateRegistrationDetail";
+
+const fixtureProfileId = getDefaultProfileId();
 
 describe("DelegateRegistrationDetail", () => {
 	it("should not render if not open", () => {
@@ -19,11 +22,16 @@ describe("DelegateRegistrationDetail", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateRegistrationDetail
-				isOpen={true}
-				transaction={{ ...TransactionFixture, username: () => "Ark Wallet" }}
-			/>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<DelegateRegistrationDetail
+					isOpen={true}
+					transaction={{ ...TransactionFixture, username: () => "Ark Wallet" }}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE);
@@ -31,15 +39,20 @@ describe("DelegateRegistrationDetail", () => {
 	});
 
 	it("should render as confirmed", () => {
-		const { asFragment, getByTestId } = render(
-			<DelegateRegistrationDetail
-				isOpen={true}
-				transaction={{
-					...TransactionFixture,
-					isConfirmed: () => true,
-					username: () => "Ark Wallet",
-				}}
-			/>,
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<DelegateRegistrationDetail
+					isOpen={true}
+					transaction={{
+						...TransactionFixture,
+						isConfirmed: () => true,
+						username: () => "Ark Wallet",
+					}}
+				/>
+			</Route>,
+			{
+				routes: [`/profiles/${fixtureProfileId}`],
+			},
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE);

@@ -5,9 +5,10 @@ import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, getDefaultProfileId, render } from "utils/testing-library";
+import { Route } from "react-router-dom";
+import { env, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
 
-import { UnlockTokensFormState } from "../../UnlockTokens.contracts";
+import { UnlockTokensFormState } from "../UnlockTokens.contracts";
 import { UnlockTokensReview } from "./UnlockTokensReview";
 
 const translations = buildTranslations();
@@ -42,10 +43,15 @@ describe("UnlockTokensReview", () => {
 		result.current.register("amount");
 		result.current.register("fee");
 
-		const { asFragment } = render(
-			<FormProvider {...result.current}>
-				<UnlockTokensReview onBack={onBack} onConfirm={onConfirm} wallet={wallet} profile={profile} />
-			</FormProvider>,
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<FormProvider {...result.current}>
+					<UnlockTokensReview onBack={onBack} onConfirm={onConfirm} wallet={wallet} />
+				</FormProvider>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
 		);
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();

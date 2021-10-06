@@ -1,33 +1,80 @@
+import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { render } from "testing-library";
+import { Route } from "react-router-dom";
+import { env, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
 
 import { TransactionSender } from "./TransactionSender";
 
-const address = "test-address";
+let profile: Contracts.IProfile;
+let wallet: Contracts.IReadWriteWallet;
 
 describe("TransactionSender", () => {
-	it("should render", () => {
-		const { container } = render(<TransactionSender address={address} />);
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+		wallet = profile.wallets().values()[0];
+	});
 
-		expect(container).toHaveTextContent(address);
+	it("should render", () => {
+		const { container } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<TransactionSender wallet={wallet} />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		expect(container).toHaveTextContent(wallet.address());
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should not render with alias", () => {
-		const alias = "test-alias";
+	it("should render with address", () => {
+		const { container } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<TransactionSender address="test-address" />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
 
-		const { container } = render(<TransactionSender address={address} alias={alias} />);
+		expect(container).toHaveTextContent("test-address");
+		expect(container).toMatchSnapshot();
+	});
 
-		expect(container).toHaveTextContent(address);
-		expect(container).toHaveTextContent(alias);
+	it("should render with alias", () => {
+		const { container } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<TransactionSender wallet={wallet} />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		expect(container).toHaveTextContent(wallet.address());
+		expect(container).toHaveTextContent("ARK Wallet 1");
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should not render delegate icon", () => {
-		const { container } = render(<TransactionSender address={address} isDelegate={true} />);
+		const delegateMock = jest.spyOn(env.delegates(), "findByAddress").mockReturnValue({
+			username: () => "delegate username",
+		} as any);
 
-		expect(container).toHaveTextContent(address);
+		const { container } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<TransactionSender wallet={wallet} />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		expect(container).toHaveTextContent(wallet.address());
 		expect(container).toHaveTextContent("delegate-registration.svg");
 		expect(container).toMatchSnapshot();
+
+		delegateMock.mockRestore();
 	});
 });

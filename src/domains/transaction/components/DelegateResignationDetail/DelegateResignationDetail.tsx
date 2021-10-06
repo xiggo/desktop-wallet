@@ -11,13 +11,10 @@ import {
 } from "domains/transaction/components/TransactionDetail";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-interface DelegateResignationDetailProperties {
-	isOpen: boolean;
-	transaction: any;
-	onClose?: any;
-}
 
-export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: DelegateResignationDetailProperties) => {
+import { TransactionDetailProperties } from "../TransactionDetailModal/TransactionDetailModal.models";
+
+export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
@@ -26,7 +23,7 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Dele
 		<Modal title={t("TRANSACTION.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender address={transaction.sender()} alias={wallet.alias()} border={false} />
+			<TransactionSender wallet={wallet} border={false} />
 
 			<TransactionDetail
 				label={t("TRANSACTION.DELEGATE_NAME")}

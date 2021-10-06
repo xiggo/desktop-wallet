@@ -4,9 +4,19 @@ import { RenderResult } from "@testing-library/react";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { Route } from "react-router-dom";
 import multiSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import { TransactionFees } from "types";
-import { env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "utils/testing-library";
+import {
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	render,
+	renderWithRouter,
+	screen,
+	syncFees,
+	waitFor,
+} from "utils/testing-library";
 
 import { translations as transactionTranslations } from "../../i18n";
 import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
@@ -62,7 +72,14 @@ describe("MultiSignature Registration Form", () => {
 			);
 		};
 
-		const renderResult: RenderResult = render(<Component />);
+		const renderResult: RenderResult = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<Component />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
 
 		return { ...renderResult, form };
 	};
