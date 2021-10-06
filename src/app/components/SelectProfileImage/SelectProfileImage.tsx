@@ -109,15 +109,17 @@ export const SelectProfileImage = ({ className, value, name, showLabel, onSelect
 					</ProfileImageStyled>
 
 					{!isSvg && (
-						<Button
-							size="icon"
-							variant="danger"
-							className="flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
-							onClick={() => onSelect("")}
-							data-testid="SelectProfileImage__remove-button"
-						>
-							<Icon name="Cross" size="sm" />
-						</Button>
+						<div className="absolute z-20 -top-3 -right-3 ">
+							<Button
+								size="icon"
+								variant="danger"
+								className="flex justify-center items-center p-1 w-6 h-6"
+								onClick={() => onSelect("")}
+								data-testid="SelectProfileImage__remove-button"
+							>
+								<Icon name="Cross" size="sm" />
+							</Button>
+						</div>
 					)}
 				</div>
 			);

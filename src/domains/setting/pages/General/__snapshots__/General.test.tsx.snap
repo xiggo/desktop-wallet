@@ -1909,25 +1909,29 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                               </div>
                             </button>
                           </div>
-                          <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 gLUAUL flex absolute z-20 -top-3 -right-3 justify-center items-center p-1 w-6 h-6"
-                            data-testid="SelectProfileImage__remove-button"
-                            type="button"
+                          <div
+                            class="absolute z-20 -top-3 -right-3 "
                           >
-                            <div
-                              class="flex items-center space-x-2"
+                            <button
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 gLUAUL flex justify-center items-center p-1 w-6 h-6"
+                              data-testid="SelectProfileImage__remove-button"
+                              type="button"
                             >
                               <div
-                                class="sc-bdnxRM AkeAK"
-                                height="10"
-                                width="10"
+                                class="flex items-center space-x-2"
                               >
-                                <svg>
-                                  cross.svg
-                                </svg>
+                                <div
+                                  class="sc-bdnxRM AkeAK"
+                                  height="10"
+                                  width="10"
+                                >
+                                  <svg>
+                                    cross.svg
+                                  </svg>
+                                </div>
                               </div>
-                            </div>
-                          </button>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
