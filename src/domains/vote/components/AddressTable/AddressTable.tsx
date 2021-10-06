@@ -40,10 +40,21 @@ export const AddressTable = ({ wallets, onSelect, isCompact = false }: AddressTa
 		},
 		{
 			Header: maxVotes === 1 ? t("COMMON.DELEGATE") : t("COMMON.DELEGATES"),
-			accessor: "delegate",
+			accessor: (wallet: Contracts.IReadWriteWallet) => {
+				let votes: Contracts.VoteRegistryItem[];
+
+				try {
+					votes = wallet.voting().current();
+				} catch {
+					votes = [];
+				}
+
+				const [first] = votes;
+
+				return first?.wallet?.username();
+			},
 			cellWidth: "w-60",
 			className: maxVotes === 1 ? "ml-15" : "",
-			disableSortBy: true,
 		},
 	];
 

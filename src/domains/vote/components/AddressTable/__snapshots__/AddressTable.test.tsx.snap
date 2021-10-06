@@ -131,12 +131,28 @@ exports[`AddressTable should render 1`] = `
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
             >
               <div
                 class="flex flex-inline align-top ml-15"
               >
                 <div>
                   Delegate
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
                 </div>
               </div>
             </th>
@@ -461,12 +477,28 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
             >
               <div
                 class="flex flex-inline align-top"
               >
                 <div>
                   Delegates
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
                 </div>
               </div>
             </th>
@@ -618,6 +650,328 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                   </span>
                 </div>
               </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  data-testid="AddressRow__select-0"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Vote
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AddressTable should render with voting delegates and handle exception 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="AddressTable"
+  >
+    <div
+      class="flex items-center py-5 space-x-4"
+    >
+      <div
+        aria-label="ARK Devnet"
+        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+        data-testid="NetworkIcon-ARK-ark.devnet"
+      >
+        <div
+          class="sc-bdnxRM NjstW"
+          data-testid="NetworkIcon__icon"
+          height="20"
+          width="20"
+        >
+          <svg>
+            ark.svg
+          </svg>
+        </div>
+      </div>
+      <div
+        class="flex space-x-2"
+      >
+        <h2
+          class="mb-0 text-lg font-bold"
+        >
+          ARK Devnet
+        </h2>
+        <span
+          class="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          1
+        </span>
+      </div>
+    </div>
+    <div
+      class="Table__TableWrapper-sc-1gcp0fb-0 fDAVsO -mt-3"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-80 min-w-80"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div>
+                  My Address
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-30 min-w-30"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div>
+                  Wallet Type
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-60 min-w-60"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top justify-end flex-row-reverse"
+              >
+                <div>
+                  Balance
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                >
+                  <div
+                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-60 min-w-60"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top ml-15"
+              >
+                <div>
+                  Delegate
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div>
+                  Rank
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-20 min-w-20"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div>
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--6"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top no-border"
+              >
+                <div>
+                   
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn space-x-4"
+              >
+                <div
+                  class="Avatar__AvatarWrapper-sc-18vw8a4-0 cFpjsM flex-shrink-0 flex-shrink-0"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                  >
+                    <img
+                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="w-40 flex-1"
+                >
+                  <div
+                    class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                  >
+                    <span
+                      class="font-semibold text-base text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
+                    </span>
+                    <span
+                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center text-sm font-bold text-center align-middle"
+              >
+                <div
+                  class="inline-flex items-center space-x-2"
+                />
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="AmountCrypto"
+                >
+                  33.75089801 DARK
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh font-bold space-x-4"
+              >
+                <div
+                  class="Circle__CircleWrapper-sc-d5u41q-0 fgSjup border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+                />
+                <span
+                  class="text-theme-secondary-400"
+                >
+                  N/A
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center font-bold text-theme-secondary-text"
+              />
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+              />
             </td>
             <td>
               <div

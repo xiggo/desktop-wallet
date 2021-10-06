@@ -62,4 +62,27 @@ describe("AddressTable", () => {
 
 		maxVotesMock.mockRestore();
 	});
+
+	it("should render with voting delegates and handle exception", async () => {
+		const walletVotingMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		const { asFragment, container, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<AddressTable wallets={[wallet]} />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		expect(container).toBeTruthy();
+
+		await waitFor(() => expect(() => getByTestId("AddressRow__status")).toThrow());
+
+		expect(asFragment()).toMatchSnapshot();
+
+		walletVotingMock.mockRestore();
+	});
 });

@@ -8163,12 +8163,28 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                       colspan="1"
                       data-testid="table__th--3"
                       role="columnheader"
+                      style="cursor: pointer;"
+                      title="Toggle SortBy"
                     >
                       <div
                         class="flex flex-inline align-top ml-15"
                       >
                         <div>
                           Delegate
+                        </div>
+                        <div
+                          class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                        >
+                          <div
+                            class="sc-bdnxRM AkeAK transition-transform transform rotate-180"
+                            height="10"
+                            role="img"
+                            width="10"
+                          >
+                            <svg>
+                              chevron-down-small.svg
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </th>
