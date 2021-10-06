@@ -3,7 +3,7 @@ import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen } from "testing-library";
 
 import { WalletCard } from "./WalletCard";
 
@@ -49,7 +49,7 @@ describe("Wallet Card", () => {
 	});
 
 	it("should render loading state", () => {
-		const { container, getByTestId } = renderWithRouter(
+		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard isLoading={true} wallet={wallet} />
 			</Route>,
@@ -59,7 +59,7 @@ describe("Wallet Card", () => {
 			},
 		);
 
-		expect(getByTestId("WalletCard__skeleton")).toBeTruthy();
+		expect(screen.getByTestId("WalletCard__skeleton")).toBeTruthy();
 		expect(container).toMatchSnapshot();
 	});
 
@@ -140,7 +140,7 @@ describe("Wallet Card", () => {
 	});
 
 	it("should click a wallet and redirect to it when fully restored", () => {
-		const { getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} />
 			</Route>,
@@ -152,9 +152,7 @@ describe("Wallet Card", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		act(() => {
-			fireEvent.click(getByText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"));
-		});
+		fireEvent.click(screen.getByText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 	});
@@ -162,7 +160,7 @@ describe("Wallet Card", () => {
 	it("should not redirect to wallet when not fully restored", () => {
 		const hasBeenFullyRestored = jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
 
-		const { getByText } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} />
 			</Route>,
@@ -174,12 +172,36 @@ describe("Wallet Card", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		act(() => {
-			fireEvent.click(getByText(wallet.alias()));
-		});
+		fireEvent.click(screen.getByText(wallet.alias()));
 
 		expect(history.location.pathname).not.toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
 		hasBeenFullyRestored.mockRestore();
+	});
+
+	it("should execute onWalletAction callback", () => {
+		const onWalletAction = jest.fn();
+		const actions = [{ label: "Option", value: "option" }];
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletCard wallet={wallet} actions={actions} onWalletAction={onWalletAction} />
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
+
+		fireEvent.click(screen.getByTestId("dropdown__toggle"));
+
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByTestId("dropdown__option--0")).toBeInTheDocument();
+
+		fireEvent.click(screen.getByTestId("dropdown__option--0"));
+
+		expect(onWalletAction).toHaveBeenCalledWith(actions[0].value, wallet);
 	});
 });

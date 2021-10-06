@@ -1,11 +1,17 @@
 import { Contracts } from "@payvo/profiles";
+import { DropdownOption } from "app/components/Dropdown";
 import { Section } from "app/components/Layout";
+import { useEnvironmentContext } from "app/contexts";
 import { useActiveProfile } from "app/hooks";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
 import { WalletsControls } from "domains/dashboard/components/WalletsControls";
+import { DeleteWallet } from "domains/wallet/components/DeleteWallet";
 import { LedgerWaitingDevice } from "domains/wallet/components/Ledger/LedgerWaitingDevice";
+import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
 import React, { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { assertWallet } from "utils/assertions";
 
 import { useWalletDisplay, WalletsGrid, WalletsList } from ".";
 
@@ -34,8 +40,14 @@ export const Wallets = ({
 	const [viewMore, setViewMore] = useState(false);
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
+	const [modal, setModal] = useState<string | undefined>();
+	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet>();
+
 	const history = useHistory();
 	const activeProfile = useActiveProfile();
+	const { persist } = useEnvironmentContext();
+
+	const { t } = useTranslation();
 
 	const filterProperties = useWalletFilters({ profile: activeProfile });
 	const { viewType, walletsDisplayType, selectedNetworkIds, update } = filterProperties;
@@ -59,6 +71,32 @@ export const Wallets = ({
 		viewMore,
 		wallets,
 	});
+
+	const walletActions: DropdownOption[] = [
+		{ label: t("COMMON.RENAME"), value: "rename" },
+		{ label: t("COMMON.DELETE"), value: "delete" },
+	];
+
+	const handleWalletAction = (action: string, wallet: Contracts.IReadWriteWallet) => {
+		setSelectedWallet(wallet);
+		setModal(action);
+	};
+
+	const resetWalletAction = () => {
+		setModal(undefined);
+		setSelectedWallet(undefined);
+	};
+
+	const handleDeleteWallet = async () => {
+		assertWallet(selectedWallet);
+
+		activeProfile.wallets().forget(selectedWallet.id());
+		activeProfile.notifications().transactions().forgetByRecipient(selectedWallet.address());
+
+		resetWalletAction();
+
+		await persist();
+	};
 
 	const handleClick = (walletId: string) => {
 		history.push(`/profiles/${activeProfile.id()}/wallets/${walletId}`);
@@ -90,6 +128,8 @@ export const Wallets = ({
 			</div>
 
 			<WalletsGrid
+				actions={walletActions}
+				onWalletAction={handleWalletAction}
 				isVisible={viewType === "grid"}
 				isLoading={isLoading && walletsCount === 0}
 				wallets={gridWallets}
@@ -113,6 +153,22 @@ export const Wallets = ({
 					isOpen={true}
 					onDeviceAvailable={handleDeviceAvailable}
 					onClose={() => setIsWaitingLedger(false)}
+				/>
+			)}
+
+			<DeleteWallet
+				isOpen={modal === "delete"}
+				onClose={resetWalletAction}
+				onCancel={resetWalletAction}
+				onDelete={handleDeleteWallet}
+			/>
+
+			{modal === "rename" && !!selectedWallet && (
+				<UpdateWalletName
+					onAfterSave={resetWalletAction}
+					onCancel={resetWalletAction}
+					profile={activeProfile}
+					wallet={selectedWallet}
 				/>
 			)}
 		</Section>

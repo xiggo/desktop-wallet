@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/profiles";
+import { DropdownOption } from "app/components/Dropdown";
 
 export interface GridWallet {
 	isBlank?: boolean;
@@ -6,6 +7,7 @@ export interface GridWallet {
 }
 
 export interface WalletGridProperties {
+	actions?: DropdownOption[];
 	isVisible?: boolean;
 	isLoading?: boolean;
 	sliderOptions?: Record<string, any>;

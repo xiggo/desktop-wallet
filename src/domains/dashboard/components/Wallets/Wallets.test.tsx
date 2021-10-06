@@ -16,8 +16,10 @@ import {
 	fireEvent,
 	getDefaultProfileId,
 	renderWithRouter,
+	screen,
 	syncDelegates,
 	waitFor,
+	within,
 } from "utils/testing-library";
 
 import { Wallets } from "./Wallets";
@@ -39,8 +41,6 @@ describe("Wallets", () => {
 			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
 			.reply(200, []);
 
-		history.push(dashboardURL);
-
 		emptyProfile = env.profiles().create("Empty");
 		profile = env.profiles().findById(getDefaultProfileId());
 
@@ -58,6 +58,10 @@ describe("Wallets", () => {
 		wallets = profile.wallets().values();
 
 		await syncDelegates(profile);
+	});
+
+	beforeEach(() => {
+		history.push(dashboardURL);
 	});
 
 	afterAll(() => {
@@ -324,6 +328,84 @@ describe("Wallets", () => {
 		});
 
 		expect(history.location.pathname).toMatch(`/profiles/${profile.id()}/wallets/${wallets[0].id()}`);
+	});
+
+	it("should rename wallet through wallet card dropdown", async () => {
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId/dashboard">
+				<Wallets />
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletsGrid")).toBeTruthy();
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+
+		fireEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
+
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByText(commonTranslations.RENAME)).toBeInTheDocument();
+
+		fireEvent.click(screen.getByText(commonTranslations.RENAME));
+
+		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeInTheDocument());
+
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE);
+
+		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: "New Name" } });
+
+		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue("New Name"));
+
+		expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
+
+		fireEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+
+		await waitFor(() => expect(profile.wallets().first().alias()).toBe("New Name"));
+	});
+
+	it("should delete wallet through wallet card dropdown", async () => {
+		const { asFragment } = renderWithRouter(
+			<Route path="/profiles/:profileId/dashboard">
+				<Wallets />
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		const count = profile.wallets().count();
+
+		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("WalletsGrid")).toBeTruthy();
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+
+		fireEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
+
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+		expect(screen.getByText(commonTranslations.DELETE)).toBeInTheDocument();
+
+		fireEvent.click(screen.getByText(commonTranslations.DELETE));
+
+		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeInTheDocument());
+
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE);
+
+		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+
+		await waitFor(() => expect(profile.wallets().count()).toEqual(count - 1));
 	});
 
 	it("should render empty profile wallets", async () => {

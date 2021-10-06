@@ -2,6 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import { Avatar } from "app/components/Avatar";
 import { Card } from "app/components/Card";
 import { Circle } from "app/components/Circle";
+import { DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import { WalletIcons } from "app/components/WalletIcons";
@@ -17,13 +18,22 @@ import { AmountCrypto } from "../Amount";
 import { WalletCardSkeleton } from "./WalletCardSkeleton";
 
 interface WalletCardProperties {
+	actions?: DropdownOption[];
+	onWalletAction?: any;
 	isLoading?: boolean;
 	className?: string;
 	wallet?: Contracts.IReadWriteWallet;
 	displayType?: string;
 }
 
-export const WalletCard = ({ isLoading = false, className, wallet, displayType = "all" }: WalletCardProperties) => {
+export const WalletCard = ({
+	actions,
+	onWalletAction,
+	isLoading = false,
+	className,
+	wallet,
+	displayType = "all",
+}: WalletCardProperties) => {
 	const activeProfile = useActiveProfile();
 
 	const history = useHistory();
@@ -92,6 +102,8 @@ export const WalletCard = ({ isLoading = false, className, wallet, displayType =
 	return (
 		<div className={cn("w-64 inline-block", className)} data-testid={`WalletCard__${wallet.address()}`}>
 			<Card
+				actions={actions}
+				onSelect={({ value }: DropdownOption) => onWalletAction?.(value, wallet)}
 				addonIcons={<WalletIcons wallet={wallet} />}
 				className="h-48"
 				onClick={

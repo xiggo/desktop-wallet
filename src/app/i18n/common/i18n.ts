@@ -240,6 +240,7 @@ export const translations: { [key: string]: any } = {
 	REGISTER: "Register",
 	REGISTRATIONS: "Registrations",
 	REMOVE: "Remove",
+	RENAME: "Rename",
 	REPEAT: "Repeat",
 	REPORT: "Report",
 	RESET: "Reset",
