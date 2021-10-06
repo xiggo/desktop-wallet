@@ -227,9 +227,9 @@ export const SendVote = () => {
 			if (unvotes.length > 0 && votes.length > 0) {
 				// @README: This needs to be temporarily hardcoded here because we need to create 1 or 2
 				// transactions but the SDK is only capable of creating 1 transaction because it has no
-				// concept of all those weird legacy constructs that exist within ARK.
+				// concept of all those weird legacy constructs that exist within BIND.
 				/* istanbul ignore next */
-				if (senderWallet?.networkId() === "ark.mainnet") {
+				if (senderWallet?.networkId().startsWith("bind")) {
 					const unvoteResult = await transactionBuilder.build(
 						"vote",
 						{
@@ -284,7 +284,7 @@ export const SendVote = () => {
 
 					await confirmSendVote("vote");
 				} else {
-					// @README: If we are not interacting with ark.mainnet we can combine the
+					// @README: If we are not interacting with a BIND network we can combine the
 					// votes and unvotes in a single transaction to save fees and processing time.
 					const { uuid, transaction } = await transactionBuilder.build(
 						"vote",
