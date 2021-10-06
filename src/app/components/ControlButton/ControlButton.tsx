@@ -5,10 +5,10 @@ import tw, { css, styled } from "twin.macro";
 const ControlButtonStyled = styled.button<{ noBorder?: boolean; disabled?: boolean }>`
 	${tw`relative flex items-center justify-center py-2`}
 	${tw`font-semibold text-theme-primary-300 dark:text-theme-secondary-600`}
-    ${tw`border-t-2 border-b-2 border-transparent`}
-    ${tw`transition-colors duration-200`}
-    ${tw`cursor-pointer`}
-    ${tw`focus:outline-none`}
+	${tw`border-t-2 border-b-2 border-transparent`}
+	${tw`transition-colors duration-200`}
+	${tw`cursor-pointer`}
+	${tw`focus:outline-none`}
 	${tw`disabled:(cursor-not-allowed text-theme-secondary-400 dark:text-theme-secondary-700)`}
 
 	${({ noBorder }) => {

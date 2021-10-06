@@ -4,9 +4,9 @@
 
 	--theme-color-primary-rgb: var(--theme-color-success-rgb);
 	--theme-color-primary-50: var(--theme-color-success-50);
-	--theme-color-primary-100: var(--theme-color-success-200);
+	--theme-color-primary-100: var(--theme-color-success-100);
 	--theme-color-primary-200: var(--theme-color-success-200);
-	--theme-color-primary-300: var(--theme-color-success-400);
+	--theme-color-primary-300: var(--theme-color-success-300);
 	--theme-color-primary-400: var(--theme-color-success-400);
 	--theme-color-primary-500: var(--theme-color-success-500);
 	--theme-color-primary-600: var(--theme-color-success-600);
@@ -39,11 +39,11 @@
 	--theme-color-secondary-900-rgb: 33, 34, 37;
 
 	--theme-color-success-rgb: 40, 149, 72;
-	--theme-color-success-50: #f6fdf8;
-	--theme-color-success-100: #edf7f0;
-	--theme-color-success-200: #e2f0e6;
-	--theme-color-success-300: #b0dbbc;
-	--theme-color-success-400: #8cc69d;
+	--theme-color-success-50: #f0fdf4;
+	--theme-color-success-100: #e2f0e6;
+	--theme-color-success-200: #b0dbbc;
+	--theme-color-success-300: #8cc69d;
+	--theme-color-success-400: #60c07c;
 	--theme-color-success-500: #42b263;
 	--theme-color-success-600: #289548;
 	--theme-color-success-700: #307845;
@@ -107,7 +107,7 @@
 	--theme-secondary-text-color: var(--theme-color-secondary-700);
 
 	--theme-scrollbar-color: var(--theme-color-primary-100);
-	--theme-scrollbar-hover-color: var(--theme-color-primary-200);
+	--theme-scrollbar-hover-color: var(--theme-color-primary-100);
 
 	--theme-shadow-color: 0, 0, 0;
 
