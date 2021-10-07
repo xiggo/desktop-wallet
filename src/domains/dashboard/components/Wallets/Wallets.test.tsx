@@ -331,7 +331,7 @@ describe("Wallets", () => {
 	});
 
 	it("should rename wallet through wallet card dropdown", async () => {
-		const { asFragment } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -341,13 +341,15 @@ describe("Wallets", () => {
 			},
 		);
 
+		const name = "New Name";
+
 		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletsGrid")).toBeTruthy();
 		});
 
-		expect(asFragment()).toMatchSnapshot();
+		expect(() => within(screen.getAllByTestId("Card")[0]).getByText(name)).toThrow();
 
 		fireEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
 
@@ -360,19 +362,21 @@ describe("Wallets", () => {
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE);
 
-		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: "New Name" } });
+		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: name } });
 
-		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue("New Name"));
+		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue(name));
 
 		expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
 
 		fireEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
-		await waitFor(() => expect(profile.wallets().first().alias()).toBe("New Name"));
+		await waitFor(() => expect(profile.wallets().first().alias()).toBe(name));
+
+		expect(within(screen.getAllByTestId("Card")[0]).getByText(name)).toBeInTheDocument();
 	});
 
 	it("should delete wallet through wallet card dropdown", async () => {
-		const { asFragment } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -389,8 +393,6 @@ describe("Wallets", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletsGrid")).toBeTruthy();
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 
 		fireEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
 

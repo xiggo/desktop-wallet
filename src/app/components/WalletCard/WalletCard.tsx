@@ -41,6 +41,8 @@ export const WalletCard = ({
 
 	const { getWalletAlias } = useWalletAlias();
 
+	const defaultAlias = wallet?.alias();
+
 	const { alias } = useMemo(
 		() =>
 			getWalletAlias({
@@ -48,7 +50,7 @@ export const WalletCard = ({
 				network: wallet?.network(),
 				profile: activeProfile,
 			}),
-		[activeProfile, getWalletAlias, wallet],
+		[activeProfile, defaultAlias, getWalletAlias, wallet], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
 	const canDisplayBalance = !wallet ? false : isFullySynced(wallet);
