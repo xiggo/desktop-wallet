@@ -426,7 +426,7 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 guMZnB no-ligatures"
+      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures"
       data-testid="TransactionDetail"
     >
       <div
@@ -479,7 +479,7 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
       </div>
     </div>
     <div
-      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 dEfDlX no-ligatures text-lg break-all"
+      class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kQeQRD no-ligatures text-lg break-all"
       data-testid="TransactionDetail"
     >
       <div
@@ -497,36 +497,40 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
         </div>
       </div>
     </div>
-    <fieldset
-      class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+    <div
+      class="pt-6"
     >
-      <label
-        class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
-        data-testid="FormLabel"
-        for="json-signature"
+      <fieldset
+        class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
       >
-        Signature
-      </label>
-      <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 ioTDRK py-4"
-        disabled=""
-      >
-        <div
-          class="relative flex flex-1 h-full"
+        <label
+          class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
+          data-testid="FormLabel"
+          for="json-signature"
         >
-          <textarea
-            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full resize-none text-theme-secondary-text"
-            data-testid="TextArea"
-            disabled=""
-            name="signature"
-            style="height: 4px;"
-            wrap="hard"
+          Signature
+        </label>
+        <div
+          class="Input__InputWrapperStyled-sc-1i8sd1r-0 ioTDRK py-4"
+          disabled=""
+        >
+          <div
+            class="relative flex flex-1 h-full"
           >
-            {"message":"Hello World","signatory":"03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac","signature":"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6"}
-          </textarea>
+            <textarea
+              class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full resize-none text-theme-secondary-text"
+              data-testid="TextArea"
+              disabled=""
+              name="signature"
+              style="height: 4px;"
+              wrap="hard"
+            >
+              {"message":"Hello World","signatory":"03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac","signature":"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6"}
+            </textarea>
+          </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </section>
 </div>
 `;

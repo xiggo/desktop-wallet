@@ -26,28 +26,30 @@ export const SignedStep = ({
 			<Header title={t("WALLETS.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE")} />
 
 			<TransactionDetail
-				border={false}
+				borderPosition="bottom"
 				label={t("WALLETS.SIGNATORY")}
 				extra={<Avatar size="lg" address={wallet.address()} />}
 			>
 				<Address walletName={walletAlias} address={wallet.address()} />
 			</TransactionDetail>
 
-			<TransactionDetail label={t("COMMON.MESSAGE")} className="text-lg break-all">
+			<TransactionDetail borderPosition="bottom" label={t("COMMON.MESSAGE")} className="text-lg break-all">
 				{signedMessage.message}
 			</TransactionDetail>
 
-			<FormField name="json-signature">
-				<FormLabel label={t("COMMON.SIGNATURE")} />
-				<TextArea
-					className="py-4"
-					name="signature"
-					wrap="hard"
-					ref={messageReference}
-					defaultValue={JSON.stringify(signedMessage)}
-					disabled
-				/>
-			</FormField>
+			<div className="pt-6">
+				<FormField name="json-signature">
+					<FormLabel label={t("COMMON.SIGNATURE")} />
+					<TextArea
+						className="py-4"
+						name="signature"
+						wrap="hard"
+						ref={messageReference}
+						defaultValue={JSON.stringify(signedMessage)}
+						disabled
+					/>
+				</FormField>
+			</div>
 		</section>
 	);
 };
