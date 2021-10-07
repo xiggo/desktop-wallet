@@ -45,6 +45,7 @@ export const SignedStep = ({
 					wrap="hard"
 					ref={messageReference}
 					defaultValue={JSON.stringify(signedMessage)}
+					disabled
 				/>
 			</FormField>
 		</section>

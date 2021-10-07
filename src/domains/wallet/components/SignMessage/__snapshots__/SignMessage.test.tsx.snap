@@ -508,14 +508,16 @@ exports[`SignMessage should render signed step with wallet alias 1`] = `
         Signature
       </label>
       <div
-        class="Input__InputWrapperStyled-sc-1i8sd1r-0 xMTkF py-4"
+        class="Input__InputWrapperStyled-sc-1i8sd1r-0 ioTDRK py-4"
+        disabled=""
       >
         <div
           class="relative flex flex-1 h-full"
         >
           <textarea
-            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+            class="Input__InputStyled-sc-1i8sd1r-1 exXuoZ p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full resize-none text-theme-secondary-text"
             data-testid="TextArea"
+            disabled=""
             name="signature"
             style="height: 4px;"
             wrap="hard"
