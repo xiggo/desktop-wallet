@@ -52,7 +52,7 @@ export const MultiSignatureRegistrationDetail = ({ isOpen, transaction, onClose 
 		<Modal title={t("TRANSACTION.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender wallet={wallet} border={false} />
+			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 

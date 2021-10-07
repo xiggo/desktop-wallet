@@ -30,7 +30,7 @@ export const FormStep = ({ senderWallet, profile }: FormStepProperties) => {
 
 			<TransactionNetwork network={senderWallet.network()} border={false} />
 
-			<TransactionSender wallet={senderWallet} />
+			<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
 
 			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")} borderPosition="both">
 				{senderWallet.username()}

@@ -23,7 +23,7 @@ export const IpfsDetail = ({ isOpen, transaction, onClose }: TransactionDetailPr
 		<Modal title={t("TRANSACTION.MODAL_IPFS_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender wallet={wallet} border={false} />
+			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
 

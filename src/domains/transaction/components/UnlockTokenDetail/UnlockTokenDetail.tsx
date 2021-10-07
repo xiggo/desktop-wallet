@@ -21,7 +21,7 @@ export const UnlockTokenDetail = ({ isOpen, transaction, onClose }: TransactionD
 		<Modal title={t("TRANSACTION.TRANSACTION_TYPES.UNLOCK_TOKEN")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender wallet={wallet} border={false} />
+			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<TransactionAmount
 				amount={transaction.amount()}

@@ -23,7 +23,7 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Tran
 		<Modal title={t("TRANSACTION.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender wallet={wallet} border={false} />
+			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<TransactionDetail
 				label={t("TRANSACTION.DELEGATE_NAME")}

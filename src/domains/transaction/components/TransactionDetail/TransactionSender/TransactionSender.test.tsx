@@ -17,7 +17,7 @@ describe("TransactionSender", () => {
 	it("should render", () => {
 		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId">
-				<TransactionSender wallet={wallet} />
+				<TransactionSender address={wallet.address()} network={wallet.network()} />
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}`],
@@ -45,7 +45,7 @@ describe("TransactionSender", () => {
 	it("should render with alias", () => {
 		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId">
-				<TransactionSender wallet={wallet} />
+				<TransactionSender address={wallet.address()} network={wallet.network()} />
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}`],
@@ -64,7 +64,7 @@ describe("TransactionSender", () => {
 
 		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId">
-				<TransactionSender wallet={wallet} />
+				<TransactionSender address={wallet.address()} network={wallet.network()} />
 			</Route>,
 			{
 				routes: [`/profiles/${profile.id()}`],

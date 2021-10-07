@@ -31,7 +31,13 @@ export const UnlockTokensReview: React.FC<Properties> = ({ wallet, onBack, onCon
 		<>
 			<Header title={t("TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE")} />
 
-			<TransactionSender className="pt-4" wallet={wallet} border={false} paddingPosition="none" />
+			<TransactionSender
+				className="pt-4"
+				address={wallet.address()}
+				network={wallet.network()}
+				border={false}
+				paddingPosition="none"
+			/>
 
 			<TransactionAmount
 				isTotalAmount

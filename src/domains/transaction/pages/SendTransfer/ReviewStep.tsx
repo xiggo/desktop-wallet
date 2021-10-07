@@ -33,7 +33,7 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 
 			<TransactionNetwork network={wallet.network()} border={false} />
 
-			<TransactionSender wallet={wallet} />
+			<TransactionSender address={wallet.address()} network={wallet.network()} />
 
 			<TransactionRecipients currency={wallet.currency()} recipients={recipients} />
 

@@ -25,7 +25,7 @@ export const ReviewStep = ({ senderWallet }: { senderWallet: Contracts.IReadWrit
 
 			<TransactionNetwork network={senderWallet.network()} border={false} />
 
-			<TransactionSender wallet={senderWallet} />
+			<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
 
 			<TransactionDetail label={t("TRANSACTION.DELEGATE_NAME")}>{senderWallet.username()}</TransactionDetail>
 

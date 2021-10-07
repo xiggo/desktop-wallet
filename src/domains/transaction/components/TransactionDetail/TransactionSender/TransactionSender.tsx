@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/profiles";
+import { Networks } from "@payvo/sdk";
 import { Address } from "app/components/Address";
 import { Avatar } from "app/components/Avatar";
 import { Circle } from "app/components/Circle";
@@ -10,26 +10,24 @@ import { useTranslation } from "react-i18next";
 import { TransactionDetail, TransactionDetailProperties } from "../TransactionDetail";
 
 type TransactionSenderProperties = {
-	wallet?: Contracts.IReadWriteWallet;
-	address?: string;
+	address: string;
+	network: Networks.Network;
 } & TransactionDetailProperties;
 
-export const TransactionSender = ({ wallet, address, ...properties }: TransactionSenderProperties) => {
+export const TransactionSender = ({ address, network, ...properties }: TransactionSenderProperties) => {
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
-
-	const walletAddress = wallet?.address() ?? address;
 
 	const { getWalletAlias } = useWalletAlias();
 	const { alias, isDelegate } = useMemo(
 		() =>
 			getWalletAlias({
-				address: walletAddress,
-				network: wallet?.network(),
+				address,
+				network,
 				profile: activeProfile,
 			}),
-		[activeProfile, getWalletAlias, wallet, walletAddress],
+		[activeProfile, getWalletAlias, address, network],
 	);
 
 	return (
@@ -46,12 +44,12 @@ export const TransactionSender = ({ wallet, address, ...properties }: Transactio
 							<Icon name="Delegate" size="lg" />
 						</Circle>
 					)}
-					<Avatar address={walletAddress} size="lg" />
+					<Avatar address={address} size="lg" />
 				</div>
 			}
 			{...properties}
 		>
-			<Address address={walletAddress} walletName={alias} />
+			<Address address={address} walletName={alias} />
 		</TransactionDetail>
 	);
 };

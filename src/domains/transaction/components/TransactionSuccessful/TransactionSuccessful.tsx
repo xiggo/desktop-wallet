@@ -54,7 +54,7 @@ export const TransactionSuccessful = ({
 
 						<TransactionNetwork network={senderWallet.network()} />
 
-						<TransactionSender wallet={senderWallet} />
+						<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
 					</>
 				)}
 

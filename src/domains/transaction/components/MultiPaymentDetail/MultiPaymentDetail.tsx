@@ -42,7 +42,7 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Tr
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender wallet={wallet} border={false} />
+			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<MultiPaymentRecipients transaction={transaction} recipients={recipients} />
 

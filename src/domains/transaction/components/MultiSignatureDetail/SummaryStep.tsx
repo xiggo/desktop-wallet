@@ -78,7 +78,7 @@ export const SummaryStep = ({
 		<section>
 			<Header title={getLabel(type)} />
 
-			<TransactionSender address={transaction.sender()} border={false} />
+			<TransactionSender address={transaction.sender()} network={wallet.network()} border={false} />
 
 			{recipients && <TransactionRecipients currency={wallet.currency()} recipients={recipients} />}
 

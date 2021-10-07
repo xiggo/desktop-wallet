@@ -53,7 +53,7 @@ export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailPr
 		<Modal title={t("TRANSACTION.MODAL_VOTE_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender wallet={wallet} border={false} />
+			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<TransactionVotes isLoading={isLoadingDelegates} {...delegates} />
 

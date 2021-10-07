@@ -23,7 +23,7 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 
 			<TransactionNetwork network={wallet.network()} border={false} />
 
-			<TransactionSender wallet={wallet} />
+			<TransactionSender address={wallet.address()} network={wallet.network()} />
 
 			<div className="mt-2">
 				<TotalAmountBox amount={0} fee={fee} ticker={wallet.currency()} />

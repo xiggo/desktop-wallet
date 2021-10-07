@@ -30,7 +30,7 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: Transa
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose}>
 			<TransactionExplorerLink transaction={transaction} />
 
-			<TransactionSender wallet={wallet} border={false} />
+			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
 
 			<TransactionRecipients currency={wallet.currency()} recipients={recipients} />
 
