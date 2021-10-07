@@ -82,7 +82,7 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
 
 		expect(screen.getByTestId("SignMessage__mnemonic-input")).toBeInTheDocument();
@@ -106,7 +106,7 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -132,7 +132,7 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
 
 		expect(screen.getByTestId("SignMessage__mnemonic-input")).toBeInTheDocument();
@@ -178,8 +178,12 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
+
+		expect(
+			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
+		).toBeInTheDocument();
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
@@ -235,7 +239,7 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
@@ -265,7 +269,7 @@ describe("SignMessage", () => {
 		});
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
 	});
 
@@ -295,8 +299,12 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
+
+		expect(
+			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
+		).toBeInTheDocument();
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
@@ -357,8 +365,12 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
+
+		expect(
+			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
+		).toBeInTheDocument();
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
@@ -419,8 +431,12 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
+
+		expect(
+			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
+		).toBeInTheDocument();
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
@@ -490,7 +506,7 @@ describe("SignMessage", () => {
 		);
 
 		await waitFor(
-			() => expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			() => expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 			{
 				timeout: 4000,
 			},
@@ -560,7 +576,7 @@ describe("SignMessage", () => {
 			);
 
 		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeTruthy(),
+			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
 		);
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");

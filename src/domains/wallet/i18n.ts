@@ -49,6 +49,7 @@ export const translations: { [key: string]: any } = {
 			DESCRIPTION_ENCRYPTION_PASSWORD: "Provide a message below and sign with your encryption password.",
 			DESCRIPTION_LEDGER: "Provide a message below and sign with your ledger.",
 			DESCRIPTION_MNEMONIC: "Provide a message below and sign with your mnemonic passphrase.",
+			DESCRIPTION_SECRET: "Provide a message below and sign with your secret.",
 			TITLE: "Sign Message",
 		},
 

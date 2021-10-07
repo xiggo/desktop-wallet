@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 export const FormStep = ({
 	wallet,
-	disableMessageInput,
+	disableMessageInput = false,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	disableMessageInput?: boolean;
@@ -21,17 +21,25 @@ export const FormStep = ({
 
 	const { register, setValue } = useFormContext();
 
-	const subtitle = wallet.isLedger()
-		? t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER")
-		: wallet.signingKey().exists()
-		? t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
-		: t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
+	const getSubtitle = () => {
+		if (wallet.isLedger()) {
+			return t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER");
+		}
+
+		if (wallet.actsWithSecret()) {
+			return t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET");
+		}
+
+		return wallet.signingKey().exists()
+			? t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+			: t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC");
+	};
 
 	const requireMnemonic = wallet.actsWithMnemonic() || wallet.actsWithAddress() || wallet.actsWithPublicKey();
 
 	return (
 		<section className="space-y-5">
-			<Header title={t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE")} subtitle={subtitle} />
+			<Header title={t("WALLETS.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE")} subtitle={getSubtitle()} />
 
 			<FormField name="signatory-address">
 				<FormLabel label={t("WALLETS.SIGNATORY")} />
@@ -97,8 +105,4 @@ export const FormStep = ({
 			)}
 		</section>
 	);
-};
-
-FormStep.defaultProps = {
-	disableMessageInput: false,
 };
