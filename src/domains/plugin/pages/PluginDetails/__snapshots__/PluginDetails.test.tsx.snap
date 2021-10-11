@@ -2128,7 +2128,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
                           <span
                             data-testid="PluginSpecs__size"
                           >
-                            N/A
+                            123 kB
                           </span>
                         </span>
                       </div>

@@ -789,6 +789,6 @@ describe("PluginManagerProvider", () => {
 		await waitFor(() => expect(screen.getByText("Plugins 2")).toBeInTheDocument());
 
 		fireEvent.click(screen.getByText("Fetch Size"));
-		await waitFor(() => expect(screen.getByText("Size 123 kB")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText("Size 122515")).toBeInTheDocument());
 	});
 });

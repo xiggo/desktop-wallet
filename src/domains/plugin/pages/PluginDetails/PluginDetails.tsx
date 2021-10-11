@@ -6,6 +6,7 @@ import { PluginHeader } from "domains/plugin/components/PluginHeader";
 import { PluginInfo } from "domains/plugin/components/PluginInfo";
 import { PluginUninstallConfirmation } from "domains/plugin/components/PluginUninstallConfirmation/PluginUninstallConfirmation";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
+import prettyBytes from "pretty-bytes";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -58,7 +59,11 @@ export const PluginDetails = () => {
 		return latestConfiguration || packageConfiguration;
 	}, [isInstalled, packageConfiguration, latestConfiguration]);
 
-	const pluginData = (plugin && mapConfigToPluginData(activeProfile, plugin)) || ({} as any);
+	const pluginData = useMemo(() => (plugin && mapConfigToPluginData(activeProfile, plugin)) || ({} as any), [
+		activeProfile,
+		mapConfigToPluginData,
+		plugin,
+	]);
 
 	const handleReportPlugin = () => {
 		reportPlugin(plugin!);
@@ -78,8 +83,10 @@ export const PluginDetails = () => {
 
 	const checkSizeRemote = async () => {
 		setIsLoadingSize(true);
-		const result = await fetchSize(pluginData.id);
-		setSize(result);
+		const pluginSize = await fetchSize(pluginData.id);
+		if (pluginSize) {
+			setSize(prettyBytes(pluginSize));
+		}
 		setIsLoadingSize(false);
 	};
 
@@ -106,7 +113,7 @@ export const PluginDetails = () => {
 		}
 
 		checkSizeRemote();
-	}, [isInstalled]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [isInstalled, pluginData]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<Page profile={activeProfile}>

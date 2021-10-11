@@ -11,7 +11,6 @@ import {
 	PluginUpdateStatus,
 	SerializedPluginConfigurationData,
 } from "plugins/types";
-import prettyBytes from "pretty-bytes";
 import React, { useCallback, useMemo, useState } from "react";
 import semver from "semver";
 import { appVersion, openExternal } from "utils/electron-utils";
@@ -46,6 +45,24 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		return manager;
 	});
 
+	const fetchSize = useCallback(
+		async (pluginId: string) => {
+			const package_ = state.registryPlugins.find((item) => item.id() === pluginId);
+
+			if (!package_) {
+				return;
+			}
+
+			try {
+				return await pluginRegistry.size(package_);
+			} catch {
+				/* istanbul ignore next */
+				return;
+			}
+		},
+		[pluginRegistry, state],
+	);
+
 	const loadPlugins = useCallback(
 		async (profile: Contracts.IProfile) => {
 			try {
@@ -62,9 +79,12 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	const loadPlugin = useCallback(
 		async (dir: string) => {
 			const result = await PluginLoaderFileSystem.ipc().find(dir);
+
+			result.config.size = await fetchSize(result.config.name);
+
 			pluginManager.plugins().fill([result]);
 		},
-		[pluginManager],
+		[fetchSize, pluginManager],
 	);
 
 	const trigger = useCallback(() => setState((previous: any) => ({ ...previous })), []);
@@ -331,22 +351,6 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		},
 		[downloadPlugin, installPlugin],
 	);
-
-	const fetchSize = async (pluginId: string) => {
-		const package_ = state.registryPlugins.find((item) => item.id() === pluginId);
-
-		if (!package_) {
-			return;
-		}
-
-		try {
-			const size = await pluginRegistry.size(package_);
-			return prettyBytes(size);
-		} catch {
-			/* istanbul ignore next */
-			return;
-		}
-	};
 
 	return {
 		allPlugins,

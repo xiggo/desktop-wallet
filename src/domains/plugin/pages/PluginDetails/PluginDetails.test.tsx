@@ -121,9 +121,13 @@ describe("PluginDetails", () => {
 			},
 		);
 
+		await waitFor(() => expect(screen.getByTestId("PluginSpecs__size")).toHaveTextContent("N/A"));
+
 		fireEvent.click(screen.getByText("Fetch Packages"));
 
 		await waitFor(() => expect(screen.getAllByText("ARK Delegate Calculator").length).toBeGreaterThan(0));
+
+		await waitFor(() => expect(screen.getByTestId("PluginSpecs__size")).toHaveTextContent("123 kB"));
 
 		expect(container).toMatchSnapshot();
 	});
