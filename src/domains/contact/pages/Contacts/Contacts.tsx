@@ -114,13 +114,8 @@ export const Contacts = () => {
 			minimumWidth: true,
 		},
 		{
-			Header: t("COMMON.ACCOUNT_TYPE"),
-			className: "whitespace-nowrap justify-center",
-			minimumWidth: true,
-		},
-		{
 			Header: "Actions",
-			className: "hidden no-border",
+			className: "hidden",
 			minimumWidth: true,
 		},
 	];
