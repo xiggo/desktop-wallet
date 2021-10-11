@@ -31,17 +31,6 @@ cucumber("@plugins-filterUtility", {
 		await t.expect(Selector("h2").withExactText(translations.PLUGINS.PAGE_PLUGIN_MANAGER.VIEW.UTILITY).exists).ok();
 	},
 });
-cucumber("@plugins-filterExchange", {
-	...preSteps,
-	"When she filters plugins by exchange category": async (t: TestController) => {
-		await t.click(Selector("button").withText(translations.PLUGINS.PAGE_PLUGIN_MANAGER.VIEW.EXCHANGE));
-	},
-	"Then only exchange plugins are displayed": async (t: TestController) => {
-		await t
-			.expect(Selector("h2").withExactText(translations.PLUGINS.PAGE_PLUGIN_MANAGER.VIEW.EXCHANGE).exists)
-			.ok();
-	},
-});
 cucumber("@plugins-filterOther", {
 	...preSteps,
 	"When she filters plugins by other category": async (t: TestController) => {

@@ -12,12 +12,6 @@ Feature: Plugins
         When she filters plugins by utility category
         Then only utility plugins are displayed
 
-    @plugins-filterExchange
-    Scenario: Filter plugins by Exchange category
-        Given Alice is on the plugins page
-        When she filters plugins by exchange category
-        Then only exchange plugins are displayed
-
     @plugins-filterOther
     Scenario: Filter plugins by Other category
         Given Alice is on the plugins page
