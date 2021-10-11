@@ -88,7 +88,6 @@ export const PluginListItem = ({
 				<PluginImage
 					size={isCompact ? "2xs" : "sm"}
 					logoURL={plugin.logo}
-					isExchange={plugin.category === "exchange"}
 					isUpdating={isUpdating}
 					updatingProgress={updatingProgress}
 				/>

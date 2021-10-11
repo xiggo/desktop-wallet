@@ -129,7 +129,6 @@ export const PluginCard = ({
 					<div className="overflow-hidden flex-shrink-0 rounded-lg w-25 h-25">
 						<PluginImage
 							logoURL={plugin.logo}
-							isExchange={plugin.category === "exchange"}
 							isUpdating={isUpdating}
 							updatingProgress={updatingProgress}
 						/>

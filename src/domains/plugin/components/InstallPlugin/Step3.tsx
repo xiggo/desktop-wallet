@@ -14,12 +14,7 @@ export const ThirdStep = ({ plugin }: Properties) => {
 	return (
 		<section data-testid="InstallPlugin__step--third">
 			<div className="flex mt-4">
-				<PluginImage
-					className="mr-6"
-					size="lg"
-					logoURL={plugin.logo}
-					isExchange={plugin.category === "exchange"}
-				/>
+				<PluginImage className="mr-6" size="lg" logoURL={plugin.logo} />
 
 				<div className="flex-1">
 					<div className="flex flex-col justify-around h-full">

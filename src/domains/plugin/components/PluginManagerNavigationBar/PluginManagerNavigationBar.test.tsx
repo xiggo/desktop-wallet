@@ -9,7 +9,7 @@ let menu: any[];
 
 describe("PluginManagerNavigationBar", () => {
 	beforeAll(() => {
-		menu = ["latest", "gaming", "utility", "exchange", "other"].map((name: string) => ({
+		menu = ["latest", "gaming", "utility", "other"].map((name: string) => ({
 			name,
 			title: pluginTranslations.PAGE_PLUGIN_MANAGER.VIEW[name.toUpperCase()],
 		}));
@@ -40,7 +40,7 @@ describe("PluginManagerNavigationBar", () => {
 			/>,
 		);
 
-		const navIds = ["gaming", "utility", "exchange", "other", "my-plugins", "latest"];
+		const navIds = ["gaming", "utility", "other", "my-plugins", "latest"];
 
 		for (const navId of navIds) {
 			const navItem = getByTestId(`tabs__tab-button-${navId}`);

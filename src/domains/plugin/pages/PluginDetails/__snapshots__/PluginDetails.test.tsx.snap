@@ -283,7 +283,7 @@ exports[`PluginDetails should render properly 1`] = `
                 data-testid="PluginImage"
               >
                 <svg>
-                  exchange-logo-placeholder.svg
+                  plugin-logo-placeholder.svg
                 </svg>
               </div>
               <div
@@ -413,7 +413,7 @@ exports[`PluginDetails should render properly 1`] = `
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          Exchange
+                          Other
                         </span>
                       </div>
                     </div>
@@ -1373,7 +1373,7 @@ exports[`PluginDetails should report plugin 1`] = `
                 data-testid="PluginImage"
               >
                 <svg>
-                  exchange-logo-placeholder.svg
+                  plugin-logo-placeholder.svg
                 </svg>
               </div>
               <div
@@ -1503,7 +1503,7 @@ exports[`PluginDetails should report plugin 1`] = `
                         <span
                           class="font-semibold text-theme-secondary-text"
                         >
-                          Exchange
+                          Other
                         </span>
                       </div>
                     </div>

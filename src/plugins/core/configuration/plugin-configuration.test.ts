@@ -138,11 +138,11 @@ describe("Plugin Configuration", () => {
 
 	it("should return valid categories", () => {
 		const subject = PluginConfigurationData.make({
-			"desktop-wallet": { categories: ["exchange", "finance"] },
+			"desktop-wallet": { categories: ["other", "finance"] },
 			name: "plugin-test",
 		});
 
-		expect(subject.categories()).toEqual(["exchange"]);
+		expect(subject.categories()).toEqual(["other"]);
 	});
 
 	it("should return default category array if empty", () => {
@@ -155,7 +155,7 @@ describe("Plugin Configuration", () => {
 	});
 
 	it("should return the first categoriy", () => {
-		const categories = ["exchange", "utility"];
+		const categories = ["other", "utility"];
 
 		const subject = PluginConfigurationData.make({
 			"desktop-wallet": { categories },
@@ -227,9 +227,9 @@ describe("Plugin Configuration", () => {
 	});
 
 	it("should return true for existing category", () => {
-		const subject = PluginConfigurationData.make({ "desktop-wallet": { categories: ["exchange"] } });
+		const subject = PluginConfigurationData.make({ "desktop-wallet": { categories: ["other"] } });
 
-		expect(subject.hasCategory("exchange")).toBe(true);
+		expect(subject.hasCategory("other")).toBe(true);
 	});
 
 	it("should return to object", () => {

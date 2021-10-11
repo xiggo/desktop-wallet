@@ -58,19 +58,6 @@ exports[`PluginManagerNavigationBar should render 1`] = `
             aria-selected="false"
             class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
             data-ring-focus-margin="-mx-3"
-            data-testid="tabs__tab-button-exchange"
-            role="tab"
-            tabindex="-1"
-            type="button"
-          >
-            <span>
-              Exchange
-            </span>
-          </button>
-          <button
-            aria-selected="false"
-            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-            data-ring-focus-margin="-mx-3"
             data-testid="tabs__tab-button-other"
             role="tab"
             tabindex="-1"
@@ -212,19 +199,6 @@ exports[`PluginManagerNavigationBar should update selected 1`] = `
           >
             <span>
               Utility
-            </span>
-          </button>
-          <button
-            aria-selected="false"
-            class="Tabs__TabButton-sc-1t8sbwb-0 ring-focus"
-            data-ring-focus-margin="-mx-3"
-            data-testid="tabs__tab-button-exchange"
-            role="tab"
-            tabindex="-1"
-            type="button"
-          >
-            <span>
-              Exchange
             </span>
           </button>
           <button

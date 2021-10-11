@@ -1,6 +1,5 @@
 export const translations: { [key: string]: any } = {
 	CATEGORIES: {
-		EXCHANGE: "Exchange",
 		GAME: "Game",
 		GAMING: "Gaming",
 		LANGUAGE: "Language",
@@ -16,7 +15,6 @@ export const translations: { [key: string]: any } = {
 
 	FILTERS: {
 		CATEGORIES: {
-			EXCHANGE: "Exchange",
 			GAME: "Game",
 			OTHER: "Other",
 			UTILITY: "Utility",
@@ -69,7 +67,6 @@ export const translations: { [key: string]: any } = {
 
 		VIEW: {
 			ALL: "All",
-			EXCHANGE: "Exchange",
 			GAMING: "Gaming",
 			LATEST: "Latest",
 			MY_PLUGINS: "My Plugins",

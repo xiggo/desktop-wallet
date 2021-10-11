@@ -182,10 +182,10 @@ describe("BlankPluginCard", () => {
 	});
 
 	it("should render with category", () => {
-		const { asFragment } = render(<BlankPluginCard category="exchange" />);
+		const { asFragment } = render(<BlankPluginCard category="other" />);
 
 		expect(screen.getByText(commonTranslations.AUTHOR)).toBeTruthy();
-		expect(screen.getByText(pluginTranslations.CATEGORIES.EXCHANGE)).toBeTruthy();
+		expect(screen.getByText(pluginTranslations.CATEGORIES.OTHER)).toBeTruthy();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

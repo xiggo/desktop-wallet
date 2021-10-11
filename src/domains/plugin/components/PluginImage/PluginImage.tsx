@@ -12,7 +12,6 @@ import { getStyles } from "./PluginImage.styles";
 interface Properties {
 	size?: Size;
 	logoURL?: string;
-	isExchange?: boolean;
 	isUpdating?: boolean;
 	updatingProgress?: number;
 	progressSize?: number;
@@ -25,7 +24,6 @@ const PluginImageWrapper = styled.div<{ size?: Size; variant?: string }>(getStyl
 export const PluginImage = ({
 	size,
 	logoURL,
-	isExchange,
 	isUpdating,
 	updatingProgress,
 	progressSize,
@@ -70,13 +68,7 @@ export const PluginImage = ({
 		}
 
 		if (hasError || !logoURL) {
-			let logoPlaceholder = "PluginLogoPlaceholder";
-
-			if (isExchange) {
-				logoPlaceholder = "ExchangeLogoPlaceholder";
-			}
-
-			return <Image name={logoPlaceholder} domain="plugin" />;
+			return <Image name="PluginLogoPlaceholder" domain="plugin" />;
 		}
 
 		return (

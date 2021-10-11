@@ -68,7 +68,7 @@ describe("PluginManager", () => {
 			).toHaveLength(1),
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -92,7 +92,7 @@ describe("PluginManager", () => {
 			).toHaveLength(1),
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
 		expect(within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginGrid")).toBeTruthy();
 
@@ -574,7 +574,7 @@ describe("PluginManager", () => {
 		);
 
 		await waitFor(() => expect(screen.getAllByText("ARK Delegate Calculator").length).toBeGreaterThan(0));
-		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
 		fireEvent.click(
 			within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator")[0],
@@ -638,7 +638,7 @@ describe("PluginManager", () => {
 		);
 
 		await waitFor(() => expect(screen.getAllByText("ARK Delegate Calculator").length).toBeGreaterThan(0));
-		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
@@ -676,7 +676,7 @@ describe("PluginManager", () => {
 		);
 
 		await waitFor(() => expect(screen.getAllByText("ARK Delegate Calculator").length).toBeGreaterThan(0));
-		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(12));
+		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));

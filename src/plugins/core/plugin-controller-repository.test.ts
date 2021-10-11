@@ -40,14 +40,14 @@ describe("Plugin Controller subject", () => {
 	it("should filter by category", () => {
 		const plugin1 = new PluginController({ name: "plugin-test1" }, () => void 0);
 		const plugin2 = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "plugin-test2" },
+			{ "desktop-wallet": { categories: ["gaming"] }, name: "plugin-test2" },
 			() => void 0,
 		);
 		subject.push(plugin1);
 		/* eslint-disable unicorn/no-array-push-push */
 		subject.push(plugin2);
 
-		expect(subject.filterByCategory("exchange").length).toBe(1);
+		expect(subject.filterByCategory("gaming").length).toBe(1);
 	});
 
 	it("should check if plugin has filters", () => {

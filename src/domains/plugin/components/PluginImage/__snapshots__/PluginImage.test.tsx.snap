@@ -1,18 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PluginImage should render exchange image placeholder 1`] = `
-<div>
-  <div
-    class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fyVFIH bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
-    data-testid="PluginImage"
-  >
-    <svg>
-      exchange-logo-placeholder.svg
-    </svg>
-  </div>
-</div>
-`;
-
 exports[`PluginImage should render image logo 1`] = `
 <div>
   <div

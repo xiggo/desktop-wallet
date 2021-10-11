@@ -162,7 +162,6 @@ export const PluginHeader = ({
 				<PluginImage
 					size="xl"
 					logoURL={properties.logo}
-					isExchange={properties.category === "exchange"}
 					isUpdating={updatingStats?.percent !== undefined}
 					updatingProgress={updatingStats?.percent}
 					showUpdatingLabel

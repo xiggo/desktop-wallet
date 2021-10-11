@@ -13,13 +13,6 @@ describe("PluginImage", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render exchange image placeholder", () => {
-		const { container } = render(<PluginImage isExchange />);
-
-		expect(screen.getByTestId("PluginImage")).toHaveTextContent("exchange-logo-placeholder.svg");
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should render image logo", () => {
 		const { container } = render(<PluginImage logoURL="https://payvo.com/logo.png" />);
 

@@ -100,7 +100,7 @@ export class PluginConfigurationData {
 	}
 
 	categories(): string[] {
-		const validCategories = new Set(["gaming", "language", "utility", "exchange", "other"]);
+		const validCategories = new Set(["gaming", "language", "utility", "other"]);
 		// @ts-ignore
 		const categories: string[] = this.manifest().get("categories", ["other"]);
 		const result: string[] = [];

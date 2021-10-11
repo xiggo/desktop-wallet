@@ -81,7 +81,7 @@ exports[`BlankPluginCard should render with category 1`] = `
             <span
               class="text-sm font-semibold"
             >
-              Exchange
+              Other
             </span>
           </div>
         </div>

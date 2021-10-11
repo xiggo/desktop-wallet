@@ -82,11 +82,7 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 					{(pluginData: ExtendedSerializedPluginConfigurationData) => (
 						<TableRow>
 							<TableCell variant="start" innerClassName="space-x-4">
-								<PluginImage
-									logoURL={pluginData.logo}
-									isExchange={pluginData.category === "exchange"}
-									size="xs"
-								/>
+								<PluginImage logoURL={pluginData.logo} size="xs" />
 
 								<div className="flex items-center space-x-2">
 									<span

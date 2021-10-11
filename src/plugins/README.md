@@ -28,7 +28,7 @@ Some properties must be defined in the `package.json` so that the user knows wha
 {
 	"desktop-wallet": {
 		"title": "My Plugin",
-		"categories": ["exchange"],
+		"categories": ["gaming"],
 		"permissions": ["HTTP", "STORE", "LAUNCH", "EVENTS"],
 		"urls": ["https://dexplorer.ark.io"]
 	}

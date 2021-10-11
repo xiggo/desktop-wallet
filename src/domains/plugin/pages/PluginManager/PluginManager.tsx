@@ -28,7 +28,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { assertPluginController } from "utils/assertions";
 
-const categories = ["gaming", "utility", "exchange", "other"];
+const categories = ["gaming", "utility", "other"];
 
 interface LatestPluginsProperties {
 	isLoading?: boolean;

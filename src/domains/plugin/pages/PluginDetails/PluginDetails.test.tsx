@@ -33,7 +33,7 @@ describe("PluginDetails", () => {
 
 	it("should render properly", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
 			() => void 0,
 		);
 
@@ -136,7 +136,7 @@ describe("PluginDetails", () => {
 		const ipcRendererMock = jest.spyOn(ipcRenderer, "send").mockImplementation();
 
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
 			() => void 0,
 		);
 
@@ -221,7 +221,7 @@ describe("PluginDetails", () => {
 		const toastSpy = jest.spyOn(toasts, "success").mockImplementation();
 
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
 			() => void 0,
 		);
 
@@ -265,7 +265,7 @@ describe("PluginDetails", () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
 			{ incompatible: true },
 		);
 
@@ -305,7 +305,7 @@ describe("PluginDetails", () => {
 
 	it("should disable package from header", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
 			() => void 0,
 		);
 
@@ -343,7 +343,7 @@ describe("PluginDetails", () => {
 
 	it("should remove package", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
 			() => void 0,
 		);
 
@@ -387,7 +387,7 @@ describe("PluginDetails", () => {
 
 	it("should close remove confirmation", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["exchange"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
 			() => void 0,
 		);
 

@@ -9,7 +9,7 @@
 	"desktop-wallet": {
 		"title": "Test Launch",
 		"categories": [
-			"exchange"
+			"other"
 		],
 		"permissions": [
 			"LAUNCH",
