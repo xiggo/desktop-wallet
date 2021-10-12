@@ -347,6 +347,25 @@ describe("CreateProfile", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should show identicon when removing image if name is set", async () => {
+		const { asFragment, getAllByTestId, getByTestId } = await renderComponent();
+
+		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile 1" } });
+
+		// Upload avatar image
+		await act(async () => {
+			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+		});
+
+		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
+
+		await act(async () => {
+			fireEvent.click(getByTestId("SelectProfileImage__remove-button"));
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should not upload avatar image", async () => {
 		const { asFragment, getAllByTestId, getByTestId } = await renderComponent();
 

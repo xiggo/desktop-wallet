@@ -266,7 +266,14 @@ export const GeneralSettings: React.FC = () => {
 					<SelectProfileImage
 						value={avatar}
 						name={formattedName}
-						onSelect={(value) => setValue("avatar", value)}
+						onSelect={(value) => {
+							if (!value) {
+								setValue("avatar", Helpers.Avatar.make(formattedName));
+								return;
+							}
+
+							setValue("avatar", value);
+						}}
 					/>
 
 					<div className="flex justify-between mt-8 w-full">

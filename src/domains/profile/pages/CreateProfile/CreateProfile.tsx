@@ -134,7 +134,14 @@ export const CreateProfile = () => {
 									value={avatarImage}
 									name={formattedName}
 									showLabel={false}
-									onSelect={setAvatarImage}
+									onSelect={(image) => {
+										if (!image) {
+											setAvatarImage(formattedName ? Helpers.Avatar.make(formattedName) : "");
+											return;
+										}
+
+										setAvatarImage(image);
+									}}
 								/>
 							</div>
 

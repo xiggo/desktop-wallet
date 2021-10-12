@@ -156,6 +156,38 @@ describe("General Settings", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should show identicon when removing image if name is set", async () => {
+		const { asFragment, getByTestId } = renderWithRouter(
+			<Route path="/profiles/:profileId/settings">
+				<GeneralSettings />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/settings`],
+			},
+		);
+
+		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+
+		showOpenDialogMock = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(() => ({
+			filePaths: ["banner.png"],
+		}));
+
+		// Upload avatar image
+		await act(async () => {
+			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+		});
+
+		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
+
+		await act(async () => {
+			fireEvent.click(getByTestId("SelectProfileImage__remove-button"));
+		});
+
+		expect(asFragment()).toMatchSnapshot();
+
+		showOpenDialogMock.mockRestore();
+	});
+
 	it("should not update the uploaded avatar when removing focus from name input", async () => {
 		const { asFragment, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
