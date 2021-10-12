@@ -172,7 +172,7 @@ export const translations: { [key: string]: any } = {
 
 		VALIDATION: {
 			DECRYPT_WIF_ASSERTION: "Failed to decrypt WIF. Please check your password.",
-			INVALID_MNEMONIC: "The given value is not BIP39 compliant. Please change Import Type to 'Secret'",
+			INVALID_MNEMONIC: "The given value is not BIP39 compliant",
 			INVALID_PRIVATE_KEY: "Invalid Private Key",
 			INVALID_PUBLIC_KEY: "Invalid Public Key",
 			INVALID_SECRET: "The given value is BIP39 compliant. Please change Import Type to 'Mnemonic'",
