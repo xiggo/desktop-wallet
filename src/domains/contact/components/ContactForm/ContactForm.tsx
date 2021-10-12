@@ -6,7 +6,8 @@ import { Button } from "app/components/Button";
 import { Form, FormField, FormLabel, SubForm } from "app/components/Form";
 import { Icon } from "app/components/Icon";
 import { InputAddress, InputDefault } from "app/components/Input";
-import { Select } from "app/components/SelectDropdown";
+import { OptionProperties, Select } from "app/components/SelectDropdown";
+import { Tooltip } from "app/components/Tooltip";
 import { useEnvironmentContext } from "app/contexts";
 import { useNetworkOptions } from "app/hooks";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
@@ -24,6 +25,7 @@ interface AddressListItemProperties {
 interface NetworkOption {
 	label: string;
 	value: string;
+	isTestNetwork?: boolean;
 }
 
 const AddressListItem = ({ address, onRemove }: AddressListItemProperties) => {
@@ -192,6 +194,23 @@ export const ContactForm = ({
 		trigger("address");
 	};
 
+	const renderNetworkLabel = (option: OptionProperties) => (
+		<div className="flex justify-between">
+			<span>{option.label}</span>
+			{!!(option as NetworkOption).isTestNetwork && (
+				<Tooltip content={t("COMMON.TEST_NETWORK")}>
+					<span>
+						<Icon
+							className="text-theme-secondary-500 dark:text-theme-secondary-700"
+							name="Code"
+							size="lg"
+						/>
+					</span>
+				</Tooltip>
+			)}
+		</div>
+	);
+
 	return (
 		<Form
 			data-testid="contact-form"
@@ -221,6 +240,7 @@ export const ContactForm = ({
 						defaultValue={network?.id()}
 						options={filteredNetworks}
 						onChange={(networkOption: any) => handleSelectNetwork(networkOption)}
+						renderLabel={renderNetworkLabel}
 					/>
 				</FormField>
 

@@ -17,10 +17,19 @@ export const useNetworkOptions = (useTestNetworks?: boolean) => {
 
 	const networkOptions = useMemo(
 		() =>
-			networks.map((network) => ({
-				label: `${network.coinName()} ${network.name()}`,
-				value: network.id(),
-			})),
+			networks.map((network) => {
+				let label = network.coinName();
+
+				if (network.isTest()) {
+					label = `${label} ${network.name()}`;
+				}
+
+				return {
+					isTestNetwork: network.isTest(),
+					label,
+					value: network.id(),
+				};
+			}),
 		[networks],
 	);
 

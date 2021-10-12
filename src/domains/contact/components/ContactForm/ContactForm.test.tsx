@@ -291,7 +291,7 @@ describe("ContactForm", () => {
 		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
 
 		await waitFor(() => {
-			expect(selectNetworkInput).toHaveValue("ARK Mainnet");
+			expect(selectNetworkInput).toHaveValue("ARK");
 		});
 
 		fireEvent.input(screen.getByTestId("contact-form__address-input"), {
