@@ -45,7 +45,7 @@ export const translations: { [key: string]: any } = {
 			},
 			EXCLUDE_LEDGER_WALLETS: {
 				DESCRIPTION: "Ledger hardware addresses will not be exported.",
-				TITLE: "Exclude Ledger wallets",
+				TITLE: "Exclude Ledger Wallets",
 			},
 		},
 		SAVE_GENERAL_CUSTOMIZATIONS: "Save general settings customizations",
