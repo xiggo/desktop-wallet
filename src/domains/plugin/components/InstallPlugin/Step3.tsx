@@ -13,7 +13,9 @@ export const ThirdStep = ({ plugin }: Properties) => {
 
 	return (
 		<section data-testid="InstallPlugin__step--third">
-			<div className="flex mt-4">
+			<p className="-mt-1 text-theme-secondary-text">{t("PLUGINS.MODAL_ENABLE_PLUGIN.DESCRIPTION")}</p>
+
+			<div className="flex mt-8">
 				<PluginImage className="mr-6" size="lg" logoURL={plugin.logo} />
 
 				<div className="flex-1">
@@ -25,7 +27,7 @@ export const ThirdStep = ({ plugin }: Properties) => {
 						<div className="flex justify-between">
 							<span>
 								<p className="text-sm font-semibold text-theme-secondary-400">
-									{t("COMMON.DOWNLOADED")}
+									{t("PLUGINS.MODAL_ENABLE_PLUGIN.INSTALLATION")}
 								</p>
 								<p className="font-bold text-theme-secondary-text">{t("COMMON.COMPLETED")}</p>
 							</span>

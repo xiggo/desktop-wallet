@@ -427,6 +427,58 @@ describe("PluginDetails", () => {
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
+	it("should install package with error", async () => {
+		jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+			if (channel === "plugin:download") {
+				throw new Error("Plugin not found");
+			}
+		});
+
+		nock("https://github.com/")
+			.get("/arkecosystem/remote-plugin/raw/master/package.json")
+			.reply(200, { name: "remote-plugin" });
+
+		const FetchComponent = () => {
+			const { fetchLatestPackageConfiguration } = usePluginManagerContext();
+			return (
+				<button
+					onClick={() => fetchLatestPackageConfiguration("https://github.com/arkecosystem/remote-plugin")}
+				>
+					Fetch
+				</button>
+			);
+		};
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/plugins/details">
+				<PluginManagerProvider manager={pluginManager} services={[]}>
+					<FetchComponent />
+					<PluginDetails />
+				</PluginManagerProvider>
+			</Route>,
+			{
+				routes: [
+					`/profiles/${profile.id()}/plugins/details?pluginId=remote-plugin&repositoryURL=https://github.com/arkecosystem/remote-plugin`,
+				],
+				withPluginProvider: false,
+			},
+		);
+
+		fireEvent.click(screen.getByText("Fetch"));
+
+		await waitFor(() => expect(screen.getAllByText("Remote Plugin").length).toBeGreaterThan(0));
+
+		fireEvent.click(screen.getByTestId("PluginHeader__button--install"));
+
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION);
+
+		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
+
+		const toastSpy = jest.spyOn(toasts, "error");
+
+		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
+	});
+
 	it("should install package", async () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:loader-fs.find") {
@@ -481,7 +533,7 @@ describe("PluginDetails", () => {
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION);
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__download-button"));
+		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
@@ -489,58 +541,6 @@ describe("PluginDetails", () => {
 				url: "https://github.com/arkecosystem/remote-plugin/archive/master.zip",
 			}),
 		);
-	});
-
-	it("should install package with error", async () => {
-		jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
-			if (channel === "plugin:download") {
-				throw new Error("Plugin not found");
-			}
-		});
-
-		nock("https://github.com/")
-			.get("/arkecosystem/remote-plugin/raw/master/package.json")
-			.reply(200, { name: "remote-plugin" });
-
-		const FetchComponent = () => {
-			const { fetchLatestPackageConfiguration } = usePluginManagerContext();
-			return (
-				<button
-					onClick={() => fetchLatestPackageConfiguration("https://github.com/arkecosystem/remote-plugin")}
-				>
-					Fetch
-				</button>
-			);
-		};
-
-		renderWithRouter(
-			<Route path="/profiles/:profileId/plugins/details">
-				<PluginManagerProvider manager={pluginManager} services={[]}>
-					<FetchComponent />
-					<PluginDetails />
-				</PluginManagerProvider>
-			</Route>,
-			{
-				routes: [
-					`/profiles/${profile.id()}/plugins/details?pluginId=remote-plugin&repositoryURL=https://github.com/arkecosystem/remote-plugin`,
-				],
-				withPluginProvider: false,
-			},
-		);
-
-		fireEvent.click(screen.getByText("Fetch"));
-
-		await waitFor(() => expect(screen.getAllByText("Remote Plugin").length).toBeGreaterThan(0));
-
-		fireEvent.click(screen.getByTestId("PluginHeader__button--install"));
-
-		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION);
-
-		fireEvent.click(screen.getByTestId("InstallPlugin__download-button"));
-
-		const toastSpy = jest.spyOn(toasts, "error");
-
-		await waitFor(() => expect(toastSpy).toHaveBeenCalled());
 	});
 
 	it("should update package", async () => {

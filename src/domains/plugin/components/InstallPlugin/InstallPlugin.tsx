@@ -7,6 +7,8 @@ import { ipcRenderer } from "electron";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import tw, { styled } from "twin.macro";
+import { assertString } from "utils/assertions";
 
 import { FirstStep } from "./Step1";
 import { SecondStep } from "./Step2";
@@ -24,8 +26,12 @@ interface InstallPluginProperties {
 enum Step {
 	PermissionsStep = 1,
 	DownloadStep,
-	InstallStep,
+	EnableStep,
 }
+
+const ButtonWrapper = styled.div`
+	${tw`flex justify-end mt-8 space-x-3`}
+`;
 
 export const InstallPlugin = ({
 	isOpen,
@@ -36,39 +42,64 @@ export const InstallPlugin = ({
 	repositoryURL,
 }: InstallPluginProperties) => {
 	const { t } = useTranslation();
-	const { downloadPlugin, installPlugin } = usePluginManagerContext();
+	const { downloadPlugin, installPlugin, trigger, pluginManager } = usePluginManagerContext();
 	const [activeStep, setActiveStep] = useState<Step>(Step.PermissionsStep);
 	const [downloadProgress, setDownloadProgress] = useState<any>({ totalBytes: 0 });
 	const [savedPath, setSavedPath] = useState<string>();
 	const profileId = profile.id();
 
+	const handleInstall = useCallback(
+		async (pluginPath: string) => {
+			try {
+				await installPlugin(pluginPath, plugin.id, profileId);
+				setActiveStep(Step.EnableStep);
+			} catch (error) {
+				/* istanbul ignore next */
+				toasts.error(
+					t("PLUGINS.MODAL_INSTALL_PLUGIN.INSTALL_FAILURE", { msg: error.message, name: plugin.title }),
+				);
+				onClose?.();
+			}
+		},
+		[installPlugin, plugin, profileId, t, onClose],
+	);
+
 	const handleDownload = useCallback(async () => {
 		setActiveStep(Step.DownloadStep);
+		let pluginPath: string | undefined;
+		let downloadFailure = false;
 
 		try {
-			const savedPath = await downloadPlugin(plugin, repositoryURL);
-			setSavedPath(savedPath);
-			setTimeout(() => setActiveStep(Step.InstallStep), 500); // Animation delay
+			pluginPath = await downloadPlugin(plugin, repositoryURL);
+			setSavedPath(pluginPath);
 		} catch {
+			downloadFailure = true;
 			toasts.error(t("PLUGINS.MODAL_INSTALL_PLUGIN.DOWNLOAD_FAILURE", { name: plugin.title }));
 			onClose?.();
 		}
-	}, [downloadPlugin, plugin, onClose, repositoryURL, t]);
 
-	const handleInstall = useCallback(async () => {
+		if (!downloadFailure) {
+			assertString(pluginPath);
+
+			await handleInstall(pluginPath);
+		}
+	}, [handleInstall, downloadPlugin, plugin, repositoryURL, t, onClose]);
+
+	const handleEnable = useCallback(() => {
 		try {
-			await installPlugin(savedPath, plugin.id, profileId);
-			toasts.success(t("PLUGINS.MODAL_INSTALL_PLUGIN.SUCCESS", { name: plugin.title }));
+			pluginManager.plugins().findById(plugin.id)?.enable(profile, { autoRun: true });
+			trigger();
+
+			toasts.success(t("PLUGINS.ENABLE_SUCCESS", { name: plugin.title }));
 		} catch (error) {
-			/* istanbul ignore next */
-			toasts.error(t("PLUGINS.MODAL_INSTALL_PLUGIN.INSTALL_FAILURE", { msg: error.message, name: plugin.title }));
+			toasts.error(t("PLUGINS.ENABLE_FAILURE", { msg: error.message, name: plugin.title }));
 		} finally {
 			onClose?.();
 		}
-	}, [installPlugin, plugin, onClose, savedPath, t, profileId]);
+	}, [pluginManager, plugin, profile, trigger, t, onClose]);
 
 	const onModalClose = () => {
-		if (activeStep === Step.InstallStep) {
+		if (activeStep === Step.EnableStep) {
 			ipcRenderer.invoke("plugin:cancel-install", { savedPath });
 			setActiveStep(Step.PermissionsStep);
 			setSavedPath(undefined);
@@ -87,13 +118,19 @@ export const InstallPlugin = ({
 		};
 	}, []);
 
+	const renderModalTitle = () => {
+		switch (activeStep) {
+			case Step.PermissionsStep:
+				return t("COMMON.PERMISSIONS");
+			case Step.DownloadStep:
+				return t("COMMON.DOWNLOADING");
+			case Step.EnableStep:
+				return t("PLUGINS.SUCCESSFULLY_INSTALLED");
+		}
+	};
+
 	return (
-		<Modal
-			title={t(activeStep === Step.PermissionsStep ? "COMMON.ATTENTION" : "COMMON.DOWNLOADING")}
-			size="lg"
-			isOpen={isOpen}
-			onClose={onModalClose}
-		>
+		<Modal title={renderModalTitle()} size="lg" isOpen={isOpen} onClose={onModalClose}>
 			<Tabs activeId={activeStep}>
 				<TabPanel tabId={Step.PermissionsStep}>
 					<FirstStep plugin={plugin} />
@@ -103,44 +140,42 @@ export const InstallPlugin = ({
 					<SecondStep plugin={plugin} downloadProgress={downloadProgress} />
 				</TabPanel>
 
-				<TabPanel tabId={Step.InstallStep}>
+				<TabPanel tabId={Step.EnableStep}>
 					<ThirdStep plugin={plugin} />
 				</TabPanel>
 
-				<div className="flex justify-end mt-8 space-x-3">
-					{activeStep === Step.PermissionsStep && (
-						<>
-							<Button variant="secondary" onClick={onCancel} data-testid="InstallPlugin__cancel-button">
-								{t("COMMON.CANCEL")}
-							</Button>
-							<Button onClick={handleDownload} data-testid="InstallPlugin__download-button">
-								{t("COMMON.DOWNLOAD")}
-							</Button>
-						</>
-					)}
+				{activeStep === Step.PermissionsStep && (
+					<ButtonWrapper>
+						<Button variant="secondary" onClick={onCancel} data-testid="InstallPlugin__cancel-button">
+							{t("COMMON.CANCEL")}
+						</Button>
+						<Button onClick={handleDownload} data-testid="InstallPlugin__allow-button">
+							{t("PLUGINS.MODAL_INSTALL_PLUGIN.ALLOW")}
+						</Button>
+					</ButtonWrapper>
+				)}
 
-					{activeStep === Step.InstallStep && (
-						<>
-							<Button
-								variant="secondary"
-								onClick={() => {
-									ipcRenderer.invoke("plugin:cancel-install", { savedPath });
-									setActiveStep(Step.PermissionsStep);
-									setSavedPath(undefined);
+				{activeStep === Step.EnableStep && (
+					<ButtonWrapper>
+						<Button
+							variant="secondary"
+							onClick={() => {
+								ipcRenderer.invoke("plugin:cancel-install", { savedPath });
+								setActiveStep(Step.PermissionsStep);
+								setSavedPath(undefined);
 
-									onCancel?.();
-								}}
-								data-testid="InstallPlugin__cancel-button"
-							>
-								{t("COMMON.CANCEL")}
-							</Button>
+								onCancel?.();
+							}}
+							data-testid="InstallPlugin__cancel-button"
+						>
+							{t("COMMON.CANCEL")}
+						</Button>
 
-							<Button onClick={handleInstall} data-testid="InstallPlugin__install-button">
-								{t("COMMON.INSTALL")}
-							</Button>
-						</>
-					)}
-				</div>
+						<Button onClick={handleEnable} data-testid="InstallPlugin__enable-button">
+							{t("COMMON.ENABLE")}
+						</Button>
+					</ButtonWrapper>
+				)}
 			</Tabs>
 		</Modal>
 	);

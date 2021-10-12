@@ -8,7 +8,7 @@ exports[`InstallPlugin should render 1st step 1`] = `
     data-testid="InstallPlugin__step--first"
   >
     <p
-      class="mt-4 text-lg font-semibold text-theme-secondary-text"
+      class="mt-7 text-lg font-semibold text-theme-secondary-text"
     >
       This plugin needs the following permissions:
     </p>
@@ -16,7 +16,7 @@ exports[`InstallPlugin should render 1st step 1`] = `
       class="max-w-sm"
     >
       <ul
-        class="mt-2 ml-5 leading-8 list-outside list-circle text-theme-secondary-text"
+        class="mt-2 ml-5 leading-8 list-outside list-disc text-theme-secondary-text"
       >
         <li>
           Allows access to the currently active profile
@@ -42,7 +42,7 @@ exports[`InstallPlugin should render 2st step with full download progress 1`] = 
     data-testid="InstallPlugin__step--second"
   >
     <div
-      class="flex mt-4"
+      class="flex mt-8"
     >
       <div
         class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fBreXf bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 mr-6"
@@ -154,7 +154,7 @@ exports[`InstallPlugin should render 2st step with partial download progress 1`]
     data-testid="InstallPlugin__step--second"
   >
     <div
-      class="flex mt-4"
+      class="flex mt-8"
     >
       <div
         class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fBreXf bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 mr-6"
@@ -263,8 +263,13 @@ exports[`InstallPlugin should render 3st step 1`] = `
   <section
     data-testid="InstallPlugin__step--third"
   >
+    <p
+      class="-mt-1 text-theme-secondary-text"
+    >
+      Would you like to enable the Plugin?
+    </p>
     <div
-      class="flex mt-4"
+      class="flex mt-8"
     >
       <div
         class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fBreXf bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 mr-6"
@@ -299,7 +304,7 @@ exports[`InstallPlugin should render 3st step 1`] = `
               <p
                 class="text-sm font-semibold text-theme-secondary-400"
               >
-                Downloaded
+                Installation
               </p>
               <p
                 class="font-bold text-theme-secondary-text"
@@ -350,8 +355,13 @@ exports[`InstallPlugin should render 3st step with plugin logo 1`] = `
   <section
     data-testid="InstallPlugin__step--third"
   >
+    <p
+      class="-mt-1 text-theme-secondary-text"
+    >
+      Would you like to enable the Plugin?
+    </p>
     <div
-      class="flex mt-4"
+      class="flex mt-8"
     >
       <div
         class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fBreXf bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700 mr-6"
@@ -388,7 +398,7 @@ exports[`InstallPlugin should render 3st step with plugin logo 1`] = `
               <p
                 class="text-sm font-semibold text-theme-secondary-400"
               >
-                Downloaded
+                Installation
               </p>
               <p
                 class="font-bold text-theme-secondary-text"

@@ -94,15 +94,21 @@ describe("PluginManager", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
-		expect(within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginGrid")).toBeTruthy();
+		expect(
+			within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginGrid"),
+		).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		expect(within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginList")).toBeTruthy();
+		expect(
+			within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginList"),
+		).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
-		expect(within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginGrid")).toBeTruthy();
+		expect(
+			within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginGrid"),
+		).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -128,13 +134,17 @@ describe("PluginManager", () => {
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		expect(within(screen.getByTestId("PluginManager__container--all")).getByTestId("PluginList")).toBeTruthy();
+		expect(
+			within(screen.getByTestId("PluginManager__container--all")).getByTestId("PluginList"),
+		).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 		});
 
-		expect(within(screen.getByTestId("PluginManager__container--all")).getByTestId("PluginGrid")).toBeTruthy();
+		expect(
+			within(screen.getByTestId("PluginManager__container--all")).getByTestId("PluginGrid"),
+		).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -155,26 +165,26 @@ describe("PluginManager", () => {
 		await waitFor(() =>
 			expect(
 				within(screen.getByTestId(`PluginManager__latest__${category}`)).getByTestId("PluginGrid"),
-			).toBeTruthy(),
+			).toBeInTheDocument(),
 		);
 
 		fireEvent.click(screen.getByTestId(`tabs__tab-button-${category}`));
 
 		expect(
 			within(screen.getByTestId(`PluginManager__container--${category}`)).getByTestId("PluginGrid"),
-		).toBeTruthy();
+		).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
 		expect(
 			within(screen.getByTestId(`PluginManager__container--${category}`)).getByTestId("PluginList"),
-		).toBeTruthy();
+		).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
 		expect(
 			within(screen.getByTestId(`PluginManager__container--${category}`)).getByTestId("PluginGrid"),
-		).toBeTruthy();
+		).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -212,7 +222,7 @@ describe("PluginManager", () => {
 
 		fireEvent.click(screen.getByTestId("PluginManager__latest__other__view-all"));
 
-		expect(screen.getByTestId("PluginManager__container--other")).toBeTruthy();
+		expect(screen.getByTestId("PluginManager__container--other")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -234,7 +244,9 @@ describe("PluginManager", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid")).toBeTruthy(),
+			expect(
+				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
+			).toBeInTheDocument(),
 		);
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
@@ -245,15 +257,15 @@ describe("PluginManager", () => {
 
 		fireEvent.click(screen.getByTestId("InstallPlugin__download-button"));
 
-		await waitFor(() => expect(screen.getByTestId("InstallPlugin__continue-button")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("InstallPlugin__continue-button")).toBeInTheDocument());
 
 		fireEvent.click(screen.getByTestId("InstallPlugin__continue-button"));
 
-		await waitFor(() => expect(screen.getByTestId("InstallPlugin__install-button")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("InstallPlugin__enable-button")).toBeInTheDocument());
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__install-button"));
+		fireEvent.click(screen.getByTestId("InstallPlugin__enable-button"));
 
-		await waitFor(() => expect(screen.getByTestId("InstallPlugin__step--third")).toBeTruthy());
+		await waitFor(() => expect(screen.getByTestId("InstallPlugin__step--third")).toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -422,11 +434,13 @@ describe("PluginManager", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid")).toBeTruthy(),
+			expect(
+				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
+			).toBeInTheDocument(),
 		);
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
-		await waitFor(() => expect(screen.getAllByTestId("PluginListItem__install")[0]).toBeTruthy());
+		await waitFor(() => expect(screen.getAllByTestId("PluginListItem__install")[0]).toBeInTheDocument());
 
 		fireEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
 
@@ -450,12 +464,14 @@ describe("PluginManager", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid")).toBeTruthy(),
+			expect(
+				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
+			).toBeInTheDocument(),
 		);
 
 		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeTruthy();
+		expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeInTheDocument();
 
 		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {
 			target: { value: "ARK Delegate Calculator" },
@@ -478,7 +494,7 @@ describe("PluginManager", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should install plugin", async () => {
+	it("should download plugin", async () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:download") {
 				return "/plugins/new-plugin";
@@ -496,7 +512,9 @@ describe("PluginManager", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid")).toBeTruthy(),
+			expect(
+				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
+			).toBeInTheDocument(),
 		);
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
@@ -506,7 +524,7 @@ describe("PluginManager", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION),
 		);
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__download-button"));
+		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
@@ -516,12 +534,10 @@ describe("PluginManager", () => {
 			}),
 		);
 
-		await waitFor(() => expect(screen.getByTestId("InstallPlugin__install-button")).toBeTruthy());
-
 		ipcRendererSpy.mockRestore();
 	});
 
-	it("should fail to install plugin", async () => {
+	it("should fail to download plugin", async () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockRejectedValue("Failed");
 		const toastSpy = jest.spyOn(toasts, "error");
 
@@ -536,7 +552,9 @@ describe("PluginManager", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid")).toBeTruthy(),
+			expect(
+				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
+			).toBeInTheDocument(),
 		);
 
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
@@ -546,7 +564,7 @@ describe("PluginManager", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_INSTALL_PLUGIN.DESCRIPTION),
 		);
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__download-button"));
+		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {

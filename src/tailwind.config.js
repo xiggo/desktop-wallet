@@ -243,9 +243,6 @@ module.exports = {
 				"footer-smooth": "0px -7px 35px 0px rgba(33, 34, 37, 0.08)",
 				"footer-smooth-dark": "0px -7px 35px 0px rgba(18, 18, 19, 0.4)",
 			},
-			listStyleType: {
-				circle: "circle",
-			},
 			transitionProperty: {
 				background: "background-color",
 				"colors-shadow": "background-color, border-color, color, fill, stroke, box-shadow",

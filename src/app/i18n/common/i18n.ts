@@ -17,7 +17,6 @@ export const translations: { [key: string]: any } = {
 	ARK: "ARK",
 	ASSET_TYPE: "Asset Type",
 	AT: "at",
-	ATTENTION: "Attention",
 	AUTHOR: "Author",
 	AVAILABLE: "Available",
 	AVATAR: "Avatar",
@@ -214,6 +213,7 @@ export const translations: { [key: string]: any } = {
 	PERIODS: {
 		DAILY: "Daily",
 	},
+	PERMISSIONS: "Permissions",
 	PLUGIN: "Plugin",
 	PLUGINS: "Plugins",
 	PLUGIN_COUNT_PLURAL: "{{count}} Plugins",

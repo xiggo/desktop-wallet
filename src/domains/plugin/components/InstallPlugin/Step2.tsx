@@ -18,7 +18,7 @@ export const SecondStep = ({ plugin, downloadProgress }: Properties) => {
 
 	return (
 		<section data-testid="InstallPlugin__step--second">
-			<div className="flex mt-4">
+			<div className="flex mt-8">
 				<PluginImage className="mr-6" size="lg" logoURL={plugin.logo} />
 
 				<div className="flex-1">

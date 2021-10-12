@@ -60,7 +60,7 @@ exports[`Plugin Permissions should render 1`] = `
                 class="w-full"
               >
                 <ul
-                  class="mt-2 ml-5 leading-8 list-outside list-circle text-theme-secondary-text"
+                  class="mt-2 ml-5 leading-8 list-outside list-disc text-theme-secondary-text"
                 >
                   <li>
                     PROFILE

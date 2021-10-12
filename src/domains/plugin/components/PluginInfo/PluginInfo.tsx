@@ -36,7 +36,7 @@ export const PluginInfo = ({ description, permissions, images, minimumVersion }:
 
 			{permissions.length > 0 ? (
 				<div className="mt-8">
-					<h4 className="font-bold">{t("PLUGINS.PLUGIN_INFO.PERMISSIONS")}</h4>
+					<h4 className="font-bold">{t("COMMON.PERMISSIONS")}</h4>
 					<div className="inline-flex items-baseline space-x-2">
 						<p className="mt-3 text-theme-secondary-600" data-testid="plugin-info__permissions">
 							<TruncateEnd maxChars={50} showTooltip={false} text={permissionsString} />

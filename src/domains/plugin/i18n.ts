@@ -28,11 +28,16 @@ export const translations: { [key: string]: any } = {
 	MINIMUM_VERSION_NOT_SATISFIED:
 		"In order to update this plugin please update the Payvo Wallet to v{{minimumVersion}}+",
 
+	MODAL_ENABLE_PLUGIN: {
+		DESCRIPTION: "Would you like to enable the Plugin?",
+		INSTALLATION: "Installation",
+	},
+
 	MODAL_INSTALL_PLUGIN: {
+		ALLOW: "Allow",
 		DESCRIPTION: "This plugin needs the following permissions:",
 		DOWNLOAD_FAILURE: `Failed to donwload plugin "{{name}}"`,
 		INSTALL_FAILURE: `Failed to install plugin "{{name}}". Reason: {{msg}}.`,
-		SUCCESS: `The plugin "{{name}}" was successfully installed`,
 	},
 
 	MODAL_MANUAL_INSTALL_PLUGIN: {
@@ -115,7 +120,6 @@ export const translations: { [key: string]: any } = {
 			"The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.",
 		NOT_ENABLED: "This Plugin is not enabled",
 		NOT_LAUNCHEABLE: "This Plugin cannot be launched",
-		PERMISSIONS: "Permissions",
 		REPORT: "Report Plugin",
 		REQUIREMENTS: "Requirements",
 		SCREENSHOTS: "Screenshots",
@@ -131,6 +135,8 @@ export const translations: { [key: string]: any } = {
 		INCOMPATIBLE: "Incompatible",
 		NOT_INSTALLED: "Not installed",
 	},
+
+	SUCCESSFULLY_INSTALLED: "Successfully Installed",
 
 	UPDATE_ALL: "Update All",
 
