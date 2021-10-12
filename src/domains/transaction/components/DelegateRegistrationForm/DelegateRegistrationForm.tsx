@@ -58,8 +58,8 @@ export const signDelegateRegistration = async ({ env, form, profile, signatory }
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { fee, senderAddress, username } = getValues();
-	const senderWallet = profile.wallets().findByAddress(senderAddress);
+	const { fee, network, senderAddress, username } = getValues();
+	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 	const transactionId = await senderWallet.transaction().signDelegateRegistration({
 		data: {

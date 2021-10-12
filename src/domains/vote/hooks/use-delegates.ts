@@ -1,6 +1,7 @@
 import { Contracts, Environment } from "@payvo/profiles";
 import { FilterOption } from "domains/vote/components/VotesFilter";
 import { useCallback, useMemo, useState } from "react";
+import { assertWallet } from "utils/assertions";
 
 export const useDelegates = ({
 	env,
@@ -61,12 +62,15 @@ export const useDelegates = ({
 	}, [filteredDelegatesVotes, searchQuery]);
 
 	const fetchVotes = useCallback(
-		(address) => {
-			const wallet = profile.wallets().findByAddress(address);
+		(address, network) => {
+			const wallet = profile.wallets().findByAddressWithNetwork(address, network);
+
+			assertWallet(wallet);
+
 			let votes: Contracts.VoteRegistryItem[];
 
 			try {
-				votes = wallet!.voting().current();
+				votes = wallet.voting().current();
 			} catch {
 				votes = [];
 			}

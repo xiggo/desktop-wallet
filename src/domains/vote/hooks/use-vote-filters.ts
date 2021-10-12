@@ -18,12 +18,14 @@ export const useVoteFilters = ({
 }) => {
 	const { defaultConfiguration, useTestNetworks } = useWalletFilters({ profile });
 	const walletAddress = hasWalletId ? wallet.address() : "";
+	const walletNetwork = hasWalletId ? wallet.network().id() : "";
 	const walletMaxVotes = hasWalletId ? wallet.network().maximumVotesPerWallet() : undefined;
 
 	const [walletsDisplayType, setWalletsDisplayType] = useState(defaultConfiguration.walletsDisplayType);
 	const [selectedNetworkIds, setSelectedNetworkIds] = useState(defaultConfiguration.selectedNetworkIds);
 	const [voteFilter, setVoteFilter] = useState<FilterOption>(filter);
 	const [selectedAddress, setSelectedAddress] = useState(walletAddress);
+	const [selectedNetwork, setSelectedNetwork] = useState(walletNetwork);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
 
@@ -141,10 +143,12 @@ export const useVoteFilters = ({
 		networks,
 		searchQuery,
 		selectedAddress,
+		selectedNetwork,
 		selectedNetworkIds,
 		setMaxVotes,
 		setSearchQuery,
 		setSelectedAddress,
+		setSelectedNetwork,
 		setVoteFilter,
 		useTestNetworks,
 		voteFilter,

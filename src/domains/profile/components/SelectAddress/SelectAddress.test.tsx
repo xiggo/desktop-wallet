@@ -6,12 +6,13 @@ import { MNEMONICS } from "utils/testing-library";
 import { SelectAddress } from "./SelectAddress";
 
 let profile: Contracts.IProfile;
+let wallet: Contracts.IReadWriteWallet;
 let wallets: Contracts.IReadWriteWallet[];
 
 beforeAll(async () => {
 	profile = env.profiles().findById(getDefaultProfileId());
 
-	const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+	wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 		coin: "ARK",
 		mnemonic: MNEMONICS[0],
 		network: "ark.devnet",
@@ -42,16 +43,26 @@ describe("SelectAddress", () => {
 	});
 
 	it("should render with preselected address", () => {
-		const { container } = render(
-			<SelectAddress wallets={wallets} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" profile={profile} />,
+		const { container, getByTestId } = render(
+			<SelectAddress
+				wallets={wallets}
+				wallet={{ address: wallet.address(), network: wallet.network() }}
+				profile={profile}
+			/>,
 		);
+
+		expect(getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should open and close wallets modal", async () => {
 		const { getByTestId } = render(
-			<SelectAddress wallets={wallets} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" profile={profile} />,
+			<SelectAddress
+				wallets={wallets}
+				wallet={{ address: wallet.address(), network: wallet.network() }}
+				profile={profile}
+			/>,
 		);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -75,7 +86,7 @@ describe("SelectAddress", () => {
 		const { getByTestId } = render(
 			<SelectAddress
 				wallets={wallets}
-				address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"
+				wallet={{ address: wallet.address(), network: wallet.network() }}
 				profile={profile}
 				disabled={true}
 			/>,
@@ -92,7 +103,11 @@ describe("SelectAddress", () => {
 
 	it("should select address from wallets modal", async () => {
 		const { getByTestId } = render(
-			<SelectAddress wallets={wallets} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" profile={profile} />,
+			<SelectAddress
+				wallets={wallets}
+				wallet={{ address: wallet.address(), network: wallet.network() }}
+				profile={profile}
+			/>,
 		);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -125,7 +140,7 @@ describe("SelectAddress", () => {
 			<SelectAddress
 				wallets={wallets}
 				disabled
-				address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"
+				wallet={{ address: wallet.address(), network: wallet.network() }}
 				profile={profile}
 			/>,
 		);
@@ -148,7 +163,7 @@ describe("SelectAddress", () => {
 			<SelectAddress
 				wallets={wallets}
 				onChange={onChange}
-				address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT"
+				wallet={{ address: wallet.address(), network: wallet.network() }}
 				profile={profile}
 			/>,
 		);

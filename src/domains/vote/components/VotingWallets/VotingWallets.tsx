@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 interface VotingWalletsProperties {
 	showEmptyResults: boolean;
 	walletsByCoin: Record<string, Contracts.IReadWriteWallet[]>;
-	onSelectAddress: (address: string) => void;
+	onSelectAddress: (address: string, network: string) => void;
 	isCompact?: boolean;
 }
 

@@ -360,6 +360,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			getValues: () => ({
 				fee: "1",
 				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
 				secondMnemonic: MNEMONICS[1],
 				senderAddress: wallet.address(),
 			}),
@@ -400,6 +401,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			getValues: () => ({
 				encryptionPassword: "password",
 				fee: "1",
+				network: wallet.network(),
 				senderAddress: wallet.address(),
 			}),
 			setError: jest.fn(),

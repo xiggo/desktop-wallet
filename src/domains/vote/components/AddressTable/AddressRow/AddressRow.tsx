@@ -17,7 +17,7 @@ interface AddressRowProperties {
 	index: number;
 	maxVotes: number;
 	wallet: Contracts.IReadWriteWallet;
-	onSelect?: (walletAddress: string) => void;
+	onSelect?: (walletAddress: string, walletNetwork: string) => void;
 	isCompact?: boolean;
 }
 
@@ -220,7 +220,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 					disabled={!wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()}
 					variant={isCompact ? "transparent" : "secondary"}
 					className={cn({ "text-theme-primary-600 hover:text-theme-primary-700 -mr-3": isCompact })}
-					onClick={() => onSelect?.(wallet.address())}
+					onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
 					data-testid={`AddressRow__select-${index}`}
 				>
 					{t("COMMON.VOTE")}

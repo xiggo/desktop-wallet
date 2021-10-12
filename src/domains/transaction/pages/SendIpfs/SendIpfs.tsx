@@ -161,7 +161,8 @@ export const SendIpfs = () => {
 			return setShowFeeWarning(true);
 		}
 
-		const senderWallet = activeProfile.wallets().findByAddress(getValues("senderAddress"));
+		const { network, senderAddress } = getValues();
+		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 		// Skip authorization step
 		if (newIndex === Step.AuthenticationStep && senderWallet?.isMultiSignature()) {

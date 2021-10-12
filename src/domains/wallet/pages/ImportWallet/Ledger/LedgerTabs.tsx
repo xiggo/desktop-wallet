@@ -105,7 +105,7 @@ export const LedgerTabs = ({ activeIndex = Step.NetworkStep, onClickEditWalletNa
 
 	const { t } = useTranslation();
 
-	const { formState, handleSubmit } = useFormContext();
+	const { formState, getValues, handleSubmit } = useFormContext();
 	const { isValid, isSubmitting } = formState;
 
 	const [importedWallets, setImportedWallets] = useState<LedgerData[]>([]);
@@ -172,7 +172,9 @@ export const LedgerTabs = ({ activeIndex = Step.NetworkStep, onClickEditWalletNa
 			return;
 		}
 
-		const importedWallet = activeProfile.wallets().findByAddress(importedWallets[0].address);
+		const importedWallet = activeProfile
+			.wallets()
+			.findByAddressWithNetwork(importedWallets[0].address, getValues("network").id());
 		assertWallet(importedWallet);
 
 		history.push(`/profiles/${activeProfile.id()}/wallets/${importedWallet?.id()}`);

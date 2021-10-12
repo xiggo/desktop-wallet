@@ -43,7 +43,11 @@ const useWalletAlias = (): HookResult => {
 					}
 				};
 
-				const wallet = profile.wallets().findByAddress(address);
+				let wallet: Contracts.IReadWriteWallet | undefined;
+
+				if (network) {
+					wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+				}
 
 				if (wallet) {
 					const delegateUsername = getDelegateUsername(wallet.network());

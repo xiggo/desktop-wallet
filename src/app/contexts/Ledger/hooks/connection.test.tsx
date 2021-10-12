@@ -152,7 +152,9 @@ describe("Use Ledger Connection", () => {
 			expect(getAllByTestId("Wallet").length).toBeGreaterThan(0);
 		});
 
-		const importedWallet = profile.wallets().findByAddress("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y");
+		const importedWallet = profile
+			.wallets()
+			.findByAddressWithNetwork("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y", "ark.devnet");
 
 		expect(importedWallet?.isLedgerNanoX()).toBe(true);
 		expect(importedWallet?.data().get(WalletData.LedgerModel)).toEqual(WalletLedgerModel.NanoX);

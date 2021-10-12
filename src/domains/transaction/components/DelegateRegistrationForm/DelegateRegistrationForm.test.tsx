@@ -188,6 +188,7 @@ describe("DelegateRegistrationForm", () => {
 			getValues: () => ({
 				fee: "1",
 				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
 				senderAddress: wallet.address(),
 				username: "test_delegate",
 			}),
@@ -253,6 +254,7 @@ describe("DelegateRegistrationForm", () => {
 				encryptionPassword: "password",
 				fee: "1",
 				mnemonic: MNEMONICS[0],
+				network: wallet.network(),
 				senderAddress: wallet.address(),
 				username: "test_delegate",
 			}),

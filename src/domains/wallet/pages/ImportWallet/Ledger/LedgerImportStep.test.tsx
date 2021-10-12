@@ -56,7 +56,7 @@ describe("LedgerImportStep", () => {
 		jest.useRealTimers();
 
 		for (const { address } of ledgerWallets) {
-			const wallet = profile.wallets().findByAddress(address);
+			const wallet = profile.wallets().findByAddressWithNetwork(address, "ark.devnet");
 
 			if (wallet) {
 				profile.wallets().forget(wallet.id());
@@ -67,7 +67,7 @@ describe("LedgerImportStep", () => {
 	const renderComponent = (wallets: LedgerData[] = ledgerWallets) => {
 		const onClickEditWalletName = jest.fn();
 
-		const network = profile.wallets().findByAddress(wallets[0].address)?.network();
+		const network = profile.wallets().findByAddressWithNetwork(wallets[0].address, "ark.devnet")?.network();
 
 		const Component = () => {
 			const form = useForm<any>({

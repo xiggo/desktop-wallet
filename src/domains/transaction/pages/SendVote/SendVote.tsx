@@ -18,6 +18,7 @@ import { appendParameters } from "domains/vote/utils/url-parameters";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+import { assertWallet } from "utils/assertions";
 
 import { FormStep, ReviewStep, SummaryStep } from ".";
 import { VoteLedgerReview } from "./LedgerReview";
@@ -152,7 +153,10 @@ export const SendVote = () => {
 			return setShowFeeWarning(true);
 		}
 
-		const senderWallet = activeProfile.wallets().findByAddress(getValues("senderAddress"));
+		const { network, senderAddress } = getValues();
+		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+
+		assertWallet(senderWallet);
 
 		// Skip authorization step
 		if (newIndex === Step.AuthenticationStep && senderWallet?.isMultiSignature()) {
@@ -204,7 +208,17 @@ export const SendVote = () => {
 
 	const submitForm = async () => {
 		clearErrors("mnemonic");
-		const { fee, mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret } = getValues();
+		const {
+			fee,
+			mnemonic,
+			network,
+			senderAddress,
+			secondMnemonic,
+			encryptionPassword,
+			wif,
+			privateKey,
+			secret,
+		} = getValues();
 		const abortSignal = abortReference.current?.signal;
 
 		try {
@@ -222,7 +236,9 @@ export const SendVote = () => {
 				signatory,
 			};
 
-			const senderWallet = activeProfile.wallets().findByAddress(getValues("senderAddress"));
+			const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+
+			assertWallet(senderWallet);
 
 			if (unvotes.length > 0 && votes.length > 0) {
 				// @README: This needs to be temporarily hardcoded here because we need to create 1 or 2
@@ -301,7 +317,7 @@ export const SendVote = () => {
 								})),
 							},
 						},
-						senderWallet!,
+						senderWallet,
 						{ abortSignal },
 					);
 
@@ -339,7 +355,7 @@ export const SendVote = () => {
 									})),
 							  },
 					},
-					senderWallet!,
+					senderWallet,
 					{ abortSignal },
 				);
 

@@ -277,7 +277,7 @@ describe("AddressRow", () => {
 		});
 
 		expect(container).toBeTruthy();
-		expect(onSelect).toHaveBeenCalledWith(wallet.address());
+		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

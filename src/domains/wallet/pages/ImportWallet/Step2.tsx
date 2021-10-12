@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { Coins, Enums } from "@payvo/sdk";
+import { Coins, Enums, Networks } from "@payvo/sdk";
 import { FormField, FormLabel } from "app/components/Form";
 import { Header } from "app/components/Header";
 import { Input, InputAddress, InputPassword } from "app/components/Input";
@@ -17,12 +17,14 @@ const validateAddress = async ({
 	profile,
 	t,
 	value,
+	network,
 }: {
 	findAddress: (value: string) => Promise<string>;
 	optional: boolean;
 	profile: Contracts.IProfile;
 	t: TFunction;
 	value: string;
+	network: Networks.Network;
 }) => {
 	if (optional && !value) {
 		return true;
@@ -32,7 +34,7 @@ const validateAddress = async ({
 		const address = await findAddress(value);
 
 		return (
-			!profile.wallets().findByAddress(address) ||
+			!profile.wallets().findByAddressWithNetwork(address, network.id()) ||
 			t("COMMON.INPUT_PASSPHRASE.VALIDATION.ADDRESS_ALREADY_EXISTS", {
 				address,
 			}).toString()
@@ -47,10 +49,12 @@ const MnemonicField = ({
 	profile,
 	label,
 	findAddress,
+	network,
 	...properties
 }: {
 	profile: Contracts.IProfile;
 	label: string;
+	network: Networks.Network;
 	findAddress: (value: string) => Promise<string>;
 } & Omit<React.HTMLProps<any>, "ref">) => {
 	const { t } = useTranslation();
@@ -67,6 +71,7 @@ const MnemonicField = ({
 					validate: (value) =>
 						validateAddress({
 							findAddress,
+							network,
 							optional: false,
 							profile,
 							t,
@@ -97,7 +102,7 @@ const AddressField = ({ coin, profile }: { coin: Coins.Coin; profile: Contracts.
 					}).toString(),
 					validate: {
 						duplicateAddress: (address) =>
-							!profile.wallets().findByAddress(address) ||
+							!profile.wallets().findByAddressWithNetwork(address, coin.network().id()) ||
 							t("COMMON.INPUT_ADDRESS.VALIDATION.ADDRESS_ALREADY_EXISTS", { address }).toString(),
 					},
 				}}
@@ -134,6 +139,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 					label={t(`COMMON.MNEMONIC_TYPE.${type.toUpperCase()}`)}
 					data-testid="ImportWallet__mnemonic-input"
 					findAddress={findAddress}
+					network={network}
 				/>
 
 				{allowsSecondSignature && (
@@ -147,6 +153,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 								validate: (value) =>
 									validateAddress({
 										findAddress,
+										network,
 										optional: true,
 										profile,
 										t,
@@ -179,6 +186,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PUBLIC_KEY"));
 					}
 				}}
+				network={network}
 			/>
 		);
 	}
@@ -198,6 +206,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
 					}
 				}}
+				network={network}
 			/>
 		);
 	}
@@ -217,6 +226,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));
 					}
 				}}
+				network={network}
 			/>
 		);
 	}
@@ -243,6 +253,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 					label={t("COMMON.PASSWORD")}
 					data-testid="ImportWallet__encryptedWif__password-input"
 					findAddress={(value) => Promise.resolve(value)}
+					network={network}
 				/>
 			</>
 		);
@@ -263,6 +274,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
 					}
 				}}
+				network={network}
 			/>
 		);
 	}

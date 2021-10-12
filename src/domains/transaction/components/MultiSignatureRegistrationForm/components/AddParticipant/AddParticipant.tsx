@@ -95,7 +95,9 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 			lastValidationReference.current = undefined;
 
 			try {
-				let participantWallet: unknown = profile.wallets().findByAddress(address);
+				let participantWallet: unknown = profile
+					.wallets()
+					.findByAddressWithNetwork(address, wallet.networkId());
 
 				if (!participantWallet) {
 					const response = await wallet.client().wallets({

@@ -57,8 +57,8 @@ export const signSecondSignatureRegistration = async ({ env, form, profile, sign
 	const { clearErrors, getValues } = form;
 
 	clearErrors("mnemonic");
-	const { fee, senderAddress, secondMnemonic } = getValues();
-	const senderWallet = profile.wallets().findByAddress(senderAddress);
+	const { fee, network, senderAddress, secondMnemonic } = getValues();
+	const senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 	const transactionId = await senderWallet.transaction().signSecondSignature({
 		data: {

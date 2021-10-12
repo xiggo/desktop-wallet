@@ -53,7 +53,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 					const address = data.address();
 
 					/* istanbul ignore next */
-					if (!profile.wallets().findByAddress(address)) {
+					if (!profile.wallets().findByAddressWithNetwork(address, network)) {
 						ledgerData.push({
 							address,
 							balance: data.balance().available.toHuman(),

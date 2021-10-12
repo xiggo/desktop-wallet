@@ -63,7 +63,7 @@ describe("ImportWallet", () => {
 
 		await env.profiles().restore(profile);
 
-		const walletId = profile.wallets().findByAddress(randomAddress)?.id();
+		const walletId = profile.wallets().findByAddressWithNetwork(randomAddress, "ark.devnet")?.id();
 
 		if (walletId) {
 			profile.wallets().forget(walletId);
@@ -408,7 +408,7 @@ describe("ImportWallet", () => {
 		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
-			expect(profile.wallets().findByAddress(identityAddress)).toBeTruthy();
+			expect(profile.wallets().findByAddressWithNetwork(identityAddress, "ark.devnet")).toBeTruthy();
 		});
 	});
 
@@ -487,7 +487,7 @@ describe("ImportWallet", () => {
 		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
-			expect(profile.wallets().findByAddress(identityAddress)).toBeTruthy();
+			expect(profile.wallets().findByAddressWithNetwork(identityAddress, "ark.devnet")).toBeTruthy();
 		});
 	});
 
@@ -669,7 +669,7 @@ describe("ImportWallet", () => {
 		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
-			expect(profile.wallets().findByAddress(randomAddress)).toBeTruthy();
+			expect(profile.wallets().findByAddressWithNetwork(randomAddress, "ark.devnet")).toBeTruthy();
 		});
 	});
 
@@ -721,7 +721,7 @@ describe("ImportWallet", () => {
 		fireEvent.click(getByTestId("ImportWallet__finish-button"));
 
 		await waitFor(() => {
-			expect(profile.wallets().findByAddress(randomAddress)).toBeTruthy();
+			expect(profile.wallets().findByAddressWithNetwork(randomAddress, "ark.devnet")).toBeTruthy();
 		});
 	});
 

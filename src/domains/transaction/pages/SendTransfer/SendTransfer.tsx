@@ -177,8 +177,10 @@ export const SendTransfer = () => {
 	} = useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
-		setWallet(activeProfile.wallets().findByAddress(senderAddress || ""));
-	}, [activeProfile, senderAddress]);
+		if (network) {
+			setWallet(activeProfile.wallets().findByAddressWithNetwork(senderAddress || "", network.id()));
+		}
+	}, [activeProfile, network, senderAddress]);
 
 	useEffect(() => {
 		if (Object.keys(deepLinkParameters).length === 0) {
@@ -335,7 +337,8 @@ export const SendTransfer = () => {
 	const handleNext = async (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
-		const senderWallet = activeProfile.wallets().findByAddress(getValues("senderAddress"));
+		const { network, senderAddress } = getValues();
+		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
 		const nextStep = activeTab + 1;
 

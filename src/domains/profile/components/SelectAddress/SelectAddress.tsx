@@ -12,7 +12,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 type SelectAddressProperties = {
-	address?: string;
+	wallet?: SelectedWallet;
 	wallets: Contracts.IReadWriteWallet[];
 	profile: Contracts.IProfile;
 	disabled?: boolean;
@@ -34,21 +34,21 @@ const WalletAvatar = ({ address }: any) => {
 };
 
 export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressProperties>(
-	({ address, wallets, profile, disabled, isInvalid, onChange }: SelectAddressProperties, reference) => {
+	({ wallet, wallets, profile, disabled, isInvalid, onChange }: SelectAddressProperties, reference) => {
 		const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);
-		const [selectedAddress, setSelectedAddress] = useState(address);
+		const [selectedWallet, setSelectedWallet] = useState(wallet);
 
-		useEffect(() => setSelectedAddress(address), [address]);
+		useEffect(() => setSelectedWallet(wallet), [wallet]);
 
 		const fieldContext = useFormField();
 		const isInvalidField = fieldContext?.isInvalid || isInvalid;
 
 		const { t } = useTranslation();
 
-		const handleSelectWallet = ({ address }: SelectedWallet) => {
-			setSelectedAddress(address);
+		const handleSelectWallet = (wallet: SelectedWallet) => {
+			setSelectedWallet(wallet);
 			setSearchWalletIsOpen(false);
-			onChange?.(address);
+			onChange?.(wallet.address);
 		};
 
 		const { getWalletAlias } = useWalletAlias();
@@ -56,10 +56,10 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 		const { alias } = useMemo(
 			() =>
 				getWalletAlias({
-					address: selectedAddress,
+					...selectedWallet,
 					profile,
 				}),
-			[getWalletAlias, profile, selectedAddress],
+			[getWalletAlias, profile, selectedWallet],
 		);
 
 		return (
@@ -72,13 +72,13 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					disabled={disabled}
 				>
 					<span className="flex absolute inset-0 items-center px-14 w-full border border-transparent">
-						<Address address={selectedAddress} walletName={alias} />
+						<Address address={selectedWallet?.address} walletName={alias} />
 					</span>
 
 					<Input
 						data-testid="SelectAddress__input"
 						ref={reference}
-						value={selectedAddress || ""}
+						value={selectedWallet?.address || ""}
 						hideInputValue={true}
 						readOnly
 						isInvalid={isInvalidField}
@@ -91,7 +91,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 								),
 							},
 							start: {
-								content: <WalletAvatar address={selectedAddress} />,
+								content: <WalletAvatar address={selectedWallet?.address} />,
 							},
 						}}
 					/>
@@ -110,7 +110,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					showNetwork={false}
 					onSelectWallet={handleSelectWallet}
 					onClose={() => setSearchWalletIsOpen(false)}
-					selectedAddress={selectedAddress}
+					selectedAddress={selectedWallet?.address}
 				/>
 			</>
 		);

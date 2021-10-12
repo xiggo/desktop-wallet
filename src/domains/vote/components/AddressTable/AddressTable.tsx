@@ -9,7 +9,7 @@ import { AddressRow } from "./AddressRow";
 
 interface AddressTableProperties {
 	wallets: Contracts.IReadWriteWallet[];
-	onSelect?: (address: string) => void;
+	onSelect?: (address: string, network: string) => void;
 	isCompact?: boolean;
 }
 

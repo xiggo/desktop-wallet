@@ -67,7 +67,13 @@ describe("useWalletAlias", () => {
 	it("should return displayName", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({ address: wallet.address(), profile })).toEqual({
+		expect(
+			result.current.getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toEqual({
 			alias: wallet.displayName(),
 			isContact: false,
 			isDelegate: false,
@@ -81,7 +87,13 @@ describe("useWalletAlias", () => {
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({ address: wallet.address(), profile })).toEqual({
+		expect(
+			result.current.getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toEqual({
 			alias: wallet.displayName(),
 			isContact: false,
 			isDelegate: true,
@@ -91,7 +103,7 @@ describe("useWalletAlias", () => {
 	it("should return delegate name", async () => {
 		await syncDelegates(profile);
 
-		const walletsSpy = jest.spyOn(profile.wallets(), "findByAddress").mockReturnValue(undefined);
+		const walletsSpy = jest.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(undefined);
 		const contactsSpy = jest.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
 		const delegate = env.delegates().all(wallet.coinId(), wallet.networkId())[0];
@@ -123,7 +135,13 @@ describe("useWalletAlias", () => {
 
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		expect(result.current.getWalletAlias({ address: wallet.address(), profile })).toEqual({
+		expect(
+			result.current.getWalletAlias({
+				address: wallet.address(),
+				network: wallet.network(),
+				profile,
+			}),
+		).toEqual({
 			alias: "delegate username",
 			isContact: false,
 			isDelegate: true,

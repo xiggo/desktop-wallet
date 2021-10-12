@@ -40,7 +40,15 @@ const ProfileAvatar = ({ address }: any) => {
 	return <Avatar address={address} size="sm" noShadow />;
 };
 
-const OptionLabel = ({ option, profile }: { option: any; profile: Contracts.IProfile }) => {
+const OptionLabel = ({
+	option,
+	network,
+	profile,
+}: {
+	option: any;
+	network?: Networks.Network;
+	profile: Contracts.IProfile;
+}) => {
 	const address = option.value;
 
 	const { getWalletAlias } = useWalletAlias();
@@ -49,9 +57,10 @@ const OptionLabel = ({ option, profile }: { option: any; profile: Contracts.IPro
 		() =>
 			getWalletAlias({
 				address,
+				network,
 				profile,
 			}),
-		[address, getWalletAlias, profile],
+		[address, getWalletAlias, network, profile],
 	);
 
 	return (
@@ -183,7 +192,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 								),
 							},
 						}}
-						renderLabel={(option) => <OptionLabel option={option} profile={profile} />}
+						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}
 					/>
 				</div>
 

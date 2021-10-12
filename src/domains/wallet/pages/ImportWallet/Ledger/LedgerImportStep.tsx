@@ -31,7 +31,7 @@ const MultipleImport = ({
 		<div>
 			<ul>
 				{wallets.map((wallet) => {
-					const importedWallet = profile.wallets().findByAddress(wallet.address);
+					const importedWallet = profile.wallets().findByAddressWithNetwork(wallet.address, network.id());
 					assertWallet(importedWallet);
 
 					return (
@@ -90,7 +90,7 @@ const SingleImport = ({
 
 	const ledgerWallet = wallets[0];
 
-	const wallet = profile.wallets().findByAddress(ledgerWallet.address);
+	const wallet = profile.wallets().findByAddressWithNetwork(ledgerWallet.address, network.id());
 	assertWallet(wallet);
 
 	return (
