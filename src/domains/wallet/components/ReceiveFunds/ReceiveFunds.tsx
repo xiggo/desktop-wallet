@@ -67,7 +67,7 @@ const ReceiveFunds = ({ address, name, network, isOpen, onClose }: ReceiveFundsP
 						</div>
 					}
 				>
-					<div className="flex items-center space-x-2">
+					<div className="flex items-center space-x-2 overflow-hidden">
 						<Address address={address} />
 						<span className="flex flex-grow text-theme-primary-300 dark:text-theme-secondary-600">
 							<Clipboard variant="icon" data={address}>
