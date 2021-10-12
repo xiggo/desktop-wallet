@@ -47,6 +47,64 @@ describe("ContactForm", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should clear errors when changing network", async () => {
+		renderWithRouter(
+			<ContactForm
+				profile={profile}
+				onCancel={onCancel}
+				onSave={onSave}
+				errors={{ address: "Contact address error" }}
+			/>,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeInTheDocument();
+		});
+
+		fireEvent.input(screen.getByTestId("contact-form__name-input"), {
+			target: { value: "name" },
+		});
+
+		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
+
+		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
+		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+
+		await waitFor(() => {
+			expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		});
+
+		fireEvent.input(screen.getByTestId("contact-form__address-input"), {
+			target: { value: validArkDevnetAddress },
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(validArkDevnetAddress);
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
+		});
+
+		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
+		});
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("contact-form__save-btn")).not.toBeDisabled();
+		});
+	});
+
 	it("should handle onChange event", async () => {
 		const onChange = jest.fn();
 

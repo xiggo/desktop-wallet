@@ -127,7 +127,7 @@ export const ContactForm = ({
 	const { t } = useTranslation();
 
 	const form = useForm({ mode: "onChange" });
-	const { formState, register, setError, setValue, watch } = form;
+	const { formState, register, setError, setValue, watch, trigger } = form;
 	const { isValid } = formState;
 
 	const { name, network, address } = watch();
@@ -187,6 +187,7 @@ export const ContactForm = ({
 
 	const handleSelectNetwork = (networkOption?: NetworkOption) => {
 		setValue("network", networkById(networkOption?.value), { shouldDirty: true, shouldValidate: true });
+		trigger("address");
 	};
 
 	return (
