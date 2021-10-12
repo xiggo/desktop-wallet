@@ -144,7 +144,9 @@ export const ContactForm = ({
 		}
 	}, [errors, setError]);
 
-	const { networkOptions, networkById } = useNetworkOptions();
+	const { networkOptions, networkById } = useNetworkOptions(
+		profile.settings().get(Contracts.ProfileSetting.UseTestNetworks),
+	);
 
 	const filteredNetworks = useMemo(() => {
 		const usedNetworks = new Set(addresses.map((address: any) => address.network));

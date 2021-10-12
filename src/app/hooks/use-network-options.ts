@@ -2,10 +2,18 @@ import { Networks } from "@payvo/sdk";
 import { useEnvironmentContext } from "app/contexts";
 import { useCallback, useMemo } from "react";
 
-export const useNetworkOptions = () => {
+export const useNetworkOptions = (useTestNetworks?: boolean) => {
 	const { env } = useEnvironmentContext();
 
-	const networks: Networks.Network[] = useMemo(() => env.availableNetworks(), [env]);
+	const networks: Networks.Network[] = useMemo(() => {
+		let networks = env.availableNetworks();
+
+		if (!useTestNetworks) {
+			networks = networks.filter((network: Networks.Network) => network.isLive());
+		}
+
+		return networks;
+	}, [env, useTestNetworks]);
 
 	const networkOptions = useMemo(
 		() =>

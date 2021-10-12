@@ -13,6 +13,16 @@ describe("useNetworkOptions hook", () => {
 		const networks = result.current.networkOptions;
 
 		expect(networks).toContainEqual({ label: "ARK Mainnet", value: "ark.mainnet" });
+		expect(networks).toContainEqual({ label: "Compendia Mainnet", value: "bind.mainnet" });
+	});
+
+	it("should return network options including test networks", () => {
+		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
+		const { result } = renderHook(() => useNetworkOptions(true), { wrapper });
+
+		const networks = result.current.networkOptions;
+
+		expect(networks).toContainEqual({ label: "ARK Mainnet", value: "ark.mainnet" });
 		expect(networks).toContainEqual({ label: "ARK Devnet", value: "ark.devnet" });
 		expect(networks).toContainEqual({ label: "Compendia Mainnet", value: "bind.mainnet" });
 	});
