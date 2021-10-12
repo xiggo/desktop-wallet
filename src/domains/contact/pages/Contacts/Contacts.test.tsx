@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
+import { ProfileSetting } from "@payvo/profiles/distribution/contracts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
@@ -43,6 +44,33 @@ describe("Contacts", () => {
 		expect(() => screen.getByTestId("EmptyBlock")).toThrow(/Unable to find an element by/);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with contacts of live networks only", () => {
+		profile.settings().set(ProfileSetting.UseTestNetworks, false);
+
+		const contact = profile.contacts().first();
+		const address = contact.addresses().create({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		const { asFragment } = renderComponent();
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
+
+		expect(screen.getByTestId("ContactList")).toBeTruthy();
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
+		expect(screen.getByTestId("TableRow")).toHaveTextContent(address.address());
+		expect(() => screen.getByTestId("EmptyBlock")).toThrow(/Unable to find an element by/);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		profile.settings().set(ProfileSetting.UseTestNetworks, true);
+
+		contact.addresses().forget(address.id());
 	});
 
 	it("should render without contacts", () => {
@@ -317,7 +345,7 @@ describe("Contacts", () => {
 		await waitFor(() => expect(screen.queryByTestId("Contacts--empty-results")).toBeInTheDocument());
 	});
 
-	it("should search for contact by name", async () => {
+	it("should search for contact by address", async () => {
 		const [contact1, contact2] = profile.contacts().values();
 
 		const contact1Address = contact1.addresses().first().address();
@@ -348,5 +376,50 @@ describe("Contacts", () => {
 		});
 
 		await waitFor(() => expect(screen.queryByTestId("Contacts--empty-results")).toBeInTheDocument());
+	});
+
+	it("should not include addresses of test networks in search if not enabled", async () => {
+		profile.settings().set(ProfileSetting.UseTestNetworks, false);
+
+		const contact = profile.contacts().first();
+
+		const addressLive = contact.addresses().create({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		const addressTest = contact.addresses().create({
+			address: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+
+		renderComponent();
+
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeTruthy(),
+		);
+
+		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {
+			target: { value: addressLive.address() },
+		});
+
+		await waitFor(() => expect(screen.getAllByTestId("ContactListItem__address")).toHaveLength(1));
+
+		expect(screen.queryByText(addressLive.address())).toBeInTheDocument();
+
+		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {
+			target: { value: addressTest.address() },
+		});
+
+		await waitFor(() => expect(screen.queryByTestId("Contacts--empty-results")).toBeInTheDocument());
+
+		profile.settings().set(ProfileSetting.UseTestNetworks, true);
+
+		contact.addresses().forget(addressLive.id());
+		contact.addresses().forget(addressTest.id());
 	});
 });

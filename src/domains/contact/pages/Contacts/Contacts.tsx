@@ -7,13 +7,14 @@ import { Page, Section } from "app/components/Layout";
 import { Table } from "app/components/Table";
 import { TableColumn } from "app/components/Table/TableColumn.models";
 import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
+import { useActiveProfile, useNetworkOptions } from "app/hooks";
 import { CreateContact, DeleteContact, UpdateContact } from "domains/contact/components";
 import { ContactListItem } from "domains/contact/components/ContactListItem";
 import querystring from "querystring";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { assertNetwork } from "utils/assertions";
 
 interface ContactsHeaderExtraProperties {
 	showSearchBar: boolean;
@@ -46,23 +47,54 @@ export const Contacts = () => {
 	const history = useHistory();
 
 	const activeProfile = useActiveProfile();
+	const { networkById } = useNetworkOptions();
 
-	const [contacts, setContacts] = useState<Contracts.IContact[]>([]);
 	const [query, setQuery] = useState<string>("");
+
+	const useTestNetworks = activeProfile.settings().get<boolean>(Contracts.ProfileSetting.UseTestNetworks) || false;
+
+	const contacts: Contracts.IContact[] = useMemo(() => {
+		const contacts = activeProfile.contacts().values();
+
+		if (useTestNetworks) {
+			return contacts;
+		}
+
+		return contacts.filter((contact) =>
+			contact
+				.addresses()
+				.values()
+				.some((address) => {
+					const network = networkById(address.network());
+					assertNetwork(network);
+					return network.isLive();
+				}),
+		);
+	}, [activeProfile, networkById, useTestNetworks, state]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const filteredContacts = useMemo(() => {
 		if (query.length === 0) {
 			return contacts;
 		}
 
+		const networkMap: Record<string, boolean> = {};
+
 		return contacts.filter((contact) => {
-			const identifiers: string[] = [
-				contact.name().toLowerCase(),
-				...contact
-					.addresses()
-					.values()
-					.map((address) => address.address().toLowerCase()),
-			];
+			const identifiers = [contact.name().toLowerCase()];
+
+			for (const address of contact.addresses().values()) {
+				if (networkMap[address.network()] === undefined) {
+					const network = networkById(address.network());
+					assertNetwork(network);
+					networkMap[address.network()] = network.isLive();
+				}
+
+				const isLive = networkMap[address.network()];
+
+				if (isLive || (useTestNetworks && !isLive)) {
+					identifiers.push(address.address().toLowerCase());
+				}
+			}
 
 			for (const identifier of identifiers) {
 				if (identifier.includes(query.toLowerCase())) {
@@ -72,7 +104,7 @@ export const Contacts = () => {
 
 			return false;
 		});
-	}, [contacts, query]);
+	}, [contacts, networkById, useTestNetworks, query]);
 
 	const [createIsOpen, setCreateIsOpen] = useState(false);
 
@@ -86,10 +118,6 @@ export const Contacts = () => {
 			setSelectedContact(null);
 		}
 	}, [contactAction]);
-
-	useEffect(() => {
-		setContacts(activeProfile.contacts().values());
-	}, [activeProfile, state]);
 
 	const contactOptions = [
 		{ label: t("COMMON.EDIT"), value: "edit" },
@@ -170,6 +198,7 @@ export const Contacts = () => {
 												onAction={(action: { value: any }) =>
 													handleContactAction(action.value, contact)
 												}
+												useTestNetworks={useTestNetworks}
 											/>
 										)}
 									</Table>

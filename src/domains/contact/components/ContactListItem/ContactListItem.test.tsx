@@ -14,11 +14,29 @@ let contact: Contracts.IContact;
 describe("ContactListItem", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
-		contact = profile.contacts().values()[0];
+		contact = profile.contacts().first();
 	});
 
 	it("should render", () => {
 		const { asFragment } = render(
+			<table>
+				<tbody>
+					<ContactListItem item={contact} useTestNetworks />
+				</tbody>
+			</table>,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with live networks only", () => {
+		const address = contact.addresses().create({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		const { asFragment, getAllByTestId, getByTestId } = render(
 			<table>
 				<tbody>
 					<ContactListItem item={contact} />
@@ -26,7 +44,12 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
+		expect(getAllByTestId("TableRow")).toHaveLength(1);
+		expect(getByTestId("TableRow")).toHaveTextContent(address.address());
+
 		expect(asFragment()).toMatchSnapshot();
+
+		contact.addresses().forget(address.id());
 	});
 
 	it("should render as delegate", () => {
@@ -51,7 +74,7 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={delegateContact} />
+					<ContactListItem item={delegateContact} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -75,7 +98,7 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} />
+					<ContactListItem item={contact} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -87,7 +110,7 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} options={singleOption} />
+					<ContactListItem item={contact} options={singleOption} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -99,7 +122,7 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} options={multiOptions} />
+					<ContactListItem item={contact} options={multiOptions} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -113,7 +136,7 @@ describe("ContactListItem", () => {
 		const { getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={singleOption} />
+					<ContactListItem item={contact} onAction={onAction} options={singleOption} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -131,7 +154,7 @@ describe("ContactListItem", () => {
 		const { getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={singleOption} />
+					<ContactListItem item={contact} onAction={onAction} options={singleOption} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -149,7 +172,7 @@ describe("ContactListItem", () => {
 		const { getAllByTestId, getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={multiOptions} />
+					<ContactListItem item={contact} onAction={onAction} options={multiOptions} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -171,7 +194,7 @@ describe("ContactListItem", () => {
 		const { getAllByTestId, getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={multiOptions} />
+					<ContactListItem item={contact} onAction={onAction} options={multiOptions} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -193,7 +216,7 @@ describe("ContactListItem", () => {
 		const { getAllByTestId, getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} options={multiOptions} />
+					<ContactListItem item={contact} options={multiOptions} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -215,7 +238,7 @@ describe("ContactListItem", () => {
 		const { getAllByTestId, getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} options={multiOptions} />
+					<ContactListItem item={contact} options={multiOptions} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -237,7 +260,7 @@ describe("ContactListItem", () => {
 		const { getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={singleOption} />
+					<ContactListItem item={contact} onAction={onAction} options={singleOption} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -258,7 +281,7 @@ describe("ContactListItem", () => {
 		const { getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={singleOption} />
+					<ContactListItem item={contact} onAction={onAction} options={singleOption} useTestNetworks />
 				</tbody>
 			</table>,
 		);
@@ -279,7 +302,7 @@ describe("ContactListItem", () => {
 		const { getAllByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onSend={onSend} options={singleOption} />
+					<ContactListItem item={contact} onSend={onSend} options={singleOption} useTestNetworks />
 				</tbody>
 			</table>,
 		);
