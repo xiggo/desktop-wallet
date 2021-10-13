@@ -38,6 +38,7 @@ export const PluginDetails = () => {
 	const repositoryURL = queryParameters.get("repositoryURL");
 
 	const pluginCtrl = pluginManager.plugins().findById(pluginId!);
+	const isEnabled = !!pluginCtrl?.isEnabled(activeProfile);
 	const isInstalled = !!pluginCtrl;
 	const hasLaunch = !!pluginCtrl?.hooks().hasCommand("service:launch.render");
 
@@ -122,6 +123,7 @@ export const PluginDetails = () => {
 					{...pluginData}
 					isLoadingSize={isLoadingSize}
 					size={size}
+					isEnabled={isEnabled}
 					isInstalled={isInstalled}
 					onDelete={() => setIsUninstallOpen(true)}
 					onReport={handleReportPlugin}
