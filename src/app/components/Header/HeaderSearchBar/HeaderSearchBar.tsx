@@ -5,7 +5,7 @@ import { clickOutsideHandler, useDebounce } from "app/hooks";
 import cn from "classnames";
 import React, { ChangeEvent, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { styled } from "twin.macro";
+import tw, { styled } from "twin.macro";
 
 interface HeaderSearchBarProperties {
 	offsetClassName?: string;
@@ -15,13 +15,14 @@ interface HeaderSearchBarProperties {
 	onSearch?: (query: string) => void;
 	onReset?: () => void;
 	extra?: React.ReactNode;
+	maxLength?: number;
 	debounceTimeout?: number;
 	defaultQuery?: string;
 	resetFields?: boolean;
 }
 
 const SearchBarInputWrapper = styled.div`
-	min-width: 28rem;
+	${tw`min-width[448px] dark:border dark:border-theme-secondary-800`}
 `;
 
 export const HeaderSearchBar = ({
@@ -31,6 +32,7 @@ export const HeaderSearchBar = ({
 	noToggleBorder,
 	onSearch,
 	extra,
+	maxLength,
 	onReset,
 	defaultQuery = "",
 	debounceTimeout = 500,
@@ -77,7 +79,7 @@ export const HeaderSearchBar = ({
 					data-testid="HeaderSearchBar__input"
 					ref={reference}
 					className={cn(
-						"absolute z-20 flex items-center text-base px-10 -mx-10 py-4 rounded-md shadow-xl bg-theme-background transform",
+						"absolute z-20 flex items-center text-base px-10 -mx-10 py-4 rounded-lg shadow-xl bg-theme-background transform",
 						offsetClassName || "top-1/2 -translate-y-1/2",
 						{
 							"right-0": noToggleBorder,
@@ -94,22 +96,27 @@ export const HeaderSearchBar = ({
 
 					<button
 						data-testid="header-search-bar__reset"
-						className="focus:outline-none"
+						className={cn("focus:outline-none transition-all duration-300", { "mr-4": query !== "" })}
 						onClick={handleQueryReset}
 						type="button"
 					>
 						<Icon
-							className="p-1 -ml-1 text-theme-secondary dark:text-theme-secondary-600 hover:text-theme-primary-600"
+							className={cn(
+								"text-theme-text transition-all duration-300",
+								{ "w-0": query === "" },
+								{ "w-4": query !== "" },
+							)}
 							name="Cross"
-							size="sm"
+							size="md"
 						/>
 					</button>
 
 					<div className="flex-1">
 						<Input
-							className="pl-3"
+							className="-ml-4"
 							placeholder={placeholder || `${t("COMMON.SEARCH")}...`}
 							value={query}
+							maxLength={maxLength}
 							isFocused
 							ignoreContext
 							onChange={(event: ChangeEvent<HTMLInputElement>) => setQuery(event.target.value)}
@@ -119,7 +126,7 @@ export const HeaderSearchBar = ({
 					</div>
 
 					<Icon
-						className="text-color-primary-300 dark:text-theme-secondary-600"
+						className="text-theme-primary-300 dark:text-theme-secondary-600"
 						name="MagnifyingGlass"
 						size="lg"
 					/>

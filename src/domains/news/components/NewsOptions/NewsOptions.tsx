@@ -1,10 +1,7 @@
 import { Networks } from "@payvo/sdk";
 import { Divider } from "app/components/Divider";
 import { FilterNetwork, FilterOption } from "app/components/FilterNetwork";
-import { Icon } from "app/components/Icon";
-import { Input } from "app/components/Input";
 import { useEnvironmentContext } from "app/contexts";
-import { useDebounce } from "app/hooks";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -19,7 +16,6 @@ interface Option {
 interface NewsOptionsProperties {
 	selectedCategories: string[];
 	selectedCoins: string[];
-	onSearch?: (search: string) => void;
 	onSubmit?: (data: object) => void;
 }
 
@@ -28,7 +24,7 @@ const HEADER_HEIGHT = 84;
 const VERTICAL_PADDING = 20 + 32;
 // endregion
 
-export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSubmit }: NewsOptionsProperties) => {
+export const NewsOptions = ({ selectedCategories, selectedCoins, onSubmit }: NewsOptionsProperties) => {
 	const { env } = useEnvironmentContext();
 
 	const { t } = useTranslation();
@@ -56,9 +52,6 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 
 		return Object.values(coins);
 	});
-
-	const [searchQuery, setSearchQuery] = useState("");
-	const [debouncedSearchQuery] = useDebounce(searchQuery, 500);
 
 	const showSelectAllCategories = useMemo(() => categories.some((option: Option) => !option.isSelected), [
 		categories,
@@ -92,12 +85,6 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 		);
 	};
 
-	const handleSearchInput = (searchQuery: string) => {
-		const query = searchQuery.slice(0, 32);
-		setSearchQuery(query);
-		onSearch?.(query);
-	};
-
 	const handleQueryUpdate = useCallback(() => {
 		const categoryNames = categories.reduce(
 			(accumulator: string[], category: Option) =>
@@ -114,9 +101,8 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 		onSubmit?.({
 			categories: categoryNames,
 			coins: coinNames,
-			searchQuery: debouncedSearchQuery,
 		});
-	}, [onSubmit, categories, debouncedSearchQuery, coinOptions]);
+	}, [onSubmit, categories, coinOptions]);
 
 	useEffect(() => {
 		handleQueryUpdate();
@@ -130,24 +116,6 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSearch, onSub
 		>
 			<div className="overflow-y-auto p-10 pb-4 max-h-full rounded-lg border-2 bg-theme-background border-theme-primary-100 dark:border-theme-secondary-800">
 				<div className="flex flex-col space-y-8">
-					<div className="flex justify-between items-center py-4 px-2 rounded-md shadow-xl">
-						<Input
-							data-testid="NewsOptions__search"
-							maxLength={32}
-							placeholder={t("NEWS.NEWS_OPTIONS.PLACEHOLDER")}
-							onChange={(event) => handleSearchInput?.((event.target as HTMLInputElement).value)}
-							noBorder
-							noShadow
-						/>
-						<Icon
-							className="mr-4 text-theme-primary-300 dark:text-theme-secondary-600"
-							name="MagnifyingGlass"
-							size="lg"
-						/>
-					</div>
-
-					<Divider dashed />
-
 					<div className="flex flex-col space-y-3">
 						<div className="flex justify-between items-center">
 							<h5 className="font-semibold">{t("COMMON.CATEGORY")}</h5>

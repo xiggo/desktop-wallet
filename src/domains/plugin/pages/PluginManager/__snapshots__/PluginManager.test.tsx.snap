@@ -5525,18 +5525,18 @@ exports[`PluginManager should search for plugin 1`] = `
                     </button>
                   </div>
                   <div
-                    class="HeaderSearchBar__SearchBarInputWrapper-sc-1c89d5c-0 NEdKf absolute z-20 flex items-center text-base px-10 -mx-10 py-4 rounded-md shadow-xl bg-theme-background transform top-1/2 -translate-y-1/2 right-3"
+                    class="HeaderSearchBar__SearchBarInputWrapper-sc-1c89d5c-0 kJtOVa absolute z-20 flex items-center text-base px-10 -mx-10 py-4 rounded-lg shadow-xl bg-theme-background transform top-1/2 -translate-y-1/2 right-3"
                     data-testid="HeaderSearchBar__input"
                   >
                     <button
-                      class="focus:outline-none"
+                      class="focus:outline-none transition-all duration-300 mr-4"
                       data-testid="header-search-bar__reset"
                       type="button"
                     >
                       <div
-                        class="sc-bdnxRM AkeAK p-1 -ml-1 text-theme-secondary dark:text-theme-secondary-600 hover:text-theme-primary-600"
-                        height="10"
-                        width="10"
+                        class="sc-bdnxRM AFVmm text-theme-text transition-all duration-300 w-4"
+                        height="16"
+                        width="16"
                       >
                         <svg>
                           cross.svg
@@ -5547,7 +5547,7 @@ exports[`PluginManager should search for plugin 1`] = `
                       class="flex-1"
                     >
                       <div
-                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 hyKEbr pl-3"
+                        class="Input__InputWrapperStyled-sc-1i8sd1r-0 hyKEbr -ml-4"
                       >
                         <div
                           class="relative flex flex-1 h-full"
@@ -5562,7 +5562,7 @@ exports[`PluginManager should search for plugin 1`] = `
                       </div>
                     </div>
                     <div
-                      class="sc-bdnxRM NjstW text-color-primary-300 dark:text-theme-secondary-600"
+                      class="sc-bdnxRM NjstW text-theme-primary-300 dark:text-theme-secondary-600"
                       height="20"
                       width="20"
                     >

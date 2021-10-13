@@ -7,7 +7,8 @@ import { goToNews } from "../e2e/common";
 
 const itemsPerPage = 15;
 const translations = buildTranslations();
-const queryInput = Selector('[data-testid="NewsOptions__search"]');
+const searchBarButton = Selector('[data-testid="HeaderSearchBar"] button');
+const queryInput = Selector('[data-testid="HeaderSearchBar__input"] input');
 
 const preSteps = {
 	"Given Alice is on the news page": async (t: TestController) => {
@@ -63,6 +64,7 @@ cucumber(
 			}
 		},
 		"And searches for a specifc term": async (t: TestController) => {
+			await t.click(searchBarButton);
 			const query = "major league hacking";
 			await t.typeText(queryInput, query, { replace: true });
 		},
@@ -128,6 +130,7 @@ cucumber(
 	{
 		...preSteps,
 		"When she searches for a term that finds 0 results": async (t: TestController) => {
+			await t.click(searchBarButton);
 			const query = "fjdskfjdfsdjfkdsfjdsfsd";
 			await t.typeText(queryInput, query, { replace: true });
 		},

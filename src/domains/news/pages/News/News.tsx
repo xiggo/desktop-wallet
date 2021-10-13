@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/profiles";
 import { SvgCollection } from "app/assets/svg";
 import { EmptyResults } from "app/components/EmptyResults";
 import { Header } from "app/components/Header";
+import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
 import { Page, Section } from "app/components/Layout";
 import { Pagination } from "app/components/Pagination";
 import { useEnvironmentContext } from "app/contexts";
@@ -36,7 +37,9 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 	const [totalCount, setTotalCount] = useState(0);
 	const [currentPage, setCurrentPage] = useState(1);
 
-	const [{ categories, coins, searchQuery }, setFilters] = useState<NewsFilters>(() => {
+	const [searchQuery, setSearchQuery] = useState("");
+
+	const [{ categories, coins }, setFilters] = useState<NewsFilters>(() => {
 		let initialFilters: NewsFilters;
 
 		try {
@@ -116,6 +119,14 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 							</span>
 							<SvgCollection.FTX width={65} height={20} className="text-theme-text" />
 						</div>
+					}
+					extra={
+						<HeaderSearchBar
+							label={t("COMMON.SEARCH")}
+							onSearch={(query) => setSearchQuery(query)}
+							resetFields={searchQuery === ""}
+							maxLength={32}
+						/>
 					}
 				/>
 			</Section>
