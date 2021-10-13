@@ -5,6 +5,7 @@ import { Coins, Networks } from "@payvo/sdk";
 import { PluginController } from "plugins";
 
 import {
+	assertArray,
 	assertCoin,
 	assertNetwork,
 	assertNumber,
@@ -112,6 +113,22 @@ describe("#assertNetwork", () => {
 			"Expected 'network' to be Networks.Network, but received [object Object]",
 		);
 		expect(() => assertNetwork([])).toThrow("Expected 'network' to be Networks.Network, but received ");
+	});
+});
+
+describe("#assertArray", () => {
+	it("should pass with an array", () => {
+		expect(() => assertArray(["a"])).not.toThrow();
+	});
+
+	it("should fail without an array", () => {
+		expect(() => assertArray(undefined)).toThrow("Expected 'value' to be array, but received undefined");
+		expect(() => assertArray(null)).toThrow("Expected 'value' to be array, but received null");
+		expect(() => assertArray(true)).toThrow("Expected 'value' to be array, but received true");
+		expect(() => assertArray(false)).toThrow("Expected 'value' to be array, but received false");
+		expect(() => assertArray("")).toThrow("Expected 'value' to be array, but received ");
+		expect(() => assertArray(1)).toThrow("Expected 'value' to be array, but received 1");
+		expect(() => assertArray({})).toThrow("Expected 'value' to be array, but received [object Object]");
 	});
 });
 

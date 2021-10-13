@@ -25,7 +25,7 @@ export const PluginManualInstallModal = ({ isOpen, onClose, onSuccess }: Propert
 	const { getValues, register, formState } = form;
 	const { isValid, isSubmitting } = formState;
 
-	const { fetchLatestPackageConfiguration } = usePluginManagerContext();
+	const { fetchLatestPackageConfiguration, githubRepositoryRegex } = usePluginManagerContext();
 
 	const handleInstall = async () => {
 		setIsLoading(true);
@@ -67,9 +67,7 @@ export const PluginManualInstallModal = ({ isOpen, onClose, onSuccess }: Propert
 									field: t("PLUGINS.MODAL_MANUAL_INSTALL_PLUGIN.REPOSITORY_URL"),
 								}).toString(),
 								validate: (value) => {
-									const regex = /https?:\/\/(?:www\.)?github\.com\/([\w.-]+)(?:\/[\dA-z-]+)?\/?/;
-
-									if (!regex.test(value)) {
+									if (!githubRepositoryRegex.test(value)) {
 										return t("COMMON.VALIDATION.FIELD_INVALID", {
 											field: t("PLUGINS.MODAL_MANUAL_INSTALL_PLUGIN.REPOSITORY_URL"),
 										}).toString();

@@ -25,21 +25,21 @@ describe("WalletUpdate", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render 2st step", () => {
+	it("should render 2nd step", () => {
 		const { asFragment, getByTestId } = render(<SecondStep />);
 
 		expect(getByTestId("WalletUpdate__second-step")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render 2st step with progress status", () => {
+	it("should render 2nd step with progress status", () => {
 		const { asFragment, getByTestId } = render(<SecondStep percent={20} />);
 
 		expect(getByTestId("WalletUpdate__second-step")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render 3st step", () => {
+	it("should render 3rd step", () => {
 		const { asFragment, getByTestId } = render(<ThirdStep />);
 
 		expect(getByTestId("WalletUpdate__third-step")).toBeTruthy();

@@ -302,6 +302,60 @@ describe("PluginManagerProvider", () => {
 		ipcRendererSpy.mockRestore();
 	});
 
+	it("should download plugin from custom url in subdirectory", async () => {
+		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+			if (channel === "plugin:loader-fs.find") {
+				return {
+					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
+					dir: "/plugins/test-plugin",
+					source: () => void 0,
+					sourcePath: "/plugins/test-plugin/index.js",
+				};
+			}
+
+			if (channel === "plugin:download") {
+				return "/plugins/test-plugin";
+			}
+		});
+
+		const Component = () => {
+			const { downloadPlugin } = usePluginManagerContext();
+			return (
+				<div>
+					<button
+						onClick={() =>
+							downloadPlugin(
+								{ id: "test-plugin" } as any,
+								"https://github.com/arkecosystem/repository/tree/master/subdirectory/test-plugin",
+							)
+						}
+					>
+						Fetch
+					</button>
+				</div>
+			);
+		};
+
+		render(
+			<EnvironmentProvider env={env}>
+				<PluginManagerProvider manager={manager} services={[]}>
+					<Component />
+				</PluginManagerProvider>
+			</EnvironmentProvider>,
+		);
+
+		fireEvent.click(screen.getByText("Fetch"));
+
+		await waitFor(() =>
+			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
+				name: "test-plugin",
+				url: "https://github.com/arkecosystem/repository/archive/master.zip",
+			}),
+		);
+
+		ipcRendererSpy.mockRestore();
+	});
+
 	it("should render properly for remote package", async () => {
 		nock("https://github.com/")
 			.get("/arkecosystem/remote-plugin/raw/master/package.json")
@@ -313,6 +367,46 @@ describe("PluginManagerProvider", () => {
 				<>
 					<button
 						onClick={() => fetchLatestPackageConfiguration("https://github.com/arkecosystem/remote-plugin")}
+					>
+						Fetch Package
+					</button>
+					<ul>
+						{pluginConfigurations.map((item) => (
+							<li key={item.id()}>{item.name()}</li>
+						))}
+					</ul>
+				</>
+			);
+		};
+
+		render(
+			<EnvironmentProvider env={env}>
+				<PluginManagerProvider manager={manager} services={[]}>
+					<Component />
+				</PluginManagerProvider>
+			</EnvironmentProvider>,
+		);
+
+		fireEvent.click(screen.getByText("Fetch Package"));
+
+		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(1));
+	});
+
+	it("should render properly for remote package in subdirectory", async () => {
+		nock("https://github.com/")
+			.get("/arkecosystem/repository/raw/master/subdirectory/remote-plugin/package.json")
+			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "remote-plugin" });
+
+		const Component = () => {
+			const { fetchLatestPackageConfiguration, pluginConfigurations } = usePluginManagerContext();
+			return (
+				<>
+					<button
+						onClick={() =>
+							fetchLatestPackageConfiguration(
+								"https://github.com/arkecosystem/repository/tree/master/subdirectory/remote-plugin",
+							)
+						}
 					>
 						Fetch Package
 					</button>

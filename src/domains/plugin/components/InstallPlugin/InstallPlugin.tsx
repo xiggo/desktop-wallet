@@ -45,13 +45,13 @@ export const InstallPlugin = ({
 	const { downloadPlugin, installPlugin, trigger, pluginManager } = usePluginManagerContext();
 	const [activeStep, setActiveStep] = useState<Step>(Step.PermissionsStep);
 	const [downloadProgress, setDownloadProgress] = useState<any>({ totalBytes: 0 });
-	const [savedPath, setSavedPath] = useState<string>();
+	const [downloadResult, setDownloadResult] = useState<any>();
 	const profileId = profile.id();
 
 	const handleInstall = useCallback(
-		async (pluginPath: string) => {
+		async (result: any) => {
 			try {
-				await installPlugin(pluginPath, plugin.id, profileId);
+				await installPlugin(result?.savedPath, plugin.id, profileId, result?.subDirectory);
 				setActiveStep(Step.EnableStep);
 			} catch (error) {
 				/* istanbul ignore next */
@@ -66,12 +66,12 @@ export const InstallPlugin = ({
 
 	const handleDownload = useCallback(async () => {
 		setActiveStep(Step.DownloadStep);
-		let pluginPath: string | undefined;
+		let result: any;
 		let downloadFailure = false;
 
 		try {
-			pluginPath = await downloadPlugin(plugin, repositoryURL);
-			setSavedPath(pluginPath);
+			result = await downloadPlugin(plugin, repositoryURL);
+			setDownloadResult(result);
 		} catch {
 			downloadFailure = true;
 			toasts.error(t("PLUGINS.MODAL_INSTALL_PLUGIN.DOWNLOAD_FAILURE", { name: plugin.title }));
@@ -79,9 +79,9 @@ export const InstallPlugin = ({
 		}
 
 		if (!downloadFailure) {
-			assertString(pluginPath);
+			assertString(result?.savedPath);
 
-			await handleInstall(pluginPath);
+			await handleInstall(result);
 		}
 	}, [handleInstall, downloadPlugin, plugin, repositoryURL, t, onClose]);
 
@@ -100,9 +100,9 @@ export const InstallPlugin = ({
 
 	const onModalClose = () => {
 		if (activeStep === Step.EnableStep) {
-			ipcRenderer.invoke("plugin:cancel-install", { savedPath });
+			ipcRenderer.invoke("plugin:cancel-install", { savedPath: downloadResult.savedPath });
 			setActiveStep(Step.PermissionsStep);
-			setSavedPath(undefined);
+			setDownloadResult(undefined);
 		}
 
 		onClose?.();
@@ -160,9 +160,9 @@ export const InstallPlugin = ({
 						<Button
 							variant="secondary"
 							onClick={() => {
-								ipcRenderer.invoke("plugin:cancel-install", { savedPath });
+								ipcRenderer.invoke("plugin:cancel-install", { savedPath: downloadResult.savedPath });
 								setActiveStep(Step.PermissionsStep);
-								setSavedPath(undefined);
+								setDownloadResult(undefined);
 
 								onCancel?.();
 							}}

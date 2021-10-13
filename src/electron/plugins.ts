@@ -32,15 +32,26 @@ export const setupPlugins = () => {
 		return savedPath!;
 	});
 
-	ipcMain.handle("plugin:install", async (_, { savedPath, profileId, name }) => {
+	ipcMain.handle("plugin:install", async (_, { savedPath, profileId, name, subDirectory }) => {
 		const pluginPath = path.join(installPath, profileId, name);
 
-		await decompress(savedPath, pluginPath, {
+		const options: any = {
 			map: (file: any) => {
 				file.path = file.path.split("/").slice(1).join("/");
+
+				if (subDirectory) {
+					file.path = file.path.replace(`${subDirectory}/`, "");
+				}
+
 				return file;
 			},
-		});
+		};
+
+		if (subDirectory) {
+			options.filter = (file: any) => file.path.includes(subDirectory);
+		}
+
+		await decompress(savedPath, pluginPath, options);
 
 		await trash(savedPath);
 

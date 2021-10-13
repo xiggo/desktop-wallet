@@ -40,7 +40,7 @@ describe("InstallPlugin", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render 2st step with partial download progress", () => {
+	it("should render 2nd step with partial download progress", () => {
 		const { asFragment } = render(
 			<SecondStep plugin={{ size: "0 B", title: "My Plugin" }} downloadProgress={{ totalBytes: 100 }} />,
 		);
@@ -49,7 +49,7 @@ describe("InstallPlugin", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render 2st step with full download progress", () => {
+	it("should render 2nd step with full download progress", () => {
 		const { asFragment } = render(
 			<SecondStep
 				plugin={{ logo: "https://payvo.com/logo.png", size: "100 B", title: "My Plugin" }}
@@ -61,14 +61,14 @@ describe("InstallPlugin", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render 3st step", () => {
+	it("should render 3rd step", () => {
 		const { asFragment } = render(<ThirdStep plugin={{ title: "My Plugin" }} />);
 
 		expect(screen.getByTestId("InstallPlugin__step--third")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render 3st step with plugin logo", () => {
+	it("should render 3rd step with plugin logo", () => {
 		const { asFragment } = render(
 			<ThirdStep plugin={{ logo: "https://payvo.com/logo.png", title: "My Plugin" }} />,
 		);
@@ -127,7 +127,7 @@ describe("InstallPlugin", () => {
 			<PluginManagerProvider manager={pluginManager} services={[]}>
 				<InstallPlugin
 					profile={profile}
-					repositoryURL="https://github.com/my-plugin"
+					repositoryURL="https://github.com/author/plugin"
 					isOpen={true}
 					plugin={plugin}
 					onClose={onClose}
@@ -146,7 +146,7 @@ describe("InstallPlugin", () => {
 
 			expect(invokeSpy).toHaveBeenCalledWith("plugin:download", {
 				name: plugin.id,
-				url: "https://github.com/my-plugin/archive/master.zip",
+				url: "https://github.com/author/plugin/archive/master.zip",
 			});
 			expect(invokeSpy).toHaveBeenCalledWith("plugin:install", {
 				name: plugin.id,
@@ -248,7 +248,7 @@ describe("InstallPlugin", () => {
 			<PluginManagerProvider manager={pluginManager} services={[]}>
 				<InstallPlugin
 					profile={profile}
-					repositoryURL="https://github.com/my-plugin"
+					repositoryURL="https://github.com/author/plugin"
 					isOpen={true}
 					plugin={plugin}
 				/>

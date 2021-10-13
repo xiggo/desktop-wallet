@@ -36,6 +36,14 @@ export function assertNetwork(network?: Networks.Network): asserts network is Ne
 	}
 }
 
+export function assertArray(value: unknown): asserts value is NonNullable<any[]> {
+	if (!Array.isArray(value)) {
+		throw new AssertionError({
+			message: `Expected 'value' to be array, but received ${value}`,
+		});
+	}
+}
+
 export function assertString(value: unknown): asserts value is NonNullable<string> {
 	if (typeof value !== "string" || value.trim() === "") {
 		throw new AssertionError({

@@ -36,7 +36,7 @@ exports[`InstallPlugin should render 1st step 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InstallPlugin should render 2st step with full download progress 1`] = `
+exports[`InstallPlugin should render 2nd step with full download progress 1`] = `
 <DocumentFragment>
   <section
     data-testid="InstallPlugin__step--second"
@@ -148,7 +148,7 @@ exports[`InstallPlugin should render 2st step with full download progress 1`] = 
 </DocumentFragment>
 `;
 
-exports[`InstallPlugin should render 2st step with partial download progress 1`] = `
+exports[`InstallPlugin should render 2nd step with partial download progress 1`] = `
 <DocumentFragment>
   <section
     data-testid="InstallPlugin__step--second"
@@ -258,7 +258,7 @@ exports[`InstallPlugin should render 2st step with partial download progress 1`]
 </DocumentFragment>
 `;
 
-exports[`InstallPlugin should render 3st step 1`] = `
+exports[`InstallPlugin should render 3rd step 1`] = `
 <DocumentFragment>
   <section
     data-testid="InstallPlugin__step--third"
@@ -350,7 +350,7 @@ exports[`InstallPlugin should render 3st step 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InstallPlugin should render 3st step with plugin logo 1`] = `
+exports[`InstallPlugin should render 3rd step with plugin logo 1`] = `
 <DocumentFragment>
   <section
     data-testid="InstallPlugin__step--third"

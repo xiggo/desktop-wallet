@@ -36,7 +36,7 @@ export const translations: { [key: string]: any } = {
 	MODAL_INSTALL_PLUGIN: {
 		ALLOW: "Allow",
 		DESCRIPTION: "This plugin needs the following permissions:",
-		DOWNLOAD_FAILURE: `Failed to donwload plugin "{{name}}"`,
+		DOWNLOAD_FAILURE: `Failed to download plugin "{{name}}"`,
 		INSTALL_FAILURE: `Failed to install plugin "{{name}}". Reason: {{msg}}.`,
 	},
 

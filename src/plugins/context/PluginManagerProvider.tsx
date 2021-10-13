@@ -13,6 +13,7 @@ import {
 } from "plugins/types";
 import React, { useCallback, useMemo, useState } from "react";
 import semver from "semver";
+import { assertArray } from "utils/assertions";
 import { appVersion, openExternal } from "utils/electron-utils";
 
 import { PluginController, PluginManager } from "../core";
@@ -250,9 +251,21 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		[pluginManager, pluginPackages],
 	);
 
+	const githubRepositoryRegex = /https?:\/\/(?:www\.)?github\.com\/([\w.-]+)\/([\dA-z-]+)(?:\/?(tree)\/([\dA-z-]+)\/((?:\/?[\dA-z-]+)+))?\/?$/;
+
+	const isRootRepositoryUrl = useCallback(
+		(url: string) => {
+			const matches = url.match(githubRepositoryRegex);
+
+			return matches && matches[3] === undefined;
+		},
+		[githubRepositoryRegex],
+	);
+
 	const downloadPlugin = useCallback(
 		async (plugin: SerializedPluginConfigurationData, repositoryURL?: string) => {
 			let url = plugin.archiveUrl;
+			let subDirectory: string | undefined = undefined;
 
 			/* istanbul ignore next */
 			if (!url) {
@@ -268,17 +281,37 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 					realRepositoryURL = source.url;
 				}
 
-				url = `${realRepositoryURL}/archive/master.zip`;
+				if (isRootRepositoryUrl(realRepositoryURL)) {
+					url = `${realRepositoryURL}/archive/master.zip`;
+				} else {
+					const matches = realRepositoryURL.match(githubRepositoryRegex);
+
+					assertArray(matches);
+
+					url = `https://github.com/${matches[1]}/${matches[2]}/archive/${matches[4]}.zip`;
+					subDirectory = matches[5];
+				}
 			}
 
-			return await ipcRenderer.invoke("plugin:download", { name: plugin.id, url });
+			const result: {
+				savedPath: string;
+				subDirectory?: string;
+			} = {
+				savedPath: await ipcRenderer.invoke("plugin:download", { name: plugin.id, url }),
+			};
+
+			if (subDirectory) {
+				result.subDirectory = subDirectory;
+			}
+
+			return result;
 		},
-		[pluginPackages],
+		[githubRepositoryRegex, isRootRepositoryUrl, pluginPackages],
 	);
 
 	const installPlugin = useCallback(
-		async (savedPath, name, profileId) => {
-			const pluginPath = await ipcRenderer.invoke("plugin:install", { name, profileId, savedPath });
+		async (savedPath, name, profileId, subDirectory = undefined) => {
+			const pluginPath = await ipcRenderer.invoke("plugin:install", { name, profileId, savedPath, subDirectory });
 
 			await loadPlugin(pluginPath);
 
@@ -287,22 +320,37 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 		[loadPlugin, trigger],
 	);
 
-	const fetchLatestPackageConfiguration = useCallback(async (repositoryURL: string) => {
-		const configurationURL = `${repositoryURL}/raw/master/package.json`;
-		const response = await httpClient.get(configurationURL);
-		const configData = PluginConfigurationData.make(response.json());
+	const fetchLatestPackageConfiguration = useCallback(
+		async (repositoryURL: string) => {
+			let configurationURL = `${repositoryURL}/raw/master/package.json`;
 
-		configData.validate();
+			if (!isRootRepositoryUrl(repositoryURL)) {
+				const matches = repositoryURL.match(githubRepositoryRegex);
 
-		setState((previous: any) => {
-			const configurations = previous.configurations;
+				assertArray(matches);
 
-			const merged = uniqBy([configData, ...configurations], (item) => item.id());
-			return { ...previous, configurations: merged };
-		});
+				matches[3] = "raw";
+				matches.shift();
 
-		return configData;
-	}, []);
+				configurationURL = `https://github.com/${matches.join("/")}/package.json`;
+			}
+
+			const response = await httpClient.get(configurationURL);
+			const configData = PluginConfigurationData.make(response.json());
+
+			configData.validate();
+
+			setState((previous: any) => {
+				const configurations = previous.configurations;
+
+				const merged = uniqBy([configData, ...configurations], (item) => item.id());
+				return { ...previous, configurations: merged };
+			});
+
+			return configData;
+		},
+		[githubRepositoryRegex, isRootRepositoryUrl],
+	);
 
 	const mapConfigToPluginData = useCallback(
 		(profile: Contracts.IProfile, config: PluginConfigurationData): ExtendedSerializedPluginConfigurationData => {
@@ -334,7 +382,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 			setUpdatingStats((previous) => ({ ...previous, [pluginData.id]: { percent: 0 } }));
 
 			try {
-				const savedPath = await downloadPlugin(pluginData);
+				const { savedPath } = await downloadPlugin(pluginData);
 				await installPlugin(savedPath, pluginData.id, profileId);
 
 				setTimeout(() => {
@@ -364,6 +412,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 			setFilters({ ...filters, ...appliedFilters });
 		},
 		filters,
+		githubRepositoryRegex,
 		hasFilters,
 		installPlugin,
 		isFetchingPackages,

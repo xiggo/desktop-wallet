@@ -121,7 +121,7 @@ exports[`WalletUpdate should render 1st step 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletUpdate should render 2st step 1`] = `
+exports[`WalletUpdate should render 2nd step 1`] = `
 <DocumentFragment>
   <section
     data-testid="WalletUpdate__second-step"
@@ -180,7 +180,7 @@ exports[`WalletUpdate should render 2st step 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletUpdate should render 2st step with progress status 1`] = `
+exports[`WalletUpdate should render 2nd step with progress status 1`] = `
 <DocumentFragment>
   <section
     data-testid="WalletUpdate__second-step"
@@ -265,7 +265,7 @@ exports[`WalletUpdate should render 2st step with progress status 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletUpdate should render 3st step 1`] = `
+exports[`WalletUpdate should render 3rd step 1`] = `
 <DocumentFragment>
   <section
     data-testid="WalletUpdate__third-step"
