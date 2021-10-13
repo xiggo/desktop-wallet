@@ -104,6 +104,7 @@ describe("WalletDetails", () => {
 		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
 			get: () => undefined,
 			id: () => fixtures.transfer,
+			usesMultiSignature: () => false,
 		}));
 	};
 
@@ -229,13 +230,8 @@ describe("WalletDetails", () => {
 	it("should remove pending multisignature transactions", async () => {
 		mockPendingTransfers(wallet);
 		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
-			get: (param) => {
-				if (param === "multiSignature") {
-					return true;
-				}
-				return undefined;
-			},
 			id: () => fixtures.transfer,
+			usesMultiSignature: () => true,
 		}));
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
@@ -281,13 +277,8 @@ describe("WalletDetails", () => {
 	it("should render pending multiSignatures and view details in modal", async () => {
 		mockPendingTransfers(wallet);
 		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
-			get: (param) => {
-				if (param === "multiSignature") {
-					return true;
-				}
-				return undefined;
-			},
 			id: () => fixtures.transfer,
+			usesMultiSignature: () => true,
 		}));
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;

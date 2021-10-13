@@ -117,7 +117,6 @@ export const useMultiSignatureRegistration = () => {
 		handleBroadcastError(response);
 
 		await wallet.transaction().sync();
-		wallet.transaction().restore();
 
 		return wallet.transaction().transaction(transactionId);
 	};

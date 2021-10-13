@@ -93,7 +93,6 @@ export const MultiSignatureDetail = ({
 
 				await addSignature({ signatory, transactionId: transaction.id(), wallet });
 				await wallet.transaction().sync();
-				wallet.transaction().restore();
 
 				if (isAwaitingFinalSignature) {
 					return broadcastMultiSignature();

@@ -30,6 +30,7 @@ describe("Wallet Transactions Hook", () => {
 		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
 			get: () => undefined,
 			id: () => fixtures.transfer,
+			usesMultiSignature: () => false,
 		}));
 	};
 
@@ -227,6 +228,7 @@ describe("Wallet Transactions Hook", () => {
 		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
 			get: () => undefined,
 			id: () => fixtures.transfer,
+			usesMultiSignature: () => true,
 		}));
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);

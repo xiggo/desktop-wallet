@@ -31,7 +31,6 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 
 	const pendingTransactions = useMemo(() => {
 		const pending = [];
-		wallet.transaction().restore();
 
 		for (const transaction of [...pendingSigned, ...pendingTransfers]) {
 			let existingTransaction;
@@ -51,8 +50,8 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 			const isAwaitingConfirmation = wallet.transaction().isAwaitingConfirmation(existingTransaction.id());
 			const isAwaitingOurSignature = wallet.transaction().isAwaitingOurSignature(existingTransaction.id());
 			const isAwaitingOtherSignatures = wallet.transaction().isAwaitingOtherSignatures(existingTransaction.id());
-			const isMultisignature = !!existingTransaction.get("multiSignature");
-			const isPendingTransfer = !isMultisignature && (hasBeenSigned || isAwaitingConfirmation);
+			const isPendingTransfer =
+				!existingTransaction.usesMultiSignature() && (hasBeenSigned || isAwaitingConfirmation);
 
 			pending.push({
 				hasBeenSigned,
