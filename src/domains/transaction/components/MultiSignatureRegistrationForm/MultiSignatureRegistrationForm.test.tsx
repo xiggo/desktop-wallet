@@ -276,6 +276,37 @@ describe("MultiSignature Registration Form", () => {
 		await waitFor(() => expect(form?.getValues("fee")?.toString()).toBe(`${fees.static + fees.static * 2}`));
 	});
 
+	it("should keep the minimum required signatures", async () => {
+		const { form } = renderComponent({
+			defaultValues: {
+				minParticipants: 2,
+				participants: [
+					{
+						address: wallet.address(),
+						alias: wallet.alias(),
+						publicKey: wallet.publicKey(),
+					},
+					{
+						address: wallet2.address(),
+						alias: wallet2.alias(),
+						publicKey: wallet2.publicKey(),
+					},
+				],
+			},
+		});
+
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(2));
+
+		const removeButton = screen.getAllByTestId("recipient-list__remove-recipient")[1];
+
+		expect(removeButton).toBeInTheDocument();
+		expect(removeButton).toBeEnabled();
+
+		fireEvent.click(removeButton);
+
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(2));
+	});
+
 	it("should limit min required signatures to max participants", async () => {
 		const { form } = renderComponent({
 			defaultValues: {

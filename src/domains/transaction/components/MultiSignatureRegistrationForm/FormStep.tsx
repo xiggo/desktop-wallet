@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 import { FormStepProperties } from "../../pages/SendRegistration/SendRegistration.models";
 import { AddParticipant, Participant } from "./components/AddParticipant/AddParticipant";
 
+const MINIMUM_PARTICIPANTS = 2;
+
 export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { errors, setValue, register, watch } = useFormContext();
@@ -25,10 +27,10 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 
 	useEffect(() => {
 		if (minParticipants === undefined) {
-			setValue("minParticipants", 2, { shouldDirty: true, shouldValidate: true });
+			setValue("minParticipants", MINIMUM_PARTICIPANTS, { shouldDirty: true, shouldValidate: true });
 		}
 
-		if (minParticipants > participants?.length) {
+		if (minParticipants > MINIMUM_PARTICIPANTS && minParticipants > participants?.length) {
 			setValue("minParticipants", participants.length, { shouldDirty: true, shouldValidate: true });
 		}
 	}, [setValue, minParticipants, participants]);
@@ -47,7 +49,7 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 		setValue(event_.target.name, event_.target.value, { shouldDirty: true, shouldValidate: true });
 	};
 
-	const minParticipantsLimit = Math.max(2, participants?.length || 0);
+	const minParticipantsLimit = Math.max(MINIMUM_PARTICIPANTS, participants?.length || 0);
 
 	return (
 		<section data-testid="MultiSignatureRegistrationForm--form-step">
