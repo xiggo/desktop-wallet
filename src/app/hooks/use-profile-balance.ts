@@ -16,7 +16,7 @@ export const useProfileBalance = ({ profile, isLoading = false }: BalancePropert
 			return;
 		}
 
-		if (!balance) {
+		if (balance === undefined) {
 			return;
 		}
 
