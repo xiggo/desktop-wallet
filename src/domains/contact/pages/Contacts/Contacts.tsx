@@ -143,7 +143,7 @@ export const Contacts = () => {
 		},
 		{
 			Header: "Actions",
-			className: "hidden",
+			className: "hidden no-border",
 			minimumWidth: true,
 		},
 	];

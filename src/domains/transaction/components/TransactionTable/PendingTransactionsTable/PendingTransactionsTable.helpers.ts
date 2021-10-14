@@ -44,7 +44,7 @@ const usePendingTransactionTableColumns = ({ showMemoColumn }: { showMemoColumn:
 		const columnSign: TableColumn = {
 			Header: t("COMMON.SIGN"),
 			cellWidth: "w-24",
-			className: "hidden",
+			className: "hidden no-border",
 		};
 
 		return [
