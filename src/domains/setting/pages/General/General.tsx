@@ -160,7 +160,7 @@ export const GeneralSettings: React.FC = () => {
 		},
 		{
 			content: (
-				<FormField name="automaticSignOutPeriod">
+				<FormField name="automaticSignOutPeriod" data-testid="General-settings__auto-signout">
 					<FormLabel label={t("SETTINGS.GENERAL.SECURITY.AUTOMATIC_SIGN_OUT_PERIOD.TITLE")} />
 					<Select
 						id="select-auto-signout"

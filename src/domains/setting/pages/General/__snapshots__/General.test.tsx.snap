@@ -1151,6 +1151,7 @@ exports[`General Settings should disable submit button when profile is not resto
                         >
                           <fieldset
                             class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                            data-testid="General-settings__auto-signout"
                           >
                             <label
                               class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -2606,6 +2607,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         >
                           <fieldset
                             class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                            data-testid="General-settings__auto-signout"
                           >
                             <label
                               class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -4042,6 +4044,7 @@ exports[`General Settings should render 1`] = `
                         >
                           <fieldset
                             class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                            data-testid="General-settings__auto-signout"
                           >
                             <label
                               class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -5478,6 +5481,7 @@ exports[`General Settings should show identicon when removing image if name is s
                         >
                           <fieldset
                             class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                            data-testid="General-settings__auto-signout"
                           >
                             <label
                               class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6915,6 +6919,7 @@ exports[`General Settings should update profile 1`] = `
                         >
                           <fieldset
                             class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                            data-testid="General-settings__auto-signout"
                           >
                             <label
                               class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -6938,7 +6943,7 @@ exports[`General Settings should update profile 1`] = `
                                     name="automaticSignOutPeriod"
                                     readonly=""
                                     tabindex="-1"
-                                    value="15"
+                                    value="1"
                                   />
                                 </div>
                               </div>
@@ -6958,7 +6963,7 @@ exports[`General Settings should update profile 1`] = `
                                   <div
                                     class="fixed invisible w-auto whitespace-nowrap"
                                   >
-                                    15 minutes…
+                                    1 minute…
                                   </div>
                                   <div
                                     class="Input__InputWrapperStyled-sc-1i8sd1r-0 jTKKsy"
@@ -6976,7 +6981,7 @@ exports[`General Settings should update profile 1`] = `
                                         id="select-auto-signout-input"
                                         name="automaticSignOutPeriod"
                                         placeholder="Select Auto Log-Off"
-                                        value="15 minutes"
+                                        value="1 minute"
                                       />
                                       <span
                                         class="absolute inset-y-0 flex items-center font-normal opacity-50 pointer-events-none w-full"
@@ -6985,7 +6990,7 @@ exports[`General Settings should update profile 1`] = `
                                         <span
                                           class="truncate"
                                         >
-                                          15 minutes
+                                          1 minute
                                         </span>
                                       </span>
                                     </div>
@@ -8351,6 +8356,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         >
                           <fieldset
                             class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                            data-testid="General-settings__auto-signout"
                           >
                             <label
                               class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
@@ -9799,6 +9805,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         >
                           <fieldset
                             class="FormField__FormFieldStyled-sc-q4bblx-0 kjTmeH flex flex-col space-y-2"
+                            data-testid="General-settings__auto-signout"
                           >
                             <label
                               class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"

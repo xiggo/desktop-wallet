@@ -103,9 +103,10 @@ const SelectDropdown = ({
 		setData(options);
 	}, [inputValue, isTyping, options]);
 
+	const { value: defaultValue } = { ...defaultSelectedItem };
 	useEffect(() => {
-		selectItem(defaultSelectedItem || null);
-	}, [defaultSelectedItem, selectItem]);
+		selectItem(defaultSelectedItem ?? null);
+	}, [defaultValue, selectItem]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const suggestion = useMemo(() => {
 		const firstMatch = mainOptions.find((option) => isMatch(inputValue, option));

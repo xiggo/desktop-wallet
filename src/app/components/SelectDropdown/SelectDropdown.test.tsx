@@ -1,6 +1,6 @@
 import { act } from "@testing-library/react-hooks";
 import React, { useState } from "react";
-import { fireEvent, render, screen, waitFor } from "testing-library";
+import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { Select } from "./SelectDropdown";
 
@@ -69,14 +69,14 @@ describe("SelectDropdown", () => {
 	});
 
 	it.each([OptionType.base, OptionType.group])("should render option %s with custom label", (optType) => {
-		const { container, queryByText, getByTestId } = render(
+		const { container } = render(
 			<Select options={getOptions(optType)} renderLabel={(option) => <span>{`Label ${option.label}`}</span>} />,
 		);
 
-		fireEvent.focus(getByTestId("SelectDropdown__input"), { target: { value: "Opt" } });
+		fireEvent.focus(screen.getByTestId("SelectDropdown__input"), { target: { value: "Opt" } });
 
 		expect(container).toMatchSnapshot();
-		expect(queryByText("Label Option 1")).toBeInTheDocument();
+		expect(screen.queryByText("Label Option 1")).toBeInTheDocument();
 	});
 
 	it.each([OptionType.base, OptionType.group])("should render invalid option %s", (optType) => {
@@ -137,15 +137,15 @@ describe("SelectDropdown", () => {
 	});
 
 	it.each([OptionType.base, OptionType.group])("should toggle select list options %s", (optType) => {
-		const { getByTestId } = render(<Select options={getOptions(optType)} />);
+		render(<Select options={getOptions(optType)} />);
 
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
 		});
 
-		const firstOption = getByTestId("SelectDropdown__option--0");
+		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeTruthy();
 
@@ -155,15 +155,15 @@ describe("SelectDropdown", () => {
 	});
 
 	it.each([OptionType.base, OptionType.group])("should select option %s", (optType) => {
-		const { getByTestId } = render(<Select options={getOptions(optType)} />);
+		render(<Select options={getOptions(optType)} />);
 
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
 		});
 
-		const firstOption = getByTestId("SelectDropdown__option--0");
+		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeTruthy();
 
@@ -171,13 +171,13 @@ describe("SelectDropdown", () => {
 			fireEvent.mouseDown(firstOption);
 		});
 
-		expect(getByTestId("select-list__input")).toHaveValue("1");
+		expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 	});
 
 	it.each([OptionType.base, OptionType.group])("should highlight option %s", (optType) => {
-		const { getByTestId } = render(<Select options={getOptions(optType)} />);
+		render(<Select options={getOptions(optType)} />);
 
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -187,7 +187,7 @@ describe("SelectDropdown", () => {
 			fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
 		});
 
-		const firstOption = getByTestId("SelectDropdown__option--0");
+		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeTruthy();
 
@@ -195,9 +195,9 @@ describe("SelectDropdown", () => {
 	});
 
 	it.each([OptionType.base, OptionType.group])("should select options %s with arrow keys", (optType) => {
-		const { getByTestId } = render(<Select options={getOptions(optType)} />);
+		render(<Select options={getOptions(optType)} />);
 
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -211,7 +211,7 @@ describe("SelectDropdown", () => {
 			fireEvent.keyDown(selectDropdown, { code: 8, key: "Backspace" });
 		});
 
-		const firstOption = getByTestId("SelectDropdown__option--0");
+		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeTruthy();
 
@@ -229,7 +229,7 @@ describe("SelectDropdown", () => {
 			fireEvent.keyDown(firstOption, { code: 13, key: "Enter" });
 		});
 
-		expect(getByTestId("select-list__input")).toHaveValue("1");
+		expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 	});
 
 	it("should highlight first option after reach to the end of the match options", () => {
@@ -252,15 +252,15 @@ describe("SelectDropdown", () => {
 			},
 		];
 
-		const { getByTestId } = render(<Select options={options} />);
+		render(<Select options={options} />);
 
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
 		});
 
-		const firstOption = getByTestId("SelectDropdown__option--0");
+		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeTruthy();
 
@@ -274,7 +274,7 @@ describe("SelectDropdown", () => {
 			fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
 		});
 
-		const secondOption = getByTestId("SelectDropdown__option--1");
+		const secondOption = screen.getByTestId("SelectDropdown__option--1");
 
 		expect(secondOption).toHaveClass("is-highlighted");
 
@@ -288,22 +288,22 @@ describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])(
 		"should show suggestion when typing has found at least one match in option %s",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
 			});
 
-			expect(getByTestId("Input__suggestion")).toHaveTextContent("Option 1");
+			expect(screen.getByTestId("Input__suggestion")).toHaveTextContent("Option 1");
 		},
 	);
 
 	it.each([OptionType.base, OptionType.group])(
 		"should select first matching option with enter in option %s",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -313,15 +313,15 @@ describe("SelectDropdown", () => {
 				fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue("1");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 		},
 	);
 
 	it.each([OptionType.base, OptionType.group])(
 		"should select first matching option with tab in option %s",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -331,13 +331,13 @@ describe("SelectDropdown", () => {
 				fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue("1");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 		},
 	);
 
 	it.each([OptionType.base, OptionType.group])("should select new option with enter in option %s", (optType) => {
-		const { getByTestId } = render(<Select options={getOptions(optType)} />);
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		render(<Select options={getOptions(optType)} />);
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -363,8 +363,8 @@ describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])(
 		"should not select non-matching option after key input and tab in option %s",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Optt" } });
@@ -374,15 +374,15 @@ describe("SelectDropdown", () => {
 				fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue("");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("");
 		},
 	);
 
 	it.each([OptionType.base, OptionType.group])(
 		"should not select first matched option after random key enter in option %s",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -392,15 +392,15 @@ describe("SelectDropdown", () => {
 				fireEvent.keyDown(selectDropdown, { code: 65, key: "A" });
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue("");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("");
 		},
 	);
 
 	it.each([OptionType.base, OptionType.group])(
 		"should clear selection when changing input in option %s",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -410,7 +410,7 @@ describe("SelectDropdown", () => {
 				fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue("1");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "test" } });
@@ -423,15 +423,15 @@ describe("SelectDropdown", () => {
 				fireEvent.keyDown(selectDropdown, { code: 65, key: "B" });
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue("");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("");
 		},
 	);
 
 	it.each([OptionType.base, OptionType.group])(
 		"should select match on blur if available in option %s",
 		async (optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -448,8 +448,8 @@ describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])(
 		"should clear input on blur if there is no match in option %s",
 		async (optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Foobar" } });
@@ -466,8 +466,8 @@ describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])(
 		"should not clear input on blur if selected in option %s",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
@@ -490,19 +490,19 @@ describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])(
 		"should select an option by clicking on it in option %s",
 		async (optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} />);
+			render(<Select options={getOptions(optType)} />);
 
 			act(() => {
-				fireEvent.focus(getByTestId("SelectDropdown__input"));
+				fireEvent.focus(screen.getByTestId("SelectDropdown__input"));
 			});
 
-			await waitFor(() => expect(getByTestId("SelectDropdown__option--0")).toBeTruthy());
+			await waitFor(() => expect(screen.getByTestId("SelectDropdown__option--0")).toBeTruthy());
 
 			act(() => {
-				fireEvent.mouseDown(getByTestId("SelectDropdown__option--0"));
+				fireEvent.mouseDown(screen.getByTestId("SelectDropdown__option--0"));
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue("1");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 		},
 	);
 
@@ -523,38 +523,38 @@ describe("SelectDropdown", () => {
 			);
 		};
 
-		const { getByTestId, queryByText } = render(<Component />);
+		render(<Component />);
 
 		// check dropdown not open
-		expect(getByTestId("select-list__input")).toHaveValue(initialValue);
-		expect(queryByText("Option 2")).not.toBeInTheDocument();
+		expect(screen.getByTestId("select-list__input")).toHaveValue(initialValue);
+		expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
 
 		// set null value
 		act(() => {
-			fireEvent.click(getByTestId("btn-reset"));
+			fireEvent.click(screen.getByTestId("btn-reset"));
 		});
 
 		// check value reset and dropdown not open
-		expect(getByTestId("select-list__input")).toHaveValue("");
-		expect(queryByText("Option 2")).not.toBeInTheDocument();
+		expect(screen.getByTestId("select-list__input")).toHaveValue("");
+		expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
 	});
 
 	it.each([OptionType.base, OptionType.group])("should allow entering free text in option %s", (optType) => {
-		const { getByTestId } = render(<Select options={getOptions(optType)} allowFreeInput />);
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		render(<Select options={getOptions(optType)} allowFreeInput />);
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: "Test" } });
 		});
 
-		expect(getByTestId("select-list__input")).toHaveValue("Test");
+		expect(screen.getByTestId("select-list__input")).toHaveValue("Test");
 	});
 
 	it.each([OptionType.base, OptionType.group])(
 		"should allow entering free text and handle blur event in option %s",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} allowFreeInput={true} />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} allowFreeInput={true} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Test" } });
@@ -564,18 +564,16 @@ describe("SelectDropdown", () => {
 				fireEvent.blur(selectDropdown);
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue("Test");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("Test");
 		},
 	);
 
 	it.each([OptionType.base, OptionType.group])(
 		"should render option %s with default value when free text is allowed",
 		(optType) => {
-			const { container, getByTestId } = render(
-				<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />,
-			);
+			const { container } = render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
 
-			expect(getByTestId("select-list__input")).toHaveValue("3");
+			expect(screen.getByTestId("select-list__input")).toHaveValue("3");
 			expect(container).toMatchSnapshot();
 		},
 	);
@@ -583,38 +581,38 @@ describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])(
 		"should hide dropdown in option %s when no matches found in free text mode",
 		(optType) => {
-			const { getByTestId } = render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
-			const selectDropdown = getByTestId("SelectDropdown__input");
+			render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: options[0].label } });
 			});
 
-			expect(getByTestId("select-list__input")).toHaveValue(options[0].label);
+			expect(screen.getByTestId("select-list__input")).toHaveValue(options[0].label);
 
 			act(() => {
 				fireEvent.change(selectDropdown, { target: { value: "Unmatched" } });
 			});
 
-			expect(() => getByTestId("SelectDropdown__option--0")).toThrow();
+			expect(() => screen.getByTestId("SelectDropdown__option--0")).toThrow();
 		},
 	);
 
 	it.each([OptionType.base, OptionType.group])("should show all options %s when empty input", (optType) => {
-		const { getByTestId } = render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
-		const selectDropdown = getByTestId("SelectDropdown__input");
+		render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
+		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: options[0].label } });
 		});
 
-		expect(getByTestId("select-list__input")).toHaveValue(options[0].label);
+		expect(screen.getByTestId("select-list__input")).toHaveValue(options[0].label);
 
 		act(() => {
 			fireEvent.change(selectDropdown, { target: { value: "" } });
 		});
 
-		expect(getByTestId("select-list__input")).toHaveValue("");
-		expect(getByTestId("SelectDropdown__option--0")).toBeTruthy();
-		expect(getByTestId("SelectDropdown__option--1")).toBeTruthy();
-		expect(getByTestId("SelectDropdown__option--2")).toBeTruthy();
+		expect(screen.getByTestId("select-list__input")).toHaveValue("");
+		expect(screen.getByTestId("SelectDropdown__option--0")).toBeTruthy();
+		expect(screen.getByTestId("SelectDropdown__option--1")).toBeTruthy();
+		expect(screen.getByTestId("SelectDropdown__option--2")).toBeTruthy();
 	});
 });

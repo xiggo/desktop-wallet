@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
+import { within } from "@testing-library/react";
 import { buildTranslations } from "app/i18n/helpers";
 import { GeneralSettings } from "domains/setting/pages";
 import electron from "electron";
@@ -74,7 +75,7 @@ describe("General Settings", () => {
 	});
 
 	it("should render", async () => {
-		const { container, asFragment, getByTestId } = renderWithRouter(
+		const { container, asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -83,7 +84,7 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
@@ -92,7 +93,7 @@ describe("General Settings", () => {
 	it("should disable submit button when profile is not restored yet", async () => {
 		const isProfileRestoredMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -101,7 +102,7 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
@@ -110,7 +111,7 @@ describe("General Settings", () => {
 	});
 
 	it("should update the avatar when removing focus from name input", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -119,45 +120,45 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
-		expect(getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 
-		act(() => getByTestId("General-settings__input--name").focus());
+		act(() => screen.getByTestId("General-settings__input--name").focus());
 
 		await act(async () => {
-			fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "t" } });
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "t" } });
 		});
 
-		act(() => getByTestId("General-settings__submit-button").focus());
+		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		expect(getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => getByTestId("General-settings__input--name").focus());
+		act(() => screen.getByTestId("General-settings__input--name").focus());
 
 		await act(async () => {
-			fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "" } });
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
 		});
 
-		act(() => getByTestId("General-settings__submit-button").focus());
+		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		act(() => getByTestId("General-settings__input--name").focus());
+		act(() => screen.getByTestId("General-settings__input--name").focus());
 
 		await act(async () => {
-			fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "" } });
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
 		});
 
-		act(() => getByTestId("General-settings__submit-button").focus());
+		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		expect(() => getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
+		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show identicon when removing image if name is set", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -166,7 +167,7 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		showOpenDialogMock = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(() => ({
 			filePaths: ["banner.png"],
@@ -174,13 +175,13 @@ describe("General Settings", () => {
 
 		// Upload avatar image
 		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+			fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 		});
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
 		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__remove-button"));
+			fireEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -189,7 +190,7 @@ describe("General Settings", () => {
 	});
 
 	it("should not update the uploaded avatar when removing focus from name input", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -198,7 +199,7 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		// Upload avatar image
 		showOpenDialogMock = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(() => ({
@@ -206,30 +207,30 @@ describe("General Settings", () => {
 		}));
 
 		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+			fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 		});
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
-		act(() => getByTestId("General-settings__input--name").focus());
+		act(() => screen.getByTestId("General-settings__input--name").focus());
 
 		await act(async () => {
-			fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "" } });
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
 		});
 
-		act(() => getByTestId("General-settings__submit-button").focus());
+		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		expect(getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 
-		act(() => getByTestId("General-settings__input--name").focus());
+		act(() => screen.getByTestId("General-settings__input--name").focus());
 
 		await act(async () => {
-			fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "t" } });
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "t" } });
 		});
 
-		act(() => getByTestId("General-settings__submit-button").focus());
+		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		expect(getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -237,7 +238,7 @@ describe("General Settings", () => {
 	it("should update profile", async () => {
 		const profilesCount = env.profiles().count();
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -246,7 +247,7 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		// Upload avatar image
 		showOpenDialogMock = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(() => ({
@@ -254,51 +255,76 @@ describe("General Settings", () => {
 		}));
 
 		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+			fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 		});
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
-		fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "test profile" } });
+		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "test profile" } });
 
 		// Toggle Screenshot Protection
-		fireEvent.click(getByTestId("General-settings__toggle--screenshotProtection"));
+		fireEvent.click(screen.getByTestId("General-settings__toggle--screenshotProtection"));
+
+		// change auto signout period
+		expect(
+			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("select-list__input"),
+		).toHaveValue("15");
+
+		fireEvent.click(
+			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("SelectDropdown__caret"),
+		);
+
+		const firstOption = within(screen.getByTestId("General-settings__auto-signout")).getByTestId(
+			"SelectDropdown__option--0",
+		);
+
+		expect(firstOption).toBeInTheDocument();
+
+		act(() => {
+			fireEvent.mouseDown(firstOption);
+		});
+
+		expect(
+			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("select-list__input"),
+		).toHaveValue("1");
 
 		// Toggle Test Development Network
-		fireEvent.click(getByTestId("General-settings__toggle--useTestNetworks"));
+		fireEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
 
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.TITLE,
+		);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
 			translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.DESCRIPTION,
 		);
 
-		fireEvent.click(getByTestId("DevelopmentNetwork__continue-button"));
+		fireEvent.click(screen.getByTestId("DevelopmentNetwork__continue-button"));
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		// Toggle Test Development Network
-		fireEvent.click(getByTestId("General-settings__toggle--useTestNetworks"));
+		fireEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
 
 		await act(async () => {
-			fireEvent.click(getByTestId("General-settings__submit-button"));
+			fireEvent.click(screen.getByTestId("General-settings__submit-button"));
 		});
 
 		// Upload and remove avatar image
 		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__remove-button"));
+			fireEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 		});
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
-		fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "t" } });
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeEnabled());
-		fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "" } });
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeDisabled());
-		fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "test profile 2" } });
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeEnabled());
+		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "t" } });
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
+		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
+		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "test profile 2" } });
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 
 		await act(async () => {
-			fireEvent.click(getByTestId("General-settings__submit-button"));
+			fireEvent.click(screen.getByTestId("General-settings__submit-button"));
 		});
 
 		// Not upload avatar image
@@ -307,7 +333,7 @@ describe("General Settings", () => {
 		}));
 
 		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+			fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 		});
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
@@ -317,7 +343,7 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if name consists only of whitespace", async () => {
-		const { getByTestId } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -326,20 +352,20 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
-		fireEvent.input(getByTestId("General-settings__input--name"), {
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
 			target: { value: "     " },
 		});
 
 		await waitFor(() => {
-			expect(getByTestId("Input__error")).toBeVisible();
+			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 	});
 
 	it("should not update profile if profile name exists", async () => {
-		const { getByTestId } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -348,30 +374,32 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		const otherProfile = env
 			.profiles()
 			.values()
-			.find((element: Profile) => element.id() !== profile.id());
+			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
-		fireEvent.input(getByTestId("General-settings__input--name"), {
+		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
 			target: { value: otherProfile.settings().get(Contracts.ProfileSetting.Name) },
 		});
 
 		await waitFor(() => {
-			expect(getByTestId("Input__error")).toBeVisible();
+			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 
-		fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "unique profile name" } });
+		fireEvent.input(screen.getByTestId("General-settings__input--name"), {
+			target: { value: "unique profile name" },
+		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 	});
 
 	it("should not update profile if profile name exists (uppercase)", async () => {
-		const { getByTestId } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -380,29 +408,31 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 		const otherProfile = env
 			.profiles()
 			.values()
-			.find((element: Profile) => element.id() !== profile.id());
+			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
 		act(() => {
-			fireEvent.input(getByTestId("General-settings__input--name"), {
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), {
 				target: { value: otherProfile.settings().get(Contracts.ProfileSetting.Name).toUpperCase() },
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 
 		act(() => {
-			fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "unique profile name" } });
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), {
+				target: { value: "unique profile name" },
+			});
 		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 	});
 
 	it("should not update profile if profile name is too long", async () => {
-		const { getByTestId } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -411,24 +441,26 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 		act(() => {
-			fireEvent.input(getByTestId("General-settings__input--name"), {
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), {
 				target: { value: "test profile".repeat(10) },
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 
 		act(() => {
-			fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "unique profile name" } });
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), {
+				target: { value: "unique profile name" },
+			});
 		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 	});
 
 	it("should not update profile if profile name exists (padded)", async () => {
-		const { getByTestId } = renderWithRouter(
+		renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -437,25 +469,27 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 		const otherProfile = env
 			.profiles()
 			.values()
-			.find((element: Profile) => element.id() !== profile.id());
+			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
 		act(() => {
-			fireEvent.input(getByTestId("General-settings__input--name"), {
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), {
 				target: { value: `  ${otherProfile.settings().get(Contracts.ProfileSetting.Name)}  ` },
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled());
 
 		act(() => {
-			fireEvent.input(getByTestId("General-settings__input--name"), { target: { value: "unique profile name" } });
+			fireEvent.input(screen.getByTestId("General-settings__input--name"), {
+				target: { value: "unique profile name" },
+			});
 		});
 
-		await waitFor(() => expect(getByTestId("General-settings__submit-button")).toBeEnabled());
+		await waitFor(() => expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled());
 	});
 
 	it.each([
@@ -463,7 +497,7 @@ describe("General Settings", () => {
 		["cancel", "DevelopmentNetwork__cancel-button"],
 		["continue", "DevelopmentNetwork__continue-button"],
 	])("should open & close development network modal (%s)", async (_, buttonId) => {
-		const { container, getByTestId } = renderWithRouter(
+		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -472,27 +506,29 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		expect(container).toBeTruthy();
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		act(() => {
-			fireEvent.click(getByTestId("General-settings__toggle--useTestNetworks"));
+			fireEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
 		});
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.TITLE,
+		);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
 			translations.SETTINGS.MODAL_DEVELOPMENT_NETWORK.DESCRIPTION,
 		);
 
 		await act(async () => {
-			fireEvent.click(getByTestId(buttonId));
+			fireEvent.click(screen.getByTestId(buttonId));
 		});
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it.each([
@@ -500,7 +536,7 @@ describe("General Settings", () => {
 		["cancel", "ResetProfile__cancel-button"],
 		["reset", "ResetProfile__submit-button"],
 	])("should open & close reset profile modal (%s)", async (_, buttonId) => {
-		const { container, getByTestId, getByText } = renderWithRouter(
+		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -509,29 +545,31 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		expect(container).toBeTruthy();
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		act(() => {
-			fireEvent.click(getByText(translations.COMMON.RESET_SETTINGS));
+			fireEvent.click(screen.getByText(translations.COMMON.RESET_SETTINGS));
 		});
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.PROFILE.MODAL_RESET_PROFILE.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.PROFILE.MODAL_RESET_PROFILE.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.PROFILE.MODAL_RESET_PROFILE.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.PROFILE.MODAL_RESET_PROFILE.DESCRIPTION,
+		);
 
 		await act(async () => {
-			fireEvent.click(getByTestId(buttonId));
+			fireEvent.click(screen.getByTestId(buttonId));
 		});
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should reset fields on reset", async () => {
-		const { container, getByTestId, getByText } = renderWithRouter(
+		const { container } = renderWithRouter(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -540,24 +578,26 @@ describe("General Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		expect(container).toBeTruthy();
 
 		await act(async () => {
-			fireEvent.click(getByTestId("General-settings__submit-button"));
+			fireEvent.click(screen.getByTestId("General-settings__submit-button"));
 		});
 
 		act(() => {
-			fireEvent.click(getByText(translations.COMMON.RESET_SETTINGS));
+			fireEvent.click(screen.getByText(translations.COMMON.RESET_SETTINGS));
 		});
 
-		expect(getByTestId("modal__inner")).toBeInTheDocument();
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.PROFILE.MODAL_RESET_PROFILE.TITLE);
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.PROFILE.MODAL_RESET_PROFILE.DESCRIPTION);
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.PROFILE.MODAL_RESET_PROFILE.TITLE);
+		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
+			translations.PROFILE.MODAL_RESET_PROFILE.DESCRIPTION,
+		);
 
 		await act(async () => {
-			fireEvent.click(getByTestId("ResetProfile__submit-button"));
+			fireEvent.click(screen.getByTestId("ResetProfile__submit-button"));
 		});
 	});
 });
