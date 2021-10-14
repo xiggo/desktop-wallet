@@ -1,20 +1,22 @@
 import { Contracts } from "@payvo/profiles";
+import { AmountCrypto } from "app/components/Amount";
 import { Avatar } from "app/components/Avatar";
 import { Card } from "app/components/Card";
 import { Circle } from "app/components/Circle";
 import { DropdownOption } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
+import { Tooltip } from "app/components/Tooltip";
 import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import { WalletIcons } from "app/components/WalletIcons";
 import { useActiveProfile, useWalletAlias } from "app/hooks";
 import cn from "classnames";
 import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import { isFullySynced } from "domains/wallet/utils/is-fully-synced";
-import React, { useMemo } from "react";
+import React, { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { isElementTruncated } from "utils/is-element-truncated";
 
-import { AmountCrypto } from "../Amount";
 import { WalletCardSkeleton } from "./WalletCardSkeleton";
 
 interface WalletCardProperties {
@@ -52,6 +54,8 @@ export const WalletCard = ({
 			}),
 		[activeProfile, defaultAlias, getWalletAlias, wallet], // eslint-disable-line react-hooks/exhaustive-deps
 	);
+
+	const aliasRef = useRef(null);
 
 	const canDisplayBalance = !wallet ? false : isFullySynced(wallet);
 
@@ -121,7 +125,11 @@ export const WalletCard = ({
 							<Avatar size="lg" address={wallet.address()} />
 						</div>
 
-						<span className="font-semibold truncate text-theme-secondary-text">{alias}</span>
+						<Tooltip content={alias} disabled={!isElementTruncated(aliasRef?.current)}>
+							<span ref={aliasRef} className="font-semibold truncate text-theme-secondary-text">
+								{alias}
+							</span>
+						</Tooltip>
 					</div>
 
 					{canDisplayBalance ? (
