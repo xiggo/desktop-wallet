@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { Icon } from "app/components/Icon";
 import { Link } from "app/components/Link";
 import { TableCell, TableRow } from "app/components/Table";
@@ -8,39 +8,27 @@ import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { TransactionRowAmount } from "./TransactionRowAmount";
-import { TransactionRowConfirmation } from "./TransactionRowConfirmation";
-import { TransactionRowMemo } from "./TransactionRowMemo";
-import { TransactionRowMode } from "./TransactionRowMode";
-import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
+import { TransactionRowRecipient } from "./TransactionRowRecipient";
+import { TransactionRowSender } from "./TransactionRowSender";
 import { TransactionRowSkeleton } from "./TransactionRowSkeleton";
 
 type Properties = {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	exchangeCurrency?: string;
 	onClick?: () => void;
-	walletName?: string;
 	isLoading?: boolean;
-	showMemoColumn?: boolean;
-	isCompact?: boolean;
+	profile: Contracts.IProfile;
 } & React.HTMLProps<any>;
 
 export const TransactionRow = memo(
-	({
-		className,
-		exchangeCurrency,
-		transaction,
-		onClick,
-		walletName,
-		isLoading = false,
-		showMemoColumn = false,
-		isCompact = false,
-		...properties
-	}: Properties) => {
+	({ className, exchangeCurrency, transaction, onClick, isLoading = false, profile, ...properties }: Properties) => {
 		const { t } = useTranslation();
 		const timeFormat = useTimeFormat();
 
+		const isCompact = !profile.appearance().get("useExpandedTables");
+
 		if (isLoading) {
-			return <TransactionRowSkeleton showMemoColumn={showMemoColumn} isCompact={isCompact} />;
+			return <TransactionRowSkeleton isCompact={isCompact} />;
 		}
 
 		return (
@@ -63,21 +51,12 @@ export const TransactionRow = memo(
 					</span>
 				</TableCell>
 
-				<TableCell innerClassName="flex space-x-4" isCompact={isCompact}>
-					<TransactionRowMode transaction={transaction} iconSize={isCompact ? "xs" : "lg"} />
-					<div className="w-40 flex-1">
-						<TransactionRowRecipientLabel transaction={transaction} walletName={walletName} />
-					</div>
+				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
+					<TransactionRowSender transaction={transaction} profile={profile} isCompact={isCompact} />
 				</TableCell>
 
-				{showMemoColumn && (
-					<TableCell innerClassName="justify-center" isCompact={isCompact}>
-						<TransactionRowMemo memo={transaction.memo()} />
-					</TableCell>
-				)}
-
-				<TableCell className="w-16" innerClassName="justify-center" isCompact={isCompact}>
-					<TransactionRowConfirmation transaction={transaction} />
+				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
+					<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
 				</TableCell>
 
 				<TableCell innerClassName="justify-end" isCompact={isCompact}>

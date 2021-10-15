@@ -11,7 +11,6 @@ import { Trans, useTranslation } from "react-i18next";
 
 interface TransactionsProperties {
 	emptyText?: string;
-	isCompact?: boolean;
 	profile: Contracts.IProfile;
 	isVisible?: boolean;
 	wallets: Contracts.IReadWriteWallet[];
@@ -20,13 +19,11 @@ interface TransactionsProperties {
 	onLoading?: (status: boolean) => void;
 	isUpdatingWallet?: boolean;
 	showUnconfirmed?: boolean;
-	showMemoColumn?: boolean;
 }
 
 export const Transactions = memo(
 	({
 		emptyText,
-		isCompact,
 		profile,
 		isVisible = true,
 		wallets,
@@ -35,7 +32,6 @@ export const Transactions = memo(
 		isUpdatingWallet,
 		onLoading,
 		showUnconfirmed,
-		showMemoColumn = false,
 	}: TransactionsProperties) => {
 		const { t } = useTranslation();
 
@@ -134,10 +130,9 @@ export const Transactions = memo(
 					exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
 					hideHeader={!isLoadingTransactions && transactions.length === 0}
 					isLoading={isLoadingTransactions}
-					showMemoColumn={showMemoColumn}
 					skeletonRowsLimit={8}
 					onRowClick={setTransactionModalItem}
-					isCompact={isCompact}
+					profile={profile}
 				/>
 
 				{transactions.length > 0 && hasMore && (

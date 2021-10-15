@@ -33,26 +33,22 @@ describe("TransactionTable", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = renderWithRouter(<TransactionTable transactions={transactions} />);
+		const { asFragment } = renderWithRouter(<TransactionTable transactions={transactions} profile={profile} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with currency", () => {
-		renderWithRouter(<TransactionTable transactions={transactions} exchangeCurrency="BTC" />);
+		renderWithRouter(<TransactionTable transactions={transactions} exchangeCurrency="BTC" profile={profile} />);
 
 		expect(screen.getAllByTestId("TransactionRow__currency")).toHaveLength(transactions.length);
 	});
 
-	it("should render with memo", () => {
-		renderWithRouter(<TransactionTable transactions={transactions} showMemoColumn />);
-
-		expect(screen.getAllByTestId("TransactionRowMemo__vendorField")).toHaveLength(8);
-	});
-
 	it("should render compact", () => {
-		const { asFragment } = renderWithRouter(<TransactionTable transactions={transactions} isCompact />);
+		const { asFragment } = renderWithRouter(
+			<TransactionTable transactions={transactions} profile={profile} isCompact />,
+		);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
 		expect(asFragment()).toMatchSnapshot();
@@ -71,7 +67,7 @@ describe("TransactionTable", () => {
 
 		it("should render", () => {
 			const { asFragment } = renderWithRouter(
-				<TransactionTable transactions={[]} isLoading skeletonRowsLimit={5} />,
+				<TransactionTable transactions={[]} isLoading skeletonRowsLimit={5} profile={profile} />,
 			);
 
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
@@ -80,16 +76,13 @@ describe("TransactionTable", () => {
 
 		it("should render with currency column", () => {
 			const { asFragment } = renderWithRouter(
-				<TransactionTable transactions={[]} isLoading exchangeCurrency="BTC" skeletonRowsLimit={5} />,
-			);
-
-			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
-			expect(asFragment()).toMatchSnapshot();
-		});
-
-		it("should render with memo column", () => {
-			const { asFragment } = renderWithRouter(
-				<TransactionTable transactions={[]} isLoading showMemoColumn skeletonRowsLimit={5} />,
+				<TransactionTable
+					transactions={[]}
+					isLoading
+					exchangeCurrency="BTC"
+					skeletonRowsLimit={5}
+					profile={profile}
+				/>,
 			);
 
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
@@ -98,7 +91,7 @@ describe("TransactionTable", () => {
 
 		it("should render compact", () => {
 			const { asFragment } = renderWithRouter(
-				<TransactionTable transactions={[]} isLoading isCompact skeletonRowsLimit={5} />,
+				<TransactionTable transactions={[]} isLoading isCompact skeletonRowsLimit={5} profile={profile} />,
 			);
 
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
@@ -110,7 +103,7 @@ describe("TransactionTable", () => {
 		const onClick = jest.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
-		renderWithRouter(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} />);
+		renderWithRouter(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} />);
 
 		userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
@@ -120,7 +113,9 @@ describe("TransactionTable", () => {
 	it("should emit action on the compact row click", async () => {
 		const onClick = jest.fn();
 
-		renderWithRouter(<TransactionTable transactions={transactions} onRowClick={onClick} isCompact />);
+		renderWithRouter(
+			<TransactionTable transactions={transactions} onRowClick={onClick} isCompact profile={profile} />,
+		);
 
 		userEvent.click(screen.getAllByTestId("TableRow")[0]);
 

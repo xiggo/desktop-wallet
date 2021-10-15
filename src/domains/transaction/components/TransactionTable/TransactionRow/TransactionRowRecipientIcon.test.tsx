@@ -1,20 +1,27 @@
 import React from "react";
-import { render } from "testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 
 describe("TransactionRowRecipientIcon", () => {
 	it("should render avatar", () => {
-		const { getByTestId, asFragment } = render(<TransactionRowRecipientIcon type="transfer" recipient="test" />);
+		const { asFragment } = render(<TransactionRowRecipientIcon type="transfer" recipient="test" />);
 
-		expect(getByTestId("Avatar")).toBeTruthy();
+		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render icon", () => {
-		const { getByTestId, asFragment } = render(<TransactionRowRecipientIcon type="secondSignature" />);
+		const { asFragment } = render(<TransactionRowRecipientIcon type="secondSignature" />);
 
-		expect(getByTestId("TransactionRowRecipientIcon")).toBeTruthy();
+		expect(screen.getByTestId("TransactionRowRecipientIcon")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render compact", () => {
+		const { asFragment } = render(<TransactionRowRecipientIcon type="secondSignature" isCompact />);
+
+		expect(screen.getByTestId("TransactionRowRecipientIcon")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

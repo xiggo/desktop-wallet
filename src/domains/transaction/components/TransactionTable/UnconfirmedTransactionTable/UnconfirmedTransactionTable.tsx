@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { Table } from "app/components/Table";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
@@ -7,9 +7,10 @@ import { UnconfirmedTransactionRow } from "./UnconfirmedTransactionRow";
 
 interface Properties {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
+	profile: Contracts.IProfile;
 }
 
-export const UnconfirmedTransactionTable = memo(({ transactions }: Properties) => {
+export const UnconfirmedTransactionTable = memo(({ transactions, profile }: Properties) => {
 	const { t } = useTranslation();
 
 	const columns: any = [
@@ -20,6 +21,7 @@ export const UnconfirmedTransactionTable = memo(({ transactions }: Properties) =
 		},
 		{
 			Header: t("COMMON.RECIPIENT"),
+			cellWidth: "w-96",
 		},
 		{
 			Header: t("COMMON.AMOUNT"),
@@ -31,7 +33,9 @@ export const UnconfirmedTransactionTable = memo(({ transactions }: Properties) =
 	return (
 		<div data-testid="TransactionTable" className="relative">
 			<Table columns={columns} data={transactions}>
-				{(row: DTO.ExtendedConfirmedTransactionData) => <UnconfirmedTransactionRow transaction={row} />}
+				{(row: DTO.ExtendedConfirmedTransactionData) => (
+					<UnconfirmedTransactionRow transaction={row} profile={profile} />
+				)}
 			</Table>
 		</div>
 	);

@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { Table } from "app/components/Table";
 import { useColumns } from "domains/transaction/components/TransactionTable/TransactionTable.helpers";
 import React, { memo, useMemo } from "react";
@@ -10,26 +10,24 @@ type Skeleton = Record<string, unknown>;
 interface Properties {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
 	exchangeCurrency?: string;
-	showMemoColumn?: boolean;
 	hideHeader?: boolean;
-	isCompact?: boolean;
 	onRowClick?: (row: DTO.ExtendedConfirmedTransactionData) => void;
 	isLoading?: boolean;
 	skeletonRowsLimit?: number;
+	profile: Contracts.IProfile;
 }
 
 export const TransactionTable = memo(
 	({
 		transactions,
 		exchangeCurrency,
-		showMemoColumn = false,
-		isCompact = false,
 		hideHeader = false,
 		isLoading = false,
 		skeletonRowsLimit = 8,
 		onRowClick,
+		profile,
 	}: Properties) => {
-		const columns = useColumns({ exchangeCurrency, showMemoColumn });
+		const columns = useColumns({ exchangeCurrency });
 
 		const initialState = {
 			sortBy: [
@@ -56,8 +54,7 @@ export const TransactionTable = memo(
 							onClick={() => onRowClick?.(row as DTO.ExtendedConfirmedTransactionData)}
 							transaction={row as DTO.ExtendedConfirmedTransactionData}
 							exchangeCurrency={exchangeCurrency}
-							showMemoColumn={showMemoColumn}
-							isCompact={isCompact}
+							profile={profile}
 						/>
 					)}
 				</Table>

@@ -270,6 +270,7 @@ export const translations: { [key: string]: any } = {
 	SELECT_A_WALLET: "You should select a wallet to deeplink transactions",
 	SELECT_OPTION: "Select {{option}}",
 	SEND: "Send",
+	SENDER: "Sender",
 	SENDER_ADDRESS: "Sender address",
 	SETTINGS: "Settings",
 	SHOW: "Show",

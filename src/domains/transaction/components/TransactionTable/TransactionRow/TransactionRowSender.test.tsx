@@ -1,0 +1,42 @@
+import { Contracts } from "@payvo/profiles";
+import React from "react";
+import { TransactionFixture } from "tests/fixtures/transactions";
+import { env, getDefaultProfileId, renderWithRouter, screen } from "utils/testing-library";
+
+import { TransactionRowSender } from "./TransactionRowSender";
+
+let profile: Contracts.IProfile;
+let wallet: Contracts.IReadWriteWallet;
+
+describe("TransactionRowSender", () => {
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+		wallet = profile
+			.wallets()
+			.findByAddressWithNetwork(TransactionFixture.sender(), TransactionFixture.wallet().network().id());
+	});
+
+	it("should render", () => {
+		const { asFragment } = renderWithRouter(
+			<TransactionRowSender transaction={TransactionFixture} profile={profile} />,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
+		expect(screen.getByTestId("Address__alias")).toHaveTextContent(wallet.alias());
+		expect(screen.getByTestId("Address__address")).toHaveTextContent(wallet.address());
+	});
+
+	it("should render compact", () => {
+		const { asFragment } = renderWithRouter(
+			<TransactionRowSender transaction={TransactionFixture} profile={profile} isCompact />,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
+		expect(screen.getByTestId("Address__alias")).toHaveTextContent(wallet.alias());
+		expect(screen.getByTestId("Address__address")).toHaveTextContent(wallet.address());
+	});
+});

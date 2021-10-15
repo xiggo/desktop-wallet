@@ -6,11 +6,11 @@ import cn from "classnames";
 import React from "react";
 
 type Properties = {
-	showMemoColumn?: boolean;
 	isCompact: boolean;
 } & React.HTMLProps<any>;
 
-export const TransactionRowSkeleton = ({ isCompact, showMemoColumn }: Properties) => {
+export const TransactionRowSkeleton = ({ isCompact }: Properties) => {
+	const senderWidth = useRandomNumber(120, 150);
 	const recipientWidth = useRandomNumber(120, 150);
 	const amountWidth = useRandomNumber(100, 130);
 	const currencyWidth = Math.floor(amountWidth * 0.75);
@@ -42,17 +42,23 @@ export const TransactionRowSkeleton = ({ isCompact, showMemoColumn }: Properties
 					</div>
 				)}
 
-				<Skeleton height={16} width={recipientWidth} />
+				<Skeleton height={16} width={senderWidth} />
 			</TableCell>
 
-			{showMemoColumn && (
-				<TableCell innerClassName="justify-center" isCompact={isCompact}>
-					<Skeleton width={16} height={16} />
-				</TableCell>
-			)}
+			<TableCell isCompact={isCompact}>
+				{isCompact ? (
+					<div className="mr-4">
+						<Skeleton circle height={20} width={20} />
+					</div>
+				) : (
+					<div className="mr-4">
+						<Circle className="border-transparent" size="lg">
+							<Skeleton circle height={44} width={44} />
+						</Circle>
+					</div>
+				)}
 
-			<TableCell innerClassName="justify-center" isCompact={isCompact}>
-				<Skeleton circle width={22} height={22} />
+				<Skeleton height={16} width={recipientWidth} />
 			</TableCell>
 
 			<TableCell innerClassName="justify-end" isCompact={isCompact}>

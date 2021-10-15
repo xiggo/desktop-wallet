@@ -462,6 +462,7 @@ export const SendTransfer = () => {
 					/>
 
 					<ConfirmSendTransaction
+						profile={activeProfile}
 						unconfirmedTransactions={unconfirmedTransactions}
 						isOpen={isConfirmModalOpen}
 						onConfirm={() => {

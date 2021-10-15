@@ -5,33 +5,33 @@ import { TransactionFixture } from "tests/fixtures/transactions";
 import { BaseTransactionRowMode, TransactionRowMode } from "./TransactionRowMode";
 
 describe("TransactionRowMode", () => {
-	it("should show sent icon", () => {
+	it("should render sent icon", () => {
 		render(<TransactionRowMode transaction={TransactionFixture} />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("sent.svg");
 		expect(screen.getByTestId("Avatar")).toBeTruthy();
 	});
 
-	it("should show sent icon", () => {
+	it("should render sent icon", () => {
 		render(<TransactionRowMode transaction={{ ...TransactionFixture, isSent: () => true }} />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("sent.svg");
 	});
 
-	it("should show received icon", () => {
+	it("should render received icon", () => {
 		render(<TransactionRowMode transaction={{ ...TransactionFixture, isSent: () => false }} />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
 	});
 
-	it("should show return icon", () => {
-		render(<TransactionRowMode transaction={{ ...TransactionFixture, isReturn: () => true }} />);
+	it("should render return icon", () => {
+		const { rerender } = render(
+			<TransactionRowMode transaction={{ ...TransactionFixture, isReturn: () => true }} />,
+		);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
-	});
 
-	it("should show return icon", () => {
-		render(
+		rerender(
 			<TransactionRowMode
 				transaction={{ ...TransactionFixture, isReturn: () => true, type: () => "multiPayment" }}
 			/>,
@@ -39,15 +39,17 @@ describe("TransactionRowMode", () => {
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
 	});
+});
 
-	it("should use default icon size", () => {
-		render(<BaseTransactionRowMode transaction={{ ...TransactionFixture }} />);
+describe("BaseTransactionRowMode", () => {
+	it("should render", () => {
+		render(<BaseTransactionRowMode transaction={TransactionFixture} />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
 	});
 
-	it("should use sm icon size", () => {
-		render(<BaseTransactionRowMode transaction={{ ...TransactionFixture }} iconSize="sm" />);
+	it("should render compact", () => {
+		render(<BaseTransactionRowMode transaction={TransactionFixture} isCompact />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
 	});

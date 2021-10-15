@@ -115,14 +115,12 @@ export const WalletDetails = () => {
 
 					<Transactions
 						title={t("COMMON.TRANSACTION_HISTORY")}
-						isCompact={!activeProfile.appearance().get("useExpandedTables")}
 						showUnconfirmed={false}
 						profile={activeProfile}
 						wallets={[activeWallet]}
 						isLoading={profileIsSyncing}
 						isUpdatingWallet={isUpdatingWallet}
 						onLoading={setIsUpdatingTransactions}
-						showMemoColumn={activeWallet.network().usesMemo()}
 					/>
 				</Section>
 			</Page>

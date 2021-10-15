@@ -10,7 +10,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
           >
             <a
               class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -38,7 +38,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
           >
             <span
               class="whitespace-nowrap"
@@ -50,14 +50,14 @@ exports[`TransactionRow should omit the currency for transactions from test netw
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
           >
             <div
-              class="flex items-center -space-x-1"
+              class="flex items-center space-x-2"
               data-testid="TransactionRowMode"
             >
-              <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+              <span
+                class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -68,9 +68,9 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                     sent.svg
                   </svg>
                 </div>
-              </div>
+              </span>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -85,7 +85,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
               </div>
             </div>
             <div
-              class="w-40 flex-1"
+              class="w-0 flex-1"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -100,43 +100,54 @@ exports[`TransactionRow should omit the currency for transactions from test netw
             </div>
           </div>
         </td>
-        <td
-          class="w-16"
-        >
+        <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
           >
             <div
-              class="inline-flex p-1 align-middle"
-              data-testid="TransactionRowConfirmation"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+              data-testid="Avatar"
             >
               <div
-                class="sc-bdnxRM NjstW text-theme-warning-600"
-                data-testid="TransactionRowConfirmation__pending"
-                height="20"
-                width="20"
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <svg>
-                  clock.svg
-                </svg>
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
               </div>
             </div>
           </div>
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
           >
             <div
               class="flex items-center"
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="Label-sc-4akkzw-0 dCEjSJ"
+                class="Label-sc-4akkzw-0 iUZRnl"
                 color="danger"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex space-x-1 items-center"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -153,7 +164,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
           class="hidden xl:block"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
           >
             <span
               class="whitespace-nowrap text-theme-secondary-text"
@@ -169,7 +180,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should show transaction with currency 1`] = `
+exports[`TransactionRow should render 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -179,7 +190,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
           >
             <a
               class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -207,7 +218,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh text-theme-secondary-text"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
           >
             <span
               class="whitespace-nowrap"
@@ -219,14 +230,14 @@ exports[`TransactionRow should show transaction with currency 1`] = `
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh flex space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
           >
             <div
-              class="flex items-center -space-x-1"
+              class="flex items-center space-x-2"
               data-testid="TransactionRowMode"
             >
-              <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+              <span
+                class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
               >
                 <div
                   class="sc-bdnxRM NjstW"
@@ -237,9 +248,9 @@ exports[`TransactionRow should show transaction with currency 1`] = `
                     sent.svg
                   </svg>
                 </div>
-              </div>
+              </span>
               <div
-                class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
                 data-testid="Avatar"
               >
                 <div
@@ -254,7 +265,638 @@ exports[`TransactionRow should show transaction with currency 1`] = `
               </div>
             </div>
             <div
-              class="w-40 flex-1"
+              class="w-0 flex-1"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+          >
+            <div
+              class="Label-sc-4akkzw-0 iUZRnl"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-center"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="AmountCrypto"
+                >
+                  - 121 DARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:block"
+        >
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+          >
+            <span
+              class="whitespace-nowrap text-theme-secondary-text"
+              data-testid="TransactionRow__currency"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render compact skeleton 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jGsTbn"
+          >
+            <span>
+              <span
+                class="flex items-center leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 16px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+          >
+            <span>
+              <span
+                class="flex items-center leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 150px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+          >
+            <div
+              class="flex items-center mr-4 -space-x-1"
+            >
+              <div
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+              >
+                <span>
+                  <span
+                    class="flex items-center leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+              >
+                <span>
+                  <span
+                    class="flex items-center leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </div>
+            <span>
+              <span
+                class="flex items-center leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 1px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh"
+          >
+            <div
+              class="mr-4"
+            >
+              <div
+                class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-transparent ring-theme-background"
+              >
+                <span>
+                  <span
+                    class="flex items-center leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </div>
+            <span>
+              <span
+                class="flex items-center leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 1px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+          >
+            <span
+              class="flex items-center space-x-1 h-7 border-2 border-theme-secondary-300 dark:border-theme-secondary-800 rounded px-2"
+            >
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 1px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 35px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class="hidden xl:block"
+        >
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+          >
+            <span
+              class="flex items-center space-x-1"
+            >
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 0px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 35px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render skeleton 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+          >
+            <span>
+              <span
+                class="flex items-center leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 16px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+          >
+            <span>
+              <span
+                class="flex items-center leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 150px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+          >
+            <div
+              class="flex items-center mr-4 space-x-2"
+            >
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+            <span>
+              <span
+                class="flex items-center leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 1px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI"
+          >
+            <div
+              class="mr-4"
+            >
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+            <span>
+              <span
+                class="flex items-center leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 1px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
+          >
+            <span
+              class="flex items-center space-x-1 h-7"
+            >
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 1px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 35px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class="hidden xl:block"
+        >
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
+          >
+            <span
+              class="flex items-center space-x-1"
+            >
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 0px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 35px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render with currency 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="TableRow__TableRowStyled-sc-y9j4av-0 cPmOfx"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC"
+          >
+            <a
+              class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
+              data-ring-focus-margin="-m-1"
+              data-testid="TransactionRow__ID"
+              href="#"
+              rel="noopener noreferrer"
+              to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+            >
+              <span
+                class="Link__Content-sc-ec014t-1 hUiuRR"
+              >
+                <div
+                  class="sc-bdnxRM AFVmm"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    magnifying-glass-id.svg
+                  </svg>
+                </div>
+              </span>
+            </a>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI text-theme-secondary-text"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="TransactionRow__timestamp"
+            >
+              31.07.2020 4:34 PM
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
+          >
+            <div
+              class="flex items-center space-x-2"
+              data-testid="TransactionRowMode"
+            >
+              <span
+                class="w-5 h-5 flex items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+              >
+                <div
+                  class="sc-bdnxRM NjstW"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </span>
+              <div
+                class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                data-testid="Avatar"
+              >
+                <div
+                  class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                >
+                  <img
+                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
             >
               <div
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
@@ -269,43 +911,54 @@ exports[`TransactionRow should show transaction with currency 1`] = `
             </div>
           </div>
         </td>
-        <td
-          class="w-16"
-        >
+        <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI space-x-4"
           >
             <div
-              class="inline-flex p-1 align-middle"
-              data-testid="TransactionRowConfirmation"
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+              data-testid="Avatar"
             >
               <div
-                class="sc-bdnxRM NjstW text-theme-warning-600"
-                data-testid="TransactionRowConfirmation__pending"
-                height="20"
-                width="20"
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
               >
-                <svg>
-                  clock.svg
-                </svg>
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
               </div>
             </div>
           </div>
         </td>
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-end"
           >
             <div
               class="flex items-center"
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="Label-sc-4akkzw-0 dCEjSJ"
+                class="Label-sc-4akkzw-0 iUZRnl"
                 color="danger"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex space-x-1 items-center"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -322,7 +975,7 @@ exports[`TransactionRow should show transaction with currency 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
           >
             <span
               class="whitespace-nowrap"

@@ -55,7 +55,7 @@ export const Dashboard = () => {
 							isLoading={isLoadingTransactions && transactions.length === 0}
 							skeletonRowsLimit={8}
 							onRowClick={setTransactionModalItem}
-							isCompact={!activeProfile.appearance().get("useExpandedTables")}
+							profile={activeProfile}
 						/>
 
 						{transactions.length === 0 && !isLoadingTransactions && (

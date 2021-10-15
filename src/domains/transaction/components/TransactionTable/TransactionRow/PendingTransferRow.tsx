@@ -3,7 +3,6 @@ import { Icon } from "app/components/Icon";
 import { TableCell, TableRow } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
 import { useTimeFormat } from "app/hooks/use-time-format";
-import { TransactionRowMemo } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMemo";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -16,13 +15,11 @@ export const PendingTransferRow = ({
 	onRowClick,
 	wallet,
 	isCompact,
-	showMemoColumn,
 }: {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	onRowClick?: (transaction: DTO.ExtendedConfirmedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
-	isCompact?: boolean;
-	showMemoColumn: boolean;
+	isCompact: boolean;
 }) => {
 	const { t } = useTranslation();
 	const timeFormat = useTimeFormat();
@@ -43,21 +40,15 @@ export const PendingTransferRow = ({
 
 			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
 				<BaseTransactionRowMode
-					iconSize={isCompact ? "xs" : "lg"}
+					isCompact={isCompact}
 					isSent={transaction.isSent()}
 					isReturn={transaction.isReturn()}
 					type={transaction.type()}
-					recipient={transaction.recipient()}
+					address={transaction.recipient()}
 				/>
 
 				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={transaction.recipient()} />
 			</TableCell>
-
-			{showMemoColumn && (
-				<TableCell innerClassName="justify-center" isCompact={isCompact}>
-					<TransactionRowMemo memo={transaction.memo()} />
-				</TableCell>
-			)}
 
 			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>
 				<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>

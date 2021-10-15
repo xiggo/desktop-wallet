@@ -1,30 +1,36 @@
-import { DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { TableCell, TableRow } from "app/components/Table";
 import { TimeAgo } from "app/components/TimeAgo";
 import React from "react";
 
 import { TransactionRowAmount } from "../TransactionRow/TransactionRowAmount";
-import { TransactionRowRecipientIcon } from "../TransactionRow/TransactionRowRecipientIcon";
-import { TransactionRowRecipientLabel } from "../TransactionRow/TransactionRowRecipientLabel";
+import { TransactionRowRecipient } from "../TransactionRow/TransactionRowRecipient";
 
 type Properties = {
 	transaction: DTO.ExtendedConfirmedTransactionData;
-	walletName?: string;
+	profile: Contracts.IProfile;
 } & React.HTMLProps<any>;
 
-export const UnconfirmedTransactionRow = ({ transaction, walletName, ...properties }: Properties) => (
-	<TableRow {...properties}>
-		<TableCell variant="start" innerClassName="space-x-3 text-theme-secondary-500" isCompact>
-			<TimeAgo date={transaction.timestamp()?.toString() as string} />
-		</TableCell>
+export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties }: Properties) => {
+	const isCompact = !profile.appearance().get("useExpandedTables");
 
-		<TableCell innerClassName="space-x-3 w-50" isCompact>
-			<TransactionRowRecipientIcon size="sm" recipient={transaction.recipient()} type={transaction.type()} />
-			<TransactionRowRecipientLabel transaction={transaction} walletName={walletName} />
-		</TableCell>
+	return (
+		<TableRow {...properties}>
+			<TableCell
+				variant="start"
+				innerClassName="space-x-3 text-theme-secondary-500 whitespace-nowrap"
+				isCompact={isCompact}
+			>
+				<TimeAgo date={transaction.timestamp()?.toString() as string} />
+			</TableCell>
 
-		<TableCell variant="end" innerClassName="justify-end" isCompact>
-			<TransactionRowAmount transaction={transaction} />
-		</TableCell>
-	</TableRow>
-);
+			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
+				<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
+			</TableCell>
+
+			<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
+				<TransactionRowAmount transaction={transaction} isCompact={isCompact} />
+			</TableCell>
+		</TableRow>
+	);
+};

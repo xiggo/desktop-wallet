@@ -2,7 +2,7 @@ import { TableColumn } from "app/components/Table/TableColumn.models";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-const usePendingTransactionTableColumns = ({ showMemoColumn }: { showMemoColumn: boolean }): TableColumn[] => {
+const usePendingTransactionTableColumns = (): TableColumn[] => {
 	const { t } = useTranslation();
 
 	return useMemo<TableColumn[]>(() => {
@@ -23,12 +23,6 @@ const usePendingTransactionTableColumns = ({ showMemoColumn }: { showMemoColumn:
 			cellWidth: "w-96",
 		};
 
-		const columnMemo: TableColumn = {
-			Header: t("COMMON.MEMO"),
-			cellWidth: "w-24",
-			className: "justify-center",
-		};
-
 		const columnStatus: TableColumn = {
 			Header: t("COMMON.STATUS"),
 			cellWidth: "w-20",
@@ -47,16 +41,8 @@ const usePendingTransactionTableColumns = ({ showMemoColumn }: { showMemoColumn:
 			className: "hidden no-border",
 		};
 
-		return [
-			columnId,
-			columnDate,
-			columnRecipient,
-			showMemoColumn && columnMemo,
-			columnStatus,
-			columnAmount,
-			columnSign,
-		].filter(Boolean) as TableColumn[];
-	}, [t, showMemoColumn]);
+		return [columnId, columnDate, columnRecipient, columnStatus, columnAmount, columnSign].filter(Boolean);
+	}, [t]);
 };
 
 export { usePendingTransactionTableColumns };

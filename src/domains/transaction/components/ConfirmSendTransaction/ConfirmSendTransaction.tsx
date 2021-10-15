@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/profiles";
+import { Contracts, DTO } from "@payvo/profiles";
 import { Button } from "app/components/Button";
 import { Modal } from "app/components/Modal";
 import React from "react";
@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { UnconfirmedTransactionTable } from "../TransactionTable/UnconfirmedTransactionTable/UnconfirmedTransactionTable";
 
 interface ConfirmSendTransactionProperties {
+	profile: Contracts.IProfile;
 	isOpen: boolean;
 	onClose?: any;
 	onConfirm?: any;
@@ -14,6 +15,7 @@ interface ConfirmSendTransactionProperties {
 }
 
 export const ConfirmSendTransaction = ({
+	profile,
 	isOpen,
 	onClose,
 	onConfirm,
@@ -27,7 +29,7 @@ export const ConfirmSendTransaction = ({
 				{t("TRANSACTION.MODAL_CONFIRM_SEND_TRANSACTION.DESCRIPTION")}
 			</div>
 
-			<UnconfirmedTransactionTable transactions={unconfirmedTransactions} />
+			<UnconfirmedTransactionTable transactions={unconfirmedTransactions} profile={profile} />
 
 			<div className="flex justify-end mt-8 space-x-3">
 				<Button variant="secondary" onClick={onClose} data-testid="ConfirmSendTransaction__cancel">

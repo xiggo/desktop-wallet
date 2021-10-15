@@ -4,18 +4,17 @@ import { Icon } from "app/components/Icon";
 import cn from "classnames";
 import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-types";
 import React from "react";
-import { Size } from "types";
 
 interface Properties {
 	type: string;
 	recipient?: string;
-	size?: Size;
+	isCompact: boolean;
 }
 
-export const TransactionRowRecipientIcon = ({ type, recipient, size }: Properties) => {
+export const TransactionRowRecipientIcon = ({ type, recipient, isCompact }: Properties) => {
 	const { getIcon } = useTransactionTypes();
 
-	const isCompact = size === "xs";
+	const size = isCompact ? "xs" : "lg";
 
 	const shadowClasses =
 		"ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
@@ -47,8 +46,4 @@ export const TransactionRowRecipientIcon = ({ type, recipient, size }: Propertie
 			<Icon name={getIcon(type)} size="lg" />
 		</Circle>
 	);
-};
-
-TransactionRowRecipientIcon.defaultProps = {
-	size: "lg",
 };

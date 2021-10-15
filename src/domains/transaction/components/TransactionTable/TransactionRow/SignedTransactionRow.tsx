@@ -5,7 +5,6 @@ import { TableCell, TableRow } from "app/components/Table";
 import { TableRemoveButton } from "app/components/TableRemoveButton";
 import { Tooltip } from "app/components/Tooltip";
 import { useTimeFormat } from "app/hooks/use-time-format";
-import { TransactionRowMemo } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMemo";
 import { useMultiSignatureStatus } from "domains/transaction/hooks";
 import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
@@ -20,12 +19,11 @@ interface SignedTransactionRowProperties {
 	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onRemovePendingTransaction?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
-	isCompact?: boolean;
-	showMemoColumn: boolean;
+	isCompact: boolean;
 }
 
 interface SignButtonProperties {
-	isCompact?: boolean;
+	isCompact: boolean;
 	isAwaitingFinalSignature: boolean;
 	canBeSigned: boolean;
 	onClick?: () => void;
@@ -88,7 +86,6 @@ export const SignedTransactionRow = ({
 	wallet,
 	isCompact,
 	onRemovePendingTransaction,
-	showMemoColumn,
 }: SignedTransactionRowProperties) => {
 	const timeFormat = useTimeFormat();
 	const recipient = transaction.get<string>("recipientId");
@@ -119,18 +116,12 @@ export const SignedTransactionRow = ({
 				<BaseTransactionRowMode
 					isSent={true}
 					type={transaction.type()}
-					recipient={recipient}
-					iconSize={isCompact ? "xs" : "lg"}
+					address={recipient}
+					isCompact={isCompact}
 				/>
 
 				<BaseTransactionRowRecipientLabel type={transaction.type()} recipient={recipient} />
 			</TableCell>
-
-			{showMemoColumn && (
-				<TableCell innerClassName="justify-center" isCompact={isCompact}>
-					<TransactionRowMemo memo={transaction.memo()} />
-				</TableCell>
-			)}
 
 			<TableCell className="w-16" innerClassName="justify-center truncate" isCompact={isCompact}>
 				<Tooltip content={status.label}>
@@ -142,6 +133,7 @@ export const SignedTransactionRow = ({
 
 			<TableCell innerClassName="justify-end" isCompact={isCompact}>
 				<BaseTransactionRowAmount
+					isCompact={isCompact}
 					isSent={true}
 					total={transaction.amount() + transaction.fee()}
 					wallet={wallet}

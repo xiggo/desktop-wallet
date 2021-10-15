@@ -6,7 +6,6 @@ import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Size } from "types";
 
 import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 
@@ -14,12 +13,14 @@ interface Properties {
 	type: string;
 	isSent: boolean;
 	isReturn?: boolean;
-	recipient: string;
-	iconSize?: Size;
+	address: string;
+	isCompact: boolean;
 }
 
-export const BaseTransactionRowMode = ({ type, isSent, isReturn, recipient, iconSize = "lg" }: Properties) => {
+export const BaseTransactionRowMode = ({ type, isSent, isReturn, address, isCompact }: Properties) => {
 	const { t } = useTranslation();
+
+	const iconSize = isCompact ? "xs" : "lg";
 
 	const { modeIconName, tooltipContent, modeCircleStyle } = useMemo(() => {
 		if (isReturn && (type === "transfer" || type === "multiPayment")) {
@@ -48,8 +49,6 @@ export const BaseTransactionRowMode = ({ type, isSent, isReturn, recipient, icon
 	const shadowClasses =
 		"ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black";
 
-	const isCompact = iconSize === "xs";
-
 	return (
 		<div
 			data-testid="TransactionRowMode"
@@ -67,23 +66,25 @@ export const BaseTransactionRowMode = ({ type, isSent, isReturn, recipient, icon
 				)}
 			</Tooltip>
 
-			<TransactionRowRecipientIcon size={iconSize} recipient={recipient} type={type} />
+			<TransactionRowRecipientIcon recipient={address} type={type} isCompact={isCompact} />
 		</div>
 	);
 };
 
 export const TransactionRowMode = ({
-	iconSize = "lg",
 	transaction,
+	transactionType,
+	isCompact,
 }: {
-	iconSize?: Size;
 	transaction: DTO.ExtendedConfirmedTransactionData | Contracts.ConfirmedTransactionData;
+	transactionType?: string;
+	isCompact: boolean;
 }) => (
 	<BaseTransactionRowMode
-		iconSize={iconSize}
+		isCompact={isCompact}
 		isSent={transaction.isSent()}
 		isReturn={transaction.isReturn()}
-		type={transaction.type()}
-		recipient={transaction.recipient()}
+		type={transactionType || transaction.type()}
+		address={transaction.sender()}
 	/>
 );

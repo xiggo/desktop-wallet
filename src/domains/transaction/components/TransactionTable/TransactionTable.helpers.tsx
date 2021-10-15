@@ -5,10 +5,9 @@ import { useTranslation } from "react-i18next";
 
 interface UseColumnProperties {
 	exchangeCurrency: string | undefined;
-	showMemoColumn: boolean | undefined;
 }
 
-export const useColumns = ({ exchangeCurrency, showMemoColumn }: UseColumnProperties) => {
+export const useColumns = ({ exchangeCurrency }: UseColumnProperties) => {
 	const { t } = useTranslation();
 
 	return useMemo<TableColumn[]>(() => {
@@ -30,16 +29,9 @@ export const useColumns = ({ exchangeCurrency, showMemoColumn }: UseColumnProper
 			cellWidth: "w-96",
 		};
 
-		const columnMemo: TableColumn = {
-			Header: t("COMMON.MEMO"),
-			cellWidth: "w-24",
-			className: "justify-center",
-		};
-
-		const columnStatus: TableColumn = {
-			Header: t("COMMON.STATUS"),
-			cellWidth: "w-20",
-			className: "justify-center",
+		const columnSender: TableColumn = {
+			Header: t("COMMON.SENDER"),
+			cellWidth: "w-96",
 		};
 
 		const columnAmount: TableColumn = {
@@ -60,11 +52,10 @@ export const useColumns = ({ exchangeCurrency, showMemoColumn }: UseColumnProper
 		return [
 			columnId,
 			columnDate,
+			columnSender,
 			columnRecipient,
-			showMemoColumn && columnMemo,
-			columnStatus,
 			columnAmount,
 			exchangeCurrency && columnCurrency,
 		].filter(Boolean) as TableColumn[];
-	}, [t, showMemoColumn, exchangeCurrency]);
+	}, [t, exchangeCurrency]);
 };

@@ -10,7 +10,7 @@ interface PendingTransaction {
 }
 
 interface Properties {
-	isCompact?: boolean;
+	isCompact: boolean;
 	wallet: Contracts.IReadWriteWallet;
 	pendingTransactions: PendingTransaction[];
 	onClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;

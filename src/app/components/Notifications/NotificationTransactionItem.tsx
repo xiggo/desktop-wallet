@@ -30,7 +30,7 @@ export const NotificationTransactionItem = ({
 		>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
 				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
-					<TransactionRowMode transaction={transaction} iconSize="xs" />
+					<TransactionRowMode transaction={transaction} isCompact />
 					<div className="w-20 flex-1">
 						<TransactionRowRecipientLabel transaction={transaction} walletName={walletName} />
 					</div>

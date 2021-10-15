@@ -20,8 +20,7 @@ export const PendingTransactions = ({
 	const { t } = useTranslation();
 	const [pendingRemovalTransaction, setPendingRemovalTransaction] = useState<DTO.ExtendedSignedTransactionData>();
 
-	const showMemoColumn = wallet.network().usesMemo();
-	const columns = usePendingTransactionTableColumns({ showMemoColumn });
+	const columns = usePendingTransactionTableColumns();
 
 	const handleRemove = async (transaction: DTO.ExtendedSignedTransactionData) => {
 		await wallet.coin().multiSignature().forgetById(transaction?.id());
@@ -42,7 +41,6 @@ export const PendingTransactions = ({
 								wallet={wallet}
 								transaction={transaction.transaction as DTO.ExtendedConfirmedTransactionData}
 								onRowClick={onPendingTransactionClick}
-								showMemoColumn={showMemoColumn}
 							/>
 						);
 					}
@@ -54,7 +52,6 @@ export const PendingTransactions = ({
 							wallet={wallet}
 							onSign={onClick}
 							onRowClick={onClick}
-							showMemoColumn={showMemoColumn}
 							onRemovePendingTransaction={setPendingRemovalTransaction}
 						/>
 					);
