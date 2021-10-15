@@ -34,7 +34,7 @@ export const Address = ({
 	walletNameClass,
 	fontWeight,
 	walletName,
-	maxNameChars,
+	maxNameChars = 16,
 	size,
 	truncateOnTable,
 }: Properties) => {

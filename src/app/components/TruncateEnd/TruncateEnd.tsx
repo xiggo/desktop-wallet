@@ -11,7 +11,7 @@ type Properties = {
 
 const Wrapper = styled.span``;
 
-export const TruncateEnd = ({ text, maxChars, showTooltip, ...properties }: Properties) => {
+export const TruncateEnd = ({ text, maxChars = 16, showTooltip = true, ...properties }: Properties) => {
 	const result = React.useMemo(() => {
 		if (!maxChars || text.length <= maxChars) {
 			return text;
@@ -29,9 +29,4 @@ export const TruncateEnd = ({ text, maxChars, showTooltip, ...properties }: Prop
 			</Wrapper>
 		</Tooltip>
 	);
-};
-
-TruncateEnd.defaultProps = {
-	maxChars: 16,
-	showTooltip: true,
 };
