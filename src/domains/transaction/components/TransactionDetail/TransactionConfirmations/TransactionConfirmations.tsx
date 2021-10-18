@@ -1,7 +1,6 @@
 import { BigNumber } from "@payvo/helpers";
 import { DTO } from "@payvo/profiles";
 import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -15,25 +14,21 @@ export const TransactionConfirmations = ({ transaction }: TransactionConfirmatio
 	const { t } = useTranslation();
 
 	const renderConfirmationStatus = (isConfirmed: boolean, confirmations: BigNumber) => {
-		const confirmationStatusStyle = isConfirmed ? "text-theme-success-600" : "text-theme-warning-600";
+		const confirmationStatusStyle = isConfirmed ? "text-theme-success-600" : "text-theme-warning-300";
 
 		if (isConfirmed) {
 			return (
-				<div className="flex items-center space-x-3">
-					<span>{t("TRANSACTION.WELL_CONFIRMED")}</span>
-					<Tooltip content={t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations.toNumber() })}>
-						<span>
-							<Icon name="CircleCheckMark" className={confirmationStatusStyle} size="lg" />
-						</span>
-					</Tooltip>
+				<div className="flex items-center space-x-2">
+					<Icon name="CircleCheckMark" className={confirmationStatusStyle} size="lg" />
+					<span>{confirmations.toNumber()}</span>
 				</div>
 			);
 		}
 
 		return (
-			<div className="flex items-center space-x-3">
-				<span>{t("TRANSACTION.NOT_CONFIRMED")}</span>
+			<div className="flex items-center space-x-2">
 				<Icon name="Clock" className={confirmationStatusStyle} size="lg" />
+				<span>{t("TRANSACTION.NOT_YET_CONFIRMED")}</span>
 			</div>
 		);
 	};

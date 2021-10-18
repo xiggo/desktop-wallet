@@ -272,13 +272,10 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -286,6 +283,9 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -569,13 +569,10 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -583,6 +580,9 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -866,13 +866,10 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -880,6 +877,9 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1131,13 +1131,10 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -1145,6 +1142,9 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1558,13 +1558,10 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -1572,6 +1569,9 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1823,13 +1823,10 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -1837,6 +1834,9 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -2280,13 +2280,10 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -2294,6 +2291,9 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -2747,13 +2747,10 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -2761,6 +2758,9 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -3141,13 +3141,10 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -3155,6 +3152,9 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -3536,13 +3536,10 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -3550,6 +3547,9 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -3847,13 +3847,10 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="flex items-center space-x-3"
+                    class="flex items-center space-x-2"
                   >
-                    <span>
-                      Not confirmed
-                    </span>
                     <div
-                      class="sc-bdnxRM NjstW text-theme-warning-600"
+                      class="sc-bdnxRM NjstW text-theme-warning-300"
                       height="20"
                       width="20"
                     >
@@ -3861,6 +3858,9 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                         clock.svg
                       </svg>
                     </div>
+                    <span>
+                      Not yet confirmed
+                    </span>
                   </div>
                 </div>
               </div>
