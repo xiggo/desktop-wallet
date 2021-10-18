@@ -236,6 +236,12 @@ export const translations: { [key: string]: any } = {
 
 	SIGNATURE: "Signature",
 
+	STATUS: {
+		ACTIVE: "Active",
+		RESIGNED: "Resigned",
+		STANDBY: "Standby",
+	},
+
 	UPDATE_WALLET_DATA: "Update Wallet Data",
 
 	UPDATING_WALLET_DATA: "Updating Wallet Data",
