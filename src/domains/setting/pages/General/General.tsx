@@ -169,7 +169,7 @@ export const GeneralSettings: React.FC = () => {
 						})}
 						ref={register()}
 						options={[1, 5, 10, 15, 30, 60].map((count) => ({
-							label: t(`COMMON.DATETIME.MINUTES${count > 1 ? "_PLURAL" : ""}`, { count }),
+							label: t("COMMON.DATETIME.MINUTES", { count }),
 							value: `${count}`,
 						}))}
 						defaultValue={`${getDefaultValues().automaticSignOutPeriod}`}

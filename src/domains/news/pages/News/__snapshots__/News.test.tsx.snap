@@ -463,7 +463,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                                   data-testid="NewsCard__date-created"
                                 >
                                   <span
-                                    data-testid="timeago"
+                                    data-testid="TimeAgo"
                                   >
                                     A few seconds ago
                                   </span>
@@ -1336,7 +1336,7 @@ exports[`News should render 1`] = `
                                   data-testid="NewsCard__date-created"
                                 >
                                   <span
-                                    data-testid="timeago"
+                                    data-testid="TimeAgo"
                                   >
                                     A few seconds ago
                                   </span>

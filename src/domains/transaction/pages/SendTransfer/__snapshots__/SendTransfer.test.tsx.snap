@@ -813,7 +813,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
-                                      data-testid="timeago"
+                                      data-testid="TimeAgo"
                                     >
                                       A few seconds ago
                                     </span>
@@ -12508,7 +12508,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
-                                      data-testid="timeago"
+                                      data-testid="TimeAgo"
                                     >
                                       A few seconds ago
                                     </span>
@@ -12590,7 +12590,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
-                                      data-testid="timeago"
+                                      data-testid="TimeAgo"
                                     >
                                       A few seconds ago
                                     </span>
