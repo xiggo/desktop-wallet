@@ -1,8 +1,8 @@
 export const translations: { [key: string]: any } = {
 	MESSAGE: "Message",
 	MNEMONIC_VERIFICATION: {
-		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} word",
-		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} word",
+		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",
+		WORD_NUMBER: "The {{position}}{{ordinalIndicator}} Word",
 	},
 	MODAL_DELETE_WALLET: {
 		DESCRIPTION:

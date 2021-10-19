@@ -62,10 +62,10 @@ export const WalletOverviewStep = () => {
 
 			<div className="flex justify-between items-center">
 				<div className="space-y-2">
-					<span className="text-lg font-semibold">
+					<span className="text-lg font-semibold text-theme-secondary-text">
 						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.TITLE")}
 					</span>
-					<p className="text-sm text-theme-secondary-text">
+					<p className="text-sm text-theme-secondary-500">
 						{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.DESCRIPTION")}
 					</p>
 				</div>
