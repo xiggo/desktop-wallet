@@ -27,7 +27,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -919,7 +919,7 @@ exports[`Dashboard should render 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2605,7 +2605,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

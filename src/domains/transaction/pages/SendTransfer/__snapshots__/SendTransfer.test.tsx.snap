@@ -26,7 +26,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -955,7 +955,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2027,7 +2027,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -3020,7 +3020,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -5949,7 +5949,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -8264,7 +8264,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -9255,7 +9255,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -9726,7 +9726,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -10391,7 +10391,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -11056,7 +11056,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -11721,7 +11721,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -12724,7 +12724,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -13389,7 +13389,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -14054,7 +14054,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -14719,7 +14719,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

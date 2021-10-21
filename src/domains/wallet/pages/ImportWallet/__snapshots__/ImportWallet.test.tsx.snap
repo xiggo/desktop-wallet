@@ -860,7 +860,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"

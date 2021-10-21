@@ -29,7 +29,7 @@ exports[`PluginDetails should render properly 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -586,7 +586,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1119,7 +1119,7 @@ exports[`PluginDetails should report plugin 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -1676,7 +1676,7 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
@@ -2299,7 +2299,7 @@ exports[`PluginDetails should update package 1`] = `
           </div>
         </button>
         <div
-          class="flex flex-1 px-8 "
+          class="flex flex-1 px-8"
         >
           <div
             class="flex items-center my-auto"
