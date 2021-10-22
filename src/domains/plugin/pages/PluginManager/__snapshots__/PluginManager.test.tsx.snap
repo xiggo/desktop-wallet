@@ -10446,12 +10446,6 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                                 <div
                                   class="relative"
                                 >
-                                  <span
-                                    class="Badge__Wrapper-sc-w9wbbm-0 fstweE flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-danger-500"
-                                    data-testid="PluginListItem__update-badge"
-                                  >
-                                    <span />
-                                  </span>
                                   <button
                                     class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm text-left text-theme-primary-600 hover:text-theme-primary-700 -mx-3"
                                     type="button"
@@ -10470,6 +10464,12 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
                                       </div>
                                     </div>
                                   </button>
+                                  <span
+                                    class="Badge__Wrapper-sc-w9wbbm-0 fstweE flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent cursor-pointer bg-theme-danger-400 mt-2 mr-1"
+                                    data-testid="PluginDropdown__update-badge"
+                                  >
+                                    <span />
+                                  </span>
                                 </div>
                               </span>
                             </div>
