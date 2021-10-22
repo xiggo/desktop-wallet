@@ -5,7 +5,7 @@ import { TransactionFixture } from "tests/fixtures/transactions";
 import { BaseTransactionRowMode, TransactionRowMode } from "./TransactionRowMode";
 
 describe("TransactionRowMode", () => {
-	it("should render sent icon", () => {
+	it("should render default icon", () => {
 		render(<TransactionRowMode transaction={TransactionFixture} />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("sent.svg");
