@@ -39,6 +39,33 @@ describe("TransactionRowMode", () => {
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
 	});
+
+	it("should not render return icon if sender address is not the transactions wallet address", () => {
+		const { rerender } = render(
+			<TransactionRowMode transaction={{ ...TransactionFixture, isReturn: () => true }} />,
+		);
+
+		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
+
+		rerender(
+			<TransactionRowMode
+				transaction={{
+					...TransactionFixture,
+					isReturn: () => true,
+					isSent: () => false,
+					recipients: () => [
+						{ address: "not-wallet-address", amount: 1 },
+						{ address: TransactionFixture.recipient(), amount: 1 },
+					],
+					sender: () => "not-wallet-address",
+					type: () => "multiPayment",
+				}}
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionRowMode")).not.toHaveTextContent("return.svg");
+		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
+	});
 });
 
 describe("BaseTransactionRowMode", () => {
