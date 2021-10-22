@@ -1712,7 +1712,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                   <div
                     class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                   >
-                    Confirmations
+                    Status
                   </div>
                   <div
                     class="flex items-center font-semibold"
@@ -1730,7 +1730,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                         </svg>
                       </div>
                       <span>
-                        398
+                        Confirmed
                       </span>
                     </div>
                   </div>

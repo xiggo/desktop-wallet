@@ -1,26 +1,32 @@
 import { BigNumber } from "@payvo/helpers";
 import { DTO } from "@payvo/profiles";
 import { Icon } from "app/components/Icon";
+import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { TransactionDetail } from "../TransactionDetail";
 
-interface TransactionConfirmationsProperties {
+interface TransactionStatusProperties {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 }
 
-export const TransactionConfirmations = ({ transaction }: TransactionConfirmationsProperties) => {
+export const TransactionStatus = ({ transaction }: TransactionStatusProperties) => {
 	const { t } = useTranslation();
 
-	const renderConfirmationStatus = (isConfirmed: boolean, confirmations: BigNumber) => {
+	const renderStatus = (isConfirmed: boolean, confirmations: BigNumber) => {
 		const confirmationStatusStyle = isConfirmed ? "text-theme-success-600" : "text-theme-warning-300";
 
 		if (isConfirmed) {
 			return (
 				<div className="flex items-center space-x-2">
 					<Icon name="CircleCheckMark" className={confirmationStatusStyle} size="lg" />
-					<span>{confirmations.toNumber()}</span>
+					<Tooltip
+						disabled={!confirmations.toNumber()}
+						content={t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations.toNumber() })}
+					>
+						<span>{t("TRANSACTION.CONFIRMED")}</span>
+					</Tooltip>
 				</div>
 			);
 		}
@@ -34,8 +40,8 @@ export const TransactionConfirmations = ({ transaction }: TransactionConfirmatio
 	};
 
 	return (
-		<TransactionDetail label={t("TRANSACTION.CONFIRMATIONS")}>
-			{renderConfirmationStatus(transaction.isConfirmed(), transaction.confirmations())}
+		<TransactionDetail label={t("TRANSACTION.STATUS")}>
+			{renderStatus(transaction.isConfirmed(), transaction.confirmations())}
 		</TransactionDetail>
 	);
 };

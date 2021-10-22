@@ -232,7 +232,7 @@ exports[`MultiSignatureRegistrationDetail should render 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -764,7 +764,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"

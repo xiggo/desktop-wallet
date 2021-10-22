@@ -266,7 +266,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -563,7 +563,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -860,7 +860,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -1125,7 +1125,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -1552,7 +1552,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -1817,7 +1817,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -2274,7 +2274,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -2741,7 +2741,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -3135,7 +3135,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -3530,7 +3530,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -3841,7 +3841,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"

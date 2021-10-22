@@ -362,7 +362,7 @@ exports[`TransferDetail should render a modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -754,7 +754,7 @@ exports[`TransferDetail should render as not is sent 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -1146,7 +1146,7 @@ exports[`TransferDetail should render with wallet alias 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"

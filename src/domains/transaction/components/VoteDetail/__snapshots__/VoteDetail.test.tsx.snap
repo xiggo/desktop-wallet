@@ -299,7 +299,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -628,7 +628,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -1022,7 +1022,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"

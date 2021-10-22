@@ -383,7 +383,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -823,7 +823,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -841,7 +841,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                       </svg>
                     </div>
                     <span>
-                      10
+                      Confirmed
                     </span>
                   </div>
                 </div>
@@ -1249,7 +1249,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                 <div
                   class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
                 >
-                  Confirmations
+                  Status
                 </div>
                 <div
                   class="flex items-center font-semibold"
@@ -1267,7 +1267,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                       </svg>
                     </div>
                     <span>
-                      10
+                      Confirmed
                     </span>
                   </div>
                 </div>

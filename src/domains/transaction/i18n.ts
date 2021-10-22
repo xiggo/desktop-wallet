@@ -17,6 +17,7 @@ export const translations: { [key: string]: any } = {
 	BROADCASTING: "Broadcasting transaction to the network",
 	CONFIRMATIONS: "Confirmations",
 	CONFIRMATIONS_COUNT: "{{count}} Confirmations",
+	CONFIRMED: "Confirmed",
 	CONTACT_SEACH: {
 		DESCRIPTION: "Find and select preferred address from you saved wallets",
 		TITLE: "My addresses",
