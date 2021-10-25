@@ -186,7 +186,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                                     width="20"
                                   >
                                     <svg>
-                                      received.svg
+                                      return.svg
                                     </svg>
                                   </div>
                                 </span>
@@ -226,8 +226,8 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 bdvTBm"
-                                color="success"
+                                class="Label-sc-4akkzw-0 dCEjSJ"
+                                color="danger"
                               >
                                 <div
                                   class="flex space-x-1 items-stretch"
@@ -236,7 +236,7 @@ exports[`Notifications should open and cancel wallet update notification modal 1
                                     class="whitespace-nowrap"
                                     data-testid="AmountCrypto"
                                   >
-                                    + 1 DARK
+                                    - 1.28629325 DARK
                                   </span>
                                 </div>
                               </div>
@@ -699,7 +699,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                                     width="20"
                                   >
                                     <svg>
-                                      received.svg
+                                      return.svg
                                     </svg>
                                   </div>
                                 </span>
@@ -739,8 +739,8 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 bdvTBm"
-                                color="success"
+                                class="Label-sc-4akkzw-0 dCEjSJ"
+                                color="danger"
                               >
                                 <div
                                   class="flex space-x-1 items-stretch"
@@ -749,7 +749,7 @@ exports[`Notifications should open and cancel wallet update notification modal 2
                                     class="whitespace-nowrap"
                                     data-testid="AmountCrypto"
                                   >
-                                    + 1 DARK
+                                    - 1.28629325 DARK
                                   </span>
                                 </div>
                               </div>
@@ -1116,7 +1116,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                                     width="20"
                                   >
                                     <svg>
-                                      received.svg
+                                      return.svg
                                     </svg>
                                   </div>
                                 </span>
@@ -1156,8 +1156,8 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 bdvTBm"
-                                color="success"
+                                class="Label-sc-4akkzw-0 dCEjSJ"
+                                color="danger"
                               >
                                 <div
                                   class="flex space-x-1 items-stretch"
@@ -1166,7 +1166,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                                     class="whitespace-nowrap"
                                     data-testid="AmountCrypto"
                                   >
-                                    + 1 DARK
+                                    - 1.28629325 DARK
                                   </span>
                                 </div>
                               </div>
@@ -1593,8 +1593,8 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     class="flex items-center font-semibold"
                   >
                     <div
-                      class="Label-sc-4akkzw-0 bdvTBm"
-                      color="success"
+                      class="Label-sc-4akkzw-0 dCEjSJ"
+                      color="danger"
                     >
                       <div
                         class="flex space-x-1 items-stretch"
@@ -1603,14 +1603,14 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                           class="whitespace-nowrap"
                           data-testid="AmountCrypto"
                         >
-                          + 1 DARK
+                          - 1 DARK
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
+                  class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background"
                 >
                   <div
                     class="sc-bdnxRM NjstW"
@@ -1618,7 +1618,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                     width="20"
                   >
                     <svg>
-                      received.svg
+                      sent.svg
                     </svg>
                   </div>
                 </div>
@@ -1931,7 +1931,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                                     width="20"
                                   >
                                     <svg>
-                                      received.svg
+                                      return.svg
                                     </svg>
                                   </div>
                                 </span>
@@ -1971,8 +1971,8 @@ exports[`Notifications should open and close wallet update notification modal 1`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 bdvTBm"
-                                color="success"
+                                class="Label-sc-4akkzw-0 dCEjSJ"
+                                color="danger"
                               >
                                 <div
                                   class="flex space-x-1 items-stretch"
@@ -1981,7 +1981,7 @@ exports[`Notifications should open and close wallet update notification modal 1`
                                     class="whitespace-nowrap"
                                     data-testid="AmountCrypto"
                                   >
-                                    + 1 DARK
+                                    - 1.28629325 DARK
                                   </span>
                                 </div>
                               </div>
@@ -2444,7 +2444,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                                     width="20"
                                   >
                                     <svg>
-                                      received.svg
+                                      return.svg
                                     </svg>
                                   </div>
                                 </span>
@@ -2484,8 +2484,8 @@ exports[`Notifications should open and close wallet update notification modal 2`
                               class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                             >
                               <div
-                                class="Label-sc-4akkzw-0 bdvTBm"
-                                color="success"
+                                class="Label-sc-4akkzw-0 dCEjSJ"
+                                color="danger"
                               >
                                 <div
                                   class="flex space-x-1 items-stretch"
@@ -2494,7 +2494,7 @@ exports[`Notifications should open and close wallet update notification modal 2`
                                     class="whitespace-nowrap"
                                     data-testid="AmountCrypto"
                                   >
-                                    + 1 DARK
+                                    - 1.28629325 DARK
                                   </span>
                                 </div>
                               </div>

@@ -139,7 +139,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                           width="20"
                         >
                           <svg>
-                            received.svg
+                            return.svg
                           </svg>
                         </div>
                       </span>
@@ -179,8 +179,8 @@ exports[`Notifications should emit transactionClick event 1`] = `
                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                   >
                     <div
-                      class="Label-sc-4akkzw-0 bdvTBm"
-                      color="success"
+                      class="Label-sc-4akkzw-0 dCEjSJ"
+                      color="danger"
                     >
                       <div
                         class="flex space-x-1 items-stretch"
@@ -189,7 +189,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                           class="whitespace-nowrap"
                           data-testid="AmountCrypto"
                         >
-                          + 1 DARK
+                          - 1.28629325 DARK
                         </span>
                       </div>
                     </div>
@@ -895,7 +895,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                           width="20"
                         >
                           <svg>
-                            received.svg
+                            return.svg
                           </svg>
                         </div>
                       </span>
@@ -935,8 +935,8 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                     class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end"
                   >
                     <div
-                      class="Label-sc-4akkzw-0 bdvTBm"
-                      color="success"
+                      class="Label-sc-4akkzw-0 dCEjSJ"
+                      color="danger"
                     >
                       <div
                         class="flex space-x-1 items-stretch"
@@ -945,7 +945,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                           class="whitespace-nowrap"
                           data-testid="AmountCrypto"
                         >
-                          + 1 DARK
+                          - 1.28629325 DARK
                         </span>
                       </div>
                     </div>

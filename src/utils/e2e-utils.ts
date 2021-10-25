@@ -309,13 +309,33 @@ export const requestMocks = {
 		),
 
 		mockRequest(
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			{ data: [], meta: {} },
+		),
+
+		mockRequest(
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			{ data: [], meta: {} },
+		),
+
+		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"coins/ark/devnet/notification-transactions",
+		),
+
+		mockRequest(
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			"coins/ark/devnet/notification-transactions",
 		),
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/transactions",
+		),
+
+		mockRequest(
+			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"coins/ark/devnet/notification-transactions",
 		),
 
 		mockRequest(
