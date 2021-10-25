@@ -17,7 +17,7 @@ export const translations: { [key: string]: any } = {
 		VOTE: "Vote",
 		VOTES: "Votes",
 		VOTE_AMOUNT: {
-			AVAILABLE_TO_VOTE: "Available to Vote ({{percent}}%)",
+			AVAILABLE_TO_VOTE: "Available To Vote ({{percent}}%)",
 			TITLE: "Vote Amount",
 			TOOLTIP: "Number of {{ coinId }} you want to vote with for a specific delegate",
 			VALIDATION: {
