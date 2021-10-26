@@ -90,7 +90,9 @@ export const PluginCard = ({
 											data-testid="PluginCard__update-available"
 											role="button"
 											tabIndex={0}
-											className={cn({ "cursor-not-allowed": isUpdating })}
+											className={cn("text-theme-secondary-700", {
+												"cursor-not-allowed": isUpdating,
+											})}
 											onKeyDown={(event: any) => {
 												if (event.key === " " || event.key === "Enter") {
 													event.preventDefault();
@@ -103,7 +105,11 @@ export const PluginCard = ({
 												handleUpdate();
 											}}
 										>
-											<Icon className={cn({ "animate-spin": isUpdating })} name="ArrowsRotate" />
+											<Icon
+												className={cn({ "animate-spin": isUpdating })}
+												name="ArrowsRotate"
+												size="lg"
+											/>
 										</span>
 									</Tooltip>
 								) : (
@@ -116,7 +122,11 @@ export const PluginCard = ({
 											data-testid="PluginCard__minimum-version-warning"
 											className="ml-3 text-xl"
 										>
-											<Icon name="CircleExclamationMark" className="text-theme-warning-500" />
+											<Icon
+												name="CircleExclamationMark"
+												className="text-theme-warning-500"
+												size="lg"
+											/>
 										</span>
 									</Tooltip>
 								)}

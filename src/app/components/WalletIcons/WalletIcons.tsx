@@ -38,8 +38,7 @@ const getIconName = (type: string) => {
 	return type;
 };
 
-const getIconColor = (type: string) =>
-	type === "Starred" ? "text-theme-warning-400" : "text-theme-secondary-700 dark:text-theme-secondary-600";
+const getIconColor = (type: string) => (type === "Starred" ? "text-theme-warning-400" : "text-theme-secondary-700");
 
 const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDarkTheme }: WalletIconProperties) => {
 	const { t } = useTranslation();

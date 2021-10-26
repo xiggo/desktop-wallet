@@ -81,7 +81,7 @@ exports[`WalletListItem should render for selected wallet 1`] = `
               class="inline-flex items-center space-x-1"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__Ledger"
               >
                 <div
@@ -222,7 +222,7 @@ exports[`WalletListItem should render when isCompact = false 1`] = `
               class="inline-flex items-center space-x-1"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__Ledger"
               >
                 <div
@@ -250,7 +250,7 @@ exports[`WalletListItem should render when isCompact = false 1`] = `
                 </div>
               </div>
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__TestNetwork"
               >
                 <div
@@ -372,7 +372,7 @@ exports[`WalletListItem should render when isCompact = true 1`] = `
               class="inline-flex items-center space-x-1"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__Ledger"
               >
                 <div
@@ -400,7 +400,7 @@ exports[`WalletListItem should render when isCompact = true 1`] = `
                 </div>
               </div>
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__TestNetwork"
               >
                 <div
@@ -522,7 +522,7 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
               class="inline-flex items-center space-x-1"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__Ledger"
               >
                 <div
@@ -550,7 +550,7 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
                 </div>
               </div>
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__TestNetwork"
               >
                 <div
@@ -672,7 +672,7 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
               class="inline-flex items-center space-x-1"
             >
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__Ledger"
               >
                 <div
@@ -700,7 +700,7 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
                 </div>
               </div>
               <div
-                class="inline-block p-1 text-theme-secondary-700 dark:text-theme-secondary-600"
+                class="inline-block p-1 text-theme-secondary-700"
                 data-testid="WalletIcon__TestNetwork"
               >
                 <div
