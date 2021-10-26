@@ -3,7 +3,7 @@
 }
 
 .swiper-pagination-bullet {
-    @apply bg-theme-secondary-300 dark:bg-theme-secondary-600 mx-0 opacity-100 !important;
+    @apply w-2.5 h-2.5 bg-theme-secondary-300 dark:bg-theme-secondary-600 mx-0 opacity-100 !important;
 }
 
 .swiper-pagination-bullet-active {
