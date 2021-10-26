@@ -8,7 +8,7 @@ import { PluginDropdown } from "domains/plugin/components/PluginDropdown";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PluginImage } from "../PluginImage";
+import { PluginImage, PluginImageProgressSize } from "../PluginImage";
 import { PluginLaunchButton } from "./PluginListItem.blocks";
 
 interface PluginListItemProperties {
@@ -91,6 +91,7 @@ export const PluginListItem = ({
 					logoURL={plugin.logo}
 					isUpdating={isUpdating}
 					updatingProgress={updatingProgress}
+					progressSize={isCompact ? PluginImageProgressSize.Small : PluginImageProgressSize.Base}
 				/>
 
 				<div className="flex items-center space-x-2 text-left">

@@ -9,12 +9,17 @@ import { Size } from "types";
 
 import { getStyles } from "./PluginImage.styles";
 
+export enum PluginImageProgressSize {
+	Small = 20,
+	Base = 40,
+}
+
 interface Properties {
 	size?: Size;
 	logoURL?: string;
 	isUpdating?: boolean;
 	updatingProgress?: number;
-	progressSize?: number;
+	progressSize?: PluginImageProgressSize;
 	className?: string;
 	showUpdatingLabel?: boolean;
 }
@@ -25,8 +30,8 @@ export const PluginImage = ({
 	size,
 	logoURL,
 	isUpdating,
-	updatingProgress,
-	progressSize,
+	updatingProgress = 0,
+	progressSize = PluginImageProgressSize.Base,
 	className,
 	showUpdatingLabel,
 }: Properties) => {
@@ -49,10 +54,11 @@ export const PluginImage = ({
 			return (
 				<>
 					<CircularProgressBar
-						value={+(updatingProgress! * 100).toFixed(0)}
+						value={+(updatingProgress * 100).toFixed(0)}
 						size={progressSize}
 						strokeWidth={3}
 						fontSize={0.8}
+						showValue={progressSize !== PluginImageProgressSize.Small}
 						{...colors}
 					/>
 					{showUpdatingLabel && (
@@ -89,9 +95,4 @@ export const PluginImage = ({
 			{renderContent()}
 		</PluginImageWrapper>
 	);
-};
-
-PluginImage.defaultProps = {
-	progressSize: 40,
-	updatingProgress: 0,
 };
