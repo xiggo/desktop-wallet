@@ -1,6 +1,7 @@
 import { isEmptyObject, uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
+import { useWalletAlias } from "app/hooks";
 import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
 import { FilterOption } from "domains/vote/components/VotesFilter";
 import { useMemo, useState } from "react";
@@ -17,6 +18,7 @@ export const useVoteFilters = ({
 	hasWalletId: boolean;
 }) => {
 	const { defaultConfiguration, useTestNetworks } = useWalletFilters({ profile });
+	const { getWalletAlias } = useWalletAlias();
 	const walletAddress = hasWalletId ? wallet.address() : "";
 	const walletNetwork = hasWalletId ? wallet.network().id() : "";
 	const walletMaxVotes = hasWalletId ? wallet.network().maximumVotesPerWallet() : undefined;
@@ -114,18 +116,24 @@ export const useVoteFilters = ({
 			return walletsByCoin;
 		}
 
+		const query = searchQuery.toLowerCase();
+
 		return Object.keys(walletsByCoin).reduce(
 			(coins, coin) => ({
 				...coins,
-				[coin]: Object.values(walletsByCoin[coin]).filter(
-					(wallet: Contracts.IReadWriteWallet) =>
-						wallet.address().toLowerCase().includes(searchQuery.toLowerCase()) ||
-						wallet.alias()?.toLowerCase()?.includes(searchQuery.toLowerCase()),
-				),
+				[coin]: Object.values(walletsByCoin[coin]).filter((wallet: Contracts.IReadWriteWallet) => {
+					const { alias } = getWalletAlias({
+						address: wallet.address(),
+						network: wallet.network(),
+						profile,
+					});
+
+					return wallet.address().toLowerCase().includes(query) || alias?.toLowerCase()?.includes(query);
+				}),
 			}),
 			{} as Record<string, Contracts.IReadWriteWallet[]>,
 		);
-	}, [searchQuery, walletsByCoin]);
+	}, [getWalletAlias, profile, searchQuery, walletsByCoin]);
 
 	const hasEmptyResults = Object.keys(filteredWalletsByCoin).every(
 		(coin: string) => filteredWalletsByCoin[coin].length === 0,
