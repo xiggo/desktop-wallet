@@ -161,7 +161,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
@@ -189,7 +189,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
 		act(() => {
@@ -217,7 +217,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 
 		act(() => {
@@ -254,7 +254,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 
 		act(() => {
@@ -295,7 +295,7 @@ describe("DelegateTable", () => {
 
 		fireEvent.input(amountField, { target: { value: 30 } });
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
@@ -307,7 +307,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 
 		act(() => {
@@ -331,7 +331,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 
 		act(() => {
@@ -368,7 +368,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectVoteButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
@@ -403,7 +403,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectVoteButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
@@ -437,7 +437,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButtons[2]);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("2");
 		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
@@ -469,7 +469,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
@@ -477,6 +477,54 @@ describe("DelegateTable", () => {
 
 		expect(container).toBeTruthy();
 		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should add resigned delegate to the unvote list", () => {
+		const resignedDelegates: Contracts.VoteRegistryItem[] = [
+			{
+				amount: 0,
+				wallet: delegates[1],
+			},
+		];
+		const unvoteDelegates: VoteDelegateProperties[] = [
+			{
+				amount: 0,
+				delegateAddress: delegates[1].address(),
+			},
+		];
+
+		const onContinue = jest.fn();
+		const { asFragment, rerender } = render(
+			<DelegateTable
+				delegates={delegates}
+				votes={[]}
+				resignedDelegateVotes={resignedDelegates}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				onContinue={onContinue}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+		);
+
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+
+		rerender(
+			<DelegateTable
+				delegates={delegates}
+				votes={[]}
+				resignedDelegateVotes={resignedDelegates}
+				voteDelegates={[]}
+				unvoteDelegates={unvoteDelegates}
+				onContinue={onContinue}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+		);
+
+		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -501,7 +549,7 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
@@ -533,7 +581,7 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
@@ -571,7 +619,7 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
 		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
 
@@ -610,7 +658,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(screen.getByTestId("DelegateTable__footer")).toBeTruthy();
+		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
@@ -635,19 +683,19 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateRow__toggle-1")).toBeTruthy();
+		expect(screen.getByTestId("DelegateRow__toggle-1")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("Pagination__next"));
 		});
 
-		expect(screen.getByTestId("DelegateRow__toggle-0")).toBeTruthy();
+		expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("Pagination__previous"));
 		});
 
-		expect(screen.getByTestId("DelegateRow__toggle-1")).toBeTruthy();
+		expect(screen.getByTestId("DelegateRow__toggle-1")).toBeInTheDocument();
 	});
 
 	it("should not show pagination", () => {

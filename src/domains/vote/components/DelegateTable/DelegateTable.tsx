@@ -20,6 +20,7 @@ export const DelegateTable = ({
 	voteDelegates,
 	selectedWallet,
 	votes,
+	resignedDelegateVotes,
 	onContinue,
 	isCompact,
 	subtitle,
@@ -56,6 +57,20 @@ export const DelegateTable = ({
 	}, [hasVotes, maxVotes, selectedVotes]);
 
 	useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), [currentPage]);
+
+	useEffect(() => {
+		if (!resignedDelegateVotes?.length) {
+			return;
+		}
+
+		for (const { wallet } of resignedDelegateVotes) {
+			if (delegateExistsInVotes(selectedUnvotes, wallet!.address())) {
+				continue;
+			}
+
+			toggleUnvotesSelected(wallet!.address());
+		}
+	}, [resignedDelegateVotes, selectedUnvotes]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const toggleUnvotesSelected = (address: string, voteAmount?: number) => {
 		let unvotesInstance = selectedUnvotes;

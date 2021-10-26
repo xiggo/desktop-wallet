@@ -12,12 +12,11 @@ import { useVoteActions } from "domains/vote/hooks/use-vote-actions";
 import { useVoteFilters } from "domains/vote/hooks/use-vote-filters";
 import { useVoteQueryParameters } from "domains/vote/hooks/use-vote-query-parameters";
 import React, { useEffect, useState } from "react";
-import { Trans, useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
 import { assertWallet } from "utils/assertions";
 
 export const Votes = () => {
-	const { t } = useTranslation();
 	const history = useHistory();
 	const { walletId: hasWalletId } = useParams<{ walletId: string }>();
 	const { env } = useEnvironmentContext();
@@ -61,7 +60,7 @@ export const Votes = () => {
 		filteredDelegates,
 		fetchVotes,
 		votes,
-		hasResignedDelegateVotes,
+		resignedDelegateVotes,
 	} = useDelegates({
 		env,
 		profile: activeProfile,
@@ -159,17 +158,17 @@ export const Votes = () => {
 				<Section innerClassName="mb-27">
 					<DelegateTable
 						delegates={filteredDelegates}
-						emptyText={t("VOTE.DELEGATE_TABLE.DELEGATES_NOT_FOUND")}
 						isLoading={isLoadingDelegates}
 						maxVotes={maxVotes!}
 						votes={votes}
+						resignedDelegateVotes={resignedDelegateVotes}
 						unvoteDelegates={unvoteDelegates}
 						voteDelegates={voteDelegates}
 						selectedWallet={selectedWallet}
 						onContinue={navigateToSendVote}
 						isCompact={useCompactTables}
 						subtitle={
-							hasResignedDelegateVotes ? (
+							resignedDelegateVotes?.length ? (
 								<Alert className="mb-6">
 									<div data-testid="Votes__resigned-vote">
 										<Trans

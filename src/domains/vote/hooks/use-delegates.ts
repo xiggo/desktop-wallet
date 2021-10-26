@@ -80,7 +80,7 @@ export const useDelegates = ({
 		[profile],
 	);
 
-	const hasResignedDelegateVotes = useMemo(() => currentVotes.some(({ wallet }) => wallet?.isResignedDelegate()), [
+	const resignedDelegateVotes = useMemo(() => currentVotes.filter(({ wallet }) => wallet?.isResignedDelegate()), [
 		currentVotes,
 	]);
 
@@ -90,8 +90,8 @@ export const useDelegates = ({
 		fetchDelegates,
 		fetchVotes,
 		filteredDelegates,
-		hasResignedDelegateVotes,
 		isLoadingDelegates,
+		resignedDelegateVotes,
 		votes,
 	};
 };

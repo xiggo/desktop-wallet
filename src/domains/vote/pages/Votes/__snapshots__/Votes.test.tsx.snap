@@ -1267,7 +1267,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
@@ -1292,7 +1292,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -1322,20 +1322,20 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-danger-400 hover:text-theme-danger-500"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Current
+                              Unselected
                             </div>
                           </button>
                         </div>
@@ -1610,16 +1610,14 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--unvote"
-                          disabled=""
                         >
-                          0
+                          1
                         </div>
                       </div>
                       <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
-                        disabled=""
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -1647,7 +1645,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
-                          0/1
+                          1/1
                         </div>
                       </div>
                       <div
@@ -1669,9 +1667,8 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                     data-testid="DelegateTable__continue--wrapper"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                       data-testid="DelegateTable__continue-button"
-                      disabled=""
                       type="button"
                     >
                       <div
@@ -7147,7 +7144,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                   >
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jtRNyC font-bold border-2 border-r-0 border-transparent space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="Avatar__AvatarWrapper-sc-18vw8a4-0 fIpXvk -ml-0.5 flex-shrink-0"
@@ -7172,7 +7169,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="w-24"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
                           class="Link__AnchorStyled-sc-ec014t-0 hokOwV group ring-focus"
@@ -7202,20 +7199,20 @@ exports[`Votes should show resigned delegate notice 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 kXCVVq justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 hDDKXm -mr-3 text-theme-danger-400 hover:text-theme-danger-500"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Current
+                              Unselected
                             </div>
                           </button>
                         </div>
@@ -7490,16 +7487,14 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           Unvotes
                         </div>
                         <div
-                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dyhIDe"
+                          class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--unvote"
-                          disabled=""
                         >
-                          0
+                          1
                         </div>
                       </div>
                       <div
-                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 bAlMTe ring-theme-background"
-                        disabled=""
+                        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb DelegateFooterstyles__StyledCircle-sc-waqbhw-2 fJrjua ring-theme-background"
                       >
                         <div
                           class="sc-bdnxRM NjstW"
@@ -7527,7 +7522,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="DelegateFooterstyles__TextWrapper-sc-waqbhw-1 dvkAql"
                           data-testid="DelegateTable__footer--votecombination"
                         >
-                          0/1
+                          1/1
                         </div>
                       </div>
                       <div
@@ -7549,9 +7544,8 @@ exports[`Votes should show resigned delegate notice 1`] = `
                     data-testid="DelegateTable__continue--wrapper"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 fyuekd"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                       data-testid="DelegateTable__continue-button"
-                      disabled=""
                       type="button"
                     >
                       <div
