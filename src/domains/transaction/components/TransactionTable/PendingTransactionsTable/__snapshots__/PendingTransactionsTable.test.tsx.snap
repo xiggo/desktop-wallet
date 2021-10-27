@@ -1058,7 +1058,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                   data-testid="TransactionRowMode"
                 >
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background"
                   >
                     <div
                       class="sc-bdnxRM NjstW"
@@ -1066,31 +1066,35 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                       width="20"
                     >
                       <svg>
-                        sent.svg
+                        received.svg
                       </svg>
                     </div>
                   </div>
                   <div
-                    class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background"
-                    data-testid="TransactionRowRecipientIcon"
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 kkxZqy ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
+                    data-testid="Avatar"
                   >
                     <div
-                      class="sc-bdnxRM NjstW"
-                      height="20"
-                      width="20"
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
                     >
-                      <svg>
-                        multisignature.svg
-                      </svg>
+                      <img
+                        alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                        title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                      />
                     </div>
                   </div>
                 </div>
-                <span
-                  class="font-semibold text-theme-text"
-                  data-testid="TransactionRowRecipientLabel"
+                <div
+                  class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
-                  Multisignature
-                </span>
+                  <span
+                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </td>
             <td
@@ -1119,8 +1123,8 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-end"
               >
                 <div
-                  class="Label-sc-4akkzw-0 dCEjSJ"
-                  color="danger"
+                  class="Label-sc-4akkzw-0 bdvTBm"
+                  color="success"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
@@ -1129,57 +1133,19 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                       class="whitespace-nowrap"
                       data-testid="AmountCrypto"
                     >
-                      - 15 DARK
+                      + 1.1 DARK
                     </span>
                   </div>
                 </div>
               </div>
             </td>
-            <td>
+            <td
+              class="text-theme-secondary-500"
+            >
               <div
-                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
+                class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end"
               >
-                <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
-                  data-testid="TransactionRow__sign"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center space-x-2"
-                  >
-                    <div
-                      class="sc-bdnxRM AFVmm"
-                      height="16"
-                      width="16"
-                    >
-                      <svg>
-                        pencil.svg
-                      </svg>
-                    </div>
-                    <span>
-                      Sign
-                    </span>
-                  </div>
-                </button>
-                <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 bAsnxQ"
-                  data-testid="TableRemoveButton"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center space-x-2"
-                  >
-                    <div
-                      class="sc-bdnxRM NjstW"
-                      height="20"
-                      width="20"
-                    >
-                      <svg>
-                        trash.svg
-                      </svg>
-                    </div>
-                  </div>
-                </button>
+                Waiting...
               </div>
             </td>
           </tr>
@@ -2366,7 +2332,7 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                     width="20"
                   >
                     <svg>
-                      double-arrow-right.svg
+                      circle-check-mark-pencil.svg
                     </svg>
                   </div>
                 </span>
@@ -2398,25 +2364,25 @@ exports[`Signed Transaction Table should show as multiSignature ready 1`] = `
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
                   <div
                     class="flex items-center space-x-2"
                   >
+                    <span>
+                      Send
+                    </span>
                     <div
                       class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
                       <svg>
-                        pencil.svg
+                        double-arrow-right.svg
                       </svg>
                     </div>
-                    <span>
-                      Sign
-                    </span>
                   </div>
                 </button>
                 <button
@@ -3242,7 +3208,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 cDWumh justify-center truncate"
               >
                 <span
-                  class="p-1 text-theme-success-500"
+                  class="p-1 text-theme-secondary-700"
                 >
                   <div
                     class="sc-bdnxRM NjstW"
@@ -3250,7 +3216,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     width="20"
                   >
                     <svg>
-                      circle-check-mark-pencil.svg
+                      pencil.svg
                     </svg>
                   </div>
                 </span>
@@ -3282,25 +3248,25 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 hNhRDD justify-end space-x-2"
               >
                 <button
-                  class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cALXLL"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <span>
-                      Send
-                    </span>
                     <div
                       class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
                       <svg>
-                        double-arrow-right.svg
+                        pencil.svg
                       </svg>
                     </div>
+                    <span>
+                      Sign
+                    </span>
                   </div>
                 </button>
                 <button
@@ -3562,7 +3528,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                 class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dEQQQI justify-center truncate"
               >
                 <span
-                  class="p-1 text-theme-success-500"
+                  class="p-1 text-theme-secondary-700"
                 >
                   <div
                     class="sc-bdnxRM NjstW"
@@ -3570,7 +3536,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     width="20"
                   >
                     <svg>
-                      circle-check-mark-pencil.svg
+                      pencil.svg
                     </svg>
                   </div>
                 </span>
@@ -3609,18 +3575,18 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                   <div
                     class="flex items-center space-x-2"
                   >
-                    <span>
-                      Send
-                    </span>
                     <div
                       class="sc-bdnxRM AFVmm"
                       height="16"
                       width="16"
                     >
                       <svg>
-                        double-arrow-right.svg
+                        pencil.svg
                       </svg>
                     </div>
+                    <span>
+                      Sign
+                    </span>
                   </div>
                 </button>
                 <button

@@ -4,7 +4,6 @@ import { Modal } from "app/components/Modal";
 import { TabPanel, Tabs } from "app/components/Tabs";
 import { useEnvironmentContext, useLedgerContext } from "app/contexts";
 import { useLedgerModelStatus } from "app/hooks";
-import { toasts } from "app/services";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import {
 	SignInput,
@@ -14,7 +13,6 @@ import {
 } from "domains/transaction/hooks";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 
 import { AuthenticationStep } from "../AuthenticationStep";
 import { MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
@@ -39,7 +37,6 @@ export const MultiSignatureDetail = ({
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 	const [activeTransaction, setActiveTransaction] = useState<DTO.ExtendedSignedTransactionData>(transaction);
 
-	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 	const { hasDeviceAvailable, isConnected, connect, transport, ledgerDevice } = useLedgerContext();
 
@@ -94,32 +91,20 @@ export const MultiSignatureDetail = ({
 				await addSignature({ signatory, transactionId: transaction.id(), wallet });
 				await wallet.transaction().sync();
 
-				if (isAwaitingFinalSignature) {
+				if (wallet.transaction().canBeBroadcasted(transaction.id())) {
 					return broadcastMultiSignature();
 				}
 
-				const sentTransaction = wallet.transaction().transaction(transaction.id());
-				setActiveTransaction(sentTransaction);
+				setActiveTransaction(transaction);
 
 				setActiveStep(MultiSignatureDetailStep.SentStep);
 				await persist();
-			} catch {
-				toasts.error(t("TRANSACTION.MULTISIGNATURE.ERROR.FAILED_TO_SIGN"));
+			} catch (error) {
+				setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+				setActiveStep(MultiSignatureDetailStep.ErrorStep);
 			}
 		},
-		[
-			transaction,
-			wallet,
-			t,
-			sign,
-			addSignature,
-			connect,
-			profile,
-			transport,
-			persist,
-			broadcastMultiSignature,
-			isAwaitingFinalSignature,
-		],
+		[transaction, wallet, sign, addSignature, connect, profile, transport, persist, broadcastMultiSignature],
 	);
 
 	const handleSend = () => {

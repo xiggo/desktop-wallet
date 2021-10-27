@@ -27,11 +27,6 @@ describe("Wallet Transactions Hook", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
-			get: () => undefined,
-			id: () => fixtures.transfer,
-			usesMultiSignature: () => false,
-		}));
 	};
 
 	beforeAll(() => {
@@ -134,7 +129,7 @@ describe("Wallet Transactions Hook", () => {
 		jest.useRealTimers();
 	});
 
-	it("should sync pending transactions", async () => {
+	it("should sync pending transfers", async () => {
 		mockPendingTransfers(wallet);
 
 		const signatory = await wallet.signatory().multiSignature({
@@ -185,7 +180,7 @@ describe("Wallet Transactions Hook", () => {
 		jest.clearAllMocks();
 	});
 
-	it("should not sync pending transactions if wallet has not been fully restored", async () => {
+	it("should not sync pending transfers if wallet has not been fully restored", async () => {
 		mockPendingTransfers(wallet);
 
 		const spySync = jest.spyOn(wallet.transaction(), "sync");
@@ -222,17 +217,9 @@ describe("Wallet Transactions Hook", () => {
 	});
 
 	it("should sync pending multiSignature transactions", async () => {
-		jest.spyOn(wallet.transaction(), "pending").mockReturnValue({
-			[fixtures.transfer.id()]: fixtures.transfer,
-		});
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
-			get: () => undefined,
-			id: () => fixtures.transfer,
-			usesMultiSignature: () => true,
-		}));
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		mockPendingTransfers(wallet);
+		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 
 		let allPendingTransactions: PendingTransaction[];
 		const Component = () => {
@@ -241,13 +228,13 @@ describe("Wallet Transactions Hook", () => {
 
 			useEffect(() => {
 				syncPending();
-			}, [syncPending]);
+			}, []);
 			return <span>{pendingTransactions.length}</span>;
 		};
 
 		render(<Component />);
 
-		await waitFor(() => expect(allPendingTransactions).toHaveLength(1));
+		await waitFor(() => expect(allPendingTransactions).toHaveLength(2));
 	});
 
 	it("should prevent from rendering transaction if not found in wallet", async () => {

@@ -22,12 +22,6 @@ describe("useTransactionTypes", () => {
 		expect(Object.keys(result.current.types)).toEqual(["core", "magistrate"]);
 	});
 
-	it("should get query params by transaction type", () => {
-		const { result } = renderHook(() => useTransactionTypes());
-
-		expect(result.current.getQueryParamsByType("transfer")).toEqual({ type: 0, typeGroup: 1 });
-	});
-
 	it("should filter only supported transaction types from wallets without magistrate", () => {
 		const profile = env.profiles().first();
 		const { result } = renderHook(() => useTransactionTypes({ wallets: [profile.wallets().first()] }));

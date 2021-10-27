@@ -31,8 +31,6 @@ import {
 
 import { WalletDetails } from "./WalletDetails";
 
-jest.setTimeout(10_000);
-
 const history = createMemoryHistory();
 let walletUrl: string;
 
@@ -101,11 +99,7 @@ describe("WalletDetails", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
 		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
-			get: () => undefined,
-			id: () => fixtures.transfer,
-			usesMultiSignature: () => false,
-		}));
+		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 	};
 
 	beforeAll(async () => {
@@ -175,6 +169,9 @@ describe("WalletDetails", () => {
 				};
 			})
 			.persist();
+
+		// Mock musig server requests
+		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
 	beforeEach(async () => {
@@ -229,10 +226,6 @@ describe("WalletDetails", () => {
 
 	it("should remove pending multisignature transactions", async () => {
 		mockPendingTransfers(wallet);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
-			id: () => fixtures.transfer,
-			usesMultiSignature: () => true,
-		}));
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
@@ -276,10 +269,6 @@ describe("WalletDetails", () => {
 
 	it("should render pending multiSignatures and view details in modal", async () => {
 		mockPendingTransfers(wallet);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
-			id: () => fixtures.transfer,
-			usesMultiSignature: () => true,
-		}));
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);

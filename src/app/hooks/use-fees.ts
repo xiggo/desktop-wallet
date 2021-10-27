@@ -41,10 +41,15 @@ export const useFees = (profile: Contracts.IProfile) => {
 		publicKeys.splice(1, 1, publicKey);
 
 		return {
-			mandatoryKeys: [],
+			// LSK
+			mandatoryKeys: publicKeys,
+
+			// TODO: handle fields in sdk
+			// ARK
 			min: +minParticipants,
+
 			numberOfSignatures: +minParticipants,
-			optionalKeys: publicKeys,
+			optionalKeys: [],
 			publicKeys,
 			senderPublicKey: publicKey,
 		};

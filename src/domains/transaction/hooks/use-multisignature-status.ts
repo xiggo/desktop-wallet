@@ -22,20 +22,11 @@ export interface MultiSignatureStatus {
 export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => {
 	const { t } = useTranslation();
 
-	const isMultiSignatureReady = useMemo(() => {
-		try {
-			return wallet.coin().multiSignature().isMultiSignatureReady(transaction.data());
-		} catch {
-			return false;
-		}
-	}, [wallet, transaction]);
-
 	const canBeBroadcasted = useMemo(
 		() =>
 			wallet.transaction().canBeBroadcasted(transaction.id()) &&
-			!wallet.transaction().isAwaitingConfirmation(transaction.id()) &&
-			isMultiSignatureReady,
-		[wallet, transaction, isMultiSignatureReady],
+			!wallet.transaction().isAwaitingConfirmation(transaction.id()),
+		[wallet, transaction],
 	);
 
 	const canBeSigned = useMemo(() => {
@@ -76,7 +67,7 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 			};
 		}
 
-		if (isMultiSignatureReady) {
+		if (wallet.transaction().canBeBroadcasted(transaction.id())) {
 			return {
 				className: "text-theme-success-500",
 				icon: "DoubleArrowRight",
@@ -91,9 +82,9 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 			label: t("TRANSACTION.MULTISIGNATURE.AWAITING_FINAL_SIGNATURE"),
 			value: "isAwaitingFinalSignature",
 		};
-	}, [wallet, transaction, isMultiSignatureReady, t]);
+	}, [wallet, transaction, t]);
 
 	const isAwaitingFinalSignature = status.value === "isAwaitingFinalSignature";
 
-	return { canBeBroadcasted, canBeSigned, isAwaitingFinalSignature, isMultiSignatureReady, status };
+	return { canBeBroadcasted, canBeSigned, isAwaitingFinalSignature, status };
 };
