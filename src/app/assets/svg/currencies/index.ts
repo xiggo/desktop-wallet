@@ -20,6 +20,7 @@ import { ReactComponent as TRX } from "./trx.svg";
 import { ReactComponent as WAX } from "./wax.svg";
 import { ReactComponent as WBI } from "./wbi.svg";
 import { ReactComponent as XLM } from "./xlm.svg";
+import { ReactComponent as XQR } from "./xqr.svg";
 import { ReactComponent as XRP } from "./xrp.svg";
 import { ReactComponent as ZIL } from "./zil.svg";
 
@@ -49,6 +50,7 @@ export const Currencies: any = {
 	WBI,
 	XEGLD: EGLD,
 	XLM,
+	XQR,
 	XRP,
 	ZIL,
 };
