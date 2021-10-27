@@ -16,7 +16,7 @@ interface FilterTransactionsProperties {
 export const FilterTransactions = memo(
 	({ className, onSelect, defaultSelected, wallets, isDisabled }: FilterTransactionsProperties) => {
 		const { t } = useTranslation();
-		const { types, getLabel, hasMagistrationTypesEnabled } = useTransactionTypes({ wallets });
+		const { types, getLabel, canViewMagistrate } = useTransactionTypes({ wallets });
 
 		const allOptions: DropdownOptionGroup[] = useMemo(() => {
 			const options: DropdownOptionGroup[] = [
@@ -32,7 +32,7 @@ export const FilterTransactions = memo(
 				},
 			];
 
-			if (hasMagistrationTypesEnabled) {
+			if (canViewMagistrate) {
 				options.push({
 					hasDivider: true,
 					key: "magistrate",
@@ -46,7 +46,7 @@ export const FilterTransactions = memo(
 			}
 
 			return options;
-		}, [getLabel, types, t, hasMagistrationTypesEnabled]);
+		}, [getLabel, types, t, canViewMagistrate]);
 
 		const [selectedOption, setSelectedOption] = useState<DropdownOption>(
 			defaultSelected || allOptions[0].options[0],

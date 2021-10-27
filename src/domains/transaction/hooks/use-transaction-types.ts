@@ -75,35 +75,28 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		},
 	};
 
-	const getIcon = (type: string): string => transactionTypes[type].icon;
-	const getLabel = (type: string): string => transactionTypes[type].label;
-
-	const availableTypes = useMemo(() => {
-		const allSupportedTypes = wallets.reduce(
-			(all: string[], wallet: Contracts.IReadWriteWallet) => [
-				...all,
-				...(wallet.transactionTypes() as string[]).filter((type) => type !== MagistrateTransactionType),
-			],
-			[],
-		);
-
-		return uniq(allSupportedTypes);
-	}, [wallets]);
-
-	const hasMagistrationTypesEnabled = useMemo(
-		() =>
-			wallets.some((wallet) =>
-				(wallet.transactionTypes() as string[]).filter((type) => type === MagistrateTransactionType),
-			),
-		[wallets],
-	);
-
 	return {
-		getIcon,
-		getLabel,
-		hasMagistrationTypesEnabled,
+		canViewMagistrate: useMemo(
+			() =>
+				wallets.some((wallet) =>
+					(wallet.transactionTypes() as string[]).filter((type) => type === MagistrateTransactionType),
+				),
+			[wallets],
+		),
+		getIcon: (type: string): string => transactionTypes[type].icon,
+		getLabel: (type: string): string => transactionTypes[type].label,
 		types: {
-			core: availableTypes,
+			core: useMemo(() => {
+				const allSupportedTypes = wallets.reduce(
+					(all: string[], wallet: Contracts.IReadWriteWallet) => [
+						...all,
+						...(wallet.transactionTypes() as string[]).filter((type) => type !== MagistrateTransactionType),
+					],
+					[],
+				);
+
+				return uniq(allSupportedTypes);
+			}, [wallets]),
 			magistrate: [MagistrateTransactionType],
 		},
 	};
