@@ -157,7 +157,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				limit: LIMIT,
 			};
 
-			const queryParameters = transactionType ? { ...defaultQuery, ...transactionType } : defaultQuery;
+			const queryParameters = transactionType ? { ...defaultQuery, type: transactionType } : defaultQuery;
 
 			// @ts-ignore
 			return profile.transactionAggregate()[mode](queryParameters);

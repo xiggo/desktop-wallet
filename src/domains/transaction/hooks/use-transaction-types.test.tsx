@@ -27,15 +27,15 @@ describe("useTransactionTypes", () => {
 		const { result } = renderHook(() => useTransactionTypes({ wallets: [profile.wallets().first()] }));
 
 		expect(result.current.types.core).toEqual([
-			"delegate-registration",
-			"delegate-resignation",
-			"htlc-claim",
-			"htlc-lock",
-			"htlc-refund",
+			"delegateRegistration",
+			"delegateResignation",
+			"htlcClaim",
+			"htlcLock",
+			"htlcRefund",
 			"ipfs",
-			"multi-payment",
-			"multi-signature",
-			"second-signature",
+			"multiPayment",
+			"multiSignature",
+			"secondSignature",
 			"transfer",
 			"vote",
 		]);

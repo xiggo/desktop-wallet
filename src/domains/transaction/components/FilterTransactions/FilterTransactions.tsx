@@ -16,7 +16,7 @@ interface FilterTransactionsProperties {
 export const FilterTransactions = memo(
 	({ className, onSelect, defaultSelected, wallets, isDisabled }: FilterTransactionsProperties) => {
 		const { t } = useTranslation();
-		const { types, getLabel, getQueryParamsByType, hasMagistrationTypesEnabled } = useTransactionTypes({ wallets });
+		const { types, getLabel, hasMagistrationTypesEnabled } = useTransactionTypes({ wallets });
 
 		const allOptions: DropdownOptionGroup[] = useMemo(() => {
 			const options: DropdownOptionGroup[] = [
@@ -54,7 +54,7 @@ export const FilterTransactions = memo(
 
 		const handleSelect = (selectedOption: DropdownOption) => {
 			setSelectedOption(selectedOption);
-			onSelect?.(selectedOption, getQueryParamsByType(String(selectedOption.value)));
+			onSelect?.(selectedOption, selectedOption.value);
 		};
 		return (
 			<div className={className} data-testid="FilterTransactions">

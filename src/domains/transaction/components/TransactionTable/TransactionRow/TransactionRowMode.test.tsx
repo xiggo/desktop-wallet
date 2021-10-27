@@ -70,13 +70,13 @@ describe("TransactionRowMode", () => {
 
 describe("BaseTransactionRowMode", () => {
 	it("should render", () => {
-		render(<BaseTransactionRowMode transaction={TransactionFixture} />);
+		render(<BaseTransactionRowMode type="transfer" transaction={TransactionFixture} />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
 	});
 
 	it("should render compact", () => {
-		render(<BaseTransactionRowMode transaction={TransactionFixture} isCompact />);
+		render(<BaseTransactionRowMode type="transfer" transaction={TransactionFixture} isCompact />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
 	});
