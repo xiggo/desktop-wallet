@@ -92,4 +92,28 @@ describe("Signatures", () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it("should render with waiting badge", async () => {
+		jest.spyOn(multisignatureTransactionMock, "get").mockImplementation((key) => {
+			if (key === "multiSignature") {
+				return { publicKeys: [wallet.publicKey(), wallet2.publicKey()] };
+			}
+
+			if (key === "signatures") {
+				return []; // Only checking lengths
+			}
+		});
+		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+
+		const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
+
+		await waitFor(() => expect(screen.getAllByTestId("Signatures__participant-status")).toHaveLength(2));
+
+		expect(screen.getAllByTestId("Signatures__signed-badge")).toHaveLength(2);
+
+		expect(container).toMatchSnapshot();
+
+		jest.restoreAllMocks();
+	});
 });

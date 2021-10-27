@@ -209,7 +209,11 @@ describe("Transactions", () => {
 	});
 
 	it("should filter by type and see empty screen", async () => {
-		const emptyProfile = env.profiles().create(MNEMONICS[0]);
+		const emptyProfile = env.profiles().create("empty screen profile");
+		const transactionsAggregateMock = jest.spyOn(emptyProfile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		});
 
 		emptyProfile.wallets().push(
 			await emptyProfile.walletFactory().fromMnemonicWithBIP39({
@@ -242,6 +246,7 @@ describe("Transactions", () => {
 		});
 
 		await waitFor(() => expect(getByTestId("EmptyBlock")).toBeInTheDocument());
+		transactionsAggregateMock.mockRestore();
 	});
 
 	it("should open detail modal on transaction row click", async () => {

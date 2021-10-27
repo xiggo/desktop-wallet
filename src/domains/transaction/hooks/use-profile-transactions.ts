@@ -38,6 +38,17 @@ interface ProfileTransactionsProperties {
 	limit?: number;
 }
 
+interface TransactionAggregateIdentifiers {
+	type: string;
+	value: string;
+}
+
+interface TransactionAggregateQueryParameters {
+	identifiers: TransactionAggregateIdentifiers[];
+	limit: number;
+	type?: string;
+}
+
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
@@ -128,7 +139,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			setState({
 				// Don't set isLoading when there are no wallets
 				activeMode,
-
 				activeTransactionType,
 				isLoadingMore: false,
 				isLoadingTransactions: hasWallets,
@@ -149,7 +159,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				profile.transactionAggregate().flush(mode);
 			}
 
-			const defaultQuery = {
+			const queryParameters: TransactionAggregateQueryParameters = {
 				identifiers: wallets.map((wallet) => ({
 					type: "address",
 					value: wallet.address(),
@@ -157,7 +167,9 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				limit: LIMIT,
 			};
 
-			const queryParameters = transactionType ? { ...defaultQuery, type: transactionType } : defaultQuery;
+			if (transactionType && transactionType !== "all") {
+				queryParameters.type = transactionType;
+			}
 
 			// @ts-ignore
 			return profile.transactionAggregate()[mode](queryParameters);

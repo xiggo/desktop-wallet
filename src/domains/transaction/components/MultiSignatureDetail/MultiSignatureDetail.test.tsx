@@ -602,6 +602,71 @@ describe("MultiSignatureDetail", () => {
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument());
 	});
 
+	it("should sign transaction and broadcast in one action", async () => {
+		mockPendingTransfers(wallet);
+		jest.spyOn(wallet, "actsWithMnemonic").mockImplementation(() => true);
+		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
+		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
+		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
+
+		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast");
+		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
+
+		const unsubscribe = jest.fn();
+		let observer: Observer<any>;
+
+		const transport = getDefaultLedgerTransport();
+		jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<LedgerProvider transport={transport}>
+					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
+				</LedgerProvider>
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}`],
+			},
+		);
+
+		act(() => {
+			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
+		});
+
+		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("Paginator__sign"));
+		});
+
+		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument());
+
+		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
+
+		act(() => {
+			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+				target: {
+					value: passphrase,
+				},
+			});
+		});
+
+		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
+
+		act(() => {
+			fireEvent.click(screen.getByTestId("Paginator__continue"));
+		});
+
+		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
+		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
+
+		jest.restoreAllMocks();
+	});
+
 	it("should sign transaction after authentication page", async () => {
 		mockPendingTransfers(wallet);
 		jest.spyOn(wallet, "actsWithMnemonic").mockImplementation(() => true);
