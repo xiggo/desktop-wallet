@@ -8,8 +8,8 @@ import { useTranslation } from "react-i18next";
 
 interface SelectFileStepProperties {
 	fileFormat: string;
-	onFileFormatChange?: (fileFormat: string) => void;
-	onSelect?: (file: ReadableFile) => void;
+	onFileFormatChange: (fileFormat: string) => void;
+	onSelect: (file: ReadableFile) => void;
 	onBack?: () => void;
 }
 
@@ -18,7 +18,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 
 	const handleBack = () => {
 		if (fileFormat === ".json") {
-			return onFileFormatChange?.(".dwe");
+			return onFileFormatChange(".dwe");
 		}
 
 		onBack?.();
@@ -38,7 +38,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 					<span>{t("PROFILE.IMPORT.SELECT_FILE_STEP.LEGACY_IMPORT")} </span>
 					<button
 						type="button"
-						onClick={() => onFileFormatChange?.(".json")}
+						onClick={() => onFileFormatChange(".json")}
 						title={t("PROFILE.IMPORT.SELECT_FILE_STEP.CLICK_HERE")}
 						data-testid="SelectFileStep__change-file"
 						className="relative font-semibold cursor-pointer focus:outline-none link ring-focus"

@@ -1,57 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SelectFile should render 1`] = `
-<div>
-  <div
-    class="p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
-    data-testid="SelectFile"
-  >
-    <div
-      class="h-full flex flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
-      data-testid="SelectFile__drop-zone"
-    >
-      <div
-        class="sc-bdnxRM cTrAIK"
-        height="40"
-        width="40"
-      >
-        <svg>
-          extension-dwe.svg
-        </svg>
-      </div>
-      <div
-        class="mt-8 space-x-px"
-      >
-        <span
-          class="font-semibold"
-        >
-          Drag & Drop or
-           
-        </span>
-        <button
-          class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
-          data-ring-focus-margin="-m-1"
-          data-testid="SelectFile__browse-files"
-          title="Click here to upload"
-          type="button"
-        >
-          Browse Files
-        </button>
-      </div>
-      <div
-        class="mt-2 text-sm font-semibold text-theme-secondary-500"
-      >
-        Supported format is .dwe
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`SelectFile should render with dwe file format 1`] = `
 <div>
   <div
-    class="p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="relative p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
     data-testid="SelectFile"
   >
     <div
@@ -99,7 +51,7 @@ exports[`SelectFile should render with dwe file format 1`] = `
 exports[`SelectFile should render with json file format 1`] = `
 <div>
   <div
-    class="p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+    class="relative p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
     data-testid="SelectFile"
   >
     <div

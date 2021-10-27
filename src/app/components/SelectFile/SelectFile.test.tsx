@@ -1,7 +1,9 @@
+import { renderHook } from "@testing-library/react-hooks";
 import electron from "electron";
 import os from "os";
 import React from "react";
-import { act, fireEvent, render, waitFor } from "utils/testing-library";
+import { useTranslation } from "react-i18next";
+import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { SelectFile } from "./SelectFile";
 
@@ -11,10 +13,11 @@ jest.mock("fs", () => ({
 }));
 
 describe("SelectFile", () => {
-	it("should render", () => {
-		const { container } = render(<SelectFile fileFormat=".dwe" />);
+	let t: any;
 
-		expect(container).toMatchSnapshot();
+	beforeAll(() => {
+		const { result } = renderHook(() => useTranslation());
+		t = result.current.t;
 	});
 
 	it("should render with dwe file format", () => {
@@ -36,10 +39,9 @@ describe("SelectFile", () => {
 		}));
 
 		const onSelect = jest.fn();
-		const { getByTestId } = render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
-		act(() => {
-			fireEvent.click(getByTestId("SelectFile__browse-files"));
-		});
+		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
+
+		fireEvent.click(screen.getByTestId("SelectFile__browse-files"));
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith({
 			defaultPath: os.homedir(),
@@ -52,69 +54,93 @@ describe("SelectFile", () => {
 	});
 
 	it("should change background when dragging over drop zone", async () => {
-		const { getByTestId } = render(<SelectFile fileFormat=".json" />);
+		render(<SelectFile fileFormat=".json" />);
 
-		expect(getByTestId("SelectFile__drop-zone")).toHaveClass("bg-theme-primary-50 dark:bg-theme-secondary-800");
+		expect(screen.getByTestId("SelectFile__drop-zone")).toHaveClass(
+			"bg-theme-primary-50 dark:bg-theme-secondary-800",
+		);
 
-		act(() => {
-			fireEvent.dragEnter(getByTestId("SelectFile__drop-zone"), {
-				dataTransfer: {
-					files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
-				},
-			});
+		fireEvent.dragEnter(screen.getByTestId("SelectFile__drop-zone"), {
+			dataTransfer: {
+				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+			},
 		});
 
 		await waitFor(() =>
-			expect(getByTestId("SelectFile__drop-zone")).toHaveClass("bg-theme-primary-100 dark:bg-black"),
+			expect(screen.getByTestId("SelectFile__drop-zone")).toHaveClass("bg-theme-primary-100 dark:bg-black"),
 		);
 
-		act(() => {
-			fireEvent.dragLeave(getByTestId("SelectFile__drop-zone"), {
-				dataTransfer: {
-					files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
-				},
-			});
+		fireEvent.dragLeave(screen.getByTestId("SelectFile__drop-zone"), {
+			dataTransfer: {
+				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+			},
 		});
 	});
 
 	it("should handle file drop", async () => {
 		//@ts-ignore
 		const onSelect = jest.fn();
-		const { getByTestId } = render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
+		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
-		act(() => {
-			fireEvent.dragOver(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
-				},
-			});
+		fireEvent.dragOver(screen.getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+			},
 		});
 
-		act(() => {
-			fireEvent.dragEnter(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
-				},
-			});
+		fireEvent.dragEnter(screen.getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+			},
 		});
 
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
-				},
-			});
+		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+			},
 		});
 
-		await waitFor(() => expect(onSelect).toHaveBeenCalled());
-
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [],
-				},
-			});
-		});
 		await waitFor(() => expect(onSelect).toHaveBeenCalledTimes(1));
+	});
+
+	it("should show error if the dropped file has wrong type", () => {
+		const fileFormat = ".json";
+
+		const { container } = render(<SelectFile fileFormat={fileFormat} />);
+
+		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "sample-export.dwe", path: "path/to/sample-export.dwe" }],
+			},
+		});
+
+		const errorHtml = t("PROFILE.IMPORT.SELECT_FILE_STEP.ERRORS.NOT_SUPPORTED", { fileFormat });
+
+		expect(container).toContainHTML(errorHtml);
+
+		fireEvent.click(screen.getByRole("button"));
+
+		expect(container).not.toContainHTML(errorHtml);
+	});
+
+	it("should show error if multiple files are dropped", () => {
+		const { container } = render(<SelectFile fileFormat=".json" />);
+
+		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [
+					{ name: "sample-export-1.json", path: "path/to/sample-export-1.json" },
+					{ name: "sample-export-2.json", path: "path/to/sample-export-2.json" },
+				],
+			},
+		});
+
+		const errorHtml = t("PROFILE.IMPORT.SELECT_FILE_STEP.ERRORS.TOO_MANY", { fileCount: 2 });
+
+		expect(container).toContainHTML(errorHtml);
+
+		fireEvent.click(screen.getByRole("button"));
+
+		expect(container).not.toContainHTML(errorHtml);
 	});
 });

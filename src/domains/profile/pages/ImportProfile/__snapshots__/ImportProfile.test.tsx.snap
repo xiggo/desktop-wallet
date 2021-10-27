@@ -1237,7 +1237,7 @@ exports[`ImportProfile should render first step 1`] = `
                     </div>
                   </div>
                   <div
-                    class="p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+                    class="relative p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     data-testid="SelectFile"
                   >
                     <div
