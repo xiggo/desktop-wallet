@@ -12,6 +12,7 @@ import { Toggle } from "app/components/Toggle";
 import { useEnvironmentContext } from "app/contexts";
 import { useProfileRestore, useTheme, useValidation } from "app/hooks";
 import { useCurrencyOptions } from "app/hooks/use-currency-options";
+import { DEFAULT_MARKET_PROVIDER } from "domains/profile/data";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -24,7 +25,8 @@ export const CreateProfile = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 	const { restoreProfileConfig } = useProfileRestore();
-	const currencyOptions = useCurrencyOptions();
+
+	const currencyOptions = useCurrencyOptions(DEFAULT_MARKET_PROVIDER);
 
 	const { watch, register, formState, setValue, trigger } = form;
 	const { name, confirmPassword, isDarkMode, password } = watch(

@@ -47,7 +47,6 @@ export const GeneralSettings: React.FC = () => {
 
 	const history = useHistory();
 	const { t } = useTranslation();
-	const currencyOptions = useCurrencyOptions();
 
 	const getDefaultValues = (): Partial<GeneralSettingsState> => {
 		const settings = profile.settings();
@@ -79,7 +78,9 @@ export const GeneralSettings: React.FC = () => {
 	const { register, watch, formState, setValue, reset } = form;
 	const { isValid, isSubmitting, isDirty, dirtyFields } = formState;
 
-	const { name, avatar, useTestNetworks } = watch();
+	const { name, avatar, useTestNetworks, marketProvider, exchangeCurrency } = watch();
+
+	const currencyOptions = useCurrencyOptions(marketProvider);
 
 	useEffect(() => {
 		const initializeForm = () => {
@@ -330,7 +331,7 @@ export const GeneralSettings: React.FC = () => {
 										}).toString(),
 									})}
 									options={currencyOptions}
-									defaultValue={getDefaultValues().exchangeCurrency}
+									defaultValue={exchangeCurrency}
 									onChange={(exchangeCurrency: any) =>
 										setValue("exchangeCurrency", exchangeCurrency?.value, {
 											shouldDirty: true,
@@ -375,13 +376,27 @@ export const GeneralSettings: React.FC = () => {
 										}).toString(),
 									})}
 									options={PlatformSdkChoices.marketProviders}
-									defaultValue={getDefaultValues().marketProvider}
-									onChange={(marketProvider: any) =>
+									defaultValue={marketProvider}
+									onChange={(marketProvider: any) => {
+										if (marketProvider?.unsupportedCurrencies?.includes(exchangeCurrency)) {
+											toasts.warning(
+												t("SETTINGS.GENERAL.UNSUPPORTED_CURRENCY", {
+													currency: exchangeCurrency,
+													provider: marketProvider.label,
+												}),
+											);
+
+											setValue("exchangeCurrency", "USD", {
+												shouldDirty: true,
+												shouldValidate: true,
+											});
+										}
+
 										setValue("marketProvider", marketProvider?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
-										})
-									}
+										});
+									}}
 								/>
 							</FormField>
 

@@ -12,6 +12,7 @@ import { useTheme, useValidation } from "app/hooks";
 import { useCurrencyOptions } from "app/hooks/use-currency-options";
 import { ReadableFile } from "app/hooks/use-files";
 import { FilePreview } from "domains/profile/components/FilePreview";
+import { DEFAULT_MARKET_PROVIDER } from "domains/profile/data";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -36,7 +37,8 @@ const CreateProfileForm = ({
 	shouldValidate = false,
 }: CreateProfileFormProperties) => {
 	const { t } = useTranslation();
-	const currencyOptions = useCurrencyOptions();
+
+	const currencyOptions = useCurrencyOptions(DEFAULT_MARKET_PROVIDER);
 
 	const form = useForm<any>({
 		defaultValues: {

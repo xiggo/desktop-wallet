@@ -108,6 +108,7 @@ export const translations: { [key: string]: any } = {
 		SUBTITLE: "Customize your wallet to suit your needs.",
 		SUCCESS: "Your profile settings have been updated",
 		TITLE: "Profile Settings",
+		UNSUPPORTED_CURRENCY: "{{currency}} is not supported by {{provider}}. Currency was changed to USD.",
 	},
 
 	MODAL_DEVELOPMENT_NETWORK: {

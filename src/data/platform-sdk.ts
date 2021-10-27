@@ -28,12 +28,13 @@ export const PlatformSdkChoices = {
 			{ label: "MXN (MX$)", value: "MXN" },
 			{ label: "RUB (₽)", value: "RUB" },
 			{ label: "USD ($)", value: "USD" },
+			{ label: "VND (₫)", value: "VND" },
 		],
 	},
 	languages: [{ label: "English", value: "en-US" }],
 	marketProviders: [
-		{ label: "CoinGecko", value: "coingecko" },
-		{ label: "CryptoCompare", value: "cryptocompare" },
+		{ label: "CoinGecko", unsupportedCurrencies: [], value: "coingecko" },
+		{ label: "CryptoCompare", unsupportedCurrencies: ["VND"], value: "cryptocompare" },
 	],
 	passphraseLanguages: [
 		{ label: "Chinese Simplified", value: "chinese_simplified" },

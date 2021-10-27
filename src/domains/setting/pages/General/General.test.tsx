@@ -2,6 +2,7 @@
 import { Contracts } from "@payvo/profiles";
 import { within } from "@testing-library/react";
 import { buildTranslations } from "app/i18n/helpers";
+import { toasts } from "app/services";
 import { GeneralSettings } from "domains/setting/pages";
 import electron from "electron";
 import { createHashHistory } from "history";
@@ -599,5 +600,79 @@ describe("General Settings", () => {
 		await act(async () => {
 			fireEvent.click(screen.getByTestId("ResetProfile__submit-button"));
 		});
+	});
+
+	it("should default to USD if market provider does not support the selected currency", async () => {
+		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		renderWithRouter(
+			<Route path="/profiles/:profileId/settings">
+				<GeneralSettings />
+			</Route>,
+			{
+				routes: [`/profiles/${profile.id()}/settings`],
+			},
+		);
+
+		const getSelectInput = (type: "MARKET_PROVIDER" | "CURRENCY") =>
+			screen.getByPlaceholderText(
+				translations.COMMON.SELECT_OPTION.replace(`{{option}}`, translations.SETTINGS.GENERAL.PERSONAL[type]),
+			);
+
+		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
+		expect(getSelectInput("CURRENCY")).toHaveValue("BTC (Ƀ)");
+
+		fireEvent.click(
+			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
+		);
+
+		await waitFor(() => expect(screen.getByText("EUR (€)")).toBeInTheDocument());
+
+		expect(() => screen.getByText("VND (₫)")).toThrow();
+
+		fireEvent.click(screen.getByText("EUR (€)"));
+
+		await waitFor(() => expect(getSelectInput("CURRENCY")).toHaveValue("EUR (€)"));
+
+		fireEvent.click(
+			within((getSelectInput("MARKET_PROVIDER") as any).parentNode.parentNode).getByTestId(
+				"SelectDropdown__caret",
+			),
+		);
+
+		fireEvent.click(screen.getByText("CoinGecko"));
+
+		await waitFor(() => expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CoinGecko"));
+
+		fireEvent.click(
+			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
+		);
+
+		await waitFor(() => expect(screen.getByText("VND (₫)")).toBeInTheDocument());
+
+		fireEvent.click(screen.getByText("VND (₫)"));
+
+		await waitFor(() => expect(getSelectInput("CURRENCY")).toHaveValue("VND (₫)"));
+
+		fireEvent.click(
+			within((getSelectInput("MARKET_PROVIDER") as any).parentNode.parentNode).getByTestId(
+				"SelectDropdown__caret",
+			),
+		);
+
+		fireEvent.click(screen.getByText("CryptoCompare"));
+
+		await waitFor(() => expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare"));
+
+		expect(toastSpy).toHaveBeenCalledWith(
+			translations.SETTINGS.GENERAL.UNSUPPORTED_CURRENCY.replace("{{currency}}", "VND").replace(
+				"{{provider}}",
+				"CryptoCompare",
+			),
+		);
+
+		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
+
+		toastSpy.mockRestore();
 	});
 });
