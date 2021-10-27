@@ -53,4 +53,5 @@ export const Currencies: any = {
 	XQR,
 	XRP,
 	ZIL,
+	dXQR: XQR,
 };
