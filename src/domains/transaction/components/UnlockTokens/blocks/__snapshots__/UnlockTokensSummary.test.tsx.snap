@@ -28,7 +28,7 @@ exports[`UnlockTokensSummary should render 1`] = `
     <p
       class="text-theme-secondary-text"
     >
-      Your balance unlock transaction was successfully sent.
+      Your balance unlock transaction has been sent successfully.
     </p>
     <div>
       <div

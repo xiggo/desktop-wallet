@@ -28,7 +28,7 @@ exports[`MultiSignatureSuccessful should handle empty wallet and transation prop
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
+      Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
       <div />
@@ -65,7 +65,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
+      Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
       <div
@@ -531,7 +531,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
+      Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
       <div
@@ -997,7 +997,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
+      Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
       <div
@@ -1355,7 +1355,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
+      Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
       <div

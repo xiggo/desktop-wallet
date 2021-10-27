@@ -1670,7 +1670,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                 <p
                   class="text-theme-secondary-text"
                 >
-                  Your balance unlock transaction was successfully sent.
+                  Your balance unlock transaction has been sent successfully.
                 </p>
                 <div>
                   <div

@@ -915,7 +915,7 @@ exports[`SendIpfs should render summary step 1`] = `
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
+      Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
       <div
@@ -1695,7 +1695,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -2267,7 +2267,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -2841,7 +2841,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -3413,7 +3413,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div

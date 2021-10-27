@@ -50,7 +50,7 @@ export const translations: { [key: string]: any } = {
 	MODAL_RESET_PROFILE: {
 		DESCRIPTION:
 			"By performing this action, all of your Profile settings will be restored to default. This won't delete your wallets or plugins. This action cannot be undone. Do you want to reset your settings?",
-		SUCCESS: "Your profile was reset successfully",
+		SUCCESS: "Your profile has been reset successfully",
 		TITLE: "Reset Profile Settings",
 	},
 	MODAL_SELECT_SENDER: {

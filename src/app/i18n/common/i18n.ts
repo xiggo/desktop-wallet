@@ -249,7 +249,7 @@ export const translations: { [key: string]: any } = {
 	SAVE: "Save",
 	SAVE_FILE: {
 		ERROR: "Could not save file: {{error}}",
-		SUCCESS: "<bold>{{filePath}}</bold> was saved successfully",
+		SUCCESS: "<bold>{{filePath}}</bold> has been saved successfully",
 	},
 	SAVE_FINISH: "Save & Finish",
 	SEARCH: "Search",

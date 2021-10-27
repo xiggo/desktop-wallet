@@ -320,7 +320,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -7737,7 +7737,7 @@ exports[`SendTransfer should render summary step 1`] = `
     <p
       class="text-theme-secondary-text"
     >
-      Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
+      Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
     </p>
     <div>
       <div
@@ -10083,7 +10083,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -10748,7 +10748,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -11413,7 +11413,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -12078,7 +12078,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -13081,7 +13081,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -13746,7 +13746,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div
@@ -14411,7 +14411,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
+                      Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </p>
                     <div>
                       <div

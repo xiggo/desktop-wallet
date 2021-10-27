@@ -64,7 +64,7 @@ export const translations: { [key: string]: any } = {
 		DESCRIPTION:
 			"Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.",
 		LOADING_MESSAGE: "Waiting for confirmation …",
-		REJECTED: "The operation was rejected by the user",
+		REJECTED: "The operation has been rejected by the user",
 		TITLE: "Confirm Your Transaction",
 	},
 	LINK_TYPES: {
@@ -127,7 +127,7 @@ export const translations: { [key: string]: any } = {
 			TITLE: "Multisignature Passphrase",
 		},
 		STEP_3: {
-			DESCRIPTION: "Your signature was successfully confirmed and sent.",
+			DESCRIPTION: "Your signature has been confirmed and sent successfully.",
 			TITLE: "Transaction Sent",
 		},
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
@@ -281,9 +281,9 @@ export const translations: { [key: string]: any } = {
 	SUCCESS: {
 		CREATED: "Transaction Created",
 		DESCRIPTION:
-			"Your transaction was successfully sent. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:",
+			"Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:",
 		MUSIG_DESCRIPTION:
-			"Your transaction was successfully created. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:",
+			"Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:",
 		TITLE: "Transaction Sent",
 	},
 	TIMESTAMP: "Timestamp",
@@ -329,7 +329,7 @@ export const translations: { [key: string]: any } = {
 			TITLE: "Locked Balance",
 		},
 		SUMMARY: {
-			DESCRIPTION: "Your balance unlock transaction was successfully sent.",
+			DESCRIPTION: "Your balance unlock transaction has been sent successfully.",
 			TITLE: "Successfully Unlocked Balance",
 		},
 		UNLOCK: "Unlock",

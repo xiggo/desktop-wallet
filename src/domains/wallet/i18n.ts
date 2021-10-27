@@ -19,7 +19,7 @@ export const translations: { [key: string]: any } = {
 			"Unable to connect to Ledger device. Please ensure that all other applications that connect to your Ledger are closed.",
 		LEDGER_NANO_S: "Ledger Nano S",
 		LEDGER_NANO_X: "Ledger Nano X",
-		NO_DEVICE_FOUND: "Ledger device was not found in time",
+		NO_DEVICE_FOUND: "Ledger device has not been found in time",
 		OPEN_APP: "Open the {{coin}} app on your device ...",
 		TITLE: "Ledger Wallet",
 		UPDATE_ERROR: "The {{coin}} app version is {{version}}. Please update the {{coin}} app via Ledger Live.",
@@ -72,7 +72,7 @@ export const translations: { [key: string]: any } = {
 		},
 		JSON_STRING: "JSON String",
 		SUCCESS: {
-			DESCRIPTION: "Message was successfully verified.",
+			DESCRIPTION: "Message has been verified successfully.",
 			TITLE: "Success",
 		},
 		TITLE: "Verify",

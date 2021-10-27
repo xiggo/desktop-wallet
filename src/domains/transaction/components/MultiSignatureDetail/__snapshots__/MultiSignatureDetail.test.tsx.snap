@@ -4659,7 +4659,7 @@ exports[`MultiSignatureDetail should show error screen for Nano S and continue w
                     <p
                       class="text-theme-secondary-700"
                     >
-                      Your signature was successfully confirmed and sent.
+                      Your signature has been confirmed and sent successfully.
                     </p>
                     <div
                       class="mt-4"
@@ -5829,7 +5829,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
                     <p
                       class="text-theme-secondary-700"
                     >
-                      Your signature was successfully confirmed and sent.
+                      Your signature has been confirmed and sent successfully.
                     </p>
                     <div
                       class="mt-4"
@@ -6027,7 +6027,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
                     <p
                       class="text-theme-secondary-700"
                     >
-                      Your signature was successfully confirmed and sent.
+                      Your signature has been confirmed and sent successfully.
                     </p>
                     <div
                       class="mt-4"
