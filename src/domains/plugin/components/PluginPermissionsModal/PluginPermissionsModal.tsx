@@ -3,12 +3,12 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 interface Properties {
-	permissions: string[];
 	isOpen: boolean;
+	permissions: string[];
 	onClose?: () => void;
 }
 
-export const PluginPermissionsModal = ({ permissions, isOpen, onClose }: Properties) => {
+export const PluginPermissionsModal = ({ isOpen, permissions, onClose }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -27,9 +27,4 @@ export const PluginPermissionsModal = ({ permissions, isOpen, onClose }: Propert
 			</section>
 		</Modal>
 	);
-};
-
-PluginPermissionsModal.defaultProps = {
-	isOpen: false,
-	permissions: [],
 };

@@ -3,12 +3,19 @@ import { render, screen } from "utils/testing-library";
 
 import { PluginPermissionsModal } from "./PluginPermissionsModal";
 
-describe("Plugin Permissions", () => {
+describe("PluginPermissionsModal", () => {
 	it("should render", () => {
-		const { container } = render(<PluginPermissionsModal permissions={["PROFILE", "EVENTS"]} isOpen />);
+		const permissions = ["PROFILE", "EVENTS"];
 
-		expect(screen.queryAllByRole("listitem")).toHaveLength(2);
-		expect(screen.queryByText("EVENTS")).toBeInTheDocument();
+		const { container } = render(<PluginPermissionsModal permissions={permissions} isOpen />);
+
+		expect(screen.getByTestId("PluginPermissionsModal")).toBeInTheDocument();
+		expect(screen.getAllByRole("listitem")).toHaveLength(2);
+
+		for (const permission of permissions) {
+			expect(screen.getByText(permission)).toBeInTheDocument();
+		}
+
 		expect(container).toMatchSnapshot();
 	});
 });

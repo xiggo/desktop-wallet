@@ -514,7 +514,7 @@ exports[`PluginDetails should render properly 1`] = `
           class="container px-10 mx-auto"
         >
           <div
-            class="mt-8"
+            class="space-y-8"
           >
             <div
               class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
@@ -1047,7 +1047,7 @@ exports[`PluginDetails should render properly for remote package 1`] = `
           class="container px-10 mx-auto"
         >
           <div
-            class="mt-8"
+            class="space-y-8"
           >
             <div
               class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
@@ -1603,7 +1603,7 @@ exports[`PluginDetails should report plugin 1`] = `
           class="container px-10 mx-auto"
         >
           <div
-            class="mt-8"
+            class="space-y-8"
           >
             <div
               class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
@@ -2162,72 +2162,67 @@ exports[`PluginDetails should show configuration for plugins from npm 1`] = `
         <div
           class="container px-10 mx-auto"
         >
-          <div>
-            <h4
-              class="font-bold"
-            >
-              About
-            </h4>
-            <p
-              class="mt-3 text-theme-secondary-600"
-              data-testid="plugin-info__about"
-            >
-              Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet
-            </p>
-          </div>
           <div
-            class="mt-8"
+            class="space-y-8"
           >
-            <h4
-              class="font-bold"
-            >
-              Permissions
-            </h4>
             <div
-              class="inline-flex items-baseline space-x-2"
+              data-testid="PluginInfo__description"
             >
+              <h4
+                class="font-bold"
+              >
+                About
+              </h4>
               <p
                 class="mt-3 text-theme-secondary-600"
-                data-testid="plugin-info__permissions"
               >
-                <span
-                  class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-                  data-testid="TruncateEnd"
+                Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet
+              </p>
+            </div>
+            <div
+              data-testid="PluginInfo__permissions"
+            >
+              <h4
+                class="font-bold"
+              >
+                Permissions
+              </h4>
+              <div
+                class="inline-flex items-baseline space-x-2"
+              >
+                <p
+                  class="mt-3 text-theme-secondary-600"
                 >
-                  Allows to register a custom view, Allows performin…
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    Allows to register a custom view, Allows performin…
+                  </span>
+                </p>
+                <button
+                  class="font-semibold link"
+                >
+                  View All
+                </button>
+              </div>
+            </div>
+            <div
+              data-testid="PluginInfo__requirements"
+            >
+              <h4
+                class="font-bold"
+              >
+                Requirements
+              </h4>
+              <p
+                class="mt-3 text-theme-secondary-600"
+              >
+                <span>
+                  Payvo Wallet Version v1.0.0+
                 </span>
               </p>
-              <button
-                class="font-semibold link"
-                data-testid="plugin-info__view-permissions"
-              >
-                View All
-              </button>
             </div>
-          </div>
-          <div
-            class="mt-8"
-          >
-            <h4
-              class="font-bold"
-            >
-              Requirements
-            </h4>
-            <p
-              class="mt-3 text-theme-secondary-600"
-              data-testid="plugin-info__mininum-version"
-            >
-              <span>
-                Payvo Wallet Version
-                 v
-                1.0.0
-                +
-              </span>
-            </p>
-          </div>
-          <div
-            class="mt-8"
-          >
             <div
               class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
             >
@@ -2788,7 +2783,7 @@ exports[`PluginDetails should update package 1`] = `
           class="container px-10 mx-auto"
         >
           <div
-            class="mt-8"
+            class="space-y-8"
           >
             <div
               class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"

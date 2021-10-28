@@ -123,7 +123,7 @@ export const translations: { [key: string]: any } = {
 		REPORT: "Report Plugin",
 		REQUIREMENTS: "Requirements",
 		SCREENSHOTS: "Screenshots",
-		WALLET_VERSION: "Payvo Wallet Version",
+		WALLET_VERSION: "Payvo Wallet Version v{{minimumVersion}}+",
 	},
 
 	REQUIRED_VERSION: "Required Version",

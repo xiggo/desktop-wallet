@@ -1,123 +1,29 @@
 import { Alert } from "app/components/Alert";
-import { Slider } from "app/components/Slider";
-import { TruncateEnd } from "app/components/TruncateEnd";
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { PluginPermissionsModal } from "../PluginPermissionsModal/PluginPermissionsModal";
+import { Description, Images, Permissions, Requirements } from "./PluginInfo.blocks";
 
-interface Properties {
+interface PluginInfoProperties {
 	description?: string;
-	permissions?: any;
-	images?: any;
+	images: string[];
 	minimumVersion?: string;
+	permissions: string[];
 }
 
-export const PluginInfo = ({ description, permissions, images, minimumVersion }: Properties) => {
-	const { t, i18n } = useTranslation();
-	const hasRequirements = !!minimumVersion;
-	const [showPermissionsModal, setShowPermissionsModal] = useState(false);
-	const translatedPermissions = permissions.map((permission: string) => {
-		const key = `PLUGINS.PERMISSIONS.${permission}`;
-		return i18n.exists(key) ? t(key) : permission;
-	});
-	const permissionsString = translatedPermissions.join(", ");
+export const PluginInfo = ({ description, images = [], minimumVersion, permissions = [] }: PluginInfoProperties) => {
+	const { t } = useTranslation();
 
 	return (
-		<>
-			{description ? (
-				<div>
-					<h4 className="font-bold">{t("PLUGINS.PLUGIN_INFO.ABOUT")}</h4>
-					<p className="mt-3 text-theme-secondary-600" data-testid="plugin-info__about">
-						{description}
-					</p>
-				</div>
-			) : null}
+		<div className="space-y-8">
+			<Description description={description} />
+			<Permissions permissions={permissions} />
+			<Requirements minimumVersion={minimumVersion} />
+			<Images images={images} />
 
-			{permissions.length > 0 ? (
-				<div className="mt-8">
-					<h4 className="font-bold">{t("COMMON.PERMISSIONS")}</h4>
-					<div className="inline-flex items-baseline space-x-2">
-						<p className="mt-3 text-theme-secondary-600" data-testid="plugin-info__permissions">
-							<TruncateEnd maxChars={50} showTooltip={false} text={permissionsString} />
-						</p>
-						{permissionsString.length > 50 ? (
-							<button
-								data-testid="plugin-info__view-permissions"
-								onClick={() => setShowPermissionsModal(true)}
-								className="font-semibold link"
-							>
-								{t("COMMON.VIEW_ALL")}
-							</button>
-						) : null}
-					</div>
-				</div>
-			) : null}
-
-			{hasRequirements ? (
-				<div className="mt-8">
-					<h4 className="font-bold">{t("PLUGINS.PLUGIN_INFO.REQUIREMENTS")}</h4>
-					{minimumVersion && (
-						<p className="mt-3 text-theme-secondary-600" data-testid="plugin-info__mininum-version">
-							<span>
-								{t("PLUGINS.PLUGIN_INFO.WALLET_VERSION")} v{minimumVersion}+
-							</span>
-						</p>
-					)}
-				</div>
-			) : null}
-
-			{images.length > 0 ? (
-				<div className="relative mt-8">
-					<p className="font-bold">{t("PLUGINS.PLUGIN_INFO.SCREENSHOTS")}</p>
-					<div
-						className="flex absolute top-0 right-0 pr-4 space-x-3 screenshots-pagination"
-						data-testid="plugin-info__screenshots--pagination"
-					/>
-					<div className="mt-4">
-						<Slider
-							data={images}
-							options={{
-								pagination: {
-									clickable: true,
-									el: ".screenshots-pagination",
-								},
-								slideHeight: 200,
-								slidesPerColumn: 1,
-								slidesPerGroup: 3,
-								slidesPerView: 3,
-								spaceBetween: 18,
-							}}
-						>
-							{(screenshot: any) => (
-								<img
-									src={screenshot}
-									data-testid="plugin-info__screenshot"
-									className="object-contain overflow-hidden w-full max-h-44 rounded-lg bg-theme-secondary-200"
-									alt="Screenshot"
-								/>
-							)}
-						</Slider>
-					</div>
-				</div>
-			) : null}
-
-			<div className="mt-8">
-				<Alert variant="warning" title={t("COMMON.DISCLAIMER")}>
-					{t("PLUGINS.PLUGIN_INFO.DISCLAIMER")}
-				</Alert>
-			</div>
-
-			<PluginPermissionsModal
-				permissions={translatedPermissions}
-				isOpen={showPermissionsModal}
-				onClose={() => setShowPermissionsModal(false)}
-			/>
-		</>
+			<Alert variant="warning" title={t("COMMON.DISCLAIMER")}>
+				{t("PLUGINS.PLUGIN_INFO.DISCLAIMER")}
+			</Alert>
+		</div>
 	);
-};
-
-PluginInfo.defaultProps = {
-	images: [],
-	permissions: [],
 };

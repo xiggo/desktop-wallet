@@ -3,32 +3,31 @@
 exports[`PluginInfo should not show the view permissions button with text less than 50 chars 1`] = `
 <DocumentFragment>
   <div
-    class="mt-8"
+    class="space-y-8"
   >
-    <h4
-      class="font-bold"
-    >
-      Permissions
-    </h4>
     <div
-      class="inline-flex items-baseline space-x-2"
+      data-testid="PluginInfo__permissions"
     >
-      <p
-        class="mt-3 text-theme-secondary-600"
-        data-testid="plugin-info__permissions"
+      <h4
+        class="font-bold"
       >
-        <span
-          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-          data-testid="TruncateEnd"
+        Permissions
+      </h4>
+      <div
+        class="inline-flex items-baseline space-x-2"
+      >
+        <p
+          class="mt-3 text-theme-secondary-600"
         >
-          Allows access to the Payvo Wallet events
-        </span>
-      </p>
+          <span
+            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+            data-testid="TruncateEnd"
+          >
+            Allows access to the Payvo Wallet events
+          </span>
+        </p>
+      </div>
     </div>
-  </div>
-  <div
-    class="mt-8"
-  >
     <div
       class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
     >
@@ -68,38 +67,36 @@ exports[`PluginInfo should not show the view permissions button with text less t
 exports[`PluginInfo should open and close the plugin permissions modal 1`] = `
 <DocumentFragment>
   <div
-    class="mt-8"
+    class="space-y-8"
   >
-    <h4
-      class="font-bold"
-    >
-      Permissions
-    </h4>
     <div
-      class="inline-flex items-baseline space-x-2"
+      data-testid="PluginInfo__permissions"
     >
-      <p
-        class="mt-3 text-theme-secondary-600"
-        data-testid="plugin-info__permissions"
+      <h4
+        class="font-bold"
       >
-        <span
-          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-          data-testid="TruncateEnd"
+        Permissions
+      </h4>
+      <div
+        class="inline-flex items-baseline space-x-2"
+      >
+        <p
+          class="mt-3 text-theme-secondary-600"
         >
-          Allows access to the Payvo Wallet events, Allows a…
-        </span>
-      </p>
-      <button
-        class="font-semibold link"
-        data-testid="plugin-info__view-permissions"
-      >
-        View All
-      </button>
+          <span
+            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+            data-testid="TruncateEnd"
+          >
+            Allows access to the Payvo Wallet events, Allows a…
+          </span>
+        </p>
+        <button
+          class="font-semibold link"
+        >
+          View All
+        </button>
+      </div>
     </div>
-  </div>
-  <div
-    class="mt-8"
-  >
     <div
       class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
     >
@@ -138,94 +135,93 @@ exports[`PluginInfo should open and close the plugin permissions modal 1`] = `
 
 exports[`PluginInfo should render properly 1`] = `
 <DocumentFragment>
-  <div>
-    <h4
-      class="font-bold"
-    >
-      About
-    </h4>
-    <p
-      class="mt-3 text-theme-secondary-600"
-      data-testid="plugin-info__about"
-    >
-      Testing About text content
-    </p>
-  </div>
   <div
-    class="mt-8"
+    class="space-y-8"
   >
-    <h4
-      class="font-bold"
-    >
-      Permissions
-    </h4>
     <div
-      class="inline-flex items-baseline space-x-2"
+      data-testid="PluginInfo__description"
     >
+      <h4
+        class="font-bold"
+      >
+        About
+      </h4>
       <p
         class="mt-3 text-theme-secondary-600"
-        data-testid="plugin-info__permissions"
       >
-        <span
-          class="TruncateEnd__Wrapper-sc-1hhdnni-0"
-          data-testid="TruncateEnd"
-        >
-          Allows access to the currently active profile, All…
-        </span>
+        Testing About text content
       </p>
-      <button
-        class="font-semibold link"
-        data-testid="plugin-info__view-permissions"
-      >
-        View All
-      </button>
     </div>
-  </div>
-  <div
-    class="relative mt-8"
-  >
-    <p
-      class="font-bold"
-    >
-      Screenshots
-    </p>
     <div
-      class="flex absolute top-0 right-0 pr-4 space-x-3 screenshots-pagination swiper-pagination-clickable swiper-pagination-bullets"
-      data-testid="plugin-info__screenshots--pagination"
-    />
-    <div
-      class="mt-4"
+      data-testid="PluginInfo__permissions"
     >
+      <h4
+        class="font-bold"
+      >
+        Permissions
+      </h4>
       <div
-        class="relative"
+        class="inline-flex items-baseline space-x-2"
+      >
+        <p
+          class="mt-3 text-theme-secondary-600"
+        >
+          <span
+            class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+            data-testid="TruncateEnd"
+          >
+            Allows access to the currently active profile, All…
+          </span>
+        </p>
+        <button
+          class="font-semibold link"
+        >
+          View All
+        </button>
+      </div>
+    </div>
+    <div
+      data-testid="PluginInfo__images"
+    >
+      <p
+        class="font-bold"
+      >
+        Screenshots
+      </p>
+      <div
+        class="flex absolute top-0 right-0 pr-4 space-x-3 screenshots-pagination swiper-pagination-clickable swiper-pagination-bullets"
+        data-testid="PluginInfo__images--pagination"
+      />
+      <div
+        class="mt-4"
       >
         <div
-          class="overflow-hidden -mb-8 list-none px-4.5 -mx-4.5 slide-container swiper-container-initialized swiper-container-horizontal"
-          style="height: 232px;"
+          class="relative"
         >
           <div
-            class="h-full swiper-wrapper important:z-0 "
-            style="width: auto; transform: translate3d(NaNpx, 0px, 0px); transition-duration: 0ms;"
+            class="overflow-hidden -mb-8 list-none px-4.5 -mx-4.5 slide-container swiper-container-initialized swiper-container-horizontal"
+            style="height: 232px;"
           >
             <div
-              class="swiper-slide"
-              style="height: 200px; margin-top: 0px;"
+              class="h-full swiper-wrapper important:z-0 "
+              style="width: auto; transform: translate3d(NaNpx, 0px, 0px); transition-duration: 0ms;"
             >
-              <img
-                alt="Screenshot"
-                class="object-contain overflow-hidden w-full max-h-44 rounded-lg bg-theme-secondary-200"
-                data-testid="plugin-info__screenshot"
-                src="https://payvo.com/screenshot.png"
-              />
+              <div
+                class="swiper-slide"
+                style="height: 200px; margin-top: 0px;"
+              >
+                <img
+                  alt="Screenshot"
+                  class="object-contain overflow-hidden w-full max-h-44 rounded-lg bg-theme-secondary-200"
+                  data-testid="PluginInfo__images--screenshot"
+                  src="https://payvo.com/screenshot.png"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="mt-8"
-  >
     <div
       class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
     >
@@ -265,28 +261,24 @@ exports[`PluginInfo should render properly 1`] = `
 exports[`PluginInfo should render with minimum version 1`] = `
 <div>
   <div
-    class="mt-8"
+    class="space-y-8"
   >
-    <h4
-      class="font-bold"
+    <div
+      data-testid="PluginInfo__requirements"
     >
-      Requirements
-    </h4>
-    <p
-      class="mt-3 text-theme-secondary-600"
-      data-testid="plugin-info__mininum-version"
-    >
-      <span>
-        Payvo Wallet Version
-         v
-        3.0.1
-        +
-      </span>
-    </p>
-  </div>
-  <div
-    class="mt-8"
-  >
+      <h4
+        class="font-bold"
+      >
+        Requirements
+      </h4>
+      <p
+        class="mt-3 text-theme-secondary-600"
+      >
+        <span>
+          Payvo Wallet Version v3.0.1+
+        </span>
+      </p>
+    </div>
     <div
       class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
     >
@@ -325,22 +317,23 @@ exports[`PluginInfo should render with minimum version 1`] = `
 
 exports[`PluginInfo should render without permissions 1`] = `
 <DocumentFragment>
-  <div>
-    <h4
-      class="font-bold"
-    >
-      About
-    </h4>
-    <p
-      class="mt-3 text-theme-secondary-600"
-      data-testid="plugin-info__about"
-    >
-      Testing About text content
-    </p>
-  </div>
   <div
-    class="mt-8"
+    class="space-y-8"
   >
+    <div
+      data-testid="PluginInfo__description"
+    >
+      <h4
+        class="font-bold"
+      >
+        About
+      </h4>
+      <p
+        class="mt-3 text-theme-secondary-600"
+      >
+        Testing About text content
+      </p>
+    </div>
     <div
       class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
     >
