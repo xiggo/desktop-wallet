@@ -1483,6 +1483,27 @@ exports[`ImportWallet should render network step 1`] = `
                   </div>
                 </div>
               </li>
+              <li
+                class="inline-block cursor-pointer h-18"
+                data-testid="SelectNetwork__NetworkIcon--container"
+              >
+                <div
+                  aria-label="Qredit"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+                  data-testid="NetworkIcon-ARK-xqr.mainnet"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="NetworkIcon__icon"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      xqr.svg
+                    </svg>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
           <div
@@ -1565,6 +1586,27 @@ exports[`ImportWallet should render network step 1`] = `
                   >
                     <svg>
                       bind.svg
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="inline-block cursor-pointer h-18"
+                data-testid="SelectNetwork__NetworkIcon--container"
+              >
+                <div
+                  aria-label="Qredit Testnet"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+                  data-testid="NetworkIcon-ARK-xqr.testnet"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="NetworkIcon__icon"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      xqr.svg
                     </svg>
                   </div>
                 </div>
@@ -1700,6 +1742,27 @@ exports[`ImportWallet should render network step without test networks 1`] = `
                   >
                     <svg>
                       bind.svg
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="inline-block cursor-pointer h-18"
+                data-testid="SelectNetwork__NetworkIcon--container"
+              >
+                <div
+                  aria-label="Qredit"
+                  class="w-full h-full flex justify-center items-center border-2 rounded-xl border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+                  data-testid="NetworkIcon-ARK-xqr.mainnet"
+                >
+                  <div
+                    class="sc-bdnxRM NjstW"
+                    data-testid="NetworkIcon__icon"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      xqr.svg
                     </svg>
                   </div>
                 </div>

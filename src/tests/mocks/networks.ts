@@ -22,6 +22,8 @@ export const availableNetworksMock: Networks.Network[] = [
 	createNetwork(ARK, "ark.devnet"),
 	createNetwork(ARK, "bind.mainnet"),
 	createNetwork(ARK, "bind.testnet"),
+	createNetwork(ARK, "xqr.mainnet"),
+	createNetwork(ARK, "xqr.testnet"),
 	// createNetwork(ATOM, "atom.mainnet"),
 	// createNetwork(ATOM, "atom.testnet"),
 	// createNetwork(BTC, "btc.livenet"),

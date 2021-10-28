@@ -114,6 +114,52 @@ exports[`FilterNetwork should render public networks 1`] = `
           </span>
         </div>
       </li>
+      <li
+        class="inline-block pr-5 pb-5 cursor-pointer"
+        data-testid="NetworkOption__xqr.mainnet"
+      >
+        <div
+          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+        >
+          <div
+            class="sc-bdnxRM NjstW"
+            height="20"
+            width="20"
+          >
+            <svg>
+              xqr.svg
+            </svg>
+          </div>
+          <span
+            class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+          >
+            <span />
+          </span>
+        </div>
+      </li>
+      <li
+        class="inline-block pr-5 pb-5 cursor-pointer"
+        data-testid="NetworkOption__xqr.testnet"
+      >
+        <div
+          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+        >
+          <div
+            class="sc-bdnxRM NjstW"
+            height="20"
+            width="20"
+          >
+            <svg>
+              xqr.svg
+            </svg>
+          </div>
+          <span
+            class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+          >
+            <span />
+          </span>
+        </div>
+      </li>
     </ul>
   </div>
 </div>
@@ -190,6 +236,29 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
     </div>
     <div
@@ -241,6 +310,29 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
             >
               <svg>
                 bind.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.testnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
               </svg>
             </div>
             <span
@@ -310,6 +402,29 @@ exports[`FilterNetworks should render public networks 1`] = `
             >
               <svg>
                 bind.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
               </svg>
             </div>
             <span
@@ -397,6 +512,29 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
     </div>
     <div
@@ -448,6 +586,29 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
             >
               <svg>
                 bind.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.testnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
               </svg>
             </div>
             <span
@@ -541,6 +702,29 @@ exports[`FilterNetworks should toggle view all 1`] = `
             >
               <svg>
                 bind.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
               </svg>
             </div>
             <span
@@ -647,6 +831,29 @@ exports[`FilterNetworks should toggle view all 1`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.testnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -740,6 +947,29 @@ exports[`FilterNetworks should toggle view all 2`] = `
             </span>
           </div>
         </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
       </ul>
     </div>
     <div
@@ -815,6 +1045,29 @@ exports[`FilterNetworks should toggle view all 2`] = `
             >
               <svg>
                 bind.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__xqr.testnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                xqr.svg
               </svg>
             </div>
             <span
@@ -919,6 +1172,52 @@ exports[`NetworkOptions should render available networks options 1`] = `
         >
           <svg>
             bind.svg
+          </svg>
+        </div>
+        <span
+          class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <span />
+        </span>
+      </div>
+    </li>
+    <li
+      class="inline-block pr-5 pb-5 cursor-pointer"
+      data-testid="NetworkOption__xqr.mainnet"
+    >
+      <div
+        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+      >
+        <div
+          class="sc-bdnxRM NjstW"
+          height="20"
+          width="20"
+        >
+          <svg>
+            xqr.svg
+          </svg>
+        </div>
+        <span
+          class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <span />
+        </span>
+      </div>
+    </li>
+    <li
+      class="inline-block pr-5 pb-5 cursor-pointer"
+      data-testid="NetworkOption__xqr.testnet"
+    >
+      <div
+        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+      >
+        <div
+          class="sc-bdnxRM NjstW"
+          height="20"
+          width="20"
+        >
+          <svg>
+            xqr.svg
           </svg>
         </div>
         <span
