@@ -120,6 +120,7 @@ export const translations: { [key: string]: any } = {
 	PASSWORD: {
 		BUTTON: {
 			CREATE: "Set Password",
+			REMOVE: "Remove Password",
 			UPDATE: "Change Password",
 		},
 		CURRENT: "Current Password",
@@ -130,6 +131,13 @@ export const translations: { [key: string]: any } = {
 		MENU_ITEM: "Password",
 		PASSWORD_1: "New Password",
 		PASSWORD_2: "Confirm New Password",
+		REMOVAL: {
+			DESCRIPTION:
+				"Removing your profile password will result in anyone with access to your Payvo Wallet to see all your profile data. Are you sure you wish to remove it?",
+			PROFILE_PASSWORD: "Profile Password",
+			SUCCESS: "Password successfully removed.",
+			TITLE: "Remove Profile Password",
+		},
 		SUBTITLE: {
 			CREATE: "Set your password below to secure your Profile.",
 			UPDATE: "Change the password used to secure your Profile below.",
