@@ -122,7 +122,7 @@ describe("CreateProfile", () => {
 
 		await waitFor(() => expect(env.profiles().count()).toBe(1));
 
-		let profile = env.profiles().first();
+		const profile = env.profiles().first();
 
 		expect(profile.name()).toEqual("test profile 1");
 		expect(profile.settings().all()).toEqual({

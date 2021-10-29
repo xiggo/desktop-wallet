@@ -145,7 +145,7 @@ describe("PluginManagerProvider", () => {
 
 		expect(invokeMock).toHaveBeenLastCalledWith("plugin:loader-fs.remove", "/plugins/example");
 
-		await waitFor(() => expect(screen.getByRole("button")).toBeTruthy());
+		await screen.findByRole("button");
 	});
 
 	it("should fetch packages", async () => {
@@ -537,7 +537,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByText("Click"));
 
-		await waitFor(() => expect(screen.getByText("Update Available")).toBeInTheDocument());
+		await screen.findByText("Update Available");
 	});
 
 	it("should check if plugin update is available for plugin without minimum version", async () => {
@@ -578,7 +578,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByText("Click"));
 
-		await waitFor(() => expect(screen.getByText("Update Available")).toBeInTheDocument());
+		await screen.findByText("Update Available");
 	});
 
 	it("should update plugin", async () => {
@@ -676,7 +676,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByText("Fetch"));
 
-		await waitFor(() => expect(screen.getByText("Update Available")).toBeInTheDocument());
+		await screen.findByText("Update Available");
 
 		fireEvent.click(screen.getAllByText("Update")[0]);
 
@@ -706,7 +706,7 @@ describe("PluginManagerProvider", () => {
 			jest.runOnlyPendingTimers();
 		});
 
-		await waitFor(() => expect(screen.getByText("Update Completed")).toBeInTheDocument());
+		await screen.findByText("Update Completed");
 
 		ipcRendererSpy.mockRestore();
 		onSpy.mockRestore();
@@ -780,7 +780,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByText("Fetch"));
 
-		await waitFor(() => expect(screen.getByText("Update Available")).toBeInTheDocument());
+		await screen.findByText("Update Available");
 
 		fireEvent.click(screen.getAllByText("Update")[0]);
 
@@ -927,9 +927,9 @@ describe("PluginManagerProvider", () => {
 		expect(screen.getByText("Size N/A")).toBeInTheDocument();
 
 		fireEvent.click(screen.getByText("Fetch Plugins"));
-		await waitFor(() => expect(screen.getByText("Plugins 2")).toBeInTheDocument());
+		await screen.findByText("Plugins 2");
 
 		fireEvent.click(screen.getByText("Fetch Size"));
-		await waitFor(() => expect(screen.getByText("Size 122515")).toBeInTheDocument());
+		await screen.findByText("Size 122515");
 	});
 });

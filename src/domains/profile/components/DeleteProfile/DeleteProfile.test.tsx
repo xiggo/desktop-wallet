@@ -12,18 +12,18 @@ describe("DeleteProfile", () => {
 	});
 
 	it("should render", async () => {
-		const { getByTestId, asFragment } = render(<DeleteProfile isOpen profileId={profile.id()} />);
+		const { getByTestId, asFragment, findByTestId } = render(<DeleteProfile isOpen profileId={profile.id()} />);
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		expect(getByTestId("DeleteResource__submit-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should delete", async () => {
-		const { getByTestId } = render(<DeleteProfile isOpen profileId={profile.id()} />);
+		const { getByTestId, findByTestId } = render(<DeleteProfile isOpen profileId={profile.id()} />);
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("DeleteResource__submit-button"));

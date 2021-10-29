@@ -165,7 +165,7 @@ describe("LedgerScanStep", () => {
 		const { container } = render(<Component />);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6), { timeout: 6000 });
-		await waitFor(() => expect(screen.getByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).toBeInTheDocument());
+		await screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG");
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
 

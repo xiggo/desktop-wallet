@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { MultiSignatureStatus } from "./MultiSignatureStatus";
@@ -34,9 +34,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(translations.MULTISIGNATURE.AWAITING_OUR_SIGNATURE)).toBeInTheDocument(),
-		);
+		await screen.findByText(translations.MULTISIGNATURE.AWAITING_OUR_SIGNATURE);
 
 		expect(container).toMatchSnapshot();
 
@@ -61,7 +59,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getByText("Awaiting 1 other signature")).toBeInTheDocument());
+		await screen.findByText("Awaiting 1 other signature");
 
 		expect(container).toMatchSnapshot();
 
@@ -86,9 +84,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(translations.MULTISIGNATURE.AWAITING_CONFIRMATIONS)).toBeInTheDocument(),
-		);
+		await screen.findByText(translations.MULTISIGNATURE.AWAITING_CONFIRMATIONS);
 
 		expect(container).toMatchSnapshot();
 
@@ -114,7 +110,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getByText(translations.MULTISIGNATURE.READY)).toBeInTheDocument());
+		await screen.findByText(translations.MULTISIGNATURE.READY);
 
 		expect(container).toMatchSnapshot();
 
@@ -142,9 +138,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(translations.MULTISIGNATURE.AWAITING_FINAL_SIGNATURE)).toBeInTheDocument(),
-		);
+		await screen.findByText(translations.MULTISIGNATURE.AWAITING_FINAL_SIGNATURE);
 
 		expect(container).toMatchSnapshot();
 

@@ -81,9 +81,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		expect(screen.getByTestId("SignMessage__mnemonic-input")).toBeInTheDocument();
 
@@ -105,9 +103,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -131,9 +127,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		expect(screen.getByTestId("SignMessage__mnemonic-input")).toBeInTheDocument();
 	});
@@ -177,9 +171,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		expect(
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
@@ -203,9 +195,7 @@ describe("SignMessage", () => {
 			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
 		const writeTextMock = jest.fn();
 		const clipboardOriginal = navigator.clipboard;
@@ -238,9 +228,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
@@ -260,17 +248,13 @@ describe("SignMessage", () => {
 			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("SignMessage__back-button"));
 		});
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 	});
 
 	it("should sign message with encryption password", async () => {
@@ -298,9 +282,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		expect(
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
@@ -324,9 +306,7 @@ describe("SignMessage", () => {
 			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 
@@ -364,9 +344,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		expect(
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
@@ -390,9 +368,7 @@ describe("SignMessage", () => {
 			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).toBeTruthy(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 
@@ -430,9 +406,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		expect(
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
@@ -450,13 +424,13 @@ describe("SignMessage", () => {
 			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() => expect(screen.getByTestId("LedgerWaitingDevice-loading_message")).toBeTruthy());
+		await screen.findByTestId("LedgerWaitingDevice-loading_message");
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "add" });
 		});
 
-		await waitFor(() => expect(screen.getByTestId("LedgerWaitingApp-loading_message")).toBeTruthy());
+		await screen.findByTestId("LedgerWaitingApp-loading_message");
 
 		const getPublicKeySpy = jest.spyOn(wallet.coin(), "ledger").mockImplementation(() => ({
 			getPublicKey: () => Promise.resolve(wallet.publicKey()),
@@ -505,12 +479,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-			{
-				timeout: 4000,
-			},
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
@@ -524,13 +493,13 @@ describe("SignMessage", () => {
 			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 		});
 
-		await waitFor(() => expect(screen.getByTestId("LedgerWaitingDevice-loading_message")).toBeTruthy());
+		await screen.findByTestId("LedgerWaitingDevice-loading_message");
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "add" });
 		});
 
-		await waitFor(() => expect(screen.getByTestId("LedgerWaitingApp-loading_message")).toBeTruthy());
+		await screen.findByTestId("LedgerWaitingApp-loading_message");
 
 		const getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -575,9 +544,7 @@ describe("SignMessage", () => {
 				() => new Promise((_, reject) => setTimeout(() => reject(new Error("no device found")), 300)),
 			);
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 

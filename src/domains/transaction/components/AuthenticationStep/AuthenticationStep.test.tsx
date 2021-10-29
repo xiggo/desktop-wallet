@@ -233,7 +233,7 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument());
+		await screen.findByTestId("AuthenticationStep__mnemonic");
 
 		expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeInTheDocument();
 
@@ -266,7 +266,7 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("LedgerConfirmation-description")).toBeInTheDocument());
+		await screen.findByTestId("LedgerConfirmation-description");
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
@@ -325,7 +325,7 @@ describe("AuthenticationStep", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.queryByTestId("LedgerConfirmation-description")).toBeInTheDocument());
+		await screen.findByTestId("LedgerConfirmation-description");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -347,7 +347,7 @@ describe("AuthenticationStep", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.queryByTestId("LedgerConfirmation-description")).toBeInTheDocument());
+		await screen.findByTestId("LedgerConfirmation-description");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -381,7 +381,7 @@ describe("AuthenticationStep", () => {
 
 		renderWithForm(<AuthenticationStep wallet={wallet} />, { withProviders: true });
 
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__encryption-password")).toBeInTheDocument());
+		await screen.findByTestId("AuthenticationStep__encryption-password");
 
 		jest.clearAllMocks();
 	});

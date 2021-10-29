@@ -247,7 +247,7 @@ describe("MultiSignature Registration Form", () => {
 		} as Contracts.SignedTransactionData;
 		const { asFragment } = render(<DetailsComponent />);
 
-		await waitFor(() => expect(screen.getByTestId("TransactionFee")).toBeTruthy());
+		await screen.findByTestId("TransactionFee");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

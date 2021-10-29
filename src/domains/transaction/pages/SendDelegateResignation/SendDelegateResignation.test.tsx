@@ -85,17 +85,17 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should render 1st step", async () => {
-			const { asFragment, getByTestId } = renderPage();
+			const { asFragment, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			expect(asFragment()).toMatchSnapshot();
 		});
 
 		it("should change fee", async () => {
-			const { asFragment, getByTestId, getByText } = renderPage();
+			const { asFragment, getByTestId, getByText, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			// Fee (simple)
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
@@ -112,12 +112,12 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should render 2nd step", async () => {
-			const { asFragment, getByTestId } = renderPage();
+			const { asFragment, getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -125,9 +125,9 @@ describe("SendDelegateResignation", () => {
 		it("should go back to wallet details", async () => {
 			const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-			const { getByTestId } = renderPage();
+			const { getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__back-button"));
 
@@ -137,35 +137,35 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should navigate between 1st and 2nd step", async () => {
-			const { getByTestId } = renderPage();
+			const { getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
 
 			fireEvent.click(getByTestId("StepNavigation__back-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 		});
 
 		it("should render 3rd step", async () => {
-			const { asFragment, getByTestId } = renderPage();
+			const { asFragment, getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
-
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
+
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			await findByTestId("AuthenticationStep");
 
 			expect(asFragment()).toMatchSnapshot();
 		});
 
 		it("should return to form step by cancelling fee warning", async () => {
-			const { getByText, getByTestId } = renderPage();
+			const { getByText, getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			// Fee
 			fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -175,19 +175,19 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("FeeWarning__cancel-button")).toBeTruthy());
+			await findByTestId("FeeWarning__cancel-button");
 
 			fireEvent.click(getByTestId("FeeWarning__cancel-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 		});
 
 		it("should proceed to authentication step by confirming fee warning", async () => {
-			const { getByText, getByTestId } = renderPage();
+			const { getByText, getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			// Fee
 			fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -197,13 +197,13 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("FeeWarning__continue-button")).toBeTruthy());
+			await findByTestId("FeeWarning__continue-button");
 
 			fireEvent.click(getByTestId("FeeWarning__continue-button"));
-			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+			await findByTestId("AuthenticationStep");
 		});
 
 		it("should show mnemonic authentication error", async () => {
@@ -211,15 +211,15 @@ describe("SendDelegateResignation", () => {
 				.spyOn(wallet, "secondPublicKey")
 				.mockReturnValue((await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
 
-			const { asFragment, getByTestId } = renderPage();
+			const { asFragment, getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
-
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
+
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			await findByTestId("AuthenticationStep");
 
 			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
 				target: {
@@ -252,15 +252,15 @@ describe("SendDelegateResignation", () => {
 				.spyOn(wallet, "secondPublicKey")
 				.mockReturnValue((await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
 
-			const { asFragment, getByTestId } = renderPage();
+			const { asFragment, getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
-
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
+
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			await findByTestId("AuthenticationStep");
 
 			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
 				target: {
@@ -278,7 +278,7 @@ describe("SendDelegateResignation", () => {
 
 			fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-			await waitFor(() => expect(getByTestId("ErrorStep")).toBeTruthy());
+			await findByTestId("ErrorStep");
 
 			expect(getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 			expect(asFragment()).toMatchSnapshot();
@@ -310,15 +310,15 @@ describe("SendDelegateResignation", () => {
 			});
 			const transactionMock = createTransactionMock(wallet);
 
-			const { asFragment, getByTestId } = renderPage();
+			const { asFragment, getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
-
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
+
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			await findByTestId("AuthenticationStep");
 
 			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
 				target: {
@@ -335,7 +335,7 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
 
 			fireEvent.click(getByTestId("StepNavigation__send-button"));
-			await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+			await findByTestId("TransactionSuccessful");
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -359,15 +359,15 @@ describe("SendDelegateResignation", () => {
 			});
 			const transactionMock = createTransactionMock(wallet);
 
-			const { asFragment, getByTestId } = renderPage();
+			const { asFragment, getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
-
-			userEvent.keyboard("{enter}");
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			userEvent.keyboard("{enter}");
-			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
+
+			userEvent.keyboard("{enter}");
+			await findByTestId("AuthenticationStep");
 
 			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
 				target: {
@@ -385,7 +385,7 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.keyboard("{enter}");
 			fireEvent.click(getByTestId("StepNavigation__send-button"));
-			await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+			await findByTestId("TransactionSuccessful");
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -409,15 +409,15 @@ describe("SendDelegateResignation", () => {
 			});
 			const transactionMock = createTransactionMock(wallet);
 
-			const { getByTestId } = renderPage();
+			const { getByTestId, findByTestId } = renderPage();
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
-
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
+
+			fireEvent.click(getByTestId("StepNavigation__continue-button"));
+			await findByTestId("AuthenticationStep");
 
 			fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), {
 				target: {
@@ -434,7 +434,7 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]));
 
 			fireEvent.click(getByTestId("StepNavigation__send-button"));
-			await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+			await findByTestId("TransactionSuccessful");
 
 			const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
@@ -470,7 +470,7 @@ describe("SendDelegateResignation", () => {
 			const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
 			history.push(resignationEncryptedUrl);
 
-			const { asFragment, getByTestId } = renderWithRouter(
+			const { asFragment, getByTestId, findByTestId } = renderWithRouter(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-delegate-resignation">
 					<SendDelegateResignation />
 				</Route>,
@@ -480,13 +480,13 @@ describe("SendDelegateResignation", () => {
 				},
 			);
 
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__form-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__form-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("SendDelegateResignation__review-step")).toBeTruthy());
+			await findByTestId("SendDelegateResignation__review-step");
 
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-			await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+			await findByTestId("AuthenticationStep");
 
 			fireEvent.input(getByTestId("AuthenticationStep__encryption-password"), {
 				target: {
@@ -498,7 +498,7 @@ describe("SendDelegateResignation", () => {
 			await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 			fireEvent.click(getByTestId("StepNavigation__send-button"));
-			await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+			await findByTestId("TransactionSuccessful");
 
 			expect(asFragment()).toMatchSnapshot();
 

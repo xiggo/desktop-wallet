@@ -104,7 +104,7 @@ describe("SelectDropdown", () => {
 
 			fireEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-			await waitFor(() => expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument());
+			await screen.findByTestId("SelectDropdown__option--0");
 
 			fireEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -496,7 +496,7 @@ describe("SelectDropdown", () => {
 				fireEvent.focus(screen.getByTestId("SelectDropdown__input"));
 			});
 
-			await waitFor(() => expect(screen.getByTestId("SelectDropdown__option--0")).toBeTruthy());
+			await screen.findByTestId("SelectDropdown__option--0");
 
 			act(() => {
 				fireEvent.mouseDown(screen.getByTestId("SelectDropdown__option--0"));

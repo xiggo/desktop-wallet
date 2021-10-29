@@ -38,7 +38,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -49,7 +49,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("MultiSignatureSuccessful__publicKeys")).toBeInTheDocument());
+		await findByTestId("MultiSignatureSuccessful__publicKeys");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -79,7 +79,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -90,7 +90,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("MultiSignatureSuccessful__publicKeys")).toBeInTheDocument());
+		await findByTestId("MultiSignatureSuccessful__publicKeys");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -131,7 +131,7 @@ describe("MultiSignatureSuccessful", () => {
 			address: undefined,
 		});
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -142,7 +142,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("MultiSignatureSuccessful__publicKeys")).toBeInTheDocument());
+		await findByTestId("MultiSignatureSuccessful__publicKeys");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -187,7 +187,7 @@ describe("MultiSignatureSuccessful", () => {
 			address: undefined,
 		});
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -198,7 +198,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("MultiSignatureSuccessful__publicKeys")).toBeInTheDocument());
+		await findByTestId("MultiSignatureSuccessful__publicKeys");
 
 		expect(asFragment()).toMatchSnapshot();
 

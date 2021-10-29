@@ -142,7 +142,7 @@ describe("Transactions", () => {
 	});
 
 	it("should filter by type", async () => {
-		const { getByRole, getByTestId } = renderWithRouter(
+		const { getByRole, getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
@@ -163,7 +163,7 @@ describe("Transactions", () => {
 			fireEvent.click(getByRole("button", { name: /Type/ }));
 		});
 
-		await waitFor(() => expect(getByTestId("dropdown__option--core-0")).toBeInTheDocument());
+		await findByTestId("dropdown__option--core-0");
 
 		act(() => {
 			fireEvent.click(getByTestId("dropdown__option--core-0"));
@@ -183,7 +183,7 @@ describe("Transactions", () => {
 			}),
 		);
 
-		const { getByRole, getByTestId } = renderWithRouter(
+		const { getByRole, getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={emptyProfile} wallets={emptyProfile.wallets().values()} />
 			</Route>,
@@ -199,13 +199,13 @@ describe("Transactions", () => {
 			fireEvent.click(getByRole("button", { name: /Type/ }));
 		});
 
-		await waitFor(() => expect(getByTestId("dropdown__option--core-9")).toBeInTheDocument());
+		await findByTestId("dropdown__option--core-9");
 
 		act(() => {
 			fireEvent.click(getByTestId("dropdown__option--core-9"));
 		});
 
-		await waitFor(() => expect(getByTestId("EmptyBlock")).toBeInTheDocument());
+		await findByTestId("EmptyBlock");
 	});
 
 	it("should filter by type and see empty screen", async () => {
@@ -223,7 +223,7 @@ describe("Transactions", () => {
 			}),
 		);
 
-		const { getByRole, getByTestId } = renderWithRouter(
+		const { getByRole, getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={emptyProfile} wallets={emptyProfile.wallets().values()} />
 			</Route>,
@@ -239,13 +239,13 @@ describe("Transactions", () => {
 			fireEvent.click(getByRole("button", { name: /Type/ }));
 		});
 
-		await waitFor(() => expect(getByTestId("dropdown__option--magistrate-0")).toBeInTheDocument());
+		await findByTestId("dropdown__option--magistrate-0");
 
 		act(() => {
 			fireEvent.click(getByTestId("dropdown__option--magistrate-0"));
 		});
 
-		await waitFor(() => expect(getByTestId("EmptyBlock")).toBeInTheDocument());
+		await findByTestId("EmptyBlock");
 		transactionsAggregateMock.mockRestore();
 	});
 
@@ -450,7 +450,7 @@ describe("Transactions", () => {
 		const emptyProfileURL = `/profiles/${emptyProfile.id()}/dashboard`;
 
 		history.push(emptyProfileURL);
-		const { getByTestId } = renderWithRouter(
+		const { findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={emptyProfile} wallets={[]} />
 			</Route>,
@@ -460,11 +460,11 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("EmptyBlock")).toBeInTheDocument());
+		await findByTestId("EmptyBlock");
 	});
 
 	it("should update wallet filters", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions isUpdatingWallet={true} profile={profile} wallets={[]} />
 			</Route>,
@@ -474,7 +474,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("EmptyBlock")).toBeInTheDocument());
+		await findByTestId("EmptyBlock");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

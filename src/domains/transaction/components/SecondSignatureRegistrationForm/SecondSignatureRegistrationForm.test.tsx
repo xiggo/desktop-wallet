@@ -168,9 +168,7 @@ describe("SecondSignatureRegistrationForm", () => {
 				},
 			);
 
-			await waitFor(() =>
-				expect(screen.getByTestId("SecondSignatureRegistrationForm__backup-step")).toBeTruthy(),
-			);
+			await screen.findByTestId("SecondSignatureRegistrationForm__backup-step");
 
 			const writeTextMock = jest.fn();
 			const clipboardOriginal = navigator.clipboard;
@@ -200,9 +198,7 @@ describe("SecondSignatureRegistrationForm", () => {
 				},
 			);
 
-			await waitFor(() =>
-				expect(screen.getByTestId("SecondSignatureRegistrationForm__backup-step")).toBeTruthy(),
-			);
+			await screen.findByTestId("SecondSignatureRegistrationForm__backup-step");
 
 			jest.spyOn(utils, "saveFile").mockResolvedValueOnce("filePath");
 
@@ -230,9 +226,7 @@ describe("SecondSignatureRegistrationForm", () => {
 				},
 			);
 
-			await waitFor(() =>
-				expect(screen.getByTestId("SecondSignatureRegistrationForm__backup-step")).toBeTruthy(),
-			);
+			await screen.findByTestId("SecondSignatureRegistrationForm__backup-step");
 
 			jest.spyOn(utils, "saveFile").mockResolvedValueOnce(undefined);
 
@@ -260,9 +254,7 @@ describe("SecondSignatureRegistrationForm", () => {
 				},
 			);
 
-			await waitFor(() =>
-				expect(screen.getByTestId("SecondSignatureRegistrationForm__backup-step")).toBeTruthy(),
-			);
+			await screen.findByTestId("SecondSignatureRegistrationForm__backup-step");
 
 			jest.spyOn(utils, "saveFile").mockRejectedValueOnce(new Error("Error"));
 
@@ -288,9 +280,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SecondSignatureRegistrationForm__verification-step")).toBeTruthy(),
-		);
+		await screen.findByTestId("SecondSignatureRegistrationForm__verification-step");
 
 		expect(form()?.getValues("verification")).toBeUndefined();
 
@@ -325,7 +315,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__review-step")).toBeTruthy());
+		await screen.findByTestId("SecondSignatureRegistrationForm__review-step");
 	});
 
 	it("should render transaction details", async () => {
@@ -349,7 +339,7 @@ describe("SecondSignatureRegistrationForm", () => {
 		} as Contracts.SignedTransactionData;
 		const { asFragment } = render(<DetailsComponent />);
 
-		await waitFor(() => expect(screen.getByTestId("TransactionFee")).toBeTruthy());
+		await screen.findByTestId("TransactionFee");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

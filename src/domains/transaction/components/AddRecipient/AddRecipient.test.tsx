@@ -151,7 +151,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should select recipient", async () => {
-		const { getByTestId } = renderWithFormProvider(
+		const { getByTestId, findByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -159,7 +159,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		userEvent.click(getByTestId("RecipientListItem__select-button-0"));
 
@@ -208,7 +208,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should toggle between single and multiple recipients", async () => {
-		const { getByText, queryByText } = renderWithFormProvider(
+		const { getByText, queryByText, findByText } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -221,7 +221,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(multipleButton);
 
-		await waitFor(() => expect(queryByText(recipientLabel)).toBeTruthy());
+		await findByText(recipientLabel);
 
 		userEvent.click(singleButton);
 
@@ -399,7 +399,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for low balance", async () => {
-		const { getByTestId } = renderWithFormProvider(
+		const { getByTestId, findByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -407,7 +407,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		const firstAddress = getByTestId("RecipientListItem__select-button-0");
 
@@ -421,13 +421,13 @@ describe("AddRecipient", () => {
 			},
 		});
 
-		await waitFor(() => expect(getByTestId("Input__error")).toBeInTheDocument());
+		await findByTestId("Input__error");
 	});
 
 	it("should show error for zero balance", async () => {
 		const mockWalletBalance = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { getByTestId } = renderWithFormProvider(
+		const { getByTestId, findByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -435,7 +435,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		const firstAddress = getByTestId("RecipientListItem__select-button-0");
 
@@ -449,13 +449,13 @@ describe("AddRecipient", () => {
 			},
 		});
 
-		await waitFor(() => expect(getByTestId("Input__error")).toBeInTheDocument());
+		await findByTestId("Input__error");
 
 		mockWalletBalance.mockRestore();
 	});
 
 	it("should show error for invalid address", async () => {
-		const { getByTestId, getAllByTestId } = renderWithFormProvider(
+		const { getByTestId, getAllByTestId, findByTestId } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} assetSymbol="ARK" />,
 		);
 
@@ -463,7 +463,7 @@ describe("AddRecipient", () => {
 
 		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
 		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
@@ -645,11 +645,11 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
-		await waitFor(() => expect(screen.getByTestId("SelectRecipient__select-recipient")).toBeInTheDocument());
+		await screen.findByTestId("SelectRecipient__select-recipient");
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeTruthy());
+		await screen.findByTestId("modal__inner");
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 

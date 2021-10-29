@@ -260,7 +260,7 @@ describe("Use Ledger Scanner", () => {
 			fireEvent.click(screen.getByText("Scan"));
 		});
 
-		await waitFor(() => expect(screen.queryByText("Retry")).toBeInTheDocument());
+		await screen.findByText("Retry");
 
 		expect(container).toMatchSnapshot();
 	});
@@ -297,7 +297,7 @@ describe("Use Ledger Scanner", () => {
 		fireEvent.click(screen.getByTestId("scan"));
 		fireEvent.click(screen.getByTestId("abort"));
 
-		await waitFor(() => expect(screen.getByText("Idle")).toBeInTheDocument());
+		await screen.findByText("Idle");
 		await new Promise((resolve) => setTimeout(resolve, 3000));
 
 		expect(container).toMatchSnapshot();

@@ -23,28 +23,28 @@ describe("TransactionVotes", () => {
 	});
 
 	it("should render with votes", async () => {
-		const { container, getByText } = render(<TransactionVotes votes={votes} />);
+		const { container, findByText } = render(<TransactionVotes votes={votes} />);
 
-		await waitFor(() => expect(getByText("Votes (1)")).toBeInTheDocument());
-		await waitFor(() => expect(getByText("test-username")).toBeInTheDocument());
+		await findByText("Votes (1)");
+		await findByText("test-username");
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with unvotes", async () => {
-		const { container, getByText } = render(<TransactionVotes unvotes={votes} />);
+		const { container, findByText } = render(<TransactionVotes unvotes={votes} />);
 
-		await waitFor(() => expect(getByText("Unvotes (1)")).toBeInTheDocument());
-		await waitFor(() => expect(getByText("test-username")).toBeInTheDocument());
+		await findByText("Unvotes (1)");
+		await findByText("test-username");
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with votes and unvotes", async () => {
-		const { container, getByText, getAllByText } = render(<TransactionVotes votes={votes} unvotes={votes} />);
+		const { container, getAllByText, findByText } = render(<TransactionVotes votes={votes} unvotes={votes} />);
 
-		await waitFor(() => expect(getByText("Votes (1)")).toBeInTheDocument());
-		await waitFor(() => expect(getByText("Unvotes (1)")).toBeInTheDocument());
+		await findByText("Votes (1)");
+		await findByText("Unvotes (1)");
 		await waitFor(() => expect(getAllByText("test-username")).toHaveLength(2));
 
 		expect(container).toMatchSnapshot();

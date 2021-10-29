@@ -66,7 +66,7 @@ describe("VoteDetail", () => {
 	});
 
 	it("should render a modal with votes", async () => {
-		const { asFragment, getByTestId, getByText } = renderWithRouter(
+		const { asFragment, getByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}
@@ -87,14 +87,14 @@ describe("VoteDetail", () => {
 			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await waitFor(() => expect(getByText("Votes (1)")).toBeTruthy());
-		await waitFor(() => expect(getByText("delegate-0")).toBeInTheDocument());
+		await findByText("Votes (1)");
+		await findByText("delegate-0");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal with unvotes", async () => {
-		const { asFragment, getByTestId, getByText } = renderWithRouter(
+		const { asFragment, getByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}
@@ -115,14 +115,14 @@ describe("VoteDetail", () => {
 			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await waitFor(() => expect(getByText("Unvotes (1)")).toBeTruthy());
-		await waitFor(() => expect(getByText("delegate-0")).toBeInTheDocument());
+		await findByText("Unvotes (1)");
+		await findByText("delegate-0");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal with votes and unvotes", async () => {
-		const { asFragment, getByTestId, getAllByText, getByText } = renderWithRouter(
+		const { asFragment, getByTestId, getAllByText, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}
@@ -143,8 +143,8 @@ describe("VoteDetail", () => {
 			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await waitFor(() => expect(getByText("Votes (1)")).toBeTruthy());
-		await waitFor(() => expect(getByText("Unvotes (1)")).toBeTruthy());
+		await findByText("Votes (1)");
+		await findByText("Unvotes (1)");
 		await waitFor(() => expect(getAllByText("delegate-0")).toHaveLength(2));
 
 		expect(asFragment()).toMatchSnapshot();

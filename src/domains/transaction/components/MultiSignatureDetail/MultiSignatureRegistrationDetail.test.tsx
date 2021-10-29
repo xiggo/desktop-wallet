@@ -37,9 +37,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -64,9 +62,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE)).toBeInTheDocument(),
-		);
+		await screen.findByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE);
 
 		await waitFor(() => expect(screen.getAllByText(wallet.address())).toHaveLength(3));
 

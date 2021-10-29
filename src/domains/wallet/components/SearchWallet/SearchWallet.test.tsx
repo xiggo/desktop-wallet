@@ -177,7 +177,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should filter wallets by address", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId } = renderWithRouter(
+		const { getByTestId, queryAllByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -208,7 +208,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -227,7 +227,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should filter wallets by alias", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId } = renderWithRouter(
+		const { getByTestId, queryAllByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -258,7 +258,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -278,7 +278,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should reset wallet search", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId } = renderWithRouter(
+		const { getByTestId, queryAllByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -309,7 +309,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -338,7 +338,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should not find search wallet and show empty results screen", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId } = renderWithRouter(
+		const { getByTestId, queryAllByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -369,7 +369,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -388,7 +388,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(getByTestId("Input")).toHaveValue("non existent wallet name"));
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(0));
 
-		await waitFor(() => expect(getByTestId("EmptyResults")).toBeInTheDocument());
+		await findByTestId("EmptyResults");
 
 		jest.useRealTimers();
 	});

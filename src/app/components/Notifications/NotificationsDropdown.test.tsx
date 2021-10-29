@@ -84,7 +84,7 @@ describe("Notifications", () => {
 			fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 		});
 
-		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeInTheDocument());
+		await screen.findByTestId("modal__inner");
 
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 
@@ -119,7 +119,7 @@ describe("Notifications", () => {
 			fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 		});
 
-		await waitFor(() => expect(screen.getByTestId("WalletUpdate__first-step")).toBeInTheDocument());
+		await screen.findByTestId("WalletUpdate__first-step");
 
 		expect(container).toMatchSnapshot();
 
@@ -154,7 +154,7 @@ describe("Notifications", () => {
 			fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 		});
 
-		await waitFor(() => expect(screen.getByTestId("WalletUpdate__first-step")).toBeTruthy());
+		await screen.findByTestId("WalletUpdate__first-step");
 
 		expect(container).toMatchSnapshot();
 

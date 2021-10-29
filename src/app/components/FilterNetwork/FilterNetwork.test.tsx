@@ -146,7 +146,7 @@ describe("FilterNetworks", () => {
 	});
 
 	it("should toggle view all", async () => {
-		const { container, getAllByTestId, getByTestId } = render(
+		const { container, getAllByTestId, getByTestId, findByTestId } = render(
 			<FilterNetworks useTestNetworks={true} options={networkOptions} hideViewAll={false} />,
 		);
 
@@ -156,7 +156,7 @@ describe("FilterNetworks", () => {
 			fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 		});
 
-		await waitFor(() => expect(getByTestId("FilterNetwork__select-all-checkbox")).toBeTruthy());
+		await findByTestId("FilterNetwork__select-all-checkbox");
 
 		expect(container).toMatchSnapshot();
 

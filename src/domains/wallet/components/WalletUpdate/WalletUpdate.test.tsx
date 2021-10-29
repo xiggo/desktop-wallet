@@ -47,16 +47,16 @@ describe("WalletUpdate", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, getByTestId } = render(<WalletUpdate isOpen={true} />);
-		await waitFor(() => expect(getByTestId("WalletUpdate__first-step")).toBeTruthy());
+		const { asFragment, findByTestId } = render(<WalletUpdate isOpen={true} />);
+		await findByTestId("WalletUpdate__first-step");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should handle close", async () => {
 		const onClose = jest.fn();
-		const { getByTestId } = render(<WalletUpdate isOpen={true} onClose={onClose} />);
-		await waitFor(() => expect(getByTestId("WalletUpdate__first-step")).toBeTruthy());
+		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} onClose={onClose} />);
+		await findByTestId("WalletUpdate__first-step");
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
 		});
@@ -65,8 +65,8 @@ describe("WalletUpdate", () => {
 
 	it("should handle cancel", async () => {
 		const onCancel = jest.fn();
-		const { getByTestId } = render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
-		await waitFor(() => expect(getByTestId("WalletUpdate__first-step")).toBeTruthy());
+		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
+		await findByTestId("WalletUpdate__first-step");
 		act(() => {
 			fireEvent.click(getByTestId("WalletUpdate__cancel-button"));
 		});
@@ -74,12 +74,12 @@ describe("WalletUpdate", () => {
 	});
 
 	it("should handle update", async () => {
-		const { getByTestId } = render(<WalletUpdate isOpen={true} />);
-		await waitFor(() => expect(getByTestId("WalletUpdate__first-step")).toBeTruthy());
+		const { getByTestId, findByTestId } = render(<WalletUpdate isOpen={true} />);
+		await findByTestId("WalletUpdate__first-step");
 		act(() => {
 			fireEvent.click(getByTestId("WalletUpdate__update-button"));
 		});
-		await waitFor(() => expect(getByTestId("WalletUpdate__second-step")).toBeTruthy());
+		await findByTestId("WalletUpdate__second-step");
 	});
 
 	it("should handle install", async () => {

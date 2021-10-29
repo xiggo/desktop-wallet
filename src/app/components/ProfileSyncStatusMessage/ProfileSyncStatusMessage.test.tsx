@@ -9,7 +9,7 @@ describe("SyncErrorMessage", () => {
 	const failedNetworkNames = ["ARK Devnet", "ARK Mainnet", "Lisk Devnet"];
 
 	it("should render one failed network", async () => {
-		const { container, getByText } = renderWithRouter(
+		const { container, findByText } = renderWithRouter(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0]]} />
 			</Route>,
@@ -18,13 +18,13 @@ describe("SyncErrorMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(failedNetworkNames[0])).toBeInTheDocument());
+		await findByText(failedNetworkNames[0]);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render two failed networks", async () => {
-		const { container, getByText } = renderWithRouter(
+		const { container, findByText } = renderWithRouter(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0], failedNetworkNames[1]]} />
 			</Route>,
@@ -33,14 +33,14 @@ describe("SyncErrorMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(failedNetworkNames[0])).toBeInTheDocument());
-		await waitFor(() => expect(getByText(failedNetworkNames[1])).toBeInTheDocument());
+		await findByText(failedNetworkNames[0]);
+		await findByText(failedNetworkNames[1]);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render multiple failed networks", async () => {
-		const { container, getByText } = renderWithRouter(
+		const { container, findByText } = renderWithRouter(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={failedNetworkNames} />
 			</Route>,
@@ -49,15 +49,15 @@ describe("SyncErrorMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(failedNetworkNames[0])).toBeInTheDocument());
-		await waitFor(() => expect(getByText(failedNetworkNames[1])).toBeInTheDocument());
+		await findByText(failedNetworkNames[0]);
+		await findByText(failedNetworkNames[1]);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should handle retry", async () => {
 		const onRetry = jest.fn();
-		const { container, getByText, getByTestId } = renderWithRouter(
+		const { container, getByTestId, findByText } = renderWithRouter(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={failedNetworkNames} onRetry={onRetry} />
 			</Route>,
@@ -66,9 +66,9 @@ describe("SyncErrorMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByText(failedNetworkNames[0])).toBeInTheDocument());
-		await waitFor(() => expect(getByText(failedNetworkNames[1])).toBeInTheDocument());
-		await waitFor(() => expect(getByText(failedNetworkNames[2])).toBeInTheDocument());
+		await findByText(failedNetworkNames[0]);
+		await findByText(failedNetworkNames[1]);
+		await findByText(failedNetworkNames[2]);
 
 		act(() => {
 			fireEvent.click(getByTestId("SyncErrorMessage__retry"));

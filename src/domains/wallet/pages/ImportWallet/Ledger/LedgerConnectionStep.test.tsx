@@ -88,12 +88,10 @@ describe("LedgerConnectionStep", () => {
 			{ history, withProviders: false },
 		);
 
-		await waitFor(() => expect(screen.queryByText("Open the ARK app on your device ...")).toBeInTheDocument());
+		await screen.findByText("Open the ARK app on your device ...");
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalled(), { timeout: 10_000 });
-		await waitFor(() =>
-			expect(screen.queryByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR"))).toBeInTheDocument(),
-		);
+		await screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR"));
 
 		expect(container).toMatchSnapshot();
 
@@ -147,18 +145,14 @@ describe("LedgerConnectionStep", () => {
 			{ history, withProviders: false },
 		);
 
-		await waitFor(() => expect(screen.queryByText("Open the ARK app on your device ...")).toBeInTheDocument());
+		await screen.findByText("Open the ARK app on your device ...");
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalled(), { timeout: 10_000 });
-		await waitFor(() =>
-			expect(
-				screen.queryByText(
-					t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
-						coin: wallet.network().coin(),
-						version: outdatedVersion,
-					}),
-				),
-			).toBeInTheDocument(),
+		await screen.findByText(
+			t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
+				coin: wallet.network().coin(),
+				version: outdatedVersion,
+			}),
 		);
 
 		expect(container).toMatchSnapshot();
@@ -205,7 +199,7 @@ describe("LedgerConnectionStep", () => {
 			{ history, withProviders: false },
 		);
 
-		await waitFor(() => expect(screen.getByText("Successfully connected")).toBeInTheDocument());
+		await screen.findByText("Successfully connected");
 		await waitFor(() => expect(onConnect).toHaveBeenCalled());
 
 		expect(container).toMatchSnapshot();

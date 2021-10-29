@@ -363,7 +363,7 @@ describe("Signed Transaction Table", () => {
 		const { asFragment } = render(
 			<PendingTransactions isCompact={false} wallet={wallet} pendingTransactions={pendingTransactions} />,
 		);
-		await waitFor(() => expect(screen.getByText("clock.svg")).toBeInTheDocument());
+		await screen.findByText("clock.svg");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -457,7 +457,7 @@ describe("Signed Transaction Table", () => {
 				pendingTransactions={pendingMultisignatureTransactions}
 			/>,
 		);
-		await waitFor(() => expect(screen.getByText("clock-pencil.svg")).toBeInTheDocument());
+		await screen.findByText("clock-pencil.svg");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -480,7 +480,7 @@ describe("Signed Transaction Table", () => {
 				pendingTransactions={pendingMultisignatureTransactions}
 			/>,
 		);
-		await waitFor(() => expect(screen.getByText("circle-check-mark-pencil.svg")).toBeInTheDocument());
+		await screen.findByText("circle-check-mark-pencil.svg");
 
 		expect(asFragment()).toMatchSnapshot();
 

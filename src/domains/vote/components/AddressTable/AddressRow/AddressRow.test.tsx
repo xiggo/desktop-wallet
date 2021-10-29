@@ -15,7 +15,6 @@ import {
 	MNEMONICS,
 	renderWithRouter,
 	syncDelegates,
-	waitFor,
 } from "utils/testing-library";
 
 import { AddressRow } from "./AddressRow";
@@ -89,7 +88,7 @@ describe("AddressRow", () => {
 	});
 
 	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
-		const { asFragment, container, getByTestId } = renderWithRouter(
+		const { asFragment, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -104,7 +103,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeTruthy();
 
-		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
+		await findByTestId("StatusIcon__icon");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -184,7 +183,7 @@ describe("AddressRow", () => {
 
 	it("should render for a multisignature wallet", async () => {
 		const isMultiSignatureSpy = jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
-		const { asFragment, container, getByTestId } = renderWithRouter(
+		const { asFragment, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -199,7 +198,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeTruthy();
 
-		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
+		await findByTestId("StatusIcon__icon");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -207,7 +206,7 @@ describe("AddressRow", () => {
 	});
 
 	it("should render when wallet not found for votes", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -221,15 +220,15 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
-		await waitFor(() => expect(getByTestId("AddressRow__select-0")).toBeTruthy());
-		await waitFor(() => expect(getByTestId("AddressRow__select-1")).toBeTruthy());
+		await findByTestId("StatusIcon__icon");
+		await findByTestId("AddressRow__select-0");
+		await findByTestId("AddressRow__select-1");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render when wallet hasn't voted", async () => {
-		const { asFragment, getAllByTestId, getByTestId } = renderWithRouter(
+		const { asFragment, findAllByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -243,9 +242,9 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("StatusIcon__icon")).toBeTruthy());
-		await waitFor(() => expect(getByTestId("AddressRow__select-0")).toBeTruthy());
-		await waitFor(() => expect(getByTestId("AddressRow__select-1")).toBeTruthy());
+		await findAllByTestId("StatusIcon__icon");
+		await findByTestId("AddressRow__select-0");
+		await findByTestId("AddressRow__select-1");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -267,7 +266,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, getAllByTestId } = renderWithRouter(
+		const { container, asFragment, findAllByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -280,7 +279,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("StatusIcon__icon")).toBeTruthy());
+		await findAllByTestId("StatusIcon__icon");
 
 		expect(container).toHaveTextContent("circle-check-mark.svg");
 
@@ -306,7 +305,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, getAllByTestId } = renderWithRouter(
+		const { container, asFragment, findAllByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -319,7 +318,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("StatusIcon__icon")).toBeTruthy());
+		await findAllByTestId("StatusIcon__icon");
 
 		expect(container).toHaveTextContent("clock.svg");
 
@@ -345,7 +344,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, getAllByTestId } = renderWithRouter(
+		const { container, asFragment, findAllByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -358,7 +357,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await waitFor(() => expect(getAllByTestId("StatusIcon__icon")).toBeTruthy());
+		await findAllByTestId("StatusIcon__icon");
 
 		expect(container).toHaveTextContent("circle-cross.svg");
 
@@ -373,7 +372,7 @@ describe("AddressRow", () => {
 		await wallet.synchroniser().coin();
 
 		const onSelect = jest.fn();
-		const { asFragment, container, getByTestId } = renderWithRouter(
+		const { asFragment, container, getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -387,7 +386,7 @@ describe("AddressRow", () => {
 		);
 		const selectButton = getByTestId("AddressRow__select-0");
 
-		await waitFor(() => expect(getByTestId("StatusIcon__icon")).toBeTruthy());
+		await findByTestId("StatusIcon__icon");
 
 		act(() => {
 			fireEvent.click(selectButton);

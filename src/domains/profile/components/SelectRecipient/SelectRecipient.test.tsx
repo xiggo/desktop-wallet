@@ -47,7 +47,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should open and close contacts modal", async () => {
-		const { getByTestId } = render(
+		const { getByTestId, findByTestId } = render(
 			<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />,
 		);
 
@@ -57,7 +57,7 @@ describe("SelectRecipient", () => {
 			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
@@ -73,7 +73,7 @@ describe("SelectRecipient", () => {
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeTruthy());
+		await screen.findByTestId("modal__inner");
 
 		const firstContactAddress = screen.getByTestId("RecipientListItem__select-button-2");
 

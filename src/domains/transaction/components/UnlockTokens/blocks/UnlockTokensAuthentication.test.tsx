@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { screen, waitFor } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import React from "react";
@@ -25,7 +25,7 @@ describe("UnlockTokensAuthentication", () => {
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument());
+		await screen.findByTestId("AuthenticationStep");
 
 		userEvent.click(screen.getByText(translations.COMMON.BACK));
 

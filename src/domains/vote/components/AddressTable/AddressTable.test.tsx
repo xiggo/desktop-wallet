@@ -41,7 +41,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeTruthy();
 
-		await waitFor(() => expect(screen.getByTestId("StatusIcon__icon")).toBeTruthy());
+		await screen.findByTestId("StatusIcon__icon");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

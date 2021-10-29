@@ -142,7 +142,7 @@ describe("InstallPlugin", () => {
 		const downloadAndInstallPlugin = async () => {
 			fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
-			await waitFor(() => expect(screen.getByTestId("InstallPlugin__step--second")).toBeInTheDocument());
+			await screen.findByTestId("InstallPlugin__step--second");
 
 			expect(invokeSpy).toHaveBeenCalledWith("plugin:download", {
 				name: plugin.id,
@@ -155,7 +155,7 @@ describe("InstallPlugin", () => {
 			});
 			expect(invokeSpy).toHaveBeenLastCalledWith("plugin:loader-fs.find", `/Users/plugins/${plugin.id}`);
 
-			await waitFor(() => expect(screen.getByTestId("InstallPlugin__step--third")).toBeInTheDocument());
+			await screen.findByTestId("InstallPlugin__step--third");
 		};
 
 		await downloadAndInstallPlugin();
@@ -258,9 +258,9 @@ describe("InstallPlugin", () => {
 		await act(async () => {
 			fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
-			await waitFor(() => expect(screen.getByTestId("InstallPlugin__step--second")).toBeInTheDocument());
+			await screen.findByTestId("InstallPlugin__step--second");
 
-			await waitFor(() => expect(screen.getByTestId("InstallPlugin__step--third")).toBeInTheDocument());
+			await screen.findByTestId("InstallPlugin__step--third");
 		});
 
 		fireEvent.click(screen.getByTestId("InstallPlugin__enable-button"));

@@ -143,7 +143,7 @@ describe("Welcome", () => {
 			fireEvent.click(settingsOption);
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("modal__inner");
 
 		await act(async () => {
 			fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "password" } });
@@ -191,7 +191,7 @@ describe("Welcome", () => {
 	});
 
 	it("should delete profile from profile card menu", async () => {
-		const { getByText, queryByTestId, getAllByTestId, getByTestId } = renderWithRouter(<Welcome />);
+		const { getByText, getAllByTestId, getByTestId, findByTestId } = renderWithRouter(<Welcome />);
 
 		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -210,7 +210,7 @@ describe("Welcome", () => {
 			fireEvent.click(deleteOption);
 		});
 
-		await waitFor(() => expect(queryByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("DeleteResource__submit-button"));

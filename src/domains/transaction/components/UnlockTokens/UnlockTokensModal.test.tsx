@@ -98,7 +98,7 @@ describe("UnlockTokensModal", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("UnlockTokensModal")).toBeInTheDocument());
+		await screen.findByTestId("UnlockTokensModal");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -119,7 +119,7 @@ describe("UnlockTokensModal", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("UnlockTokensModal")).toBeInTheDocument());
+		await screen.findByTestId("UnlockTokensModal");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -164,7 +164,7 @@ describe("UnlockTokensModal", () => {
 
 		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument());
+		await screen.findByTestId("AuthenticationStep");
 
 		// back to review step
 
@@ -176,7 +176,7 @@ describe("UnlockTokensModal", () => {
 
 		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument());
+		await screen.findByTestId("AuthenticationStep");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -209,9 +209,9 @@ describe("UnlockTokensModal", () => {
 		userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
 
 		if (expectedOutcome === "success") {
-			await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument());
+			await screen.findByTestId("TransactionSuccessful");
 		} else {
-			await waitFor(() => expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument());
+			await screen.findByTestId("ErrorStep__errorMessage");
 		}
 
 		expect(asFragment()).toMatchSnapshot();

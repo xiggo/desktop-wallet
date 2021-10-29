@@ -110,7 +110,7 @@ describe("SearchRecipient", () => {
 			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -146,7 +146,7 @@ describe("SearchRecipient", () => {
 			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -182,7 +182,7 @@ describe("SearchRecipient", () => {
 			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -227,7 +227,7 @@ describe("SearchRecipient", () => {
 			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 		});
 
-		await waitFor(() => expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument());
+		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -242,7 +242,7 @@ describe("SearchRecipient", () => {
 		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non-existent recipient address"));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
 
-		await waitFor(() => expect(screen.getByTestId("EmptyResults")).toBeInTheDocument());
+		await screen.findByTestId("EmptyResults");
 
 		jest.useRealTimers();
 	});

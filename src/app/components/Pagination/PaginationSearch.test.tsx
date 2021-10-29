@@ -5,25 +5,25 @@ import { PaginationSearch } from "./PaginationSearch";
 
 describe("PaginationSearch", () => {
 	it("should render", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment, findByTestId } = render(
 			<PaginationSearch onClick={jest.fn()} onSelectPage={jest.fn()} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show pagination search input", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<PaginationSearch onClick={jest.fn()} onSelectPage={jest.fn()} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -31,17 +31,17 @@ describe("PaginationSearch", () => {
 			fireEvent.click(getByTestId("PaginationSearchToggle"));
 		});
 
-		await waitFor(() => expect(getByTestId("PaginationSearchForm")).toBeInTheDocument());
+		await findByTestId("PaginationSearchForm");
 	});
 
 	it("should show search input and close", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<PaginationSearch onClick={jest.fn()} onSelectPage={jest.fn()} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -49,7 +49,7 @@ describe("PaginationSearch", () => {
 			fireEvent.click(getByTestId("PaginationSearchToggle"));
 		});
 
-		await waitFor(() => expect(getByTestId("PaginationSearchForm")).toBeInTheDocument());
+		await findByTestId("PaginationSearchForm");
 
 		act(() => {
 			fireEvent.click(getByTestId("PaginationSearch__cancel"));
@@ -61,13 +61,13 @@ describe("PaginationSearch", () => {
 	it("should type page and emit onSelectPage event", async () => {
 		const onSelect = jest.fn();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -75,7 +75,7 @@ describe("PaginationSearch", () => {
 			fireEvent.click(getByTestId("PaginationSearchToggle"));
 		});
 
-		await waitFor(() => expect(getByTestId("PaginationSearchForm")).toBeInTheDocument());
+		await findByTestId("PaginationSearchForm");
 
 		act(() => {
 			fireEvent.input(getByTestId("PaginationSearch__input"), {
@@ -99,13 +99,13 @@ describe("PaginationSearch", () => {
 	it("should not allow typing number greater than total pages", async () => {
 		const onSelect = jest.fn();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -113,7 +113,7 @@ describe("PaginationSearch", () => {
 			fireEvent.click(getByTestId("PaginationSearchToggle"));
 		});
 
-		await waitFor(() => expect(getByTestId("PaginationSearchForm")).toBeInTheDocument());
+		await findByTestId("PaginationSearchForm");
 
 		act(() => {
 			fireEvent.input(getByTestId("PaginationSearch__input"), {
@@ -137,13 +137,13 @@ describe("PaginationSearch", () => {
 	it("should not emit onSelect if nothing is typed", async () => {
 		const onSelect = jest.fn();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -151,7 +151,7 @@ describe("PaginationSearch", () => {
 			fireEvent.click(getByTestId("PaginationSearchToggle"));
 		});
 
-		await waitFor(() => expect(getByTestId("PaginationSearchForm")).toBeInTheDocument());
+		await findByTestId("PaginationSearchForm");
 
 		act(() => {
 			fireEvent.click(getByTestId("PaginationSearch__submit"));
@@ -163,13 +163,13 @@ describe("PaginationSearch", () => {
 	it("should not emit onSelect if zero is typed", async () => {
 		const onSelect = jest.fn();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -177,7 +177,7 @@ describe("PaginationSearch", () => {
 			fireEvent.click(getByTestId("PaginationSearchToggle"));
 		});
 
-		await waitFor(() => expect(getByTestId("PaginationSearchForm")).toBeInTheDocument());
+		await findByTestId("PaginationSearchForm");
 
 		act(() => {
 			fireEvent.input(getByTestId("PaginationSearch__input"), {
@@ -201,13 +201,13 @@ describe("PaginationSearch", () => {
 	it("should not limit total page if not provided", async () => {
 		const onSelect = jest.fn();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -215,7 +215,7 @@ describe("PaginationSearch", () => {
 			fireEvent.click(getByTestId("PaginationSearchToggle"));
 		});
 
-		await waitFor(() => expect(getByTestId("PaginationSearchForm")).toBeInTheDocument());
+		await findByTestId("PaginationSearchForm");
 
 		act(() => {
 			fireEvent.input(getByTestId("PaginationSearch__input"), {
@@ -239,7 +239,7 @@ describe("PaginationSearch", () => {
 	it("should close search input if clicked outside", async () => {
 		const onSelect = jest.fn();
 
-		const { asFragment, getByTestId } = render(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<div>
 				<div data-testid="somewhere-outside" className="p-4">
 					sample text
@@ -251,7 +251,7 @@ describe("PaginationSearch", () => {
 			</div>,
 		);
 
-		await waitFor(() => expect(getByTestId("PaginationSearchToggle")).toBeInTheDocument());
+		await findByTestId("PaginationSearchToggle");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -259,7 +259,7 @@ describe("PaginationSearch", () => {
 			fireEvent.click(getByTestId("PaginationSearchToggle"));
 		});
 
-		await waitFor(() => expect(getByTestId("PaginationSearchForm")).toBeInTheDocument());
+		await findByTestId("PaginationSearchForm");
 
 		act(() => {
 			fireEvent.mouseDown(getByTestId("somewhere-outside"));

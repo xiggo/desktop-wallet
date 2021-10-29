@@ -54,7 +54,7 @@ describe("Configuration Context", () => {
 			);
 		};
 
-		const { getByTestId, asFragment } = renderWithRouter(<Test />);
+		const { getByTestId, asFragment, findByTestId } = renderWithRouter(<Test />);
 
 		expect(getByTestId("Configuration__consumer")).toBeInTheDocument();
 
@@ -64,7 +64,7 @@ describe("Configuration Context", () => {
 			fireEvent.click(getByTestId("Configuration__consumer"));
 		});
 
-		await waitFor(() => expect(getByTestId("Configuration__list")).toBeInTheDocument());
+		await findByTestId("Configuration__list");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

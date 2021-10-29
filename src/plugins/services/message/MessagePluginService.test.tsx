@@ -76,7 +76,7 @@ describe("MessagePluginService", () => {
 
 		fireEvent.click(screen.getByText("Open Modal"));
 
-		await waitFor(() => expect(screen.getByTestId("SignMessage")).toBeInTheDocument());
+		await screen.findByTestId("SignMessage");
 
 		fireEvent.input(screen.getByTestId("SignMessage__mnemonic-input"), {
 			target: {
@@ -88,7 +88,7 @@ describe("MessagePluginService", () => {
 
 		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
-		await waitFor(() => expect(screen.getByText("My Plugin Message")).toBeInTheDocument());
+		await screen.findByText("My Plugin Message");
 
 		fireEvent.click(screen.getByText("Close Modal"));
 

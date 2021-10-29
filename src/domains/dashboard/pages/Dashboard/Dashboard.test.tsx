@@ -136,7 +136,7 @@ describe("Dashboard", () => {
 		});
 		profile.markIntroductoryTutorialAsComplete();
 
-		const { asFragment, getByTestId, getByText, queryByText, getAllByRole } = renderWithRouter(
+		const { asFragment, getByTestId, getByText, queryByText, getAllByRole, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<Dashboard />
@@ -155,9 +155,7 @@ describe("Dashboard", () => {
 			fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 		});
 
-		await waitFor(() =>
-			expect(getByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).toBeInTheDocument(),
-		);
+		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
@@ -171,9 +169,7 @@ describe("Dashboard", () => {
 			fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 		});
 
-		await waitFor(() =>
-			expect(getByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).toBeInTheDocument(),
-		);
+		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "add" });
@@ -272,7 +268,7 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument());
+		await screen.findByTestId("EmptyBlock");
 
 		expect(asFragment()).toMatchSnapshot();
 

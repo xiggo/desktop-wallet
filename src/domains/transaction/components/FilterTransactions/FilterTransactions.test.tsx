@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
 import { FilterTransactions } from ".";
 
@@ -29,7 +29,7 @@ describe("FilterTransactions", () => {
 	});
 
 	it("should open dropdown list with all transaction types", async () => {
-		const { container, getByRole, getByTestId } = render(
+		const { container, getByRole, findByTestId } = render(
 			<FilterTransactions wallets={profile.wallets().values()} />,
 		);
 
@@ -39,7 +39,7 @@ describe("FilterTransactions", () => {
 			fireEvent.click(getByRole("button", { name: /Type/ }));
 		});
 
-		await waitFor(() => expect(getByTestId("dropdown__option--core-0")).toBeInTheDocument());
+		await findByTestId("dropdown__option--core-0");
 
 		expect(container).toMatchSnapshot();
 	});
@@ -47,7 +47,7 @@ describe("FilterTransactions", () => {
 	it("should emit onChange", async () => {
 		const onSelect = jest.fn();
 
-		const { getByRole, getByTestId } = render(
+		const { getByRole, getByTestId, findByTestId } = render(
 			<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />,
 		);
 
@@ -57,7 +57,7 @@ describe("FilterTransactions", () => {
 			fireEvent.click(getByRole("button", { name: /Type/ }));
 		});
 
-		await waitFor(() => expect(getByTestId("dropdown__option--core-0")).toBeInTheDocument());
+		await findByTestId("dropdown__option--core-0");
 
 		act(() => {
 			fireEvent.click(getByTestId("dropdown__option--core-0"));

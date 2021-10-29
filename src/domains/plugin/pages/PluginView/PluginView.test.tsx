@@ -4,7 +4,7 @@ import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import { PluginController, PluginManager } from "plugins/core";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, renderWithRouter, screen } from "utils/testing-library";
 
 import { PluginView } from "./PluginView";
 
@@ -44,7 +44,7 @@ describe("Plugin View", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.queryByText("My Plugin View")).toBeInTheDocument());
+		await screen.findByText("My Plugin View");
 
 		expect(container).toMatchSnapshot();
 
