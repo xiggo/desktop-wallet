@@ -782,7 +782,8 @@ describe("PluginManager", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
 				name: "@dated/delegate-calculator-wallet-plugin",
-				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
+				url:
+					"https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
 			}),
 		);
 

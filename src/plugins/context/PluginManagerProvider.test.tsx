@@ -251,6 +251,52 @@ describe("PluginManagerProvider", () => {
 		ipcRendererSpy.mockRestore();
 	});
 
+	it("should download plugin from archive url", async () => {
+		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
+			if (channel === "plugin:download") {
+				return "/plugins/test-plugin";
+			}
+		});
+
+		const Component = () => {
+			const { downloadPlugin } = usePluginManagerContext();
+			return (
+				<div>
+					<button
+						onClick={() =>
+							downloadPlugin({
+								archiveUrl:
+									"https://registry.npmjs.org/arkecosystem/test-plugin/-/test-plugin-1.0.0.tgz",
+								id: "test-plugin",
+							} as any)
+						}
+					>
+						Fetch
+					</button>
+				</div>
+			);
+		};
+
+		render(
+			<EnvironmentProvider env={env}>
+				<PluginManagerProvider manager={manager} services={[]}>
+					<Component />
+				</PluginManagerProvider>
+			</EnvironmentProvider>,
+		);
+
+		fireEvent.click(screen.getByText("Fetch"));
+
+		await waitFor(() =>
+			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
+				name: "test-plugin",
+				url: "https://registry.npmjs.org/arkecosystem/test-plugin/-/test-plugin-1.0.0.tgz",
+			}),
+		);
+
+		ipcRendererSpy.mockRestore();
+	});
+
 	it("should download plugin from custom url", async () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:loader-fs.find") {
@@ -637,7 +683,8 @@ describe("PluginManagerProvider", () => {
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
 				name: "@dated/delegate-calculator-wallet-plugin",
-				url: "https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip",
+				url:
+					"https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
 			}),
 		);
 

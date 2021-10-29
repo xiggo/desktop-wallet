@@ -13,7 +13,7 @@ import {
 } from "plugins/types";
 import React, { useCallback, useMemo, useState } from "react";
 import semver from "semver";
-import { assertArray } from "utils/assertions";
+import { assertArray, assertString } from "utils/assertions";
 import { appVersion, openExternal } from "utils/electron-utils";
 
 import { PluginController, PluginManager } from "../core";
@@ -264,34 +264,37 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 
 	const downloadPlugin = useCallback(
 		async (plugin: SerializedPluginConfigurationData, repositoryURL?: string) => {
-			let url = plugin.archiveUrl;
-			let subDirectory: string | undefined = undefined;
+			const getPluginUrl = (plugin: SerializedPluginConfigurationData, repositoryURL?: string) => {
+				let url = plugin.archiveUrl;
 
-			/* istanbul ignore next */
-			if (!url) {
-				let realRepositoryURL = repositoryURL;
-
-				/* istanbul ignore next */
-				if (!realRepositoryURL) {
-					const config = pluginPackages.find((pkg) => pkg.name() === plugin.id);
-					const source = config?.get<{ url: string }>("sourceProvider");
-					if (!source?.url) {
-						throw new Error(`The repository of the plugin "${plugin.name}" could not be found.`);
-					}
-					realRepositoryURL = source.url;
+				if (url) {
+					return { url };
 				}
 
-				if (isRootRepositoryUrl(realRepositoryURL)) {
-					url = `${realRepositoryURL}/archive/master.zip`;
-				} else {
-					const matches = realRepositoryURL.match(githubRepositoryRegex);
+				const config = pluginPackages.find((pkg) => pkg.name() === plugin.id);
+				url = config?.get<string>("archiveUrl");
 
-					assertArray(matches);
-
-					url = `https://github.com/${matches[1]}/${matches[2]}/archive/${matches[4]}.zip`;
-					subDirectory = matches[5];
+				if (url) {
+					return { url };
 				}
-			}
+
+				assertString(repositoryURL);
+
+				if (isRootRepositoryUrl(repositoryURL)) {
+					return { url: `${repositoryURL}/archive/master.zip` };
+				}
+
+				const matches = repositoryURL.match(githubRepositoryRegex);
+
+				assertArray(matches);
+
+				return {
+					subDirectory: matches[5],
+					url: `https://github.com/${matches[1]}/${matches[2]}/archive/${matches[4]}.zip`,
+				};
+			};
+
+			const { url, subDirectory } = getPluginUrl(plugin, repositoryURL);
 
 			const result: {
 				savedPath: string;
