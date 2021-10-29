@@ -981,7 +981,7 @@ describe("SendTransfer", () => {
 	});
 
 	it("should handle fee change", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?coin=ark&network=ark.devnet`;
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
 		const history = createMemoryHistory();
 		history.push(transferURL);
@@ -1000,17 +1000,34 @@ describe("SendTransfer", () => {
 
 		await findByTestId("SendTransfer__form-step");
 
+		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
+		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
+		await waitFor(() => expect(getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
+
+		const goSpy = jest.spyOn(history, "go").mockImplementation();
+
+		const backButton = getByTestId("StepNavigation__back-button");
+
+		expect(backButton).not.toHaveAttribute("disabled");
+
+		fireEvent.click(backButton);
+
+		expect(goSpy).toHaveBeenCalledWith(-1);
+
 		// Select recipient
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
 		await findByTestId("modal__inner");
 
 		// Amount
-		const sendAll = getByTestId("AddRecipient__send-all");
-		fireEvent.click(sendAll);
-		await waitFor(() => expect(getByTestId("AddRecipient__amount")).not.toHaveValue("0"));
+		fireEvent.input(getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue("1"));
+
+		// Memo
+		fireEvent.input(getByTestId("Input__memo"), { target: { value: "test memo" } });
+		await waitFor(() => expect(getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1031,6 +1048,8 @@ describe("SendTransfer", () => {
 
 		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "1000000000" } });
 		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("1000000000"));
+
+		goSpy.mockRestore();
 	});
 
 	it.each(["with keyboard", "without keyboard"])("should send a single transfer", async (inputMethod) => {

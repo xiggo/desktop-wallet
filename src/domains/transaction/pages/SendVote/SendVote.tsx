@@ -241,11 +241,42 @@ export const SendVote = () => {
 			assertWallet(senderWallet);
 
 			if (unvotes.length > 0 && votes.length > 0) {
-				// @README: This needs to be temporarily hardcoded here because we need to create 1 or 2
-				// transactions but the SDK is only capable of creating 1 transaction because it has no
-				// concept of all those weird legacy constructs that exist within BIND.
-				/* istanbul ignore next */
-				if (senderWallet?.networkId().startsWith("bind")) {
+				if (senderWallet?.network().votingMethod() === "simple") {
+					const { uuid, transaction } = await transactionBuilder.build(
+						"vote",
+						{
+							...voteTransactionInput,
+							data: {
+								unvotes: unvotes.map((unvote) => ({
+									amount: unvote.amount,
+									id: unvote.wallet?.governanceIdentifier(),
+								})),
+								votes: votes.map((vote) => ({
+									amount: vote.amount,
+									id: vote.wallet?.governanceIdentifier(),
+								})),
+							},
+						},
+						senderWallet,
+						{ abortSignal },
+					);
+
+					const voteResponse = await activeWallet.transaction().broadcast(uuid);
+
+					handleBroadcastError(voteResponse);
+
+					await activeWallet.transaction().sync();
+
+					await persist();
+
+					setTransaction(transaction);
+
+					setActiveTab(Step.SummaryStep);
+
+					await confirmSendVote("combined");
+				}
+
+				if (senderWallet?.network().votingMethod() === "split") {
 					const unvoteResult = await transactionBuilder.build(
 						"vote",
 						{
@@ -299,41 +330,6 @@ export const SendVote = () => {
 					setActiveTab(Step.SummaryStep);
 
 					await confirmSendVote("vote");
-				} else {
-					// @README: If we are not interacting with a BIND network we can combine the
-					// votes and unvotes in a single transaction to save fees and processing time.
-					const { uuid, transaction } = await transactionBuilder.build(
-						"vote",
-						{
-							...voteTransactionInput,
-							data: {
-								unvotes: unvotes.map((unvote) => ({
-									amount: unvote.amount,
-									id: unvote.wallet?.governanceIdentifier(),
-								})),
-								votes: votes.map((vote) => ({
-									amount: vote.amount,
-									id: vote.wallet?.governanceIdentifier(),
-								})),
-							},
-						},
-						senderWallet,
-						{ abortSignal },
-					);
-
-					const voteResponse = await activeWallet.transaction().broadcast(uuid);
-
-					handleBroadcastError(voteResponse);
-
-					await activeWallet.transaction().sync();
-
-					await persist();
-
-					setTransaction(transaction);
-
-					setActiveTab(Step.SummaryStep);
-
-					await confirmSendVote("combined");
 				}
 			} else {
 				const isUnvote = unvotes.length > 0;
