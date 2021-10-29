@@ -1,4 +1,5 @@
 import { renderHook } from "@testing-library/react-hooks";
+import { PlatformSdkChoices } from "data";
 import { WithProviders } from "utils/testing-library";
 
 import { useCurrencyOptions } from "./use-currency-options";
@@ -11,9 +12,9 @@ describe("useCurrencyOptions", () => {
 
 		expect(currencyOptions).toHaveLength(2);
 		// Fiat
-		expect(currencyOptions[0].options).toHaveLength(16);
+		expect(currencyOptions[0].options).toHaveLength(PlatformSdkChoices.currencies.fiat.length);
 		// Crypto
-		expect(currencyOptions[1].options).toHaveLength(3);
+		expect(currencyOptions[1].options).toHaveLength(PlatformSdkChoices.currencies.crypto.length);
 	});
 
 	it("returns only supported currencies if market provider is specified and has unsupported currencies", () => {

@@ -4907,6 +4907,14 @@
     dayjs "^1.10.4"
     dinero.js "^1.8.1"
 
+"@payvo/intl@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@payvo/intl/-/intl-1.0.3.tgz#cd74774401d144e14cec05cad9554386cd35e0cf"
+  integrity sha512-j4G3BE0D6zKxTUfCocZLQCji6l2oNMbjwEpnyuFw4yD7goDasV5O/3YcOnnTyCHlu5ne7SJETSbkZX+gByzqsQ==
+  dependencies:
+    dayjs "^1.10.4"
+    dinero.js "^1.8.1"
+
 "@payvo/markets@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@payvo/markets/-/markets-1.3.0.tgz#c170df46da0bb6a22f67fe80de0d2d65c2cdf0e7"
