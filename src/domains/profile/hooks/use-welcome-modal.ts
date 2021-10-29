@@ -2,9 +2,11 @@ import { Contracts, Environment } from "@payvo/profiles";
 import { useConfiguration } from "app/contexts";
 import { useCallback, useEffect, useState } from "react";
 
+import { WelcomeModalStep } from "../components/WelcomeModal/WelcomeModal.models";
+
 export const useWelcomeModal = (environment: Environment, profile: Contracts.IProfile) => {
 	const [show, setShow] = useState<boolean>(false);
-	const [step, setStep] = useState<number>(1);
+	const [step, setStep] = useState<WelcomeModalStep>(WelcomeModalStep.Introduction);
 	const [showAgain, setShowAgain] = useState(true);
 	const { profileIsSyncing } = useConfiguration();
 
@@ -17,7 +19,7 @@ export const useWelcomeModal = (environment: Environment, profile: Contracts.IPr
 	}, [profile, profileIsSyncing]);
 
 	const onClose = useCallback(async () => {
-		if (!showAgain || step === 5) {
+		if (!showAgain || step === WelcomeModalStep.StepLast) {
 			profile.markIntroductoryTutorialAsComplete();
 		}
 

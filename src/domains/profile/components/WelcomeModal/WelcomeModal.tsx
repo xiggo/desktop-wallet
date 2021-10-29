@@ -9,8 +9,10 @@ import { useWelcomeModal } from "domains/profile/hooks/use-welcome-modal";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const Banner = ({ step }: { step: number }) => {
-	if (step > 1) {
+import { WelcomeModalStep } from "./WelcomeModal.models";
+
+const Banner = ({ step }: { step: WelcomeModalStep }) => {
+	if (step >= WelcomeModalStep.StepFirst) {
 		return (
 			<div className="-mx-10 my-8 border-t border-b border-theme-secondary-300 dark:border-theme-secondary-800">
 				<Image name={`WelcomeModalStep${step - 1}`} domain="profile" className="w-full h-auto" />
@@ -48,17 +50,21 @@ export const WelcomeModal = ({ environment, profile }: { environment: Environmen
 				</div>
 
 				<div className="flex justify-between space-x-3 items-center">
-					{step === 1 ? (
+					{step === WelcomeModalStep.Introduction ? (
 						<label className="inline-flex items-center space-x-3 cursor-pointer dark:text-theme-secondary-700 text-theme-secondary-500 text-sm">
 							<Checkbox checked={!showAgain} onChange={toggleShowAgain} />
 							<span>{t("PROFILE.MODAL_WELCOME.DONT_SHOW_CHECKBOX_LABEL")}</span>
 						</label>
 					) : (
-						<DotNavigation size={4} activeIndex={step - 2} onClick={(step: number) => setStep(step + 2)} />
+						<DotNavigation
+							size={WelcomeModalStep.StepLast - 1}
+							activeIndex={step - 2}
+							onClick={(step: WelcomeModalStep) => setStep(step + 2)}
+						/>
 					)}
 
 					<div className="flex space-x-3">
-						{step === 1 ? (
+						{step === WelcomeModalStep.Introduction ? (
 							<>
 								<Button variant="secondary" onClick={onClose} data-testid="WelcomeModal-skip">
 									{t("COMMON.SKIP")}
@@ -74,7 +80,7 @@ export const WelcomeModal = ({ environment, profile }: { environment: Environmen
 									{t("COMMON.PREV")}
 								</Button>
 
-								{step < 5 ? (
+								{step < WelcomeModalStep.StepLast ? (
 									<Button onClick={goToNextStep} data-testid="WelcomeModal-next">
 										{t("COMMON.NEXT")}
 									</Button>
