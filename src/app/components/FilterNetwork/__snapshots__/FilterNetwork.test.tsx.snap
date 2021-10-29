@@ -70,6 +70,29 @@ exports[`FilterNetwork should render public networks 1`] = `
       </li>
       <li
         class="inline-block pr-5 pb-5 cursor-pointer"
+        data-testid="NetworkOption__bpl.mainnet"
+      >
+        <div
+          class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+        >
+          <div
+            class="sc-bdnxRM NjstW"
+            height="20"
+            width="20"
+          >
+            <svg>
+              bpl.svg
+            </svg>
+          </div>
+          <span
+            class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+          >
+            <span />
+          </span>
+        </div>
+      </li>
+      <li
+        class="inline-block pr-5 pb-5 cursor-pointer"
         data-testid="NetworkOption__bind.mainnet"
       >
         <div
@@ -204,6 +227,29 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
             >
               <svg>
                 ark.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__bpl.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                bpl.svg
               </svg>
             </div>
             <span
@@ -390,6 +436,29 @@ exports[`FilterNetworks should render public networks 1`] = `
         </li>
         <li
           class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__bpl.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                bpl.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
           data-testid="NetworkOption__bind.mainnet"
         >
           <div
@@ -485,6 +554,29 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
                   check-mark-small.svg
                 </svg>
               </div>
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__bpl.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                bpl.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
               <span />
             </span>
           </div>
@@ -679,6 +771,29 @@ exports[`FilterNetworks should toggle view all 1`] = `
             >
               <svg>
                 ark.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__bpl.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                bpl.svg
               </svg>
             </div>
             <span
@@ -926,6 +1041,29 @@ exports[`FilterNetworks should toggle view all 2`] = `
         </li>
         <li
           class="inline-block pr-5 pb-5 cursor-pointer"
+          data-testid="NetworkOption__bpl.mainnet"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+          >
+            <div
+              class="sc-bdnxRM NjstW"
+              height="20"
+              width="20"
+            >
+              <svg>
+                bpl.svg
+              </svg>
+            </div>
+            <span
+              class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+            >
+              <span />
+            </span>
+          </div>
+        </li>
+        <li
+          class="inline-block pr-5 pb-5 cursor-pointer"
           data-testid="NetworkOption__bind.mainnet"
         >
           <div
@@ -1126,6 +1264,29 @@ exports[`NetworkOptions should render available networks options 1`] = `
         >
           <svg>
             ark.svg
+          </svg>
+        </div>
+        <span
+          class="Badge__Wrapper-sc-w9wbbm-0 iNGskz flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <span />
+        </span>
+      </div>
+    </li>
+    <li
+      class="inline-block pr-5 pb-5 cursor-pointer"
+      data-testid="NetworkOption__bpl.mainnet"
+    >
+      <div
+        class="Circle__CircleWrapper-sc-d5u41q-0 cFnCcb relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background"
+      >
+        <div
+          class="sc-bdnxRM NjstW"
+          height="20"
+          width="20"
+        >
+          <svg>
+            bpl.svg
           </svg>
         </div>
         <span

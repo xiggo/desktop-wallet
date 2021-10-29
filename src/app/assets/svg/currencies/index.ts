@@ -4,6 +4,7 @@ import { ReactComponent as ATOM } from "./atom.svg";
 import { ReactComponent as AVAX } from "./avax.svg";
 import { ReactComponent as BIND } from "./bind.svg";
 import { ReactComponent as BOS } from "./bos.svg";
+import { ReactComponent as BPL } from "./bpl.svg";
 import { ReactComponent as BTC } from "./btc.svg";
 import { ReactComponent as DOT } from "./dot.svg";
 import { ReactComponent as EGLD } from "./egld.svg";
@@ -31,6 +32,7 @@ export const Currencies: any = {
 	AVAX,
 	BIND,
 	BOS,
+	BPL,
 	BTC,
 	DARK: ARK,
 	DOT,
