@@ -3,7 +3,7 @@ import { Button } from "app/components/Button";
 import { Dropdown } from "app/components/Dropdown";
 import { Icon } from "app/components/Icon";
 import { NavigationButtonWrapper } from "app/components/NavigationBar";
-import { Notifications } from "app/components/Notifications";
+import { Notifications, useNotifications } from "app/components/Notifications";
 import { TransactionDetailModal } from "domains/transaction/components/TransactionDetailModal";
 import { WalletUpdate } from "domains/wallet/components/WalletUpdate";
 import React, { useState } from "react";
@@ -15,7 +15,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 	const [isWalletUpdateOpen, setIsWalletUpdateOpen] = useState<boolean>();
 	const [walletUpdateVersion, setWalletUpdateVersion] = useState<string>();
 
-	const hasUnread = profile.notifications().hasUnread();
+	const { hasUnread } = useNotifications({ profile });
 
 	const handleNotificationAction = (id: string) => {
 		const notification = profile.notifications().get(id);

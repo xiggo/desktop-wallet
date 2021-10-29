@@ -46,12 +46,6 @@ describe("useNotifications", () => {
 		expect(result.current.transactions).toHaveLength(3);
 	});
 
-	it("#count", async () => {
-		const { result } = renderHook(() => useNotifications({ profile }));
-
-		expect(result.current.count).toBe(5);
-	});
-
 	it("#markAsRead", async () => {
 		const { result } = renderHook(() => useNotifications({ profile }));
 		const notification = result.current.releases[0];

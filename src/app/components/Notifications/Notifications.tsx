@@ -18,10 +18,10 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 
-	const { releases, transactions, count, markAsRead, markAllTransactionsAsRead } = useNotifications({ profile });
+	const { releases, transactions, markAsRead, markAllTransactionsAsRead } = useNotifications({ profile });
 	const wrapperReference = useRef();
 
-	if (count === 0) {
+	if (transactions.length === 0 && releases.length === 0) {
 		return (
 			<NotificationsWrapper>
 				<EmptyBlock>
@@ -59,16 +59,18 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 				</div>
 			)}
 
-			<NotificationTransactionsTable
-				profile={profile}
-				isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
-				transactions={transactions}
-				onClick={onTransactionClick}
-				onVisibilityChange={(isVisible) => {
-					markAllTransactionsAsRead(isVisible);
-					persist();
-				}}
-			/>
+			{transactions.length > 0 && (
+				<NotificationTransactionsTable
+					profile={profile}
+					isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
+					transactions={transactions}
+					onClick={onTransactionClick}
+					onVisibilityChange={(isVisible) => {
+						markAllTransactionsAsRead(isVisible);
+						persist();
+					}}
+				/>
+			)}
 		</NotificationsWrapper>
 	);
 };

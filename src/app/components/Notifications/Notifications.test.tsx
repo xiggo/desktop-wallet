@@ -3,7 +3,7 @@ import { waitFor } from "@testing-library/react";
 import nock from "nock";
 import React from "react";
 import { act } from "react-dom/test-utils";
-import { env, fireEvent, getDefaultProfileId, render } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { Notifications } from ".";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
@@ -35,17 +35,17 @@ describe("Notifications", () => {
 	});
 
 	it("should render with plugins", async () => {
-		const { container, queryAllByTestId } = render(<Notifications profile={profile} />);
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode")).not.toHaveLength(0));
+		const { container } = render(<Notifications profile={profile} />);
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).not.toHaveLength(0));
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with transactions and plugins", async () => {
-		const { container, getAllByTestId, queryAllByTestId } = render(<Notifications profile={profile} />);
+		const { container } = render(<Notifications profile={profile} />);
 
-		await waitFor(() => expect(getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -53,14 +53,12 @@ describe("Notifications", () => {
 	it("should emit onNotificationAction event", async () => {
 		const onNotificationAction = jest.fn();
 
-		const { getAllByTestId, queryAllByTestId } = render(
-			<Notifications profile={profile} onNotificationAction={onNotificationAction} />,
-		);
-		await waitFor(() => expect(getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
+		render(<Notifications profile={profile} onNotificationAction={onNotificationAction} />);
+		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
 		act(() => {
-			fireEvent.click(getAllByTestId("NotificationItem__action")[1]);
+			fireEvent.click(screen.getAllByTestId("NotificationItem__action")[1]);
 		});
 
 		await waitFor(() => expect(onNotificationAction).toHaveBeenCalled());
@@ -69,15 +67,13 @@ describe("Notifications", () => {
 	it("should emit transactionClick event", async () => {
 		const onTransactionClick = jest.fn();
 
-		const { container, getAllByTestId, queryAllByTestId } = render(
-			<Notifications profile={profile} onTransactionClick={onTransactionClick} />,
-		);
+		const { container } = render(<Notifications profile={profile} onTransactionClick={onTransactionClick} />);
 
-		await waitFor(() => expect(getAllByTestId("NotificationItem")).toHaveLength(2));
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
+		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
 		act(() => {
-			fireEvent.click(getAllByTestId("TransactionRowMode")[0]);
+			fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 		});
 
 		await waitFor(() => expect(onTransactionClick).toHaveBeenCalled());
@@ -86,9 +82,10 @@ describe("Notifications", () => {
 	});
 
 	it("should render with empty notifications", async () => {
-		profile.notifications().flush();
-		const { container, queryAllByTestId } = render(<Notifications profile={profile} />);
-		await waitFor(() => expect(queryAllByTestId("TransactionRowMode")).toHaveLength(0));
+		const emptyProfile = env.profiles().create("test2");
+
+		const { container } = render(<Notifications profile={emptyProfile} />);
+		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode")).toHaveLength(0));
 
 		expect(container).toMatchSnapshot();
 	});
