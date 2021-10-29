@@ -26,7 +26,7 @@ describe("Password Settings", () => {
 	});
 
 	it("should render password settings", async () => {
-		const { container, asFragment, getByTestId } = renderWithRouter(
+		const { container, asFragment, findByTestId } = renderWithRouter(
 			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -36,7 +36,7 @@ describe("Password Settings", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("Password-settings__input--password_1")).toBeInTheDocument());
+		await findByTestId("Password-settings__input--password_1");
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
@@ -78,7 +78,7 @@ describe("Password Settings", () => {
 			fireEvent.click(getByTestId("Password-settings__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId(currentPasswordInput)).toBeInTheDocument());
+		await findByTestId(currentPasswordInput);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -102,7 +102,7 @@ describe("Password Settings", () => {
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
-		await waitFor(() => expect(getByTestId(currentPasswordInput)).toBeTruthy());
+		await findByTestId(currentPasswordInput);
 
 		act(() => {
 			fireEvent.input(getByTestId(currentPasswordInput), { target: { value: "S3cUrePa$sword" } });
@@ -125,7 +125,7 @@ describe("Password Settings", () => {
 			fireEvent.click(getByTestId("Password-settings__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId(currentPasswordInput)).toBeInTheDocument());
+		await findByTestId(currentPasswordInput);
 	});
 
 	it("should show an error toast if the current password does not match", async () => {
@@ -152,7 +152,7 @@ describe("Password Settings", () => {
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
-		await waitFor(() => expect(getByTestId(currentPasswordInput)).toBeTruthy());
+		await findByTestId(currentPasswordInput);
 
 		await act(async () => {
 			fireEvent.input(getByTestId(currentPasswordInput), { target: { value: "wrong!" } });
@@ -205,7 +205,7 @@ describe("Password Settings", () => {
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
-		await waitFor(() => expect(getByTestId(currentPasswordInput)).toBeTruthy());
+		await findByTestId(currentPasswordInput);
 
 		act(() => {
 			fireEvent.input(getByTestId(currentPasswordInput), { target: { value: "S3cUrePa$sword" } });
@@ -260,7 +260,7 @@ describe("Password Settings", () => {
 			fireEvent.click(await findByTestId("side-menu__item--password"));
 		});
 
-		await waitFor(() => expect(getByTestId("Password-settings__input--currentPassword")).toBeTruthy());
+		await findByTestId("Password-settings__input--currentPassword");
 
 		act(() => {
 			fireEvent.input(getByTestId("Password-settings__input--currentPassword"), {
@@ -320,9 +320,7 @@ describe("Password Settings", () => {
 
 		userEvent.click(screen.getByTestId("Password-settings__remove-button"));
 
-		await waitFor(() =>
-			expect(screen.getByTestId("PasswordRemovalConfirmModal__input-password")).toBeInTheDocument(),
-		);
+		await screen.findByTestId("PasswordRemovalConfirmModal__input-password");
 
 		// Fill in current password and confirm.
 

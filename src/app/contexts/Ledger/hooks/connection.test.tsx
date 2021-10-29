@@ -76,26 +76,26 @@ describe("Use Ledger Connection", () => {
 			observer!.next({ descriptor: "", type: "add" });
 		});
 
-		await waitFor(() => expect(screen.queryByText("On")).toBeInTheDocument());
+		await screen.findByText("On");
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "remove" });
 		});
 
-		await waitFor(() => expect(screen.queryByText("Off")).toBeInTheDocument());
+		await screen.findByText("Off");
 
 		act(() => {
 			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
-		await waitFor(() => expect(screen.queryByText("On")).toBeInTheDocument());
+		await screen.findByText("On");
 
 		act(() => {
 			observer.error(new Error("Test Error"));
 			observer.complete();
 		});
 
-		await waitFor(() => expect(screen.queryByText("Test Error")).toBeInTheDocument());
+		await screen.findByText("Test Error");
 
 		listenSpy.mockReset();
 	});
@@ -229,7 +229,7 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await waitFor(() => expect(screen.queryByText("Connected")).toBeInTheDocument());
+			await screen.findByText("Connected");
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
@@ -250,7 +250,7 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await waitFor(() => expect(screen.queryByText("Connected")).toBeInTheDocument());
+			await screen.findByText("Connected");
 
 			act(() => {
 				fireEvent.click(screen.getByText("Disconnect"));
@@ -276,11 +276,7 @@ describe("Use Ledger Connection", () => {
 				fireEvent.click(screen.getByText("Abort"));
 			});
 
-			await waitFor(() =>
-				expect(
-					screen.getByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
-				).toBeInTheDocument(),
-			);
+			await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR);
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(3);
@@ -305,11 +301,7 @@ describe("Use Ledger Connection", () => {
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 
-			await waitFor(() =>
-				expect(
-					screen.queryByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
-				).toBeInTheDocument(),
-			);
+			await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR);
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(9);
 
@@ -339,15 +331,11 @@ describe("Use Ledger Connection", () => {
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 
-			await waitFor(() =>
-				expect(
-					screen.queryByText(
-						t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
-							coin: wallet.network().coin(),
-							version: outdatedVersion,
-						}),
-					),
-				).toBeInTheDocument(),
+			await screen.findByText(
+				t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
+					coin: wallet.network().coin(),
+					version: outdatedVersion,
+				}),
 			);
 
 			getPublicKeySpy.mockReset();
@@ -380,7 +368,7 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await waitFor(() => expect(screen.queryByText("Connected")).toBeInTheDocument());
+			await screen.findByText("Connected");
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
@@ -446,7 +434,7 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await waitFor(() => expect(screen.queryByText("Connected")).toBeInTheDocument());
+			await screen.findByText("Connected");
 
 			expect(toastSpy).toHaveBeenCalledWith("Nano S connected");
 

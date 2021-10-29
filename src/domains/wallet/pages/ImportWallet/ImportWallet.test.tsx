@@ -223,7 +223,7 @@ describe("ImportWallet", () => {
 
 		expect(screen.getByTestId("ImportWallet__second-step")).toBeTruthy();
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__mnemonic-input")).toBeInTheDocument());
+		await screen.findByTestId("ImportWallet__mnemonic-input");
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
@@ -233,7 +233,7 @@ describe("ImportWallet", () => {
 
 		fireEvent.change(selectDropdown, { target: { value: "addr" } });
 
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument());
+		await screen.findByTestId("SelectDropdown__option--0");
 
 		act(() => {
 			fireEvent.mouseDown(screen.getByTestId("SelectDropdown__option--0"));
@@ -241,7 +241,7 @@ describe("ImportWallet", () => {
 
 		expect(screen.getByTestId("select-list__input")).toHaveValue("address");
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__address-input")).toBeInTheDocument());
+		await screen.findByTestId("ImportWallet__address-input");
 	});
 
 	it("should render 3rd step", async () => {
@@ -284,7 +284,7 @@ describe("ImportWallet", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementationOnce();
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -294,7 +294,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		await waitFor(() => expect(getByTestId("ImportWallet__back-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("ImportWallet__back-button"));
@@ -308,7 +308,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -318,7 +318,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -346,7 +346,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -356,7 +356,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -392,7 +392,7 @@ describe("ImportWallet", () => {
 			fireEvent.click(getByTestId("ImportWallet__edit-alias"));
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "test alias" } });
@@ -416,7 +416,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -426,7 +426,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -470,7 +470,7 @@ describe("ImportWallet", () => {
 			fireEvent.click(getByTestId("ImportWallet__edit-alias"));
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "Test" } });
@@ -495,7 +495,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getAllByTestId } = renderWithRouter(
+		const { getByTestId, getAllByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -505,7 +505,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -557,7 +557,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getAllByTestId } = renderWithRouter(
+		const { getByTestId, getAllByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -567,7 +567,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -625,7 +625,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -635,7 +635,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -653,10 +653,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.ADDRESS)).toBeInTheDocument());
+		await findByText(commonTranslations.ADDRESS);
 		fireEvent.mouseDown(getByText(commonTranslations.ADDRESS));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__address-input")).toBeTruthy());
+		await findByTestId("ImportWallet__address-input");
 		fireEvent.input(getByTestId("ImportWallet__address-input"), { target: { value: randomAddress } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
@@ -677,7 +677,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -687,7 +687,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -705,10 +705,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.PUBLIC_KEY)).toBeInTheDocument());
+		await findByText(commonTranslations.PUBLIC_KEY);
 		fireEvent.mouseDown(getByText(commonTranslations.PUBLIC_KEY));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__publicKey-input")).toBeTruthy());
+		await findByTestId("ImportWallet__publicKey-input");
 		fireEvent.input(getByTestId("ImportWallet__publicKey-input"), { target: { value: randomPublicKey } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
@@ -729,7 +729,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -739,7 +739,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -757,10 +757,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.PUBLIC_KEY)).toBeInTheDocument());
+		await findByText(commonTranslations.PUBLIC_KEY);
 		fireEvent.mouseDown(getByText(commonTranslations.PUBLIC_KEY));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__publicKey-input")).toBeTruthy());
+		await findByTestId("ImportWallet__publicKey-input");
 		fireEvent.input(getByTestId("ImportWallet__publicKey-input"), { target: { value: randomPublicKeyInvalid } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).toBeDisabled());
@@ -770,7 +770,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -782,7 +782,7 @@ describe("ImportWallet", () => {
 
 		const countBefore = profile.wallets().count();
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -800,10 +800,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.SECRET)).toBeInTheDocument());
+		await findByText(commonTranslations.SECRET);
 		fireEvent.mouseDown(getByText(commonTranslations.SECRET));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__secret-input")).toBeTruthy());
+		await findByTestId("ImportWallet__secret-input");
 		fireEvent.input(getByTestId("ImportWallet__secret-input"), { target: { value: "secret.111" } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
@@ -828,7 +828,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, getAllByTestId } = renderWithRouter(
+		const { getByTestId, getByText, getAllByTestId, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -838,7 +838,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -856,10 +856,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.SECRET)).toBeInTheDocument());
+		await findByText(commonTranslations.SECRET);
 		fireEvent.mouseDown(getByText(commonTranslations.SECRET));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__secret-input")).toBeTruthy());
+		await findByTestId("ImportWallet__secret-input");
 		fireEvent.input(getByTestId("ImportWallet__secret-input"), { target: { value: "secret.222" } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled());
@@ -892,7 +892,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, queryByText, queryAllByText } = renderWithRouter(
+		const { getByTestId, queryByText, findByTestId, findAllByText, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -902,7 +902,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -920,8 +920,8 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(queryAllByText(commonTranslations.MNEMONIC_TYPE.BIP39)).toBeTruthy());
-		await waitFor(() => expect(getByText(commonTranslations.ADDRESS)).toBeTruthy());
+		await findAllByText(commonTranslations.MNEMONIC_TYPE.BIP39);
+		await findByText(commonTranslations.ADDRESS);
 		await waitFor(() => expect(queryByText(commonTranslations.MNEMONIC_TYPE.BIP49)).toBeFalsy());
 		await waitFor(() => expect(queryByText(commonTranslations.PRIVATE_KEY)).toBeFalsy());
 		await waitFor(() => expect(queryByText(commonTranslations.WIF)).toBeFalsy());
@@ -939,7 +939,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -949,7 +949,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -988,7 +988,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -998,7 +998,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -1016,10 +1016,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.ADDRESS)).toBeTruthy());
+		await findByText(commonTranslations.ADDRESS);
 		fireEvent.mouseDown(getByText(commonTranslations.ADDRESS));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__address-input")).toBeTruthy());
+		await findByTestId("ImportWallet__address-input");
 		fireEvent.input(getByTestId("ImportWallet__address-input"), {
 			target: { value: profile.wallets().first().address() },
 		});
@@ -1041,7 +1041,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -1051,7 +1051,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -1069,10 +1069,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.ADDRESS)).toBeTruthy());
+		await findByText(commonTranslations.ADDRESS);
 		fireEvent.mouseDown(getByText(commonTranslations.ADDRESS));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__address-input")).toBeTruthy());
+		await findByTestId("ImportWallet__address-input");
 		fireEvent.input(getByTestId("ImportWallet__address-input"), { target: { value: "123" } });
 
 		await waitFor(() => {
@@ -1096,7 +1096,7 @@ describe("ImportWallet", () => {
 			search: `?ledger=true`,
 		});
 
-		const { getByTestId, container } = renderWithRouter(
+		const { container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<LedgerProvider transport={transport}>
 					<ImportWallet />
@@ -1110,7 +1110,7 @@ describe("ImportWallet", () => {
 
 		expect(container).toMatchSnapshot();
 
-		await waitFor(() => expect(getByTestId("LedgerTabs")).toBeInTheDocument());
+		await findByTestId("LedgerTabs");
 	});
 
 	it("should import by address and name", async () => {
@@ -1124,7 +1124,7 @@ describe("ImportWallet", () => {
 		history.push(route);
 		const randomNewAddress = "DHnF7Ycv16QxQQNGDUdGzWGh5n3ym424UW";
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -1136,7 +1136,7 @@ describe("ImportWallet", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -1154,10 +1154,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.ADDRESS)).toBeTruthy());
+		await findByText(commonTranslations.ADDRESS);
 		fireEvent.mouseDown(getByText(commonTranslations.ADDRESS));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__address-input")).toBeTruthy());
+		await findByTestId("ImportWallet__address-input");
 		fireEvent.input(getByTestId("ImportWallet__address-input"), { target: { value: randomNewAddress } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled(), { timeout: 4000 });
@@ -1197,7 +1197,7 @@ describe("ImportWallet", () => {
 
 		profile.wallets().push(wallet);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -1207,7 +1207,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -1225,10 +1225,10 @@ describe("ImportWallet", () => {
 
 		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
-		await waitFor(() => expect(getByText(commonTranslations.ADDRESS)).toBeTruthy());
+		await findByText(commonTranslations.ADDRESS);
 		fireEvent.mouseDown(getByText(commonTranslations.ADDRESS));
 
-		await waitFor(() => expect(getByTestId("ImportWallet__address-input")).toBeTruthy());
+		await findByTestId("ImportWallet__address-input");
 		fireEvent.input(getByTestId("ImportWallet__address-input"), { target: { value: randomNewAddress } });
 
 		await waitFor(() => expect(getByTestId("ImportWallet__continue-button")).not.toBeDisabled(), { timeout: 4000 });
@@ -1242,7 +1242,7 @@ describe("ImportWallet", () => {
 
 		fireEvent.click(getByTestId("ImportWallet__edit-alias"));
 
-		await waitFor(() => expect(getByTestId("UpdateWalletName__input")).toBeInTheDocument());
+		await findByTestId("UpdateWalletName__input");
 
 		fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: alias } });
 
@@ -1260,7 +1260,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/import">
 				<>
 					<ToastContainer closeOnClick={false} newestOnTop />
@@ -1273,7 +1273,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
@@ -1294,14 +1294,14 @@ describe("ImportWallet", () => {
 			fireEvent.click(getByTestId("ImportWallet__continue-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("SyncErrorMessage__retry")).toBeInTheDocument());
+		await findByTestId("SyncErrorMessage__retry");
 
 		const toastDismissMock = jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 		act(() => {
 			fireEvent.click(getByTestId("SyncErrorMessage__retry"));
 		});
 
-		await waitFor(() => expect(getByTestId("SyncErrorMessage__retry")).toBeInTheDocument());
+		await findByTestId("SyncErrorMessage__retry");
 
 		coinMock.mockRestore();
 		toastDismissMock.mockRestore();

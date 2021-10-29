@@ -626,7 +626,7 @@ describe("General Settings", () => {
 			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
 		);
 
-		await waitFor(() => expect(screen.getByText("EUR (€)")).toBeInTheDocument());
+		await screen.findByText("EUR (€)");
 
 		expect(() => screen.getByText("VND (₫)")).toThrow();
 
@@ -648,7 +648,7 @@ describe("General Settings", () => {
 			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
 		);
 
-		await waitFor(() => expect(screen.getByText("VND (₫)")).toBeInTheDocument());
+		await screen.findByText("VND (₫)");
 
 		fireEvent.click(screen.getByText("VND (₫)"));
 

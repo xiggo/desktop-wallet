@@ -264,7 +264,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__form-step");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -318,7 +318,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__form-step");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -472,7 +472,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toBeTruthy());
+		await screen.findByTestId("TransactionSuccessful");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -483,7 +483,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -495,7 +495,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__network-step")).toBeTruthy());
+		await findByTestId("SendTransfer__network-step");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -535,7 +535,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__network-step")).toBeInTheDocument());
+		await screen.findByTestId("SendTransfer__network-step");
 
 		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(2);
 		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")[0]).toHaveTextContent("ark.svg");
@@ -559,7 +559,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__form-step");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -570,7 +570,7 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?coin=ark&network=ark.devnet`;
 		history.push(transferURL);
 
-		const { getByTestId, asFragment } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -582,7 +582,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -615,7 +615,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__network-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__network-step");
 
 		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() =>
@@ -625,10 +625,10 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__form-step");
 
 		fireEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeTruthy());
+		await screen.findByTestId("modal__inner");
 
 		fireEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
 		await waitFor(() =>
@@ -645,7 +645,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, asFragment } = renderWithRouter(
+		const { getByTestId, asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -657,7 +657,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__network-step")).toBeTruthy());
+		await findByTestId("SendTransfer__network-step");
 
 		const input = getByTestId("SelectNetworkInput__input");
 
@@ -676,7 +676,7 @@ describe("SendTransfer", () => {
 
 		expect(input).toHaveAttribute("aria-invalid", "true");
 
-		await waitFor(() => expect(getByTestId("NetworkIcon-ARK-ark.devnet")).toBeTruthy());
+		await findByTestId("NetworkIcon-ARK-ark.devnet");
 
 		fireEvent.click(getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(input).toHaveValue("ARK Devnet"));
@@ -704,7 +704,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__network-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__network-step");
 
 		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
@@ -712,7 +712,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__form-step");
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
@@ -728,7 +728,7 @@ describe("SendTransfer", () => {
 
 		// Previous step
 		fireEvent.click(screen.getByTestId("StepNavigation__back-button"));
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__network-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__network-step");
 
 		// Change network
 		// Unselect
@@ -742,7 +742,7 @@ describe("SendTransfer", () => {
 
 		// Next step
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__form-step");
 
 		// Memo
 		expect(screen.getByTestId("Input__memo")).toBeEmpty();
@@ -757,7 +757,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -769,7 +769,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__network-step")).toBeTruthy());
+		await findByTestId("SendTransfer__network-step");
 
 		fireEvent.click(getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
@@ -777,13 +777,13 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
 		// Select sender
 		fireEvent.click(within(getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		const firstAddress = getByTestId("SearchWalletListItem__select-1");
 
@@ -800,7 +800,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, getByText, queryByTestId } = renderWithRouter(
+		const { getByTestId, getByText, queryByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -812,7 +812,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__network-step")).toBeTruthy());
+		await findByTestId("SendTransfer__network-step");
 
 		fireEvent.click(getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
@@ -820,13 +820,13 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		expect(getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
 		// Select sender
 		fireEvent.click(within(getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		const secondAddress = getByTestId("SearchWalletListItem__select-1");
 		fireEvent.click(secondAddress);
@@ -839,14 +839,14 @@ describe("SendTransfer", () => {
 
 		// Select sender
 		fireEvent.click(within(getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		const firstAddress = getByTestId("SearchWalletListItem__select-0");
 		fireEvent.click(firstAddress);
 
 		expect(getByText("33.67769203")).toBeInTheDocument();
 
-		await waitFor(() => expect(getByTestId("Input__error")).toBeInTheDocument());
+		await findByTestId("Input__error");
 	});
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {
@@ -855,7 +855,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -867,7 +867,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -875,7 +875,7 @@ describe("SendTransfer", () => {
 
 		// Select recipient
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
@@ -915,7 +915,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId } = renderWithRouter(
+		const { getAllByTestId, getByTestId, findByTestId, findAllByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -927,7 +927,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -955,7 +955,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		const backButton = getByTestId("StepNavigation__back-button");
 
@@ -964,7 +964,7 @@ describe("SendTransfer", () => {
 		fireEvent.click(backButton);
 
 		// Step 1 again
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		// Thw fast fee should still be selected
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
@@ -973,9 +973,9 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
-		await waitFor(() => expect(getAllByTestId("AmountCrypto")).toBeTruthy());
+		await findAllByTestId("AmountCrypto");
 
 		expect(getAllByTestId("AmountCrypto")[2]).toHaveTextContent("0.1");
 	});
@@ -986,7 +986,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -998,11 +998,11 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		// Select recipient
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		// Amount
 		const sendAll = getByTestId("AddRecipient__send-all");
@@ -1039,7 +1039,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1051,7 +1051,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1100,7 +1100,7 @@ describe("SendTransfer", () => {
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
 		}
 
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
@@ -1110,7 +1110,7 @@ describe("SendTransfer", () => {
 		} else {
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
 		}
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
 		await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -1130,7 +1130,7 @@ describe("SendTransfer", () => {
 		userEvent.keyboard("{enter}");
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 		await waitFor(() =>
 			expect(getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -1221,7 +1221,7 @@ describe("SendTransfer", () => {
 		// Continue to review step
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__review-step");
 
 		expect(
 			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[0],
@@ -1238,7 +1238,7 @@ describe("SendTransfer", () => {
 		// Go back to form step
 		fireEvent.click(backButton);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__form-step");
 
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.1 LSK"));
 
@@ -1248,7 +1248,7 @@ describe("SendTransfer", () => {
 		// Continue to review step
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await screen.findByTestId("SendTransfer__review-step");
 
 		expect(
 			within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("AmountCrypto")[0],
@@ -1272,7 +1272,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1284,7 +1284,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1328,23 +1328,23 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Back to Step 1
 		fireEvent.click(getByTestId("StepNavigation__back-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		// Step 2
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
 		await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -1365,7 +1365,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(getByTestId("ErrorStep")).toBeTruthy());
+		await findByTestId("ErrorStep");
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -1378,7 +1378,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1390,7 +1390,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1434,13 +1434,13 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
 		await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -1462,7 +1462,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 		await waitFor(() =>
 			expect(getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -1497,7 +1497,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1509,7 +1509,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1526,7 +1526,7 @@ describe("SendTransfer", () => {
 		);
 
 		// Amount
-		await waitFor(() => expect(getByTestId("AddRecipient__send-all")).toBeInTheDocument());
+		await findByTestId("AddRecipient__send-all");
 		fireEvent.click(getByTestId("AddRecipient__send-all"));
 		await waitFor(() => expect(getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
@@ -1538,7 +1538,7 @@ describe("SendTransfer", () => {
 
 		// Step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = jest
@@ -1553,7 +1553,7 @@ describe("SendTransfer", () => {
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 
 		expect(getByTestId("TransactionSuccessful")).toHaveTextContent(
 			"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -1601,7 +1601,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1613,7 +1613,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1663,7 +1663,7 @@ describe("SendTransfer", () => {
 
 		// Step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
@@ -1671,7 +1671,7 @@ describe("SendTransfer", () => {
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Auto broadcast
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 
 		getPublicKeySpy.mockRestore();
 		broadcastMock.mockRestore();
@@ -1688,7 +1688,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1700,7 +1700,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1708,7 +1708,7 @@ describe("SendTransfer", () => {
 
 		// Select recipient
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
@@ -1743,14 +1743,14 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
-		await waitFor(() => expect(getByTestId("FeeWarning__cancel-button")).toBeTruthy());
+		await findByTestId("FeeWarning__cancel-button");
 
 		fireEvent.click(getByTestId("FeeWarning__cancel-button"));
 		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
@@ -1764,7 +1764,7 @@ describe("SendTransfer", () => {
 			const history = createMemoryHistory();
 			history.push(transferURL);
 
-			const { getByTestId } = renderWithRouter(
+			const { getByTestId, findByTestId } = renderWithRouter(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 					<LedgerProvider transport={getDefaultLedgerTransport()}>
 						<SendTransfer />
@@ -1776,7 +1776,7 @@ describe("SendTransfer", () => {
 				},
 			);
 
-			await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+			await findByTestId("SendTransfer__form-step");
 
 			const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 			await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1813,7 +1813,7 @@ describe("SendTransfer", () => {
 			fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 			// Review Step
-			await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+			await findByTestId("SendTransfer__review-step");
 
 			expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
@@ -1822,17 +1822,13 @@ describe("SendTransfer", () => {
 			const profileSpy = jest.spyOn(profile.settings(), "set").mockImplementation();
 
 			// Fee warning
-			await waitFor(() => expect(getByTestId("FeeWarning__suppressWarning-toggle")).toBeTruthy());
+			await findByTestId("FeeWarning__suppressWarning-toggle");
 			fireEvent.click(getByTestId("FeeWarning__suppressWarning-toggle"));
 			fireEvent.click(getByTestId(`FeeWarning__${action}-button`));
 
 			expect(profileSpy).toHaveBeenCalledWith(Contracts.ProfileSetting.DoNotShowFeeWarning, true);
 
-			await waitFor(() =>
-				expect(
-					getByTestId(action === "cancel" ? "SendTransfer__form-step" : "AuthenticationStep"),
-				).toBeTruthy(),
-			);
+			await findByTestId(action === "cancel" ? "SendTransfer__form-step" : "AuthenticationStep");
 
 			profileSpy.mockRestore();
 		},
@@ -1847,7 +1843,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1859,7 +1855,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1894,18 +1890,18 @@ describe("SendTransfer", () => {
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
-		await waitFor(() => expect(getByTestId("FeeWarning__continue-button")).toBeTruthy());
+		await findByTestId("FeeWarning__continue-button");
 		fireEvent.click(getByTestId("FeeWarning__continue-button"));
 
 		// Auth Step
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
 		await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -1924,7 +1920,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 		await waitFor(() =>
 			expect(getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -1952,7 +1948,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -1964,7 +1960,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1999,14 +1995,14 @@ describe("SendTransfer", () => {
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Auth Step
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
 		await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -2033,7 +2029,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2045,7 +2041,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2079,13 +2075,13 @@ describe("SendTransfer", () => {
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
 		await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -2099,7 +2095,7 @@ describe("SendTransfer", () => {
 
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(getByTestId("ErrorStep")).toBeInTheDocument());
+		await findByTestId("ErrorStep");
 
 		expect(getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(getByTestId("ErrorStep__wallet-button")).toBeInTheDocument();
@@ -2128,7 +2124,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getAllByTestId, getByTestId, getByText } = renderWithRouter(
+		const { getAllByTestId, getByTestId, getByText, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2140,7 +2136,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => {
@@ -2153,7 +2149,7 @@ describe("SendTransfer", () => {
 
 		// Select recipient
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
@@ -2168,7 +2164,7 @@ describe("SendTransfer", () => {
 
 		// Select recipient #2
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		fireEvent.click(getByTestId("RecipientListItem__select-button-0"));
 
@@ -2196,13 +2192,13 @@ describe("SendTransfer", () => {
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		const passwordInput = getByTestId("AuthenticationStep__mnemonic");
 		fireEvent.input(passwordInput, { target: { value: passphrase } });
@@ -2225,7 +2221,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 
 		coinMock.mockRestore();
 		signMock.mockRestore();
@@ -2239,7 +2235,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2251,7 +2247,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2319,7 +2315,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2331,7 +2327,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2374,13 +2370,13 @@ describe("SendTransfer", () => {
 		// Step 2
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
 		await waitFor(() => expect(getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -2399,17 +2395,17 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 		fireEvent.click(getByTestId("ConfirmSendTransaction__cancel"));
 		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
 
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		fireEvent.click(getByTestId("ConfirmSendTransaction__confirm"));
 		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
 
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 		await waitFor(() =>
 			expect(getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -2471,7 +2467,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2483,7 +2479,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2513,11 +2509,11 @@ describe("SendTransfer", () => {
 
 		// proceed to step 2
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// proceed to step 3
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		// enter mnemonic
 		fireEvent.input(getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
@@ -2527,13 +2523,13 @@ describe("SendTransfer", () => {
 
 		// submit form
 		fireEvent.submit(getByTestId("Form"));
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		// confirm within the modal
 		fireEvent.click(getByTestId("ConfirmSendTransaction__confirm"));
 		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
 
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 		await waitFor(() =>
 			expect(getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -2557,7 +2553,7 @@ describe("SendTransfer", () => {
 		const history = createMemoryHistory();
 		history.push(transferURL);
 
-		const { getByTestId, container } = renderWithRouter(
+		const { getByTestId, container, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendTransfer />
@@ -2569,7 +2565,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("SendTransfer__form-step")).toBeTruthy());
+		await findByTestId("SendTransfer__form-step");
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2612,13 +2608,13 @@ describe("SendTransfer", () => {
 		// Step 2
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("SendTransfer__review-step")).toBeTruthy());
+		await findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		await waitFor(() => expect(getByTestId("AuthenticationStep")).toBeTruthy());
+		await findByTestId("AuthenticationStep");
 
 		fireEvent.input(getByTestId("AuthenticationStep__encryption-password"), { target: { value: "password" } });
 		await waitFor(() => expect(getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"));
@@ -2637,7 +2633,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		await waitFor(() => expect(getByTestId("TransactionSuccessful")).toBeTruthy());
+		await findByTestId("TransactionSuccessful");
 		await waitFor(() =>
 			expect(getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",

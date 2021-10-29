@@ -14,9 +14,9 @@ describe("ResetProfile", () => {
 	});
 
 	it("should render", async () => {
-		const { getByTestId, asFragment } = render(<ResetProfile isOpen profile={profile} />);
+		const { getByTestId, asFragment, findByTestId } = render(<ResetProfile isOpen profile={profile} />);
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		expect(getByTestId("ResetProfile__submit-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -25,11 +25,11 @@ describe("ResetProfile", () => {
 	it("should reset profile", async () => {
 		const onReset = jest.fn();
 
-		const { getByTestId } = render(<ResetProfile isOpen profile={profile} onReset={onReset} />);
+		const { getByTestId, findByTestId } = render(<ResetProfile isOpen profile={profile} onReset={onReset} />);
 
 		const theme = profile.settings().get(Contracts.ProfileSetting.Theme);
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("ResetProfile__submit-button"));

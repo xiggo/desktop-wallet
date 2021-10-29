@@ -53,16 +53,16 @@ describe("WalletHeader", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { asFragment, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should use empty string in clipboard copy if publickey is undefined", async () => {
 		const mockpublicKey = jest.spyOn(wallet, "publicKey").mockReturnValue(undefined);
-		const { asFragment, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { asFragment, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -71,8 +71,8 @@ describe("WalletHeader", () => {
 
 	it("should render amount for wallet in live network", async () => {
 		const mockTestNetwork = jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
-		const { asFragment, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { asFragment, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -83,8 +83,8 @@ describe("WalletHeader", () => {
 		const mockIsSecondSignature = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 		const mockAllowsSecondSignature = jest.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		fireEvent.click(getByTestId("dropdown__toggle"));
 
@@ -103,8 +103,8 @@ describe("WalletHeader", () => {
 	it("should trigger onSend callback if provided", async () => {
 		const onSend = jest.fn();
 
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} onSend={onSend} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} onSend={onSend} />);
+		await findByText(wallet.address());
 
 		expect(getByTestId("WalletHeader__send-button")).toBeEnabled();
 
@@ -116,8 +116,8 @@ describe("WalletHeader", () => {
 	it("send button should be disabled if wallet has no balance", async () => {
 		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		expect(getByTestId("WalletHeader__send-button")).toBeDisabled();
 
@@ -128,8 +128,8 @@ describe("WalletHeader", () => {
 		const ledgerSpy = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
 		const multisigSpy = jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
 
-		const { asFragment, getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { asFragment, getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		expect(getByTestId("WalletIcon__Ledger")).toBeTruthy();
 		expect(getByTestId("WalletIcon__Multisignature")).toBeTruthy();
@@ -142,8 +142,8 @@ describe("WalletHeader", () => {
 	it("should hide converted balance if wallet belongs to test network", async () => {
 		const networkSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		expect(() => getByTestId("WalletHeader__currency-balance")).toThrowError(/Unable to find/);
 
@@ -257,8 +257,8 @@ describe("WalletHeader", () => {
 	});
 
 	it("should open & close receive funds modal", async () => {
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS);
 
@@ -408,8 +408,8 @@ describe("WalletHeader", () => {
 			throw new Error("error");
 		});
 
-		const { getByTestId, getByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await waitFor(() => expect(getByText(wallet.address())).toBeTruthy());
+		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
+		await findByText(wallet.address());
 
 		expect(() => getByTestId("WalletIcon__Multisignature")).toThrow();
 
@@ -429,14 +429,14 @@ describe("WalletHeader", () => {
 				<WalletHeader profile={profile} wallet={wallet} />
 			</LedgerProvider>,
 		);
-		await waitFor(() => expect(screen.getByText(wallet.address())).toBeTruthy());
+		await screen.findByText(wallet.address());
 
 		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
 
-		await waitFor(() => expect(screen.getByTestId("UnlockTokensModal")).toBeInTheDocument());
+		await screen.findByTestId("UnlockTokensModal");
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 

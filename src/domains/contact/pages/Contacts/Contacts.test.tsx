@@ -342,7 +342,7 @@ describe("Contacts", () => {
 			target: { value: "Unknown Name" },
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("Contacts--empty-results")).toBeInTheDocument());
+		await screen.findByTestId("Contacts--empty-results");
 	});
 
 	it("should search for contact by address", async () => {
@@ -375,7 +375,7 @@ describe("Contacts", () => {
 			target: { value: "Unknown Address" },
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("Contacts--empty-results")).toBeInTheDocument());
+		await screen.findByTestId("Contacts--empty-results");
 	});
 
 	it("should not include addresses of test networks in search if not enabled", async () => {
@@ -415,7 +415,7 @@ describe("Contacts", () => {
 			target: { value: addressTest.address() },
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("Contacts--empty-results")).toBeInTheDocument());
+		await screen.findByTestId("Contacts--empty-results");
 
 		profile.settings().set(ProfileSetting.UseTestNetworks, true);
 

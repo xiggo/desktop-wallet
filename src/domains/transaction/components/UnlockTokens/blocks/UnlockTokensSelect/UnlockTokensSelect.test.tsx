@@ -157,7 +157,7 @@ describe("UnlockTokensSelect", () => {
 			</Wrapper>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument());
+		await screen.findByTestId("EmptyBlock");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

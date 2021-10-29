@@ -63,10 +63,10 @@ const renderPage = async ({
 		},
 	);
 
-	const { getByTestId } = rendered;
+	const { getByTestId, findByTestId } = rendered;
 
 	if (waitForTopSection) {
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 	}
 
 	if (waitForTransactions) {
@@ -207,14 +207,14 @@ describe("WalletDetails", () => {
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
 
-		const { getByTestId } = await renderPage();
-		await waitFor(() => expect(getByTestId("PendingTransactions")).toBeInTheDocument());
+		const { getByTestId, findByTestId } = await renderPage();
+		await findByTestId("PendingTransactions");
 
 		act(() => {
 			fireEvent.click(within(getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
@@ -230,21 +230,19 @@ describe("WalletDetails", () => {
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
 
-		const { getByTestId } = await renderPage();
-		await waitFor(() => expect(getByTestId("PendingTransactions")).toBeInTheDocument());
+		const { getByTestId, findByTestId } = await renderPage();
+		await findByTestId("PendingTransactions");
 
 		act(() => {
 			fireEvent.click(within(getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 		});
 
-		await waitFor(() => expect(getByTestId("TableRemoveButton")).toBeInTheDocument());
+		await findByTestId("TableRemoveButton");
 		act(() => {
 			fireEvent.click(getByTestId("TableRemoveButton"));
 		});
 
-		await waitFor(() =>
-			expect(getByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction")).toBeInTheDocument(),
-		);
+		await findByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction");
 
 		jest.restoreAllMocks();
 		defaultNetMocks();
@@ -273,14 +271,14 @@ describe("WalletDetails", () => {
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
 
-		const { getByTestId } = await renderPage();
-		await waitFor(() => expect(getByTestId("PendingTransactions")).toBeInTheDocument());
+		const { getByTestId, findByTestId } = await renderPage();
+		await findByTestId("PendingTransactions");
 
 		act(() => {
 			fireEvent.click(within(getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
@@ -291,11 +289,11 @@ describe("WalletDetails", () => {
 	});
 
 	it("should navigate to send transfer", async () => {
-		const { getByTestId } = await renderPage({ waitForTopSection: true });
+		const { getByTestId, findByTestId } = await renderPage({ waitForTopSection: true });
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		await waitFor(() => expect(getByTestId("WalletHeader__send-button")).toBeInTheDocument());
+		await findByTestId("WalletHeader__send-button");
 		await waitFor(() => expect(getByTestId("WalletHeader__send-button")).not.toBeDisabled());
 
 		act(() => {
@@ -327,9 +325,9 @@ describe("WalletDetails", () => {
 		walletUrl = `/profiles/${profile.id()}/wallets/${blankWallet.id()}`;
 		history.push(walletUrl);
 
-		const { getByText } = await renderPage({ waitForTopSection: true, waitForTransactions: false });
+		const { findByText } = await renderPage({ waitForTopSection: true, waitForTransactions: false });
 
-		await waitFor(() => expect(getByText(commonTranslations.LEARN_MORE)).toBeTruthy());
+		await findByText(commonTranslations.LEARN_MORE);
 	});
 
 	it("should navigate to votes page when clicking on WalletVote button", async () => {
@@ -338,9 +336,9 @@ describe("WalletDetails", () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		const historySpy = jest.spyOn(history, "push");
 
-		const { getByTestId, getByText } = await renderPage();
+		const { getByTestId, findByText } = await renderPage();
 
-		await waitFor(() => expect(getByText(commonTranslations.LEARN_MORE)).toBeTruthy());
+		await findByText(commonTranslations.LEARN_MORE);
 		await waitFor(() => expect(getByTestId("WalletVote__button")).not.toBeDisabled());
 		act(() => {
 			fireEvent.click(getByTestId("WalletVote__button"));
@@ -395,7 +393,7 @@ describe("WalletDetails", () => {
 	});
 
 	it("should update wallet name", async () => {
-		const { getByTestId, getAllByTestId } = await renderPage();
+		const { getByTestId, getAllByTestId, findByTestId } = await renderPage();
 
 		act(() => {
 			fireEvent.click(getAllByTestId("dropdown__toggle")[2]);
@@ -405,7 +403,7 @@ describe("WalletDetails", () => {
 			fireEvent.click(getByTestId("dropdown__option--primary-0"));
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		const name = "Sample label name";
 
@@ -441,7 +439,7 @@ describe("WalletDetails", () => {
 	});
 
 	it("should open detail modal on transaction row click", async () => {
-		const { getByTestId } = await renderPage({
+		const { getByTestId, findByTestId } = await renderPage({
 			waitForTopSection: true,
 			waitForTransactions: true,
 			withProfileSynchronizer: true,
@@ -451,7 +449,7 @@ describe("WalletDetails", () => {
 			fireEvent.click(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
@@ -481,13 +479,13 @@ describe("WalletDetails", () => {
 	});
 
 	it("should filter by type", async () => {
-		const { getByRole, getByTestId } = await renderPage();
+		const { getByRole, getByTestId, findByTestId } = await renderPage();
 
 		act(() => {
 			fireEvent.click(getByRole("button", { name: /Type/ }));
 		});
 
-		await waitFor(() => expect(getByTestId("dropdown__option--core-0")).toBeInTheDocument());
+		await findByTestId("dropdown__option--core-0");
 
 		act(() => {
 			fireEvent.click(getByTestId("dropdown__option--core-0"));
@@ -535,7 +533,7 @@ describe("WalletDetails", () => {
 	});
 
 	it("should delete wallet and clear associated transaction notifications", async () => {
-		const { getByTestId, getAllByTestId } = await renderPage();
+		const { getByTestId, getAllByTestId, findByTestId } = await renderPage();
 
 		const dropdown = getAllByTestId("dropdown__toggle")[2];
 
@@ -556,7 +554,7 @@ describe("WalletDetails", () => {
 		expect(profile.wallets().count()).toEqual(4);
 		expect(profile.notifications().transactions().recent()).toHaveLength(2);
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("DeleteResource__submit-button"));
@@ -585,9 +583,9 @@ describe("WalletDetails", () => {
 		walletUrl = `/profiles/${profile.id()}/wallets/${newWallet.id()}`;
 		history.push(walletUrl);
 
-		const { getByText } = await renderPage();
+		const { findByText } = await renderPage();
 
-		await waitFor(() => expect(getByText(commonTranslations.LEARN_MORE)).toBeTruthy());
+		await findByText(commonTranslations.LEARN_MORE);
 
 		syncVotesSpy.mockRestore();
 	});

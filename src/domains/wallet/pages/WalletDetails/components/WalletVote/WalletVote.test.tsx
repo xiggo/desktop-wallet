@@ -28,11 +28,11 @@ describe("WalletVote", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, getByTestId } = render(
+		const { asFragment, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -40,11 +40,11 @@ describe("WalletVote", () => {
 	it("should render without votes", async () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 
-		const { asFragment, getByText, getByTestId } = render(
+		const { asFragment, getByText, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 
 		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -55,11 +55,11 @@ describe("WalletVote", () => {
 	it("should render disabled vote button", async () => {
 		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
-		const { asFragment, getByRole, getByTestId } = render(
+		const { asFragment, getByRole, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 
 		expect(getByRole("button")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
@@ -72,11 +72,11 @@ describe("WalletVote", () => {
 		const votesAmountStepSpy = jest.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
 		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(5);
 
-		const { asFragment, getByRole, getByTestId } = render(
+		const { asFragment, getByRole, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 
 		expect(getByRole("button")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
@@ -91,11 +91,11 @@ describe("WalletVote", () => {
 			throw new Error("delegate error");
 		});
 
-		const { asFragment, getByText, getByTestId } = render(
+		const { asFragment, getByText, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 
 		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -109,11 +109,11 @@ describe("WalletVote", () => {
 		});
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 
-		const { asFragment, getByText, getByTestId } = render(
+		const { asFragment, getByText, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 
 		expect(getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -126,12 +126,12 @@ describe("WalletVote", () => {
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		const maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
 
-		const { asFragment, getByText, getByTestId } = render(
+		const { asFragment, findByTestId, findByText } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
-		await waitFor(() => expect(getByText("0/101")).toBeTruthy());
+		await findByTestId("WalletVote");
+		await findByText("0/101");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -154,13 +154,13 @@ describe("WalletVote", () => {
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
 			const delegate = wallet.voting().current()[0];
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
 			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeTruthy();
@@ -186,13 +186,13 @@ describe("WalletVote", () => {
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
 			const delegate = wallet.voting().current()[0];
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
 			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeTruthy();
@@ -219,13 +219,13 @@ describe("WalletVote", () => {
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
 			const delegate = wallet.voting().current()[0];
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
 			expect(getByText(t("COMMON.NOT_AVAILABLE"))).toBeInTheDocument();
@@ -272,11 +272,11 @@ describe("WalletVote", () => {
 
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue(votes);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 			expect(
@@ -312,11 +312,11 @@ describe("WalletVote", () => {
 
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue(votes);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 			expect(
@@ -351,11 +351,11 @@ describe("WalletVote", () => {
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: 1 }))).toBeInTheDocument();
@@ -395,11 +395,11 @@ describe("WalletVote", () => {
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, getByTestId, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
@@ -437,11 +437,11 @@ describe("WalletVote", () => {
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, getByTestId, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
@@ -490,11 +490,11 @@ describe("WalletVote", () => {
 				},
 			]);
 
-			const { asFragment, getByText, getByTestId } = render(
+			const { asFragment, getByText, getByTestId, findByTestId } = render(
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+			await findByTestId("WalletVote");
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
@@ -535,11 +535,11 @@ describe("WalletVote", () => {
 
 		const onButtonClick = jest.fn();
 
-		const { getByText, getByTestId } = render(
+		const { getByText, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 		act(() => {
 			fireEvent.click(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
 		});
@@ -557,11 +557,11 @@ describe("WalletVote", () => {
 
 		const onButtonClick = jest.fn();
 
-		const { getByText, getByTestId } = render(
+		const { getByText, getByTestId, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 		await waitFor(() => expect(getByTestId("WalletVote")).not.toBeDisabled());
 
 		act(() => {
@@ -598,11 +598,11 @@ describe("WalletVote", () => {
 				}),
 			},
 		]);
-		const { asFragment, getByTestId } = render(
+		const { asFragment, findByTestId } = render(
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await waitFor(() => expect(getByTestId("WalletVote")).toBeTruthy());
+		await findByTestId("WalletVote");
 
 		expect(asFragment()).toMatchSnapshot();
 

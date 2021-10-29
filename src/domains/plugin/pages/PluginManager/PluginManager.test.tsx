@@ -257,15 +257,15 @@ describe("PluginManager", () => {
 
 		fireEvent.click(screen.getByTestId("InstallPlugin__download-button"));
 
-		await waitFor(() => expect(screen.getByTestId("InstallPlugin__continue-button")).toBeInTheDocument());
+		await screen.findByTestId("InstallPlugin__continue-button");
 
 		fireEvent.click(screen.getByTestId("InstallPlugin__continue-button"));
 
-		await waitFor(() => expect(screen.getByTestId("InstallPlugin__enable-button")).toBeInTheDocument());
+		await screen.findByTestId("InstallPlugin__enable-button");
 
 		fireEvent.click(screen.getByTestId("InstallPlugin__enable-button"));
 
-		await waitFor(() => expect(screen.getByTestId("InstallPlugin__step--third")).toBeInTheDocument());
+		await screen.findByTestId("InstallPlugin__step--third");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -395,12 +395,12 @@ describe("PluginManager", () => {
 
 		// Open and close
 		fireEvent.click(screen.getByTestId("PluginManager_header--install"));
-		await waitFor(() => expect(screen.getByTestId("PluginManualInstallModal")).toBeInTheDocument());
+		await screen.findByTestId("PluginManualInstallModal");
 		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		// Open and type
 		fireEvent.click(screen.getByTestId("PluginManager_header--install"));
-		await waitFor(() => expect(screen.getByTestId("PluginManualInstallModal")).toBeInTheDocument());
+		await screen.findByTestId("PluginManualInstallModal");
 
 		fireEvent.input(screen.getByTestId("PluginManualInstallModal__input"), {
 			target: { value: "https://github.com/arkecosystem/test-plugin" },
@@ -477,19 +477,19 @@ describe("PluginManager", () => {
 			target: { value: "ARK Delegate Calculator" },
 		});
 
-		await waitFor(() => expect(screen.getByText(translations.PAGE_PLUGIN_MANAGER.VIEW.SEARCH)).toBeInTheDocument());
+		await screen.findByText(translations.PAGE_PLUGIN_MANAGER.VIEW.SEARCH);
 		await waitFor(() => expect(screen.getAllByTestId("PluginImage")).toHaveLength(1));
 
 		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {
 			target: { value: "unknown search query" },
 		});
 
-		await waitFor(() => expect(screen.getByTestId("PluginGrid__empty-message")).toBeInTheDocument());
+		await screen.findByTestId("PluginGrid__empty-message");
 
 		// Switch to list view
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginList__empty-message")).toBeInTheDocument());
+		await screen.findByTestId("PluginList__empty-message");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -670,7 +670,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.ENABLE),
 		);
 
-		await waitFor(() => expect(screen.getByTestId("PluginListItem__enabled")).toBeInTheDocument());
+		await screen.findByTestId("PluginListItem__enabled");
 
 		expect(asFragment()).toMatchSnapshot();
 		expect(onEnabled).toHaveBeenCalled();
@@ -741,7 +741,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.DISABLE),
 		);
 
-		await waitFor(() => expect(screen.getByTestId("PluginListItem__disabled")).toBeInTheDocument());
+		await screen.findByTestId("PluginListItem__disabled");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -770,7 +770,7 @@ describe("PluginManager", () => {
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginDropdown__update-badge")).toBeInTheDocument());
+		await screen.findByTestId("PluginDropdown__update-badge");
 
 		fireEvent.click(
 			within(screen.getByTestId("PluginManager__container--my-plugins")).getAllByTestId("dropdown__toggle")[0],
@@ -817,7 +817,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.DELETE),
 		);
 
-		await waitFor(() => expect(screen.getByTestId("PluginUninstallConfirmation")).toBeInTheDocument());
+		await screen.findByTestId("PluginUninstallConfirmation");
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
 		fireEvent.click(screen.getByTestId("PluginUninstall__cancel-button"));
@@ -855,7 +855,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.DELETE),
 		);
 
-		await waitFor(() => expect(screen.getByTestId("PluginUninstallConfirmation")).toBeInTheDocument());
+		await screen.findByTestId("PluginUninstallConfirmation");
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
 		fireEvent.click(screen.getByTestId("PluginUninstall__submit-button"));
@@ -887,7 +887,7 @@ describe("PluginManager", () => {
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginManager__update-all")).toBeInTheDocument());
+		await screen.findByTestId("PluginManager__update-all");
 
 		expect(screen.getByTestId("PluginManager__update-all")).not.toBeDisabled();
 
@@ -914,13 +914,13 @@ describe("PluginManager", () => {
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginManager__update-all")).toBeInTheDocument());
+		await screen.findByTestId("PluginManager__update-all");
 
 		expect(screen.getByTestId("PluginManager__update-all")).not.toBeDisabled();
 
 		fireEvent.click(screen.getByTestId("PluginManager__update-all"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginUpdatesConfirmation")).toBeInTheDocument());
+		await screen.findByTestId("PluginUpdatesConfirmation");
 
 		expect(screen.getByText("1.0.0")).toBeInTheDocument();
 
@@ -973,11 +973,11 @@ describe("PluginManager", () => {
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginManager__update-all")).toBeInTheDocument());
+		await screen.findByTestId("PluginManager__update-all");
 
 		fireEvent.click(screen.getByTestId("PluginManager__update-all"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginUpdatesConfirmation")).toBeInTheDocument());
+		await screen.findByTestId("PluginUpdatesConfirmation");
 
 		expect(screen.getAllByText("1.0.0").length).toBeGreaterThan(0);
 
@@ -1009,7 +1009,7 @@ describe("PluginManager", () => {
 		fireEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
 		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await waitFor(() => expect(screen.getByTestId("PluginManager__update-all")).toBeInTheDocument());
+		await screen.findByTestId("PluginManager__update-all");
 
 		expect(screen.getByTestId("PluginManager__update-all")).toBeDisabled();
 

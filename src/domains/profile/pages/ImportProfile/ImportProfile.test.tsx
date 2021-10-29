@@ -87,7 +87,7 @@ describe("ImportProfile", () => {
 	it("should select file and go to step 2", async () => {
 		history.push("/profiles/import");
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -105,7 +105,7 @@ describe("ImportProfile", () => {
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
 	});
 
 	it("should request and set password for importing password protected profile", async () => {
@@ -129,8 +129,8 @@ describe("ImportProfile", () => {
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("modal__inner");
 
 		await act(async () => {
 			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
@@ -143,13 +143,13 @@ describe("ImportProfile", () => {
 			fireEvent.click(getByTestId("PasswordModal__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
 	});
 
 	it("should close password modal and go back to select file", async () => {
 		history.push("/profiles/import");
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -167,14 +167,14 @@ describe("ImportProfile", () => {
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
 		});
 
-		await waitFor(() => expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument());
+		await findByTestId("SelectFileStep__change-file");
 	});
 
 	it("should successfully import profile and return to home screen", async () => {
@@ -182,7 +182,7 @@ describe("ImportProfile", () => {
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		jest.spyOn(fs, "readFileSync").mockReturnValue(passwordProtectedDwe);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -198,16 +198,16 @@ describe("ImportProfile", () => {
 			},
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("modal__inner");
 
 		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
 		await waitFor(() => expect(getByTestId("PasswordModal__input")).toHaveValue("S3cUrePa$sword"));
 
 		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("CreateProfile__form")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("CreateProfile__form");
 
 		expect(() => getByTestId("InputPassword")).toThrow();
 
@@ -221,7 +221,7 @@ describe("ImportProfile", () => {
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		jest.spyOn(fs, "readFileSync").mockReturnValueOnce(legacyJson);
 
-		const { getAllByTestId, getByTestId } = renderWithRouter(
+		const { getAllByTestId, getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -239,8 +239,8 @@ describe("ImportProfile", () => {
 			},
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("CreateProfile__form")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("CreateProfile__form");
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "legacy profile" } });
 		await waitFor(() => expect(getAllByTestId("Input")[0]).toHaveValue("legacy profile"));
@@ -274,7 +274,7 @@ describe("ImportProfile", () => {
 			},
 		});
 
-		await waitFor(() => expect(screen.getByTestId("ProcessingImport")).toBeInTheDocument());
+		await screen.findByTestId("ProcessingImport");
 
 		expect(screen.getByRole("checkbox")).toHaveAttribute("name", "isDarkMode");
 
@@ -290,7 +290,7 @@ describe("ImportProfile", () => {
 	it("should go to step 3 and back", async () => {
 		history.push("/profiles/import");
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -308,8 +308,8 @@ describe("ImportProfile", () => {
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("modal__inner");
 
 		await act(async () => {
 			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
@@ -319,21 +319,21 @@ describe("ImportProfile", () => {
 			fireEvent.click(getByTestId("PasswordModal__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("CreateProfile__form")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("CreateProfile__form");
 
 		act(() => {
 			fireEvent.click(getByTestId("CreateProfile__back-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument());
+		await findByTestId("SelectFileStep__change-file");
 	});
 
 	it("should fail profile import and show error step", async () => {
 		history.push("/profiles/import");
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -351,8 +351,8 @@ describe("ImportProfile", () => {
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("modal__inner");
 
 		await act(async () => {
 			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
@@ -362,7 +362,7 @@ describe("ImportProfile", () => {
 			fireEvent.click(getByTestId("PasswordModal__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("ImportError")).toBeInTheDocument());
+		await findByTestId("ImportError");
 
 		corruptedDweMock.mockRestore();
 	});
@@ -371,7 +371,7 @@ describe("ImportProfile", () => {
 		history.push("/profiles/import");
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -389,8 +389,8 @@ describe("ImportProfile", () => {
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("modal__inner");
 
 		await act(async () => {
 			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
@@ -400,13 +400,13 @@ describe("ImportProfile", () => {
 			fireEvent.click(getByTestId("PasswordModal__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("ImportError")).toBeInTheDocument());
+		await findByTestId("ImportError");
 
 		act(() => {
 			fireEvent.click(getByTestId("ImportError__retry"));
 		});
 
-		await waitFor(() => expect(getByTestId("ImportError")).toBeInTheDocument());
+		await findByTestId("ImportError");
 		corruptedDweMock.mockRestore();
 	});
 
@@ -415,7 +415,7 @@ describe("ImportProfile", () => {
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -433,8 +433,8 @@ describe("ImportProfile", () => {
 			});
 		});
 
-		await waitFor(() => expect(getByTestId("ProcessingImport")).toBeInTheDocument());
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeInTheDocument());
+		await findByTestId("ProcessingImport");
+		await findByTestId("modal__inner");
 
 		await act(async () => {
 			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
@@ -444,13 +444,13 @@ describe("ImportProfile", () => {
 			fireEvent.click(getByTestId("PasswordModal__submit-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("ImportError")).toBeInTheDocument());
+		await findByTestId("ImportError");
 
 		act(() => {
 			fireEvent.click(getByTestId("ImportError__back"));
 		});
 
-		await waitFor(() => expect(getByTestId("ImportError")).toBeInTheDocument());
+		await findByTestId("ImportError");
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 
 		historyMock.mockRestore();

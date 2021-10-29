@@ -99,7 +99,7 @@ describe("Wallets", () => {
 	});
 
 	it("should render list", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -114,13 +114,13 @@ describe("Wallets", () => {
 			fireEvent.click(toggle);
 		});
 
-		await waitFor(() => expect(getByTestId("WalletsList")).toBeTruthy());
+		await findByTestId("WalletsList");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should toggle between grid and list view", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -134,7 +134,7 @@ describe("Wallets", () => {
 			fireEvent.click(getByTestId("LayoutControls__list--icon"));
 		});
 
-		await waitFor(() => expect(getByTestId("WalletsList")).toBeTruthy());
+		await findByTestId("WalletsList");
 
 		act(() => {
 			fireEvent.click(getByTestId("LayoutControls__grid--icon"));
@@ -163,7 +163,7 @@ describe("Wallets", () => {
 	});
 
 	it("should load more wallets", async () => {
-		const { asFragment, getByTestId, getAllByTestId } = renderWithRouter(
+		const { asFragment, getByTestId, getAllByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets listPagerLimit={1} />
 			</Route>,
@@ -178,8 +178,8 @@ describe("Wallets", () => {
 			fireEvent.click(toggle);
 		});
 
-		await waitFor(() => expect(getByTestId("WalletsList")).toBeTruthy());
-		await waitFor(() => expect(getByTestId("WalletsList__ViewMore")).toBeTruthy());
+		await findByTestId("WalletsList");
+		await findByTestId("WalletsList__ViewMore");
 
 		act(() => {
 			fireEvent.click(getByTestId("WalletsList__ViewMore"));
@@ -266,7 +266,7 @@ describe("Wallets", () => {
 		const unsubscribe = jest.fn();
 		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce(() => ({ unsubscribe }));
 
-		const { asFragment, getByTestId, getByText, queryByText } = renderWithRouter(
+		const { asFragment, getByTestId, getByText, queryByText, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<Wallets />
@@ -282,9 +282,7 @@ describe("Wallets", () => {
 			fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 		});
 
-		await waitFor(() =>
-			expect(getByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).toBeInTheDocument(),
-		);
+		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
@@ -298,9 +296,7 @@ describe("Wallets", () => {
 			fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 		});
 
-		await waitFor(() =>
-			expect(getByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).toBeInTheDocument(),
-		);
+		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -358,7 +354,7 @@ describe("Wallets", () => {
 
 		fireEvent.click(screen.getByText(commonTranslations.RENAME));
 
-		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeInTheDocument());
+		await screen.findByTestId("modal__inner");
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE);
 
@@ -401,7 +397,7 @@ describe("Wallets", () => {
 
 		fireEvent.click(screen.getByText(commonTranslations.DELETE));
 
-		await waitFor(() => expect(screen.getByTestId("modal__inner")).toBeInTheDocument());
+		await screen.findByTestId("modal__inner");
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE);
 
@@ -413,7 +409,7 @@ describe("Wallets", () => {
 	it("should render empty profile wallets", async () => {
 		history.push(`/profiles/${emptyProfile.id()}/dashboard`);
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -428,7 +424,7 @@ describe("Wallets", () => {
 			fireEvent.click(toggle);
 		});
 
-		await waitFor(() => expect(getByTestId("WalletsList")).toBeTruthy());
+		await findByTestId("WalletsList");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

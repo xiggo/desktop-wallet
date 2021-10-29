@@ -162,9 +162,11 @@ describe("LedgerTabs", () => {
 		userEvent.click(nextSelector());
 
 		await screen.findByTestId("LedgerConnectionStep");
+		// eslint-disable-next-line
 		await waitFor(
 			() =>
 				expect(
+					// eslint-disable-next-line
 					screen.queryByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")),
 				).toBeInTheDocument(),
 			{ timeout: 10_000 },

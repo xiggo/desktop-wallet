@@ -54,7 +54,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { queryAllByText, getByTestId, getByText, asFragment } = renderWithRouter(
+		const { queryAllByText, getByTestId, getByText, asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -64,7 +64,7 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -101,23 +101,23 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(profile.wallets().values().length).toBe(0));
 
-		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await findByTestId("CreateWallet__WalletOverviewStep");
 
 		fireEvent.click(backButton);
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		fireEvent.click(continueButton);
-		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await findByTestId("CreateWallet__WalletOverviewStep");
 
 		fireEvent.click(continueButton);
-		await waitFor(() => expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeTruthy());
+		await findByTestId("CreateWallet__ConfirmPassphraseStep");
 
 		fireEvent.click(backButton);
 
-		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await findByTestId("CreateWallet__WalletOverviewStep");
 
 		fireEvent.click(continueButton);
-		await waitFor(() => expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeTruthy());
+		await findByTestId("CreateWallet__ConfirmPassphraseStep");
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
@@ -134,13 +134,13 @@ describe("CreateWallet", () => {
 
 		fireEvent.click(continueButton);
 
-		await waitFor(() => expect(getByTestId("EncryptPassword")).toBeTruthy());
+		await findByTestId("EncryptPassword");
 
 		expect(profile.wallets().values().length).toBe(0);
 
 		fireEvent.click(getByTestId("CreateWallet__skip-button"));
 
-		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
+		await findByTestId("CreateWallet__SuccessStep");
 
 		expect(profile.wallets().values().length).toBe(1);
 
@@ -148,7 +148,7 @@ describe("CreateWallet", () => {
 			fireEvent.click(getByTestId("CreateWallet__edit-alias"));
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "test alias" } });
@@ -192,7 +192,7 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeTruthy());
+		await screen.findByTestId("NetworkStep");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -229,23 +229,23 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(profile.wallets().values().length).toBe(0));
 
-		await waitFor(() => expect(screen.getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
 		fireEvent.click(backButton);
-		await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeTruthy());
+		await screen.findByTestId("NetworkStep");
 
 		fireEvent.click(continueButton);
-		await waitFor(() => expect(screen.getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
 		fireEvent.click(continueButton);
-		await waitFor(() => expect(screen.getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeTruthy());
+		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
 
 		fireEvent.click(backButton);
 
-		await waitFor(() => expect(screen.getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await screen.findByTestId("CreateWallet__WalletOverviewStep");
 
 		fireEvent.click(continueButton);
-		await waitFor(() => expect(screen.getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeTruthy());
+		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
@@ -262,7 +262,7 @@ describe("CreateWallet", () => {
 
 		fireEvent.click(continueButton);
 
-		await waitFor(() => expect(screen.getByTestId("EncryptPassword")).toBeTruthy());
+		await screen.findByTestId("EncryptPassword");
 
 		expect(screen.getAllByTestId("InputPassword")).toHaveLength(2);
 
@@ -284,7 +284,7 @@ describe("CreateWallet", () => {
 
 		fireEvent.click(continueEncryptionButton);
 
-		await waitFor(() => expect(screen.getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
+		await screen.findByTestId("CreateWallet__SuccessStep");
 
 		expect(profile.wallets().values().length).toBe(1);
 
@@ -308,7 +308,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { getByTestId, asFragment } = renderWithRouter(
+		const { asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -317,7 +317,7 @@ describe("CreateWallet", () => {
 				routes: [createURL, "/"],
 			},
 		);
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		history.push("/");
 		await waitFor(() => expect(profile.wallets().values().length).toBe(0));
@@ -330,7 +330,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { getByTestId, asFragment } = renderWithRouter(
+		const { getByTestId, asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -339,7 +339,7 @@ describe("CreateWallet", () => {
 				routes: [createURL, "/"],
 			},
 		);
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 		const continueButton = getByTestId("CreateWallet__continue-button");
@@ -356,19 +356,19 @@ describe("CreateWallet", () => {
 			fireEvent.click(continueButton);
 		});
 
-		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await findByTestId("CreateWallet__WalletOverviewStep");
 
 		act(() => {
 			fireEvent.click(getByTestId("CreateWallet__back-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		act(() => {
 			fireEvent.click(continueButton);
 		});
 
-		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await findByTestId("CreateWallet__WalletOverviewStep");
 
 		act(() => {
 			history.push("/");
@@ -398,7 +398,7 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeTruthy());
+		await screen.findByTestId("NetworkStep");
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 
@@ -422,9 +422,7 @@ describe("CreateWallet", () => {
 			fireEvent.click(continueButton);
 		});
 
-		await waitFor(() =>
-			expect(screen.getByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR)).toBeTruthy(),
-		);
+		await screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR);
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -445,7 +443,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { queryAllByText, getByTestId, getByText, asFragment } = renderWithRouter(
+		const { queryAllByText, getByTestId, getByText, asFragment, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -455,7 +453,7 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await waitFor(() => expect(getByTestId("NetworkStep")).toBeTruthy());
+		await findByTestId("NetworkStep");
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -483,13 +481,13 @@ describe("CreateWallet", () => {
 			fireEvent.click(continueButton);
 		});
 
-		await waitFor(() => expect(getByTestId("CreateWallet__WalletOverviewStep")).toBeTruthy());
+		await findByTestId("CreateWallet__WalletOverviewStep");
 
 		act(() => {
 			fireEvent.click(continueButton);
 		});
 
-		await waitFor(() => expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeTruthy());
+		await findByTestId("CreateWallet__ConfirmPassphraseStep");
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
@@ -508,19 +506,19 @@ describe("CreateWallet", () => {
 			fireEvent.click(continueButton);
 		});
 
-		await waitFor(() => expect(getByTestId("EncryptPassword")).toBeTruthy());
+		await findByTestId("EncryptPassword");
 
 		act(() => {
 			fireEvent.click(getByTestId("CreateWallet__skip-button"));
 		});
 
-		await waitFor(() => expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy());
+		await findByTestId("CreateWallet__SuccessStep");
 
 		act(() => {
 			fireEvent.click(getByTestId("CreateWallet__edit-alias"));
 		});
 
-		await waitFor(() => expect(getByTestId("modal__inner")).toBeTruthy());
+		await findByTestId("modal__inner");
 
 		act(() => {
 			fireEvent.input(getByTestId("UpdateWalletName__input"), { target: { value: "Test" } });

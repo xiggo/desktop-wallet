@@ -579,7 +579,7 @@ describe("PluginDetails", () => {
 
 		fireEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 
-		await waitFor(() => expect(screen.getByText(commonTranslations.UPDATE)).toBeInTheDocument());
+		await screen.findByText(commonTranslations.UPDATE);
 		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
 
 		await waitFor(() =>
