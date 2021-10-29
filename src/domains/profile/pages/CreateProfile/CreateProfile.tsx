@@ -13,6 +13,7 @@ import { useEnvironmentContext } from "app/contexts";
 import { useProfileRestore, useTheme, useValidation } from "app/hooks";
 import { useCurrencyOptions } from "app/hooks/use-currency-options";
 import { DEFAULT_MARKET_PROVIDER } from "domains/profile/data";
+import LocaleCurrency from "locale-currency";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -99,6 +100,21 @@ export const CreateProfile = () => {
 		history.push("/");
 	};
 
+	const defaultCurrency = useMemo(() => {
+		const locale = Intl.DateTimeFormat().resolvedOptions().locale;
+		const currency = LocaleCurrency.getCurrency(locale);
+
+		if (
+			currencyOptions[0].options.find(
+				(option) => (option.value as string).toLowerCase() === currency.toLowerCase(),
+			)
+		) {
+			return currency;
+		}
+
+		return "USD";
+	}, [currencyOptions]);
+
 	return (
 		<Page navbarVariant="logo-only" title={t("COMMON.PAYVO_WALLET")}>
 			<Section className="flex flex-col flex-1 justify-center">
@@ -172,6 +188,7 @@ export const CreateProfile = () => {
 									})}
 									ref={register(createProfile.currency())}
 									options={currencyOptions}
+									defaultValue={defaultCurrency}
 									onChange={(currency: any) =>
 										setValue("currency", currency?.value, {
 											shouldDirty: true,

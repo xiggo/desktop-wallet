@@ -230,7 +230,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => getAllByTestId("InputPassword")[1].focus());
 
-		expect(getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		await act(async () => {
 			fireEvent.input(getAllByTestId("Input")[0], { target: { value: "te" } });
@@ -238,7 +238,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => getAllByTestId("InputPassword")[0].focus());
 
-		expect(getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		act(() => getAllByTestId("Input")[0].focus());
 
@@ -248,7 +248,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => getAllByTestId("InputPassword")[0].focus());
 
-		expect(getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 

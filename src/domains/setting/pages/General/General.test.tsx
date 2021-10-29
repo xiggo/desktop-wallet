@@ -123,7 +123,7 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
-		expect(screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		act(() => screen.getByTestId("General-settings__input--name").focus());
 
@@ -133,7 +133,7 @@ describe("General Settings", () => {
 
 		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		expect(screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -221,7 +221,7 @@ describe("General Settings", () => {
 
 		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		expect(screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(screen.getByTestId("SelectProfileImage__avatar-image")).toBeInTheDocument();
 
 		act(() => screen.getByTestId("General-settings__input--name").focus());
 
@@ -231,7 +231,7 @@ describe("General Settings", () => {
 
 		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		expect(screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(screen.getByTestId("SelectProfileImage__avatar-image")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

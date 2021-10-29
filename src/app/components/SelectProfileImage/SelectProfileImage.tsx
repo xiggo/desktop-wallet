@@ -80,7 +80,7 @@ export const SelectProfileImage = ({ className, value, name, showLabel, onSelect
 				<div className="relative w-20 h-20">
 					<ProfileImageStyled>
 						<img
-							data-testid="SelectProfileImage__avatar"
+							data-testid={`SelectProfileImage__avatar-${isSvg ? "identicon" : "image"}`}
 							src={isSvg ? `data:image/svg+xml;utf8,${value}` : value}
 							className="object-cover min-h-full"
 							alt="Avatar"

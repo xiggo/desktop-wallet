@@ -147,6 +147,7 @@
 		"glob": "^7.1.6",
 		"i18next": "^21.0.2",
 		"is-ipfs": "^5.0.0",
+		"locale-currency": "^0.0.2",
 		"node-hid": "^2.1.1",
 		"parse-author": "^2.0.0",
 		"pretty-bytes": "^5.6.0",

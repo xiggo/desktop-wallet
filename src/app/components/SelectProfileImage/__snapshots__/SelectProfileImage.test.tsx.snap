@@ -22,7 +22,7 @@ exports[`SelectProfileImage should handle upload file 1`] = `
           <img
             alt="Avatar"
             class="object-cover min-h-full"
-            data-testid="SelectProfileImage__avatar"
+            data-testid="SelectProfileImage__avatar-image"
             src="test"
           />
           <button
@@ -96,7 +96,7 @@ exports[`SelectProfileImage should not allow to upload an invalid file image 1`]
           <img
             alt="Avatar"
             class="object-cover min-h-full"
-            data-testid="SelectProfileImage__avatar"
+            data-testid="SelectProfileImage__avatar-image"
             src="test"
           />
           <button
@@ -170,7 +170,7 @@ exports[`SelectProfileImage should not handle upload file 1`] = `
           <img
             alt="Avatar"
             class="object-cover min-h-full"
-            data-testid="SelectProfileImage__avatar"
+            data-testid="SelectProfileImage__avatar-image"
             src="test"
           />
           <button
@@ -293,7 +293,7 @@ exports[`SelectProfileImage should render with value svg 1`] = `
           <img
             alt="Avatar"
             class="object-cover min-h-full"
-            data-testid="SelectProfileImage__avatar"
+            data-testid="SelectProfileImage__avatar-identicon"
             src="data:image/svg+xml;utf8,<svg>test</svg>"
           />
           <span
@@ -347,7 +347,7 @@ exports[`SelectProfileImage should render without value svg 1`] = `
           <img
             alt="Avatar"
             class="object-cover min-h-full"
-            data-testid="SelectProfileImage__avatar"
+            data-testid="SelectProfileImage__avatar-image"
             src="test"
           />
           <button

@@ -43,7 +43,7 @@ const CreateProfileForm = ({
 	const form = useForm<any>({
 		defaultValues: {
 			confirmPassword: password,
-			currency: profile?.settings().get(Contracts.ProfileSetting.ExchangeCurrency),
+			currency: profile?.settings().get(Contracts.ProfileSetting.ExchangeCurrency) || "USD",
 			isDarkMode: profile?.settings().get(Contracts.ProfileSetting.Theme) === "dark",
 			name: profile?.name() || "",
 			password,

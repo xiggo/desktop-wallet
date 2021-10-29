@@ -91,7 +91,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                         <img
                           alt="Avatar"
                           class="object-cover min-h-full"
-                          data-testid="SelectProfileImage__avatar"
+                          data-testid="SelectProfileImage__avatar-identicon"
                           src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
                         />
                         <span
@@ -783,7 +783,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                         <img
                           alt="Avatar"
                           class="object-cover min-h-full"
-                          data-testid="SelectProfileImage__avatar"
+                          data-testid="SelectProfileImage__avatar-identicon"
                           src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         />
                         <span
@@ -1225,7 +1225,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                         <img
                           alt="Avatar"
                           class="object-cover min-h-full"
-                          data-testid="SelectProfileImage__avatar"
+                          data-testid="SelectProfileImage__avatar-identicon"
                           src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"55\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
                         />
                         <span
@@ -1667,7 +1667,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                         <img
                           alt="Avatar"
                           class="object-cover min-h-full"
-                          data-testid="SelectProfileImage__avatar"
+                          data-testid="SelectProfileImage__avatar-identicon"
                           src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                         />
                         <span
@@ -2794,7 +2794,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                         <img
                           alt="Avatar"
                           class="object-cover min-h-full"
-                          data-testid="SelectProfileImage__avatar"
+                          data-testid="SelectProfileImage__avatar-identicon"
                           src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(139, 195, 74)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"35\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"55\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
                         />
                         <span
@@ -3498,7 +3498,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         <img
                           alt="Avatar"
                           class="object-cover min-h-full"
-                          data-testid="SelectProfileImage__avatar"
+                          data-testid="SelectProfileImage__avatar-identicon"
                           src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(139, 195, 74)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
                         />
                         <span
@@ -3938,7 +3938,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         <img
                           alt="Avatar"
                           class="object-cover min-h-full"
-                          data-testid="SelectProfileImage__avatar"
+                          data-testid="SelectProfileImage__avatar-identicon"
                           src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
                         />
                         <span
