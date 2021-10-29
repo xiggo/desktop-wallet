@@ -103,6 +103,10 @@ interface ContactFormProperties {
 	errors?: any;
 }
 
+const defaultProps = {
+	errors: {},
+};
+
 export const ContactForm = ({
 	profile,
 	contact,
@@ -110,7 +114,7 @@ export const ContactForm = ({
 	onCancel,
 	onDelete,
 	onSave,
-	errors,
+	errors = defaultProps.errors,
 }: ContactFormProperties) => {
 	const [addresses, setAddresses] = useState(() =>
 		contact
@@ -300,8 +304,4 @@ export const ContactForm = ({
 			</div>
 		</Form>
 	);
-};
-
-ContactForm.defaultProps = {
-	errors: {},
 };

@@ -1,5 +1,6 @@
 import React from "react";
-import { render } from "testing-library";
+import { Color } from "types";
+import { render } from "utils/testing-library";
 
 import { Checkbox } from "./Checkbox";
 
@@ -19,7 +20,7 @@ describe("Checkbox", () => {
 	});
 
 	it.each(["info", "success", "warning", "danger", "hint"])("should render a %s color", (color) => {
-		const { container } = render(<Checkbox color={color} />);
+		const { container } = render(<Checkbox color={color as Color} />);
 
 		expect(container).toMatchSnapshot();
 	});

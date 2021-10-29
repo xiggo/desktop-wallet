@@ -130,7 +130,3 @@ export const PluginHeader = ({
 		</div>
 	);
 };
-
-PluginHeader.defaultProps = {
-	isLoadingSize: false,
-};

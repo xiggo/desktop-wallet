@@ -28,7 +28,7 @@ const SearchBarInputWrapper = styled.div`
 export const HeaderSearchBar = ({
 	offsetClassName,
 	placeholder,
-	label,
+	label = "Search",
 	noToggleBorder,
 	onSearch,
 	extra,
@@ -134,8 +134,4 @@ export const HeaderSearchBar = ({
 			)}
 		</div>
 	);
-};
-
-HeaderSearchBar.defaultProps = {
-	label: "Search",
 };

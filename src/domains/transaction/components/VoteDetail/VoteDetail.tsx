@@ -66,8 +66,4 @@ export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailPr
 	);
 };
 
-VoteDetail.defaultProps = {
-	isOpen: false,
-};
-
 VoteDetail.displayName = "VoteDetail";

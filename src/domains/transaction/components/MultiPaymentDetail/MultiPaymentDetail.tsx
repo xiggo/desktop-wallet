@@ -67,8 +67,4 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Tr
 	);
 };
 
-MultiPaymentDetail.defaultProps = {
-	isOpen: false,
-};
-
 MultiPaymentDetail.displayName = "MultiPaymentDetail";

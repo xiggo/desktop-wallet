@@ -13,7 +13,7 @@ interface PageProperties {
 	children: React.ReactNode;
 }
 
-export const Page = ({ navbarVariant, title, isBackDisabled, profile, sidebar, children }: PageProperties) => {
+export const Page = ({ navbarVariant = "full", title, isBackDisabled, profile, sidebar, children }: PageProperties) => {
 	const { t } = useTranslation();
 
 	const menu = [
@@ -93,8 +93,4 @@ export const Page = ({ navbarVariant, title, isBackDisabled, profile, sidebar, c
 			</div>
 		</div>
 	);
-};
-
-Page.defaultProps = {
-	navbarVariant: "full",
 };

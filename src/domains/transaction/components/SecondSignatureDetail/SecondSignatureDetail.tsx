@@ -29,7 +29,3 @@ export const SecondSignatureDetail = ({ isOpen, transaction, onClose }: Transact
 		</Modal>
 	);
 };
-
-SecondSignatureDetail.defaultProps = {
-	isOpen: false,
-};

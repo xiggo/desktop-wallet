@@ -14,7 +14,12 @@ type TransactionSenderProperties = {
 	network: Networks.Network;
 } & TransactionDetailProperties;
 
-export const TransactionSender = ({ address, network, ...properties }: TransactionSenderProperties) => {
+export const TransactionSender = ({
+	address,
+	network,
+	borderPosition = "top",
+	...properties
+}: TransactionSenderProperties) => {
 	const { t } = useTranslation();
 
 	const activeProfile = useActiveProfile();
@@ -47,13 +52,10 @@ export const TransactionSender = ({ address, network, ...properties }: Transacti
 					<Avatar address={address} size="lg" />
 				</div>
 			}
+			borderPosition={borderPosition}
 			{...properties}
 		>
 			<Address address={address} walletName={alias} />
 		</TransactionDetail>
 	);
-};
-
-TransactionSender.defaultProps = {
-	borderPosition: "top",
 };

@@ -127,7 +127,3 @@ export const AddressTable = ({ wallets, onSelect, isCompact = false }: AddressTa
 		</div>
 	);
 };
-
-AddressTable.defaultProps = {
-	wallets: [],
-};

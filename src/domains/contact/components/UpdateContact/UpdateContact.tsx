@@ -67,7 +67,3 @@ export const UpdateContact = ({
 		</Modal>
 	);
 };
-
-UpdateContact.defaultProps = {
-	isOpen: false,
-};

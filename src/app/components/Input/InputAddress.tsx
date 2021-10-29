@@ -16,14 +16,18 @@ export type InputAddressProps = {
 	useDefaultRules?: boolean;
 } & React.InputHTMLAttributes<any>;
 
+const defaultProps = {
+	additionalRules: {},
+};
+
 export const InputAddress = ({
 	profile,
 	coin,
 	network,
 	registerRef,
-	additionalRules,
+	additionalRules = defaultProps.additionalRules,
 	onValidAddress,
-	useDefaultRules,
+	useDefaultRules = true,
 	...properties
 }: InputAddressProps) => {
 	const { t } = useTranslation();
@@ -50,9 +54,4 @@ export const InputAddress = ({
 	const rules = useDefaultRules ? defaultRules : {};
 
 	return <Input ref={registerRef?.(rules)} type="text" data-testid="InputAddress__input" {...properties} />;
-};
-
-InputAddress.defaultProps = {
-	additionalRules: {},
-	useDefaultRules: true,
 };

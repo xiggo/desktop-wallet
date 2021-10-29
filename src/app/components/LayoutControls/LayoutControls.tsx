@@ -6,10 +6,14 @@ import React from "react";
 interface LayoutControlsProperties {
 	onSelectGridView: () => void;
 	onSelectListView: () => void;
-	selectedViewType: string;
+	selectedViewType?: string;
 }
 
-export const LayoutControls = ({ onSelectGridView, onSelectListView, selectedViewType }: LayoutControlsProperties) => (
+export const LayoutControls = ({
+	onSelectGridView,
+	onSelectListView,
+	selectedViewType = "grid",
+}: LayoutControlsProperties) => (
 	<div className="flex items-center space-x-1">
 		<div data-testid="LayoutControls__list">
 			<ControlButton
@@ -32,7 +36,3 @@ export const LayoutControls = ({ onSelectGridView, onSelectListView, selectedVie
 		</div>
 	</div>
 );
-
-LayoutControls.defaultProps = {
-	selectedViewType: "grid",
-};

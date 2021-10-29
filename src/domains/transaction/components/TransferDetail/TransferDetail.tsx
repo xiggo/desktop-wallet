@@ -53,8 +53,4 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: Transa
 	);
 };
 
-TransferDetail.defaultProps = {
-	isOpen: false,
-};
-
 TransferDetail.displayName = "TransferDetail";

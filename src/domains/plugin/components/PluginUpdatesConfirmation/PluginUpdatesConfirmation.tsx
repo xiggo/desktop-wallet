@@ -120,7 +120,3 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 		</Modal>
 	);
 };
-
-PluginUpdatesConfirmation.defaultProps = {
-	isOpen: false,
-};

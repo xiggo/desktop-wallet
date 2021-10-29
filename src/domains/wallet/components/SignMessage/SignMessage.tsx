@@ -38,7 +38,7 @@ const initialState: Services.SignedMessage = {
 export const SignMessage = ({
 	profile,
 	walletId,
-	messageText,
+	messageText = "",
 	isOpen,
 	onClose,
 	onCancel,
@@ -208,9 +208,4 @@ export const SignMessage = ({
 			</Form>
 		</Modal>
 	);
-};
-
-SignMessage.defaultProps = {
-	isOpen: false,
-	messageText: "",
 };

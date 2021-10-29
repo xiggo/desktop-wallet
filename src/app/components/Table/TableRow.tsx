@@ -16,7 +16,7 @@ type TableRowProperties = {
 
 const TableRowStyled = styled.tr<TableRowProperties>(getStyles);
 
-export const TableRow = ({ border, dotted, children, isSelected, onClick }: TableRowProperties) => (
+export const TableRow = ({ border = true, dotted, children, isSelected, onClick }: TableRowProperties) => (
 	<TableRowStyled
 		data-testid="TableRow"
 		className={cn({ group: !!onClick })}
@@ -28,7 +28,3 @@ export const TableRow = ({ border, dotted, children, isSelected, onClick }: Tabl
 		{children}
 	</TableRowStyled>
 );
-
-TableRow.defaultProps = {
-	border: true,
-};

@@ -30,12 +30,16 @@ const randomWordPositions = (length: number): number[] => {
 	return result;
 };
 
+const defaultProps = {
+	wordPositions: [],
+};
+
 export function MnemonicVerification({
 	mnemonic,
-	wordPositions,
+	wordPositions = defaultProps.wordPositions,
 	optionsLimit,
 	handleComplete,
-	isCompleted,
+	isCompleted = false,
 }: Properties) {
 	const [activeTab, setActiveTab] = useState(0);
 	const [positions, setPositions] = useState([] as number[]);
@@ -48,7 +52,7 @@ export function MnemonicVerification({
 	if (!wordPositions?.length && activeTab === 0 && positions.length === 0) {
 		setPositions(randomWordPositions(mnemonicWords.length));
 	} else if (activeTab === 0 && positions.length === 0) {
-		setPositions(wordPositions as number[]);
+		setPositions(wordPositions);
 	}
 
 	useEffect(() => {
@@ -91,8 +95,3 @@ export function MnemonicVerification({
 		</Tabs>
 	);
 }
-
-MnemonicVerification.defaultProps = {
-	isCompleted: false,
-	wordPositions: [],
-};

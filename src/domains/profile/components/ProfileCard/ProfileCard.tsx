@@ -19,7 +19,7 @@ export const ProfileCard = ({
 	actions,
 	className,
 	profile,
-	showSettings,
+	showSettings = true,
 	onClick,
 	onSelect,
 }: ProfileCardProperties) => (
@@ -47,7 +47,3 @@ export const ProfileCard = ({
 		</div>
 	</Card>
 );
-
-ProfileCard.defaultProps = {
-	showSettings: true,
-};

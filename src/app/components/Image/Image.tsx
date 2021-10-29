@@ -7,10 +7,10 @@ import { shouldUseDarkColors } from "utils/electron-utils";
 
 type Properties = {
 	name: string;
-	domain: string;
+	domain?: string;
 } & React.HTMLProps<any>;
 
-export const Image = ({ name, domain, ...properties }: Properties) => {
+export const Image = ({ name, domain = "common", ...properties }: Properties) => {
 	const [imageName, setImageName] = React.useState("");
 	const { getCurrentAccentColor } = useAccentColor();
 	const currentAccentColor = getCurrentAccentColor();
@@ -44,8 +44,4 @@ export const Image = ({ name, domain, ...properties }: Properties) => {
 	}
 
 	return Image ? <Image {...properties} /> : null;
-};
-
-Image.defaultProps = {
-	domain: "common",
 };

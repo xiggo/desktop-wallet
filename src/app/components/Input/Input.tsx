@@ -236,4 +236,3 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 );
 
 Input.displayName = "Input";
-Input.defaultProps = {};

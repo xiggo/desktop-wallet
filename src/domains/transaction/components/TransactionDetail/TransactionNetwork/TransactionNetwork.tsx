@@ -9,7 +9,11 @@ type TransactionNetworkProperties = {
 	network: Networks.Network;
 } & TransactionDetailProperties;
 
-export const TransactionNetwork = ({ network, ...properties }: TransactionNetworkProperties) => {
+export const TransactionNetwork = ({
+	network,
+	borderPosition = "top",
+	...properties
+}: TransactionNetworkProperties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -17,13 +21,10 @@ export const TransactionNetwork = ({ network, ...properties }: TransactionNetwor
 			data-testid="TransactionNetwork"
 			label={t("TRANSACTION.CRYPTOASSET")}
 			extra={<NetworkIcon network={network} size="lg" />}
+			borderPosition={borderPosition}
 			{...properties}
 		>
 			{network.displayName()}
 		</TransactionDetail>
 	);
-};
-
-TransactionNetwork.defaultProps = {
-	borderPosition: "top",
 };

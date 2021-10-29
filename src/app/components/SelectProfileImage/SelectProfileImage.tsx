@@ -48,7 +48,13 @@ const ProfileImageStyled = styled.div`
 
 const ALLOWED_EXTENSIONS = ["png", "jpg", "jpeg", "bmp"];
 
-export const SelectProfileImage = ({ className, value, name, showLabel, onSelect }: SelectProfileImageProperties) => {
+export const SelectProfileImage = ({
+	className,
+	value,
+	name,
+	showLabel = true,
+	onSelect,
+}: SelectProfileImageProperties) => {
 	const { t } = useTranslation();
 	const { openFile } = useFiles();
 
@@ -157,8 +163,4 @@ export const SelectProfileImage = ({ className, value, name, showLabel, onSelect
 			<div className="flex flex-row">{renderButton()}</div>
 		</div>
 	);
-};
-
-SelectProfileImage.defaultProps = {
-	showLabel: true,
 };

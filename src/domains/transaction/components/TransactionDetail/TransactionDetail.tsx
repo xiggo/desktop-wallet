@@ -20,13 +20,13 @@ const TransactionDetailStyled = styled.div<TransactionDetailProperties>(getStyle
 export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDetailProperties>(
 	(
 		{
-			border,
-			borderPosition,
+			border = true,
+			borderPosition = "top",
 			children,
 			className,
 			extra,
 			label,
-			padding,
+			padding = true,
 			paddingPosition,
 			...properties
 		}: TransactionDetailProperties,
@@ -58,9 +58,3 @@ export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDet
 );
 
 TransactionDetail.displayName = "TransactionDetail";
-
-TransactionDetail.defaultProps = {
-	border: true,
-	borderPosition: "top",
-	padding: true,
-};

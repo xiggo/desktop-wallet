@@ -8,8 +8,6 @@ interface SpinnerType {
 	size?: Size;
 }
 
-export const Spinner = styled.div<SpinnerType>(getStyles);
-
-Spinner.defaultProps = {
-	color: "info",
-};
+export const Spinner = styled.div.attrs<SpinnerType>(({ color }) => ({ color: color ?? "info" }))<SpinnerType>(
+	getStyles,
+);

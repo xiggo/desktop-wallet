@@ -14,7 +14,7 @@ type TableCellProperties = {
 const TableCellInnerWrapper = styled.div<TableCellProperties>(getStyles);
 
 export const TableCell = ({
-	variant,
+	variant = "middle",
 	className,
 	innerClassName,
 	isCompact,
@@ -27,7 +27,3 @@ export const TableCell = ({
 		</TableCellInnerWrapper>
 	</td>
 );
-
-TableCell.defaultProps = {
-	variant: "middle",
-};

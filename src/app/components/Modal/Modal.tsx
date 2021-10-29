@@ -169,8 +169,4 @@ export const Modal = ({
 	);
 };
 
-Modal.defaultProps = {
-	isOpen: false,
-};
-
 Modal.displayName = "Modal";

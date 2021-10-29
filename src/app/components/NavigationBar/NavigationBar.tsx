@@ -112,13 +112,18 @@ const NavigationButtonWrapper = styled.div`
 	`};
 `;
 
+const defaultProps = {
+	menu: [],
+	userActions: [],
+};
+
 const NavigationBar = ({
 	title,
 	isBackDisabled,
 	profile,
-	variant,
-	menu,
-	userActions,
+	variant = "full",
+	menu = defaultProps.menu,
+	userActions = defaultProps.userActions,
 	noBorder,
 	noShadow,
 }: NavigationBarProperties) => {
@@ -307,12 +312,6 @@ const NavigationBar = ({
 			)}
 		</NavWrapper>
 	);
-};
-
-NavigationBar.defaultProps = {
-	menu: [],
-	userActions: [],
-	variant: "full",
 };
 
 export { NavigationBar, NavigationButtonWrapper };

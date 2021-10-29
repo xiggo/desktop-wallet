@@ -11,7 +11,17 @@ interface PluginInfoProperties {
 	permissions: string[];
 }
 
-export const PluginInfo = ({ description, images = [], minimumVersion, permissions = [] }: PluginInfoProperties) => {
+const defaultProps = {
+	images: [],
+	permissions: [],
+};
+
+export const PluginInfo = ({
+	description,
+	images = defaultProps.images,
+	minimumVersion,
+	permissions = defaultProps.permissions,
+}: PluginInfoProperties) => {
 	const { t } = useTranslation();
 
 	return (

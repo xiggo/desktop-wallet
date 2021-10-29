@@ -29,14 +29,19 @@ interface DelegateRowProperties {
 	toggleVotesSelected: (address: string, voteAmount?: number) => void;
 }
 
+const defaultProps = {
+	selectedUnvotes: [],
+	selectedVotes: [],
+};
+
 export const DelegateRow = ({
 	index,
 	voted,
 	delegate,
-	selectedUnvotes,
-	selectedVotes,
-	isVoteDisabled,
-	isLoading,
+	selectedUnvotes = defaultProps.selectedUnvotes,
+	selectedVotes = defaultProps.selectedVotes,
+	isVoteDisabled = false,
+	isLoading = false,
 	isCompact,
 	selectedWallet,
 	availableBalance,
@@ -239,12 +244,4 @@ export const DelegateRow = ({
 			</TableCell>
 		</TableRow>
 	);
-};
-
-DelegateRow.defaultProps = {
-	isLoading: false,
-	isVoteDisabled: false,
-	isVoted: false,
-	selectedUnvotes: [],
-	selectedVotes: [],
 };

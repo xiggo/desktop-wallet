@@ -52,8 +52,4 @@ export const IpfsDetail = ({ isOpen, transaction, onClose }: TransactionDetailPr
 	);
 };
 
-IpfsDetail.defaultProps = {
-	isOpen: false,
-};
-
 IpfsDetail.displayName = "IpfsDetail";

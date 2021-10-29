@@ -213,7 +213,3 @@ export const VerifyMessage = ({ profileId, walletId, onSubmit, onCancel, isOpen,
 		</Modal>
 	);
 };
-
-VerifyMessage.defaultProps = {
-	isOpen: false,
-};

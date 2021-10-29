@@ -5,10 +5,10 @@ import { Size } from "types";
 
 interface ProfileAvatarProperties {
 	profile: Contracts.IProfile;
-	size: Size;
+	size?: Size;
 }
 
-export const ProfileAvatar = ({ profile, size }: ProfileAvatarProperties) =>
+export const ProfileAvatar = ({ profile, size = "lg" }: ProfileAvatarProperties) =>
 	profile.avatar().endsWith("</svg>") ? (
 		<Avatar size={size}>
 			<img
@@ -30,7 +30,3 @@ export const ProfileAvatar = ({ profile, size }: ProfileAvatarProperties) =>
 			/>
 		</Avatar>
 	);
-
-ProfileAvatar.defaultProps = {
-	size: "lg",
-};

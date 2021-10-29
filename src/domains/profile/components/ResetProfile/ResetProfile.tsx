@@ -53,7 +53,3 @@ export const ResetProfile = ({ isOpen, profile, onClose, onCancel, onReset }: Re
 		</Modal>
 	);
 };
-
-ResetProfile.defaultProps = {
-	isOpen: false,
-};

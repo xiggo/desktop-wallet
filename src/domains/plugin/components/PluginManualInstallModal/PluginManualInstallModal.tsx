@@ -102,7 +102,3 @@ export const PluginManualInstallModal = ({ isOpen, onClose, onSuccess }: Propert
 		</Modal>
 	);
 };
-
-PluginManualInstallModal.defaultProps = {
-	isOpen: false,
-};

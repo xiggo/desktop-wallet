@@ -29,7 +29,3 @@ export const LegacyMagistrateDetail = ({ isOpen, transaction, onClose }: Transac
 		</Modal>
 	);
 };
-
-LegacyMagistrateDetail.defaultProps = {
-	isOpen: false,
-};

@@ -53,7 +53,3 @@ export const CreateContact = ({ isOpen, profile, onClose, onCancel, onSave }: Cr
 		</Modal>
 	);
 };
-
-CreateContact.defaultProps = {
-	isOpen: false,
-};

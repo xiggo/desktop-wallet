@@ -9,9 +9,7 @@ type CheckboxProperties = {
 	variant?: string;
 } & React.InputHTMLAttributes<any>;
 
-export const Checkbox = styled.input<CheckboxProperties>(getStyles);
-
-Checkbox.defaultProps = {
-	color: "success",
+export const Checkbox = styled.input.attrs<CheckboxProperties>(({ color }) => ({
+	color: color ?? "success",
 	type: "checkbox",
-};
+}))<CheckboxProperties>(getStyles);

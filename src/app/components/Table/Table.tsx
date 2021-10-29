@@ -20,7 +20,7 @@ const TableWrapper = styled.div`
 	${defaultTableStyle}
 `;
 
-export const Table = ({ children, data, columns, hideHeader, className, initialState }: TableProperties) => {
+export const Table = ({ children, data, columns, hideHeader = false, className, initialState }: TableProperties) => {
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]) as Column[];
 
@@ -116,10 +116,4 @@ export const Table = ({ children, data, columns, hideHeader, className, initialS
 			</table>
 		</TableWrapper>
 	);
-};
-
-Table.defaultProps = {
-	columns: [],
-	data: [],
-	hideColumns: false,
 };

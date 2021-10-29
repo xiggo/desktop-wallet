@@ -8,7 +8,7 @@ type EmptyBlockProperties = {
 	size?: Size;
 } & Omit<React.HTMLProps<any>, "size">;
 
-export const EmptyBlock = ({ className, children, size, ...properties }: EmptyBlockProperties) => {
+export const EmptyBlock = ({ className = "", children, size = "md", ...properties }: EmptyBlockProperties) => {
 	const padding = size === "sm" ? "py-3 px-4" : "p-6";
 
 	return (
@@ -24,9 +24,4 @@ export const EmptyBlock = ({ className, children, size, ...properties }: EmptyBl
 			{children && <div>{children}</div>}
 		</div>
 	);
-};
-
-EmptyBlock.defaultProps = {
-	className: "",
-	size: "md",
 };

@@ -12,13 +12,17 @@ type TransactionExplorerLinkProperties = {
 	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;
 } & TransactionDetailProperties;
 
-export const TransactionExplorerLink = ({ transaction, ...properties }: TransactionExplorerLinkProperties) => {
+export const TransactionExplorerLink = ({
+	transaction,
+	borderPosition = "bottom",
+	...properties
+}: TransactionExplorerLinkProperties) => {
 	const { t } = useTranslation();
 
 	const reference = useRef(null);
 
 	return (
-		<TransactionDetail label={t("TRANSACTION.ID")} {...properties}>
+		<TransactionDetail label={t("TRANSACTION.ID")} borderPosition={borderPosition} {...properties}>
 			<div className="flex overflow-hidden items-baseline space-x-3">
 				<span ref={reference} className="overflow-hidden">
 					<Link to={transaction.explorerLink()} isExternal>
@@ -34,9 +38,4 @@ export const TransactionExplorerLink = ({ transaction, ...properties }: Transact
 			</div>
 		</TransactionDetail>
 	);
-};
-
-TransactionExplorerLink.defaultProps = {
-	borderPosition: "bottom",
-	variant: "transaction",
 };

@@ -36,7 +36,3 @@ export const DeleteContact = ({ isOpen, contact, profile, onCancel, onClose, onD
 		/>
 	);
 };
-
-DeleteContact.defaultProps = {
-	isOpen: false,
-};

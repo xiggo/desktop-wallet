@@ -33,7 +33,3 @@ export const DevelopmentNetwork = ({ isOpen, onClose, onCancel, onContinue }: De
 		</Modal>
 	);
 };
-
-DevelopmentNetwork.defaultProps = {
-	isOpen: false,
-};

@@ -9,9 +9,7 @@ interface DividerProperties {
 	className?: string;
 }
 
-export const Divider = styled.div<DividerProperties>(getStyles);
-
-Divider.defaultProps = {
-	className: "border-theme-secondary-300 dark:border-theme-secondary-800",
-	type: "horizontal",
-};
+export const Divider = styled.div.attrs<DividerProperties>(({ className, type }) => ({
+	className: className ? undefined : "border-theme-secondary-300 dark:border-theme-secondary-800",
+	type: type ?? "horizontal",
+}))<DividerProperties>(getStyles);

@@ -82,8 +82,4 @@ export const MultiSignatureRegistrationDetail = ({ isOpen, transaction, onClose 
 	);
 };
 
-MultiSignatureRegistrationDetail.defaultProps = {
-	isOpen: false,
-};
-
 MultiSignatureRegistrationDetail.displayName = "MultiSignatureRegistrationDetail";

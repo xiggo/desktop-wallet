@@ -27,7 +27,7 @@ interface Properties {
 	isInvalid?: boolean;
 }
 
-export const Range = ({ values, min, max, step, onChange, isInvalid }: Properties) => {
+export const Range = ({ values, min = 1, max = 100, step = 1, onChange, isInvalid }: Properties) => {
 	const color = isInvalid ? "var(--theme-color-danger-700)" : "var(--theme-color-primary-600)";
 
 	/*
@@ -77,11 +77,4 @@ export const Range = ({ values, min, max, step, onChange, isInvalid }: Propertie
 			/>
 		</div>
 	);
-};
-
-Range.defaultProps = {
-	colors: ["var(--theme-color-primary-600)", "var(--theme-color-secondary-400)"],
-	max: 100,
-	min: 1,
-	step: 1,
 };

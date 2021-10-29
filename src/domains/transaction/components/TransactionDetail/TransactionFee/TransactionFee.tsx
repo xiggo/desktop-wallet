@@ -16,12 +16,18 @@ const TransactionFee: React.FC<TransactionFeeProperties> = ({
 	value,
 	exchangeCurrency,
 	convertedValue,
+	borderPosition = "top",
 	...properties
 }: TransactionFeeProperties) => {
 	const { t } = useTranslation();
 
 	return (
-		<TransactionDetail data-testid="TransactionFee" label={t("TRANSACTION.TRANSACTION_FEE")} {...properties}>
+		<TransactionDetail
+			data-testid="TransactionFee"
+			label={t("TRANSACTION.TRANSACTION_FEE")}
+			borderPosition={borderPosition}
+			{...properties}
+		>
 			<AmountCrypto ticker={currency} value={value} />
 
 			{!!exchangeCurrency && !!convertedValue && (
@@ -29,10 +35,6 @@ const TransactionFee: React.FC<TransactionFeeProperties> = ({
 			)}
 		</TransactionDetail>
 	);
-};
-
-TransactionFee.defaultProps = {
-	borderPosition: "top",
 };
 
 export { TransactionFee };

@@ -10,7 +10,7 @@ interface PluginManagerControlsProperties {
 export const PluginManagerControls = ({
 	onSelectGridView,
 	onSelectListView,
-	selectedViewType,
+	selectedViewType = "grid",
 }: PluginManagerControlsProperties) => (
 	<div data-testid="PluginManagerControls" className="flex items-center">
 		<LayoutControls
@@ -20,7 +20,3 @@ export const PluginManagerControls = ({
 		/>
 	</div>
 );
-
-PluginManagerControls.defaultProps = {
-	selectedViewType: "grid",
-};

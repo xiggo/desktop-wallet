@@ -4,7 +4,7 @@ import prettyBytes from "pretty-bytes";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-export const SecondStep = ({ transferred, total, percent }: DownloadProgress) => {
+export const SecondStep = ({ transferred = 0, total = 0, percent = 0 }: DownloadProgress) => {
 	const { t } = useTranslation();
 
 	return (
@@ -37,10 +37,4 @@ export const SecondStep = ({ transferred, total, percent }: DownloadProgress) =>
 			</div>
 		</section>
 	);
-};
-
-SecondStep.defaultProps = {
-	percent: 0,
-	total: 0,
-	transferred: 0,
 };

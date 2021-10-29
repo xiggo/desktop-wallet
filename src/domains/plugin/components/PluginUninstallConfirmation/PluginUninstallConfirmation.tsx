@@ -58,7 +58,3 @@ export const PluginUninstallConfirmation = ({ isOpen, profile, plugin, onClose, 
 		</Modal>
 	);
 };
-
-PluginUninstallConfirmation.defaultProps = {
-	isOpen: false,
-};

@@ -17,12 +17,9 @@ import { useWalletDisplay, WalletsGrid, WalletsList } from ".";
 
 interface WalletsProperties {
 	title?: string;
-	viewType?: "grid" | "list";
-	wallets?: Contracts.IReadWriteWallet[];
 	onCreateWallet?: any;
 	onImportWallet?: any;
 	onImportLedgerWallet?: () => void;
-	onSelectViewType?: any;
 	listPagerLimit?: number;
 	walletsCount?: number;
 	isLoading?: boolean;
@@ -173,12 +170,4 @@ export const Wallets = ({
 			)}
 		</Section>
 	);
-};
-
-Wallets.defaultProps = {
-	activeFilter: false,
-	networks: [],
-	viewType: "grid",
-	wallets: [],
-	walletsEmptyText: "",
 };

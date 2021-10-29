@@ -45,7 +45,15 @@ const AvatarWrapper = styled.div<Properties>`
 	}}
 `;
 
-export const Avatar = ({ address, className, highlight, noShadow, shadowClassName, size, children }: Properties) => {
+export const Avatar = ({
+	address = "",
+	className,
+	highlight,
+	noShadow,
+	shadowClassName,
+	size,
+	children,
+}: Properties) => {
 	const svg = React.useMemo(() => (address ? Helpers.Avatar.make(address) : undefined), [address]);
 
 	return (
@@ -67,8 +75,4 @@ export const Avatar = ({ address, className, highlight, noShadow, shadowClassNam
 			</div>
 		</AvatarWrapper>
 	);
-};
-
-Avatar.defaultProps = {
-	address: "",
 };

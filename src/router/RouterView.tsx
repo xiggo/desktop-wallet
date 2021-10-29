@@ -14,7 +14,11 @@ interface Properties {
 	middlewares?: Middleware[];
 }
 
-export const RouterView = ({ routes, wrapper, middlewares }: Properties) => {
+const defaultProps = {
+	middlewares: [],
+};
+
+export const RouterView = ({ routes, wrapper, middlewares = defaultProps.middlewares }: Properties) => {
 	const location = useLocation();
 	const history = useHistory();
 	const { env } = useEnvironmentContext();
@@ -32,9 +36,7 @@ export const RouterView = ({ routes, wrapper, middlewares }: Properties) => {
 
 	const canActivate = useMemo(
 		() =>
-			middlewares!.every((middleware) =>
-				middleware.handler({ env, history, location, redirect: setRedirectUrl }),
-			),
+			middlewares.every((middleware) => middleware.handler({ env, history, location, redirect: setRedirectUrl })),
 		[location, middlewares, env, history],
 	);
 
@@ -58,8 +60,4 @@ export const RouterView = ({ routes, wrapper, middlewares }: Properties) => {
 			))}
 		</Switch>
 	);
-};
-
-RouterView.defaultProps = {
-	middlewares: [],
 };

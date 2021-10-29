@@ -1,7 +1,6 @@
 import tw, { css } from "twin.macro";
 import { Color } from "types";
-
-import { urlEncodeRootColor } from "../../../utils/url-encode-root-color";
+import { urlEncodeRootColor } from "utils/url-encode-root-color";
 
 const baseStyle = [
 	tw`w-5 h-5 bg-transparent`,

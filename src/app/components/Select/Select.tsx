@@ -5,7 +5,7 @@ import React from "react";
 type SelectProperties = { isInvalid?: boolean } & React.SelectHTMLAttributes<any>;
 
 export const Select = React.forwardRef<HTMLSelectElement, SelectProperties>(
-	({ placeholder, children, ...properties }: SelectProperties, reference) => (
+	({ placeholder, children, defaultValue = "", ...properties }: SelectProperties, reference) => (
 		<Input
 			data-testid="Select"
 			as="select"
@@ -19,6 +19,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProperties>(
 					),
 				},
 			}}
+			defaultValue={defaultValue}
 			{...properties}
 		>
 			{placeholder && (
@@ -32,6 +33,3 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProperties>(
 );
 
 Select.displayName = "Select";
-Select.defaultProps = {
-	defaultValue: "",
-};

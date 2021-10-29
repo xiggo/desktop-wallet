@@ -48,8 +48,4 @@ export const DelegateRegistrationDetail = ({ isOpen, transaction, onClose }: Tra
 	);
 };
 
-DelegateRegistrationDetail.defaultProps = {
-	isOpen: false,
-};
-
 DelegateRegistrationDetail.displayName = "DelegateRegistrationDetail";

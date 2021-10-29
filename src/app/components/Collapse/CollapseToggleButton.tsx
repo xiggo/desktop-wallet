@@ -14,7 +14,7 @@ const ToggleIcon = styled.span<{ isOpen: boolean; isDisabled?: boolean }>`
 `;
 
 type Properties = {
-	isOpen?: boolean;
+	isOpen: boolean;
 	label?: React.ReactNode;
 	alternativeLabel?: React.ReactNode;
 } & React.ButtonHTMLAttributes<any>;
@@ -31,13 +31,9 @@ export const CollapseToggleButton = ({ isOpen, className, label, alternativeLabe
 			{...properties}
 		>
 			<span>{isOpen ? label || t("COMMON.HIDE") : alternativeLabel || label || t("COMMON.SHOW")}</span>
-			<ToggleIcon isOpen={isOpen!} isDisabled={properties.disabled}>
+			<ToggleIcon isOpen={isOpen} isDisabled={properties.disabled}>
 				<Icon name="ChevronDownSmall" size="sm" className="p-1" />
 			</ToggleIcon>
 		</button>
 	);
-};
-
-CollapseToggleButton.defaultProps = {
-	isOpen: false,
 };

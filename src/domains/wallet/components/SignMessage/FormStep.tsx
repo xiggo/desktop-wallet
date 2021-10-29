@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 export const FormStep = ({
 	wallet,
-	disableMessageInput = false,
+	disableMessageInput,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	disableMessageInput?: boolean;

@@ -50,7 +50,3 @@ export const DeleteResource = ({
 		</Modal>
 	);
 };
-
-DeleteResource.defaultProps = {
-	isOpen: false,
-};

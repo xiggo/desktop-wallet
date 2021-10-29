@@ -48,8 +48,4 @@ export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: Tran
 	);
 };
 
-DelegateResignationDetail.defaultProps = {
-	isOpen: false,
-};
-
 DelegateResignationDetail.displayName = "DelegateResignationDetail";

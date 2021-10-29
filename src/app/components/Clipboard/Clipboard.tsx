@@ -11,18 +11,26 @@ export interface ClipboardCommonProperties {
 
 type ClipboardProperties = ClipboardIconProperties | ClipboardButtonProperties;
 
-export const Clipboard = (properties: ClipboardProperties) => {
+const defaultProps = {
+	options: {},
+};
+
+export const Clipboard = ({ options = defaultProps.options, ...properties }: ClipboardProperties) => {
 	if (!properties.children) {
 		return null;
 	}
 
 	if (properties.variant === "icon") {
-		return <ClipboardIcon {...properties}>{properties.children}</ClipboardIcon>;
+		return (
+			<ClipboardIcon options={options} {...properties}>
+				{properties.children}
+			</ClipboardIcon>
+		);
 	}
 
-	return <ClipboardButton {...properties}>{properties.children}</ClipboardButton>;
-};
-
-Clipboard.defaultProps = {
-	options: {},
+	return (
+		<ClipboardButton options={options} {...properties}>
+			{properties.children}
+		</ClipboardButton>
+	);
 };

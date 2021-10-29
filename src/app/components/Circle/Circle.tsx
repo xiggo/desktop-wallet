@@ -18,7 +18,7 @@ export type CircleProps = {
 const CircleWrapper = styled.div<CircleProps>(getStyles);
 
 export const Circle = forwardRef<HTMLDivElement, CircleProps>(
-	({ className, noShadow, shadowClassName, size, children, ...properties }: CircleProps, reference) => (
+	({ className, noShadow = false, shadowClassName, size, children, ...properties }: CircleProps, reference) => (
 		<CircleWrapper
 			ref={reference}
 			size={size}
@@ -32,7 +32,3 @@ export const Circle = forwardRef<HTMLDivElement, CircleProps>(
 );
 
 Circle.displayName = "Circle";
-
-Circle.defaultProps = {
-	noShadow: false,
-};

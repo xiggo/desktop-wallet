@@ -21,7 +21,7 @@ interface ReceiveFundsProperties {
 	onClose?: () => void;
 }
 
-const ReceiveFunds = ({ address, name, network, isOpen, onClose }: ReceiveFundsProperties) => {
+export const ReceiveFunds = ({ address, name, network, isOpen, onClose }: ReceiveFundsProperties) => {
 	const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
 
 	const { t } = useTranslation();
@@ -145,9 +145,3 @@ const ReceiveFunds = ({ address, name, network, isOpen, onClose }: ReceiveFundsP
 		</Modal>
 	);
 };
-
-ReceiveFunds.defaultProps = {
-	isOpen: false,
-};
-
-export { ReceiveFunds };

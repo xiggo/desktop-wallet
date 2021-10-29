@@ -7,10 +7,16 @@ interface SliderProperties {
 	data?: any;
 	options?: any;
 	className?: string;
-	paginationPosition: "bottom-center" | "top-right";
+	paginationPosition?: "bottom-center" | "top-right";
 }
 
-export const Slider = ({ children, data, options, className, paginationPosition }: SliderProperties) => {
+export const Slider = ({
+	children,
+	data,
+	options,
+	className,
+	paginationPosition = "bottom-center",
+}: SliderProperties) => {
 	const { showPagination, containerHeight, slideStyles, wrapperRef } = useSlider({
 		container: ".slide-container",
 		data,
@@ -49,9 +55,4 @@ export const Slider = ({ children, data, options, className, paginationPosition 
 			</div>
 		</div>
 	);
-};
-
-Slider.defaultProps = {
-	data: [],
-	paginationPosition: "bottom-center",
 };

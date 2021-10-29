@@ -21,14 +21,12 @@ const renderItems = (items: any) => (
 	</StyledList>
 );
 
-const ListDivided = ({ items }: Properties) => {
+const defaultProps = {
+	items: [],
+};
+
+export const ListDivided = ({ items = defaultProps.items }: Properties) => {
 	const emptyList = <span data-testid="list-divided__empty">empty</span>;
 
 	return items.length > 0 ? renderItems(items) : emptyList;
 };
-
-ListDivided.defaultProps = {
-	items: [],
-};
-
-export { ListDivided };

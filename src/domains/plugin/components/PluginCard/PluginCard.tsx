@@ -59,7 +59,7 @@ export const PluginCard = ({
 	onSelect,
 	isUpdating,
 	updatingProgress,
-	showCategory,
+	showCategory = true,
 }: PluginCardProperties) => {
 	const { t } = useTranslation();
 
@@ -169,8 +169,4 @@ export const PluginCard = ({
 			</Card>
 		</div>
 	);
-};
-
-PluginCard.defaultProps = {
-	showCategory: true,
 };

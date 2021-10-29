@@ -24,7 +24,17 @@ const CustomButton = styled.div`
 
 export const SelectCategory = React.forwardRef<HTMLInputElement, Properties>(
 	(
-		{ children, type, name, value, checked, defaultChecked, disabled, onChange, ...properties }: Properties,
+		{
+			children,
+			type = "checkbox",
+			name,
+			value,
+			checked,
+			defaultChecked,
+			disabled,
+			onChange,
+			...properties
+		}: Properties,
 		reference,
 	) => (
 		<label htmlFor={name} tw="cursor-pointer" {...properties}>
@@ -45,6 +55,3 @@ export const SelectCategory = React.forwardRef<HTMLInputElement, Properties>(
 );
 
 SelectCategory.displayName = "SelectCategory";
-SelectCategory.defaultProps = {
-	type: "checkbox",
-};

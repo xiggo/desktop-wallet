@@ -1,5 +1,6 @@
 import React from "react";
-import { fireEvent, render } from "testing-library";
+import { ButtonVariant } from "types";
+import { fireEvent, render } from "utils/testing-library";
 
 import { Button } from "./Button";
 
@@ -10,29 +11,14 @@ describe("Button", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render as primary button", () => {
-		const { container } = render(<Button variant="primary" />);
+	it.each(["primary", "secondary", "danger", "warning", "transparent", "info", "reverse"])(
+		"should render as %s button",
+		(variant) => {
+			const { container } = render(<Button variant={variant as ButtonVariant} />);
 
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should render as secondary button", () => {
-		const { container } = render(<Button variant="secondary" />);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should render as danger button", () => {
-		const { container } = render(<Button variant="danger" />);
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should render as transparent button", () => {
-		const { container } = render(<Button variant="transparent" />);
-
-		expect(container).toMatchSnapshot();
-	});
+			expect(container).toMatchSnapshot();
+		},
+	);
 
 	it("should render a small one", () => {
 		const { container } = render(<Button size="sm" />);

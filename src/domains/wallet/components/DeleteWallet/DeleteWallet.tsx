@@ -23,7 +23,3 @@ export const DeleteWallet = ({ isOpen, onClose, onCancel, onDelete }: DeleteWall
 		/>
 	);
 };
-
-DeleteWallet.defaultProps = {
-	isOpen: false,
-};

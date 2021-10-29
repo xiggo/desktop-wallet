@@ -6,13 +6,23 @@ import { useTranslation } from "react-i18next";
 import Skeleton from "react-loading-skeleton";
 
 interface TransactionVotesProperties {
-	isLoading: boolean;
+	isLoading?: boolean;
 	votes: Contracts.VoteRegistryItem[] | Contracts.IReadOnlyWallet[];
 	unvotes: Contracts.VoteRegistryItem[] | Contracts.IReadOnlyWallet[];
 	currency?: string;
 }
 
-export const TransactionVotes = ({ isLoading, votes, unvotes, currency }: TransactionVotesProperties) => {
+const defaultProps = {
+	unvotes: [],
+	votes: [],
+};
+
+export const TransactionVotes = ({
+	isLoading = false,
+	unvotes = defaultProps.unvotes,
+	votes = defaultProps.votes,
+	currency,
+}: TransactionVotesProperties) => {
 	const { t } = useTranslation();
 
 	if (isLoading) {
@@ -52,10 +62,4 @@ export const TransactionVotes = ({ isLoading, votes, unvotes, currency }: Transa
 			)}
 		</>
 	);
-};
-
-TransactionVotes.defaultProps = {
-	isLoading: false,
-	unvotes: [],
-	votes: [],
 };

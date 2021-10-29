@@ -35,7 +35,7 @@ interface DropdownProperties {
 	options?: any;
 	position?: Position;
 	dropdownClass?: string;
-	toggleIcon: string;
+	toggleIcon?: string;
 	toggleSize?: Size;
 	toggleContent?: any;
 	disableToggle?: boolean;
@@ -147,8 +147,8 @@ export const Dropdown = ({
 	variant,
 	options,
 	onSelect,
-	position,
-	toggleIcon,
+	position = "right",
+	toggleIcon = "Gear",
 	toggleSize,
 	toggleContent,
 	disableToggle,
@@ -276,9 +276,4 @@ export const Dropdown = ({
 			)}
 		</div>
 	);
-};
-
-Dropdown.defaultProps = {
-	position: "right",
-	toggleIcon: "Gear",
 };

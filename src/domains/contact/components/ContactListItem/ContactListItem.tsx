@@ -16,7 +16,20 @@ import { assertNetwork } from "utils/assertions";
 
 import { ContactListItemProperties, Option } from "./ContactListItem.models";
 
-export const ContactListItem = ({ item, onAction, onSend, options, useTestNetworks }: ContactListItemProperties) => {
+const defaultProps = {
+	options: [
+		{ label: "Edit", value: "edit" },
+		{ label: "Delete", value: "send" },
+	],
+};
+
+export const ContactListItem = ({
+	item,
+	onAction,
+	onSend,
+	options = defaultProps.options,
+	useTestNetworks,
+}: ContactListItemProperties) => {
 	const { env } = useEnvironmentContext();
 	const { networkById } = useNetworkOptions();
 	const { t } = useTranslation();
@@ -135,11 +148,4 @@ export const ContactListItem = ({ item, onAction, onSend, options, useTestNetwor
 			})}
 		</>
 	);
-};
-
-ContactListItem.defaultProps = {
-	options: [
-		{ label: "Edit", value: "edit" },
-		{ label: "Delete", value: "send" },
-	],
 };

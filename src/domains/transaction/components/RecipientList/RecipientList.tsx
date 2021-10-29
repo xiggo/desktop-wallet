@@ -113,13 +113,17 @@ const RecipientListItem = ({
 	);
 };
 
+const defaultProps = {
+	recipients: [],
+};
+
 export const RecipientList = ({
 	assetSymbol,
-	isEditable,
-	recipients,
+	isEditable = false,
+	recipients = defaultProps.recipients,
 	variant,
 	label,
-	showAmount,
+	showAmount = true,
 	tooltipDisabled,
 	disableButton,
 	onRemove,
@@ -160,10 +164,4 @@ export const RecipientList = ({
 			</Table>
 		</RecipientListWrapper>
 	);
-};
-
-RecipientList.defaultProps = {
-	isEditable: false,
-	recipients: [],
-	showAmount: true,
 };

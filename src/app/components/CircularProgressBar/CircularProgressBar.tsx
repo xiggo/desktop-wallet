@@ -7,18 +7,18 @@ interface CircularProgressBarProperties {
 	progressColor?: string;
 	value: number;
 	fontSize?: number;
-	showValue: boolean;
+	showValue?: boolean;
 	className?: string;
 }
 
 export const CircularProgressBar = ({
-	size,
-	strokeWidth,
-	strokeColor,
-	progressColor,
-	value,
-	fontSize,
-	showValue,
+	size = 130,
+	strokeWidth = 10,
+	strokeColor = "var(--theme-color-success-200)",
+	progressColor = "var(--theme-color-success-600)",
+	value = 0,
+	fontSize = 2,
+	showValue = true,
 	className,
 }: CircularProgressBarProperties) => {
 	// Enclose circle in a circumscribed square
@@ -67,7 +67,7 @@ export const CircularProgressBar = ({
 				>
 					<tspan>
 						{value}
-						<tspan dy="-0.6em" fontSize={`${fontSize! / 2}rem`} fontWeight="bold">
+						<tspan dy="-0.6em" fontSize={`${fontSize / 2}rem`} fontWeight="bold">
 							%
 						</tspan>
 					</tspan>
@@ -75,14 +75,4 @@ export const CircularProgressBar = ({
 			)}
 		</svg>
 	);
-};
-
-CircularProgressBar.defaultProps = {
-	fontSize: 2,
-	progressColor: "var(--theme-color-success-600)",
-	showValue: true,
-	size: 130,
-	strokeColor: "var(--theme-color-success-200)",
-	strokeWidth: 10,
-	value: 0,
 };

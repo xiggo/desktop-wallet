@@ -108,7 +108,3 @@ export const FilterNetworks = ({ options = [], ...properties }: FilterNetworksPr
 		</div>
 	);
 };
-
-FilterNetworks.defaultProps = {
-	hideViewAll: true,
-};

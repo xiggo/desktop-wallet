@@ -1,31 +1,49 @@
+import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, fireEvent, render } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { ConfirmSendTransaction } from "./ConfirmSendTransaction";
 
-describe("ConfirmSendTransaction", () => {
-	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = render(<ConfirmSendTransaction isOpen={false} />);
+let profile: Contracts.IProfile;
 
-		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+describe("ConfirmSendTransaction", () => {
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
+
+	it("should not render if not open", () => {
+		const { asFragment } = render(
+			<ConfirmSendTransaction isOpen={false} profile={profile} unconfirmedTransactions={[]} />,
+		);
+
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render modal", () => {
-		const { asFragment, getByTestId } = render(<ConfirmSendTransaction isOpen={true} />);
+		const { asFragment } = render(
+			<ConfirmSendTransaction isOpen={true} profile={profile} unconfirmedTransactions={[]} />,
+		);
 
-		expect(getByTestId("modal__inner")).toBeTruthy();
+		expect(screen.getByTestId("modal__inner")).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should confirm", () => {
 		const onConfirm = jest.fn();
-		const { getByTestId } = render(<ConfirmSendTransaction isOpen={true} onConfirm={onConfirm} />);
+		render(
+			<ConfirmSendTransaction
+				isOpen={true}
+				profile={profile}
+				unconfirmedTransactions={[]}
+				onConfirm={onConfirm}
+			/>,
+		);
 
-		expect(getByTestId("modal__inner")).toBeTruthy();
+		expect(screen.getByTestId("modal__inner")).toBeTruthy();
 
 		act(() => {
-			fireEvent.click(getByTestId("ConfirmSendTransaction__confirm"));
+			fireEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 		});
 
 		expect(onConfirm).toHaveBeenCalled();
@@ -33,12 +51,14 @@ describe("ConfirmSendTransaction", () => {
 
 	it("should cancel", () => {
 		const onCancel = jest.fn();
-		const { getByTestId } = render(<ConfirmSendTransaction isOpen={true} onClose={onCancel} />);
+		render(
+			<ConfirmSendTransaction isOpen={true} profile={profile} unconfirmedTransactions={[]} onClose={onCancel} />,
+		);
 
-		expect(getByTestId("modal__inner")).toBeTruthy();
+		expect(screen.getByTestId("modal__inner")).toBeTruthy();
 
 		act(() => {
-			fireEvent.click(getByTestId("ConfirmSendTransaction__cancel"));
+			fireEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
 		});
 
 		expect(onCancel).toHaveBeenCalled();

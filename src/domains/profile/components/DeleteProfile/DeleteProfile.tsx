@@ -34,7 +34,3 @@ export const DeleteProfile = ({ isOpen, onClose, onCancel, onDelete, profileId }
 		/>
 	);
 };
-
-DeleteProfile.defaultProps = {
-	isOpen: false,
-};

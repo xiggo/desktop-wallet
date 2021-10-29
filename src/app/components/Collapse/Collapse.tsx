@@ -10,14 +10,21 @@ interface Properties {
 	className?: string;
 }
 
-export const Collapse = ({ isOpen, children, minHeight, maxHeight, duration, ...properties }: Properties) => {
+export const Collapse = ({
+	isOpen = false,
+	children,
+	minHeight = 0,
+	maxHeight = "auto",
+	duration = 0.2,
+	...properties
+}: Properties) => {
 	const variants = {
 		hidden: {
 			height: minHeight,
 			opacity: 0,
 			overflow: "hidden",
 			transition: {
-				duration: duration! * 0.75,
+				duration: duration * 0.75,
 			},
 		},
 		visible: {
@@ -43,11 +50,4 @@ export const Collapse = ({ isOpen, children, minHeight, maxHeight, duration, ...
 			{children}
 		</motion.div>
 	);
-};
-
-Collapse.defaultProps = {
-	duration: 0.2,
-	isOpen: false,
-	maxHeight: "auto",
-	minHeight: 0,
 };

@@ -68,12 +68,12 @@ type Properties = {
 	showExternalIcon?: boolean;
 } & Omit<LinkProps, "referrerPolicy">;
 
-export const Link = ({ tooltip, ...properties }: Properties) => {
+export const Link = ({ tooltip, isExternal = false, showExternalIcon = true, ...properties }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
 		<Tooltip content={tooltip} disabled={!tooltip}>
-			{properties.isExternal ? (
+			{isExternal ? (
 				<Anchor
 					onClick={(event) => {
 						event.stopPropagation();
@@ -84,6 +84,8 @@ export const Link = ({ tooltip, ...properties }: Properties) => {
 							toasts.error(t("COMMON.ERRORS.INVALID_URL", { url: properties.to }));
 						}
 					}}
+					isExternal={isExternal}
+					showExternalIcon={showExternalIcon}
 					{...properties}
 				/>
 			) : (
@@ -91,9 +93,4 @@ export const Link = ({ tooltip, ...properties }: Properties) => {
 			)}
 		</Tooltip>
 	);
-};
-
-Link.defaultProps = {
-	isExternal: false,
-	showExternalIcon: true,
 };

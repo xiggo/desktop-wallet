@@ -2,7 +2,7 @@ import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { styled } from "twin.macro";
 
-type Properties = {
+type TruncateMiddleProperties = {
 	text: string;
 	maxChars?: number;
 	as?: React.ElementType;
@@ -12,7 +12,7 @@ type Properties = {
 const Wrapper = styled.span``;
 
 export const TruncateMiddle = React.forwardRef(
-	({ text, maxChars, showTooltip, ...properties }: Properties, reference) => {
+	({ text, maxChars = 16, showTooltip = true, ...properties }: TruncateMiddleProperties, reference) => {
 		const result = React.useMemo(() => {
 			if (!maxChars || text.length <= maxChars) {
 				return text;
@@ -36,8 +36,3 @@ export const TruncateMiddle = React.forwardRef(
 );
 
 TruncateMiddle.displayName = "TruncateMiddle";
-
-TruncateMiddle.defaultProps = {
-	maxChars: 16,
-	showTooltip: true,
-};

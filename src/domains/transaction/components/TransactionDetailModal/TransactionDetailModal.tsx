@@ -103,7 +103,3 @@ export const TransactionDetailModal = ({
 
 	return <TransactionModal isOpen={isOpen} transaction={transactionItem} aliases={aliases} onClose={onClose} />;
 };
-
-TransactionDetailModal.defaultProps = {
-	isOpen: false,
-};

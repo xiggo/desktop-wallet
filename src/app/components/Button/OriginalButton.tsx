@@ -18,7 +18,19 @@ type ButtonProperties = {
 const StyledButton = styled.button<ButtonProperties>(getStyles);
 
 export const OriginalButton = React.forwardRef<HTMLButtonElement, ButtonProperties>(
-	({ variant, children, icon, isLoading, iconSize, iconPosition, ...properties }: ButtonProperties, reference) => {
+	(
+		{
+			variant = "primary",
+			children,
+			icon,
+			isLoading,
+			iconSize,
+			iconPosition = "left",
+			type = "button",
+			...properties
+		}: ButtonProperties,
+		reference,
+	) => {
 		const renderContent = () => {
 			if (isLoading) {
 				return (
@@ -45,17 +57,11 @@ export const OriginalButton = React.forwardRef<HTMLButtonElement, ButtonProperti
 		};
 
 		return (
-			<StyledButton {...properties} variant={variant} ref={reference}>
+			<StyledButton type={type} variant={variant} ref={reference} {...properties}>
 				<div className="flex items-center space-x-2">{renderContent()}</div>
 			</StyledButton>
 		);
 	},
 );
-
-OriginalButton.defaultProps = {
-	iconPosition: "left",
-	type: "button",
-	variant: "primary",
-};
 
 OriginalButton.displayName = "Button";

@@ -33,8 +33,8 @@ export const PluginManagerNavigationBar = ({
 	hasUpdatesAvailable,
 	installedPluginsCount,
 	menu,
-	selectedView,
-	selectedViewType,
+	selectedView = "latest",
+	selectedViewType = "grid",
 	onChange,
 	onSelectGridView,
 	onSelectListView,
@@ -97,9 +97,4 @@ export const PluginManagerNavigationBar = ({
 			</div>
 		</NavWrapper>
 	);
-};
-
-PluginManagerNavigationBar.defaultProps = {
-	selectedView: "latest",
-	selectedViewType: "grid",
 };

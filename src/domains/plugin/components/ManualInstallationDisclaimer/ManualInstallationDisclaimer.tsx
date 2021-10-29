@@ -65,7 +65,3 @@ export const ManualInstallationDisclaimer = ({
 		</Modal>
 	);
 };
-
-ManualInstallationDisclaimer.defaultProps = {
-	isOpen: false,
-};

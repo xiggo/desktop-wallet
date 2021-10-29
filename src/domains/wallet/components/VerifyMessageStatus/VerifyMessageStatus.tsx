@@ -19,8 +19,3 @@ export const VerifyMessageStatus = ({ title, description, type, isOpen, onClose 
 		</Modal>
 	);
 };
-
-VerifyMessageStatus.defaultProps = {
-	isOpen: false,
-	type: "success",
-};

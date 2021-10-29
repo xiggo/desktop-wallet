@@ -7,8 +7,6 @@ interface ButtonSpinnerType {
 	variant: ButtonVariant | undefined;
 }
 
-export const ButtonSpinner = styled.div<ButtonSpinnerType>(getStyles);
-
-ButtonSpinner.defaultProps = {
-	variant: "primary",
-};
+export const ButtonSpinner = styled.div.attrs<ButtonSpinnerType>(({ variant }) => ({
+	variant: variant ?? "primary",
+}))<ButtonSpinnerType>(getStyles);

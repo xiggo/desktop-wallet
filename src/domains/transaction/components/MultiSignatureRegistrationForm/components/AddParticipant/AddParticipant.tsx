@@ -21,11 +21,20 @@ interface Properties {
 	defaultParticipants?: Participant[];
 }
 
-export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants }: Properties) => {
+const defaultProps = {
+	defaultParticipants: [],
+};
+
+export const AddParticipant = ({
+	profile,
+	wallet,
+	onChange,
+	defaultParticipants = defaultProps.defaultParticipants,
+}: Properties) => {
 	const { t } = useTranslation();
 
 	const [isValidating, setIsValidating] = useState(false);
-	const [participants, setParticipants] = useState<Participant[]>(defaultParticipants!);
+	const [participants, setParticipants] = useState<Participant[]>(defaultParticipants);
 	const lastValidationReference = useRef<unknown | undefined>();
 
 	const { getWalletAlias } = useWalletAlias();
@@ -39,7 +48,7 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 	}, [register]);
 
 	useEffect(() => {
-		if (defaultParticipants!.length === 0) {
+		if (defaultParticipants.length === 0) {
 			const { alias } = getWalletAlias({
 				address: wallet.address(),
 				network: wallet.network(),
@@ -185,8 +194,4 @@ export const AddParticipant = ({ profile, wallet, onChange, defaultParticipants 
 			</div>
 		</div>
 	);
-};
-
-AddParticipant.defaultProps = {
-	defaultParticipants: [],
 };

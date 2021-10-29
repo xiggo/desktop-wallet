@@ -8,9 +8,7 @@ type RadioButtonProperties = {
 	color?: Color;
 } & React.InputHTMLAttributes<any>;
 
-export const RadioButton = styled.input<RadioButtonProperties>(getStyles);
-
-RadioButton.defaultProps = {
-	color: "success",
+export const RadioButton = styled.input.attrs<RadioButtonProperties>(({ color }) => ({
+	color: color ?? "success",
 	type: "radio",
-};
+}))<RadioButtonProperties>(getStyles);

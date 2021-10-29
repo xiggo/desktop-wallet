@@ -229,15 +229,15 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 		{
 			addons,
 			options,
-			defaultValue,
-			placeholder,
+			defaultValue = "",
+			placeholder = "Select option",
 			className,
 			innerClassName,
 			allowFreeInput,
 			showCaret,
 			showOptions,
 			isInvalid,
-			disabled,
+			disabled = false,
 			onChange,
 			renderLabel,
 			id,
@@ -296,9 +296,3 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 );
 
 Select.displayName = "Select";
-Select.defaultProps = {
-	defaultValue: "",
-	disabled: false,
-	options: [],
-	placeholder: "Select option",
-};

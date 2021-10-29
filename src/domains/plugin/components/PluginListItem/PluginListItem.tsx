@@ -35,7 +35,7 @@ export const PluginListItem = ({
 	onUpdate,
 	onClick,
 	isUpdating,
-	updatingProgress,
+	updatingProgress = 0,
 	plugin,
 	showCategory,
 	isCompact = false,
@@ -179,8 +179,4 @@ export const PluginListItem = ({
 			</TableCell>
 		</TableRow>
 	);
-};
-
-PluginListItem.defaultProps = {
-	updatingProgress: 0,
 };

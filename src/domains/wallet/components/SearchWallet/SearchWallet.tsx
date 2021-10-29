@@ -99,9 +99,9 @@ export const SearchWallet = ({
 	disableAction,
 	wallets,
 	searchPlaceholder,
-	size,
-	showConvertedValue,
-	showNetwork,
+	size = "5xl",
+	showConvertedValue = true,
+	showNetwork = true,
 	onClose,
 	onSelectWallet,
 	profile,
@@ -202,11 +202,4 @@ export const SearchWallet = ({
 			</div>
 		</Modal>
 	);
-};
-
-SearchWallet.defaultProps = {
-	isOpen: false,
-	showConvertedValue: true,
-	showNetwork: true,
-	size: "5xl",
 };

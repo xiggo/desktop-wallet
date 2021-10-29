@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Size } from "types";
 
 interface Properties {
-	isOpen?: boolean;
+	isOpen: boolean;
 	description?: string;
 	title?: string;
 	onCancel?: () => void;
@@ -14,7 +14,7 @@ interface Properties {
 	size?: Size;
 }
 
-export const ConfirmationModal = ({ description, title, size, isOpen, onCancel, onConfirm }: Properties) => {
+export const ConfirmationModal = ({ description, title, size = "lg", isOpen, onCancel, onConfirm }: Properties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -45,9 +45,4 @@ export const ConfirmationModal = ({ description, title, size, isOpen, onCancel, 
 			</div>
 		</Modal>
 	);
-};
-
-ConfirmationModal.defaultProps = {
-	isOpen: false,
-	size: "lg",
 };

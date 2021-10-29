@@ -65,10 +65,36 @@ exports[`Button should render as danger button 1`] = `
 </div>
 `;
 
+exports[`Button should render as info button 1`] = `
+<div>
+  <button
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 fNTYJW"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
 exports[`Button should render as primary button 1`] = `
 <div>
   <button
     class="OriginalButton__StyledButton-sc-o0fs2j-0 eJvReC"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button should render as reverse button 1`] = `
+<div>
+  <button
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 dBlhqt"
     type="button"
   >
     <div
@@ -95,6 +121,19 @@ exports[`Button should render as transparent button 1`] = `
 <div>
   <button
     class="OriginalButton__StyledButton-sc-o0fs2j-0 btHSFV"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button should render as warning button 1`] = `
+<div>
+  <button
+    class="OriginalButton__StyledButton-sc-o0fs2j-0 fLpUdT"
     type="button"
   >
     <div

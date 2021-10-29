@@ -10,8 +10,6 @@ interface LabelProperties {
 	noBorder?: boolean;
 }
 
-export const Label = styled.div<LabelProperties>(getStyles);
-
-Label.defaultProps = {
-	color: "primary",
-};
+export const Label = styled.div.attrs<LabelProperties>(({ color }) => ({ color: color ?? "primary" }))<LabelProperties>(
+	getStyles,
+);

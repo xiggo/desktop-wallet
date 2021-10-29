@@ -9,7 +9,7 @@ interface AlertProperties {
 	children: React.ReactNode;
 	className?: string;
 	title?: string;
-	variant: AlertVariant;
+	variant?: AlertVariant;
 }
 
 const AlertIcon = ({ variant }: { variant: string }) => {
@@ -36,7 +36,7 @@ const getColorVariant = (variant: string) => {
 	return colorVariant[variant];
 };
 
-export const Alert = ({ variant, title, children, className }: AlertProperties) => (
+export const Alert = ({ variant = "warning", title, children, className }: AlertProperties) => (
 	<div
 		className={cls(
 			`flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-${
@@ -64,7 +64,3 @@ export const Alert = ({ variant, title, children, className }: AlertProperties) 
 		</div>
 	</div>
 );
-
-Alert.defaultProps = {
-	variant: "warning",
-};

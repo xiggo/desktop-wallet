@@ -25,13 +25,17 @@ interface SelectNetworkProperties {
 
 export const itemToString = (item: Networks.Network | null) => item?.displayName() || "";
 
+const defaultProps = {
+	networks: [],
+};
+
 export const SelectNetwork = ({
 	autoFocus,
-	disabled,
+	disabled = false,
 	hideOptions,
 	id,
 	name,
-	networks,
+	networks = defaultProps.networks,
 	onInputChange,
 	onSelect,
 	placeholder,
@@ -226,9 +230,4 @@ export const SelectNetwork = ({
 			</div>
 		</div>
 	);
-};
-
-SelectNetwork.defaultProps = {
-	disabled: false,
-	networks: [],
 };

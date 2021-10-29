@@ -23,19 +23,17 @@ const StepWrapper = styled.ul`
 	${tw`flex space-x-3`}
 `;
 
-export const StepIndicator: React.FC<StepIndicatorProperties> = (properties: StepIndicatorProperties) => {
-	const steps = [...Array.from({ length: properties.size })];
+export const StepIndicator: React.FC<StepIndicatorProperties> = ({
+	activeIndex = 1,
+	size = 2,
+}: StepIndicatorProperties) => {
+	const steps = [...Array.from({ length: size })];
 
 	return (
 		<StepWrapper>
 			{steps.map((_, index) => (
-				<StepStyled key={index} isActive={properties.activeIndex! >= index + 1} />
+				<StepStyled key={index} isActive={activeIndex >= index + 1} />
 			))}
 		</StepWrapper>
 	);
-};
-
-StepIndicator.defaultProps = {
-	activeIndex: 1,
-	size: 2,
 };

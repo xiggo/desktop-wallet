@@ -12,7 +12,11 @@ interface PercentageBarProperties {
 	title?: string;
 }
 
-export const PercentageBar = ({ data, title }: PercentageBarProperties) => {
+const defaultProps = {
+	data: [],
+};
+
+export const PercentageBar = ({ data = defaultProps.data, title }: PercentageBarProperties) => {
 	const { t } = useTranslation();
 
 	const percentageData = useMemo(() => {
@@ -78,8 +82,4 @@ export const PercentageBar = ({ data, title }: PercentageBarProperties) => {
 			</div>
 		</div>
 	);
-};
-
-PercentageBar.defaultProps = {
-	data: [],
 };
