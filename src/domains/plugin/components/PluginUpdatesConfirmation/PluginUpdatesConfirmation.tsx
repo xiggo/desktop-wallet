@@ -69,11 +69,21 @@ export const PluginUpdatesConfirmation = ({ isOpen, plugins, onClose, onContinue
 		);
 	};
 
+	const hasIncompatibleUpdates = plugins.some((plugin) => !plugin.updateStatus.isCompatible);
+
+	const getDescription = () => {
+		if (hasIncompatibleUpdates) {
+			return t("PLUGINS.MODAL_UPDATES_CONFIRMATION.DESCRIPTION_INCOMPATIBLE");
+		}
+
+		return t("PLUGINS.MODAL_UPDATES_CONFIRMATION.DESCRIPTION_COMPATIBLE");
+	};
+
 	return (
 		<Modal
 			title={t("PLUGINS.MODAL_UPDATES_CONFIRMATION.TITLE")}
 			image={<Image name="GenericWarning" className="m-auto my-8 w-3/5" />}
-			description={t("PLUGINS.MODAL_UPDATES_CONFIRMATION.DESCRIPTION")}
+			description={getDescription()}
 			isOpen={isOpen}
 			onClose={onClose}
 		>

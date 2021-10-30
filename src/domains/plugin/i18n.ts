@@ -53,8 +53,9 @@ export const translations: { [key: string]: any } = {
 	},
 
 	MODAL_UPDATES_CONFIRMATION: {
-		DESCRIPTION:
-			"Some of the plugins cannot be updated as they require a newer version of the Payvo Wallet. Pressing Continue will update plugins that can be updated.",
+		DESCRIPTION_COMPATIBLE: "The following plugins will be updated.",
+		DESCRIPTION_INCOMPATIBLE:
+			"Some of the plugins cannot be updated as they require a newer version of the Payvo Wallet. Pressing Continue will install all compatible updates.",
 		TITLE: "Plugin Updates",
 	},
 
