@@ -1,4 +1,4 @@
-import { IProfile } from "@payvo/profiles/distribution/contracts";
+import { Contracts } from "@payvo/profiles";
 import { ipcRenderer } from "electron";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -44,7 +44,7 @@ export const useUpdater = () => {
 		ipcRenderer.invoke(IpcEvent.CANCEL);
 	};
 
-	const quitInstall = (profile?: IProfile) => {
+	const quitInstall = (profile?: Contracts.IProfile) => {
 		setDownloadStatus("idle");
 		ipcRenderer.invoke(IpcEvent.QUIT_INSTALL);
 
@@ -59,7 +59,7 @@ export const useUpdater = () => {
 	};
 
 	const notifyForUpdates: any = useCallback(
-		async (profile: IProfile) => {
+		async (profile: Contracts.IProfile) => {
 			try {
 				const { cancellationToken, updateInfo } = await ipcRenderer.invoke(IpcEvent.CHECK_UPDATES);
 				const hasNewerVersion = !!cancellationToken;

@@ -1,6 +1,6 @@
 import MockDate from "mockdate";
-import { env } from "utils/testing-library";
 import { bootEnvWithProfileFixtures } from "utils/test-helpers";
+import { env } from "utils/testing-library";
 
 jest.mock("@ledgerhq/hw-transport-node-hid-singleton", () => {
 	const { createTransportReplayer } = require("@ledgerhq/hw-transport-mocker");
@@ -65,10 +65,11 @@ jest.mock("fs", () => {
 	};
 });
 
-beforeAll(async () => {
+beforeAll(async (done) => {
 	await bootEnvWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
+	done();
 });
 
 beforeEach(() => {

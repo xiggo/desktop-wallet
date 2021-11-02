@@ -236,7 +236,7 @@ export const ImportWallet = () => {
 	}, [activeTab, confirmEncryptionPassword, encryptionPassword, isDirty, isEncrypting, isImporting, isValid]);
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<Section className="flex-1">
 				<Form
 					className="mx-auto max-w-xl"

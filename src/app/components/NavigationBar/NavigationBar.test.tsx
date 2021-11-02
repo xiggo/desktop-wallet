@@ -1,35 +1,49 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
+import { fireEvent, waitFor } from "@testing-library/react";
+import * as navigation from "app/constants/navigation";
+import * as environmentHooks from "app/hooks/env";
 import * as useScrollHook from "app/hooks/use-scroll";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { act } from "react-dom/test-utils";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, renderWithRouter, waitFor } from "testing-library";
+import { env as mockedTestEnvironment, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
 
 import { NavigationBar } from "./NavigationBar";
-
-let profile: Contracts.IProfile;
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();
 
-describe("NavigationBar", () => {
-	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
+jest.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() =>
+	mockedTestEnvironment.profiles().findById(getDefaultProfileId()),
+);
 
+jest.spyOn(navigation, "getNavigationMenu").mockReturnValue([
+	{
+		mountPath: (profileId: string) => `/profiles/${profileId}/dashboard`,
+		title: "Portfolio",
+	},
+	{
+		mountPath: () => "/test",
+		title: "test",
+	},
+]);
+
+describe("NavigationBar", () => {
+	beforeAll(async () => {
 		history.push(dashboardURL);
 	});
 
 	it("should render", () => {
-		const { container, asFragment } = renderWithRouter(<NavigationBar profile={profile} />);
+		const { container, asFragment } = renderWithRouter(<NavigationBar />);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each([true, false])("should render as logo-only variant", (noBorder) => {
-		const { container, asFragment } = renderWithRouter(<NavigationBar variant="logo-only" noBorder={noBorder} />);
+	it("should render as logo-only variant", () => {
+		const { container, asFragment } = renderWithRouter(<NavigationBar variant="logo-only" />);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
@@ -49,7 +63,7 @@ describe("NavigationBar", () => {
 	it("should render with title", () => {
 		const title = "Desktop Wallet";
 
-		const { container, asFragment } = renderWithRouter(<NavigationBar title={title} profile={profile} />);
+		const { container, asFragment } = renderWithRouter(<NavigationBar title={title} />);
 
 		expect(container).toBeTruthy();
 		expect(container).toHaveTextContent(title);
@@ -57,17 +71,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should render with custom menu", () => {
-		const menu = [
-			{
-				mountPath: (profileId: string) => `/profiles/${profileId}/dashboard`,
-				title: "Portfolio",
-			},
-			{
-				mountPath: () => "/test",
-				title: "test",
-			},
-		];
-		const { container, asFragment } = renderWithRouter(<NavigationBar profile={profile} menu={menu} />);
+		const { container, asFragment } = renderWithRouter(<NavigationBar />);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
@@ -80,33 +84,20 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle menu click", () => {
-		const menu = [
-			{
-				mountPath: (profileId: string) => `/profiles/${profileId}/dashboard`,
-				title: "Portfolio",
-			},
-			{
-				mountPath: () => "/test",
-				title: "Test",
-			},
-		];
+		const { getByText, history } = renderWithRouter(<NavigationBar />);
 
-		const { getByText, history } = renderWithRouter(<NavigationBar profile={profile} menu={menu} />);
-
-		fireEvent.click(getByText("Test"));
+		fireEvent.click(getByText("test"));
 
 		expect(history.location.pathname).toEqual("/test");
 	});
 
 	it("should open user actions dropdown on click", () => {
-		const options = [
-			{ label: "Option 1", mountPath: () => "/test", value: "/test" },
-			{ label: "Option 2", mountPath: () => "/test2", value: "/test2" },
-		];
+		const getUserInfoActionsMock = jest.spyOn(navigation, "getUserInfoActions").mockReturnValue([
+			{ label: "Option 1", mountPath: () => "/test", title: "test", value: "/test" },
+			{ label: "Option 2", mountPath: () => "/test2", title: "test2", value: "/test2" },
+		]);
 
-		const { getByTestId, getByText, history } = renderWithRouter(
-			<NavigationBar profile={profile} userActions={options} />,
-		);
+		const { getByTestId, getByText, history } = renderWithRouter(<NavigationBar />);
 		const toggle = getByTestId("navbar__useractions");
 
 		act(() => {
@@ -118,10 +109,13 @@ describe("NavigationBar", () => {
 		fireEvent.click(getByText("Option 1"));
 
 		expect(history.location.pathname).toMatch("/test");
+
+		getUserInfoActionsMock.mockRestore();
 	});
 
 	it("should handle click to send button", () => {
-		const { getByTestId, history } = renderWithRouter(<NavigationBar profile={profile} />);
+		const mockProfile = environmentHooks.useActiveProfile();
+		const { getByTestId, history } = renderWithRouter(<NavigationBar />);
 
 		const sendButton = getByTestId("navbar__buttons--send");
 
@@ -129,13 +123,13 @@ describe("NavigationBar", () => {
 			fireEvent.click(sendButton);
 		});
 
-		expect(history.location.pathname).toMatch(`/profiles/${profile.id()}/send-transfer`);
+		expect(history.location.pathname).toMatch(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
 
 	it("should handle receive funds", async () => {
 		const { findByTestId, getAllByText, getByTestId, queryAllByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar profile={profile} />
+				<NavigationBar />
 			</Route>,
 			{
 				history,
@@ -167,7 +161,7 @@ describe("NavigationBar", () => {
 	it("should close the search wallet modal", async () => {
 		const { findByTestId, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar profile={profile} />
+				<NavigationBar />
 			</Route>,
 			{
 				history,
@@ -191,24 +185,14 @@ describe("NavigationBar", () => {
 	});
 
 	it("should not render if no active profile", () => {
-		const menu = [
-			{
-				mountPath: (profileId: string) => `/profiles/${profileId}/dashboard`,
-				title: "Portfolio",
-			},
-			{
-				mountPath: () => "/test",
-				title: "test",
-			},
-		];
-
-		const { asFragment } = renderWithRouter(<NavigationBar profile={profile} menu={menu} />);
+		const { asFragment } = renderWithRouter(<NavigationBar />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should disable send transfer button when no wallets", () => {
-		const useNetworksMock = jest.spyOn(profile.settings(), "get").mockImplementation((key: string) => {
+	it("should disable send transfer button when no Live wallets in test network", () => {
+		const mockProfile = environmentHooks.useActiveProfile();
+		const useNetworksMock = jest.spyOn(mockProfile.settings(), "get").mockImplementation((key: string) => {
 			if (key === Contracts.ProfileSetting.UseTestNetworks) {
 				return false;
 			}
@@ -219,7 +203,7 @@ describe("NavigationBar", () => {
 			return "";
 		});
 
-		const { container, getByTestId } = renderWithRouter(<NavigationBar profile={profile} />);
+		const { container, getByTestId } = renderWithRouter(<NavigationBar />);
 
 		expect(container).toBeTruthy();
 		expect(getByTestId("navbar__buttons--send")).toHaveAttribute("disabled");

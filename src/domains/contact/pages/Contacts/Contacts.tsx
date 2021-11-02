@@ -167,7 +167,7 @@ export const Contacts = () => {
 
 	return (
 		<>
-			<Page profile={activeProfile}>
+			<Page>
 				<Section border>
 					<Header
 						title={t("CONTACTS.CONTACTS_PAGE.TITLE")}

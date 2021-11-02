@@ -397,7 +397,7 @@ export const PluginManager = () => {
 
 	return (
 		<>
-			<Page profile={activeProfile} isBackDisabled={true}>
+			<Page isBackDisabled={true}>
 				<Section>
 					<Header
 						title={t("PLUGINS.PAGE_PLUGIN_MANAGER.TITLE")}

@@ -122,6 +122,7 @@ module.exports = {
 		"promise/param-names": "warn",
 		"react-hooks/rules-of-hooks": "error",
 		"react/self-closing-comp": "error",
+		"react/prop-types": "off",
 		"simple-import-sort/exports": "error",
 		"simple-import-sort/imports": "error",
 		"sonarjs/cognitive-complexity": "warn", // @TODO: set to error and resolve issues

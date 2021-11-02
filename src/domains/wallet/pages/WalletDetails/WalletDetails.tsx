@@ -62,7 +62,7 @@ export const WalletDetails = () => {
 
 	return (
 		<>
-			<Page profile={activeProfile}>
+			<Page>
 				<Section
 					className={cn({
 						"border-b border-transparent dark:border-theme-secondary-800": !networkAllowsVoting,

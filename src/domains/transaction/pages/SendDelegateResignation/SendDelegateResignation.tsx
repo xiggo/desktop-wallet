@@ -127,7 +127,7 @@ export const SendDelegateResignation = () => {
 	const hideStepNavigation = activeTab === Step.ErrorStep;
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleSubmit}>
 					<Tabs activeId={activeTab}>

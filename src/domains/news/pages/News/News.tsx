@@ -108,7 +108,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 	}, []);
 
 	return (
-		<Page profile={activeProfile} isBackDisabled={true}>
+		<Page isBackDisabled={true}>
 			<Section backgroundClassName="bg-theme-background">
 				<Header
 					title={t("NEWS.PAGE_NEWS.TITLE")}

@@ -21,14 +21,18 @@ describe("Page", () => {
 	it("should render", () => {
 		const sidebar = true;
 
-		const { container, asFragment } = renderWithRouter(<Page title="Test" sidebar={sidebar} />);
+		const { container, asFragment } = renderWithRouter(
+			<Page title="Test" sidebar={sidebar}>
+				{}
+			</Page>,
+		);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without sidebar", () => {
-		const { container, asFragment } = renderWithRouter(<Page title="Test" />);
+		const { container, asFragment } = renderWithRouter(<Page title="Test">{}</Page>);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
@@ -42,7 +46,7 @@ describe("Page", () => {
 
 			const { getByTestId, findByText } = renderWithRouter(
 				<Route path="/profiles/:profileId/dashboard">
-					<Page profile={profile} />
+					<Page>{}</Page>
 				</Route>,
 				{
 					history,
@@ -78,7 +82,7 @@ describe("Page", () => {
 	it("should handle 'Sign Out' click on user actions dropdown", async () => {
 		const { getByTestId, findByText } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
-				<Page profile={profile} />
+				<Page>{}</Page>
 			</Route>,
 			{
 				history,

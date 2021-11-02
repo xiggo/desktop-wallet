@@ -6,7 +6,16 @@ export const useActiveProfile = () => {
 	const context = useEnvironmentContext();
 	const { profileId } = useParams<{ profileId: string }>();
 
-	return useMemo(() => context.env.profiles().findById(profileId), [context, profileId]);
+	return useMemo(() => {
+		if (!profileId) {
+			return undefined;
+		}
+		try {
+			return context.env.profiles().findById(profileId);
+		} catch {
+			return undefined;
+		}
+	}, [context, profileId])!;
 };
 
 export const useActiveWallet = () => {

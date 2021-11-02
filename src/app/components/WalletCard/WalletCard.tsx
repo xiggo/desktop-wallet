@@ -55,7 +55,7 @@ export const WalletCard = ({
 		[activeProfile, defaultAlias, getWalletAlias, wallet], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
-	const aliasRef = useRef(null);
+	const aliasReference = useRef(null);
 
 	const canDisplayBalance = wallet ? isFullySynced(wallet) : false;
 
@@ -125,8 +125,8 @@ export const WalletCard = ({
 							<Avatar size="lg" address={wallet.address()} />
 						</div>
 
-						<Tooltip content={alias} disabled={!isElementTruncated(aliasRef?.current)}>
-							<span ref={aliasRef} className="font-semibold truncate text-theme-secondary-text">
+						<Tooltip content={alias} disabled={!isElementTruncated(aliasReference?.current)}>
+							<span ref={aliasReference} className="font-semibold truncate text-theme-secondary-text">
 								{alias}
 							</span>
 						</Tooltip>

@@ -43,6 +43,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -95,6 +96,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -202,6 +204,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -972,6 +975,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -1024,6 +1028,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -1131,6 +1136,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -2044,6 +2050,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -2096,6 +2103,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -2203,6 +2211,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -3037,6 +3046,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -3089,6 +3099,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -3196,6 +3207,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -6071,6 +6083,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -6123,6 +6136,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -6230,6 +6244,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -8449,6 +8464,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -8501,6 +8517,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -8608,6 +8625,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -9440,6 +9458,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -9492,6 +9511,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -9599,6 +9619,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -9911,6 +9932,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -9963,6 +9985,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -10070,6 +10093,7 @@ exports[`SendTransfer should send a single transfer 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -10576,6 +10600,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -10628,6 +10653,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -10735,6 +10761,7 @@ exports[`SendTransfer should send a single transfer 2`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -11241,6 +11268,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -11293,6 +11321,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -11400,6 +11429,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -11906,6 +11936,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -11958,6 +11989,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -12065,6 +12097,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -12909,6 +12942,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -12961,6 +12995,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -13068,6 +13103,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -13574,6 +13610,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -13626,6 +13663,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -13733,6 +13771,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -14239,6 +14278,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -14291,6 +14331,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -14398,6 +14439,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -14904,6 +14946,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -14956,6 +14999,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -15063,6 +15107,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"

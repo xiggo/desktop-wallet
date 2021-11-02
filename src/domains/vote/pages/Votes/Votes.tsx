@@ -122,7 +122,7 @@ export const Votes = () => {
 	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<Section border>
 				<VotesHeader
 					profile={activeProfile}

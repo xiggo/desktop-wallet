@@ -44,6 +44,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -97,6 +98,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -204,6 +206,7 @@ exports[`PluginManager should cancel install plugin 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1048,6 +1051,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -1101,6 +1105,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -1208,6 +1213,7 @@ exports[`PluginManager should disable plugin on my-plugins 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1962,6 +1968,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -2015,6 +2022,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -2122,6 +2130,7 @@ exports[`PluginManager should enable plugin on my-plugins 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -2876,6 +2885,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -2929,6 +2939,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -3036,6 +3047,7 @@ exports[`PluginManager should render when useExpandedTables = false 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -4058,6 +4070,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -4111,6 +4124,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -4218,6 +4232,7 @@ exports[`PluginManager should render when useExpandedTables = true 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -5240,6 +5255,7 @@ exports[`PluginManager should search for plugin 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -5293,6 +5309,7 @@ exports[`PluginManager should search for plugin 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -5400,6 +5417,7 @@ exports[`PluginManager should search for plugin 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -5857,6 +5875,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -5910,6 +5929,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -6017,6 +6037,7 @@ exports[`PluginManager should switch to category by clicking on view all link 1`
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -6885,6 +6906,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -6938,6 +6960,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -7045,6 +7068,7 @@ exports[`PluginManager should toggle between list and grid on a category tab 1`]
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -7644,6 +7668,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -7697,6 +7722,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -7804,6 +7830,7 @@ exports[`PluginManager should toggle between list and grid on all 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -8403,6 +8430,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -8456,6 +8484,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -8563,6 +8592,7 @@ exports[`PluginManager should toggle between list and grid on latest 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -9585,6 +9615,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -9638,6 +9669,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -9745,6 +9777,7 @@ exports[`PluginManager should update plugin on my-plugins 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"

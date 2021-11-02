@@ -43,6 +43,7 @@ exports[`Contacts should render with contacts 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -95,6 +96,7 @@ exports[`Contacts should render with contacts 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -202,6 +204,7 @@ exports[`Contacts should render with contacts 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1147,6 +1150,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -1199,6 +1203,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -1308,6 +1313,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1789,6 +1795,7 @@ exports[`Contacts should render without contacts 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -1841,6 +1848,7 @@ exports[`Contacts should render without contacts 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -1948,6 +1956,7 @@ exports[`Contacts should render without contacts 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"

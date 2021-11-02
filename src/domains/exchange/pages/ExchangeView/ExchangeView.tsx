@@ -1,7 +1,7 @@
 import { Image } from "app/components/Image";
 import { Page } from "app/components/Layout";
 import { Spinner } from "app/components/Spinner";
-import { useActiveProfile, useQueryParams } from "app/hooks";
+import { useQueryParams } from "app/hooks";
 import cn from "classnames";
 import { ExchangeForm } from "domains/exchange/components/ExchangeForm";
 import { useExchangeContext } from "domains/exchange/contexts/Exchange";
@@ -10,7 +10,6 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { shouldUseDarkColors } from "utils/electron-utils";
 
 export const ExchangeView = () => {
-	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParams();
 
 	const [logoUrl, setLogoUrl] = useState<string>();
@@ -65,7 +64,7 @@ export const ExchangeView = () => {
 	);
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<div className="flex flex-col items-center justify-center relative flex-1 w-full h-full py-20">
 				<div className="absolute inset-0 flex items-center p-32" style={{ backgroundColor: "#3f4455" }}>
 					<Image name="WorldMap" className="w-full h-full" />

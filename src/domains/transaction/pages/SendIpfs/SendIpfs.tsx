@@ -183,7 +183,7 @@ export const SendIpfs = () => {
 	const isNextDisabled = isDirty ? !isValid : true;
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={submitForm}>
 					<Tabs activeId={activeTab}>

@@ -17,7 +17,7 @@ describe("useActiveProfile", () => {
 	const TestProfile: React.FC = () => {
 		const profile = useActiveProfile();
 
-		return <h1>{profile.name()}</h1>;
+		return <h1>{profile?.name() ?? "No profile found"}</h1>;
 	};
 
 	const TestWallet: React.FC = () => {
@@ -37,6 +37,19 @@ describe("useActiveProfile", () => {
 		);
 
 		expect(getByText(profile.name())).toBeTruthy();
+	});
+
+	it("should return undefined when findById throws error", () => {
+		const { getByText } = renderWithRouter(
+			<Route path="/profiles/:profileId">
+				<TestProfile />
+			</Route>,
+			{
+				routes: [`/profiles/any_undefined_profile`],
+			},
+		);
+
+		expect(getByText("No profile found")).toBeTruthy();
 	});
 
 	it("should return wallet", () => {

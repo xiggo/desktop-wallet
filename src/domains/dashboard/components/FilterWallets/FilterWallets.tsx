@@ -1,4 +1,4 @@
-import { Dropdown } from "app/components/Dropdown";
+import { Dropdown } from "app/components/Dropdown/Dropdown";
 import { FilterNetworks } from "app/components/FilterNetwork";
 import { Icon } from "app/components/Icon";
 import React from "react";
@@ -49,7 +49,7 @@ export const FilterWallets = ({ networks, walletsDisplayType, useTestNetworks, o
 						toggleIcon="ChevronDownSmall"
 						toggleSize="sm"
 						options={walletDisplayOptions}
-						onSelect={({ value }: { value: string }) => onChange?.("walletsDisplayType", value)}
+						onSelect={({ value }) => onChange?.("walletsDisplayType", value)}
 						toggleContent={(isOpen: boolean) => (
 							<div
 								data-testid="filter-wallets__wallets"

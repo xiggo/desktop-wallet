@@ -1,10 +1,11 @@
 import tw from "twin.macro";
+import { Position } from "types";
 
-import { DropdownVariantType } from "./Dropdown";
+import { DropdownVariantType } from "./Dropdown.contracts";
 
 export const defaultClasses = "mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl";
 
-const getVariant = (variant: DropdownVariantType): any => {
+const getVariant = (variant: DropdownVariantType) => {
 	if (variant === "options" || variant === "votesFilter") {
 		return tw`dark:bg-theme-secondary-800`;
 	}
@@ -12,7 +13,7 @@ const getVariant = (variant: DropdownVariantType): any => {
 	return tw`border-2 border-theme-primary-100 dark:border-theme-secondary-800`;
 };
 
-const getPosition = (position: string): any => {
+const getPosition = (position?: Position) => {
 	switch (position) {
 		case "bottom":
 			return tw`bottom-0`;
@@ -32,4 +33,7 @@ const getPosition = (position: string): any => {
 	}
 };
 
-export const getStyles = ({ position, variant }: any) => [getVariant(variant), getPosition(position)];
+export const getStyles = ({ position, variant }: { position?: Position; variant: DropdownVariantType }) => [
+	getVariant(variant),
+	getPosition(position),
+];

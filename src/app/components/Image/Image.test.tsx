@@ -1,32 +1,32 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { renderWithoutRouter } from "utils/testing-library";
 
 import { Image } from "./Image";
 
 describe("Image", () => {
 	it("should render", () => {
-		const { container, asFragment } = render(<Image name="WelcomeBanner" />);
+		const { container, asFragment } = renderWithoutRouter(<Image name="WelcomeBanner" />);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with domain", () => {
-		const { container, asFragment } = render(<Image name="GenericError" domain="error" />);
+		const { container, asFragment } = renderWithoutRouter(<Image name="GenericError" domain="error" />);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render nothing if image can't be found", () => {
-		const { container, asFragment } = render(<Image name="NotExistingImage" />);
+		const { container, asFragment } = renderWithoutRouter(<Image name="NotExistingImage" />);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with string", () => {
-		const { container, asFragment } = render(<Image name="WelcomeModalStep1" domain="profile" />);
+		const { container, asFragment } = renderWithoutRouter(<Image name="WelcomeModalStep1" domain="profile" />);
 
 		expect(container).toBeTruthy();
 		expect(asFragment()).toMatchSnapshot();

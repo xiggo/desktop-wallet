@@ -21,7 +21,6 @@ export const SettingsWrapper = ({
 
 	return (
 		<Page
-			profile={profile}
 			sidebar={
 				<SideBar
 					items={menuItems}

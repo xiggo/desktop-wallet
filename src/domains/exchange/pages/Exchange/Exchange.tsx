@@ -148,7 +148,7 @@ export const Exchange = () => {
 
 	return (
 		<>
-			<Page profile={activeProfile} isBackDisabled={true} data-testid="Exchange">
+			<Page isBackDisabled={true} data-testid="Exchange">
 				<Section>
 					<Header
 						title={t("EXCHANGE.PAGE_EXCHANGES.TITLE")}

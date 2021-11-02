@@ -56,7 +56,7 @@ export function renderWithForm(
 		shouldUnregister?: boolean;
 	},
 ) {
-	const renderFn = options?.withProviders ? customRender : render;
+	const renderFunction = options?.withProviders ?? true ? renderWithRouter : render;
 	const defaultValues = options?.defaultValues ?? {};
 
 	let form: UseFormMethods | undefined;
@@ -73,7 +73,7 @@ export function renderWithForm(
 		return <FormProvider {...form}>{component}</FormProvider>;
 	};
 
-	const renderResult: RenderResult = renderFn(<Component />);
+	const renderResult: RenderResult = renderFunction(<Component />);
 
 	return { ...renderResult, form: () => form };
 }
@@ -121,7 +121,7 @@ const renderWithRouter = (
 
 export * from "@testing-library/react";
 
-export { customRender as render, renderWithRouter };
+export { renderWithRouter as render, customRender as renderWithoutRouter, renderWithRouter };
 
 export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];

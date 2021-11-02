@@ -238,7 +238,7 @@ export const SendRegistration = () => {
 	const isNextDisabled = isDirty ? !isValid || !!isLoading : true;
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<Section className="flex-1">
 				<Form
 					data-testid="Registration__form"

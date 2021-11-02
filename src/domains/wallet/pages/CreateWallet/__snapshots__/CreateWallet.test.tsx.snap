@@ -43,6 +43,7 @@ exports[`CreateWallet should create a wallet 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -95,6 +96,7 @@ exports[`CreateWallet should create a wallet 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -204,6 +206,7 @@ exports[`CreateWallet should create a wallet 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -669,6 +672,7 @@ exports[`CreateWallet should create a wallet 2`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -721,6 +725,7 @@ exports[`CreateWallet should create a wallet 2`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -828,6 +833,7 @@ exports[`CreateWallet should create a wallet 2`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1136,6 +1142,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -1188,6 +1195,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -1297,6 +1305,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1762,6 +1771,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -1814,6 +1824,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -1921,6 +1932,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -2231,6 +2243,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -2283,6 +2296,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -2392,6 +2406,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -2859,6 +2874,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -2911,6 +2927,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -3018,6 +3035,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -3483,6 +3501,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -3535,6 +3554,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -3644,6 +3664,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"

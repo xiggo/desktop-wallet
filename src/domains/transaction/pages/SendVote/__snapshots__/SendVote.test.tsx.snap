@@ -49,6 +49,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -101,6 +102,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -208,6 +210,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -697,6 +700,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -749,6 +753,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -856,6 +861,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1345,6 +1351,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -1397,6 +1404,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -1504,6 +1512,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1993,6 +2002,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -2045,6 +2055,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -2152,6 +2163,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -2426,6 +2438,7 @@ exports[`SendVote should show error step and go back 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -2478,6 +2491,7 @@ exports[`SendVote should show error step and go back 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -2585,6 +2599,7 @@ exports[`SendVote should show error step and go back 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"

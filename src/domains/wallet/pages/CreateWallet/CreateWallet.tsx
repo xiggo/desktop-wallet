@@ -87,7 +87,7 @@ export const CreateWallet = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = async (params: { encryptionPassword?: string } = {}) => {
+	const handleNext = async (parameters: { encryptionPassword?: string } = {}) => {
 		const newIndex = activeTab + 1;
 
 		if (newIndex === Step.WalletOverviewStep) {
@@ -115,7 +115,7 @@ export const CreateWallet = () => {
 			assertString(mnemonic);
 			assertWallet(wallet);
 
-			if (params.encryptionPassword) {
+			if (parameters.encryptionPassword) {
 				setIsGeneratingWallet(true);
 
 				try {
@@ -123,7 +123,7 @@ export const CreateWallet = () => {
 						coin: network.coin(),
 						mnemonic,
 						network: network.id(),
-						password: params.encryptionPassword,
+						password: parameters.encryptionPassword,
 					});
 				} catch {
 					setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
@@ -174,7 +174,7 @@ export const CreateWallet = () => {
 	};
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleFinish}>
 					<Tabs activeId={activeTab}>

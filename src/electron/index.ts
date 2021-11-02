@@ -48,6 +48,7 @@ ipcMain.on("disable-iframe-protection", function (_event, urls) {
 	windows.main.webContents.session.webRequest.onHeadersReceived(filter, (details, done) => {
 		const headers = details.responseHeaders;
 
+		// eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
 		const xFrameOrigin = Object.keys(headers).find((header) => header.toString().match(/^x-frame-options$/i));
 		if (xFrameOrigin) {
 			delete headers[xFrameOrigin];

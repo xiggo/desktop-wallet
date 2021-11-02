@@ -378,7 +378,7 @@ export const SendTransfer = () => {
 	}, [activeTab, getValues, isDirty, isValid]);
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submitForm()}>
 					<Tabs activeId={activeTab}>

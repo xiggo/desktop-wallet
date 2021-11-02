@@ -83,8 +83,7 @@
 		"resetModules": true,
 		"setupFilesAfterEnv": [
 			"<rootDir>/jest.setup.js"
-		],
-		"testRunner": "jest-circus/runner"
+		]
 	},
 	"resolutions": {
 		"@payvo/cryptography": "^2.0.0",

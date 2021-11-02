@@ -15,6 +15,7 @@ export const Image = ({ name, domain = "common", ...properties }: Properties) =>
 	const { getCurrentAccentColor } = useAccentColor();
 	const currentAccentColor = getCurrentAccentColor();
 
+	// TODO: remove try/catch usage
 	let profile: Contracts.IProfile | undefined;
 	try {
 		// eslint-disable-next-line react-hooks/rules-of-hooks

@@ -43,6 +43,7 @@ exports[`General Settings should disable submit button when profile is not resto
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -95,6 +96,7 @@ exports[`General Settings should disable submit button when profile is not resto
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -202,6 +204,7 @@ exports[`General Settings should disable submit button when profile is not resto
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -1481,6 +1484,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -1533,6 +1537,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -1640,6 +1645,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -2936,6 +2942,7 @@ exports[`General Settings should render 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -2988,6 +2995,7 @@ exports[`General Settings should render 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -3095,6 +3103,7 @@ exports[`General Settings should render 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -4373,6 +4382,7 @@ exports[`General Settings should show identicon when removing image if name is s
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -4425,6 +4435,7 @@ exports[`General Settings should show identicon when removing image if name is s
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -4532,6 +4543,7 @@ exports[`General Settings should show identicon when removing image if name is s
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -5810,6 +5822,7 @@ exports[`General Settings should update profile 1`] = `
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -5862,6 +5875,7 @@ exports[`General Settings should update profile 1`] = `
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -5969,6 +5983,7 @@ exports[`General Settings should update profile 1`] = `
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -6014,7 +6029,7 @@ exports[`General Settings should update profile 1`] = `
                       <span
                         class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
                       >
-                        TE
+                        JO
                       </span>
                     </div>
                   </div>
@@ -7248,6 +7263,7 @@ exports[`General Settings should update the avatar when removing focus from name
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -7300,6 +7316,7 @@ exports[`General Settings should update the avatar when removing focus from name
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -7407,6 +7424,7 @@ exports[`General Settings should update the avatar when removing focus from name
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"
@@ -8685,6 +8703,7 @@ exports[`General Settings should update the avatar when removing focus from name
           </div>
           <ul
             class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
           >
             <li
               class="flex"
@@ -8737,6 +8756,7 @@ exports[`General Settings should update the avatar when removing focus from name
           </ul>
           <div
             class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
           >
             <div>
               <div
@@ -8844,6 +8864,7 @@ exports[`General Settings should update the avatar when removing focus from name
           </div>
           <div
             class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
           >
             <div
               class="text-right"

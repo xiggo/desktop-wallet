@@ -117,7 +117,7 @@ export const PluginDetails = () => {
 	}, [isInstalled, pluginData]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
-		<Page profile={activeProfile}>
+		<Page>
 			<Section border>
 				<PluginHeader
 					{...pluginData}

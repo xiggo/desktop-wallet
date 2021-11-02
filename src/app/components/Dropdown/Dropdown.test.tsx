@@ -1,9 +1,8 @@
 import { act } from "@testing-library/react-hooks";
+import { Dropdown, DropdownOptionGroup } from "app/components/Dropdown";
 import { clickOutsideHandler } from "app/hooks/click-outside";
 import React from "react";
-import { fireEvent, render } from "testing-library";
-
-import { Dropdown, DropdownOptionGroup } from "./Dropdown";
+import { fireEvent, render, screen } from "testing-library";
 
 const options = [
 	{ label: "Option 1", value: "1" },
@@ -50,7 +49,18 @@ describe("Dropdown", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
+	});
+
+	it("shouldn't open dropdown by disableToggle param on icon click", () => {
+		const { getByTestId } = render(<Dropdown options={options} disableToggle={true} />);
+		const toggle = getByTestId("dropdown__toggle");
+
+		act(() => {
+			fireEvent.click(toggle);
+		});
+
+		expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
 	});
 
 	it("should select option by click", () => {
@@ -365,7 +375,7 @@ describe("Dropdown", () => {
 	});
 });
 
-describe("ClickOutside Hook", () => {
+describe("Dropdown ClickOutside Hook", () => {
 	it("should not call callback if clicked on target element", () => {
 		const element = document;
 		const reference = { current: element };
@@ -403,86 +413,113 @@ describe("ClickOutside Hook", () => {
 			fireEvent.mouseDown(document);
 		});
 	});
+});
 
-	describe("positioning", () => {
-		it("should render content below toggle", () => {
-			const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(50);
-			const getComputedStyleSpy = jest
-				.spyOn(window, "getComputedStyle")
-				.mockReturnValueOnce({ marginTop: "10px" });
+describe("Dropdown positioning", () => {
+	it("should render content below toggle", () => {
+		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(50);
+		const getComputedStyleSpy = jest.spyOn(window, "getComputedStyle").mockReturnValueOnce({ marginTop: "10px" });
 
-			const { getByTestId } = render(
-				<Dropdown>
-					<span>hello</span>
-				</Dropdown>,
-			);
-			const toggle = getByTestId("dropdown__toggle");
+		const { getByTestId } = render(
+			<Dropdown>
+				<span>hello</span>
+			</Dropdown>,
+		);
+		const toggle = getByTestId("dropdown__toggle");
 
-			act(() => {
-				fireEvent.click(toggle);
-			});
-
-			expect(getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 1;");
-
-			documentClientHeightSpy.mockRestore();
-			getComputedStyleSpy.mockRestore();
+		act(() => {
+			fireEvent.click(toggle);
 		});
 
-		it("should render content below toggle and reduce its height", () => {
-			const getBoundingClientRectSpy = jest
-				.spyOn(Element.prototype, "getBoundingClientRect")
-				.mockReturnValue({ height: 90, top: 0 });
-			const toggleHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValueOnce(10);
-			const dropdownHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(100);
-			const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
-			const elementClientHeightSpy = jest.spyOn(Element.prototype, "clientHeight", "get").mockReturnValue(100);
+		expect(getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 1;");
 
-			const { getByTestId } = render(
-				<Dropdown>
-					<span>hello</span>
-				</Dropdown>,
-			);
-			const toggle = getByTestId("dropdown__toggle");
+		documentClientHeightSpy.mockRestore();
+		getComputedStyleSpy.mockRestore();
+	});
 
-			act(() => {
-				fireEvent.click(toggle);
-			});
+	it("shouldn't do resize if no ref found", () => {
+		const reference = { current: null };
+		Object.defineProperty(reference, "current", {
+			get: jest.fn(() => null),
+			set: jest.fn(() => null),
+		});
+		const useReferenceSpy = jest.spyOn(React, "useRef").mockReturnValue(reference);
 
-			expect(getByTestId("dropdown__content")).toHaveAttribute(
-				"style",
-				"opacity: 1; height: 60px; overflow-y: scroll;",
-			);
+		const getBoundingClientRectSpy = jest.spyOn(Element.prototype, "getBoundingClientRect");
+		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
 
-			getBoundingClientRectSpy.mockRestore();
-			toggleHeightSpy.mockRestore();
-			dropdownHeightSpy.mockRestore();
-			documentClientHeightSpy.mockRestore();
-			elementClientHeightSpy.mockRestore();
+		const { getByTestId } = render(
+			<Dropdown>
+				<span>hello</span>
+			</Dropdown>,
+		);
+		const toggle = getByTestId("dropdown__toggle");
+
+		act(() => {
+			fireEvent.click(toggle);
 		});
 
-		it("should render content above toggle and apply a negative margin", () => {
-			const getBoundingClientRectSpy = jest
-				.spyOn(Element.prototype, "getBoundingClientRect")
-				.mockReturnValue({ height: 50, top: 100 });
-			const offsetHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(50);
-			const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(150);
+		expect(getBoundingClientRectSpy).toBeCalledTimes(0);
 
-			const { getByTestId } = render(
-				<Dropdown>
-					<span>hello</span>
-				</Dropdown>,
-			);
-			const toggle = getByTestId("dropdown__toggle");
+		getBoundingClientRectSpy.mockRestore();
+		documentClientHeightSpy.mockRestore();
+		useReferenceSpy.mockRestore();
+	});
 
-			act(() => {
-				fireEvent.click(toggle);
-			});
+	it("should render content below toggle and reduce its height", () => {
+		const getBoundingClientRectSpy = jest
+			.spyOn(Element.prototype, "getBoundingClientRect")
+			.mockReturnValue({ height: 90, top: 0 });
+		const toggleHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValueOnce(10);
+		const dropdownHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(100);
+		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
+		const elementClientHeightSpy = jest.spyOn(Element.prototype, "clientHeight", "get").mockReturnValue(100);
 
-			expect(getByTestId("dropdown__content")).toHaveAttribute("style", "margin-top: -100px; opacity: 1;");
+		const { getByTestId } = render(
+			<Dropdown>
+				<span>hello</span>
+			</Dropdown>,
+		);
+		const toggle = getByTestId("dropdown__toggle");
 
-			getBoundingClientRectSpy.mockRestore();
-			offsetHeightSpy.mockRestore();
-			documentClientHeightSpy.mockRestore();
+		act(() => {
+			fireEvent.click(toggle);
 		});
+
+		expect(getByTestId("dropdown__content")).toHaveAttribute(
+			"style",
+			"opacity: 1; height: 60px; overflow-y: scroll;",
+		);
+
+		getBoundingClientRectSpy.mockRestore();
+		toggleHeightSpy.mockRestore();
+		dropdownHeightSpy.mockRestore();
+		documentClientHeightSpy.mockRestore();
+		elementClientHeightSpy.mockRestore();
+	});
+
+	it("should render content above toggle and apply a negative margin", () => {
+		const getBoundingClientRectSpy = jest
+			.spyOn(Element.prototype, "getBoundingClientRect")
+			.mockReturnValue({ height: 50, top: 100 });
+		const offsetHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(50);
+		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(150);
+
+		const { getByTestId } = render(
+			<Dropdown>
+				<span>hello</span>
+			</Dropdown>,
+		);
+		const toggle = getByTestId("dropdown__toggle");
+
+		act(() => {
+			fireEvent.click(toggle);
+		});
+
+		expect(getByTestId("dropdown__content")).toHaveAttribute("style", "margin-top: -100px; opacity: 1;");
+
+		getBoundingClientRectSpy.mockRestore();
+		offsetHeightSpy.mockRestore();
+		documentClientHeightSpy.mockRestore();
 	});
 });

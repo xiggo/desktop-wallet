@@ -120,7 +120,7 @@ export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 		});
 	}
 
-	const secondaryOptions = {
+	const secondaryOptions: DropdownOptionGroup = {
 		hasDivider: true,
 		key: "secondary",
 		options: [

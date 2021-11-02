@@ -1,6 +1,6 @@
 import { Page } from "app/components/Layout";
 import { TextArea } from "app/components/TextArea";
-import { useActiveProfile, useQueryParams } from "app/hooks";
+import { useQueryParams } from "app/hooks";
 import { PluginImage } from "domains/plugin/components/PluginImage";
 import { LaunchRender } from "plugins";
 import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
@@ -30,7 +30,6 @@ const ErrorFallback = ({ error }: FallbackProps) => {
 export const PluginView = () => {
 	const queryParameters = useQueryParams();
 
-	const profile = useActiveProfile();
 	const { pluginManager } = usePluginManagerContext();
 
 	const pluginId = queryParameters.get("pluginId")!;
@@ -42,7 +41,7 @@ export const PluginView = () => {
 	}
 
 	return (
-		<Page profile={profile}>
+		<Page>
 			<div className="py-4 px-4 sm:px-6 lg:px-10">
 				<div className="flex justify-between items-center">
 					<div className="flex items-center space-x-3">
