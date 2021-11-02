@@ -7,7 +7,7 @@ describe("TruncateMiddleDynamic", () => {
 	it("should render", () => {
 		const { asFragment } = render(<TruncateMiddleDynamic value="Lorem ipsum dolor sit amet" />);
 
-		expect(screen.getByText("Lorem ipsum dolor sit amet")).toBeTruthy();
+		expect(screen.getByText("Lorem ipsum dolor sit amet")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

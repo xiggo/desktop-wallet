@@ -7,14 +7,14 @@ describe("EmptyBlock", () => {
 	it("should render", () => {
 		const { asFragment, container } = render(<EmptyBlock />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with children", () => {
 		const { getByText } = render(<EmptyBlock>I am a children</EmptyBlock>);
 
-		expect(getByText("I am a children")).toBeTruthy();
+		expect(getByText("I am a children")).toBeInTheDocument();
 	});
 
 	it("should render with size", () => {

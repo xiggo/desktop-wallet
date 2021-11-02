@@ -171,7 +171,7 @@ describe("FilterNetworks", () => {
 
 	it("should select all public networks", async () => {
 		const onChange = jest.fn();
-		const { getAllByTestId } = render(
+		const { getAllByTestId, findAllByTestId } = render(
 			<FilterNetworks useTestNetworks={true} options={networkOptions} onChange={onChange} hideViewAll={false} />,
 		);
 
@@ -181,7 +181,7 @@ describe("FilterNetworks", () => {
 			fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 		});
 
-		await waitFor(() => expect(getAllByTestId("FilterNetwork__select-all-checkbox")[0]).toBeTruthy());
+		await findAllByTestId("FilterNetwork__select-all-checkbox");
 
 		act(() => {
 			fireEvent.click(getAllByTestId("FilterNetwork__select-all-checkbox")[0]);

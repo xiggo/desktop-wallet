@@ -8,7 +8,7 @@ describe("Header", () => {
 	it("should render an header", () => {
 		const { container, asFragment, getByTestId } = render(<Header title="Header test" />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("header__title")).toHaveTextContent("Header test");
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -16,7 +16,7 @@ describe("Header", () => {
 	it("should render an header with a subtitle", () => {
 		const { container, asFragment, getByTestId } = render(<Header title="Header test" subtitle="Subtitle test" />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("header__title")).toHaveTextContent("Header test");
 		expect(getByTestId("header__subtitle")).toHaveTextContent("Subtitle test");
 		expect(asFragment()).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe("Header", () => {
 			/>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("header__title")).toHaveTextContent("Header test");
 		expect(getByTestId("header__subtitle")).toHaveTextContent("Subtitle test");
 		expect(getAllByTestId("header__extra")).toHaveLength(2);
@@ -48,7 +48,7 @@ describe("Header", () => {
 			<Header title="Header test" titleSuffix="suffix" subtitle="Subtitle test" />,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

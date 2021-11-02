@@ -143,7 +143,7 @@ describe("Pagination", () => {
 
 		fireEvent.click(getAllByTestId("PaginationSearchButton")[0]);
 
-		expect(getByTestId("PaginationSearch__input")).toBeTruthy();
+		expect(getByTestId("PaginationSearch__input")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -154,7 +154,7 @@ describe("Pagination", () => {
 
 		fireEvent.click(getAllByTestId("PaginationSearchButton")[1]);
 
-		expect(getByTestId("PaginationSearch__input")).toBeTruthy();
+		expect(getByTestId("PaginationSearch__input")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -185,7 +185,7 @@ describe("Pagination", () => {
 
 		fireEvent.click(getByTestId("PaginationSearchButton"));
 
-		expect(getByTestId("PaginationSearch__input")).toBeTruthy();
+		expect(getByTestId("PaginationSearch__input")).toBeInTheDocument();
 
 		fireEvent.click(getByTestId("PaginationSearch__cancel"));
 		await waitFor(() => expect(handleSelectPage).not.toHaveBeenCalled());

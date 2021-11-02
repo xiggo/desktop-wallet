@@ -39,7 +39,7 @@ describe("AddressTable", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await screen.findByTestId("StatusIcon__icon");
 
@@ -57,7 +57,7 @@ describe("AddressTable", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		maxVotesMock.mockRestore();
@@ -77,7 +77,7 @@ describe("AddressTable", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await waitFor(() => expect(() => getByTestId("StatusIcon__icon")).toThrow());
 

@@ -8,10 +8,10 @@ describe("Range", () => {
 		const onChange = jest.fn();
 		const { getByTestId, asFragment } = render(<Range values={[10]} onChange={onChange} />);
 
-		expect(getByTestId("Range")).toBeTruthy();
-		expect(getByTestId("Range__track")).toBeTruthy();
-		expect(getByTestId("Range__track__filled")).toBeTruthy();
-		expect(getByTestId("Range__thumb")).toBeTruthy();
+		expect(getByTestId("Range")).toBeInTheDocument();
+		expect(getByTestId("Range__track")).toBeInTheDocument();
+		expect(getByTestId("Range__track__filled")).toBeInTheDocument();
+		expect(getByTestId("Range__thumb")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -19,10 +19,10 @@ describe("Range", () => {
 		const onChange = jest.fn();
 		const { getByTestId, asFragment } = render(<Range values={[10]} isInvalid onChange={onChange} />);
 
-		expect(getByTestId("Range")).toBeTruthy();
-		expect(getByTestId("Range__track")).toBeTruthy();
-		expect(getByTestId("Range__track__filled")).toBeTruthy();
-		expect(getByTestId("Range__thumb")).toBeTruthy();
+		expect(getByTestId("Range")).toBeInTheDocument();
+		expect(getByTestId("Range__track")).toBeInTheDocument();
+		expect(getByTestId("Range__track__filled")).toBeInTheDocument();
+		expect(getByTestId("Range__thumb")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

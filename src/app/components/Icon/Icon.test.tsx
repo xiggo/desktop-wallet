@@ -7,7 +7,7 @@ describe("Icon", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<Icon name="ARK" />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

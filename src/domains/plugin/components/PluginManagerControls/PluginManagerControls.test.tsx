@@ -8,7 +8,7 @@ describe("PluginManagerControls", () => {
 	it("should render", () => {
 		const { asFragment, getByTestId } = render(<PluginManagerControls />);
 
-		expect(getByTestId("PluginManagerControls")).toBeTruthy();
+		expect(getByTestId("PluginManagerControls")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

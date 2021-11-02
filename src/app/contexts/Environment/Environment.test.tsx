@@ -38,7 +38,7 @@ describe("Environment Context", () => {
 
 		expect(getByText("Provider testing")).toBeInTheDocument();
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

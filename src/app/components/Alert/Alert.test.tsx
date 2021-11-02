@@ -7,14 +7,14 @@ describe("Alert", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<Alert />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each(["info", "success", "warning", "danger", "hint"])("should render as %s alert", (variant) => {
 		const { container, asFragment } = render(<Alert variant={variant} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -28,6 +28,6 @@ describe("Alert", () => {
 		const { getByTestId, getByText } = render(<Alert title="Hello!">I am a children</Alert>);
 
 		expect(getByTestId("Alert__title")).toHaveTextContent("Hello!");
-		expect(getByText("I am a children")).toBeTruthy();
+		expect(getByText("I am a children")).toBeInTheDocument();
 	});
 });

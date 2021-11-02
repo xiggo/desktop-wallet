@@ -595,7 +595,7 @@ describe("Signed Transaction Table", () => {
 			fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
 		});
 
-		expect(getByTestId("modal__inner")).toBeTruthy();
+		expect(getByTestId("modal__inner")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
@@ -636,7 +636,7 @@ describe("Signed Transaction Table", () => {
 			fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
 		});
 
-		expect(getByTestId("modal__inner")).toBeTruthy();
+		expect(getByTestId("modal__inner")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
 		act(() => {

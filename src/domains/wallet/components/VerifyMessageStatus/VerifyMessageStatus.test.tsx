@@ -9,7 +9,7 @@ describe("VerifyMessageStatus", () => {
 			<VerifyMessageStatus title="Title" description="Description" type="success" isOpen={true} />,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -18,7 +18,7 @@ describe("VerifyMessageStatus", () => {
 			<VerifyMessageStatus title="Title" description="Description" type="error" isOpen={true} />,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

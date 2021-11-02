@@ -82,7 +82,7 @@ describe("PluginList", () => {
 		);
 
 		expect(getAllByTestId("TableRow")).toHaveLength(4);
-		expect(getByTestId("Pagination")).toBeTruthy();
+		expect(getByTestId("Pagination")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -114,12 +114,12 @@ describe("PluginList", () => {
 
 		expect(getAllByTestId("TableRow")).toHaveLength(1);
 
-		expect(getByText("ARK Explorer")).toBeTruthy();
+		expect(getByText("ARK Explorer")).toBeInTheDocument();
 		expect(() => getByText("ARK Avatars")).toThrow(/Unable to find an element with/);
 
 		fireEvent.click(getByTestId("Pagination__next"));
 
-		expect(getByText("ARK Avatars")).toBeTruthy();
+		expect(getByText("ARK Avatars")).toBeInTheDocument();
 		expect(() => getByText("ARK Explorer")).toThrow(/Unable to find an element with/);
 
 		expect(asFragment()).toMatchSnapshot();

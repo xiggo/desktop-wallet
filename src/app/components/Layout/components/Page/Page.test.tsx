@@ -3,7 +3,7 @@ import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
 
 import { Page } from "./Page";
 
@@ -27,14 +27,14 @@ describe("Page", () => {
 			</Page>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without sidebar", () => {
 		const { container, asFragment } = renderWithRouter(<Page title="Test">{}</Page>);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -44,7 +44,7 @@ describe("Page", () => {
 			const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "send").mockImplementation();
 			const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-			const { getByTestId, findByText } = renderWithRouter(
+			const { getByTestId, findByText, findByTestId } = renderWithRouter(
 				<Route path="/profiles/:profileId/dashboard">
 					<Page>{}</Page>
 				</Route>,
@@ -54,9 +54,7 @@ describe("Page", () => {
 				},
 			);
 
-			await waitFor(() => {
-				expect(() => getByTestId("navbar__useractions")).toBeTruthy();
-			});
+			await findByTestId("navbar__useractions");
 
 			const toggle = getByTestId("navbar__useractions");
 
@@ -64,7 +62,7 @@ describe("Page", () => {
 				fireEvent.click(toggle);
 			});
 
-			expect(await findByText(label)).toBeTruthy();
+			await findByText(label);
 
 			fireEvent.click(await findByText(label));
 
@@ -80,7 +78,7 @@ describe("Page", () => {
 	);
 
 	it("should handle 'Sign Out' click on user actions dropdown", async () => {
-		const { getByTestId, findByText } = renderWithRouter(
+		const { getByTestId, findByText, findByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Page>{}</Page>
 			</Route>,
@@ -92,9 +90,7 @@ describe("Page", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		await waitFor(() => {
-			expect(() => getByTestId("navbar__useractions")).toBeTruthy();
-		});
+		await findByTestId("navbar__useractions");
 
 		const toggle = getByTestId("navbar__useractions");
 
@@ -102,7 +98,7 @@ describe("Page", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(await findByText("Sign Out")).toBeTruthy();
+		await findByText("Sign Out");
 
 		fireEvent.click(await findByText("Sign Out"));
 

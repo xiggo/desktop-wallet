@@ -240,8 +240,8 @@ describe("DelegateRegistrationForm", () => {
 			/>,
 		);
 
-		expect(getByText("TRANSACTION.DELEGATE_NAME")).toBeTruthy();
-		expect(getByText("test_delegate")).toBeTruthy();
+		expect(getByText("TRANSACTION.DELEGATE_NAME")).toBeInTheDocument();
+		expect(getByText("test_delegate")).toBeInTheDocument();
 	});
 
 	it("should sign transaction using password encryption", async () => {

@@ -43,7 +43,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(getByText(wallet.alias())).toBeTruthy();
+		expect(getByText(wallet.alias())).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -110,7 +110,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(getByText(wallet.alias())).toBeTruthy();
+		expect(getByText(wallet.alias())).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 

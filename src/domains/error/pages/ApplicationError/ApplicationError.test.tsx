@@ -11,7 +11,7 @@ describe("ApplicationError", () => {
 			<ApplicationError resetErrorBoundary={onResetErrorBoundary} />,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
 		expect(getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
 

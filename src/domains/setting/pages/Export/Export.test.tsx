@@ -36,7 +36,7 @@ describe("Export Settings", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -58,7 +58,7 @@ describe("Export Settings", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await act(async () => {
 			fireEvent.click(await findByTestId("Export-settings__submit-button"));

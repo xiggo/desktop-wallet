@@ -7,7 +7,7 @@ describe("StepIndicator", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<StepIndicator />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

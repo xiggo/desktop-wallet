@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { DTO } from "@payvo/profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import nock from "nock";
@@ -259,7 +260,9 @@ describe("useProfileTransactions", () => {
 			);
 
 			await waitFor(() =>
-				expect(result.current.fetchTransactions({ wallets: profile.wallets().values() })).resolves.toBeTruthy(),
+				expect(
+					result.current.fetchTransactions({ wallets: profile.wallets().values() }),
+				).resolves.toBeInstanceOf(DTO.ExtendedConfirmedTransactionDataCollection),
 			);
 
 			await result.current.fetchMore();

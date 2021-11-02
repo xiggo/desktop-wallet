@@ -20,9 +20,9 @@ describe("ProfileCard", () => {
 	it("should render", () => {
 		const { container, asFragment, getByTestId, getByText } = render(<ProfileCard profile={profile} />);
 
-		expect(container).toBeTruthy();
-		expect(getByText(profile.name())).toBeTruthy();
-		expect(getByTestId("ProfileAvatar__svg")).toBeTruthy();
+		expect(container).toBeInTheDocument();
+		expect(getByText(profile.name())).toBeInTheDocument();
+		expect(getByTestId("ProfileAvatar__svg")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -31,9 +31,9 @@ describe("ProfileCard", () => {
 
 		const { container, asFragment, getByTestId, getByText } = render(<ProfileCard profile={profile} />);
 
-		expect(container).toBeTruthy();
-		expect(getByText(profile.name())).toBeTruthy();
-		expect(getByTestId("ProfileAvatar__image")).toBeTruthy();
+		expect(container).toBeInTheDocument();
+		expect(getByText(profile.name())).toBeInTheDocument();
+		expect(getByTestId("ProfileAvatar__image")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -41,7 +41,7 @@ describe("ProfileCard", () => {
 		const { container, getByTestId } = render(<ProfileCard profile={profile} actions={options} showSettings />);
 
 		expect(container).toMatchSnapshot();
-		expect(getByTestId("dropdown__toggle")).toBeTruthy();
+		expect(getByTestId("dropdown__toggle")).toBeInTheDocument();
 	});
 
 	it("should hide the settings icon", () => {
@@ -58,7 +58,7 @@ describe("ProfileCard", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 	});
 
 	it("should select an option in the settings", () => {
@@ -70,11 +70,11 @@ describe("ProfileCard", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
 		const firstOption = getByTestId("dropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(firstOption);
@@ -91,11 +91,11 @@ describe("ProfileCard", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
 		const firstOption = getByTestId("dropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(firstOption);

@@ -15,7 +15,7 @@ describe("FormField", () => {
 		);
 		const { queryByTestId } = render(tree);
 
-		expect(queryByTestId("input")).toBeTruthy();
+		expect(queryByTestId("input")).toBeInTheDocument();
 	});
 
 	it("should provide field context", () => {
@@ -36,6 +36,6 @@ describe("FormField", () => {
 		);
 		const { queryByText } = render(tree);
 
-		expect(queryByText(errorMessage)).toBeTruthy();
+		expect(queryByText(errorMessage)).toBeInTheDocument();
 	});
 });

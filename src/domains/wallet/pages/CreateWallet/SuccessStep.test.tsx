@@ -36,11 +36,11 @@ describe("SuccessStep", () => {
 			</FormProvider>,
 		);
 
-		expect(getByTestId("CreateWallet__SuccessStep")).toBeTruthy();
+		expect(getByTestId("CreateWallet__SuccessStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
-		expect(getByText("ARK Devnet")).toBeTruthy();
-		expect(getByText(wallet.address())).toBeTruthy();
+		expect(getByText("ARK Devnet")).toBeInTheDocument();
+		expect(getByText(wallet.address())).toBeInTheDocument();
 
 		userEvent.click(getByTestId("CreateWallet__edit-alias"));
 

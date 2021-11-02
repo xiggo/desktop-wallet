@@ -93,7 +93,7 @@ describe("RecipientList", () => {
 
 		const removeButton = getAllByTestId("recipient-list__remove-recipient");
 
-		expect(removeButton[0]).toBeTruthy();
+		expect(removeButton[0]).toBeInTheDocument();
 
 		await act(async () => {
 			fireEvent.click(removeButton[0]);
@@ -111,7 +111,7 @@ describe("RecipientList", () => {
 
 		const removeButton = getAllByTestId("recipient-list__remove-recipient");
 
-		expect(removeButton[0]).toBeTruthy();
+		expect(removeButton[0]).toBeInTheDocument();
 
 		await act(async () => {
 			fireEvent.click(removeButton[0]);

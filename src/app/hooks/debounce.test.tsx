@@ -1,15 +1,20 @@
-import { act, waitFor } from "@testing-library/react";
+import { act } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { useDebounce } from "./debounce";
 
 describe("useDebounce", () => {
-	it("should render useDebounce", async () => {
+	it("should render useDebounce", () => {
 		jest.useFakeTimers();
-		const debouncedValue = renderHook(() => useDebounce("query", 2000));
+		const { result } = renderHook(() => useDebounce("query", 2000));
+
+		// loading
+		expect(result.current[1]).toBeTruthy();
+
 		act(() => {
 			jest.runAllTimers();
 		});
-		await waitFor(() => expect(debouncedValue).toBeTruthy());
+
+		expect(result.current[1]).toBeFalsy();
 	});
 });

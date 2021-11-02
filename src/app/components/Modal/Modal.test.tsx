@@ -19,7 +19,7 @@ describe("Modal", () => {
 			</Modal>,
 		);
 
-		expect(getByTestId("modal__overlay")).toBeTruthy();
+		expect(getByTestId("modal__overlay")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -63,7 +63,7 @@ describe("Modal", () => {
 		const onClose = jest.fn();
 		const { asFragment, getByTestId } = render(<Modal title="ark" isOpen={true} onClose={onClose} />);
 
-		expect(getByTestId("modal__overlay")).toBeTruthy();
+		expect(getByTestId("modal__overlay")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.keyUp(getByTestId("modal__inner"), { code: 13, key: "Enter" });
@@ -146,7 +146,7 @@ describe("Modal", () => {
 			</Modal>,
 		);
 
-		expect(getByTestId("modal__overlay")).toBeTruthy();
+		expect(getByTestId("modal__overlay")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

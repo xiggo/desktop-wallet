@@ -71,7 +71,7 @@ describe("SelectAddress", () => {
 			fireEvent.click(getByTestId("SelectAddress__wrapper"));
 		});
 
-		expect(getByTestId("modal__inner")).toBeTruthy();
+		expect(getByTestId("modal__inner")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(getByTestId("modal__close-btn"));
@@ -117,7 +117,7 @@ describe("SelectAddress", () => {
 		});
 
 		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
+			expect(getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		const firstAddress = getByTestId("SearchWalletListItem__select-0");
@@ -175,7 +175,7 @@ describe("SelectAddress", () => {
 		});
 
 		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
+			expect(getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		const firstAddress = getByTestId("SearchWalletListItem__select-0");

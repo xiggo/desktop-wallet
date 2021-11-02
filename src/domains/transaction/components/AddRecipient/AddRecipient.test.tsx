@@ -217,7 +217,7 @@ describe("AddRecipient", () => {
 
 		const recipientLabel = "Recipient #1";
 
-		expect(queryByText(recipientLabel)).toBeFalsy();
+		expect(queryByText(recipientLabel)).not.toBeInTheDocument();
 
 		userEvent.click(multipleButton);
 
@@ -225,7 +225,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(singleButton);
 
-		await waitFor(() => expect(queryByText(recipientLabel)).toBeFalsy());
+		await waitFor(() => expect(queryByText(recipientLabel)).not.toBeInTheDocument());
 	});
 
 	it("should prevent adding invalid recipient address in multiple type", async () => {
@@ -293,7 +293,7 @@ describe("AddRecipient", () => {
 		await waitFor(() => {
 			expect(form.getValues("amount")).toEqual(values.amount);
 			expect(form.getValues("displayAmount")).toEqual(values.displayAmount);
-			expect(screen.getByTestId("AddRecipient__add-button")).toBeTruthy();
+			expect(screen.getByTestId("AddRecipient__add-button")).toBeInTheDocument();
 			expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled();
 		});
 
@@ -376,7 +376,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		expect(screen.getByTestId("modal__inner")).toBeTruthy();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
@@ -536,7 +536,7 @@ describe("AddRecipient", () => {
 			"recipient-list__remove-recipient",
 		);
 
-		expect(removeButton[0]).toBeTruthy();
+		expect(removeButton[0]).toBeInTheDocument();
 
 		fireEvent.click(removeButton[0]);
 

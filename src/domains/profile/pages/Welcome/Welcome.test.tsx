@@ -22,7 +22,7 @@ describe("Welcome", () => {
 
 		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		fireEvent.click(getByText(profile.name()));
 
@@ -37,7 +37,7 @@ describe("Welcome", () => {
 
 		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(getByText(profile.settings().get(Contracts.ProfileSetting.Name)));
@@ -53,7 +53,7 @@ describe("Welcome", () => {
 	])("should open & close sign in modal (%s)", (_, buttonId) => {
 		const { container, getByText, getByTestId } = renderWithRouter(<Welcome />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
@@ -79,7 +79,7 @@ describe("Welcome", () => {
 	it("should navigate to profile dashboard with correct password", async () => {
 		const { asFragment, container, findByTestId, getByTestId, getByText, history } = renderWithRouter(<Welcome />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById(getPasswordProtectedProfileId());
 		await env.profiles().restore(profile, getDefaultPassword());
@@ -120,7 +120,7 @@ describe("Welcome", () => {
 			getAllByTestId,
 		} = renderWithRouter(<Welcome />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
@@ -136,7 +136,7 @@ describe("Welcome", () => {
 
 		const settingsOption = getByTestId("dropdown__option--0");
 
-		expect(settingsOption).toBeTruthy();
+		expect(settingsOption).toBeInTheDocument();
 		expect(settingsOption).toHaveTextContent(commonTranslations.SETTINGS);
 
 		act(() => {
@@ -165,7 +165,7 @@ describe("Welcome", () => {
 			<Welcome />,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById(fixtureProfileId);
 
@@ -179,7 +179,7 @@ describe("Welcome", () => {
 
 		const settingsOption = getByTestId("dropdown__option--0");
 
-		expect(settingsOption).toBeTruthy();
+		expect(settingsOption).toBeInTheDocument();
 		expect(settingsOption).toHaveTextContent(commonTranslations.SETTINGS);
 
 		act(() => {
@@ -224,7 +224,7 @@ describe("Welcome", () => {
 
 		const { container, getByText, findByTestId, getByTestId } = renderWithRouter(<Welcome />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
@@ -292,7 +292,7 @@ describe("Welcome", () => {
 	it("should change route to create profile", () => {
 		const { container, getByText, asFragment, history } = renderWithRouter(<Welcome />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -311,7 +311,7 @@ describe("Welcome", () => {
 			</EnvironmentProvider>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		expect(getByText(translations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
 

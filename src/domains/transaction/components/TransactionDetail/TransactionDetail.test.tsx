@@ -47,7 +47,7 @@ describe("TransactionDetail", () => {
 			</TransactionDetail>,
 		);
 
-		expect(getByTestId("TEST_CHILD")).toBeTruthy();
+		expect(getByTestId("TEST_CHILD")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 });

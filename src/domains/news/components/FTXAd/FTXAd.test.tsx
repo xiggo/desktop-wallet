@@ -7,7 +7,7 @@ describe("FTXAd", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<FTXAd />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

@@ -14,7 +14,7 @@ describe("Configuration Context", () => {
 
 		expect(getByTestId("ConfigurationProvider__content")).toBeInTheDocument();
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

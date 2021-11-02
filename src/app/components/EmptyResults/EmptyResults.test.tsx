@@ -7,7 +7,7 @@ describe("EmptyResults", () => {
 	it("should render with no texts", () => {
 		const { container, asFragment } = render(<EmptyResults />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -16,7 +16,7 @@ describe("EmptyResults", () => {
 			<EmptyResults title="No results" subtitle="No results found. Refine your search and try again." />,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

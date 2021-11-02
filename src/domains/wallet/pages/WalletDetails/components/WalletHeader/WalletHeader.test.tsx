@@ -131,8 +131,8 @@ describe("WalletHeader", () => {
 		const { asFragment, getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
 		await findByText(wallet.address());
 
-		expect(getByTestId("WalletIcon__Ledger")).toBeTruthy();
-		expect(getByTestId("WalletIcon__Multisignature")).toBeTruthy();
+		expect(getByTestId("WalletIcon__Ledger")).toBeInTheDocument();
+		expect(getByTestId("WalletIcon__Multisignature")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		ledgerSpy.mockRestore();
@@ -156,12 +156,12 @@ describe("WalletHeader", () => {
 		);
 
 		if (delta < 0) {
-			expect(getByText("chevron-down-small.svg")).toBeTruthy();
+			expect(getByText("chevron-down-small.svg")).toBeInTheDocument();
 		} else {
-			expect(getByText("chevron-up-small.svg")).toBeTruthy();
+			expect(getByText("chevron-up-small.svg")).toBeInTheDocument();
 		}
 
-		expect(getByText(`${delta}%`)).toBeTruthy();
+		expect(getByText(`${delta}%`)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

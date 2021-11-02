@@ -20,7 +20,7 @@ describe("Tabs", () => {
 			</Tabs>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -46,7 +46,7 @@ describe("Tabs", () => {
 			</Tabs>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -66,7 +66,7 @@ describe("Tabs", () => {
 			</Tabs>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -84,7 +84,7 @@ describe("Tabs", () => {
 
 		fireEvent.click(getByTestId("tabs__tab-button-1"));
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});

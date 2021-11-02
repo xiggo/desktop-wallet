@@ -11,14 +11,14 @@ describe("FormLabel", () => {
 		const label = "Test Label";
 		const { queryByText } = render(<FormLabel>{label}</FormLabel>);
 
-		expect(queryByText(label)).toBeTruthy();
+		expect(queryByText(label)).toBeInTheDocument();
 	});
 
 	it("should render from prop", () => {
 		const label = "Test Label";
 		const { queryByText } = render(<FormLabel label={label} />);
 
-		expect(queryByText(label)).toBeTruthy();
+		expect(queryByText(label)).toBeInTheDocument();
 	});
 
 	it("should render with name from context", () => {

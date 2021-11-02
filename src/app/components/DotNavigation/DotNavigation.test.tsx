@@ -7,7 +7,7 @@ describe("DotNavigation", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<DotNavigation />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -8,7 +8,7 @@ describe("Toggle", () => {
 	it("should render", () => {
 		const { container, asFragment, getByRole } = render(<Toggle />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByRole("checkbox")).not.toHaveAttribute("checked", "");
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -16,7 +16,7 @@ describe("Toggle", () => {
 	it("should render disabled", () => {
 		const { container, asFragment, getByRole } = render(<Toggle disabled />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByRole("checkbox")).toBeDisabled();
 		expect(getByRole("checkbox")).not.toHaveAttribute("checked", "");
 		expect(asFragment()).toMatchSnapshot();
@@ -25,7 +25,7 @@ describe("Toggle", () => {
 	it("should render small", () => {
 		const { container, asFragment, getByRole } = render(<Toggle small />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByRole("checkbox")).not.toHaveAttribute("checked", "");
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -33,7 +33,7 @@ describe("Toggle", () => {
 	it("should render always on", () => {
 		const { container, asFragment, getByRole } = render(<Toggle alwaysOn />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByRole("checkbox")).not.toHaveAttribute("checked", "");
 		expect(asFragment()).toMatchSnapshot();
 	});

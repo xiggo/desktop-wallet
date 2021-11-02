@@ -87,7 +87,7 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -509,7 +509,7 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -548,7 +548,7 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -581,7 +581,7 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await act(async () => {
 			fireEvent.click(screen.getByTestId("General-settings__submit-button"));

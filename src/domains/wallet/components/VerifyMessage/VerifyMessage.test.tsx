@@ -57,19 +57,19 @@ describe("VerifyMessage", () => {
 
 		const toggle = screen.getByRole("checkbox");
 
-		expect(screen.getByTestId("VerifyMessage__manual")).toBeTruthy();
+		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(toggle);
 		});
 
-		expect(screen.getByTestId("VerifyMessage__json")).toBeTruthy();
+		expect(screen.getByTestId("VerifyMessage__json")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(toggle);
 		});
 
-		expect(screen.getByTestId("VerifyMessage__manual")).toBeTruthy();
+		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 	});
 
 	it("should open verify message modal and cancel", async () => {

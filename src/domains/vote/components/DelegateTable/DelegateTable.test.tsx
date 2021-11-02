@@ -60,7 +60,7 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -78,7 +78,7 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		votesAmountMinimumMock.mockRestore();
@@ -103,7 +103,7 @@ describe("DelegateTable", () => {
 				/>,
 			);
 
-			expect(container).toBeTruthy();
+			expect(container).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			votesAmountMinimumMock.mockRestore();
@@ -122,7 +122,7 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -139,8 +139,8 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(container).toBeTruthy();
-		expect(screen.getByText("test")).toBeTruthy();
+		expect(container).toBeInTheDocument();
+		expect(screen.getByText("test")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -475,7 +475,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -555,7 +555,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -587,7 +587,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, []);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -627,7 +627,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, voteDelegates);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -664,7 +664,7 @@ describe("DelegateTable", () => {
 			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 		});
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(voteDelegates, []);
 		expect(asFragment()).toMatchSnapshot();
 	});

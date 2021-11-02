@@ -19,7 +19,7 @@ describe("NetworkIcon", () => {
 			"aria-label",
 			network.displayName(),
 		);
-		expect(screen.getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -43,7 +43,7 @@ describe("NetworkIcon", () => {
 			"aria-label",
 			network.displayName(),
 		);
-		expect(screen.getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 	});
 
 	it("should render network with custom classname", () => {
@@ -53,6 +53,6 @@ describe("NetworkIcon", () => {
 			"aria-label",
 			network.displayName(),
 		);
-		expect(screen.getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 	});
 });

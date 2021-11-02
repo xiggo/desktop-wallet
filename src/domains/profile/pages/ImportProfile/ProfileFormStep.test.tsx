@@ -214,7 +214,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = env.profiles().create("test6");
 		const shouldUseDarkColorsSpy = jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(false);
 
-		const { asFragment, getAllByTestId, getByTestId } = renderWithRouter(
+		const { asFragment, getAllByTestId, getByTestId, queryByTestId } = renderWithRouter(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={emptyProfile} shouldValidate />
 			</EnvironmentProvider>,
@@ -260,14 +260,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => getAllByTestId("InputPassword")[0].focus());
 
-		expect(() => getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
-
-		// Upload avatar image
-		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
-		});
-
-		expect(() => getByTestId("SelectProfileImage__avatar")).toBeTruthy();
+		expect(queryByTestId("SelectProfileImage__avatar-identicon")).not.toBeInTheDocument();
 
 		act(() => getAllByTestId("Input")[0].focus());
 
@@ -276,6 +269,8 @@ describe("Import Profile - Profile Form Step", () => {
 		});
 
 		act(() => getAllByTestId("InputPassword")[0].focus());
+
+		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 

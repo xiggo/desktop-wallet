@@ -32,7 +32,7 @@ describe("ConfirmPassphraseStep", () => {
 			</FormProvider>,
 		);
 
-		expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeTruthy();
+		expect(getByTestId("CreateWallet__ConfirmPassphraseStep")).toBeInTheDocument();
 		expect(getAllByTestId("MnemonicVerificationOptions__button").length).toBeGreaterThan(1);
 
 		expect(form.current.getValues()).toEqual({ verification: undefined });

@@ -36,7 +36,7 @@ describe("useNetworkStatus", () => {
 
 		const { getByText } = render(<TestNetworkStatus />);
 
-		expect(getByText("My App")).toBeTruthy();
+		expect(getByText("My App")).toBeInTheDocument();
 	});
 
 	it("should be offline", () => {

@@ -10,7 +10,7 @@ describe("NewsOptions", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<NewsOptions selectedCategories={categories} selectedCoins={coins} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

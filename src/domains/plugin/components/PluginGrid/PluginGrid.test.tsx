@@ -103,18 +103,19 @@ describe("PluginGrid", () => {
 		);
 
 		for (const plugin of plugins) {
-			expect(await findByText(plugin.title)).toBeTruthy();
+			await findByText(plugin.title);
 		}
 
-		expect(getByTestId("Pagination")).toBeTruthy();
+		expect(getByTestId("Pagination")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without plugins", async () => {
 		const { asFragment, findByText, getByTestId } = render(<PluginGrid plugins={[]} />);
 
-		expect(getByTestId("PluginGrid__empty-message")).toBeTruthy();
-		expect(await findByText(pluginTranslations.PAGE_PLUGIN_MANAGER.NO_PLUGINS_AVAILABLE)).toBeTruthy();
+		expect(getByTestId("PluginGrid__empty-message")).toBeInTheDocument();
+
+		await findByText(pluginTranslations.PAGE_PLUGIN_MANAGER.NO_PLUGINS_AVAILABLE);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -123,7 +124,7 @@ describe("PluginGrid", () => {
 		const { asFragment, findByText, getByTestId } = render(<PluginGrid plugins={plugins} />);
 
 		for (const plugin of plugins) {
-			expect(await findByText(plugin.title)).toBeTruthy();
+			await findByText(plugin.title);
 		}
 
 		expect(() => getByTestId("Pagination")).toThrow(/Unable to find an element by/);
@@ -148,7 +149,7 @@ describe("PluginGrid", () => {
 		const { asFragment, findByText, getByTestId } = render(<PluginGrid plugins={plugins} showPagination={false} />);
 
 		for (const plugin of plugins) {
-			expect(await findByText(plugin.title)).toBeTruthy();
+			await findByText(plugin.title);
 		}
 
 		expect(() => getByTestId("Pagination")).toThrow(/Unable to find an element by/);
@@ -158,12 +159,14 @@ describe("PluginGrid", () => {
 	it("should split by page", async () => {
 		const { asFragment, findByText, getByTestId } = render(<PluginGrid plugins={plugins} itemsPerPage={1} />);
 
-		expect(await findByText(plugins[0].title)).toBeTruthy();
+		await findByText(plugins[0].title);
+
 		await expect(findByText(plugins[1].title)).rejects.toThrow();
 
 		fireEvent.click(getByTestId("Pagination__next"));
 
-		expect(await findByText(plugins[1].title)).toBeTruthy();
+		await findByText(plugins[1].title);
+
 		await expect(findByText(plugins[0].title)).rejects.toThrow();
 
 		expect(asFragment()).toMatchSnapshot();

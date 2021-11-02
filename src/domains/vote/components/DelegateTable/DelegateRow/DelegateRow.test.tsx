@@ -35,6 +35,8 @@ describe("DelegateRow", () => {
 					<DelegateRow
 						index={0}
 						delegate={delegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
 						toggleUnvotesSelected={jest.fn()}
@@ -45,7 +47,7 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -57,6 +59,8 @@ describe("DelegateRow", () => {
 					<DelegateRow
 						index={0}
 						delegate={delegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
 						toggleUnvotesSelected={jest.fn()}
@@ -72,7 +76,7 @@ describe("DelegateRow", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -92,6 +96,7 @@ describe("DelegateRow", () => {
 						index={0}
 						delegate={delegate}
 						selectedVotes={selected}
+						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
 						toggleUnvotesSelected={jest.fn()}
@@ -102,7 +107,7 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -138,6 +143,8 @@ describe("DelegateRow", () => {
 							amount: 10,
 							wallet: delegate,
 						}}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
 						toggleUnvotesSelected={jest.fn()}
@@ -148,6 +155,8 @@ describe("DelegateRow", () => {
 					<DelegateRow
 						index={1}
 						delegate={secondDelegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
 						toggleUnvotesSelected={jest.fn()}
@@ -158,6 +167,8 @@ describe("DelegateRow", () => {
 					<DelegateRow
 						index={2}
 						delegate={thirdDelegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
 						isVoteDisabled={true}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
@@ -170,7 +181,7 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.CURRENT);
 		expect(screen.getByTestId("DelegateRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
 		expect(screen.getByTestId("DelegateRow__toggle-2")).toBeDisabled();
@@ -197,6 +208,7 @@ describe("DelegateRow", () => {
 						index={0}
 						delegate={delegate}
 						voted={voted}
+						selectedVotes={[]}
 						selectedUnvotes={selectedUnvotes}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
@@ -208,7 +220,7 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.UNSELECTED);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -223,6 +235,8 @@ describe("DelegateRow", () => {
 					<DelegateRow
 						index={0}
 						delegate={delegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
 						toggleUnvotesSelected={jest.fn()}
@@ -235,7 +249,7 @@ describe("DelegateRow", () => {
 
 		expect(screen.getByTestId("DelegateVoteAmount")).toBeInTheDocument();
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		votesAmountMinimumMock.mockRestore();
@@ -263,6 +277,7 @@ describe("DelegateRow", () => {
 						delegate={delegate}
 						voted={voted}
 						selectedVotes={selectedVotes}
+						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
 						setAvailableBalance={jest.fn()}
 						toggleUnvotesSelected={jest.fn()}
@@ -273,7 +288,7 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.CHANGED);
 
 		expect(asFragment()).toMatchSnapshot();

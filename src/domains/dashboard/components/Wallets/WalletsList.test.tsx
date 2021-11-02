@@ -37,7 +37,7 @@ describe("WalletsList", () => {
 			},
 		);
 
-		expect(getByTestId("WalletsList")).toBeTruthy();
+		expect(getByTestId("WalletsList")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -59,14 +59,14 @@ describe("WalletsList", () => {
 			},
 		);
 
-		expect(getByTestId("WalletsList")).toBeTruthy();
+		expect(getByTestId("WalletsList")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render empty block", () => {
 		const { asFragment, getByTestId } = render(<WalletsList wallets={[]} />);
 
-		expect(getByTestId("EmptyBlock")).toBeTruthy();
+		expect(getByTestId("EmptyBlock")).toBeInTheDocument();
 		expect(getByTestId("EmptyBlock")).toHaveTextContent(translations.WALLET_CONTROLS.EMPTY_MESSAGE);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -75,7 +75,7 @@ describe("WalletsList", () => {
 	it("should render empty block for starred display type", () => {
 		const { asFragment, getByTestId } = render(<WalletsList wallets={[]} walletsDisplayType="starred" />);
 
-		expect(getByTestId("EmptyBlock")).toBeTruthy();
+		expect(getByTestId("EmptyBlock")).toBeInTheDocument();
 		expect(getByTestId("EmptyBlock")).toHaveTextContent(
 			translations.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE.replace("<bold>{{type}}</bold>", "Starred"),
 		);
@@ -86,7 +86,7 @@ describe("WalletsList", () => {
 	it("should render empty block for ledger display type", () => {
 		const { asFragment, getByTestId } = render(<WalletsList wallets={[]} walletsDisplayType="ledger" />);
 
-		expect(getByTestId("EmptyBlock")).toBeTruthy();
+		expect(getByTestId("EmptyBlock")).toBeInTheDocument();
 		expect(getByTestId("EmptyBlock")).toHaveTextContent(
 			translations.WALLET_CONTROLS.EMPTY_MESSAGE_TYPE.replace("<bold>{{type}}</bold>", "Ledger"),
 		);

@@ -21,13 +21,13 @@ describe("Link", () => {
 		);
 
 		expect(getByTestId("Link")).toHaveAttribute("rel", "noopener noreferrer");
-		expect(getByTestId("Link__external")).toBeTruthy();
+		expect(getByTestId("Link__external")).toBeInTheDocument();
 	});
 
 	it("should render external without children", () => {
 		const { asFragment, getByTestId } = renderWithRouter(<Link to="https://payvo.com" isExternal />);
 
-		expect(getByTestId("Link__external")).toBeTruthy();
+		expect(getByTestId("Link__external")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -101,7 +101,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await findByTestId("StatusIcon__icon");
 
@@ -139,7 +139,7 @@ describe("AddressRow", () => {
 				},
 			);
 
-			expect(container).toBeTruthy();
+			expect(container).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			votesMock.mockRestore();
@@ -175,7 +175,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		votesMock.mockRestore();
@@ -196,7 +196,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await findByTestId("StatusIcon__icon");
 
@@ -392,7 +392,7 @@ describe("AddressRow", () => {
 			fireEvent.click(selectButton);
 		});
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());
 		expect(asFragment()).toMatchSnapshot();
 	});

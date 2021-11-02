@@ -162,8 +162,8 @@ describe("WalletVote", () => {
 
 			await findByTestId("WalletVote");
 
-			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
-			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeTruthy();
+			expect(getByText(delegate.wallet!.username()!)).toBeInTheDocument();
+			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeInTheDocument();
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: 1 }))).toBeInTheDocument();
 
@@ -194,8 +194,8 @@ describe("WalletVote", () => {
 
 			await findByTestId("WalletVote");
 
-			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
-			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeTruthy();
+			expect(getByText(delegate.wallet!.username()!)).toBeInTheDocument();
+			expect(getByText(`#${delegate.wallet!.rank()}`)).toBeInTheDocument();
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
@@ -227,12 +227,12 @@ describe("WalletVote", () => {
 
 			await findByTestId("WalletVote");
 
-			expect(getByText(delegate.wallet!.username()!)).toBeTruthy();
+			expect(getByText(delegate.wallet!.username()!)).toBeInTheDocument();
 			expect(getByText(t("COMMON.NOT_AVAILABLE"))).toBeInTheDocument();
 
 			expect(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
-			expect(getByText("hint-small.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -363,7 +363,7 @@ describe("WalletVote", () => {
 				getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
 			).toBeInTheDocument();
 
-			expect(getByText("hint-small.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -406,7 +406,7 @@ describe("WalletVote", () => {
 			expect(getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("hint-small.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -448,7 +448,7 @@ describe("WalletVote", () => {
 			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("hint-small.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -502,7 +502,7 @@ describe("WalletVote", () => {
 			expect(getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(getByText("hint-small.svg")).toBeTruthy();
+			expect(getByText("hint-small.svg")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();

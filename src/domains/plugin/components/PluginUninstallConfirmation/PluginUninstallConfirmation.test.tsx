@@ -33,7 +33,8 @@ describe("Plugin Uninstall Confirmation", () => {
 		fireEvent.click(screen.getByTestId("PluginUninstall__submit-button"));
 
 		await waitFor(() => expect(invokeMock).toHaveBeenLastCalledWith("plugin:loader-fs.remove", "/plugins/example"));
-		await waitFor(() => expect(manager.plugins().findById(plugin.config().id())).toBeFalsy());
+
+		expect(manager.plugins().findById(plugin.config().id())).toBeUndefined();
 
 		expect(onDelete).toHaveBeenCalled();
 		expect(container).toMatchSnapshot();

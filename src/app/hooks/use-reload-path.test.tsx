@@ -26,12 +26,12 @@ describe("useReloadPath hook", () => {
 			</Route>,
 		);
 
-		expect(getByTestId("header_test")).toBeTruthy();
+		expect(getByTestId("header_test")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(getByTestId("header_test"));
 		});
 
-		expect(getByText("UseReloadPath Test Component")).toBeTruthy();
+		expect(getByText("UseReloadPath Test Component")).toBeInTheDocument();
 	});
 });

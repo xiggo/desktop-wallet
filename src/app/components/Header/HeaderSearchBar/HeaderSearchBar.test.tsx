@@ -18,7 +18,7 @@ describe("HeaderSearchBar", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		expect(screen.getByTestId("HeaderSearchBar__input")).toBeTruthy();
+		expect(screen.getByTestId("HeaderSearchBar__input")).toBeInTheDocument();
 	});
 
 	it("should limit search letters", () => {
@@ -70,7 +70,7 @@ describe("HeaderSearchBar", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		expect(screen.getByTestId("extra-slot")).toBeTruthy();
+		expect(screen.getByTestId("extra-slot")).toBeInTheDocument();
 	});
 
 	it("should hide the searchbar when clicked outside", () => {
@@ -90,9 +90,9 @@ describe("HeaderSearchBar", () => {
 
 		const outsideElement = screen.getByTestId("header-search-bar__outside");
 
-		expect(outsideElement).toBeTruthy();
+		expect(outsideElement).toBeInTheDocument();
 
-		expect(() => screen.getByTestId("Input")).toBeTruthy();
+		expect(screen.getByTestId("Input")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.mouseDown(outsideElement);

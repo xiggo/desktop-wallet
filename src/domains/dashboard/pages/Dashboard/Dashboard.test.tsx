@@ -98,7 +98,7 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(() => {
-			expect(getByTestId("Balance__value")).toBeTruthy();
+			expect(getByTestId("Balance__value")).toBeInTheDocument();
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -296,7 +296,7 @@ describe("Dashboard", () => {
 
 		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toBeTruthy());
+		await screen.findByTestId("modal__inner");
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 

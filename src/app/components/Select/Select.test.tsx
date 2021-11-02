@@ -8,7 +8,7 @@ describe("Select", () => {
 		const placeholder = "Select option";
 		const { asFragment, getByText } = render(<Select placeholder="Select option" />);
 
-		expect(getByText(placeholder)).toBeTruthy();
+		expect(getByText(placeholder)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

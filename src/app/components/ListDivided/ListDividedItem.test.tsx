@@ -7,7 +7,7 @@ describe("ListDividedItem", () => {
 	it("should render an ListDividedItem", () => {
 		const { container, asFragment } = render(<ListDividedItem />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

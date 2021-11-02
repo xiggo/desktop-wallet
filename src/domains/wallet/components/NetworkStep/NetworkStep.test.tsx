@@ -28,12 +28,12 @@ describe("SelectNetworkStep", () => {
 			</FormProvider>,
 		);
 
-		expect(getByTestId("NetworkStep")).toBeTruthy();
+		expect(getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
-		expect(selectNetworkInput).toBeTruthy();
+		expect(selectNetworkInput).toBeInTheDocument();
 	});
 
 	it("should render without test networks", async () => {
@@ -46,11 +46,11 @@ describe("SelectNetworkStep", () => {
 			</FormProvider>,
 		);
 
-		expect(getByTestId("NetworkStep")).toBeTruthy();
+		expect(getByTestId("NetworkStep")).toBeInTheDocument();
 
 		const selectNetworkInput = getByTestId("SelectNetworkInput__input");
 
-		expect(selectNetworkInput).toBeTruthy();
+		expect(selectNetworkInput).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.focus(selectNetworkInput);

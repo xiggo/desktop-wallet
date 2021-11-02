@@ -351,7 +351,7 @@ describe("Exchange", () => {
 		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
@@ -407,7 +407,7 @@ describe("Exchange", () => {
 		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		fireEvent.click(screen.getByTestId(buttonId));

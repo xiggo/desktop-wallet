@@ -147,7 +147,7 @@ describe("SelectRecipient", () => {
 		});
 
 		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
+			expect(getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		const firstAddress = getByTestId("RecipientListItem__select-button-2");
@@ -180,7 +180,7 @@ describe("SelectRecipient", () => {
 		});
 
 		await waitFor(() => {
-			expect(getByTestId("modal__inner")).toBeTruthy();
+			expect(getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		const lastAddress = getByTestId("RecipientListItem__selected-button-2");
@@ -226,7 +226,7 @@ describe("SelectRecipient", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(6);
 		});
 
@@ -241,7 +241,7 @@ describe("SelectRecipient", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 		});
 

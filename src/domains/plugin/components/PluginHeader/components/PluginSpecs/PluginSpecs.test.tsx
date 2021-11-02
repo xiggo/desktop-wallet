@@ -23,11 +23,12 @@ describe("PluginSpecs", () => {
 
 		expect(ipcRendererMock).toHaveBeenLastCalledWith("open-external", "https://github.com/arkecosystem/explorer");
 
-		expect(await findByText("Payvo")).toBeTruthy();
-		expect(await findByText("Utility")).toBeTruthy();
-		expect(await findByText("View")).toBeTruthy();
-		expect(await findByText("1.3.8")).toBeTruthy();
-		expect(await findByText("4.2 Mb")).toBeTruthy();
+		await findByText("Payvo");
+		await findByText("Utility");
+		await findByText("View");
+		await findByText("1.3.8");
+		await findByText("4.2 Mb");
+
 		expect(asFragment()).toMatchSnapshot();
 
 		ipcRendererMock.mockRestore();
@@ -38,8 +39,9 @@ describe("PluginSpecs", () => {
 			<PluginSpecs author="Payvo" category="Utility" version="1.3.8" isOfficial />,
 		);
 
-		expect(await findByText("Payvo")).toBeTruthy();
-		expect(await findByText("Utility")).toBeTruthy();
+		await findByText("Payvo");
+		await findByText("Utility");
+
 		expect(await findAllByText("N/A")).toHaveLength(2);
 		expect(asFragment()).toMatchSnapshot();
 	});

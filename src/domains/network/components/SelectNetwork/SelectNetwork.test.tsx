@@ -161,14 +161,14 @@ describe("SelectNetwork", () => {
 		fireEvent.change(input, { target: { value: "ARK" } });
 
 		expect(input).toHaveValue("ARK");
-		expect(screen.getByTestId("Input__suggestion")).toBeTruthy();
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy();
+		expect(screen.getByTestId("Input__suggestion")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
 		expect(screen.queryByTestId("Input__suggestion")).not.toBeInTheDocument();
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 
@@ -180,7 +180,7 @@ describe("SelectNetwork", () => {
 
 		fireEvent.focus(screen.getByTestId("SelectNetworkInput__input"));
 
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
@@ -188,7 +188,7 @@ describe("SelectNetwork", () => {
 
 		fireEvent.focus(screen.getByTestId("SelectNetworkInput__input"));
 
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeTruthy();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 

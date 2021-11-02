@@ -20,7 +20,7 @@ describe("TransactionRowRecipientLabel", () => {
 			<TransactionRowRecipientLabel transaction={{ ...TransactionFixture, type: () => "secondSignature" }} />,
 		);
 
-		expect(getByText(translations.TRANSACTION_TYPES.SECOND_SIGNATURE)).toBeTruthy();
+		expect(getByText(translations.TRANSACTION_TYPES.SECOND_SIGNATURE)).toBeInTheDocument();
 	});
 
 	it("should show a multipayment label", () => {
@@ -35,7 +35,7 @@ describe("TransactionRowRecipientLabel", () => {
 			/>,
 		);
 
-		expect(getByText(translations.TRANSACTION_TYPES.MULTI_PAYMENT)).toBeTruthy();
+		expect(getByText(translations.TRANSACTION_TYPES.MULTI_PAYMENT)).toBeInTheDocument();
 	});
 
 	it("should show a magistrate label", () => {
@@ -48,7 +48,7 @@ describe("TransactionRowRecipientLabel", () => {
 			/>,
 		);
 
-		expect(getByText(translations.TRANSACTION_TYPES.MAGISTRATE)).toBeTruthy();
+		expect(getByText(translations.TRANSACTION_TYPES.MAGISTRATE)).toBeInTheDocument();
 	});
 
 	describe("Votes", () => {

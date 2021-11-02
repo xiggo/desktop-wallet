@@ -503,7 +503,7 @@ describe("WalletDetails", () => {
 
 		const dropdown = getAllByTestId("dropdown__toggle")[2];
 
-		expect(dropdown).toBeTruthy();
+		expect(dropdown).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(dropdown);
@@ -511,7 +511,7 @@ describe("WalletDetails", () => {
 
 		const openWalletOption = getByTestId("dropdown__option--secondary-0");
 
-		expect(openWalletOption).toBeTruthy();
+		expect(openWalletOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(openWalletOption);
@@ -537,7 +537,7 @@ describe("WalletDetails", () => {
 
 		const dropdown = getAllByTestId("dropdown__toggle")[2];
 
-		expect(dropdown).toBeTruthy();
+		expect(dropdown).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(dropdown);
@@ -545,7 +545,7 @@ describe("WalletDetails", () => {
 
 		const deleteWalletOption = getByTestId("dropdown__option--secondary-1");
 
-		expect(deleteWalletOption).toBeTruthy();
+		expect(deleteWalletOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(deleteWalletOption);

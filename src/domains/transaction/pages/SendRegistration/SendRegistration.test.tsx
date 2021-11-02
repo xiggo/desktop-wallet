@@ -476,7 +476,6 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
 		await findByTestId("TransactionSuccessful");
-		// await waitFor(() => expect(getByTestId("ErrorStep")).toBeTruthy());
 
 		isLedgerMock.mockRestore();
 		getPublicKeyMock.mockRestore();
@@ -667,12 +666,12 @@ describe("Registration", () => {
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
-		expect(getByTestId("DelegateRegistrationForm__review-step")).toBeTruthy();
+		expect(getByTestId("DelegateRegistrationForm__review-step")).toBeInTheDocument();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
-		expect(getByTestId("FeeWarning__cancel-button")).toBeTruthy();
+		expect(getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
 		fireEvent.click(getByTestId("FeeWarning__cancel-button"));
 
@@ -699,12 +698,12 @@ describe("Registration", () => {
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
-		expect(getByTestId("DelegateRegistrationForm__review-step")).toBeTruthy();
+		expect(getByTestId("DelegateRegistrationForm__review-step")).toBeInTheDocument();
 
 		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
-		expect(getByTestId("FeeWarning__continue-button")).toBeTruthy();
+		expect(getByTestId("FeeWarning__continue-button")).toBeInTheDocument();
 
 		fireEvent.click(getByTestId("FeeWarning__continue-button"));
 

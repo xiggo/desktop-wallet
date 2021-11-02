@@ -49,10 +49,10 @@ describe("Input", () => {
 			/>,
 		);
 
-		expect(getByText("end")).toBeTruthy();
-		expect(getByText("end")?.parentElement?.parentElement?.classList.contains("some-class-name")).toBeTruthy();
+		expect(getByText("end")).toBeInTheDocument();
+		expect(getByText("end")?.parentElement?.parentElement).toHaveClass("some-class-name");
 
-		expect(getByText("start")).toBeTruthy();
+		expect(getByText("start")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -60,7 +60,7 @@ describe("Input", () => {
 	it("should render with suggestion", () => {
 		const { asFragment, getByTestId } = render(<Input suggestion="suggestion" />);
 
-		expect(getByTestId("Input__suggestion")).toBeTruthy();
+		expect(getByTestId("Input__suggestion")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

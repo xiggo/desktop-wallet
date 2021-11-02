@@ -16,7 +16,8 @@ describe("PluginCardSkeleton", () => {
 	it("should render", async () => {
 		const { asFragment, findByTestId } = render(<PluginCardSkeleton />);
 
-		expect(await findByTestId("PluginCardSkeleton")).toBeTruthy();
+		await findByTestId("PluginCardSkeleton");
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

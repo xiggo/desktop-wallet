@@ -59,7 +59,7 @@ describe("Wallet Card", () => {
 			},
 		);
 
-		expect(screen.getByTestId("WalletCard__skeleton")).toBeTruthy();
+		expect(screen.getByTestId("WalletCard__skeleton")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 

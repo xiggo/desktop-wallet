@@ -91,7 +91,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			getByTestId(
 				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.TRANSFER}-${translations.TRANSACTION}`,
 			),
-		).toBeTruthy();
+		).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -109,7 +109,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			getByTestId(
 				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.MULTI_SIGNATURE}-${translations.REGISTRATION}`,
 			),
-		).toBeTruthy();
+		).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -128,7 +128,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			getByTestId(
 				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.MULTI_SIGNATURE}-${translations.REGISTRATION}`,
 			),
-		).toBeTruthy();
+		).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
@@ -151,7 +151,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			getByTestId(
 				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.MULTI_SIGNATURE}-${translations.REGISTRATION}`,
 			),
-		).toBeTruthy();
+		).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));

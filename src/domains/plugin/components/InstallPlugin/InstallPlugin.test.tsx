@@ -36,7 +36,7 @@ describe("InstallPlugin", () => {
 			<FirstStep plugin={{ permissions: ["PROFILE", "EVENTS", "HTTP", "CUSTOM_PERMISSION"] }} />,
 		);
 
-		expect(screen.getByTestId("InstallPlugin__step--first")).toBeTruthy();
+		expect(screen.getByTestId("InstallPlugin__step--first")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -64,7 +64,7 @@ describe("InstallPlugin", () => {
 	it("should render 3rd step", () => {
 		const { asFragment } = render(<ThirdStep plugin={{ title: "My Plugin" }} />);
 
-		expect(screen.getByTestId("InstallPlugin__step--third")).toBeTruthy();
+		expect(screen.getByTestId("InstallPlugin__step--third")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

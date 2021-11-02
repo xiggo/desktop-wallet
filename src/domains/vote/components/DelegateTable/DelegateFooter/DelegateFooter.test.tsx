@@ -40,7 +40,7 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -92,15 +92,15 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(screen.queryByTestId("DelegateTable__available-balance")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateTable__available-balance")).toBeInTheDocument();
 		expect(
-			screen.findByText(
+			screen.getByText(
 				t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {
 					percent: 50,
 				}),
 			),
-		).toBeTruthy();
-		expect(screen.findByText(`16.87544901 ${wallet.network().coin()}`)).toBeTruthy();
+		).toBeInTheDocument();
+		expect(screen.getByText(`16.87544901 ${wallet.network().ticker()}`)).toBeInTheDocument();
 
 		votesAmountMinimumMock.mockRestore();
 	});

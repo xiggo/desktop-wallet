@@ -36,7 +36,7 @@ describe("useActiveProfile", () => {
 			},
 		);
 
-		expect(getByText(profile.name())).toBeTruthy();
+		expect(getByText(profile.name())).toBeInTheDocument();
 	});
 
 	it("should return undefined when findById throws error", () => {
@@ -62,6 +62,6 @@ describe("useActiveProfile", () => {
 			},
 		);
 
-		expect(getByText(wallet.address())).toBeTruthy();
+		expect(getByText(wallet.address())).toBeInTheDocument();
 	});
 });

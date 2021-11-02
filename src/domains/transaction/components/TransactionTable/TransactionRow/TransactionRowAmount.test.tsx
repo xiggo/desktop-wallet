@@ -8,13 +8,13 @@ describe("TransactionRowAmount", () => {
 	it("should show total", () => {
 		render(<TransactionRowAmount transaction={{ ...TransactionFixture }} />);
 
-		expect(screen.getByText("- 121 ARK")).toBeTruthy();
+		expect(screen.getByText("- 121 ARK")).toBeInTheDocument();
 	});
 
 	it("should show total as currency", () => {
 		render(<TransactionRowAmount transaction={{ ...TransactionFixture }} exchangeCurrency="BTC" />);
 
-		expect(screen.getByText("0 BTC")).toBeTruthy();
+		expect(screen.getByText("0 BTC")).toBeInTheDocument();
 	});
 
 	it("should show as received", () => {
@@ -22,7 +22,7 @@ describe("TransactionRowAmount", () => {
 			<TransactionRowAmount transaction={{ ...TransactionFixture, isSent: () => false }} />,
 		);
 
-		expect(screen.getByText("+ 121 ARK")).toBeTruthy();
+		expect(screen.getByText("+ 121 ARK")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

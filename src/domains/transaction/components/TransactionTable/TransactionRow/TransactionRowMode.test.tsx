@@ -9,7 +9,7 @@ describe("TransactionRowMode", () => {
 		render(<TransactionRowMode transaction={TransactionFixture} />);
 
 		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("sent.svg");
-		expect(screen.getByTestId("Avatar")).toBeTruthy();
+		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
 	});
 
 	it("should render sent icon", () => {

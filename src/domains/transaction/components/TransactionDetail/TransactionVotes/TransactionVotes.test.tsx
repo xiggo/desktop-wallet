@@ -17,7 +17,7 @@ describe("TransactionVotes", () => {
 	it("should render loading state", () => {
 		const { container, getByTestId } = render(<TransactionVotes isLoading={true} />);
 
-		expect(getByTestId("TransactionVotes__skeleton")).toBeTruthy();
+		expect(getByTestId("TransactionVotes__skeleton")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

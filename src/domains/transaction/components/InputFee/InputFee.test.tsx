@@ -315,7 +315,7 @@ describe("InputFee", () => {
 
 			const { asFragment } = render(<InputFee {...defaultProps} />);
 
-			expect(screen.getByTestId("AmountFiat")).toBeTruthy();
+			expect(screen.getByTestId("AmountFiat")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});

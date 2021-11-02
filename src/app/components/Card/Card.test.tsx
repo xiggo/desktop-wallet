@@ -7,7 +7,7 @@ describe("Card", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<Card />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -15,7 +15,7 @@ describe("Card", () => {
 		const handleClick = jest.fn();
 		const { container, asFragment, getByText } = render(<Card onClick={() => handleClick()}>Test</Card>);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		fireEvent.click(getByText("Test"));
 
@@ -26,7 +26,7 @@ describe("Card", () => {
 	it("should selected", () => {
 		const { container, asFragment } = render(<Card isSelected={true} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

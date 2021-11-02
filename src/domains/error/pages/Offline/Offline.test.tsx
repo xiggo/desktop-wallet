@@ -8,7 +8,7 @@ describe("Offline", () => {
 	it("should render", () => {
 		const { container, asFragment, getByTestId } = renderWithRouter(<Offline />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("Offline__text")).toHaveTextContent(translations.OFFLINE.TITLE);
 		expect(getByTestId("Offline__text")).toHaveTextContent(translations.OFFLINE.DESCRIPTION);
 		expect(asFragment()).toMatchSnapshot();

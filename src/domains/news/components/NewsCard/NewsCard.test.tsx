@@ -8,7 +8,7 @@ describe("NewsCard", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<NewsCard {...data[0]} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -17,7 +17,7 @@ describe("NewsCard", () => {
 			<NewsCard {...data[1]} coverImage="https://via.placeholder.com/150" />,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

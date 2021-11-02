@@ -7,7 +7,7 @@ describe("SelectCategory", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<SelectCategory name="category">#All</SelectCategory>);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

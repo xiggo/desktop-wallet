@@ -9,7 +9,7 @@ describe("ButtonGroup", () => {
 	it("should render", () => {
 		const { getByTestId, asFragment } = render(<ButtonGroup />);
 
-		expect(getByTestId("ButtonGroup")).toBeTruthy();
+		expect(getByTestId("ButtonGroup")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

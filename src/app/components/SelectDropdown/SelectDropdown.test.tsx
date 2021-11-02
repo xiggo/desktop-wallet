@@ -147,7 +147,7 @@ describe("SelectDropdown", () => {
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(firstOption);
@@ -165,7 +165,7 @@ describe("SelectDropdown", () => {
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.mouseDown(firstOption);
@@ -189,7 +189,7 @@ describe("SelectDropdown", () => {
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		expect(firstOption).toHaveClass("is-selected");
 	});
@@ -213,7 +213,7 @@ describe("SelectDropdown", () => {
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.mouseOver(firstOption);
@@ -262,7 +262,7 @@ describe("SelectDropdown", () => {
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
@@ -611,8 +611,8 @@ describe("SelectDropdown", () => {
 		});
 
 		expect(screen.getByTestId("select-list__input")).toHaveValue("");
-		expect(screen.getByTestId("SelectDropdown__option--0")).toBeTruthy();
-		expect(screen.getByTestId("SelectDropdown__option--1")).toBeTruthy();
-		expect(screen.getByTestId("SelectDropdown__option--2")).toBeTruthy();
+		expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectDropdown__option--1")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectDropdown__option--2")).toBeInTheDocument();
 	});
 });

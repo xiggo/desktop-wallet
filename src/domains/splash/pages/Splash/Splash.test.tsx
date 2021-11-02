@@ -11,7 +11,7 @@ describe("Splash", () => {
 		jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
 		const { container, asFragment, getByTestId } = renderWithRouter(<Splash year="2020" />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("Splash__text")).toHaveTextContent(translations.BRAND);
 		expect(getByTestId("Splash__text")).toHaveTextContent(translations.LOADING);
 
@@ -27,7 +27,7 @@ describe("Splash", () => {
 	it("should render without year", () => {
 		const { container, asFragment, getByTestId } = renderWithRouter(<Splash />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("Splash__text")).toHaveTextContent(translations.BRAND);
 		expect(getByTestId("Splash__text")).toHaveTextContent(translations.LOADING);
 

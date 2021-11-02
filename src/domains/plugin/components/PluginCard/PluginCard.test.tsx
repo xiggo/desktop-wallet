@@ -24,7 +24,7 @@ describe("PluginCard", () => {
 
 		const { asFragment } = render(<PluginCard plugin={plugin} />);
 
-		expect(screen.getByText(plugin.title)).toBeTruthy();
+		expect(screen.getByText(plugin.title)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -36,7 +36,7 @@ describe("PluginCard", () => {
 
 		const { asFragment } = render(<PluginCard plugin={plugin} showCategory={false} />);
 
-		expect(screen.getByText(plugin.title)).toBeTruthy();
+		expect(screen.getByText(plugin.title)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -166,8 +166,8 @@ describe("BlankPluginCard", () => {
 	it("should render", () => {
 		const { asFragment } = render(<BlankPluginCard />);
 
-		expect(screen.getByText(commonTranslations.AUTHOR)).toBeTruthy();
-		expect(screen.getByText(commonTranslations.NAME)).toBeTruthy();
+		expect(screen.getByText(commonTranslations.AUTHOR)).toBeInTheDocument();
+		expect(screen.getByText(commonTranslations.NAME)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -175,8 +175,8 @@ describe("BlankPluginCard", () => {
 	it("should render with name", () => {
 		const { asFragment } = render(<BlankPluginCard name="test-name" />);
 
-		expect(screen.getByText(commonTranslations.AUTHOR)).toBeTruthy();
-		expect(screen.getByText("test-name")).toBeTruthy();
+		expect(screen.getByText(commonTranslations.AUTHOR)).toBeInTheDocument();
+		expect(screen.getByText("test-name")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -184,8 +184,8 @@ describe("BlankPluginCard", () => {
 	it("should render with category", () => {
 		const { asFragment } = render(<BlankPluginCard category="other" />);
 
-		expect(screen.getByText(commonTranslations.AUTHOR)).toBeTruthy();
-		expect(screen.getByText(pluginTranslations.CATEGORIES.OTHER)).toBeTruthy();
+		expect(screen.getByText(commonTranslations.AUTHOR)).toBeInTheDocument();
+		expect(screen.getByText(pluginTranslations.CATEGORIES.OTHER)).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

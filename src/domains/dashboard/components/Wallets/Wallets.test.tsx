@@ -69,7 +69,7 @@ describe("Wallets", () => {
 	});
 
 	it("should render grid", () => {
-		const { asFragment, getAllByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -79,12 +79,12 @@ describe("Wallets", () => {
 			},
 		);
 
-		expect(getAllByTestId("WalletsGrid")).toBeTruthy();
+		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render grid in loading state", () => {
-		const { asFragment, getAllByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = renderWithRouter(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets isLoading={true} />
 			</Route>,
@@ -94,7 +94,7 @@ describe("Wallets", () => {
 			},
 		);
 
-		expect(getAllByTestId("WalletsGrid")).toBeTruthy();
+		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -140,7 +140,7 @@ describe("Wallets", () => {
 			fireEvent.click(getByTestId("LayoutControls__grid--icon"));
 		});
 
-		expect(getByTestId("WalletsGrid")).toBeTruthy();
+		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -342,7 +342,7 @@ describe("Wallets", () => {
 		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletsGrid")).toBeTruthy();
+			expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		});
 
 		expect(() => within(screen.getAllByTestId("Card")[0]).getByText(name)).toThrow();
@@ -387,7 +387,7 @@ describe("Wallets", () => {
 		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("WalletsGrid")).toBeTruthy();
+			expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		});
 
 		fireEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));

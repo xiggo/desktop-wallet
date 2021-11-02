@@ -97,7 +97,7 @@ describe("DelegateVoteAmount", () => {
 			</Wrapper>,
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -131,7 +131,7 @@ describe("DelegateVoteAmount", () => {
 
 		expect(amountField).toHaveClass("text-right");
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -15,14 +15,14 @@ describe("SideBarItem", () => {
 	it("should render", () => {
 		const { container, asFragment } = renderWithRouter(<SideBarItem {...item} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render as active", () => {
 		const { container, asFragment } = renderWithRouter(<SideBarItem {...item} isActive={true} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

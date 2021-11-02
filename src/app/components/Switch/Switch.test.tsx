@@ -27,9 +27,9 @@ describe("Switch", () => {
 	it("should render", () => {
 		const { asFragment, getByRole, getByText } = render(<Wrapper />);
 
-		expect(getByRole("checkbox")).toBeTruthy();
-		expect(getByText("Option A")).toBeTruthy();
-		expect(getByText("Option B")).toBeTruthy();
+		expect(getByRole("checkbox")).toBeInTheDocument();
+		expect(getByText("Option A")).toBeInTheDocument();
+		expect(getByText("Option B")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

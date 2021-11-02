@@ -38,14 +38,14 @@ describe("NavigationBar", () => {
 	it("should render", () => {
 		const { container, asFragment } = renderWithRouter(<NavigationBar />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render as logo-only variant", () => {
 		const { container, asFragment } = renderWithRouter(<NavigationBar variant="logo-only" />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -54,7 +54,7 @@ describe("NavigationBar", () => {
 
 		const { container, asFragment } = renderWithRouter(<NavigationBar />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		scrollSpy.mockRestore();
@@ -65,7 +65,7 @@ describe("NavigationBar", () => {
 
 		const { container, asFragment } = renderWithRouter(<NavigationBar title={title} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(container).toHaveTextContent(title);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -73,7 +73,7 @@ describe("NavigationBar", () => {
 	it("should render with custom menu", () => {
 		const { container, asFragment } = renderWithRouter(<NavigationBar />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -104,7 +104,7 @@ describe("NavigationBar", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByText("Option 1")).toBeTruthy();
+		expect(getByText("Option 1")).toBeInTheDocument();
 
 		fireEvent.click(getByText("Option 1"));
 
@@ -205,7 +205,7 @@ describe("NavigationBar", () => {
 
 		const { container, getByTestId } = renderWithRouter(<NavigationBar />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(getByTestId("navbar__buttons--send")).toHaveAttribute("disabled");
 
 		useNetworksMock.mockRestore();

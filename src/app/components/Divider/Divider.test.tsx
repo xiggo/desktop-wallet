@@ -7,7 +7,7 @@ describe("Divider", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<Divider />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

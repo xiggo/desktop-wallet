@@ -26,12 +26,12 @@ describe("useQueryParams hook", () => {
 			</Route>,
 		);
 
-		expect(getByTestId("header_test")).toBeTruthy();
+		expect(getByTestId("header_test")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(getByTestId("header_test"));
 		});
 
-		expect(getByText("useQueryParams Test Component")).toBeTruthy();
+		expect(getByText("useQueryParams Test Component")).toBeInTheDocument();
 	});
 });

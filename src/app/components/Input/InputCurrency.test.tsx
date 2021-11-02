@@ -7,7 +7,7 @@ describe("InputCurrency", () => {
 	it("should render", () => {
 		const { getByTestId, asFragment } = render(<InputCurrency />);
 
-		expect(getByTestId("InputCurrency")).toBeTruthy();
+		expect(getByTestId("InputCurrency")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

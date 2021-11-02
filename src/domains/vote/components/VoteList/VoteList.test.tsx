@@ -35,21 +35,21 @@ describe("VoteList", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(<VoteList votes={votes} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render vote amount", () => {
 		const { container, asFragment } = render(<VoteList votes={votesWithAmount} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with empty list", () => {
 		const { container, asFragment } = render(<VoteList votes={[]} />);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

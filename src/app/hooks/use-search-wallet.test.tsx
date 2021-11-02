@@ -51,7 +51,7 @@ describe("useSearchWallet", () => {
 
 			const { filteredList } = current;
 
-			expect(defaultList.length === filteredList.length).toBeTruthy();
+			expect(defaultList).toHaveLength(filteredList.length);
 		},
 	);
 

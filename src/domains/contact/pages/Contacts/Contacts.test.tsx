@@ -40,7 +40,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
 
-		expect(screen.getByTestId("ContactList")).toBeTruthy();
+		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 		expect(() => screen.getByTestId("EmptyBlock")).toThrow(/Unable to find an element by/);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -61,7 +61,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
 
-		expect(screen.getByTestId("ContactList")).toBeTruthy();
+		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 		expect(screen.getByTestId("TableRow")).toHaveTextContent(address.address());
 		expect(() => screen.getByTestId("EmptyBlock")).toThrow(/Unable to find an element by/);
@@ -82,7 +82,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
 
 		expect(() => screen.getByTestId("ContactList")).toThrow(/Unable to find an element by/);
-		expect(screen.getByTestId("EmptyBlock")).toBeTruthy();
+		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -177,7 +177,7 @@ describe("Contacts", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeTruthy();
+			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 		});
 
 		const firstContactOptionsDropdown = within(screen.getByTestId("ContactList")).getAllByTestId(
@@ -186,14 +186,14 @@ describe("Contacts", () => {
 		fireEvent.click(firstContactOptionsDropdown);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("dropdown__options")).toBeTruthy();
+			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
 		});
 
 		const deleteOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.DELETE);
 		fireEvent.click(deleteOption);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
@@ -212,7 +212,7 @@ describe("Contacts", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeTruthy();
+			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 		});
 
 		const firstContactOptionsDropdown = within(screen.getByTestId("ContactList")).getAllByTestId(
@@ -221,14 +221,14 @@ describe("Contacts", () => {
 		fireEvent.click(firstContactOptionsDropdown);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("dropdown__options")).toBeTruthy();
+			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
 		});
 
 		const deleteOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.DELETE);
 		fireEvent.click(deleteOption);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		fireEvent.click(screen.getByTestId(buttonId));
@@ -254,7 +254,7 @@ describe("Contacts", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeTruthy();
+			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 		});
 
 		const firstContactOptionsDropdown = within(screen.getByTestId("ContactList")).getAllByTestId(
@@ -263,14 +263,14 @@ describe("Contacts", () => {
 		fireEvent.click(firstContactOptionsDropdown);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("dropdown__options")).toBeTruthy();
+			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
 		});
 
 		const editOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.EDIT);
 		fireEvent.click(editOption);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("modal__inner")).toBeTruthy();
+			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
 		fireEvent.click(screen.getByTestId("contact-form__delete-btn"));
@@ -302,7 +302,7 @@ describe("Contacts", () => {
 		renderComponent();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ContactList")).toBeTruthy();
+			expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 		});
 
 		fireEvent.click(screen.getAllByTestId("ContactListItem__send-button")[0]);
@@ -327,7 +327,7 @@ describe("Contacts", () => {
 		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeTruthy(),
+			expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeInTheDocument(),
 		);
 
 		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {
@@ -360,7 +360,7 @@ describe("Contacts", () => {
 		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeTruthy(),
+			expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeInTheDocument(),
 		);
 
 		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {
@@ -400,7 +400,7 @@ describe("Contacts", () => {
 		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeTruthy(),
+			expect(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input")).toBeInTheDocument(),
 		);
 
 		fireEvent.input(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), {

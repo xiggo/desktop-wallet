@@ -38,7 +38,7 @@ describe("Password Settings", () => {
 
 		await findByTestId("Password-settings__input--password_1");
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -53,7 +53,7 @@ describe("Password Settings", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
@@ -94,7 +94,7 @@ describe("Password Settings", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await act(async () => {
 			fireEvent.click(await findByTestId("side-menu__item--password"));
@@ -144,7 +144,7 @@ describe("Password Settings", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await act(async () => {
 			fireEvent.click(await findByTestId("side-menu__item--password"));
@@ -197,7 +197,7 @@ describe("Password Settings", () => {
 			},
 		);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 
 		await act(async () => {
 			fireEvent.click(await findByTestId("side-menu__item--password"));

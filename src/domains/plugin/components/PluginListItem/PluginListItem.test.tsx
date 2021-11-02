@@ -296,7 +296,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		expect(getByText("shield-check-mark.svg")).toBeTruthy();
+		expect(getByText("shield-check-mark.svg")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

@@ -27,7 +27,7 @@ describe("NetworkIcon", () => {
 		const { getByTestId } = render(<NetworkOption network={network} />, {});
 
 		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
-		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 	});
 
 	it("should call onClick callback", () => {
@@ -36,7 +36,7 @@ describe("NetworkIcon", () => {
 		const { getByTestId } = render(<NetworkOption network={network} onClick={onClick} />, {});
 
 		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
-		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
 		fireEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
 
@@ -49,7 +49,7 @@ describe("NetworkIcon", () => {
 		const { getByTestId } = render(<NetworkOption network={network} onClick={onClick} disabled />, {});
 
 		expect(getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
-		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
 		fireEvent.click(getByTestId("SelectNetwork__NetworkIcon--container"));
 
@@ -60,7 +60,7 @@ describe("NetworkIcon", () => {
 		const { getByTestId, asFragment } = render(<NetworkOption network={networkTestnet} />, {});
 
 		expect(getByTestId("NetworkIcon-ARK-ark.devnet")).toHaveAttribute("aria-label", networkTestnet.displayName());
-		expect(getByTestId("NetworkIcon__icon")).toBeTruthy();
+		expect(getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 		expect(asFragment).toMatchSnapshot();
 	});
 });

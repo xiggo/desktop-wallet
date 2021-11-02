@@ -127,7 +127,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendIpfs__review-step")).toBeTruthy();
+		expect(screen.getByTestId("SendIpfs__review-step")).toBeInTheDocument();
 		expect(container).toHaveTextContent(wallet.network().name());
 		expect(container).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		expect(container).toHaveTextContent("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -449,7 +449,7 @@ describe("SendIpfs", () => {
 
 		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
-		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeTruthy();
+		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
 		fireEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 		await screen.findByTestId("SendIpfs__form-step");

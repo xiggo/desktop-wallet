@@ -37,7 +37,7 @@ describe("useDeeplink hook", () => {
 			</Route>,
 		);
 
-		expect(getByText("Deeplink tester")).toBeTruthy();
+		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
 	});
 
@@ -58,7 +58,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeTruthy();
+		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE);
 		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
 	});
@@ -82,7 +82,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeTruthy();
+		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenLastCalledWith('Invalid URI: Coin "doge" not supported.');
 		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
 	});
@@ -106,7 +106,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeTruthy();
+		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" not supported.');
 		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
 	});
@@ -130,7 +130,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeTruthy();
+		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenCalledWith(
 			'Invalid URI: The current profile has no wallets available for the "ark.mainnet" network',
 		);
@@ -160,7 +160,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeTruthy();
+		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(history.location.pathname).toEqual(`/profiles/${getDefaultProfileId()}/send-transfer`);
 		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
 	});
@@ -185,7 +185,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeTruthy();
+		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(history.location.pathname).toEqual("/");
 		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
 	});
@@ -204,7 +204,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(getByText("Deeplink tester")).toBeTruthy();
+		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
 	});
 });

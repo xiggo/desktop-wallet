@@ -18,7 +18,7 @@ describe("PluginManagerNavigationBar", () => {
 	it("should render", () => {
 		const { asFragment, getByTestId } = render(<PluginManagerNavigationBar menu={menu} />);
 
-		expect(getByTestId("PluginManagerNavigationBar")).toBeTruthy();
+		expect(getByTestId("PluginManagerNavigationBar")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

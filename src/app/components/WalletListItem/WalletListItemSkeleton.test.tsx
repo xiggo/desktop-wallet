@@ -13,7 +13,7 @@ describe("WalletListItemSkeleton", () => {
 			</table>,
 		);
 
-		expect(getByTestId("WalletListSkeleton")).toBeTruthy();
+		expect(getByTestId("WalletListSkeleton")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 });

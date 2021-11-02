@@ -31,7 +31,7 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__Verified")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__Verified")).toBeInTheDocument();
 		expect(screen.getByTestId("WalletIcon__Verified")).toHaveTextContent("user-check-mark.svg");
 
 		walletSpy.mockRestore();
@@ -42,7 +42,7 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__Ledger")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__Ledger")).toBeInTheDocument();
 		expect(screen.getByTestId("WalletIcon__Ledger")).toHaveTextContent("ledger.svg");
 
 		walletSpy.mockRestore();
@@ -54,7 +54,7 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__SecondSignature")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__SecondSignature")).toBeInTheDocument();
 
 		walletSpy.mockRestore();
 		hasSyncedWithNetworkSpy.mockRestore();
@@ -65,7 +65,7 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__Starred")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__Starred")).toBeInTheDocument();
 		expect(screen.getByTestId("WalletIcon__Starred")).toHaveTextContent("star-filled.svg");
 
 		walletSpy.mockRestore();
@@ -77,7 +77,7 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__Multisignature")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__Multisignature")).toBeInTheDocument();
 		expect(screen.getByTestId("WalletIcon__Multisignature")).toHaveTextContent("multisignature.svg");
 
 		hasSyncedWithNetworkSpy.mockRestore();
@@ -89,7 +89,7 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} />);
 
-		expect(screen.getByTestId("WalletIcon__TestNetwork")).toBeTruthy();
+		expect(screen.getByTestId("WalletIcon__TestNetwork")).toBeInTheDocument();
 		expect(screen.getByTestId("WalletIcon__TestNetwork")).toHaveTextContent("code.svg");
 
 		walletSpy.mockRestore();

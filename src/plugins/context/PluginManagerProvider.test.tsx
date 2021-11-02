@@ -246,7 +246,7 @@ describe("PluginManagerProvider", () => {
 			}),
 		);
 
-		await waitFor(() => expect(manager.plugins().findById("test-plugin")).toBeTruthy());
+		expect(manager.plugins().findById("test-plugin")).not.toBeUndefined();
 
 		ipcRendererSpy.mockRestore();
 	});
@@ -790,7 +790,7 @@ describe("PluginManagerProvider", () => {
 			),
 		);
 
-		expect(screen.getAllByText("Updated failed")).toBeTruthy();
+		expect(screen.getByText("Updated failed")).toBeInTheDocument();
 
 		ipcRendererSpy.mockRestore();
 		jest.useRealTimers();

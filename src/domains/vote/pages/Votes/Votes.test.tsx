@@ -94,7 +94,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		const { asFragment, container } = renderPage(route);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await screen.findByTestId("DelegateRow__toggle-0");
@@ -111,7 +111,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		const { asFragment, container } = renderPage(route);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await screen.findByTestId("DelegateRow__toggle-0");
@@ -126,7 +126,7 @@ describe("Votes", () => {
 		const routePath = "/profiles/:profileId/votes";
 		const { asFragment, container } = renderPage(route, routePath);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 		expect(screen.queryByTestId("HeaderSearchBar__button")).not.toBeInTheDocument();
 
@@ -140,7 +140,7 @@ describe("Votes", () => {
 		const routePath = "/profiles/:profileId/votes";
 		const { asFragment, container } = renderPage(route, routePath);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
 		await screen.findByTestId("AddressRow__select-0");
@@ -171,7 +171,7 @@ describe("Votes", () => {
 		const routePath = "/profiles/:profileId/votes";
 		const { asFragment, container } = renderPage(route, routePath);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
 		await screen.findByTestId("AddressRow__select-0");
@@ -205,7 +205,7 @@ describe("Votes", () => {
 		const routePath = "/profiles/:profileId/votes";
 		const { asFragment, container } = renderPage(route, routePath);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
 		await screen.findByTestId("AddressRow__select-0");
@@ -253,7 +253,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		const { asFragment, container } = renderPage(route);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await screen.findByTestId("DelegateRow__toggle-0");
@@ -600,7 +600,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 		const { asFragment, container } = renderPage(route);
 
-		expect(container).toBeTruthy();
+		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await screen.findByTestId("DelegateRow__toggle-0");

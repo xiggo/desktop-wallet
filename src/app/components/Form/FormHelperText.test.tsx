@@ -12,7 +12,7 @@ describe("FormHelperText", () => {
 			<FormHelperText errorMessage={errorMessage}>{hintMessage}</FormHelperText>,
 		);
 
-		expect(queryByText(hintMessage)).toBeTruthy();
+		expect(queryByText(hintMessage)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -32,7 +32,7 @@ describe("FormHelperText", () => {
 			</FormHelperText>,
 		);
 
-		expect(queryByText(errorMessage)).toBeTruthy();
+		expect(queryByText(errorMessage)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -55,6 +55,6 @@ describe("FormHelperText", () => {
 		);
 		const { queryByText } = render(tree);
 
-		expect(queryByText(context.errorMessage)).toBeTruthy();
+		expect(queryByText(context.errorMessage)).toBeInTheDocument();
 	});
 });

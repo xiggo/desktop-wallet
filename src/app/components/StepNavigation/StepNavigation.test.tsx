@@ -14,14 +14,14 @@ describe("StepNavigation", () => {
 	it("should render back to wallet button if on last step", () => {
 		const { asFragment } = render(<StepNavigation activeIndex={1} size={1} />);
 
-		expect(screen.getByTestId("StepNavigation__back-to-wallet-button")).toBeTruthy();
+		expect(screen.getByTestId("StepNavigation__back-to-wallet-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render back button if not on last step", () => {
 		const { asFragment } = render(<StepNavigation activeIndex={1} size={2} />);
 
-		expect(screen.getByTestId("StepNavigation__back-button")).toBeTruthy();
+		expect(screen.getByTestId("StepNavigation__back-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -35,7 +35,7 @@ describe("StepNavigation", () => {
 	it("should render continue button if not on last two steps", () => {
 		const { asFragment } = render(<StepNavigation activeIndex={1} size={3} />);
 
-		expect(screen.getByTestId("StepNavigation__continue-button")).toBeTruthy();
+		expect(screen.getByTestId("StepNavigation__continue-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

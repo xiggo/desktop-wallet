@@ -25,7 +25,7 @@ describe("ConfirmSendTransaction", () => {
 			<ConfirmSendTransaction isOpen={true} profile={profile} unconfirmedTransactions={[]} />,
 		);
 
-		expect(screen.getByTestId("modal__inner")).toBeTruthy();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -40,7 +40,7 @@ describe("ConfirmSendTransaction", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("modal__inner")).toBeTruthy();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
@@ -55,7 +55,7 @@ describe("ConfirmSendTransaction", () => {
 			<ConfirmSendTransaction isOpen={true} profile={profile} unconfirmedTransactions={[]} onClose={onCancel} />,
 		);
 
-		expect(screen.getByTestId("modal__inner")).toBeTruthy();
+		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));

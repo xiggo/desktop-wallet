@@ -2,7 +2,7 @@ import { act } from "@testing-library/react-hooks";
 import { Dropdown, DropdownOptionGroup } from "app/components/Dropdown";
 import { clickOutsideHandler } from "app/hooks/click-outside";
 import React from "react";
-import { fireEvent, render, screen } from "testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 const options = [
 	{ label: "Option 1", value: "1" },
@@ -32,7 +32,7 @@ describe("Dropdown", () => {
 		const { container, getByTestId } = render(<Dropdown />);
 
 		expect(container).toMatchSnapshot();
-		expect(getByTestId("dropdown__toggle")).toBeTruthy();
+		expect(getByTestId("dropdown__toggle")).toBeInTheDocument();
 	});
 
 	it("should render with options", () => {
@@ -72,11 +72,11 @@ describe("Dropdown", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
 		const firstOption = getByTestId("dropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(firstOption);
@@ -94,11 +94,11 @@ describe("Dropdown", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
 		const firstOption = getByTestId("dropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.keyDown(firstOption, { code: 13, key: "Enter" });
@@ -116,11 +116,11 @@ describe("Dropdown", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
 		const firstOption = getByTestId("dropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.keyDown(firstOption, { key: " ", keyCode: 32 });
@@ -137,11 +137,11 @@ describe("Dropdown", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
 		const firstOption = getByTestId("dropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.click(firstOption);
@@ -168,15 +168,15 @@ describe("Dropdown", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
 		const firstOption = getByTestId("dropdown__option--0");
 
-		expect(firstOption).toBeTruthy();
+		expect(firstOption).toBeInTheDocument();
 
 		const outsideElement = getByTestId("dropdown__outside");
 
-		expect(outsideElement).toBeTruthy();
+		expect(outsideElement).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.mouseDown(outsideElement);
@@ -193,7 +193,7 @@ describe("Dropdown", () => {
 			fireEvent.click(toggle);
 		});
 
-		expect(getByTestId("dropdown__content")).toBeTruthy();
+		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
 		act(() => {
 			fireEvent.keyDown(toggle, { key: "Escape", keyCode: 27 });

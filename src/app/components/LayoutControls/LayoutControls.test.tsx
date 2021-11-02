@@ -8,8 +8,8 @@ describe("LayoutControls", () => {
 	it("should render", () => {
 		const { asFragment, getByTestId } = render(<LayoutControls />);
 
-		expect(getByTestId("LayoutControls__grid")).toBeTruthy();
-		expect(getByTestId("LayoutControls__list")).toBeTruthy();
+		expect(getByTestId("LayoutControls__grid")).toBeInTheDocument();
+		expect(getByTestId("LayoutControls__list")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
