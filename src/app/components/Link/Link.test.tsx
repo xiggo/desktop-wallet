@@ -1,20 +1,20 @@
 import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
-import { act, fireEvent, renderWithRouter } from "testing-library";
+import { act, fireEvent, render } from "testing-library";
 
 import { Link } from "./Link";
 
 describe("Link", () => {
 	it("should render", () => {
-		const { asFragment, getByTestId } = renderWithRouter(<Link to="/test">Test</Link>);
+		const { asFragment, getByTestId } = render(<Link to="/test">Test</Link>);
 
 		expect(getByTestId("Link")).toHaveTextContent("Test");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render external", () => {
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId } = render(
 			<Link to="https://payvo.com/" isExternal>
 				ARK.io
 			</Link>,
@@ -25,7 +25,7 @@ describe("Link", () => {
 	});
 
 	it("should render external without children", () => {
-		const { asFragment, getByTestId } = renderWithRouter(<Link to="https://payvo.com" isExternal />);
+		const { asFragment, getByTestId } = render(<Link to="https://payvo.com" isExternal />);
 
 		expect(getByTestId("Link__external")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -36,7 +36,7 @@ describe("Link", () => {
 
 		const externalLink = "https://payvo.com/";
 
-		const { asFragment, getByTestId } = renderWithRouter(<Link to={externalLink} isExternal />);
+		const { asFragment, getByTestId } = render(<Link to={externalLink} isExternal />);
 
 		act(() => {
 			fireEvent.click(getByTestId("Link"));
@@ -51,7 +51,7 @@ describe("Link", () => {
 
 		const toastSpy = jest.spyOn(toasts, "error");
 
-		const { asFragment, getByTestId } = renderWithRouter(<Link to={externalLink} isExternal />);
+		const { asFragment, getByTestId } = render(<Link to={externalLink} isExternal />);
 
 		act(() => {
 			fireEvent.click(getByTestId("Link"));
@@ -62,7 +62,7 @@ describe("Link", () => {
 	});
 
 	it("should render with tooltip", () => {
-		const { asFragment, baseElement, getByTestId } = renderWithRouter(
+		const { asFragment, baseElement, getByTestId } = render(
 			<Link to="/test" tooltip="Custom Tooltip">
 				Test
 			</Link>,

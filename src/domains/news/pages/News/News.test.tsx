@@ -9,7 +9,7 @@ import { Route } from "react-router-dom";
 import filteredFixture from "tests/fixtures/news/filtered.json";
 import page1Fixture from "tests/fixtures/news/page-1.json";
 import page2Fixture from "tests/fixtures/news/page-2.json";
-import { fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor, within } from "utils/testing-library";
+import { fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
 import { News } from "./News";
 
@@ -22,7 +22,7 @@ jest.setTimeout(30_000);
 
 describe("News", () => {
 	const renderPage = () =>
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/news">
 				<News />
 			</Route>,

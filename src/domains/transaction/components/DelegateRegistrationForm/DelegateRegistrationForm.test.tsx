@@ -16,7 +16,6 @@ import {
 	MNEMONICS,
 	render,
 	RenderResult,
-	renderWithRouter,
 	syncDelegates,
 	waitFor,
 } from "utils/testing-library";
@@ -52,7 +51,7 @@ const renderComponent = (properties?: any) => {
 		);
 	};
 
-	const renderResult: RenderResult = renderWithRouter(
+	const renderResult: RenderResult = render(
 		<Route path="/profiles/:profileId">
 			<Component />
 		</Route>,

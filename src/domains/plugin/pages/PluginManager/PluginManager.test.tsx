@@ -15,7 +15,7 @@ import {
 	fireEvent,
 	getDefaultProfileId,
 	pluginManager,
-	renderWithRouter,
+	render,
 	screen,
 	waitFor,
 	within,
@@ -49,7 +49,7 @@ describe("PluginManager", () => {
 	it.each([true, false])("should render when useExpandedTables = %s", async (isExpandedTables: boolean) => {
 		const profileAppearanceMock = jest.spyOn(profile.appearance(), "get").mockReturnValue(isExpandedTables);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -76,7 +76,7 @@ describe("PluginManager", () => {
 	});
 
 	it("should toggle between list and grid on latest", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -114,7 +114,7 @@ describe("PluginManager", () => {
 	});
 
 	it("should toggle between list and grid on all", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -152,7 +152,7 @@ describe("PluginManager", () => {
 	it("should toggle between list and grid on a category tab", async () => {
 		const category = "utility";
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -202,7 +202,7 @@ describe("PluginManager", () => {
 			return plugin;
 		});
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -233,7 +233,7 @@ describe("PluginManager", () => {
 	});
 
 	it.skip("should download & install plugin on latest", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -275,7 +275,7 @@ describe("PluginManager", () => {
 			.spyOn(profile, "hasAcceptedManualInstallationDisclaimer")
 			.mockReturnValue(false);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -307,7 +307,7 @@ describe("PluginManager", () => {
 			.spyOn(profile, "hasAcceptedManualInstallationDisclaimer")
 			.mockReturnValue(false);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -350,7 +350,7 @@ describe("PluginManager", () => {
 			.spyOn(profile, "hasAcceptedManualInstallationDisclaimer")
 			.mockReturnValue(false);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -383,7 +383,7 @@ describe("PluginManager", () => {
 			.get("/arkecosystem/test-plugin/raw/master/package.json")
 			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin" });
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<PluginManager />
 			</Route>,
@@ -423,7 +423,7 @@ describe("PluginManager", () => {
 	});
 
 	it("should cancel install plugin", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -453,7 +453,7 @@ describe("PluginManager", () => {
 	});
 
 	it("should search for plugin", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -501,7 +501,7 @@ describe("PluginManager", () => {
 			}
 		});
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -541,7 +541,7 @@ describe("PluginManager", () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockRejectedValue("Failed");
 		const toastSpy = jest.spyOn(toasts, "error");
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -581,7 +581,7 @@ describe("PluginManager", () => {
 	});
 
 	it("should select plugin on latest grids", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -613,7 +613,7 @@ describe("PluginManager", () => {
 
 		plugin.enable(profile, { autoRun: true });
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -645,7 +645,7 @@ describe("PluginManager", () => {
 		const plugin = new PluginController({ name: "test-plugin" }, onEnabled);
 		pluginManager.plugins().push(plugin);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -683,7 +683,7 @@ describe("PluginManager", () => {
 		const plugin = new PluginController({ name: "test-plugin" }, { incompatible: true });
 		pluginManager.plugins().push(plugin);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -719,7 +719,7 @@ describe("PluginManager", () => {
 		pluginManager.plugins().push(plugin);
 		plugin.enable(profile);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -757,7 +757,7 @@ describe("PluginManager", () => {
 		);
 		pluginManager.plugins().push(plugin);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -797,7 +797,7 @@ describe("PluginManager", () => {
 		const plugin = new PluginController({ name: "test-plugin" }, onEnabled);
 		pluginManager.plugins().push(plugin);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -835,7 +835,7 @@ describe("PluginManager", () => {
 		const plugin = new PluginController({ name: "test-plugin" }, onEnabled);
 		pluginManager.plugins().push(plugin);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -874,7 +874,7 @@ describe("PluginManager", () => {
 		);
 		pluginManager.plugins().push(plugin);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -901,7 +901,7 @@ describe("PluginManager", () => {
 		);
 		pluginManager.plugins().push(plugin);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -960,7 +960,7 @@ describe("PluginManager", () => {
 			.plugins()
 			.push(new PluginController({ name: "@payvo/ark-explorer-wallet-plugin", version: "0.0.1" }, () => void 0));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,
@@ -996,7 +996,7 @@ describe("PluginManager", () => {
 		);
 		pluginManager.plugins().push(plugin);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins">
 				<Component />
 			</Route>,

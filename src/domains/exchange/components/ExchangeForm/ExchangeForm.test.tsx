@@ -8,16 +8,7 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
-import {
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	render,
-	renderWithRouter,
-	screen,
-	waitFor,
-	within,
-} from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
@@ -79,7 +70,7 @@ describe("ExchangeForm", () => {
 	});
 
 	const renderComponent = (component: React.ReactNode) =>
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/exchange/view">
 				<ExchangeProvider>
 					<Wrapper>{component}</Wrapper>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { getDefaultProfileId, render, renderWithRouter } from "utils/testing-library";
+import { getDefaultProfileId, render } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { LegacyMagistrateDetail } from "./LegacyMagistrateDetail";
@@ -19,7 +19,7 @@ describe("LegacyMagistrateDetail", () => {
 	});
 
 	it("should render a legacy magistrate modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<LegacyMagistrateDetail
 					isOpen={true}

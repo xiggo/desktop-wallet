@@ -5,17 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import {
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	MNEMONICS,
-	render,
-	renderWithRouter,
-	screen,
-	waitFor,
-	within,
-} from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "utils/testing-library";
 
 import { AddRecipient } from "./AddRecipient";
 
@@ -43,7 +33,7 @@ const renderWithFormProvider = (children: any, defaultValues?: any) => {
 		return <FormProvider {...form}>{children}</FormProvider>;
 	};
 
-	return renderWithRouter(<Wrapper />);
+	return render(<Wrapper />);
 };
 
 describe("AddRecipient", () => {

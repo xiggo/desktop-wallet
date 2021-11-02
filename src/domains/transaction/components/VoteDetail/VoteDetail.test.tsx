@@ -5,7 +5,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, renderWithRouter, syncDelegates, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { VoteDetail } from "./VoteDetail";
@@ -50,7 +50,7 @@ describe("VoteDetail", () => {
 	});
 
 	it("should not render if not open", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail isOpen={false} transaction={TransactionFixture} />
 			</Route>,
@@ -66,7 +66,7 @@ describe("VoteDetail", () => {
 	});
 
 	it("should render a modal with votes", async () => {
-		const { asFragment, getByTestId, findByText } = renderWithRouter(
+		const { asFragment, getByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}
@@ -94,7 +94,7 @@ describe("VoteDetail", () => {
 	});
 
 	it("should render a modal with unvotes", async () => {
-		const { asFragment, getByTestId, findByText } = renderWithRouter(
+		const { asFragment, getByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}
@@ -122,7 +122,7 @@ describe("VoteDetail", () => {
 	});
 
 	it("should render a modal with votes and unvotes", async () => {
-		const { asFragment, getByTestId, getAllByText, findByText } = renderWithRouter(
+		const { asFragment, getByTestId, getAllByText, findByText } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<VoteDetail
 					isOpen={true}

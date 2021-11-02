@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, renderWithRouter, screen, syncDelegates, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "utils/testing-library";
 
 import { AddressTable } from "./AddressTable";
 
@@ -30,7 +30,7 @@ describe("AddressTable", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment, container } = renderWithRouter(
+		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId">
 				<AddressTable wallets={[wallet]} />
 			</Route>,
@@ -48,7 +48,7 @@ describe("AddressTable", () => {
 
 	it("should render when the maximum votes is greater than 1", () => {
 		const maxVotesMock = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(10);
-		const { asFragment, container } = renderWithRouter(
+		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId">
 				<AddressTable wallets={[wallet]} />
 			</Route>,
@@ -68,7 +68,7 @@ describe("AddressTable", () => {
 			throw new Error("error");
 		});
 
-		const { asFragment, container, getByTestId } = renderWithRouter(
+		const { asFragment, container, getByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<AddressTable wallets={[wallet]} />
 			</Route>,

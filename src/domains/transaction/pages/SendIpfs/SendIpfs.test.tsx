@@ -16,8 +16,8 @@ import {
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
 	MNEMONICS,
+	render,
 	renderWithForm,
-	renderWithRouter,
 	screen,
 	syncFees,
 	waitFor,
@@ -185,7 +185,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -239,7 +239,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -332,7 +332,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -413,7 +413,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -461,7 +461,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -509,7 +509,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -579,7 +579,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -608,7 +608,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -682,7 +682,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -715,7 +715,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/transactions/:walletId/ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -820,7 +820,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/transactions/:walletId/ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />
@@ -919,7 +919,7 @@ describe("SendIpfs", () => {
 
 		history.push(ipfsURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 				<LedgerProvider transport={transport}>
 					<SendIpfs />

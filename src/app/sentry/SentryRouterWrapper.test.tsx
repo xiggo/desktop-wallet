@@ -5,7 +5,7 @@ import * as Sentry from "@sentry/react";
 import { LedgerProvider } from "app/contexts";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, getDefaultWalletId, renderWithRouter, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
 
 import { SentryProvider } from "./SentryProvider";
 import { SentryRouterWrapper } from "./SentryRouterWrapper";
@@ -29,7 +29,7 @@ describe("Sentry Router Wrapper", () => {
 	it("should stop sentry if no profile found", () => {
 		const sentryInitSpy = jest.spyOn(Sentry, "init").mockImplementation();
 
-		renderWithRouter(
+		render(
 			<Route path="/profile/create">
 				<LedgerProvider transport={transport}>
 					<SentryProvider>
@@ -51,7 +51,7 @@ describe("Sentry Router Wrapper", () => {
 		let calledOptions;
 		jest.spyOn(Sentry, "init").mockImplementation((value) => (calledOptions = value));
 
-		renderWithRouter(
+		render(
 			<Route path="/profile/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<SentryProvider>
@@ -77,7 +77,7 @@ describe("Sentry Router Wrapper", () => {
 
 		profile.settings().set(Contracts.ProfileSetting.ErrorReporting, true);
 
-		renderWithRouter(
+		render(
 			<Route path="/profile/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<SentryProvider>
@@ -121,7 +121,7 @@ describe("Sentry Router Wrapper", () => {
 			</>
 		);
 
-		const { rerender } = renderWithRouter(<Component />, {
+		const { rerender } = render(<Component />, {
 			routes: [`/profile/${profile.id()}/dashboard`],
 		});
 
@@ -135,7 +135,7 @@ describe("Sentry Router Wrapper", () => {
 	it("should register current wallet context", async () => {
 		const setContextSpy = jest.spyOn(Sentry, "setContext").mockImplementation();
 
-		renderWithRouter(
+		render(
 			<Route path="/profile/:profileId/dashboard/wallet/:walletId">
 				<LedgerProvider transport={transport}>
 					<SentryProvider>
@@ -162,7 +162,7 @@ describe("Sentry Router Wrapper", () => {
 	it("should clear wallet context if it does not exist", async () => {
 		const setContextSpy = jest.spyOn(Sentry, "setContext").mockImplementation();
 
-		renderWithRouter(
+		render(
 			<Route path="/profile/:profileId/dashboard/wallet/:walletId">
 				<LedgerProvider transport={transport}>
 					<SentryProvider>
@@ -183,7 +183,7 @@ describe("Sentry Router Wrapper", () => {
 	it("should clear profile context if it does not exist", async () => {
 		const setContextSpy = jest.spyOn(Sentry, "setContext").mockImplementation();
 
-		renderWithRouter(
+		render(
 			<Route path="/profile/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<SentryProvider>

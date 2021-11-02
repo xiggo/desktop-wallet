@@ -7,16 +7,7 @@ import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 import multiSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import { TransactionFees } from "types";
-import {
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	render,
-	renderWithRouter,
-	screen,
-	syncFees,
-	waitFor,
-} from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "utils/testing-library";
 
 import { translations as transactionTranslations } from "../../i18n";
 import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
@@ -72,7 +63,7 @@ describe("MultiSignature Registration Form", () => {
 			);
 		};
 
-		const renderResult: RenderResult = renderWithRouter(
+		const renderResult: RenderResult = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,

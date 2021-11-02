@@ -10,7 +10,7 @@ import {
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
-	renderWithRouter,
+	render,
 	screen,
 	syncDelegates,
 	waitFor,
@@ -222,7 +222,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => false);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -247,7 +247,7 @@ describe("MultiSignatureDetail", () => {
 
 		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => false);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -269,7 +269,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => false);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail
@@ -296,7 +296,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => false);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail
@@ -324,7 +324,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => false);
 		jest.spyOn(fixtures.vote, "type").mockReturnValue("vote");
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.vote} wallet={wallet} isOpen />
@@ -349,7 +349,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => false);
 		jest.spyOn(fixtures.unvote, "type").mockReturnValue("unvote");
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.unvote} wallet={wallet} isOpen />
@@ -373,7 +373,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => false);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.ipfs} wallet={wallet} isOpen />
@@ -399,7 +399,7 @@ describe("MultiSignatureDetail", () => {
 		// @ts-ignore
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(void 0);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -432,7 +432,7 @@ describe("MultiSignatureDetail", () => {
 		// @ts-ignore
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(void 0);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -465,7 +465,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => false);
 		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -489,7 +489,7 @@ describe("MultiSignatureDetail", () => {
 
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockRejectedValue(new Error("Failed"));
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -518,7 +518,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => false);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -552,7 +552,7 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 
 		const onClose = jest.fn();
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail
@@ -582,7 +582,7 @@ describe("MultiSignatureDetail", () => {
 		mockPendingTransfers(wallet);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -622,7 +622,7 @@ describe("MultiSignatureDetail", () => {
 			return { unsubscribe };
 		});
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={transport}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -687,7 +687,7 @@ describe("MultiSignatureDetail", () => {
 			return { unsubscribe };
 		});
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={transport}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -754,7 +754,7 @@ describe("MultiSignatureDetail", () => {
 			return { unsubscribe };
 		});
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={transport}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -821,7 +821,7 @@ describe("MultiSignatureDetail", () => {
 			return { unsubscribe };
 		});
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={transport}>
 					<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
@@ -901,7 +901,7 @@ describe("MultiSignatureDetail", () => {
 			observer = obv;
 			return { unsubscribe };
 		});
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={transport}>
 					<MultiSignatureDetail
@@ -1010,7 +1010,7 @@ describe("MultiSignatureDetail", () => {
 			observer = obv;
 			return { unsubscribe };
 		});
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider transport={transport}>
 					<MultiSignatureDetail

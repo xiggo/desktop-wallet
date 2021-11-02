@@ -25,7 +25,7 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
-	renderWithRouter,
+	render,
 	syncDelegates,
 	syncFees,
 	waitFor,
@@ -127,7 +127,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -173,7 +173,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -228,7 +228,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -299,7 +299,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -435,7 +435,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -557,7 +557,7 @@ describe("SendVote", () => {
 			}),
 		);
 
-		const { container, getByTestId, findByTestId } = renderWithRouter(
+		const { container, getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<FormProvider {...form.current}>
 					<LedgerProvider transport={transport}>
@@ -655,7 +655,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { getByTestId, getByText, getAllByTestId, findAllByTestId } = renderWithRouter(
+		const { getByTestId, getByText, getAllByTestId, findAllByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -717,7 +717,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -794,7 +794,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { container, getByTestId, findByTestId } = renderWithRouter(
+		const { container, getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -872,7 +872,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { getByTestId, getByText, findByTestId } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -932,7 +932,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { getByTestId, getByText, findByTestId } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -992,7 +992,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -1054,7 +1054,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { container, getByTestId, findByTestId } = renderWithRouter(
+		const { container, getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -1137,7 +1137,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -1235,7 +1235,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider transport={transport}>
 					<SendVote />
@@ -1338,7 +1338,7 @@ describe("SendVote", () => {
 			}),
 		);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<FormProvider {...form.current}>
 					<LedgerProvider transport={transport}>

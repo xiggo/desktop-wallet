@@ -1,20 +1,20 @@
 import { createMemoryHistory } from "history";
 import React from "react";
-import { act, fireEvent, renderWithRouter } from "utils/testing-library";
+import { act, fireEvent, render } from "utils/testing-library";
 
 import { BackButton } from "./BackButton";
 const history = createMemoryHistory();
 
 describe("BackButton", () => {
 	it("should render", () => {
-		const { container } = renderWithRouter(<BackButton />, { history });
+		const { container } = render(<BackButton />, { history });
 
 		expect(container).toHaveTextContent("chevron-left-small.svg");
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render when disabled", () => {
-		const { container } = renderWithRouter(<BackButton disabled />, { history });
+		const { container } = render(<BackButton disabled />, { history });
 
 		expect(container).toHaveTextContent("chevron-left-small.svg");
 		expect(container).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe("BackButton", () => {
 	it("should redirect to previous page", () => {
 		const historySpy = jest.spyOn(history, "go").mockImplementation();
 
-		const { container, getByRole } = renderWithRouter(<BackButton />, { history });
+		const { container, getByRole } = render(<BackButton />, { history });
 
 		act(() => {
 			fireEvent.click(getByRole("button"));
@@ -40,7 +40,7 @@ describe("BackButton", () => {
 	it("should redirect to given url", () => {
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		const { container, getByRole } = renderWithRouter(<BackButton backToUrl="new-url" />, { history });
+		const { container, getByRole } = render(<BackButton backToUrl="new-url" />, { history });
 
 		act(() => {
 			fireEvent.click(getByRole("button"));
@@ -57,7 +57,7 @@ describe("BackButton", () => {
 	it("should not redirect to previous page when disabled", () => {
 		const historySpy = jest.spyOn(history, "go").mockImplementation();
 
-		const { container, getByRole } = renderWithRouter(<BackButton disabled />, { history });
+		const { container, getByRole } = render(<BackButton disabled />, { history });
 
 		act(() => {
 			fireEvent.click(getByRole("button"));
@@ -74,7 +74,7 @@ describe("BackButton", () => {
 	it("should not redirect to given url when disabled", () => {
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		const { container, getByRole } = renderWithRouter(<BackButton backToUrl="new-url" disabled />, { history });
+		const { container, getByRole } = render(<BackButton backToUrl="new-url" disabled />, { history });
 
 		act(() => {
 			fireEvent.click(getByRole("button"));

@@ -10,7 +10,7 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { LedgerTabs } from "./LedgerTabs";
 
@@ -139,7 +139,7 @@ describe("LedgerTabs", () => {
 			);
 		};
 
-		const { container, history } = renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		const { container, history } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
 		await screen.findByTestId("SelectNetwork");
 		await waitFor(() => expect(nextSelector()).toBeDisabled());
@@ -206,7 +206,7 @@ describe("LedgerTabs", () => {
 			);
 		};
 
-		renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
 		await screen.findByTestId("LedgerConnectionStep");
 
@@ -245,7 +245,7 @@ describe("LedgerTabs", () => {
 			);
 		};
 
-		renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
 		await screen.findByTestId("LedgerConnectionStep");
 
@@ -286,7 +286,7 @@ describe("LedgerTabs", () => {
 			);
 		};
 
-		const { history } = renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		const { history } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
 		await screen.findByTestId("LedgerScanStep");
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2), { timeout: 3000 });
@@ -357,7 +357,7 @@ describe("LedgerTabs", () => {
 			);
 		};
 
-		const { history } = renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		const { history } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
 		await screen.findByTestId("LedgerScanStep");
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(3), { timeout: 3000 });
@@ -413,7 +413,7 @@ describe("LedgerTabs", () => {
 			);
 		};
 
-		const { container } = renderWithRouter(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		const { container } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
 		await screen.findByTestId("LedgerConnectionStep");
 

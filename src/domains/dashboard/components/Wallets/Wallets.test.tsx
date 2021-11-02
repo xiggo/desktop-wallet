@@ -15,7 +15,7 @@ import {
 	env,
 	fireEvent,
 	getDefaultProfileId,
-	renderWithRouter,
+	render,
 	screen,
 	syncDelegates,
 	waitFor,
@@ -69,7 +69,7 @@ describe("Wallets", () => {
 	});
 
 	it("should render grid", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -84,7 +84,7 @@ describe("Wallets", () => {
 	});
 
 	it("should render grid in loading state", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets isLoading={true} />
 			</Route>,
@@ -99,7 +99,7 @@ describe("Wallets", () => {
 	});
 
 	it("should render list", async () => {
-		const { asFragment, getByTestId, findByTestId } = renderWithRouter(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -120,7 +120,7 @@ describe("Wallets", () => {
 	});
 
 	it("should toggle between grid and list view", async () => {
-		const { asFragment, getByTestId, findByTestId } = renderWithRouter(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -147,7 +147,7 @@ describe("Wallets", () => {
 	it("should render without testnet wallets", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, false);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -163,7 +163,7 @@ describe("Wallets", () => {
 	});
 
 	it("should load more wallets", async () => {
-		const { asFragment, getByTestId, getAllByTestId, findByTestId } = renderWithRouter(
+		const { asFragment, getByTestId, getAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets listPagerLimit={1} />
 			</Route>,
@@ -192,7 +192,7 @@ describe("Wallets", () => {
 
 	it("should handle wallet creation", () => {
 		const onCreateWallet = jest.fn();
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets onCreateWallet={onCreateWallet} />
 			</Route>,
@@ -209,7 +209,7 @@ describe("Wallets", () => {
 
 	it("should handle wallet import", () => {
 		const onImportWallet = jest.fn();
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets onImportWallet={onImportWallet} />
 			</Route>,
@@ -225,7 +225,7 @@ describe("Wallets", () => {
 	});
 
 	it("should handle filter change", async () => {
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -266,7 +266,7 @@ describe("Wallets", () => {
 		const unsubscribe = jest.fn();
 		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce(() => ({ unsubscribe }));
 
-		const { asFragment, getByTestId, getByText, queryByText, findByText } = renderWithRouter(
+		const { asFragment, getByTestId, getByText, queryByText, findByText } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<Wallets />
@@ -304,7 +304,7 @@ describe("Wallets", () => {
 	});
 
 	it("should handle list wallet click", () => {
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -327,7 +327,7 @@ describe("Wallets", () => {
 	});
 
 	it("should rename wallet through wallet card dropdown", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -372,7 +372,7 @@ describe("Wallets", () => {
 	});
 
 	it("should delete wallet through wallet card dropdown", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,
@@ -409,7 +409,7 @@ describe("Wallets", () => {
 	it("should render empty profile wallets", async () => {
 		history.push(`/profiles/${emptyProfile.id()}/dashboard`);
 
-		const { asFragment, getByTestId, findByTestId } = renderWithRouter(
+		const { asFragment, getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Wallets />
 			</Route>,

@@ -11,7 +11,7 @@ import {
 	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
-	renderWithRouter,
+	render,
 	waitFor,
 } from "utils/testing-library";
 
@@ -43,7 +43,7 @@ describe("EncryptionPasswordStep", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { queryAllByText, getByTestId, getByText, getAllByTestId, findByTestId } = renderWithRouter(
+		const { queryAllByText, getByTestId, getByText, getAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -182,7 +182,7 @@ describe("EncryptionPasswordStep", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { queryAllByText, getByTestId, getByText, getAllByTestId, findByTestId } = renderWithRouter(
+		const { queryAllByText, getByTestId, getByText, getAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,

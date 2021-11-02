@@ -5,7 +5,7 @@ import { ImportProfile } from "domains/profile/pages/ImportProfile/ImportProfile
 import fs from "fs";
 import { createMemoryHistory } from "history";
 import React from "react";
-import { act, env, fireEvent, renderWithRouter, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, render, waitFor } from "utils/testing-library";
 
 const passwordProtectedDwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.dwe");
 const corruptedDwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupted-profile.dwe");
@@ -32,7 +32,7 @@ describe("ImportProfile", () => {
 		const history = createMemoryHistory();
 		history.push("/profiles/import");
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -47,7 +47,7 @@ describe("ImportProfile", () => {
 		history.push("/profiles/import");
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -68,7 +68,7 @@ describe("ImportProfile", () => {
 	it("should change file format", async () => {
 		history.push("/profiles/import");
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -87,7 +87,7 @@ describe("ImportProfile", () => {
 	it("should select file and go to step 2", async () => {
 		history.push("/profiles/import");
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -111,7 +111,7 @@ describe("ImportProfile", () => {
 	it("should request and set password for importing password protected profile", async () => {
 		history.push("/profiles/import");
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -149,7 +149,7 @@ describe("ImportProfile", () => {
 	it("should close password modal and go back to select file", async () => {
 		history.push("/profiles/import");
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -182,7 +182,7 @@ describe("ImportProfile", () => {
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		jest.spyOn(fs, "readFileSync").mockReturnValue(passwordProtectedDwe);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -221,7 +221,7 @@ describe("ImportProfile", () => {
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		jest.spyOn(fs, "readFileSync").mockReturnValueOnce(legacyJson);
 
-		const { getAllByTestId, getByTestId, findByTestId } = renderWithRouter(
+		const { getAllByTestId, getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -258,7 +258,7 @@ describe("ImportProfile", () => {
 
 		jest.spyOn(fs, "readFileSync").mockReturnValueOnce(dweFile);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -290,7 +290,7 @@ describe("ImportProfile", () => {
 	it("should go to step 3 and back", async () => {
 		history.push("/profiles/import");
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -333,7 +333,7 @@ describe("ImportProfile", () => {
 		history.push("/profiles/import");
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -371,7 +371,7 @@ describe("ImportProfile", () => {
 		history.push("/profiles/import");
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -415,7 +415,7 @@ describe("ImportProfile", () => {
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,

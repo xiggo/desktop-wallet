@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import React from "react";
-import { renderWithRouter } from "testing-library";
+import { render } from "utils/testing-library";
 
 import { Item, SideBar } from "./SideBar";
 
@@ -27,7 +27,7 @@ describe("SideBar", () => {
 	];
 
 	it("should render", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<SideBar handleActiveItem={jest.fn()} activeItem={items[0].itemKey} items={items} />,
 		);
 

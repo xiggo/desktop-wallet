@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, renderWithRouter, screen } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { TransactionRowRecipient } from "./TransactionRowRecipient";
 
@@ -17,9 +17,7 @@ describe("TransactionRowRecipient", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = renderWithRouter(
-			<TransactionRowRecipient transaction={TransactionFixture} profile={profile} />,
-		);
+		const { asFragment } = render(<TransactionRowRecipient transaction={TransactionFixture} profile={profile} />);
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -29,7 +27,7 @@ describe("TransactionRowRecipient", () => {
 	});
 
 	it("should render compact", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<TransactionRowRecipient transaction={TransactionFixture} profile={profile} isCompact />,
 		);
 

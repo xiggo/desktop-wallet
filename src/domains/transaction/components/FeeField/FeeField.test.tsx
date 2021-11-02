@@ -11,7 +11,7 @@ import { FeeField } from "domains/transaction/components/FeeField/FeeField";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 describe("FeeField", () => {
 	let profile: Contracts.IProfile;
@@ -45,7 +45,7 @@ describe("FeeField", () => {
 	};
 
 	it("should render", async () => {
-		const { asFragment } = renderWithRouter(<Component type="transfer" />);
+		const { asFragment } = render(<Component type="transfer" />);
 
 		await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
 
@@ -56,9 +56,7 @@ describe("FeeField", () => {
 		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
 			"should show 0 when %s data is undefined",
 			async (transactionType) => {
-				renderWithRouter(
-					<Component type={transactionType} network={networksByFeeType.size} data={undefined} />,
-				);
+				render(<Component type={transactionType} network={networksByFeeType.size} data={undefined} />);
 
 				await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
 
@@ -71,7 +69,7 @@ describe("FeeField", () => {
 		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
 			"should show 0 %s data is not available yet",
 			async (transactionType) => {
-				renderWithRouter(<Component type={transactionType} network={networksByFeeType.size} data={{}} />);
+				render(<Component type={transactionType} network={networksByFeeType.size} data={{}} />);
 
 				await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(3));
 
@@ -87,7 +85,7 @@ describe("FeeField", () => {
 
 			const properties = { network: networksByFeeType.size, type: "transfer" };
 
-			const { rerender } = renderWithRouter(<Component {...properties} data={{}} />);
+			const { rerender } = render(<Component {...properties} data={{}} />);
 
 			await waitFor(() => expect(screen.getAllByTestId("AmountCrypto")[0]).toHaveTextContent("0 LSK"));
 
@@ -110,7 +108,7 @@ describe("FeeField", () => {
 				calculate: () => Promise.resolve({ avg: 3, max: 5, min: 1, static: 3 }),
 			});
 
-			const { rerender } = renderWithRouter(
+			const { rerender } = render(
 				<Component
 					network={networksByFeeType.size}
 					type="transfer"
@@ -153,7 +151,7 @@ describe("FeeField", () => {
 		const calculate = jest.fn().mockResolvedValue({ avg: 30, max: 1, min: 1, static: 1 });
 		const useFeesMock = jest.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate }));
 
-		renderWithRouter(
+		render(
 			<Component
 				network={networksByFeeType.size}
 				type="transfer"

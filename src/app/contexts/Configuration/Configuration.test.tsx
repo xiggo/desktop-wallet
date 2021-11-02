@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render, renderWithRouter, waitFor } from "utils/testing-library";
+import { act, fireEvent, render, waitFor } from "utils/testing-library";
 
 import { ConfigurationProvider } from ".";
 import { useConfiguration } from "./Configuration";
@@ -25,7 +25,7 @@ describe("Configuration Context", () => {
 			return <p>Configuration content</p>;
 		};
 
-		expect(() => renderWithRouter(<Test />, { withProviders: false })).toThrowError();
+		expect(() => render(<Test />, { withProviders: false })).toThrowError();
 
 		console.error.mockRestore();
 	});
@@ -35,7 +35,7 @@ describe("Configuration Context", () => {
 			useConfiguration();
 			return <p data-testid="Configuration__consumer">Configuration content</p>;
 		};
-		const { getByTestId } = renderWithRouter(<Test />);
+		const { getByTestId } = render(<Test />);
 
 		expect(getByTestId("Configuration__consumer")).toBeInTheDocument();
 	});
@@ -54,7 +54,7 @@ describe("Configuration Context", () => {
 			);
 		};
 
-		const { getByTestId, asFragment, findByTestId } = renderWithRouter(<Test />);
+		const { getByTestId, asFragment, findByTestId } = render(<Test />);
 
 		expect(getByTestId("Configuration__consumer")).toBeInTheDocument();
 

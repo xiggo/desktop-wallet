@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, renderWithRouter, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 
@@ -38,7 +38,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
-		const { asFragment, findByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -79,7 +79,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
-		const { asFragment, findByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -131,7 +131,7 @@ describe("MultiSignatureSuccessful", () => {
 			address: undefined,
 		});
 
-		const { asFragment, findByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />
@@ -187,7 +187,7 @@ describe("MultiSignatureSuccessful", () => {
 			address: undefined,
 		});
 
-		const { asFragment, findByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureSuccessful senderWallet={wallet} transaction={transaction}>
 					<div />

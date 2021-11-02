@@ -5,7 +5,7 @@ import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor, within } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { Contacts } from "./Contacts";
@@ -18,7 +18,7 @@ const renderComponent = () => {
 	const contactsURL = `/profiles/${profile.id()}/contacts`;
 	history.push(contactsURL);
 
-	return renderWithRouter(
+	return render(
 		<Route path="/profiles/:profileId/contacts">
 			<Contacts />
 		</Route>,

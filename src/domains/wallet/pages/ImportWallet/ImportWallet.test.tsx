@@ -25,7 +25,6 @@ import {
 	getDefaultProfileId,
 	MNEMONICS,
 	render,
-	renderWithRouter,
 	screen,
 	waitFor,
 } from "utils/testing-library";
@@ -155,7 +154,7 @@ describe("ImportWallet", () => {
 		};
 
 		history.push(`/profiles/${profile.id()}`);
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -214,7 +213,7 @@ describe("ImportWallet", () => {
 		};
 
 		history.push(`/profiles/${profile.id()}`);
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -284,7 +283,7 @@ describe("ImportWallet", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementationOnce();
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -308,7 +307,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -346,7 +345,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -416,7 +415,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -495,7 +494,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getAllByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, getAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -557,7 +556,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getAllByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, getAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -625,7 +624,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -677,7 +676,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -729,7 +728,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -770,7 +769,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -828,7 +827,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, getAllByTestId, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, getAllByTestId, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -892,7 +891,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, queryByText, findByTestId, findAllByText, findByText } = renderWithRouter(
+		const { getByTestId, queryByText, findByTestId, findAllByText, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -939,7 +938,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -988,7 +987,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -1041,7 +1040,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -1096,7 +1095,7 @@ describe("ImportWallet", () => {
 			search: `?ledger=true`,
 		});
 
-		const { container, findByTestId } = renderWithRouter(
+		const { container, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<LedgerProvider transport={transport}>
 					<ImportWallet />
@@ -1124,7 +1123,7 @@ describe("ImportWallet", () => {
 		history.push(route);
 		const randomNewAddress = "DHnF7Ycv16QxQQNGDUdGzWGh5n3ym424UW";
 
-		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -1197,7 +1196,7 @@ describe("ImportWallet", () => {
 
 		profile.wallets().push(wallet);
 
-		const { getByTestId, getByText, findByTestId, findByText } = renderWithRouter(
+		const { getByTestId, getByText, findByTestId, findByText } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
 			</Route>,
@@ -1260,7 +1259,7 @@ describe("ImportWallet", () => {
 		const history = createMemoryHistory();
 		history.push(route);
 
-		const { getByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<>
 					<ToastContainer closeOnClick={false} newestOnTop />
@@ -1344,7 +1343,7 @@ describe("ImportWallet", () => {
 
 		history.push(`/profiles/${profile.id()}`);
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -1408,7 +1407,7 @@ describe("ImportWallet", () => {
 
 		history.push(`/profiles/${profile.id()}`);
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,

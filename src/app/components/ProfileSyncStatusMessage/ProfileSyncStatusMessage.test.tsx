@@ -1,7 +1,7 @@
 import React from "react";
 import { act } from "react-dom/test-utils";
 import { Route } from "react-router-dom";
-import { fireEvent, renderWithRouter, waitFor } from "utils/testing-library";
+import { fireEvent, render, waitFor } from "utils/testing-library";
 
 import { SyncErrorMessage } from "./ProfileSyncStatusMessage";
 
@@ -9,7 +9,7 @@ describe("SyncErrorMessage", () => {
 	const failedNetworkNames = ["ARK Devnet", "ARK Mainnet", "Lisk Devnet"];
 
 	it("should render one failed network", async () => {
-		const { container, findByText } = renderWithRouter(
+		const { container, findByText } = render(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0]]} />
 			</Route>,
@@ -24,7 +24,7 @@ describe("SyncErrorMessage", () => {
 	});
 
 	it("should render two failed networks", async () => {
-		const { container, findByText } = renderWithRouter(
+		const { container, findByText } = render(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={[failedNetworkNames[0], failedNetworkNames[1]]} />
 			</Route>,
@@ -40,7 +40,7 @@ describe("SyncErrorMessage", () => {
 	});
 
 	it("should render multiple failed networks", async () => {
-		const { container, findByText } = renderWithRouter(
+		const { container, findByText } = render(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={failedNetworkNames} />
 			</Route>,
@@ -57,7 +57,7 @@ describe("SyncErrorMessage", () => {
 
 	it("should handle retry", async () => {
 		const onRetry = jest.fn();
-		const { container, getByTestId, findByText } = renderWithRouter(
+		const { container, getByTestId, findByText } = render(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={failedNetworkNames} onRetry={onRetry} />
 			</Route>,

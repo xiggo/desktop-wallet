@@ -2,7 +2,7 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import { translations as errorTranslations } from "domains/error/i18n";
 import { Offline } from "domains/error/pages";
 import React from "react";
-import { render, renderWithRouter } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { useNetworkStatus } from "./network-status";
 
@@ -42,7 +42,7 @@ describe("useNetworkStatus", () => {
 	it("should be offline", () => {
 		jest.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
 
-		const { getByTestId } = renderWithRouter(<TestNetworkStatus />);
+		const { getByTestId } = render(<TestNetworkStatus />);
 
 		expect(getByTestId("Offline__text")).toHaveTextContent(errorTranslations.OFFLINE.TITLE);
 		expect(getByTestId("Offline__text")).toHaveTextContent(errorTranslations.OFFLINE.DESCRIPTION);

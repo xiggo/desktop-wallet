@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, waitFor } from "testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "testing-library";
 
 import { translations } from "../../i18n";
 import { DeleteContact } from "./DeleteContact";
@@ -21,7 +21,7 @@ describe("DeleteContact", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<DeleteContact isOpen={false} onDelete={onDelete} profile={profile} />,
 		);
 
@@ -30,7 +30,7 @@ describe("DeleteContact", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<DeleteContact isOpen={true} onDelete={onDelete} profile={profile} />,
 		);
 
@@ -40,7 +40,7 @@ describe("DeleteContact", () => {
 	});
 
 	it("should delete contact", async () => {
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId } = render(
 			<DeleteContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />,
 		);
 		const deleteButton = getByTestId("DeleteResource__submit-button");

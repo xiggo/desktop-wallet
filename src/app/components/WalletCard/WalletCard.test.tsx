@@ -3,7 +3,7 @@ import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "testing-library";
 
 import { WalletCard } from "./WalletCard";
 
@@ -35,7 +35,7 @@ describe("Wallet Card", () => {
 	});
 
 	it("should render", () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} />
 			</Route>,
@@ -49,7 +49,7 @@ describe("Wallet Card", () => {
 	});
 
 	it("should render loading state", () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard isLoading={true} wallet={wallet} />
 			</Route>,
@@ -64,7 +64,7 @@ describe("Wallet Card", () => {
 	});
 
 	it("should render blank", () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard />
 			</Route>,
@@ -78,7 +78,7 @@ describe("Wallet Card", () => {
 	});
 
 	it("should render blank with starred display type", () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard displayType="starred" />
 			</Route>,
@@ -93,7 +93,7 @@ describe("Wallet Card", () => {
 	});
 
 	it("should render blank with ledger display type", () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard displayType="ledger" />
 			</Route>,
@@ -110,7 +110,7 @@ describe("Wallet Card", () => {
 	it("should render with wallet data", () => {
 		wallet.settings().set(Contracts.WalletSetting.Alias, "My wallet");
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} />,
 			</Route>,
@@ -126,7 +126,7 @@ describe("Wallet Card", () => {
 	it("should render with wallet data and optional icon", () => {
 		wallet.settings().set(Contracts.WalletSetting.Alias, "My wallet");
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} />
 			</Route>,
@@ -140,7 +140,7 @@ describe("Wallet Card", () => {
 	});
 
 	it("should click a wallet and redirect to it when fully restored", () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} />
 			</Route>,
@@ -160,7 +160,7 @@ describe("Wallet Card", () => {
 	it("should not redirect to wallet when not fully restored", () => {
 		const hasBeenFullyRestored = jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} />
 			</Route>,
@@ -183,7 +183,7 @@ describe("Wallet Card", () => {
 		const onWalletAction = jest.fn();
 		const actions = [{ label: "Option", value: "option" }];
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletCard wallet={wallet} actions={actions} onWalletAction={onWalletAction} />
 			</Route>,

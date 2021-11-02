@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { useActiveProfile, useActiveWallet } from "./env";
 
@@ -27,7 +27,7 @@ describe("useActiveProfile", () => {
 	};
 
 	it("should return profile", () => {
-		const { getByText } = renderWithRouter(
+		const { getByText } = render(
 			<Route path="/profiles/:profileId">
 				<TestProfile />
 			</Route>,
@@ -40,7 +40,7 @@ describe("useActiveProfile", () => {
 	});
 
 	it("should return undefined when findById throws error", () => {
-		const { getByText } = renderWithRouter(
+		const { getByText } = render(
 			<Route path="/profiles/:profileId">
 				<TestProfile />
 			</Route>,
@@ -53,7 +53,7 @@ describe("useActiveProfile", () => {
 	});
 
 	it("should return wallet", () => {
-		const { getByText } = renderWithRouter(
+		const { getByText } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<TestWallet />
 			</Route>,

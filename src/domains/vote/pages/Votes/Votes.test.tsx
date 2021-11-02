@@ -12,7 +12,7 @@ import {
 	env,
 	fireEvent,
 	getDefaultProfileId,
-	renderWithRouter,
+	render,
 	screen,
 	syncDelegates,
 	waitFor,
@@ -44,7 +44,7 @@ const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:wa
 		};
 	}
 
-	return renderWithRouter(
+	return render(
 		<Route path={routePath}>
 			<Votes />
 		</Route>,
@@ -478,7 +478,7 @@ describe("Votes", () => {
 			useProfileStatusWatcher({ env, onProfileSyncError, profile });
 			return <Votes />;
 		};
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/votes">
 				<Component />
 			</Route>,

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { ContactForm } from "./ContactForm";
 
@@ -21,7 +21,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		const { asFragment } = render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
@@ -31,7 +31,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should render with errors", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<ContactForm
 				profile={profile}
 				onCancel={onCancel}
@@ -48,7 +48,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should clear errors when changing network", async () => {
-		renderWithRouter(
+		render(
 			<ContactForm
 				profile={profile}
 				onCancel={onCancel}
@@ -110,7 +110,7 @@ describe("ContactForm", () => {
 
 		const name = "Sample name";
 
-		renderWithRouter(
+		render(
 			<ContactForm
 				profile={profile}
 				onChange={onChange}
@@ -131,7 +131,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should select cryptoasset", async () => {
-		renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
@@ -144,7 +144,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should add a valid address successfully", async () => {
-		renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
 
@@ -185,7 +185,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should not add invalid address and should display error message", async () => {
-		renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
 
@@ -228,7 +228,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should not add duplicate address and display error message", async () => {
-		renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
 
@@ -273,7 +273,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should remove network from options", async () => {
-		renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
 
@@ -323,7 +323,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should remove an address", async () => {
-		renderWithRouter(<ContactForm profile={profile} contact={contact} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm profile={profile} contact={contact} onCancel={onCancel} onSave={onSave} />);
 
 		expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(contact.addresses().count());
 
@@ -337,7 +337,7 @@ describe("ContactForm", () => {
 	it("should handle save", async () => {
 		const onSave = jest.fn();
 
-		renderWithRouter(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		fireEvent.input(screen.getByTestId("contact-form__name-input"), {
 			target: { value: "name" },

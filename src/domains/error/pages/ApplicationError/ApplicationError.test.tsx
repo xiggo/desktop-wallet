@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, renderWithRouter } from "utils/testing-library";
+import { act, fireEvent, render } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { ApplicationError } from "./ApplicationError";
@@ -7,7 +7,7 @@ import { ApplicationError } from "./ApplicationError";
 describe("ApplicationError", () => {
 	it("should render", () => {
 		const onResetErrorBoundary = jest.fn();
-		const { asFragment, container, getByTestId } = renderWithRouter(
+		const { asFragment, container, getByTestId } = render(
 			<ApplicationError resetErrorBoundary={onResetErrorBoundary} />,
 		);
 

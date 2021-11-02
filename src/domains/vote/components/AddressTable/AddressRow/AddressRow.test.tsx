@@ -7,15 +7,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import {
-	act,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	MNEMONICS,
-	renderWithRouter,
-	syncDelegates,
-} from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, MNEMONICS, render, syncDelegates } from "utils/testing-library";
 
 import { AddressRow } from "./AddressRow";
 
@@ -88,7 +80,7 @@ describe("AddressRow", () => {
 	});
 
 	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
-		const { asFragment, container, findByTestId } = renderWithRouter(
+		const { asFragment, container, findByTestId } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -126,7 +118,7 @@ describe("AddressRow", () => {
 				})),
 			);
 
-			const { asFragment, container } = renderWithRouter(
+			const { asFragment, container } = render(
 				<Route path="/profiles/:profileId/votes">
 					<table>
 						<tbody>
@@ -162,7 +154,7 @@ describe("AddressRow", () => {
 			})),
 		);
 
-		const { asFragment, container } = renderWithRouter(
+		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -183,7 +175,7 @@ describe("AddressRow", () => {
 
 	it("should render for a multisignature wallet", async () => {
 		const isMultiSignatureSpy = jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
-		const { asFragment, container, findByTestId } = renderWithRouter(
+		const { asFragment, container, findByTestId } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -206,7 +198,7 @@ describe("AddressRow", () => {
 	});
 
 	it("should render when wallet not found for votes", async () => {
-		const { asFragment, findByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -228,7 +220,7 @@ describe("AddressRow", () => {
 	});
 
 	it("should render when wallet hasn't voted", async () => {
-		const { asFragment, findAllByTestId, findByTestId } = renderWithRouter(
+		const { asFragment, findAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -266,7 +258,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, findAllByTestId } = renderWithRouter(
+		const { container, asFragment, findAllByTestId } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -305,7 +297,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, findAllByTestId } = renderWithRouter(
+		const { container, asFragment, findAllByTestId } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -344,7 +336,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment, findAllByTestId } = renderWithRouter(
+		const { container, asFragment, findAllByTestId } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>
@@ -372,7 +364,7 @@ describe("AddressRow", () => {
 		await wallet.synchroniser().coin();
 
 		const onSelect = jest.fn();
-		const { asFragment, container, getByTestId, findByTestId } = renderWithRouter(
+		const { asFragment, container, getByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/votes">
 				<table>
 					<tbody>

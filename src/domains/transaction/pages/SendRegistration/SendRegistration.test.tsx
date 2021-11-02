@@ -21,7 +21,7 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
 	MNEMONICS,
-	renderWithRouter,
+	render,
 	screen,
 	syncDelegates,
 	syncFees,
@@ -46,7 +46,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 	history.push(registrationURL);
 
-	const rendered = renderWithRouter(
+	const rendered = render(
 		<Route path={path}>
 			<LedgerProvider transport={ledgerTransport}>
 				<SendRegistration />
@@ -185,7 +185,7 @@ describe("Registration", () => {
 		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
 		history.push(registrationPath);
 
-		renderWithRouter(
+		render(
 			<Route path={path}>
 				<LedgerProvider transport={getDefaultLedgerTransport()}>
 					<SendRegistration />

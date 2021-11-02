@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { DeleteExchangeTransaction } from "./DeleteExchangeTransaction";
@@ -34,7 +34,7 @@ describe("DeleteExchangeTransaction", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<DeleteExchangeTransaction
 				exchangeTransaction={exchangeTransaction}
 				profile={profile}
@@ -47,7 +47,7 @@ describe("DeleteExchangeTransaction", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<DeleteExchangeTransaction
 				isOpen={true}
 				exchangeTransaction={exchangeTransaction}
@@ -66,7 +66,7 @@ describe("DeleteExchangeTransaction", () => {
 	});
 
 	it("should delete exchange transaction", async () => {
-		renderWithRouter(
+		render(
 			<DeleteExchangeTransaction
 				isOpen={true}
 				exchangeTransaction={exchangeTransaction}

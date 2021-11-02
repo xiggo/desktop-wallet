@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { MultiSignatureRegistrationDetail } from "./MultiSignatureRegistrationDetail";
@@ -20,7 +20,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 	});
 
 	it("should render", async () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureRegistrationDetail
 					transaction={{
@@ -45,7 +45,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 	it("should render sender's address as generated address when musig address derivation is not supported", async () => {
 		jest.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureRegistrationDetail
 					transaction={{

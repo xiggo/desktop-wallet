@@ -5,7 +5,7 @@ import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { httpClient } from "app/services";
 import { translations as profileTranslations } from "domains/profile/i18n";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, waitFor } from "testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "testing-library";
 import { StubStorage } from "tests/mocks";
 import { getDefaultPassword, getPasswordProtectedProfileId } from "utils/testing-library";
 
@@ -17,7 +17,7 @@ const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;
 
 describe("Welcome", () => {
 	it("should render with profiles", () => {
-		const { container, getByText, asFragment, history } = renderWithRouter(<Welcome />);
+		const { container, getByText, asFragment, history } = render(<Welcome />);
 		const profile = env.profiles().findById(fixtureProfileId);
 
 		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
@@ -31,7 +31,7 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile dashboard", () => {
-		const { container, getByText, asFragment, history } = renderWithRouter(<Welcome />);
+		const { container, getByText, asFragment, history } = render(<Welcome />);
 
 		const profile = env.profiles().findById(fixtureProfileId);
 
@@ -51,7 +51,7 @@ describe("Welcome", () => {
 		["close", "modal__close-btn"],
 		["cancel", "SignIn__cancel-button"],
 	])("should open & close sign in modal (%s)", (_, buttonId) => {
-		const { container, getByText, getByTestId } = renderWithRouter(<Welcome />);
+		const { container, getByText, getByTestId } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -77,7 +77,7 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile dashboard with correct password", async () => {
-		const { asFragment, container, findByTestId, getByTestId, getByText, history } = renderWithRouter(<Welcome />);
+		const { asFragment, container, findByTestId, getByTestId, getByText, history } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -110,15 +110,9 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile settings with correct password", async () => {
-		const {
-			asFragment,
-			container,
-			findByTestId,
-			getByTestId,
-			getByText,
-			history,
-			getAllByTestId,
-		} = renderWithRouter(<Welcome />);
+		const { asFragment, container, findByTestId, getByTestId, getByText, history, getAllByTestId } = render(
+			<Welcome />,
+		);
 
 		expect(container).toBeInTheDocument();
 
@@ -161,9 +155,7 @@ describe("Welcome", () => {
 	});
 
 	it("should navigate to profile settings from profile card menu", () => {
-		const { container, getByText, asFragment, history, getByTestId, getAllByTestId } = renderWithRouter(
-			<Welcome />,
-		);
+		const { container, getByText, asFragment, history, getByTestId, getAllByTestId } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -191,7 +183,7 @@ describe("Welcome", () => {
 	});
 
 	it("should delete profile from profile card menu", async () => {
-		const { getByText, getAllByTestId, getByTestId, findByTestId } = renderWithRouter(<Welcome />);
+		const { getByText, getAllByTestId, getByTestId, findByTestId } = render(<Welcome />);
 
 		expect(getByText(translations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -222,7 +214,7 @@ describe("Welcome", () => {
 	it("should not restart the timeout when closing the modal to retry the profile password", async () => {
 		jest.useFakeTimers();
 
-		const { container, getByText, findByTestId, getByTestId } = renderWithRouter(<Welcome />);
+		const { container, getByText, findByTestId, getByTestId } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -290,7 +282,7 @@ describe("Welcome", () => {
 	});
 
 	it("should change route to create profile", () => {
-		const { container, getByText, asFragment, history } = renderWithRouter(<Welcome />);
+		const { container, getByText, asFragment, history } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
@@ -305,7 +297,7 @@ describe("Welcome", () => {
 	it("should render without profiles", () => {
 		env.reset({ coins: {}, httpClient, storage: new StubStorage() });
 
-		const { container, asFragment, getByText } = renderWithRouter(
+		const { container, asFragment, getByText } = render(
 			<EnvironmentProvider env={env}>
 				<Welcome />
 			</EnvironmentProvider>,

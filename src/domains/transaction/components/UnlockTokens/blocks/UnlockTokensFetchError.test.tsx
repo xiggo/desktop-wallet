@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { buildTranslations } from "app/i18n/helpers";
 import React from "react";
-import { renderWithRouter } from "utils/testing-library";
+import { render } from "utils/testing-library";
 
 import { UnlockTokensFetchError } from "./UnlockTokensFetchError";
 
@@ -12,7 +12,7 @@ describe("UnlockTokensFetchError", () => {
 	it("should render", () => {
 		const onRetry = jest.fn();
 
-		const { asFragment } = renderWithRouter(<UnlockTokensFetchError onRetry={onRetry} />);
+		const { asFragment } = render(<UnlockTokensFetchError onRetry={onRetry} />);
 
 		expect(asFragment()).toMatchSnapshot();
 

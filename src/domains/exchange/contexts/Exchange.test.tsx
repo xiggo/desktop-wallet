@@ -2,7 +2,7 @@ import { httpClient } from "app/services";
 import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import nock from "nock";
 import React from "react";
-import { fireEvent, render, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { useExchangeContext } from "./Exchange";
 
@@ -17,7 +17,7 @@ describe("Exchange Context", () => {
 			return <span>provider counts: {exchangeProviders.length}</span>;
 		};
 
-		expect(() => renderWithRouter(<Test />)).toThrowError();
+		expect(() => render(<Test />)).toThrowError();
 
 		console.error.mockRestore();
 	});

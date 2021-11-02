@@ -3,7 +3,7 @@ import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
 import { Page } from "./Page";
 
@@ -21,7 +21,7 @@ describe("Page", () => {
 	it("should render", () => {
 		const sidebar = true;
 
-		const { container, asFragment } = renderWithRouter(
+		const { container, asFragment } = render(
 			<Page title="Test" sidebar={sidebar}>
 				{}
 			</Page>,
@@ -32,7 +32,7 @@ describe("Page", () => {
 	});
 
 	it("should render without sidebar", () => {
-		const { container, asFragment } = renderWithRouter(<Page title="Test">{}</Page>);
+		const { container, asFragment } = render(<Page title="Test">{}</Page>);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe("Page", () => {
 			const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "send").mockImplementation();
 			const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-			const { getByTestId, findByText, findByTestId } = renderWithRouter(
+			const { getByTestId, findByText, findByTestId } = render(
 				<Route path="/profiles/:profileId/dashboard">
 					<Page>{}</Page>
 				</Route>,
@@ -78,7 +78,7 @@ describe("Page", () => {
 	);
 
 	it("should handle 'Sign Out' click on user actions dropdown", async () => {
-		const { getByTestId, findByText, findByTestId } = renderWithRouter(
+		const { getByTestId, findByText, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Page>{}</Page>
 			</Route>,

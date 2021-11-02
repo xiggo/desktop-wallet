@@ -12,7 +12,7 @@ import {
 	fireEvent,
 	getDefaultProfileId,
 	pluginManager,
-	renderWithRouter,
+	render,
 	screen,
 	waitFor,
 	within,
@@ -45,7 +45,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -83,7 +83,7 @@ describe("PluginDetails", () => {
 			);
 		};
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -109,7 +109,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -148,7 +148,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -193,7 +193,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		const { history } = renderWithRouter(
+		const { history } = render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -233,7 +233,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -277,7 +277,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -318,7 +318,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -355,7 +355,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		const { history } = renderWithRouter(
+		const { history } = render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -399,7 +399,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -450,7 +450,7 @@ describe("PluginDetails", () => {
 			);
 		};
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -511,7 +511,7 @@ describe("PluginDetails", () => {
 			);
 		};
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />
@@ -562,7 +562,7 @@ describe("PluginDetails", () => {
 			return <button onClick={fetchPluginPackages}>Fetch Packages</button>;
 		};
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
 					<FetchComponent />

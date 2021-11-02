@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { getDefaultProfileId, render } from "utils/testing-library";
 
 import { UnlockTokensSummary } from "./UnlockTokensSummary";
 
@@ -9,7 +9,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 describe("UnlockTokensSummary", () => {
 	it("should render", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<UnlockTokensSummary
 					transaction={{

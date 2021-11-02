@@ -1,15 +1,7 @@
 import { Contracts, DTO } from "@payvo/profiles";
 import nock from "nock";
 import React from "react";
-import {
-	act,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	getDefaultWalletId,
-	renderWithRouter,
-	waitFor,
-} from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 
@@ -34,7 +26,7 @@ describe("NotificationsTransactionTable", () => {
 	});
 
 	it("should render", () => {
-		const { getAllByTestId } = renderWithRouter(
+		const { getAllByTestId } = render(
 			<NotificationTransactionsTable transactions={transactions} profile={profile} isLoading={false} />,
 		);
 
@@ -42,7 +34,7 @@ describe("NotificationsTransactionTable", () => {
 	});
 
 	it("should render loading state", () => {
-		const { getAllByTestId } = renderWithRouter(
+		const { getAllByTestId } = render(
 			<NotificationTransactionsTable transactions={transactions} profile={profile} />,
 		);
 
@@ -51,7 +43,7 @@ describe("NotificationsTransactionTable", () => {
 
 	it("should emit on visibility change event", async () => {
 		const onVisibilityChange = jest.fn();
-		const { getAllByTestId } = renderWithRouter(
+		const { getAllByTestId } = render(
 			<NotificationTransactionsTable
 				transactions={transactions}
 				profile={profile}
@@ -67,7 +59,7 @@ describe("NotificationsTransactionTable", () => {
 
 	it("should emit on click event", async () => {
 		const onClick = jest.fn();
-		const { getAllByTestId } = renderWithRouter(
+		const { getAllByTestId } = render(
 			<NotificationTransactionsTable
 				transactions={transactions}
 				profile={profile}

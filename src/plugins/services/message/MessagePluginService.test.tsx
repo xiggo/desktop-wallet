@@ -11,7 +11,7 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
-	renderWithRouter,
+	render,
 	screen,
 	waitFor,
 } from "utils/testing-library";
@@ -56,7 +56,7 @@ describe("MessagePluginService", () => {
 				);
 			};
 
-			renderWithRouter(
+			render(
 				<Route path="/profiles/:profileId/plugin">
 					<LedgerProvider transport={getDefaultLedgerTransport()}>
 						<Component />

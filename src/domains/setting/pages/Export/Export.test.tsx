@@ -5,7 +5,7 @@ import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 const history = createMemoryHistory();
 let profile: Contracts.IProfile;
@@ -27,7 +27,7 @@ describe("Export Settings", () => {
 	});
 
 	it("should render export settings", async () => {
-		const { container, asFragment } = renderWithRouter(
+		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/settings/export">
 				<ExportSettings />
 			</Route>,
@@ -48,7 +48,7 @@ describe("Export Settings", () => {
 			//@ts-ignore
 			.mockResolvedValue({ filePath: ["/test.dwe"] });
 
-		const { container, findByTestId } = renderWithRouter(
+		const { container, findByTestId } = render(
 			<Route path="/profiles/:profileId/settings/export">
 				<ExportSettings />
 			</Route>,

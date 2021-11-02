@@ -3,16 +3,7 @@ import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import {
-	act,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	render,
-	renderWithRouter,
-	screen,
-	waitFor,
-} from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { NotificationsDropdown } from ".";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
@@ -63,7 +54,7 @@ describe("Notifications", () => {
 	it("should open and close transaction details modal", async () => {
 		await profile.sync();
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NotificationsDropdown profile={profile} />
 			</Route>,
@@ -98,7 +89,7 @@ describe("Notifications", () => {
 	});
 
 	it("should open and close wallet update notification modal", async () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NotificationsDropdown profile={profile} />
 			</Route>,
@@ -133,7 +124,7 @@ describe("Notifications", () => {
 	});
 
 	it("should open and cancel wallet update notification modal", async () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NotificationsDropdown profile={profile} />
 			</Route>,

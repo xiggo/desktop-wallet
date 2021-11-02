@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter } from "testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render } from "testing-library";
 
 import { WalletListItem } from "./WalletListItem";
 
@@ -29,7 +29,7 @@ describe("WalletListItem", () => {
 	});
 
 	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
-		const { container, getByText } = renderWithRouter(
+		const { container, getByText } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -53,7 +53,7 @@ describe("WalletListItem", () => {
 
 		const walletId = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
 
-		const { asFragment, queryByText } = renderWithRouter(
+		const { asFragment, queryByText } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -76,7 +76,7 @@ describe("WalletListItem", () => {
 
 		const walletId = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
 
-		const { asFragment, getByText } = renderWithRouter(
+		const { asFragment, getByText } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -96,7 +96,7 @@ describe("WalletListItem", () => {
 
 	it("should render with default BTC as default exchangeCurrency", () => {
 		const mockExchangeCurrency = jest.spyOn(wallet, "exchangeCurrency").mockReturnValue(undefined);
-		const { container, getByText } = renderWithRouter(
+		const { container, getByText } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -120,7 +120,7 @@ describe("WalletListItem", () => {
 	it("should call onClick when clicked and fully restored", () => {
 		const onClick = jest.fn();
 
-		const { getByText } = renderWithRouter(
+		const { getByText } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
@@ -146,7 +146,7 @@ describe("WalletListItem", () => {
 
 		const onClick = jest.fn();
 
-		const { getByText } = renderWithRouter(
+		const { getByText } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">

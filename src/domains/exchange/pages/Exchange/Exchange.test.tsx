@@ -7,7 +7,7 @@ import { createMemoryHistory, MemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor, within } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { Exchange } from "./Exchange";
@@ -72,7 +72,7 @@ describe("Exchange", () => {
 	it("should render empty", async () => {
 		nock("https://exchanges.payvo.com").get("/api").reply(200, { data: [] });
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Exchange />
@@ -100,7 +100,7 @@ describe("Exchange", () => {
 	it("should render with exchanges", async () => {
 		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Exchange />
@@ -131,7 +131,7 @@ describe("Exchange", () => {
 	it("should navigate to exchange", async () => {
 		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Exchange />
@@ -167,7 +167,7 @@ describe("Exchange", () => {
 	it("should navigate to history tab", async () => {
 		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Exchange />
@@ -199,7 +199,7 @@ describe("Exchange", () => {
 
 		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Wrapper>
@@ -236,7 +236,7 @@ describe("Exchange", () => {
 			.query(true)
 			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "finished" } });
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Wrapper>
@@ -281,7 +281,7 @@ describe("Exchange", () => {
 
 		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Exchange />
@@ -325,7 +325,7 @@ describe("Exchange", () => {
 
 		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Exchange />
@@ -378,7 +378,7 @@ describe("Exchange", () => {
 
 		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
 					<Exchange />

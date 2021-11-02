@@ -3,7 +3,7 @@ import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, renderWithRouter, screen } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { TransactionRow } from "./TransactionRow";
 
@@ -29,7 +29,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<TransactionRow transaction={fixture as any} profile={profile} />
@@ -47,7 +47,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render skeleton", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<TransactionRow profile={profile} isLoading />
@@ -61,7 +61,7 @@ describe("TransactionRow", () => {
 	it("should render compact skeleton", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<TransactionRow profile={profile} isLoading />
@@ -75,7 +75,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render with currency", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<TransactionRow
@@ -103,7 +103,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should omit the currency for transactions from test networks", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<TransactionRow

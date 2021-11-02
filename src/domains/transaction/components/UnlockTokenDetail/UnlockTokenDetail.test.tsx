@@ -3,7 +3,7 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { getDefaultProfileId, render } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { UnlockTokenDetail } from "./UnlockTokenDetail";
@@ -26,7 +26,7 @@ describe("UnlockTokenDetail", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<UnlockTokenDetail isOpen={false} transaction={transactionFixture} onClose={jest.fn()} />,
 			</Route>,
@@ -41,7 +41,7 @@ describe("UnlockTokenDetail", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<UnlockTokenDetail isOpen={true} transaction={transactionFixture} onClose={jest.fn()} />,
 			</Route>,

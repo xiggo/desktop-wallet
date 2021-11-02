@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { UpdateContact } from "./UpdateContact";
 
@@ -15,14 +15,14 @@ describe("UpdateContact", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment } = renderWithRouter(<UpdateContact profile={profile} isOpen={false} contact={contact} />);
+		const { asFragment } = render(<UpdateContact profile={profile} isOpen={false} contact={contact} />);
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render", async () => {
-		const { asFragment } = renderWithRouter(<UpdateContact isOpen={true} profile={profile} contact={contact} />);
+		const { asFragment } = render(<UpdateContact isOpen={true} profile={profile} contact={contact} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
@@ -34,7 +34,7 @@ describe("UpdateContact", () => {
 	it("should cancel contact update", async () => {
 		const onCancel = jest.fn();
 
-		renderWithRouter(<UpdateContact isOpen={true} onCancel={onCancel} profile={profile} contact={contact} />);
+		render(<UpdateContact isOpen={true} onCancel={onCancel} profile={profile} contact={contact} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
@@ -56,7 +56,7 @@ describe("UpdateContact", () => {
 			},
 		]);
 
-		renderWithRouter(<UpdateContact isOpen={true} onSave={onSave} profile={profile} contact={newContact} />);
+		render(<UpdateContact isOpen={true} onSave={onSave} profile={profile} contact={newContact} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(newContact.name());
@@ -107,7 +107,7 @@ describe("UpdateContact", () => {
 
 		const onDelete = jest.fn();
 
-		renderWithRouter(<UpdateContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />);
+		render(<UpdateContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
@@ -133,7 +133,7 @@ describe("UpdateContact", () => {
 			network: "ark.devnet",
 		};
 
-		renderWithRouter(<UpdateContact isOpen={true} onSave={onSave} profile={profile} contact={contact} />);
+		render(<UpdateContact isOpen={true} onSave={onSave} profile={profile} contact={contact} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());

@@ -8,7 +8,7 @@ import { PasswordSettings } from "domains/setting/pages";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 const translations = buildTranslations();
 const history = createMemoryHistory();
 
@@ -26,7 +26,7 @@ describe("Password Settings", () => {
 	});
 
 	it("should render password settings", async () => {
-		const { container, asFragment, findByTestId } = renderWithRouter(
+		const { container, asFragment, findByTestId } = render(
 			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -43,7 +43,7 @@ describe("Password Settings", () => {
 	});
 
 	it("should set a password", async () => {
-		const { container, asFragment, findByTestId, getByTestId } = renderWithRouter(
+		const { container, asFragment, findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -84,7 +84,7 @@ describe("Password Settings", () => {
 	});
 
 	it("should change a password", async () => {
-		const { container, findByTestId, getByTestId } = renderWithRouter(
+		const { container, findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -134,7 +134,7 @@ describe("Password Settings", () => {
 			throw new Error("mismatch");
 		});
 
-		const { container, asFragment, findByTestId, getByTestId } = renderWithRouter(
+		const { container, asFragment, findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -187,7 +187,7 @@ describe("Password Settings", () => {
 	});
 
 	it("should trigger password confirmation mismatch error", async () => {
-		const { container, asFragment, findByTestId, getByTestId } = renderWithRouter(
+		const { container, asFragment, findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -247,7 +247,7 @@ describe("Password Settings", () => {
 	});
 
 	it("should not allow setting the current password as the new password", async () => {
-		const { asFragment, findByTestId, getByTestId } = renderWithRouter(
+		const { asFragment, findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -293,7 +293,7 @@ describe("Password Settings", () => {
 		const toastSpy = jest.spyOn(toasts, "success");
 		const forgetPasswordSpy = jest.spyOn(profile.auth(), "forgetPassword").mockImplementation();
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -352,7 +352,7 @@ describe("Password Settings", () => {
 			throw new Error("password mismatch");
 		});
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,

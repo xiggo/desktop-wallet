@@ -1,7 +1,7 @@
 import { fireEvent } from "@testing-library/react";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, renderWithRouter } from "testing-library";
+import { act, render } from "testing-library";
 
 import { useReloadPath } from "./use-reload-path";
 
@@ -20,7 +20,7 @@ describe("useReloadPath hook", () => {
 	};
 
 	it("should render useReloadPath", () => {
-		const { getByText, getByTestId } = renderWithRouter(
+		const { getByText, getByTestId } = render(
 			<Route pathname="/">
 				<TestComponent />
 			</Route>,

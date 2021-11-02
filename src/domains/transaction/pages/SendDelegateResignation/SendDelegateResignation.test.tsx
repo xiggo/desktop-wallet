@@ -11,7 +11,7 @@ import {
 	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
-	renderWithRouter,
+	render,
 	syncDelegates,
 	syncFees,
 	waitFor,
@@ -30,7 +30,7 @@ const history = createMemoryHistory();
 const renderPage = () => {
 	const path = "/profiles/:profileId/wallets/:walletId/send-delegate-resignation";
 
-	return renderWithRouter(
+	return render(
 		<Route path={path}>
 			<SendDelegateResignation />
 		</Route>,
@@ -470,7 +470,7 @@ describe("SendDelegateResignation", () => {
 			const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
 			history.push(resignationEncryptedUrl);
 
-			const { asFragment, getByTestId, findByTestId } = renderWithRouter(
+			const { asFragment, getByTestId, findByTestId } = render(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-delegate-resignation">
 					<SendDelegateResignation />
 				</Route>,

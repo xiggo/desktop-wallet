@@ -7,7 +7,7 @@ import { createMemoryHistory } from "history";
 import os from "os";
 import React from "react";
 import * as utils from "utils/electron-utils";
-import { act, env, fireEvent, renderWithRouter, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, render, waitFor } from "utils/testing-library";
 let profile: Contracts.IProfile;
 
 let showOpenDialogMock: jest.SpyInstance;
@@ -37,7 +37,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const history = createMemoryHistory();
 		history.push(`/profiles/import`);
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={profile} />
 			</EnvironmentProvider>,
@@ -52,7 +52,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const history = createMemoryHistory();
 		history.push(`/profiles/import`);
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={profile} />
 			</EnvironmentProvider>,
@@ -68,7 +68,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = env.profiles().create("test2");
 		history.push(`/profiles/import`);
 
-		const { container, getByTestId } = renderWithRouter(
+		const { container, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={emptyProfile} />
 			</EnvironmentProvider>,
@@ -81,7 +81,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 	it("should store profile", async () => {
 		const emptyProfile = env.profiles().create("test3");
-		const { asFragment, container, getAllByTestId, getByTestId } = renderWithRouter(
+		const { asFragment, container, getAllByTestId, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={emptyProfile} />
 			</EnvironmentProvider>,
@@ -130,7 +130,7 @@ describe("Import Profile - Profile Form Step", () => {
 	it("should store new profile with password", async () => {
 		const profilesCount = env.profiles().count();
 
-		const { asFragment, container, getAllByTestId, getByTestId } = renderWithRouter(
+		const { asFragment, container, getAllByTestId, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} />
 			</EnvironmentProvider>,
@@ -178,7 +178,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 	it("should fail password confirmation", async () => {
 		const emptyProfile = env.profiles().create("test4");
-		const { asFragment, getAllByTestId, getByTestId } = renderWithRouter(
+		const { asFragment, getAllByTestId, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={emptyProfile} />
 			</EnvironmentProvider>,
@@ -214,7 +214,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = env.profiles().create("test6");
 		const shouldUseDarkColorsSpy = jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(false);
 
-		const { asFragment, getAllByTestId, getByTestId, queryByTestId } = renderWithRouter(
+		const { asFragment, getAllByTestId, getByTestId, queryByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={emptyProfile} shouldValidate />
 			</EnvironmentProvider>,

@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, renderWithRouter, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { GridWallet, WalletsGrid } from ".";
 
@@ -33,7 +33,7 @@ describe("WalletsGrid", () => {
 	});
 
 	it("should render loading state", async () => {
-		const { getAllByTestId } = renderWithRouter(
+		const { getAllByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsGrid wallets={wallets} isVisible={true} isLoading={true} />,
 			</Route>,
@@ -47,7 +47,7 @@ describe("WalletsGrid", () => {
 	});
 
 	it("should render wallets", async () => {
-		const { getByTestId, getAllByTestId } = renderWithRouter(
+		const { getByTestId, getAllByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsGrid wallets={wallets} isVisible={true} />,
 			</Route>,

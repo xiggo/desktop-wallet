@@ -6,15 +6,7 @@ import { translations as walletTranslations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import {
-	act as actAsync,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	renderWithRouter,
-	screen,
-	waitFor,
-} from "utils/testing-library";
+import { act as actAsync, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { CreateWallet } from "./CreateWallet";
 
@@ -54,7 +46,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { queryAllByText, getByTestId, getByText, asFragment, findByTestId } = renderWithRouter(
+		const { queryAllByText, getByTestId, getByText, asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -182,7 +174,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -308,7 +300,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment, findByTestId } = renderWithRouter(
+		const { asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -330,7 +322,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { getByTestId, asFragment, findByTestId } = renderWithRouter(
+		const { getByTestId, asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -388,7 +380,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -443,7 +435,7 @@ describe("CreateWallet", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		const { queryAllByText, getByTestId, getByText, asFragment, findByTestId } = renderWithRouter(
+		const { queryAllByText, getByTestId, getByText, asFragment, findByTestId } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,

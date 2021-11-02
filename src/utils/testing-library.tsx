@@ -121,7 +121,7 @@ const renderWithRouter = (
 
 export * from "@testing-library/react";
 
-export { renderWithRouter as render, customRender as renderWithoutRouter, renderWithRouter };
+export { renderWithRouter as render, customRender as renderWithoutRouter };
 
 export const getDefaultProfileId = () => Object.keys(fixtureData.profiles)[0];
 export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profiles)[1];

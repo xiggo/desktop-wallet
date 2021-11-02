@@ -4,7 +4,7 @@ import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import { PluginController, PluginManager } from "plugins/core";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, renderWithRouter, screen } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { PluginView } from "./PluginView";
 
@@ -32,7 +32,7 @@ describe("Plugin View", () => {
 
 		plugin.enable(profile, { autoRun: true });
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/plugins/view">
 				<PluginManagerProvider manager={manager} services={[]}>
 					<PluginView />
@@ -75,7 +75,7 @@ describe("Plugin View", () => {
 
 		plugin.enable(profile, { autoRun: true });
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/plugins/view">
 				<PluginManagerProvider manager={manager} services={[]}>
 					<PluginView />

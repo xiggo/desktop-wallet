@@ -6,7 +6,7 @@ import { buildTranslations } from "app/i18n/helpers";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { UnlockTokensFormState } from "../UnlockTokens.contracts";
 import { UnlockTokensReview } from "./UnlockTokensReview";
@@ -43,7 +43,7 @@ describe("UnlockTokensReview", () => {
 		result.current.register("amount");
 		result.current.register("fee");
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<FormProvider {...result.current}>
 					<UnlockTokensReview onBack={onBack} onConfirm={onConfirm} wallet={wallet} />

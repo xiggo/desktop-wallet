@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { getDefaultProfileId, renderWithRouter, screen } from "utils/testing-library";
+import { getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { TransferDetail } from "./TransferDetail";
@@ -10,7 +10,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 describe("TransferDetail", () => {
 	it("should not render if not open", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransferDetail
 					isOpen={false}
@@ -28,7 +28,7 @@ describe("TransferDetail", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransferDetail
 					isOpen={true}
@@ -46,7 +46,7 @@ describe("TransferDetail", () => {
 	});
 
 	it("should render as not is sent", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransferDetail
 					isOpen={true}
@@ -68,7 +68,7 @@ describe("TransferDetail", () => {
 	});
 
 	it("should render with wallet alias", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransferDetail
 					isOpen={true}

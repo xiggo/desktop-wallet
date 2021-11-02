@@ -4,7 +4,7 @@ import { httpClient } from "app/services";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { StubStorage } from "tests/mocks";
-import { act, env, fireEvent, render, renderWithRouter, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, render, waitFor } from "utils/testing-library";
 
 import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 
@@ -22,7 +22,7 @@ describe("Environment Context", () => {
 			return <p>{env.profiles().count()}</p>;
 		};
 
-		expect(() => renderWithRouter(<Test />, { withProviders: false })).toThrowError();
+		expect(() => render(<Test />, { withProviders: false })).toThrowError();
 
 		console.error.mockRestore();
 	});
@@ -106,7 +106,7 @@ describe("Environment Context", () => {
 			</EnvironmentProvider>
 		);
 
-		const { getByRole } = renderWithRouter(<App />, { history });
+		const { getByRole } = render(<App />, { history });
 
 		act(() => {
 			fireEvent.click(getByRole("button"));

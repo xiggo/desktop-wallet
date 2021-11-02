@@ -9,17 +9,7 @@ import { translations as walletTranslations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import {
-	act,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	MNEMONICS,
-	render,
-	renderWithRouter,
-	screen,
-	waitFor,
-} from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
 
 import { SignedStep } from "./SignedStep";
 import { SignMessage } from "./SignMessage";
@@ -69,7 +59,7 @@ describe("SignMessage", () => {
 
 	it("should render", async () => {
 		await wallet.synchroniser().identity();
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -91,7 +81,7 @@ describe("SignMessage", () => {
 	it("should render for ledger wallets", async () => {
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -115,7 +105,7 @@ describe("SignMessage", () => {
 		history.push(secondWalletUrl);
 
 		await secondWallet.synchroniser().identity();
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={secondWallet.id()} isOpen={true} />
@@ -159,7 +149,7 @@ describe("SignMessage", () => {
 
 		const onSign = jest.fn();
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} onSign={onSign} walletId={wallet.id()} isOpen={true} />
@@ -216,7 +206,7 @@ describe("SignMessage", () => {
 	});
 
 	it("should return to form step", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -270,7 +260,7 @@ describe("SignMessage", () => {
 
 		const onSign = jest.fn();
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} onSign={onSign} walletId={wallet.id()} isOpen={true} />
@@ -332,7 +322,7 @@ describe("SignMessage", () => {
 
 		const onSign = jest.fn();
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} onSign={onSign} walletId={wallet.id()} isOpen={true} />
@@ -394,7 +384,7 @@ describe("SignMessage", () => {
 			.spyOn(wallet.coin().ledger(), "signMessage")
 			.mockImplementation(() => new Promise((resolve) => setTimeout(() => resolve("signature"), 300)));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -467,7 +457,7 @@ describe("SignMessage", () => {
 					),
 			);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -526,7 +516,7 @@ describe("SignMessage", () => {
 
 		const listenSpy = jest.spyOn(transport, "listen").mockImplementationOnce(() => ({ unsubscribe }));
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage profile={profile} walletId={wallet.id()} isOpen={true} />
@@ -574,7 +564,7 @@ describe("SignMessage", () => {
 	});
 
 	it("should render with a custom message", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<SignMessage

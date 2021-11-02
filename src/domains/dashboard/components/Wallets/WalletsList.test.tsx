@@ -3,7 +3,7 @@ import { screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, renderWithRouter } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { GridWallet, WalletsList } from ".";
@@ -27,7 +27,7 @@ describe("WalletsList", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsList wallets={wallets} />
 			</Route>,
@@ -49,7 +49,7 @@ describe("WalletsList", () => {
 	});
 
 	it("should render with view more button", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsList wallets={wallets} hasMore={true} />
 			</Route>,

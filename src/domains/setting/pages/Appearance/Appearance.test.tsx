@@ -8,7 +8,7 @@ import { translations } from "domains/setting/i18n";
 import { createMemoryHistory, MemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { act, env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { AppearanceSettings } from "./Appearance";
 
@@ -32,7 +32,7 @@ describe("Appearance Settings", () => {
 	});
 
 	const renderPage = () =>
-		renderWithRouter(
+		render(
 			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
 				<AppearanceSettings />
 			</Route>,

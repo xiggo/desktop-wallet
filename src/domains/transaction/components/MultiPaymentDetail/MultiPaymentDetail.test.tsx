@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { act, fireEvent, getDefaultProfileId, render, renderWithRouter, screen } from "utils/testing-library";
+import { act, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { MultiPaymentDetail } from "./MultiPaymentDetail";
@@ -25,7 +25,7 @@ describe("MultiPaymentDetail", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<MultiPaymentDetail
 					isOpen={true}
@@ -45,7 +45,7 @@ describe("MultiPaymentDetail", () => {
 	});
 
 	it("should render with recipients", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<MultiPaymentDetail
 					isOpen={true}
@@ -82,7 +82,7 @@ describe("MultiPaymentDetail", () => {
 	});
 
 	it("should render hint icon with tooltip when it's a returned transaction", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<MultiPaymentDetail
 					isOpen={true}

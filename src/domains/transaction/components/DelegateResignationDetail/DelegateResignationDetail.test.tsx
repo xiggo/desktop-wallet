@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { getDefaultProfileId, render, renderWithRouter } from "utils/testing-library";
+import { getDefaultProfileId, render } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { DelegateResignationDetail } from "./DelegateResignationDetail";
@@ -28,7 +28,7 @@ describe("DelegateResignationDetail", () => {
 	});
 
 	it("should render a modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId">
 				<DelegateResignationDetail
 					isOpen={true}

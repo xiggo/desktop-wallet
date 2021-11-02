@@ -8,7 +8,7 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { act } from "react-dom/test-utils";
 import { Route } from "react-router-dom";
-import { env as mockedTestEnvironment, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { env as mockedTestEnvironment, getDefaultProfileId, render } from "utils/testing-library";
 
 import { NavigationBar } from "./NavigationBar";
 
@@ -36,14 +36,14 @@ describe("NavigationBar", () => {
 	});
 
 	it("should render", () => {
-		const { container, asFragment } = renderWithRouter(<NavigationBar />);
+		const { container, asFragment } = render(<NavigationBar />);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render as logo-only variant", () => {
-		const { container, asFragment } = renderWithRouter(<NavigationBar variant="logo-only" />);
+		const { container, asFragment } = render(<NavigationBar variant="logo-only" />);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -52,7 +52,7 @@ describe("NavigationBar", () => {
 	it("should render with shadow if there is a scroll", () => {
 		const scrollSpy = jest.spyOn(useScrollHook, "useScroll").mockImplementation(() => 1);
 
-		const { container, asFragment } = renderWithRouter(<NavigationBar />);
+		const { container, asFragment } = render(<NavigationBar />);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe("NavigationBar", () => {
 	it("should render with title", () => {
 		const title = "Desktop Wallet";
 
-		const { container, asFragment } = renderWithRouter(<NavigationBar title={title} />);
+		const { container, asFragment } = render(<NavigationBar title={title} />);
 
 		expect(container).toBeInTheDocument();
 		expect(container).toHaveTextContent(title);
@@ -71,20 +71,20 @@ describe("NavigationBar", () => {
 	});
 
 	it("should render with custom menu", () => {
-		const { container, asFragment } = renderWithRouter(<NavigationBar />);
+		const { container, asFragment } = render(<NavigationBar />);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render without profile", () => {
-		const { container } = renderWithRouter(<NavigationBar />);
+		const { container } = render(<NavigationBar />);
 
 		expect(container).toBeInTheDocument();
 	});
 
 	it("should handle menu click", () => {
-		const { getByText, history } = renderWithRouter(<NavigationBar />);
+		const { getByText, history } = render(<NavigationBar />);
 
 		fireEvent.click(getByText("test"));
 
@@ -97,7 +97,7 @@ describe("NavigationBar", () => {
 			{ label: "Option 2", mountPath: () => "/test2", title: "test2", value: "/test2" },
 		]);
 
-		const { getByTestId, getByText, history } = renderWithRouter(<NavigationBar />);
+		const { getByTestId, getByText, history } = render(<NavigationBar />);
 		const toggle = getByTestId("navbar__useractions");
 
 		act(() => {
@@ -115,7 +115,7 @@ describe("NavigationBar", () => {
 
 	it("should handle click to send button", () => {
 		const mockProfile = environmentHooks.useActiveProfile();
-		const { getByTestId, history } = renderWithRouter(<NavigationBar />);
+		const { getByTestId, history } = render(<NavigationBar />);
 
 		const sendButton = getByTestId("navbar__buttons--send");
 
@@ -127,7 +127,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should handle receive funds", async () => {
-		const { findByTestId, getAllByText, getByTestId, queryAllByTestId } = renderWithRouter(
+		const { findByTestId, getAllByText, getByTestId, queryAllByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NavigationBar />
 			</Route>,
@@ -159,7 +159,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should close the search wallet modal", async () => {
-		const { findByTestId, getByTestId } = renderWithRouter(
+		const { findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<NavigationBar />
 			</Route>,
@@ -185,7 +185,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should not render if no active profile", () => {
-		const { asFragment } = renderWithRouter(<NavigationBar />);
+		const { asFragment } = render(<NavigationBar />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -203,7 +203,7 @@ describe("NavigationBar", () => {
 			return "";
 		});
 
-		const { container, getByTestId } = renderWithRouter(<NavigationBar />);
+		const { container, getByTestId } = render(<NavigationBar />);
 
 		expect(container).toBeInTheDocument();
 		expect(getByTestId("navbar__buttons--send")).toHaveAttribute("disabled");

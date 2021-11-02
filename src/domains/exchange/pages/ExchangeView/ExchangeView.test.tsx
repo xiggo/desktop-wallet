@@ -2,7 +2,7 @@ import { ExchangeProvider, useExchangeContext } from "domains/exchange/contexts/
 import { createMemoryHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { ExchangeView } from "./ExchangeView";
 
@@ -28,7 +28,7 @@ describe("ExchangeView", () => {
 
 		history.push(exchangeURL);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/exchange/view">
 				<ExchangeProvider>
 					<Wrapper>
@@ -73,7 +73,7 @@ describe("ExchangeView", () => {
 
 		history.push(exchangeURL);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/exchange/view">
 				<ExchangeProvider>
 					<Wrapper>

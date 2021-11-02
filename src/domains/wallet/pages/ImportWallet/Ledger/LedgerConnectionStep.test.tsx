@@ -9,7 +9,7 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 
@@ -81,7 +81,7 @@ describe("LedgerConnectionStep", () => {
 
 		history.push(`/profiles/${profile.id()}`);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -138,7 +138,7 @@ describe("LedgerConnectionStep", () => {
 
 		history.push(`/profiles/${profile.id()}`);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -192,7 +192,7 @@ describe("LedgerConnectionStep", () => {
 		};
 
 		history.push(`/profiles/${profile.id()}`);
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,

@@ -6,7 +6,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, renderWithRouter, syncDelegates, waitFor } from "utils/testing-library";
+import { env, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { TransactionDetailModal } from "./TransactionDetailModal";
@@ -43,7 +43,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={false}
@@ -65,7 +65,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a transfer modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -89,7 +89,7 @@ describe("TransactionDetailModal", () => {
 	it("should render a multi signature modal", async () => {
 		await profile.wallets().restore();
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -120,7 +120,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a multi payment modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -150,7 +150,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a ipfs modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -187,7 +187,7 @@ describe("TransactionDetailModal", () => {
 			),
 		);
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -221,7 +221,7 @@ describe("TransactionDetailModal", () => {
 			),
 		);
 
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -244,7 +244,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a delegate registration modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -268,7 +268,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a delegate resignation modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -295,7 +295,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a second signature modal", () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -318,7 +318,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render a magistrate modal", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -342,7 +342,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it("should render an unlock tokens modal", () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
 					isOpen={true}
@@ -368,7 +368,7 @@ describe("TransactionDetailModal", () => {
 		jest.spyOn(console, "error").mockImplementation();
 
 		expect(() =>
-			renderWithRouter(
+			render(
 				<Route path="/profiles/:profileId/dashboard">
 					<TransactionDetailModal
 						isOpen={true}

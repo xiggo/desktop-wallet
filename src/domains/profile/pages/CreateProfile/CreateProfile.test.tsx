@@ -5,7 +5,7 @@ import electron from "electron";
 import { getCurrency } from "locale-currency";
 import os from "os";
 import React from "react";
-import { act, env, fireEvent, renderWithRouter, screen, waitFor } from "testing-library";
+import { act, env, fireEvent, render, screen, waitFor } from "testing-library";
 import { StubStorage } from "tests/mocks";
 import * as utils from "utils/electron-utils";
 
@@ -48,7 +48,7 @@ const baseSettings = {
 };
 
 const renderComponent = async () => {
-	const result = renderWithRouter(<CreateProfile />);
+	const result = render(<CreateProfile />);
 	await waitFor(() => expect(result.getByTestId("CreateProfile__submit-button")).toBeDisabled());
 	return result;
 };

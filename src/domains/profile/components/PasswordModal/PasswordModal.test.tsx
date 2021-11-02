@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import React from "react";
-import { act, fireEvent, renderWithRouter, waitFor } from "utils/testing-library";
+import { act, fireEvent, render, waitFor } from "utils/testing-library";
 
 import { PasswordModal } from "./PasswordModal";
 
@@ -14,7 +14,7 @@ describe("PasswordModal", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment, getByTestId } = renderWithRouter(<PasswordModal isOpen={false} />);
+		const { asFragment, getByTestId } = render(<PasswordModal isOpen={false} />);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
@@ -24,7 +24,7 @@ describe("PasswordModal", () => {
 		let renderContext: any;
 
 		await act(async () => {
-			renderContext = renderWithRouter(
+			renderContext = render(
 				<PasswordModal isOpen={true} title="Password title" description="Password description" />,
 			);
 		});
@@ -39,7 +39,7 @@ describe("PasswordModal", () => {
 	it("should submit", async () => {
 		const onSuccess = jest.fn();
 
-		const { findByTestId, getByTestId } = renderWithRouter(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
+		const { findByTestId, getByTestId } = render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
 
 		await act(async () => {
 			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "password" } });

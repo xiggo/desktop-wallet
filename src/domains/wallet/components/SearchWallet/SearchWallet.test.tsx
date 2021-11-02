@@ -5,17 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import {
-	act,
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	render,
-	renderWithRouter,
-	screen,
-	waitFor,
-	within,
-} from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { SearchWallet } from "./SearchWallet";
@@ -38,7 +28,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should render", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -69,7 +59,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const walletWithExchangeCurrencyMock = jest
 			.spyOn(wallets[0], "exchangeCurrency")
 			.mockReturnValue(undefined as any);
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -101,7 +91,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should render with selected address", async () => {
 		const onSelectWallet = jest.fn();
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -151,7 +141,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should handle close", () => {
 		const onClose = jest.fn();
 
-		const { getByTestId } = renderWithRouter(
+		const { getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -177,7 +167,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should filter wallets by address", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, queryAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -227,7 +217,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should filter wallets by alias", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, queryAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -278,7 +268,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should reset wallet search", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, queryAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -338,7 +328,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should not find search wallet and show empty results screen", async () => {
 		jest.useFakeTimers();
 
-		const { getByTestId, queryAllByTestId, findByTestId } = renderWithRouter(
+		const { getByTestId, queryAllByTestId, findByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}

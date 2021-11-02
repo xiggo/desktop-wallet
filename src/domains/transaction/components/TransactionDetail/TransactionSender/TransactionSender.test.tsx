@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, renderWithRouter } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { TransactionSender } from "./TransactionSender";
 
@@ -15,7 +15,7 @@ describe("TransactionSender", () => {
 	});
 
 	it("should render", () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<TransactionSender address={wallet.address()} network={wallet.network()} />
 			</Route>,
@@ -29,7 +29,7 @@ describe("TransactionSender", () => {
 	});
 
 	it("should render with address", () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<TransactionSender address="test-address" />
 			</Route>,
@@ -43,7 +43,7 @@ describe("TransactionSender", () => {
 	});
 
 	it("should render with alias", () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<TransactionSender address={wallet.address()} network={wallet.network()} />
 			</Route>,
@@ -62,7 +62,7 @@ describe("TransactionSender", () => {
 			username: () => "delegate username",
 		} as any);
 
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId">
 				<TransactionSender address={wallet.address()} network={wallet.network()} />
 			</Route>,

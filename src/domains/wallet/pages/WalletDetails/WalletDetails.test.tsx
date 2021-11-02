@@ -22,8 +22,8 @@ import {
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	MNEMONICS,
+	render,
 	RenderResult,
-	renderWithRouter,
 	syncDelegates,
 	waitFor,
 	within,
@@ -49,7 +49,7 @@ const renderPage = async ({
 	waitForTransactions = true,
 	withProfileSynchronizer = false,
 } = {}) => {
-	const rendered: RenderResult = renderWithRouter(
+	const rendered: RenderResult = render(
 		<Route path="/profiles/:profileId/wallets/:walletId">
 			<LedgerProvider transport={getDefaultLedgerTransport()}>
 				<WalletDetails />

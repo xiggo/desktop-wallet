@@ -9,7 +9,7 @@ import { createHashHistory } from "history";
 import os from "os";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, renderWithRouter, screen, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 const translations = buildTranslations();
 
@@ -47,7 +47,7 @@ describe("General Settings", () => {
 
 		history.push(`/profiles/${profile.id()}/settings`);
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -76,7 +76,7 @@ describe("General Settings", () => {
 	});
 
 	it("should render", async () => {
-		const { container, asFragment } = renderWithRouter(
+		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -94,7 +94,7 @@ describe("General Settings", () => {
 	it("should disable submit button when profile is not restored yet", async () => {
 		const isProfileRestoredMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -112,7 +112,7 @@ describe("General Settings", () => {
 	});
 
 	it("should update the avatar when removing focus from name input", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -159,7 +159,7 @@ describe("General Settings", () => {
 	});
 
 	it("should show identicon when removing image if name is set", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -191,7 +191,7 @@ describe("General Settings", () => {
 	});
 
 	it("should not update the uploaded avatar when removing focus from name input", async () => {
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -239,7 +239,7 @@ describe("General Settings", () => {
 	it("should update profile", async () => {
 		const profilesCount = env.profiles().count();
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -344,7 +344,7 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if name consists only of whitespace", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -366,7 +366,7 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if profile name exists", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -400,7 +400,7 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if profile name exists (uppercase)", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -433,7 +433,7 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if profile name is too long", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -461,7 +461,7 @@ describe("General Settings", () => {
 	});
 
 	it("should not update profile if profile name exists (padded)", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -498,7 +498,7 @@ describe("General Settings", () => {
 		["cancel", "DevelopmentNetwork__cancel-button"],
 		["continue", "DevelopmentNetwork__continue-button"],
 	])("should open & close development network modal (%s)", async (_, buttonId) => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -537,7 +537,7 @@ describe("General Settings", () => {
 		["cancel", "ResetProfile__cancel-button"],
 		["reset", "ResetProfile__submit-button"],
 	])("should open & close reset profile modal (%s)", async (_, buttonId) => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -570,7 +570,7 @@ describe("General Settings", () => {
 	});
 
 	it("should reset fields on reset", async () => {
-		const { container } = renderWithRouter(
+		const { container } = render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,
@@ -605,7 +605,7 @@ describe("General Settings", () => {
 	it("should default to USD if market provider does not support the selected currency", async () => {
 		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/settings">
 				<GeneralSettings />
 			</Route>,

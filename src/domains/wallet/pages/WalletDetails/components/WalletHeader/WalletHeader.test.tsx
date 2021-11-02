@@ -8,16 +8,7 @@ import { translations as walletTranslations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import {
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	render,
-	renderWithRouter,
-	screen,
-	waitFor,
-	within,
-} from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "testing-library";
 import { getDefaultLedgerTransport } from "utils/testing-library";
 
 import { WalletHeader } from "./WalletHeader";
@@ -171,7 +162,7 @@ describe("WalletHeader", () => {
 
 		history.push(walletUrl);
 
-		const { getByTestId, getByText } = renderWithRouter(
+		const { getByTestId, getByText } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<LedgerProvider transport={transport}>
 					<WalletHeader profile={profile} wallet={wallet} />
@@ -286,7 +277,7 @@ describe("WalletHeader", () => {
 
 		const historySpy = jest.spyOn(history, "push");
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<WalletHeader profile={profile} wallet={wallet} />
 			</Route>,
@@ -310,7 +301,7 @@ describe("WalletHeader", () => {
 
 		const historySpy = jest.spyOn(history, "push");
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<WalletHeader profile={profile} wallet={wallet} />
 			</Route>,
@@ -334,7 +325,7 @@ describe("WalletHeader", () => {
 
 		const historySpy = jest.spyOn(history, "push");
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<WalletHeader profile={profile} wallet={wallet} />
 			</Route>,
@@ -359,7 +350,7 @@ describe("WalletHeader", () => {
 		const walletSpy = jest.spyOn(wallet, "isDelegate").mockReturnValue(true);
 		const historySpy = jest.spyOn(history, "push");
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<WalletHeader profile={profile} wallet={wallet} />
 			</Route>,
@@ -384,7 +375,7 @@ describe("WalletHeader", () => {
 
 		const historySpy = jest.spyOn(history, "push");
 
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
 				<WalletHeader profile={profile} wallet={wallet} />
 			</Route>,

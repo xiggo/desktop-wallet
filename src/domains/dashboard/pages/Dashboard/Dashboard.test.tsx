@@ -18,7 +18,7 @@ import {
 	env,
 	fireEvent,
 	getDefaultProfileId,
-	renderWithRouter,
+	render,
 	syncDelegates,
 	useDefaultNetMocks,
 	waitFor,
@@ -81,7 +81,7 @@ beforeEach(() => {
 
 describe("Dashboard", () => {
 	it("should render", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -106,7 +106,7 @@ describe("Dashboard", () => {
 
 	it("should show introductory tutorial", async () => {
 		const mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
-		const { getByText, getByTestId } = renderWithRouter(
+		const { getByText, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -136,7 +136,7 @@ describe("Dashboard", () => {
 		});
 		profile.markIntroductoryTutorialAsComplete();
 
-		const { asFragment, getByTestId, getByText, queryByText, getAllByRole, findByText } = renderWithRouter(
+		const { asFragment, getByTestId, getByText, queryByText, getAllByRole, findByText } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<LedgerProvider transport={transport}>
 					<Dashboard />
@@ -182,7 +182,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should navigate to create wallet page", async () => {
-		const { asFragment, getByTestId, getByText } = renderWithRouter(
+		const { asFragment, getByTestId, getByText } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -205,7 +205,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should navigate to import wallet page", async () => {
-		const { asFragment, getByTestId, getByText } = renderWithRouter(
+		const { asFragment, getByTestId, getByText } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -230,7 +230,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		const { asFragment, getByTestId } = renderWithRouter(
+		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -257,7 +257,7 @@ describe("Dashboard", () => {
 			return Promise.resolve(response);
 		});
 
-		const { asFragment } = renderWithRouter(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -276,7 +276,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should open modal when click on a transaction", async () => {
-		renderWithRouter(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
