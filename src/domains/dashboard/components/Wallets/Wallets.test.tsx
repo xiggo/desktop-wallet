@@ -1,6 +1,7 @@
 import Transport from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
+import { LSK } from "@payvo/sdk-lsk";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
@@ -260,6 +261,48 @@ describe("Wallets", () => {
 		});
 
 		await waitFor(() => expect(getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL));
+	});
+
+	it("should render network selection with sorted network filters", async () => {
+		env.registerCoin("LSK", LSK);
+
+		const profile = env.profiles().create("test");
+		await env.profiles().restore(profile);
+
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
+
+		const { wallet: lskWallet } = await profile.walletFactory().generate({
+			coin: "LSK",
+			network: "lsk.testnet",
+		});
+		const { wallet: arkWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+		profile.wallets().push(lskWallet);
+		profile.wallets().push(arkWallet);
+		await env.wallets().syncByProfile(profile);
+
+		const route = `/profiles/${profile.id()}/dashboard`;
+		const history = createMemoryHistory();
+		history.push(route);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Wallets />
+			</Route>,
+			{
+				history,
+				routes: [route],
+			},
+		);
+
+		act(() => {
+			fireEvent.click(within(screen.getByTestId("WalletControls")).getByTestId("dropdown__toggle"));
+		});
+
+		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkOptions").firstChild).toHaveTextContent("ark.svg");
 	});
 
 	it("should open and close ledger import modal", async () => {

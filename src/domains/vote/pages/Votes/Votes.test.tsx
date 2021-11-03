@@ -2,6 +2,7 @@
 import { Contracts } from "@payvo/profiles";
 import { ProfileSetting } from "@payvo/profiles/distribution/contracts";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
+import { LSK } from "@payvo/sdk-lsk";
 import { useProfileStatusWatcher } from "app/hooks";
 import { createMemoryHistory } from "history";
 import nock from "nock";
@@ -162,6 +163,40 @@ describe("Votes", () => {
 		await screen.findByTestId("AddressTable");
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render network selection with sorted network filters", async () => {
+		env.registerCoin("LSK", LSK);
+
+		const profile = env.profiles().create("test");
+		await env.profiles().restore(profile);
+
+		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
+
+		const { wallet: lskWallet } = await profile.walletFactory().generate({
+			coin: "LSK",
+			network: "lsk.testnet",
+		});
+		const { wallet: arkWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+		profile.wallets().push(lskWallet);
+		profile.wallets().push(arkWallet);
+		await env.wallets().syncByProfile(profile);
+
+		const route = `/profiles/${profile.id()}/votes`;
+		const routePath = "/profiles/:profileId/votes";
+		renderPage(route, routePath);
+
+		expect(screen.getAllByTestId("AddressTable")).toHaveLength(2);
+
+		act(() => {
+			fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
+		});
+
+		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkOptions").firstChild).toHaveTextContent("ark.svg");
 	});
 
 	it("should select starred option in the wallets display type", async () => {

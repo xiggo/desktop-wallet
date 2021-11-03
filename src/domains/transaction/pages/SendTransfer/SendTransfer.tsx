@@ -1,3 +1,4 @@
+import { sortBy } from "@arkecosystem/utils";
 import { Contracts, DTO } from "@payvo/profiles";
 import { Networks, Services } from "@payvo/sdk";
 import { Form } from "app/components/Form";
@@ -84,9 +85,7 @@ export const SendTransfer = () => {
 			results[wallet.networkId()] = wallet.network();
 		}
 
-		return Object.entries(results)
-			.sort()
-			.flatMap((result) => result[1]);
+		return sortBy(Object.values(results), (network) => network.displayName());
 	}, [activeProfile]);
 
 	const defaultValues = {

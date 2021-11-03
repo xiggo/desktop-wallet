@@ -1,4 +1,4 @@
-import { isEmptyObject, uniq } from "@arkecosystem/utils";
+import { isEmptyObject, sortBy, uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useWalletAlias } from "app/hooks";
@@ -45,7 +45,7 @@ export const useVoteFilters = ({
 			}
 		}
 
-		return Object.values(networks);
+		return sortBy(Object.values(networks), ({ network }) => network.displayName());
 	}, [profile, selectedNetworkIds]);
 
 	const isFilterChanged = useMemo(() => {

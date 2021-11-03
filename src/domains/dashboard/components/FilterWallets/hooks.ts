@@ -1,3 +1,4 @@
+import { sortBy } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
 import { useWalletConfig } from "domains/dashboard/hooks";
@@ -25,7 +26,7 @@ export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) =
 			}
 		}
 
-		return Object.values(networks);
+		return sortBy(Object.values(networks), ({ network }) => network.displayName());
 	}, [profile, selectedNetworkIds, allWalletsLength]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const isFilterChanged = useMemo(() => {
